@@ -1,5 +1,18 @@
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
-  this.ctx.fillStyle = '#FFF';
-this.ctx.fillStyle = '#000';
-  this.ctx.fillRect(100,100,30,30);
+(() => {
+    const main = document.querySelector('#main');
+    if (!main.getContext) {
+        return;
+    }
+
+    // get the context
+    let ctx = main.getContext('2d');
+
+    // set fill and stroke styles
+    ctx.fillStyle = '#F0DB4F';
+    ctx.strokeStyle = 'red';
+
+    // draw a rectangle with fill and stroke
+    ctx.fillRect(50, 50, 150, 100);
+    ctx.strokeRect(50, 50, 150, 100);
+
+})();
