@@ -2,7 +2,7 @@ wwidth = window.screen.availWidth;
 
 let cellWidth = 2;
 if (window.screen.availWidth > 1500){
-//	cellWidth = 5;
+	cellWidth = 5;
 }
 
 
