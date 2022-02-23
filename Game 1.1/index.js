@@ -133,7 +133,7 @@ function drawScore(){
 	ctx.font = "30px Comic Sans MS";
 	ctx.fillStyle = 'black';
 	ctx.fillText(score,200*cellWidth,200);
-	ctx.fillText(wwidth,200*cellWidth,500);
+//	ctx.fillText(wwidth,200*cellWidth,500);
 }
 
 function drawPhantom(){
