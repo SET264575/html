@@ -129,7 +129,12 @@ function clear(){
 
 function drawScore(){
 	ctx.fillStyle = 'white';
-	ctx.fillRect(200*cellWidth,150,300,300);
+	if (cellWidth == 5){
+		ctx.fillRect(200*cellWidth,150,300,300);
+	}
+	else {
+		ctx.fillRect(100,300,300,300);
+	}
 	ctx.font = "30px Comic Sans MS";
 	ctx.fillStyle = 'black';
 	if (cellWidth == 5){
