@@ -18,5 +18,9 @@ function convertText(inputText) {
 
 }
 
-form.addEventListener('submit',(event) => {event.preventDefault(); convertText(input);});
+function clearText(){
+	document.getElementById('out').value = '';
+}
 
+form.addEventListener('submit',(event) => {event.preventDefault(); convertText(input);});
+form.addEventListener('clear',(event) =>{clearText();});
