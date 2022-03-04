@@ -19,7 +19,8 @@ function convertText(inputText) {
 }
 
 function clearText(){
-	document.getElementById('out').value = '';
+	console.log("in clearText");
+	document.getElementById('text').value = '';
 }
 
 form.addEventListener('submit',(event) => {event.preventDefault(); convertText(input);});
