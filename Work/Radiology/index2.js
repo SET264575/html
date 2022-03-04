@@ -1,5 +1,6 @@
 const form = document.querySelector('#form');
 const input = document.querySelector('#text');
+const btn = document.querySelector('button');
 
 //const re = /ORDER..............(.*?).$IMPRESSION:$(.*?)/mgs;
 const re = /ORDER.{14}(.*?)$.*?IMPRESSION.*?^(.*?)The above report was dictated/mgs;
@@ -24,4 +25,4 @@ function clearText(){
 }
 
 form.addEventListener('submit',(event) => {event.preventDefault(); convertText(input);});
-form.addEventListener('button',(event) =>{clearText();});
+btn.addEventListener('click',(event) =>{clearText();});
