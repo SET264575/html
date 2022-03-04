@@ -23,4 +23,4 @@ function clearText(){
 }
 
 form.addEventListener('submit',(event) => {event.preventDefault(); convertText(input);});
-form.addEventListener('clear',(event) =>{clearText();});
+form.addEventListener('button',(event) =>{clearText();});
