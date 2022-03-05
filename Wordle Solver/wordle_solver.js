@@ -60,14 +60,18 @@ function changeColor(event){
 }
 
 function calculateWords(){
-	lst = [];
-	lst[0] = 'prune';
-	lst[1] = 'brine';
-	lst[2] = 'trust';
-	lst[3] = 'price';
-	console.log('in calculateWords');
-	console.log(btn[11].style.backgroundColor);
-	document.getElementById('out').textContent = "hello";
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET','https://set264575.github.io/wordle_solver/wordle_words.txt');
+	xhr.send();
+	console.log(xhr.responseText);		
+	lst = xhr.responseText.split('\n');
+	//lst[0] = 'prune';
+	//lst[1] = 'brine';
+	//lst[2] = 'trust';
+	//lst[3] = 'price';
+	//console.log('in calculateWords');
+	//console.log(btn[11].style.backgroundColor);
+	//document.getElementById('out').textContent = "hello";
 	let q = '';
 	let n = '';
 	let w = '';
@@ -100,26 +104,26 @@ function calculateWords(){
 		}
 	}
 	w = w.replaceAll(']',n+']');
-	console.log("q",q);
-	console.log("n",n);
-	console.log('w',w);
+	//console.log("q",q);
+	//console.log("n",n);
+	//console.log('w',w);
 	b = [];
 	for (let m = 0; m < lst.length; m++){
 		flag = true;
 		regex = new RegExp(w);
-		console.log(regex.test(lst[m]),lst[m]);
+		//console.log(regex.test(lst[m]),lst[m]);
 		if (regex.test(lst[m].toUpperCase()) == true){
-			console.log(lst[m]);
+			//console.log(lst[m]);
 			for (let n = 0; n < q.length;n++){
 				x = q.substring(n,n+1);
-				console.log('x=',x);
+				//console.log('x=',x);
 				if (lst[m].toUpperCase().search(x) == -1){
-					console.log(lst[m],"false");
+					//console.log(lst[m],"false");
 					flag = false;
 				}
 			}
 			if (flag == true){
-				console.log(lst[m]);
+				//console.log(lst[m]);
 				b[b.length] = lst[m];
 			}
 		}
@@ -128,7 +132,7 @@ function calculateWords(){
 	for (m = 0; m < b.length; m++){
 		l = l + b[m]+'\n';
 	}
-	console.log(b);
+	//console.log(b);
 	out.textContent = l;
 			
 
@@ -137,7 +141,7 @@ function calculateWords(){
 
 function submitWords(inp1,inp2){
 	//console.log('in submitWords');
-	console.log(inp1.value);
+	//console.log(inp1.value);
 	x = inp1.value;
 	x = x.toUpperCase();
 	y = inp2.value.toUpperCase();
