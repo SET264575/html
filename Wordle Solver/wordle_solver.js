@@ -61,7 +61,7 @@ function changeColor(event){
 
 function calculateWords(){
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET','https://set264575.github.io/wordle_solver/wordle_words.txt');
+	xhr.open('GET','https://set264575.github.io/Wordle Solver/wordle_words.txt');
 	xhr.send();
 	console.log(xhr.responseText);		
 	lst = xhr.responseText.split('\n');
