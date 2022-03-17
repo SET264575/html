@@ -3,7 +3,8 @@ const input = document.querySelector('#text');
 const btn = document.querySelector('button');
 
 //const re = /ORDER..............(.*?).$IMPRESSION:$(.*?)/mgs;
-const re = /ORDER.{14}(.*?)$.*?IMPRE/msg; //SSION.*?^(.*?)The above report was dictated/mgs;
+//const re = /ORDER.{14}(.*?)$.*?IMPRESSION.*?^(.*?)The above report was dictated/mgs;
+const re = /ORDER.{14}(.*?)$/; //.*?IMPRE/msg; //SSION.*?^(.*?)The above report was dictated/mgs;
 
 function convertText(inputText) {
 
