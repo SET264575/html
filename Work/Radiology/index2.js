@@ -1,4 +1,4 @@
-const form = document.querySelector('#form');
+const submit = document.querySelector('#submit');
 const input = document.querySelector('#text');
 const btn = document.querySelector('#button');
 
@@ -27,5 +27,5 @@ function clearText(){
 	document.getElementById('text').value = '';
 }
 
-form.addEventListener('submit',(event) => {event.preventDefault(); convertText(input);});
+submit.addEventListener('click',(event) => {event.preventDefault(); convertText(input);});
 btn.addEventListener('click',(event) =>{clearText();});
