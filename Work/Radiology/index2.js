@@ -12,11 +12,13 @@ function convertText(inputText) {
 	console.log(array);
 	for (let i = 0; i < array.length; i++){
 		let secarray = array[i][1].replace('XR/XR ','X-ray of the ');
+		secarray = secarray.replace('CT/CT ','CT of the ');
+		secarray = secarray.replace('US/US ','US of the ');
 
 		output = output + secarray +' shows: \n'+array[i][2]+'\n';
 	}
 	document.getElementById('out').value = output;	
-
+	navigator.clipboard.writeText(output);
 }
 
 function clearText(){
