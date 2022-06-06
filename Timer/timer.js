@@ -4,7 +4,7 @@
         	return;
     	}
     	ctx = main.getContext('2d');
-	let id = setInterval(updateClock,10);
+	let id = setInterval(updateClock,1000);
 })();
 
 function updateClock(){
