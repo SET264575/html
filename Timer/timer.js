@@ -1,9 +1,4 @@
 (() => {
-    	const main = document.querySelector('#main');
-    	if (!main.getContext) {
-        	return;
-    	}
-    	ctx = main.getContext('2d');
 	element = document.getElementById("time");
 	t = 0;
 	let id = setInterval(updateClock,1000);
