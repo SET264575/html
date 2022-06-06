@@ -5,6 +5,7 @@
     	}
     	ctx = main.getContext('2d');
 	const element = document.getElementById("time");
+	let t = 0;
 	let id = setInterval(updateClock,1000);
 })();
 
