@@ -4,11 +4,13 @@
         	return;
     	}
     	ctx = main.getContext('2d');
+	const element = document.getElementById("time");
 	let id = setInterval(updateClock,1000);
 })();
 
 function updateClock(){
   t = t + 1;
+  element.innerHTML = t;
   ctx.fillStyle = 'white';
   ctx.fillRect(0,0,1000,1000);
   ctx.font = "30px Comic Sans MS";
