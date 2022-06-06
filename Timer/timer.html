@@ -12,7 +12,7 @@
     <table><tr><td>
         <button id="btn1" type="button" onclick = "pauseTimer()">Stop Timer</button></td>
         <td><button id="btn2" type = "button" onclick = "startTimer()">Start Timer</button></td>
-        <td><p id="time"></p><br></td>
+        <td style = "vertical-align:middle"><p id="time"></p><br></td>
         
     </table>
 
@@ -43,12 +43,13 @@
          //           e.innerHTML = "Stop Timer";
          //           e.removeEventListener("click",startTimer);
          //           e.addEventListener("click",pauseTimer);
-                    var myInterval = setInterval(function() {endTime = new Date(); 
+                      myInterval = setInterval(function() {endTime = new Date(); 
                                 diffTime = diffTime + 1; 
                                 hrs = Math.floor(diffTime/60/60); 
                                 min = Math.floor((diffTime - hrs*60*60)/60); 
-                                sec = Math.floor((diffTime - hrs*60*60 - min*60));
-                                element.innerHTML = hrs+":"+min+":"+sec},1000);
+                                sec ="0"+ Math.floor((diffTime - hrs*60*60 - min*60));
+                                min = "0" + min;
+                                element.innerHTML = hrs+":"+min.slice(min.length - 2)+":"+sec.slice(sec.length-2)},1000);
         }
     </script>
     
