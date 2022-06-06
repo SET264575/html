@@ -21,13 +21,11 @@
         document.getElementById("btn1").addEventListener("click",pauseTimer);
         document.getElementById("btn2").addEventListener("click",startTimer);
         diffTime = 0;
-        t = 0;
         startTimer();
         
         function startTimer(){
             myInterval = setInterval(function() { 
                                 diffTime = diffTime + 1; 
-                                console.log(diffTime);
                                 hrs = Math.floor(diffTime/60/60); 
                                 min = Math.floor((diffTime - hrs*60*60)/60); 
                                 sec ="0"+ Math.floor((diffTime - hrs*60*60 - min*60));
@@ -36,6 +34,7 @@
         }
         
         function pauseTimer(){
+            console.log(myInterval);
             clearInterval(myInterval);
         }
 
