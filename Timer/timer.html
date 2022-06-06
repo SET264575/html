@@ -18,13 +18,28 @@
         t = 0;
         const myInterval = setInterval(function() {endTime = new Date(); 
                                 diffTime = diffTime + 1; 
-                                hrs = Math.round(diffTime/60/60); 
-                                min = Math.round((diffTime - hrs*60*60)/60); 
-                                sec = Math.round((diffTime - hrs*60*60 - min*60));
+                                hrs = Math.floor(diffTime/60/60); 
+                                min = Math.floor((diffTime - hrs*60*60)/60); 
+                                sec = Math.floor((diffTime - hrs*60*60 - min*60));
                                 element.innerHTML = hrs+":"+min+":"+sec},1000);
         
         function pauseTimer(){
             clearInterval(myInterval);
+            const e = document.getElementById("btn1");
+            e.innerHTML = "Start Timer";
+            e.onclick = "startTimer()";
+        }
+        
+        function startTimer(){
+                    const e = document.getElementById("btn1");
+                    e.innerHTML = "Stop Timer";
+                    e.onclick = "pauseTimer()";
+                    const myInterval = setInterval(function() {endTime = new Date(); 
+                                diffTime = diffTime + 1; 
+                                hrs = Math.floor(diffTime/60/60); 
+                                min = Math.floor((diffTime - hrs*60*60)/60); 
+                                sec = Math.floor((diffTime - hrs*60*60 - min*60));
+                                element.innerHTML = hrs+":"+min+":"+sec},1000);
         }
     </script>
     
