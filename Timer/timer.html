@@ -25,8 +25,9 @@
         startTimer();
         
         function startTimer(){
-            myInterval = setInterval(function() {endTime = new Date(); 
+            myInterval = setInterval(function() { 
                                 diffTime = diffTime + 1; 
+                                console.log(diffTime);
                                 hrs = Math.floor(diffTime/60/60); 
                                 min = Math.floor((diffTime - hrs*60*60)/60); 
                                 sec ="0"+ Math.floor((diffTime - hrs*60*60 - min*60));
