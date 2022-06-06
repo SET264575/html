@@ -11,8 +11,12 @@
 <body>
     <button id="btn1" value = "Stop Timer"></button>
     <p id="time"></p><br>
-    <!--canvas width="100%" height="50" id="main" style ="border-style: solid;"></canvas-->
-    <script src="timer.js"></script>
+
+    <script>
+        const element = document.getElementById("time");
+        t = 0;
+        setInterval(function {t=t+1; element.innerHTML = t},1000};
+    </script>
     <iframe src = "https://www.makezine.com" width = "100%" height = "2000"></iframe>
 </body>
 
