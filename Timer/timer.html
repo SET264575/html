@@ -9,15 +9,17 @@
 </head>
 
 <body>
-    <button id="btn1" type="button">Stop Timer</button>
-    <p id="time"></p><br>
+    <table><tr><td>
+        <button id="btn1" type="button">Stop Timer</button></td>
+        <td><p id="time"></p><br></td>
+    </table>
 
     <script>
         const element = document.getElementById("time");
         document.getElementById("btn1").addEventListener("click",pauseTimer);
         diffTime = 0;
         t = 0;
-        const myInterval = setInterval(function() {endTime = new Date(); 
+        var myInterval = setInterval(function() {endTime = new Date(); 
                                 diffTime = diffTime + 1; 
                                 hrs = Math.floor(diffTime/60/60); 
                                 min = Math.floor((diffTime - hrs*60*60)/60); 
@@ -37,7 +39,7 @@
                     e.innerHTML = "Stop Timer";
                     e.removeEventListener("click",startTimer);
                     e.addEventListener("click",pauseTimer);
-                    const myInterval = setInterval(function() {endTime = new Date(); 
+                    var myInterval = setInterval(function() {endTime = new Date(); 
                                 diffTime = diffTime + 1; 
                                 hrs = Math.floor(diffTime/60/60); 
                                 min = Math.floor((diffTime - hrs*60*60)/60); 
