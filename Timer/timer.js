@@ -13,5 +13,5 @@ function updateClock(){
   ctx.fillRect(0,0,1000,1000);
   ctx.font = "30px Comic Sans MS";
   ctx.fillStyle = 'black';
-  ctx.fillText(t,100,0);
+  ctx.fillText("test",0,0);
 }
