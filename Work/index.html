@@ -25,8 +25,29 @@
         </td></tr>
     </table>
       
-    <script>
-      navigator.clipboard.writeText(output);
+  <label for="discharge">Select discharge instructions:</label>
+  <select name="discharge" id="discharge">
+    <option value="kidneystone">Kidney stones</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+
+ <button onclick="getOption()"> Check option </button>
+    
+    <script type="text/javascript">
+    function getOption() {
+        selectElement = document.querySelector('#discharge');
+        output = selectElement.value;
+        switch(output){
+          case 'kidneystone': 
+            text = "This is a test\nThis is only a test."
+            break;
+          case 'chestpain':
+            break;
+        }
+        navigator.clipboard.write(text);
+    }
     </script>
   </body>
 </html>
