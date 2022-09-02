@@ -127,7 +127,8 @@ function createRecord(i,j){
     tree.appendChild(t);
   }
   
-  document.getElementById("demo"+String(j)+"col1").appendChild(tree);
+  var y = document.getElementById("demo"+String(j)+"col1")
+  y.appendChild(tree);
   var tree = document.createDocumentFragment();
   var x = document.createElement("h3");
   x.innerHTML = "Note";
