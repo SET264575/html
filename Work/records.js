@@ -5,6 +5,7 @@ const room = {
   wu_labspending:  true,
   wu_imagingpending:  true,
   wu_procedurepending: true,
+  wu_consult: true,
   wu_disposition: false,
   admit_bedrequest: true,
   admit_discharge: true,
@@ -42,9 +43,15 @@ function createRecord(i,j){
   createCheckbox(room[i].wu_labspending,"Labs");
   createCheckbox(room[i].wu_imagingpending,"Imaging");
   createCheckbox(room[i].wu_procedurepending,"Procedure");
+  createCheckbox(room[i].consult,"Consult");
   createCheckbox(room[i].wu_admit,"Admit");
   createCheckbox(room[i].wu_discharge,"Discharge");
   createCheckbox(room[i].note_hpi,"HPI");
+  createCheckbox(room[i].note_consult,"Consult");
+  createCheckbox(room[i].note_mdm,"MDM");
+  createCheckbox(room[i].note_ekg,"EKG");
+  createCheckbox(room[i].note_disposition,"Disposition");
+  createCheckbox(room[i].note_sign,"Sign");
 }
 
 function createCheckbox(flag,label) {
