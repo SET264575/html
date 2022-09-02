@@ -7,8 +7,8 @@ function Room() = {
   this.wu_procedurepending= true;
   this.wu_consult= true;
   this.wu_disposition= false;
-  this.admit_bedrequest= true;
-  this.admit_discharge= true;
+  this.admit_bedrequest = true;
+  this.admit_discharge = true;
   this.admit_order= true;
   this.discharge_dx= true;
   this.discharge_instructions= true;
@@ -35,6 +35,15 @@ for (let i = 1; i < 17; i++){
 }
 
 createRecord(1,1);
+
+function displayRecords(){
+  let j = 0;
+  for (let i = 1; i < 17; i++) {
+    if (room[i].mine == true){
+      j = j + 1;
+      createRecord(i,j);
+    }
+  }
 
 function createRecord(i,j){
   document.getElementById("demo"+str(j)).innerHTML = "Room "+str(i);
