@@ -197,4 +197,8 @@ function checkboxChanged(value, label, i) {
   
 }
 
+function pickRoom(i){
+  room[i].mine = true;
+}
+
 displayRecords();
