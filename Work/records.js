@@ -13,8 +13,8 @@ function Room() {
   this.discharge_dx= true;
   this.discharge_instructions= true;
   this.discharge_prescriptions= true;
-  this.discharge_referral= true;
-  this.discharge_outptorders= true;
+  this.discharge_referral = true;
+  this.discharge_outptorders = true;
   this.discharge_worknote= true;
   this.wu_problems= "";
   this.wu_dx= "";
