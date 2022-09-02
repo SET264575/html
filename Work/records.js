@@ -1,3 +1,10 @@
+//Improvements:
+//  Shrink Rm table
+//  Put work up and note in 2 columns
+//  Add textbox for dx, problems
+//  Pending labs:  UA, repeat troponin
+//  Redraw when room selected or box checked - don't reload, will erase data.  
+
 function Room() {
   this.mine = false;
   this.wu_orders =  true;
@@ -199,7 +206,6 @@ function checkboxChanged(value, label, i) {
 
 function pickRoom(i){
   room[i].mine = true;
-  document.write();
   displayRecords();
 }
 
