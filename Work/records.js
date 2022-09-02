@@ -47,7 +47,7 @@ function displayRecords(){
 }
 
 function createRecord(i,j){
-  document.getElementById("demo"+str(j)).innerHTML = "Room "+str(i);
+  document.getElementById("demo"+String(j)).innerHTML = "Room "+String(i);
   createCheckbox(i,room[i].wu_orders,"Orders");
   createCheckbox(i,room[i].wu_workuppending,"Work up");
   createCheckbox(i,room[i].wu_labspending,"Labs");
@@ -69,7 +69,7 @@ function createCheckbox(i,flag,label) {
   x.setAttribute("type", "checkbox");
   x.setAttribute("checked",flag);
   x.setAttribute("label",label);
-  x.setAttribute("id","rm"+str(i)+":"+label);
+  x.setAttribute("id","rm"+String(i)+":"+label);
   x.setAttribute("name",i);
   x.setAttribute("onchange","checkboxChanged(this.checked,this.label, this.name)");
   document.body.appendChild(x);
@@ -80,7 +80,7 @@ function createTextbox(i,label) {
   x.setAttribute("type","text");
   x.setAttribute("label","dx");
   x.setAttribute("name",i);
-  x.setAttribute("id","rm"+str(i)+"_dx");
+  x.setAttribute("id","rm"+String(i)+"_dx");
   document.body.appendChild(x);
 }
 
