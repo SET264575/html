@@ -90,18 +90,27 @@ function checkboxChanged(value, label, i) {
       room[i].wu_workuppending = value;
       break;
     case "Orders":
+      room[i].wu_orders = value;
       break;
     case "Labs":
+      room[i].wu_labspending = value;
       break;
     case "Imaging":
+      room[i].wu_imagingpending = value;
       break;
     case "Procedure":
+      room[i].wu_procedurepending = value;
       break;
     case "Consult":
+      room[i].wu_consult = value;
       break:
     case "Admit":
+      room[i].wu_admit = value;
+      room[i].wu_discharge = !value;
       break;
     case "Discharge":
+      room[i].wu_discharge = value;
+      room[i].wu_admit = !value;
       break;
   }
   
