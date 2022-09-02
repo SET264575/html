@@ -87,9 +87,12 @@ function createCheckbox(i,flag,label) {
   x.setAttribute("name",i);
   x.setAttribute("onchange","checkboxChanged(this.checked,this.label, this.name)");
   document.body.appendChild(x);
+  console.log(x.outerHTML);
   var x = document.createElement("label");
   x.htmlFor = id;
   x.innerHTML = label;
+  document.body.appendChild(x);
+  console.log(x.outerHTML);
   
 }
 
