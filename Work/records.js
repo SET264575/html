@@ -42,6 +42,7 @@ function displayRecords(){
       createRecord(i,j);
     }
   }
+}
 
 function createRecord(i,j){
   document.getElementById("demo"+str(j)).innerHTML = "Room "+str(i);
