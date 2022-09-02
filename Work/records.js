@@ -56,7 +56,7 @@ function createRecord(i,j){
   tree.appendChild(x);
  
   //document.getElementById("demo"+String(j)).innerHTML = "Room "+String(i);
-  var x = document.createElement("h2");
+  var x = document.createElement("h3");
   x.innerHTML = "Work up";
   tree.appendChild(x);
   t = createCheckbox(i,room[i].wu_orders,"Orders");
@@ -102,7 +102,7 @@ function createRecord(i,j){
     t = createCheckbox(i,room[i].discharge_worknote,"Work Note");
     tree.appendChild(t);
   }
-  var x = document.createElement("h2");
+  var x = document.createElement("h3");
   x.innerHTML = "Note";
   tree.appendChild(x);
   t = createCheckbox(i,room[i].note_hpi,"HPI");
@@ -117,7 +117,7 @@ function createRecord(i,j){
   tree.appendChild(t);
   t = createCheckbox(i,room[i].note_sign,"Sign");
   tree.appendChild(t);
-  document.getElementById("demo"+String(i)).appendChild(tree);
+  document.getElementById("demo"+String(j)).appendChild(tree);
   
   
   
