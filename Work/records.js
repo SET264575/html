@@ -54,12 +54,21 @@ function createRecord(i,j){
   createCheckbox(room[i].note_sign,"Sign");
 }
 
-function createCheckbox(flag,label) {
+function createCheckbox(i,flag,label) {
   var x = document.createElement("INPUT");
   x.setAttribute("type", "checkbox");
   x.setAttribute("value",flag);
   x.setAttribute("label",label);
   x.setAttribute("id","rm"+str(i)+"_orders");
+  document.body.appendChild(x);
+}
+
+function createTextbox(i,label) {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type","text");
+  x.setAttribute("label","dx");
+  x.setAttribute("tag",i);
+  x.setAttribute("id","rm"+str(i)+"_dx");
   document.body.appendChild(x);
 }
   
