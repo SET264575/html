@@ -50,7 +50,7 @@ room[3].mine = true;
 room[8].mine = true;
 room[13].mine = true;
 
-console.log("4:00");
+console.log("4:04");
 
 function displayRecords(){
   let j = 0;
@@ -67,6 +67,7 @@ function createRecord(i,j){
   var tree2 = document.createDocumentFragment();
   var x = document.createElement("button");
   x.innerHTML = "Room "+String(i);
+  x.setAttribute("onclick","deleteRoom(i)")
   tree2.appendChild(x);
   var x = document.createElement("table");
   x.innerHTML = '<tr><td><p id = "demo"+String(j)+"col1"></p></td><td><p id = "demo"+String(j)+"col2"></p></td></tr>';
@@ -187,6 +188,7 @@ function createTextbox(i,label) {
   x.setAttribute("rows","10");
   x.setAttribute("cols","20");
   x.setAttribute("wrap","soft");
+  x.setAttribute("onchange","recordTextboxValue(i,this.value)");
   x.setAttribute("id","rm"+String(i)+"_dx");
   return(x);
 }
@@ -226,6 +228,15 @@ function checkboxChanged(value, label, i) {
 function pickRoom(i){
   room[i].mine = true;
   displayRecords();
+}
+
+function deleteRoom(i){
+  room[i].mine = false;
+  displayRecords();
+}
+
+function recordTextboxValue(i,value){
+  room[i].wu_dx = value;
 }
 
 function indent(){
