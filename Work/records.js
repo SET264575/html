@@ -179,7 +179,7 @@ function createTextbox(i,label) {
   x.setAttribute("label","dx");
   x.setAttribute("name",i);
   x.setAttribute("id","rm"+String(i)+"_dx");
-  document.body.appendChild(x);
+  return(x);
 }
 
 function checkboxChanged(value, label, i) {
