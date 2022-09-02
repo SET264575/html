@@ -135,3 +135,4 @@ function checkboxChanged(value, label, i) {
 }
   
 createRecord(1,1);
+createRecord(2,2);
