@@ -57,7 +57,7 @@ function createRecord(i,j){
   createCheckbox(i,room[i].wu_admit,"Admit");
   createCheckbox(i,room[i].wu_discharge,"Discharge");
   if (room[i].wu_admit == true) {
-    createCheckbox(i,room[i].admit_discharge,"Discharge);
+    createCheckbox(i,room[i].admit_discharge,"Discharge");
     createCheckbox(i,room[i].admit_order,"Order");
     createCheckbox(i,room[i].admit_bedrequest,"Bed request");
   }
