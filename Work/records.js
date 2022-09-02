@@ -7,6 +7,7 @@
 //  Indent labs, etc
 //  timing of events
 //  save to file
+//  release room with button
 
 function Room() {
   this.mine = false;
@@ -49,7 +50,7 @@ room[3].mine = true;
 room[8].mine = true;
 room[13].mine = true;
 
-console.log("3:45");
+console.log("3:50");
 
 function displayRecords(){
   let j = 0;
@@ -64,7 +65,7 @@ function displayRecords(){
 
 function createRecord(i,j){
   var tree2 = document.createDocumentFragment();
-  var x = document.createElement("h1");
+  var x = document.createElement("button");
   x.innerHTML = "Room "+String(i);
   tree2.appendChild(x);
   var x = document.createElement("table");
