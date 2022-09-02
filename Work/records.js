@@ -34,8 +34,6 @@ for (let i = 1; i < 17; i++){
   console.log(room[i]);
 }
 
-createRecord(1,1);
-
 function displayRecords(){
   let j = 0;
   for (let i = 1; i < 17; i++) {
@@ -81,3 +79,4 @@ function createTextbox(i,label) {
   document.body.appendChild(x);
 }
   
+createRecord(1,1);
