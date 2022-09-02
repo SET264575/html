@@ -65,9 +65,11 @@ function createRecord(i,j){
 function createCheckbox(i,flag,label) {
   var x = document.createElement("INPUT");
   x.setAttribute("type", "checkbox");
-  x.setAttribute("value",flag);
+  x.setAttribute("checked",flag);
   x.setAttribute("label",label);
-  x.setAttribute("id","rm"+str(i)+"_orders");
+  x.setAttribute("id","rm"+str(i)+":"+label);
+  x.setAttribute("name",i);
+  x.setAttribute("onchange","checkboxChanged(this.value,this.label)");
   document.body.appendChild(x);
 }
 
@@ -78,6 +80,10 @@ function createTextbox(i,label) {
   x.setAttribute("tag",i);
   x.setAttribute("id","rm"+str(i)+"_dx");
   document.body.appendChild(x);
+}
+
+function checkboxChanged(value, label) {
+  
 }
   
 createRecord(1,1);
