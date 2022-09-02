@@ -133,7 +133,7 @@ function createRecord(i,j){
     tree.appendChild(t);
   }
   
-  var z = document.documentElement.innerHTML();
+  var z = document.documentElement.innerHTML;
   console.log(z);
   var y = document.getElementById("demo"+String(j)+"col1")
   y.appendChild(tree);
