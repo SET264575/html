@@ -82,10 +82,15 @@ function createCheckbox(i,flag,label) {
   x.setAttribute("type", "checkbox");
   x.setAttribute("checked",!flag);
   x.setAttribute("label",label);
-  x.setAttribute("id","rm"+String(i)+":"+label);
+  var id = "rm"+String(i)+":"+label;
+  x.setAttribute("id",id);
   x.setAttribute("name",i);
   x.setAttribute("onchange","checkboxChanged(this.checked,this.label, this.name)");
   document.body.appendChild(x);
+  var x = document.createElement("label");
+  x.htmlFor = id;
+  x.setAttribute(textContent,label);
+  
 }
 
 function createTextbox(i,label) {
