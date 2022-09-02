@@ -1,36 +1,36 @@
-const room = {
-  mine: false,
-  wu_orders:  true,
-  wu_workuppending:  true,
-  wu_labspending:  true,
-  wu_imagingpending:  true,
-  wu_procedurepending: true,
-  wu_consult: true,
-  wu_disposition: false,
-  admit_bedrequest: true,
-  admit_discharge: true,
-  admit_order: true,
-  discharge_dx: true,
-  discharge_instructions: true,
-  discharge_prescriptions: true,
-  discharge_referral: true,
-  discharge_outptorders: true,
-  discharge_worknote: true,
-  wu_problems: "",
-  wu_dx: "",
-  note_hpi: true,
-  note_ros: true,
-  note_pe: true,
-  note_course: true,
-  note_consult: true,
-  note_mdm: true,
-  note_ekg: true,
-  note_disposition: true,
-  note_sign: true
+function Room() = {
+  this.mine = false;
+  this.wu_orders =  true;
+  this.wu_workuppending =  true;
+  this.wu_labspending=  true;
+  this.wu_imagingpending =  true;
+  this.wu_procedurepending= true;
+  this.wu_consult= true;
+  this.wu_disposition= false;
+  this.admit_bedrequest= true;
+  this.admit_discharge= true;
+  this.admit_order= true;
+  this.discharge_dx= true;
+  this.discharge_instructions= true;
+  this.discharge_prescriptions= true;
+  this.discharge_referral= true;
+  this.discharge_outptorders= true;
+  this.discharge_worknote= true;
+  this.wu_problems= "";
+  this.wu_dx= "";
+  this.note_hpi= true;
+  this.note_ros= true;
+  this.note_pe= true;
+  this.note_course= true;
+  this.note_consult= true;
+  this.note_mdm= true;
+  this.note_ekg= true;
+  this.note_disposition= true;
+  this.note_sign= true;
 }
 
 for (let i = 1; i < 17; i++){
-  room[i] = new room;
+  room[i] = new Room;
   console.log(room[i]);
 }
 
