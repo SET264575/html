@@ -50,7 +50,7 @@ room[3].mine = true;
 room[8].mine = true;
 room[13].mine = true;
 
-console.log("4:06");
+console.log("4:10");
 
 function displayRecords(){
   let j = 0;
@@ -70,7 +70,7 @@ function createRecord(i,j){
   x.setAttribute("onclick","deleteRoom(i)")
   tree2.appendChild(x);
   var x = document.createElement("table");
-  x.innerHTML = '<tr><td><p id = "demo"+String(j)+"col1"></p></td><td><p id = "demo"+String(j)+"col2"></p></td></tr>';
+  x.innerHTML = '<tr><td><p id = "demo"'+String(j)+'"col1"></p></td><td><p id = "demo"'+String(j)+'"col2"></p></td></tr>';
   tree2.appendChild(x);
   tree2.appendChild(createTextbox());
   console.log(document.documentElement.innerHTML);
