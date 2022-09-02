@@ -1,7 +1,7 @@
 //Improvements:
 
 // * Put work up and note in 2 columns
-// * Add textbox for dx, problems
+// done - Add textbox for dx, problems
 //  Pending labs:  UA, repeat troponin
 //  *Redraw when room selected or box checked - don't reload, will erase data.  
 //  Indent labs, etc
@@ -50,7 +50,7 @@ room[3].mine = true;
 room[8].mine = true;
 room[13].mine = true;
 
-console.log("3:50");
+console.log("4:00");
 
 function displayRecords(){
   let j = 0;
@@ -132,6 +132,8 @@ function createRecord(i,j){
     tree.appendChild(t);
   }
   
+  var z = document.documentElement.innerHTML();
+  console.log(z);
   var y = document.getElementById("demo"+String(j)+"col1")
   y.appendChild(tree);
   var tree = document.createDocumentFragment();
