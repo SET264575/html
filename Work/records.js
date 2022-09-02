@@ -94,7 +94,7 @@ function createRecord(i,j){
   t = createCheckbox(i,room[i].wu_discharge,"Discharge");
   tree.appendChild(t);
   if (room[i].wu_admit == true) {
-    tree.appendChildindent());
+    tree.appendChild(indent());
     t = createCheckbox(i,room[i].admit_discharge,"Discharge");
     tree.appendChild(t);
     tree.appendChild(indent());
