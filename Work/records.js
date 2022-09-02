@@ -56,6 +56,19 @@ function createRecord(i,j){
   createCheckbox(i,room[i].consult,"Consult");
   createCheckbox(i,room[i].wu_admit,"Admit");
   createCheckbox(i,room[i].wu_discharge,"Discharge");
+  if (room[i].wu_admit == true) {
+    createCheckbox(i,room[i].admit_discharge,"Discharge);
+    createCheckbox(i,room[i].admit_order,"Order");
+    createCheckbox(i,room[i].admit_bedrequest,"Bed request");
+  }
+  if (room[i].wu_discharge == true) {
+    createCheckbox(i,room[i].discharge_dx,"Diagnoses");
+    createCheckbox(i,room[i].discharge_prescriptions, "Prescriptions");
+    createCheckbox(i,room[i].discharge_referral,"Referral");
+    createCheckbox(i,room[i].discharge_instructions,"Instructions");
+    createCheckbox(i,room[i].discharge_outptorders,"Outpatient Orders");
+    createCheckbox(i,room[i].discharge_worknote,"Work Note");
+  }
   createCheckbox(i,room[i].note_hpi,"HPI");
   createCheckbox(i,room[i].note_consult,"Consult");
   createCheckbox(i,room[i].note_mdm,"MDM");
