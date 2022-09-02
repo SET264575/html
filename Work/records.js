@@ -104,7 +104,7 @@ function createRecord(i,j){
   tree.appendChild(t);
   t = createCheckbox(i,room[i].note_sign,"Sign");
   tree.appendChild(t);
-  document.getElementById("demo1").appendChild(tree);
+  document.getElementById("demo"+String(i)).appendChild(tree);
   
   
   
@@ -124,12 +124,10 @@ function createCheckbox(i,flag,label) {
   x.setAttribute("name",i);
   x.setAttribute("onchange","checkboxChanged(this.checked,this.label, this.name)");
   t.appendChild(x);
-  console.log(x.outerHTML);
   var x = document.createElement("label");
   x.htmlFor = id;
   x.innerHTML = label;
   t.appendChild(x);
-  console.log(x.outerHTML);
   var x = document.createElement("br");
   t.appendChild(x);
   return(t);
