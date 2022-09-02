@@ -71,7 +71,7 @@ function createCheckbox(i,flag,label) {
   x.setAttribute("label",label);
   x.setAttribute("id","rm"+str(i)+":"+label);
   x.setAttribute("name",i);
-  x.setAttribute("onchange","checkboxChanged(this.value,this.label)");
+  x.setAttribute("onchange","checkboxChanged(this.checked,this.label, this.name)");
   document.body.appendChild(x);
 }
 
@@ -79,12 +79,31 @@ function createTextbox(i,label) {
   var x = document.createElement("INPUT");
   x.setAttribute("type","text");
   x.setAttribute("label","dx");
-  x.setAttribute("tag",i);
+  x.setAttribute("name",i);
   x.setAttribute("id","rm"+str(i)+"_dx");
   document.body.appendChild(x);
 }
 
-function checkboxChanged(value, label) {
+function checkboxChanged(value, label, i) {
+  switch(label) {
+    case "Work Up":
+      room[i].wu_workuppending = value;
+      break;
+    case "Orders":
+      break;
+    case "Labs":
+      break;
+    case "Imaging":
+      break;
+    case "Procedure":
+      break;
+    case "Consult":
+      break:
+    case "Admit":
+      break;
+    case "Discharge":
+      break;
+  }
   
 }
   
