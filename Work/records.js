@@ -1,5 +1,5 @@
 //Improvements:
-//  *Shrink Rm table
+
 // * Put work up and note in 2 columns
 // * Add textbox for dx, problems
 //  Pending labs:  UA, repeat troponin
@@ -46,6 +46,8 @@ for (let i = 1; i < 17; i++){
 room[3].mine = true;
 room[8].mine = true;
 room[13].mine = true;
+
+console.log("3:37");
 
 function displayRecords(){
   let j = 0;
