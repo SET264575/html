@@ -89,7 +89,7 @@ function createCheckbox(i,flag,label) {
   document.body.appendChild(x);
   var x = document.createElement("label");
   x.htmlFor = id;
-  x.setAttribute(textContent,label);
+  x.innerHTML = label;
   
 }
 
