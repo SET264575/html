@@ -29,6 +29,8 @@ function Room() {
   this.note_sign = true;
 }
 
+const room = [];
+
 for (let i = 1; i < 17; i++){
   room[i] = new Room;
   console.log(room[i]);
