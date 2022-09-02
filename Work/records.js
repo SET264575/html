@@ -47,7 +47,7 @@ room[3].mine = true;
 room[8].mine = true;
 room[13].mine = true;
 
-console.log("3:37");
+console.log("3:45");
 
 function displayRecords(){
   let j = 0;
@@ -66,7 +66,7 @@ function createRecord(i,j){
   x.innerHTML = "Room "+String(i);
   tree2.appendChild(x);
   var x = document.createElement("table");
-  x.innerHTML = '<tr><td id = "demo"+String(j)+"col1"></td><td id = "demo"+String(j)+"col2"></td></tr>';
+  x.innerHTML = '<tr><td><p id = "demo"+String(j)+"col1"></p></td><td><p id = "demo"+String(j)+"col2"></p></td></tr>';
   tree2.appendChild(x);
   tree2.appendChild(createTextbox());
   document.getElementById("demo"+String(j)).appendChild(tree2);
