@@ -105,6 +105,8 @@ function createCheckbox(i,flag,label) {
   x.innerHTML = label;
   document.body.appendChild(x);
   console.log(x.outerHTML);
+  var x = document.createElement("br");
+  document.body.appendChild(x);
   
 }
 
