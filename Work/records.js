@@ -64,13 +64,13 @@ function createRecord(i,j){
   t= createCheckbox(i,room[i].wu_workuppending,"Work up");
   tree.appendChild(t);
   if (room[i].wu_workuppending == true){
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t =createCheckbox(i,room[i].wu_labspending,"Labs");
     tree.appendChild(t);
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t =createCheckbox(i,room[i].wu_imagingpending,"Imaging");
     tree.appendChild(t);
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t =createCheckbox(i,room[i].wu_procedurepending,"Procedure");
     tree.appendChild(t);
   }
@@ -201,6 +201,12 @@ function pickRoom(i){
   room[i].mine = true;
   document.write();
   displayRecords();
+}
+
+function indent(){
+  var t = document.createElement("pre");
+  t.innerHTML = "     ";
+  return(t);
 }
 
 displayRecords();
