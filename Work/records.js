@@ -1,9 +1,10 @@
 //Improvements:
 //  *Shrink Rm table
 // * Put work up and note in 2 columns
-//  Add textbox for dx, problems
+// * Add textbox for dx, problems
 //  Pending labs:  UA, repeat troponin
 //  *Redraw when room selected or box checked - don't reload, will erase data.  
+//  Indent labs, etc
 
 function Room() {
   this.mine = false;
@@ -62,7 +63,7 @@ function createRecord(i,j){
   x.innerHTML = "Room "+String(i);
   tree2.appendChild(x);
   var x = document.createElement("table");
-  x.innerHTML = "<tr><td id = "demo"+String(j)+"col1"></td><td id = "demo"+String(j)+"col2"></td></tr>";
+  x.innerHTML = '<tr><td id = "demo"+String(j)+"col1"></td><td id = "demo"+String(j)+"col2"></td></tr>';
   tree2.appendChild(x);
   tree2.appendChild(createTextbox());
   document.getElementById("demo"+String(j)).appendChild(tree2);
