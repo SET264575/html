@@ -47,7 +47,19 @@ function displayRecords(){
 }
 
 function createRecord(i,j){
-  document.getElementById("demo"+String(j)).innerHTML = "Room "+String(i);
+  var tree = document.createDocumentFragment();
+  var x = document.createElement("h1");
+  x.innerHTML = "Room "+String(i);
+  x.appendChild(document.createTextNode("linkText");
+  tree.appendChild(x);
+  document.getElementById("demo1").appendChild(tree);
+  
+  
+  
+  
+  
+  
+  //document.getElementById("demo"+String(j)).innerHTML = "Room "+String(i);
   createCheckbox(i,room[i].wu_orders,"Orders");
   createCheckbox(i,room[i].wu_workuppending,"Work up");
   createCheckbox(i,room[i].wu_labspending,"Labs");
