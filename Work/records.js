@@ -80,7 +80,7 @@ function createRecord(i,j){
 function createCheckbox(i,flag,label) {
   var x = document.createElement("INPUT");
   x.setAttribute("type", "checkbox");
-  x.setAttribute("checked",flag);
+  x.setAttribute("checked",!flag);
   x.setAttribute("label",label);
   x.setAttribute("id","rm"+String(i)+":"+label);
   x.setAttribute("name",i);
