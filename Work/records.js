@@ -178,10 +178,10 @@ function createCheckbox(i,flag,label) {
 }
 
 function createTextbox(i,label) {
-  var x = document.createElement("INPUT");
-  x.setAttribute("type","text");
-  x.setAttribute("label","dx");
-  x.setAttribute("name",i);
+  var x = document.createElement("textarea");
+  x.setAttribute("rows","10");
+  x.setAttribute("cols","20");
+  x.setAttribute("wrap","soft");
   x.setAttribute("id","rm"+String(i)+"_dx");
   return(x);
 }
