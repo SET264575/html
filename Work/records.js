@@ -1,4 +1,4 @@
-function Room() = {
+function Room() {
   this.mine = false;
   this.wu_orders =  true;
   this.wu_workuppending =  true;
