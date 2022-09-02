@@ -33,5 +33,19 @@ for (let i = 1; i < 17; i++){
   console.print(room[i]);
 }
 
+createRecord(1,1);
 
+function createRecord(i,j){
+  document.getElementById("demo"+str(j)).innerHTML = "Room "+str(i);
+  createCheckbox(room[i].wu_orders,"Orders");
+}
+
+function createCheckbox(flag,label) {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "checkbox");
+  x.setAttribute("value",flag);
+  x.setAttribute("label",label);
+  x.setAttribute("id","rm"+str(i)+"_orders");
+  document.body.appendChild(x);
+}
   
