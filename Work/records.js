@@ -52,44 +52,69 @@ function createRecord(i,j){
   x.innerHTML = "Room "+String(i);
   x.appendChild(document.createTextNode("linkText");
   tree.appendChild(x);
+ 
+  //document.getElementById("demo"+String(j)).innerHTML = "Room "+String(i);
+  t = createCheckbox(i,room[i].wu_orders,"Orders");
+  tree.appendChild(t);
+  t= createCheckbox(i,room[i].wu_workuppending,"Work up");
+  tree.appendChild(t);
+  t =createCheckbox(i,room[i].wu_labspending,"Labs");
+  tree.appendChild(t);
+  t =createCheckbox(i,room[i].wu_imagingpending,"Imaging");
+  tree.appendChild(t);
+  t =createCheckbox(i,room[i].wu_procedurepending,"Procedure");
+  tree.appendChild(t);
+  t =createCheckbox(i,room[i].consult,"Consult");
+  tree.appendChild(t);
+  t= createCheckbox(i,room[i].wu_admit,"Admit");
+  tree.appendChild(t);
+  t = createCheckbox(i,room[i].wu_discharge,"Discharge");
+  tree.appendChild(t);
+  if (room[i].wu_admit == true) {
+    t = createCheckbox(i,room[i].admit_discharge,"Discharge");
+    tree.appendChild(t);
+    t = createCheckbox(i,room[i].admit_order,"Order");
+    tree.appendChild(t);
+    t = createCheckbox(i,room[i].admit_bedrequest,"Bed request");
+    tree.appendChild(t);
+  }
+  if (room[i].wu_discharge == true) {
+    t = createCheckbox(i,room[i].discharge_dx,"Diagnoses");
+    tree.appendChild(t);
+    t = createCheckbox(i,room[i].discharge_prescriptions, "Prescriptions");
+    tree.appendChild(t);
+    t = createCheckbox(i,room[i].discharge_referral,"Referral");
+    tree.appendChild(t);
+    t = createCheckbox(i,room[i].discharge_instructions,"Instructions");
+    tree.appendChild(t);
+    t = createCheckbox(i,room[i].discharge_outptorders,"Outpatient Orders");
+    tree.appendChild(t);
+    t = createCheckbox(i,room[i].discharge_worknote,"Work Note");
+    tree.appendChild(t);
+  }
+  t = createCheckbox(i,room[i].note_hpi,"HPI");
+  tree.appendChild(t);
+  t = createCheckbox(i,room[i].note_consult,"Consult");
+  tree.appendChild(t);
+  t = createCheckbox(i,room[i].note_mdm,"MDM");
+  tree.appendChild(t);
+  t = createCheckbox(i,room[i].note_ekg,"EKG");
+  tree.appendChild(t);
+  t = createCheckbox(i,room[i].note_disposition,"Disposition");
+  tree.appendChild(t);
+  t = createCheckbox(i,room[i].note_sign,"Sign");
+  tree.appendChild(t);
   document.getElementById("demo1").appendChild(tree);
   
   
   
   
   
-  
-  //document.getElementById("demo"+String(j)).innerHTML = "Room "+String(i);
-  createCheckbox(i,room[i].wu_orders,"Orders");
-  createCheckbox(i,room[i].wu_workuppending,"Work up");
-  createCheckbox(i,room[i].wu_labspending,"Labs");
-  createCheckbox(i,room[i].wu_imagingpending,"Imaging");
-  createCheckbox(i,room[i].wu_procedurepending,"Procedure");
-  createCheckbox(i,room[i].consult,"Consult");
-  createCheckbox(i,room[i].wu_admit,"Admit");
-  createCheckbox(i,room[i].wu_discharge,"Discharge");
-  if (room[i].wu_admit == true) {
-    createCheckbox(i,room[i].admit_discharge,"Discharge");
-    createCheckbox(i,room[i].admit_order,"Order");
-    createCheckbox(i,room[i].admit_bedrequest,"Bed request");
-  }
-  if (room[i].wu_discharge == true) {
-    createCheckbox(i,room[i].discharge_dx,"Diagnoses");
-    createCheckbox(i,room[i].discharge_prescriptions, "Prescriptions");
-    createCheckbox(i,room[i].discharge_referral,"Referral");
-    createCheckbox(i,room[i].discharge_instructions,"Instructions");
-    createCheckbox(i,room[i].discharge_outptorders,"Outpatient Orders");
-    createCheckbox(i,room[i].discharge_worknote,"Work Note");
-  }
-  createCheckbox(i,room[i].note_hpi,"HPI");
-  createCheckbox(i,room[i].note_consult,"Consult");
-  createCheckbox(i,room[i].note_mdm,"MDM");
-  createCheckbox(i,room[i].note_ekg,"EKG");
-  createCheckbox(i,room[i].note_disposition,"Disposition");
-  createCheckbox(i,room[i].note_sign,"Sign");
+ 
 }
 
 function createCheckbox(i,flag,label) {
+  var t = document.createDocumentFragment();
   var x = document.createElement("INPUT");
   x.setAttribute("type", "checkbox");
   x.setAttribute("checked",!flag);
@@ -98,15 +123,16 @@ function createCheckbox(i,flag,label) {
   x.setAttribute("id",id);
   x.setAttribute("name",i);
   x.setAttribute("onchange","checkboxChanged(this.checked,this.label, this.name)");
-  document.body.appendChild(x);
+  t.appendChild(x);
   console.log(x.outerHTML);
   var x = document.createElement("label");
   x.htmlFor = id;
   x.innerHTML = label;
-  document.body.appendChild(x);
+  t.appendChild(x);
   console.log(x.outerHTML);
   var x = document.createElement("br");
-  document.body.appendChild(x);
+  t.appendChild(x);
+  return(t);
   
 }
 
