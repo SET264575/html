@@ -103,7 +103,7 @@ function checkboxChanged(value, label, i) {
       break;
     case "Consult":
       room[i].wu_consult = value;
-      break:
+      break;
     case "Admit":
       room[i].wu_admit = value;
       room[i].wu_discharge = !value;
