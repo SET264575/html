@@ -52,6 +52,7 @@ function displayRecords(){
   for (let i = 1; i < 17; i++) {
     if (room[i].mine == true){
       j = j + 1;
+      console.log(i,j);
       createRecord(i,j);
     }
   }
