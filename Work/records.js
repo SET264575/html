@@ -33,8 +33,11 @@ const room = [];
 
 for (let i = 1; i < 17; i++){
   room[i] = new Room;
-  console.log(room[i]);
 }
+
+room[3].mine = true;
+room[8].mine = true;
+room[13].mine = true;
 
 function displayRecords(){
   let j = 0;
@@ -50,7 +53,7 @@ function createRecord(i,j){
   var tree = document.createDocumentFragment();
   var x = document.createElement("h1");
   x.innerHTML = "Room "+String(i);
-  x.appendChild(document.createTextNode("linkText");
+  x.appendChild(document.createTextNode("linkText"));
   tree.appendChild(x);
  
   //document.getElementById("demo"+String(j)).innerHTML = "Room "+String(i);
@@ -174,6 +177,5 @@ function checkboxChanged(value, label, i) {
   }
   
 }
-  
-createRecord(1,1);
-createRecord(2,2);
+
+displayRecords();
