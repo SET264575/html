@@ -81,33 +81,33 @@ function createRecord(i,j){
   t = createCheckbox(i,room[i].wu_discharge,"Discharge");
   tree.appendChild(t);
   if (room[i].wu_admit == true) {
-    tree.appendChild(document.createElement("t"));
+    tree.appendChildindent());
     t = createCheckbox(i,room[i].admit_discharge,"Discharge");
     tree.appendChild(t);
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t = createCheckbox(i,room[i].admit_order,"Order");
     tree.appendChild(t);
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t = createCheckbox(i,room[i].admit_bedrequest,"Bed request");
     tree.appendChild(t);
   }
   if (room[i].wu_discharge == true) {
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t = createCheckbox(i,room[i].discharge_dx,"Diagnoses");
     tree.appendChild(t);
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t = createCheckbox(i,room[i].discharge_prescriptions, "Prescriptions");
     tree.appendChild(t);
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t = createCheckbox(i,room[i].discharge_referral,"Referral");
     tree.appendChild(t);
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t = createCheckbox(i,room[i].discharge_instructions,"Instructions");
     tree.appendChild(t);
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t = createCheckbox(i,room[i].discharge_outptorders,"Outpatient Orders");
     tree.appendChild(t);
-    tree.appendChild(document.createElement("t"));
+    tree.appendChild(indent());
     t = createCheckbox(i,room[i].discharge_worknote,"Work Note");
     tree.appendChild(t);
   }
