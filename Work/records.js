@@ -53,7 +53,6 @@ function createRecord(i,j){
   var tree = document.createDocumentFragment();
   var x = document.createElement("h1");
   x.innerHTML = "Room "+String(i);
-  x.appendChild(document.createTextNode("linkText"));
   tree.appendChild(x);
  
   //document.getElementById("demo"+String(j)).innerHTML = "Room "+String(i);
@@ -64,12 +63,17 @@ function createRecord(i,j){
   tree.appendChild(t);
   t= createCheckbox(i,room[i].wu_workuppending,"Work up");
   tree.appendChild(t);
-  t =createCheckbox(i,room[i].wu_labspending,"Labs");
-  tree.appendChild(t);
-  t =createCheckbox(i,room[i].wu_imagingpending,"Imaging");
-  tree.appendChild(t);
-  t =createCheckbox(i,room[i].wu_procedurepending,"Procedure");
-  tree.appendChild(t);
+  if (room[i].wu_workuppending == true){
+    tree.appendChild(document.createElement("t");
+    t =createCheckbox(i,room[i].wu_labspending,"Labs");
+    tree.appendChild(t);
+    tree.appendChild(document.createElement("t");
+    t =createCheckbox(i,room[i].wu_imagingpending,"Imaging");
+    tree.appendChild(t);
+    tree.appendChild(document.createElement("t");
+    t =createCheckbox(i,room[i].wu_procedurepending,"Procedure");
+    tree.appendChild(t);
+  }
   t =createCheckbox(i,room[i].consult,"Consult");
   tree.appendChild(t);
   t= createCheckbox(i,room[i].wu_admit,"Admit");
