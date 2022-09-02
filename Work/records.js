@@ -5,6 +5,8 @@
 //  Pending labs:  UA, repeat troponin
 //  *Redraw when room selected or box checked - don't reload, will erase data.  
 //  Indent labs, etc
+//  timing of events
+//  save to file
 
 function Room() {
   this.mine = false;
