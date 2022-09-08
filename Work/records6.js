@@ -17,10 +17,14 @@
 //  Indent labs, etc
 //  timing of events
 //  save to file
-//  Special:  chest pain, sepsis, DKA, pancreatitis, stroke
+//  done - Special:  chest pain, sepsis, DKA, pancreatitis, stroke
 //  admit/discharge as buttons
 //  IV contrast not used
 //  conditions:  admitting, neuro, night, number of patients
+//  awaiting:  response to meds, labs, CT read, consult call back
+//  plan:  
+//  consult time:
+//  timer: when labs are available, when to repage, check med response
 
 function Room() {
   this.mine = false;
@@ -60,6 +64,21 @@ function Room() {
   this.note_disposition = true;
   this.note_sign = true;
 }
+
+function Awaiting(activity,t){
+	this.activity = activity;
+	this.anticipatedTime = t;
+}
+
+const awaitingList = [];
+const awaitingList[0] = new Awaiting("UA",30);
+const awaitingList[1] = new Awaiting("Consult",15);
+const awaitingList[2] = new Awaiting("Recheck nosebleed",30);
+const awaitingList[3] = new Awaiting("Digital block",10);
+const awaitingList[4] = new Awaiting("Repeat troponin",120);
+const awaitingList[5] = new Awaiting("Teleradiology read",60);
+
+console.log(awaitingList);
 
 const room = [];
 const default_room = new Room;
