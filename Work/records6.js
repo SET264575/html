@@ -70,15 +70,15 @@ function Awaiting(activity,t){
 	this.anticipatedTime = t;
 }
 
-const awaitingList = [];
-const awaitingList[0] = new Awaiting("UA",30);
-const awaitingList[1] = new Awaiting("Consult",15);
-const awaitingList[2] = new Awaiting("Recheck nosebleed",30);
-const awaitingList[3] = new Awaiting("Digital block",10);
-const awaitingList[4] = new Awaiting("Repeat troponin",120);
-const awaitingList[5] = new Awaiting("Teleradiology read",60);
+//const awaitingList = [];
+//const awaitingList[0] = new Awaiting("UA",30);
+//const awaitingList[1] = new Awaiting("Consult",15);
+//const awaitingList[2] = new Awaiting("Recheck nosebleed",30);
+//const awaitingList[3] = new Awaiting("Digital block",10);
+//const awaitingList[4] = new Awaiting("Repeat troponin",120);
+//const awaitingList[5] = new Awaiting("Teleradiology read",60);
 
-console.log(awaitingList);
+//console.log(awaitingList);
 
 const room = [];
 const default_room = new Room;
