@@ -88,18 +88,21 @@ class AwaitingList {
 const awaiting = [];
 const awaitingList = [];
 
-awaiting[0] = new Awaiting("troponin",120);
-awaiting[1] = new Awaiting("nosebleed",30);
-awaiting[2] = new Awaiting("digital block",10);
-awaiting[3] = new Awaiting("repage consult",15);
-awaiting[4] = new Awaiting("Teleradiology read",60);
-awaiting[5] = new Awaiting("urinalysis",30);
-awaiting[6] = new Awaiting("response to medication",20);
-awaiting[7] = new Awaiting("reassess 10 minutes",10);
-awaiting[8] = new Awaiting("reassess 15 minutes",15);
-awaiting[9] = new Awaiting("reassess 20 minutes",20);
-awaiting[10] = new Awaiting("reassess 30 minutes",30);
-awaiting[11] = new Awaiting("reassess 1 hour",60);
+awaiting.push(new Awaiting("repeat troponin 1 hour",60));
+awaiting.push(new Awaiting("repeat troponin 2 hours",120));
+awaiting.push(new Awaiting("nosebleed",30));
+awaiting.push(new Awaiting("digital block",10));
+awaiting.push(new Awaiting("repage consult",15));
+awaiting.push(new Awaiting("Teleradiology read",60));
+awaiting.push(new Awaiting("urinalysis",30));
+awaiting.push(new Awaiting("response to medication",20));
+awaiting.push(new Awaiting("reassess 10 minutes",10));
+awaiting.push(new Awaiting("reassess 15 minutes",15));
+awaiting.push(new Awaiting("reassess 20 minutes",20));
+awaiting.push(new Awaiting("reassess 30 minutes",30));
+awaiting.push(new Awaiting("reassess 1 hour",60));
+awaiting.push(new Awaiting("reassess 2 hours",120));
+
 
 const room = [];
 const default_room = new Room;
