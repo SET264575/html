@@ -1,5 +1,4 @@
 function copy2(){
-	console.log("in copy");
 	var text = "";
 	const SIRS = [];
 	var lactate = "";
@@ -14,7 +13,7 @@ function copy2(){
 	text = "The patient meets SIRS criteria with "+ combine(SIRS) + ".";
 
 	if (getValue('highlactate')) {lactate = "elevated";}
-	if (getValue("lowlactate")) {lactate = "notelevated";}
+	if (getValue("lowlactate")) {lactate = "not elevated";}
 
 	text = text + " Lactate was " + lactate + ".";
 

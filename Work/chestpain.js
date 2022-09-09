@@ -19,6 +19,7 @@
 		text = text + "Given the risk of a major adverse cardiac event, the patient was admitted.";
 	}
 	console.log(text);
+	navigator.clipboard.writeText(text);
       }
 
       function getRadioValue(id) {
