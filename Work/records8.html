@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <style>
+      .table1 {
+              border: 1px solid black;
+              border-collapse: collapse;
+	      vertical-align: top;
+      }
+
+      .button1 {
+        width: 80px;
+        height: 40px;
+      }
+
+      .button2 {
+	width:  100px;
+        height:  20px;
+      }
+      
+      .td1 {
+        width:  300px;
+        vertical-align:  top;
+        border: 1px solid black;
+	border-collapse:  collapse;
+      }
+      
+      .td2 {
+        width: 80px;
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+<table>
+<td style="vertical-align: top;">
+<select id = "physicians" onchange = "navigator.clipboard.writeText(this.value)" onmouseover = "navigator.clipboard.writeText(this.value)">
+
+<option>Brother,M</option>
+<option>Petrie,A</option>
+<option>Zeglis,C</option>
+</select>
+
+<br><br><br>
+
+<a href = "chestpain.html">Chest pain</a><br>
+<a href = "critical care.html">Critical Care</a><br>
+<a href = "dka.html">DKA</a><br>
+<a href = "intracranial bleeding.html">Intracranial Bleed</a><br>
+<a href = "pancreatitis.html">Pancreatitis</a><br>
+<a href = "sepsis.html">Sepsis</a><br>
+<a href = "stroke.html">Stroke</a><br>
+
+<br><a href = "admission orders.html">Admission Orders</a><br>
+<br>
+<p id = "awaitListPlaceholder"></p>
+
+</td><td>
+    <table>
+	<tr>
+<td>
+    <table>
+      <tr>
+      <tr>  <td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(1)" id = "1">Rm 1</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(2)" id = "2">Rm 2</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(3)" id = "3">Rm 3</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(4)" id = "4">Rm 4</button> </td></tr>
+
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(5)" id = "5">Rm 5</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(6)" id = "6">Rm 6</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(7)" id = "7">Rm 7</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(8)" id = "8">Rm 8</button> </td></tr>
+      <tr>
+        <td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(9)" id = "9">Rm 9</button> </td></tr>
+       <tr> <td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(10)" id = "10">Rm 10</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(11)" id = "11">Rm 11</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(12)" id = "12">Rm 12</button> </td></tr>
+      <tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(13)" id = "13">Rm 13</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(14)" id = "14">Rm 14</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(15)" id = "15">Rm 15</button> </td></tr>
+        <tr><td class = "td2"> <button type="button" class = "button1" onclick="pickRoom(16)" id = "16">Rm 16</button> </td></tr>
+    </table></td>
+	
+       <td style="vertical-align: top;">
+    <table id = "table1" class = "table1">
+      <tr>
+	<td style = "td1"> <p id="demo1"></p> </td>
+        <td class = "td1"> <p id="demo2"></p> </td>
+        <td class = "td1"> <p id="demo3"></p> </td>
+        <td class = "td1"> <p id="demo4"></p> </td>
+      </tr>
+      <tr>
+        <td class = "td1"> <p id="demo5"></p> </td>
+        <td class = "td1"> <p id="demo6"></p> </td>
+        <td class = "td1"> <p id="demo7"></p> </td>
+        <td class = "td1"> <p id="demo8"></p> </td>
+      </tr>
+      <tr>
+        <td class = "td1"> <p id="demo9"></p> </td>
+        <td class = "td1"> <p id="demo10"></p> </td>
+        <td class = "td1"> <p id="demo11"></p> </td>
+        <td class = "td1"> <p id="demo12"></p> </td>
+      </tr>
+    </table></td>
+       </tr>
+</table>
+    
+</td>
+    
+    <script src="records8.js"></script>
+  </body>
+</html>
