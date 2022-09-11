@@ -325,7 +325,7 @@ function createTextbox(i) {
 	y = y + "<option>CT head and facial bones</option>";
 	y = y + "<option>CT facial bones</option>";
 	y = y + "<option>CT cervical spine</option>";
-	y = y + "<option>CT soft tissue of the neck</option";
+	y = y + "<option>CT soft tissue of the neck</option>";
 	y = y + "<option>CTA chest PE protocol</option>";
 	y = y + "<option>CT chest without contrast</option>";
 	y = y + "<option>CT abdomen & pelvis without IV contrast</option>";
