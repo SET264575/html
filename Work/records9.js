@@ -312,10 +312,10 @@ function createTextbox(i) {
   var x = document.createElement("br");
   t.appendChild(x);
 
-  var x = document.createElement("button");
-  x.innerHTML = "CT";
-  x.setAttribute("onclick","copyCT("+String(i)+")");
-  t.appendChild(x);
+ // var x = document.createElement("button");
+  //x.innerHTML = "CT";
+  //x.setAttribute("onclick","copyCT("+String(i)+")");
+  //t.appendChild(x);
   var x = document.createElement("br");
   t.appendChild(x);
   var x = document.createElement("select");
@@ -493,12 +493,11 @@ function changeEKG(i){
 	const myArray = value.trim().split("\n");
         var l = myArray[0].length + 7;
   	value = "";
-  	myArray[0] = myArray[0]+", rate  ,";
-  	for (let i = 0;i < myArray.length-1; i++){
+  	value = myArray[0]+", rate  ,";
+  	for (let i = 1;i < myArray.length-1; i++){
 		value = value + myArray[i][0].toLowerCase()+myArray[i].substring(1)+", ";
  	}
-	value = value + myArray[myArray.length -1];
-   	console.log(value);
+	value = value + myArray[myArray.length -1][0].toLowerCase()+myArray[myArray.length-1].substring(1);
    	room[i].wu_EKGresult = value;
   	input.value = value;
         input.setSelectionRange(l,l+1);
