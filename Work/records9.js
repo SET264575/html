@@ -386,12 +386,12 @@ function createTextbox(i) {
 	
   t.appendChild(document.createElement("br"));
   var timeArray = [10,15,20,30,60,120];	
-  for (let i = 0; i < timeArray.length;i++){
+  for (let j = 0; j < timeArray.length;j++){
   	var x = document.createElement("button");
-  	x.innerHTML = String(timeArray[i]);
-	x.setAttribute("id", "timeButton"+String(timeArray[i])+"-"+String(i));
+  	x.innerHTML = String(timeArray[j]);
+	x.setAttribute("id", "timeButton"+String(timeArray[j])+"-"+String(i));
 	x.setAttribute("name",i);
-	x.setAttribute("onclick","setAwaiting("+String(i)+","+String(timeArray[i])+")");
+	x.setAttribute("onclick","setAwaiting("+String(i)+","+String(timeArray[j])+")");
 	t.appendChild(x);
   }
   return(t);
