@@ -30,7 +30,7 @@
 //  splint awaiting into task and time separately
 
 
-console.log("309");
+console.log("341");
 
 
 function Room() {
@@ -149,7 +149,7 @@ function createAwaitList(){
   var x = document.createElement("div");
   var y = "";
   for (let i = 0; i < awaitingList.length;i++){
-	y = y + '<button onclick = "deleteFromAwaitingList(this.name)" name = "'+String(i)+'">'+awaitingList[i].label()+"</button><br>";
+	y = y + '<button onclick = "deleteFromAwaitingList(this.name)" name = "'+String(i)+'"><h6>'+awaitingList[i].label()+"</h6></button><br>";
   }
   x.innerHTML = y;
   if (awaitingList.length > 0) {
