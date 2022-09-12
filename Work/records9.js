@@ -23,6 +23,10 @@
 //  conditions:  admitting, neuro, night, number of patients
 //  list awaiting at bottom of each room
 //  *continue negative countdown
+//  EKG disappears
+//  *needs space after comma
+//  *national IV shortage
+//  *bold numbers on activity
 
 
 console.log("4:10");
