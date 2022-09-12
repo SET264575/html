@@ -81,7 +81,7 @@ class AwaitingList {
 		this.room = room;
 	}
 	label() {
-		return(String(this.minutes) +" min - Rm "+String(this.room)+": "+this.activity);
+		return("<b>"+String(this.minutes) +"</b> min - Rm <b>"+String(this.room)+"</b>: "+this.activity);
 	}
 }
 
@@ -493,7 +493,7 @@ function changeEKG(i){
 	const myArray = value.trim().split("\n");
         var l = myArray[0].length + 7;
   	value = "";
-  	value = myArray[0]+", rate  ,";
+  	value = myArray[0]+", rate  , ";
   	for (let i = 1;i < myArray.length-1; i++){
 		value = value + myArray[i][0].toLowerCase()+myArray[i].substring(1)+", ";
  	}
@@ -517,7 +517,7 @@ function copyEKG(i){
 
 function copyCT(typeOfImage,i){
   var value = document.getElementById("rm"+String(i)+"_ct").value;
-  room[i].wu_CTresult = "Preliminary report from Teleradiology of the "+typeOfImage+":\n"+value;
+  room[i].wu_CTresult = "There is currently a national shortage of IV contrast.\n\nPreliminary report from Teleradiology of the "+typeOfImage+":\n"+value;
   value = room[i].wu_CTresult;
   navigator.clipboard.writeText(room[i].wu_CTresult);
   refreshTable();
@@ -533,9 +533,9 @@ function deleteFromAwaitingList(i){
 function updateAwaitList(){
   for (let i = 0; i < awaitingList.length;i++){
 	awaitingList[i].minutes--;
-	if (awaitingList[i].minutes < 0){
-		awaitingList[i].minutes = 0;
-	}
+	//if (awaitingList[i].minutes < 0){
+//		awaitingList[i].minutes = 0;
+//	}
   }
   refreshTable();
   displayRecords();
