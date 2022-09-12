@@ -402,7 +402,7 @@ function setAwaiting(room,t){
 	console.log("select"+String(room));
 	var txt = x.value;
 	console.log(txt);
-	awaitingList.push(new AwaitingList(txt,t,room));
+	awaitingList.push(new AwaitingList(txt,t,room,0));
 	sortArray();
 	refreshTable();
 	displayRecords();
@@ -566,9 +566,9 @@ function deleteFromAwaitingList(i){
 function updateAwaitList(){
   for (let i = 0; i < awaitingList.length;i++){
 	awaitingList[i].minutes--;
-	//if (awaitingList[i].minutes < 0){
-//		awaitingList[i].minutes = 0;
-//	}
+	if (awaitingList[i].minutes < 0){
+		awaitingList[i].clr = 2;
+	}
   }
   refreshTable();
   displayRecords();
