@@ -96,12 +96,16 @@ const awaitingList = [];
 
 awaiting.push(new Awaiting("nurse/tech/secretary result 10 minutes",10));
 awaiting.push(new Awaiting("repeat troponin 1 hour",60));
+awaiting.push(new Awaiting("urinalysis",30));
+awaiting.push(new Awaiting("x ray",30));
+awaiting.push(new Awaiting("CT",30));
+awaiting.push(new Awaiting("US",30));
 //awaiting.push(new Awaiting("repeat troponin 2 hours",120));
-awaiting.push(new Awaiting("nosebleed",30));
+//awaiting.push(new Awaiting("nosebleed",30));
 awaiting.push(new Awaiting("digital block",10));
 awaiting.push(new Awaiting("repage consult",15));
 awaiting.push(new Awaiting("Teleradiology read",60));
-awaiting.push(new Awaiting("urinalysis",30));
+//awaiting.push(new Awaiting("urinalysis",30));
 awaiting.push(new Awaiting("response to medication 20 minutes",20));
 //awaiting.push(new Awaiting("response to medications 60 minutes",60));
 awaiting.push(new Awaiting("reassess 10 minutes",10));
