@@ -92,7 +92,7 @@ class AwaitingList {
 		return("<b>"+String(this.minutes) +"</b> min - Rm <b>"+String(this.room)+"</b>: "+this.activity);
 	}
 	color() {
-		return(['black','blue','red'][clr]);
+		return(['black','blue','red'][this.clr]);
 	}
 }
 
