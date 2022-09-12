@@ -21,7 +21,8 @@
 //  admit/discharge as buttons
 //  IV contrast not used
 //  conditions:  admitting, neuro, night, number of patients
-
+//  list awaiting at bottom of each room
+//  *continue negative countdown
 
 
 console.log("4:10");
