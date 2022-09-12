@@ -364,7 +364,7 @@ function createTextbox(i) {
 //Awaiting dropdown
   t.appendChild(document.createElement("br"));
   t.appendChild(document.createElement("br"));
-  console.log("creating selections");
+
   var x = document.createElement("select");
   var y = "<option>- pick awaiting -</option>";
   for (let i = 0; i < awaiting.length; i++){
@@ -379,7 +379,7 @@ function createTextbox(i) {
   console.log("about to create buttons");
   t.appendChild(document.createElement("br"));
   var timeArray = [10,15,20,30,60,120];	
-  for (let i = 0; i < t.length;i++){
+  for (let i = 0; i < timeArray.length;i++){
   	var x = document.createElement("button");
   	x.innerHTML = String(timeArray[i]);
 	x.setAttribute("id", "timeButton"+String(timeArray[i])+"-"+String(i));
