@@ -381,6 +381,7 @@ function createTextbox(i) {
   	var x = document.createElement("button");
   	x.innerHTML = String(timeArray[i]);
 	setAttribute("id", "timeButton"+String(timeArray[i])+"-"+String(i));
+	console.log("creating button "+String(timeArray[i])+"-"+String(i));
 	setAttribute("name",i);
 	setAttribute("onclick","setAwaiting("+String(i)+","+String(timeArray[i]));
 	t.appendChild(x);
