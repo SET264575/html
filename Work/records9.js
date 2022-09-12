@@ -30,7 +30,7 @@
 //  splint awaiting into task and time separately
 
 
-console.log("305");
+console.log("309");
 
 
 function Room() {
@@ -384,14 +384,12 @@ function createTextbox(i) {
   x.innerHTML = y;
   t.appendChild(x);
 	
-  console.log("about to create buttons");
   t.appendChild(document.createElement("br"));
   var timeArray = [10,15,20,30,60,120];	
   for (let i = 0; i < timeArray.length;i++){
   	var x = document.createElement("button");
   	x.innerHTML = String(timeArray[i]);
 	x.setAttribute("id", "timeButton"+String(timeArray[i])+"-"+String(i));
-	console.log("creating button "+String(timeArray[i])+"-"+String(i));
 	x.setAttribute("name",i);
 	x.setAttribute("onclick","setAwaiting("+String(i)+","+String(timeArray[i])+")");
 	t.appendChild(x);
