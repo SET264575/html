@@ -398,7 +398,7 @@ function createTextbox(i) {
 }
 
 function setAwaiting(room,t){
-	var x = document.getElementById("select"+String(room))
+	var x = document.getElementById("select"+String(room));
 	console.log("select"+String(room));
 	var txt = x.value;
 	console.log(txt);
