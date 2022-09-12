@@ -150,7 +150,7 @@ function createAwaitList(){
   var x = document.createElement("div");
   var y = "";
   for (let i = 0; i < awaitingList.length;i++){
-	y = y + '<button onclick = "deleteFromAwaitingList(this.name)" style="foregroundColor:'+awaitingList[i].color()+'" name = "'+String(i)+'"><h6>'+awaitingList[i].label()+"</h6></button><br>";
+	y = y + '<button onclick = "deleteFromAwaitingList(this.name)" style="foregroundColor:'+awaitingList[i].color()+'" name = "'+String(i)+'"><h4>'+awaitingList[i].label()+"</h4></button><br>";
   }
   x.innerHTML = y;
   if (awaitingList.length > 0) {
