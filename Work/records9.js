@@ -15,7 +15,7 @@
 //  done - time activities
 //  done - Special:  chest pain, sepsis, DKA, pancreatitis, stroke
 
-//  Pending labs:  UA, repeat troponin 
+//  *Pending labs:  UA, repeat troponin 
 //  Indent labs, etc
 //  save to file
 //  admit/discharge as buttons
@@ -27,10 +27,11 @@
 //  done - needs space after comma
 //  *national IV shortage
 //  done - bold numbers on activity
-//  splint awaiting into task and time separately
+//  *split awaiting into task and time separately
+// change text color
 
 
-console.log("341");
+console.log("429");
 
 
 function Room() {
