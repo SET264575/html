@@ -98,8 +98,8 @@ class AwaitingList {
 const awaiting = [];
 const awaitingList = [];
 
-awaiting.push(new Awaiting("nurse/tech/secretary result 10 minutes",10));
-awaiting.push(new Awaiting("repeat troponin 1 hour",60));
+awaiting.push(new Awaiting("nurse/tech/secretary result",10));
+awaiting.push(new Awaiting("troponin",60));
 awaiting.push(new Awaiting("urinalysis",30));
 awaiting.push(new Awaiting("x ray",30));
 awaiting.push(new Awaiting("CT",30));
@@ -110,9 +110,9 @@ awaiting.push(new Awaiting("digital block",10));
 awaiting.push(new Awaiting("repage consult",15));
 awaiting.push(new Awaiting("Teleradiology read",60));
 //awaiting.push(new Awaiting("urinalysis",30));
-awaiting.push(new Awaiting("response to medication 20 minutes",20));
+awaiting.push(new Awaiting("response to medication",20));
 //awaiting.push(new Awaiting("response to medications 60 minutes",60));
-awaiting.push(new Awaiting("reassess 10 minutes",10));
+awaiting.push(new Awaiting("reassess patient",10));
 //awaiting.push(new Awaiting("reassess 15 minutes",15));
 //awaiting.push(new Awaiting("reassess 20 minutes",20));
 //awaiting.push(new Awaiting("reassess 30 minutes",30));
