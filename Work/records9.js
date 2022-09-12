@@ -30,7 +30,7 @@
 //  splint awaiting into task and time separately
 
 
-console.log("1246");
+console.log("305");
 
 
 function Room() {
@@ -400,7 +400,10 @@ function createTextbox(i) {
 }
 
 function setAwaiting(room,t){
-	var txt = document.getElementById("select"+String(room)).value;
+	var x = document.getElementById("select"+String(room))
+	console.log("select"+String(room));
+	var txt = x.value;
+	console.log(txt);
 	awaitingList.push(new AwaitingList(txt,t,room));
 	sortArray();
 	refreshTable();
