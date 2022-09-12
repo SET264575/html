@@ -20,6 +20,8 @@
 	}
 	console.log(text);
 	navigator.clipboard.writeText(text);
+	var x = document.getElementById("result");
+	x.innerHTML = text;
       }
 
       function getRadioValue(id) {
