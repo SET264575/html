@@ -22,14 +22,15 @@
 //  IV contrast not used
 //  conditions:  admitting, neuro, night, number of patients
 //  list awaiting at bottom of each room
-//  *continue negative countdown
+//  done - continue negative countdown
 //  EKG disappears
-//  *needs space after comma
+//  done - needs space after comma
 //  *national IV shortage
-//  *bold numbers on activity
+//  done - bold numbers on activity
+//  splint awaiting into task and time separately
 
 
-console.log("4:10");
+console.log("544");
 
 
 function Room() {
@@ -109,6 +110,9 @@ awaiting.push(new Awaiting("reassess 20 minutes",20));
 awaiting.push(new Awaiting("reassess 30 minutes",30));
 awaiting.push(new Awaiting("reassess 1 hour",60));
 awaiting.push(new Awaiting("reassess 2 hours",120));
+awaiting.push(new Awaiting("review tests",10));
+awaiting.push(new Awaiting("review tests",20));
+awaiting.push(new Awaiting("review tests",30));
 
 
 const room = [];
