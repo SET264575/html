@@ -393,7 +393,7 @@ function createTextbox(i) {
 	x.setAttribute("id", "timeButton"+String(timeArray[i])+"-"+String(i));
 	console.log("creating button "+String(timeArray[i])+"-"+String(i));
 	x.setAttribute("name",i);
-	x.setAttribute("onclick","setAwaiting("+String(i)+","+String(timeArray[i]));
+	x.setAttribute("onclick","setAwaiting("+String(i)+","+String(timeArray[i])+")");
 	t.appendChild(x);
   }
   return(t);
