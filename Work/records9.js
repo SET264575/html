@@ -96,23 +96,23 @@ const awaitingList = [];
 
 awaiting.push(new Awaiting("nurse/tech/secretary result 10 minutes",10));
 awaiting.push(new Awaiting("repeat troponin 1 hour",60));
-awaiting.push(new Awaiting("repeat troponin 2 hours",120));
+//awaiting.push(new Awaiting("repeat troponin 2 hours",120));
 awaiting.push(new Awaiting("nosebleed",30));
 awaiting.push(new Awaiting("digital block",10));
 awaiting.push(new Awaiting("repage consult",15));
 awaiting.push(new Awaiting("Teleradiology read",60));
 awaiting.push(new Awaiting("urinalysis",30));
 awaiting.push(new Awaiting("response to medication 20 minutes",20));
-awaiting.push(new Awaiting("response to medications 60 minutes",60));
+//awaiting.push(new Awaiting("response to medications 60 minutes",60));
 awaiting.push(new Awaiting("reassess 10 minutes",10));
-awaiting.push(new Awaiting("reassess 15 minutes",15));
-awaiting.push(new Awaiting("reassess 20 minutes",20));
-awaiting.push(new Awaiting("reassess 30 minutes",30));
-awaiting.push(new Awaiting("reassess 1 hour",60));
-awaiting.push(new Awaiting("reassess 2 hours",120));
+//awaiting.push(new Awaiting("reassess 15 minutes",15));
+//awaiting.push(new Awaiting("reassess 20 minutes",20));
+//awaiting.push(new Awaiting("reassess 30 minutes",30));
+//awaiting.push(new Awaiting("reassess 1 hour",60));
+//awaiting.push(new Awaiting("reassess 2 hours",120));
 awaiting.push(new Awaiting("review tests",10));
-awaiting.push(new Awaiting("review tests",20));
-awaiting.push(new Awaiting("review tests",30));
+//awaiting.push(new Awaiting("review tests",20));
+//awaiting.push(new Awaiting("review tests",30));
 
 
 const room = [];
@@ -369,16 +369,28 @@ function createTextbox(i) {
   for (let i = 0; i < awaiting.length; i++){
 	y = y+"<option>"+awaiting[i].label+"</option>";
   }
-  x.setAttribute("onchange","setAwaiting(this.selectedIndex,this.name)");
-  x.setAttribute("id","select");
+//  x.setAttribute("onchange","setAwaiting(this.selectedIndex,this.name)");
+  x.setAttribute("id","select"+String(i));
   x.setAttribute("name",i);
   x.innerHTML = y;
   t.appendChild(x);
+	
+  t.appendChild(document.createElement("br"));
+  var timeArray = [10,15,20,30,60,120];	
+  for (let i = 0; i < t.length;i++){
+  	var x = document.createElement("button");
+  	x.innerHTML = String(timeArray[i]);
+	setAttribute("id", "timeButton"+String(timeArray[i])+"-"+String(i));
+	setAttribute("name",i);
+	setAttribute("onclick","setAwaiting("+String(i)+","+String(timeArray[i]));
+	t.appendChild(x);
+  }
   return(t);
 }
 
-function setAwaiting(i,room){
-	awaitingList.push(new AwaitingList(awaiting[i-1].label,awaiting[i-1].minutes,room));
+function setAwaiting(room,t){
+	var txt = document.getElementById("select"+String(room)).value;
+	awaitingList.push(new AwaitingList(txt,t,room));
 	sortArray();
 	refreshTable();
 	displayRecords();
