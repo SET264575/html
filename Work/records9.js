@@ -14,6 +14,10 @@
 //  done - box for ekg
 //  done - time activities
 //  done - Special:  chest pain, sepsis, DKA, pancreatitis, stroke
+//  done - continue negative countdown
+//  done - needs space after comma
+//  done - bold numbers on activity
+//  done - split awaiting into task and time separately
 
 //  *Pending labs:  UA, repeat troponin 
 //  Indent labs, etc
@@ -22,12 +26,8 @@
 //  IV contrast not used
 //  conditions:  admitting, neuro, night, number of patients
 //  list awaiting at bottom of each room
-//  done - continue negative countdown
 //  *EKG disappears
-//  done - needs space after comma
 //  *national IV shortage
-//  done - bold numbers on activity
-//  done - split awaiting into task and time separately
 // change text color
 //  diagnosis at the top
 //  to do tasks:  print labs, prescriptions, work note, consult, 
