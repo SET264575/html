@@ -543,7 +543,7 @@ function changeEKG(i){
 }
 
 function changeCT(i){
-	room[i].wu_CTresult = document.getElementById("rm"+String(i)+"_ct");
+	room[i].wu_CTresult = document.getElementById("rm"+String(i)+"_ct").value;
 }
 
 function copyEKG(i){
