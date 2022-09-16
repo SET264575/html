@@ -23,13 +23,14 @@
 //  conditions:  admitting, neuro, night, number of patients
 //  list awaiting at bottom of each room
 //  done - continue negative countdown
-//  EKG disappears
+//  *EKG disappears
 //  done - needs space after comma
 //  *national IV shortage
 //  done - bold numbers on activity
-//  *split awaiting into task and time separately
+//  done - split awaiting into task and time separately
 // change text color
-
+//  diagnosis at the top
+//  to do tasks:  print labs, prescriptions, work note, consult, 
 
 console.log("429");
 
