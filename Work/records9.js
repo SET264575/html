@@ -41,7 +41,7 @@ function Room() {
   this.wu_labspending =  true;
   this.wu_ua = false;
   this.wu_trop = false;
-  this.wu_ekgresult = "";
+  this.wu_EKGresult = "";
   this.wu_imagingpending =  true;
   this.wu_CTresult = "";
   this.wu_procedurepending = false;
@@ -324,7 +324,7 @@ function createTextbox(i) {
   x.setAttribute("oninput","changeEKG(this.name)");
   x.setAttribute("id","rm"+String(i)+"_ekg");
   x.setAttribute("name",i);
-  x.value = room[i].wu_ekgresult;
+  x.value = room[i].wu_EKGresult;
   t.appendChild(x);
 //Textbox for CT:
   var x = document.createElement("br");
@@ -364,7 +364,7 @@ function createTextbox(i) {
   x.setAttribute("rows","5");
   x.setAttribute("cols","25");
   x.setAttribute("wrap","soft");
-  //x.setAttribute("onchange","recordTextboxValue(this.name,this.value)");
+  x.setAttribute("onchange","changeCT(this.name)");
   x.setAttribute("id","rm"+String(i)+"_ct");
   x.setAttribute("name",i);
   x.value = room[i].wu_CTresult;
@@ -520,7 +520,7 @@ function deleteRoom(i){
 }
 
 function changeEKG(i){
-  var input = document.getElementById("rm"+String(i)+"_ekg")
+  var input = document.getElementById("rm"+String(i)+"_ekg");
   var value = input.value;
 
   if (!value.includes(", rate")) {
@@ -532,12 +532,17 @@ function changeEKG(i){
 		value = value + myArray[i][0].toLowerCase()+myArray[i].substring(1)+", ";
  	}
 	value = value + myArray[myArray.length -1][0].toLowerCase()+myArray[myArray.length-1].substring(1);
-   	room[i].wu_EKGresult = value;
+   	//room[i].wu_EKGresult = value;
   	input.value = value;
         input.setSelectionRange(l,l+1);
   // refreshTable();
   // displayRecords();
   }
+  room[i].wu_EKGresult = value;
+}
+
+function changeCT(i){
+	room[i].wu_CTresult = document.getElementById("rm"+String(i)+"_ct");
 }
 
 function copyEKG(i){
