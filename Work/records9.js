@@ -31,6 +31,9 @@
 // change text color
 //  diagnosis at the top
 //  to do tasks:  print labs, prescriptions, work note, consult, 
+//  buttons to show what needs done on pt:  see patient, consult, meds, labs, procedure, work note, prescription
+//  add to list of charts to finish
+//  separate box for plan
 
 console.log("429");
 
