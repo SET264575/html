@@ -34,6 +34,7 @@
 //  buttons to show what needs done on pt:  see patient, consult, meds, labs, procedure, work note, prescription
 //  add to list of charts to finish
 //  separate box for plan
+//  button to red
 
 console.log("429");
 
