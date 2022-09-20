@@ -163,10 +163,6 @@ setInterval(updateAwaitList,60000);
 
 function displayRecords(){
   createAwaitList();
-
-  for (let i = 0; i < 16; i++){
-    toDoList[i] = [];
-  }
 	
   let j = 0;
   for (let i = 1; i < 17; i++) {
@@ -620,6 +616,8 @@ function pickRoom(i){
 
 function deleteRoom(i){
   room[i].mine = false;
+  toDoList[i] = [];
+ 
   refreshTable();
   displayRecords();
 }
