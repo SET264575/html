@@ -164,6 +164,10 @@ setInterval(updateAwaitList,60000);
 function displayRecords(){
   createAwaitList();
 
+  for (let i = 0; i < 16; i++){
+    toDoList[i] = [];
+  }
+	
   let j = 0;
   for (let i = 1; i < 17; i++) {
     if (room[i].mine == true){
