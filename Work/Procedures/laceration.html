@@ -1,4 +1,8 @@
 <html>
+  <head>
+    <title>Laceration Repair</title>
+  </head>
+  
   <body>
     <h3>Laceration Repair</h3><br><br>
     
@@ -23,6 +27,30 @@
       <option value = "stellate">Stellate</option>
       <option value = "flap">Flap</option>
     </select><br><br>
+    
+    <h4>Anesthetic</h4><br><br>
+    
+    <label for = "anesthetic">Anesthetic</label>
+    <select id = "anesthetic">
+      <option value = "1% lidocaine">1% lidocaine</option>
+      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
+      <option value = "2% lidocaine">2% lidocaine</option>
+      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
+    </select><br><br>
+    
+    <label for = "volume">Volume</label>
+    <select id = "volume">
+      <option value = "1">1 cc</option>
+      <option value = "2">2 cc</option>
+      <option value = "3">3 cc</option>
+      <option value = "4">4 cc</option>
+      <option value = "5">5 cc</option>
+      <option value = "6">6 cc</option>
+      <option value = "7">7 cc</option>
+      <option value = "8">8 cc</option>
+      <option value = "9">9 cc</option>
+      <option value = "10">10 cc</option>
+    </select>
    
     <h4>Suture</h4><br>
     
@@ -49,13 +77,15 @@
       function copytext(){
         var wound_length = document.getElementById("length").value;
         var description = document.getElementById("description").value;
+        var anesthetic = document.getElementById("anesthetic").value;
         var suture_size = document.getElementById("suture_size").value;
         var suture_type = document.getElementById("suture_type").value;
+        var volume = document.getElementById("volume").value;
         var t = "";
         t = "Procedure Note:  Laceration Repair\n";
         t = t + "The " + wound_length + " cm" + description + "wound was irrigated thoroughly with normal saline. ";
         t = t + "The area was prepped with Betadine and draped sterilely and then ";
-        t = t + "infiltrated with 5 cc of 1% lidocaine with epinephrine. ";
+        t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
         t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
         t = t + "The wound was closed with 5 running sutures using " + suture_size + " " + suture_type + ".  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
