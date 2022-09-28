@@ -1,29 +1,31 @@
 <html>
   <body>
+    <h3>Laceration Repair</h3><br><br>
+    
     <label for="size">Size</label>
     <select id = "size">
       <option value = "0.5">0.5 cm</option>
       <option value = "1">1 cm</option>
       <option value = "1.5">1.5 cm</option>
-    </select>
+    </select><br><br
    
     <label for = "suture_type">Type of Suture</label>
     <select id = "suture_type">
       <option value = "nylon">nylon</option>
       <option value = "Prolene">Prolene</option>
       <option value = "Vicryl">Vicryl</option>
-    </select>
+    </select><br><br>
     
-    <label for = "suture_size">Suture Szie</label>
+    <label for = "suture_size">Suture Size</label>
     <select id = "suture_size">
       <option value = "3-0">3-0</option>
       <ootion value = "4-0">4-0</option>
       <option value = "5-0">5-0</option>
-    </select>
+    </select><br><br>
     
-    <button onclick = "copytext()" id="copy">Copy</button>
+    <button onclick = "copytext()" id="copy">Copy</button><br>
     
-    <textarea id = "text"><p id="text1"></p></textarea>
+    <textarea id = "text"><p id="text1"></p></textarea><br>
     
     <script>
       function copytext(){
@@ -38,6 +40,7 @@
         t = t + "The wound was closed with 5 running sutures using " + suture_size + " " + suture_type + ".  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
         document.getElementById("text1").innerHTML = t;
+        navigator.clipboard.writeText(t);
       }
     </script>
   </body>
