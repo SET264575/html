@@ -2,13 +2,26 @@
   <body>
     <h3>Laceration Repair</h3><br><br>
     
-    <label for="size">Size</label>
-    <select id = "size">
+    <h4>Wound Description</h4><br><br>
+    
+    <label for="length">Size</label>
+    <select id = "length">
       <option value = "0.5">0.5 cm</option>
       <option value = "1">1 cm</option>
       <option value = "1.5">1.5 cm</option>
-    </select><br><br
+      <option value = "2">2 cm</option>
+    </select><br><br>
+    
+    <label for="description">Description</label>
+    <select id = "description">
+      <option value = "linear">Linear</option>
+      <option value = "irregular">Irregular</option>
+      <option value = "stellate">Stellate</option>
+      <option value = "flap">Flap</option>
+    </select><br><br>
    
+    <h4>Suture</h4><br>
+    
     <label for = "suture_type">Type of Suture</label>
     <select id = "suture_type">
       <option value = "nylon">nylon</option>
@@ -29,13 +42,15 @@
     
     <script>
       function copytext(){
+        var wound_length = document.getElementById("length").value;
+        var description = document.getElementById("description").value;
         var suture_size = document.getElementById("suture_size").value;
         var suture_type = document.getElementById("suture_type").value;
         var t = "";
         t = "Procedure Note:  Laceration Repair\n";
-        t = t + "The wound was irrigated thoroughly with normal saline. ";
-        t = t + "The area was prepped with Betadine and draped sterilely. ";
-        t = t + "The area was infiltrated with 5 cc of 1% lidocaine with epinephrine. ";
+        t = t + "The " + wound_length + " cm" + description + "wound was irrigated thoroughly with normal saline. ";
+        t = t + "The area was prepped with Betadine and draped sterilely and then ";
+        t = t + "infiltrated with 5 cc of 1% lidocaine with epinephrine. ";
         t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
         t = t + "The wound was closed with 5 running sutures using " + suture_size + " " + suture_type + ".  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
