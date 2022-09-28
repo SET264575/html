@@ -23,6 +23,7 @@
     <label for="description">Description</label>
     <select id = "description" onchange = "copytext()">
       <option value = "linear">Linear</option>
+      <option value = "curvilinear">Curvilinear</option>
       <option value = "irregular">Irregular</option>
       <option value = "stellate">Stellate</option>
       <option value = "flap">Flap</option>
@@ -40,6 +41,7 @@
     
     <label for = "volume">Volume</label>
     <select id = "volume" onchange = "copytext()">
+      <option value = "5">5 cc</option>
       <option value = "1">1 cc</option>
       <option value = "2">2 cc</option>
       <option value = "3">3 cc</option>
@@ -56,13 +58,14 @@
     
     <label for = "suture_type">Type of Suture</label>
     <select id = "suture_type" onchange = "copytext()">
-      <option value = "nylon">nylon</option>
+      <option value = "nylon">Nylon</option>
       <option value = "Prolene">Prolene</option>
       <option value = "Vicryl">Vicryl</option>
     </select><br><br>
     
     <label for = "suture_size">Suture Size</label>
     <select id = "suture_size" onchange = "copytext()">
+      <option value = "4-0">4-0</option>
       <option value = "3-0">3-0</option>
       <option value = "4-0">4-0</option>
       <option value = "5-0">5-0</option>
@@ -109,7 +112,7 @@
         var suture_style = document.getElementById("suture_style").value;
         var t = "";
         t = "Procedure Note:  Laceration Repair\n";
-        t = t + "The " + wound_length + " cm " + description + " wound was irrigated thoroughly with normal saline. ";
+        t = t + "The " + wound_length + " cm " + description + " laceration was irrigated thoroughly with normal saline. ";
         t = t + "The area was prepped with Betadine and draped sterilely and then ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
         t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
