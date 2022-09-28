@@ -2,24 +2,43 @@
   <body>
     <label for="size">Size</label>
     <select id = "size">
-      <option>0.5 cm</option>
-      <option>1 cm</option>
-      <option>1.5 cm</option>
+      <option value = "0.5">0.5 cm</option>
+      <option value = "1">1 cm</option>
+      <option value = "1.5">1.5 cm</option>
     </select>
    
     <label for = "suture_type">Type of Suture</label>
     <select id = "suture_type">
-      <option>nylon</option>
-      <option>Prolene</option>
-      <option>Vicryl</option>
+      <option value = "nylon">nylon</option>
+      <option value = "Prolene">Prolene</option>
+      <option value = "Vicryl">Vicryl</option>
     </select>
     
     <label for = "suture_size">Suture Szie</label>
     <select id = "suture_size">
-      <option>3-0</option>
-      <ootion>4-0</option>
-      <option>5-0</option>
+      <option value = "3-0">3-0</option>
+      <ootion value = "4-0">4-0</option>
+      <option value = "5-0">5-0</option>
     </select>
     
+    <button onclick = "copytext()" id="copy">Copy</button>
+    
+    <textarea id = "text"><p id="text1"></p></textarea>
+    
+    <script>
+      function copytext(){
+        var suture_size = document.getElementById("suture_size").value;
+        var suture_type = document.getElementById("suture_type").value;
+        var t = "";
+        t = "Procedure Note:  Laceration Repair\n";
+        t = t + "The wound was irrigated thoroughly with normal saline. ";
+        t = t + "The area was prepped with Betadine and draped sterilely. ";
+        t = t + "The area was infiltrated with 5 cc of 1% lidocaine with epinephrine. ";
+        t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
+        t = t + "The wound was closed with 5 running sutures using " + suture_size + " " + suture_type + ".  ";
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        document.getElementById("text1").innerHTML = t;
+      }
+    </script>
   </body>
 </html>
