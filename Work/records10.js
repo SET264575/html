@@ -19,22 +19,36 @@
 //  done - bold numbers on activity
 //  done - split awaiting into task and time separately
 
+
 //  *Pending labs:  UA, repeat troponin 
-//  Indent labs, etc
+//  *EKG disappears
+//  *national IV shortage
+//  *change text color
+//  *to do tasks:  print labs, prescriptions, work note, consult, 
+//  *buttons to show what needs done on pt:  see patient, consult, meds, labs, procedure, work note, prescription
+//  *separate box for plan
+//  *button to red
+
 //  save to file
-//  admit/discharge as buttons
 //  IV contrast not used
 //  conditions:  admitting, neuro, night, number of patients
 //  list awaiting at bottom of each room
-//  *EKG disappears
-//  *national IV shortage
-// change text color
 //  diagnosis at the top
-//  to do tasks:  print labs, prescriptions, work note, consult, 
-//  buttons to show what needs done on pt:  see patient, consult, meds, labs, procedure, work note, prescription
 //  add to list of charts to finish
-//  separate box for plan
-//  button to red
+
+//  Procedure note:
+//	laceration
+//	cardioversion
+//	conscious sedation
+//	joint reduction
+//	joint aspiration
+//	
+
+//  MDM:
+//	Sepsis
+//	Heart score
+//	Pancreatitis
+//	
 
 console.log("429");
 
@@ -147,6 +161,9 @@ toDo.push(new Awaiting("Prescriptions",-1));
 toDo.push(new Awaiting("Work Note",-1));
 toDo.push(new Awaiting("Referral",-1));
 toDo.push(new Awaiting("Outpt Order",-1));
+toDo.push(new Awaiting("Document Critical Care",-1));
+toDo.push(new Awaiting("Document Procedure",-1));
+toDo.push(new Awaiting("Finish Note",-1));
 //toDo.push(new Awaiting("Procedure",-1));
 
 
