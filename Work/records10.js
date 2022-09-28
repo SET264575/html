@@ -42,13 +42,17 @@
 //	conscious sedation
 //	joint reduction
 //	joint aspiration
-//	
+//	I&D
+//	paronychia drainage
+//	nerve block
+//	LP
+
 
 //  MDM:
 //	Sepsis
 //	Heart score
 //	Pancreatitis
-//	
+//	Stroke
 
 console.log("429");
 
