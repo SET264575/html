@@ -55,7 +55,7 @@
         t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
         t = t + "The wound was closed with 5 running sutures using " + suture_size + " " + suture_type + ".  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
-        document.getElementById("text").innerHTML = t;
+        document.getElementById("text").value = t;
         navigator.clipboard.writeText(t);
       }
     </script>
