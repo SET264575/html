@@ -1,7 +1,108 @@
+
+    
+<html>
+  <head>
+    <title>I&D</title>
+  </head>
+  
+  <body>
+    <h3>Abscess I&D</h3>
+   
+      <h4>Description</h4>
+    
+    <label for="size">Size</label>
+    <select id = "size" onchange = "copytext()">
+      <option value = "0.5">0.5 cm</option>
+      <option value = "1">1 cm</option>
+      <option value = "1.5">1.5 cm</option>
+      <option value = "2">2 cm</option>
+      <option value = "2.5">2.5 cm</option>
+      <option value = "3">3 cm</option>
+      <option value = "3.5">3.5 cm</option>
+      <option value = "4">4 cm</option>
+    </select><br><br>
+
+          
+    <label for = "location">Location</label>
+    <textarea id = "location" onchange = "copytext()"></textarea>
+    
+    <h4>Anesthetic</h4>
+    
+    <label for = "anesthetic">Anesthetic</label>
+    <select id = "anesthetic" onchange = "copytext()">
+      <option value = "1% lidocaine">1% lidocaine</option>
+      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
+      <option value = "2% lidocaine">2% lidocaine</option>
+      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
+    </select><br><br>
+    
+    <label for = "volume">Volume</label>
+    <select id = "volume" onchange = "copytext()">
+      <option value = "5">5 cc</option>
+      <option value = "1">1 cc</option>
+      <option value = "2">2 cc</option>
+      <option value = "3">3 cc</option>
+      <option value = "4">4 cc</option>
+      <option value = "5">5 cc</option>
+      <option value = "6">6 cc</option>
+      <option value = "7">7 cc</option>
+      <option value = "8">8 cc</option>
+      <option value = "9">9 cc</option>
+      <option value = "10">10 cc</option>
+    </select><br><br>
+   
+      <h4>Technique</h4>
+    <label for = "incision_size">Length of incision</label>
+    <select id = "incision_size" onchange = "copytext()">
+      <option value = "1">1</option>
+      <option value = "2">2</option>
+      <option value = "3">3</option>
+      <option value = "4">4</option>
+      <option value = "5">5</option>
+    </select><br><br>
+
+      <label for = "amount">Amount of pus</label>
+      <select id = "amount">
+          <option value = "No">No pus</option>
+          <option value = "A small amount of">A small amount</option>
+          <option value = "A large amount of">A large amount</option>
+      </select><br><br>
+
+      <input type = "checkbox" id = "gauze">The cavity was packed with 1/4" iodoform gauze.</input>
+    
+   <!-- <button onclick = "copytext()" id="copy">Copy</button><br>  -->
+    
+    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    
+    <script>
+      function copytext(){
+        var size = document.getElementById("size").value;
+     //   var description = document.getElementById("description").value;
+        var anesthetic = document.getElementById("anesthetic").value;
+        var gauze = document.getElementById("gauze").value;
+        var amount = document.getElementById("amount").value;
+        var volume = document.getElementById("volume").value;
+        var location = document.getElementById("location").value;
+        var incision_size = document.getElementById("incision_size").value;
+        var t = "";
+        t = "Procedure Note: Abscess incision and drainage\n";
+        t = t + "The skin over the " + size + " cm " + " abscess on the " + location " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
+        t = t + "An #11 blade was used to make a "+incision_size+"cm incision into the abscess.  The abscess was probed with curved hemostats to break up loculations.  ";
+        t = t + amount + " pus was expressed from the abscess. ";
+          if (gauze == true){
+        t = t + 'The cavity was packed with 1/4" iodoform gauze. ';
+          }
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        document.getElementById("text").value = t;
+        navigator.clipboard.writeText(t);
+      }
+    </script>
+  </body>
+</html>
+
     <!--
     Procedure note:  Abscess incision and drainage
     The skin over the 3 cm diameter abscess on the left thigh was prepped with Betadine and anesthetized with 4 cc of 1% lidocaine.  An #11 blade was used to make a 2 cm incision
     into the abscess.  The abscess was probed with curved hemostats to break up loculations.  A large amount of pus was expressed from the abscess.  The cavity was packed with 
     1/4" iodoform gauze.  The patient tolerated the procedure well.  There were no complications.
     -->
-    
