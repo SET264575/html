@@ -9,7 +9,7 @@
     <h4>Wound Description</h4>
     
     <label for="length">Size</label>
-    <select id = "length">
+    <select id = "length" onchange = "copytext()">
       <option value = "0.5">0.5 cm</option>
       <option value = "1">1 cm</option>
       <option value = "1.5">1.5 cm</option>
@@ -21,7 +21,7 @@
     </select><br><br>
     
     <label for="description">Description</label>
-    <select id = "description">
+    <select id = "description" onchange = "copytext()">
       <option value = "linear">Linear</option>
       <option value = "irregular">Irregular</option>
       <option value = "stellate">Stellate</option>
@@ -31,7 +31,7 @@
     <h4>Anesthetic</h4><br><br>
     
     <label for = "anesthetic">Anesthetic</label>
-    <select id = "anesthetic">
+    <select id = "anesthetic" onchange = "copytext()">
       <option value = "1% lidocaine">1% lidocaine</option>
       <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
       <option value = "2% lidocaine">2% lidocaine</option>
@@ -39,7 +39,7 @@
     </select><br><br>
     
     <label for = "volume">Volume</label>
-    <select id = "volume">
+    <select id = "volume" onchange = "copytext()">
       <option value = "1">1 cc</option>
       <option value = "2">2 cc</option>
       <option value = "3">3 cc</option>
@@ -55,14 +55,14 @@
     <h4>Suture</h4>
     
     <label for = "suture_type">Type of Suture</label>
-    <select id = "suture_type">
+    <select id = "suture_type" onchange = "copytext()">
       <option value = "nylon">nylon</option>
       <option value = "Prolene">Prolene</option>
       <option value = "Vicryl">Vicryl</option>
     </select><br><br>
     
     <label for = "suture_size">Suture Size</label>
-    <select id = "suture_size">
+    <select id = "suture_size" onchange = "copytext()">
       <option value = "3-0">3-0</option>
       <option value = "4-0">4-0</option>
       <option value = "5-0">5-0</option>
@@ -70,7 +70,7 @@
     </select><br><br>
     
     <label for = "suture_count">Number of Sutures</label>
-    <select id = "suture_count">
+    <select id = "suture_count" onchange = "copytext()">
       <option value = "1">1</option>
       <option value = "2">2</option>
       <option value = "3">3</option>
@@ -86,16 +86,16 @@
     </select><br><br>
     
     <label for = "suture_style">Technique</label>
-    <select id = "suture_style">
+    <select id = "suture_style" onchange = "copytext()">
       <option value = "interrupted">interrupted</option>
       <option value = "running">running</option>
       <option value = "interrupted and running">interrupted and running</option>
     </select><br>
       
     
-    <button onclick = "copytext()" id="copy">Copy</button><br>
+   <!-- <button onclick = "copytext()" id="copy">Copy</button><br>  -->
     
-    <textarea width = "80" height = "30" id = "text"></textarea><br>
+    <textarea width = "160" height = "30" id = "text"></textarea><br>
     
     <script>
       function copytext(){
