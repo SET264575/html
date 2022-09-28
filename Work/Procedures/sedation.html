@@ -8,38 +8,22 @@
     
  <!--   <h4>Wound Description</h4> -->
     
-    <label for="length">Size</label>
-    <select id = "length" onchange = "copytext()">
-      <option value = "0.5">0.5 cm</option>
-      <option value = "1">1 cm</option>
-      <option value = "1.5">1.5 cm</option>
-      <option value = "2">2 cm</option>
-      <option value = "2.5">2.5 cm</option>
-      <option value = "3">3 cm</option>
-      <option value = "3.5">3.5 cm</option>
-      <option value = "4">4 cm</option>
+    <label for="indication">Size</label>
+    <select id = "indication" onchange = "copytext()">
+      <option value = "joint reduction">joint reduction/option>
+      <option value = "fracture reduction">fracture reduction</option>
+      <option value = "electrical cardioversion">electrical cardioversion/option>
+   //   <option value = "">2 cm</option>
+   //   <option value = "2.5">2.5 cm</option>
+   //   <option value = "3">3 cm</option>
+  //    <option value = "3.5">3.5 cm</option>
+  //    <option value = "4">4 cm</option>
     </select><br><br>
+   
     
-    <label for="description">Description</label>
-    <select id = "description" onchange = "copytext()">
-      <option value = "linear">Linear</option>
-      <option value = "irregular">Irregular</option>
-      <option value = "stellate">Stellate</option>
-      <option value = "flap">Flap</option>
-    </select><br><br>
     
-    <h4>Anesthetic</h4>
-    
-    <label for = "anesthetic">Anesthetic</label>
-    <select id = "anesthetic" onchange = "copytext()">
-      <option value = "1% lidocaine">1% lidocaine</option>
-      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
-      <option value = "2% lidocaine">2% lidocaine</option>
-      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
-    </select><br><br>
-    
-    <label for = "volume">Volume</label>
-    <select id = "volume" onchange = "copytext()">
+    <label for = "dose">Volume</label>
+    <select id = "dose" onchange = "copytext()">
       <option value = "1">1 cc</option>
       <option value = "2">2 cc</option>
       <option value = "3">3 cc</option>
@@ -51,8 +35,6 @@
       <option value = "9">9 cc</option>
       <option value = "10">10 cc</option>
     </select>
-   
-    <h4>Suture</h4>
     
     <label for = "suture_type">Type of Suture</label>
     <select id = "suture_type" onchange = "copytext()">
@@ -61,16 +43,8 @@
       <option value = "Vicryl">Vicryl</option>
     </select><br><br>
     
-    <label for = "suture_size">Suture Size</label>
-    <select id = "suture_size" onchange = "copytext()">
-      <option value = "3-0">3-0</option>
-      <option value = "4-0">4-0</option>
-      <option value = "5-0">5-0</option>
-      <option value = "6-0">6-0</option>
-    </select><br><br>
-    
-    <label for = "suture_count">Number of Sutures</label>
-    <select id = "suture_count" onchange = "copytext()">
+    <label for = "npo_time">Hours that patient had been NPO</label>
+    <select id = "npo_time" onchange = "copytext()">
       <option value = "1">1</option>
       <option value = "2">2</option>
       <option value = "3">3</option>
@@ -85,12 +59,11 @@
       <option value = "12">12</option>
     </select><br><br>
     
-    <label for = "suture_style">Technique</label>
-    <select id = "suture_style" onchange = "copytext()">
-      <option value = "interrupted">interrupted</option>
-      <option value = "running">running</option>
-      <option value = "interrupted and running">interrupted and running</option>
-    </select><br><br>
+    <label for = "complications">Complications</label>
+    <select id = "complications" onchange = "copytext()">
+      <option value = "There were no complications.">There were no complications.</option>
+      <option value = "The patient had transient hypoxemia
+                       </select>
       
     
    <!-- <button onclick = "copytext()" id="copy">Copy</button><br>  -->
@@ -99,21 +72,17 @@
     
     <script>
       function copytext(){
-        var wound_length = document.getElementById("length").value;
-        var description = document.getElementById("description").value;
-        var anesthetic = document.getElementById("anesthetic").value;
-        var suture_size = document.getElementById("suture_size").value;
-        var suture_type = document.getElementById("suture_type").value;
-        var volume = document.getElementById("volume").value;
-        var suture_count = document.getElementById("suture_count").value;
-        var suture_style = document.getElementById("suture_style").value;
+        var indication = document.getElementById("indication").value;
+        var npo_time = document.getElementById("npo_time").value;
+        var dose = document.getElementById("dose").value;
         var t = "";
         t = "Procedure Note:  Conscious sedation\n";
-        t = t + "The " + wound_length + " cm " + description + " wound was irrigated thoroughly with normal saline. ";
-        t = t + "The area was prepped with Betadine and draped sterilely and then ";
-        t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
-        t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
-        t = t + "The wound was closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
+        t = t + "Conscious sedation was indicated for "+indication+".";
+        t = t + "The risks, benefits and alternatives were discussed with the patient and written consent was obtained.";
+        t = t + "The patient had been NPO for over "+npo_time+" hours. ";
+        t = t + "Standard preparations were made according to the ER sedation policy. ";
+        t = t + "Adequate sedation for achieved with the administration of " + dose + "mg of etomidate. ";
+        t = t + "The patient was continuously monitored until they were alert. ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
         document.getElementById("text").value = t;
         navigator.clipboard.writeText(t);
