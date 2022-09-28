@@ -1,3 +1,134 @@
+<html>
+  <head>
+    <title>Laceration Repair</title>
+  </head>
+  
+  <body>
+    <h3>Laceration Repair</h3>
+    
+    <h4>Description</h4>
+    
+    <label for = "side">Side</label>
+    <select id = "side">
+      <option value = "right">Right</option>
+      <option value = "left">Left/option>
+    </select><br><br>
+            
+    <label for="joint">Size</label>
+    <select id = "joint" onchange = "copytext()">
+      <option value = "knee">Knee</option>
+      <option value = "shoulder">Shoulder/option>
+      <option value = "wrist">Wrist</option>
+      <option value = "elbow">Elbow</option>
+      <option value = "ankle">Ankle/option>
+    </select><br><br>
+    
+    <label for="description">Description</label>
+    <select id = "description" onchange = "copytext()">
+      <option value = "linear">Linear</option>
+      <option value = "curvilinear">Curvilinear</option>
+      <option value = "irregular">Irregular</option>
+      <option value = "stellate">Stellate</option>
+      <option value = "flap">Flap</option>
+    </select><br><br>
+    
+    <h4>Anesthetic</h4>
+    
+    <label for = "anesthetic">Anesthetic</label>
+    <select id = "anesthetic" onchange = "copytext()">
+      <option value = "1% lidocaine">1% lidocaine</option>
+      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
+      <option value = "2% lidocaine">2% lidocaine</option>
+      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
+    </select><br><br>
+    
+    <label for = "volume">Volume</label>
+    <select id = "volume" onchange = "copytext()">
+      <option value = "5">5 cc</option>
+      <option value = "1">1 cc</option>
+      <option value = "2">2 cc</option>
+      <option value = "3">3 cc</option>
+      <option value = "4">4 cc</option>
+      <option value = "5">5 cc</option>
+      <option value = "6">6 cc</option>
+      <option value = "7">7 cc</option>
+      <option value = "8">8 cc</option>
+      <option value = "9">9 cc</option>
+      <option value = "10">10 cc</option>
+    </select>
+   
+    <h4>Suture</h4>
+    
+    <label for = "description">Type of Suture</label>
+    <select id = "description" onchange = "copytext()">
+      <option value = "clear">Nylon</option>
+      <option value = "purulent">Prolene</option>
+      <option value = "bloody">Vicryl</option>
+    </select><br><br>
+    
+    <label for = "suture_size">Suture Size</label>
+    <select id = "suture_size" onchange = "copytext()">
+      <option value = "4-0">4-0</option>
+      <option value = "3-0">3-0</option>
+      <option value = "4-0">4-0</option>
+      <option value = "5-0">5-0</option>
+      <option value = "6-0">6-0</option>
+    </select><br><br>
+    
+    <label for = "suture_count">Number of Sutures</label>
+    <select id = "suture_count" onchange = "copytext()">
+      <option value = "1">1</option>
+      <option value = "2">2</option>
+      <option value = "3">3</option>
+      <option value = "4">4</option>
+      <option value = "5">5</option>
+      <option value = "6">6</option>
+      <option value = "7">7</option>
+      <option value = "8">8</option>
+      <option value = "9">9</option>
+      <option value = "10">10</option>
+      <option value = "11">11</option>
+      <option value = "12">12</option>
+    </select><br><br>
+    
+    <label for = "suture_style">Technique</label>
+    <select id = "suture_style" onchange = "copytext()">
+      <option value = "interrupted">interrupted</option>
+      <option value = "running">running</option>
+      <option value = "interrupted and running">interrupted and running</option>
+    </select><br><br>
+      
+    
+   <!-- <button onclick = "copytext()" id="copy">Copy</button><br>  -->
+    
+    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    
+    <script>
+      function copytext(){
+        var side = document.getElementById("side").value;
+        var joint = document.getElementById("joint").value;
+        var anesthetic = document.getElementById("anesthetic").value;
+        var volume = document.getElementById("volume").value;
+        var description = document.getElementById("description").value;
+        var suture_style = document.getElementById("suture_style").value;
+        var t = "";
+        t = "Procedure Note:  Joint Aspiration\n";
+        t = t + "The indications, risks, benefits and alternatives were discussed with teh patient and written consent was obtained. ";
+        t = t + "A wide area around the " +side + " "+ joint + "was prepped with Betadine and the site was draped with sterile towels.  The puncture site was ";
+        t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
+        t = t + "An 18 gauge needle was inserted into the joint and " + volume + "cc of " + description + "synovial fluid was aspirated and sent for testing. ";
+        if (injected == true){
+                t = t + "The joint was then injected with 40 mg of Kenalog and 10 cc of 1% lidocaine. ";
+        }
+        t = t + "The needle was withdrawn and the puncture site was dressed with a Band-Aid.  Betadine was cleaned off the surrounding skin. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        document.getElementById("text").value = t;
+        navigator.clipboard.writeText(t);
+      }
+    </script>
+  </body>
+</html>
+
 <!--
         Procedure note:  Joint aspiration
     The indications, risks, benefits and alternatives were discussed with the patient and written consent was obtained.  The wide area around right knee was prepped with 
