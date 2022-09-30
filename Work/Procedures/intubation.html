@@ -5,32 +5,32 @@
   <body>
     <h3>Intubation</h3>
     <h4>indication</h4>
-    <input kind = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
     <label for = "0">respiratory failure</label><br>
-    <input kind = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+    <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
     <label for = "1">airway protection</label><br>
 <br>
 
     <h4>consent</h4>
-    <input kind = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
+    <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
     <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
-    <input kind = "radio" name = "consent" value = "1" id = "consent" onchange = "copytext()">
+    <input type = "radio" name = "consent" value = "1" id = "consent" onchange = "copytext()">
     <label for = "1">The patient provided verbal consent for the procedure.</label><br>
-    <input kind = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
+    <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
     <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
 <br>
 
     <h4>sedation</h4>
-    <input kind = "radio" name = "sedation" value = "0" id = "sedation" onchange = "copytext()">
+    <input type = "radio" name = "sedation" value = "0" id = "sedation" onchange = "copytext()">
     <label for = "0">The patient was sedated with 20 mg of Etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
-    <input kind = "radio" name = "sedation" value = "1" id = "sedation" onchange = "copytext()">
+    <input type = "radio" name = "sedation" value = "1" id = "sedation" onchange = "copytext()">
     <label for = "1">The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.</label><br>
-    <input kind = "radio" name = "sedation" value = "2" id = "sedation" onchange = "copytext()">
+    <input type = "radio" name = "sedation" value = "2" id = "sedation" onchange = "copytext()">
     <label for = "2">The patient did not require sedation or paralysis.</label><br>
 <br>
 
     <label for="tube_size">Depth</label>
-    <select id = "tube_size">
+    <select id = "tube_size" onchange = "copytext()">
       <option>8.0</option>
       <option>7.5</option>
       <option>7.0</option>
@@ -38,7 +38,7 @@
     </select><br>
 
     <label for="depth"></label>
-    <select id = "depth">
+    <select id = "depth" onchange = "copytext()">
       <option>23</option>
       <option>24</option>
       <option>25</option>
@@ -46,16 +46,16 @@
     </select><br>
 
     <h4>secured_location</h4>
-    <input kind = "radio" name = "secured_location" value = "0" id = "secured_location" onchange = "copytext()">
+    <input type = "radio" name = "secured_location" value = "0" id = "secured_location" onchange = "copytext()">
     <label for = "0">teeth</label><br>
-    <input kind = "radio" name = "secured_location" value = "1" id = "secured_location" onchange = "copytext()">
+    <input type = "radio" name = "secured_location" value = "1" id = "secured_location" onchange = "copytext()">
     <label for = "1">lip</label><br>
 <br>
 
     <h4>oxygen_saturation</h4>
-    <input kind = "radio" name = "oxygen_saturation" value = "0" id = "oxygen_saturation" onchange = "copytext()">
+    <input type = "radio" name = "oxygen_saturation" value = "0" id = "oxygen_saturation" onchange = "copytext()">
     <label for = "0">improved</label><br>
-    <input kind = "radio" name = "oxygen_saturation" value = "1" id = "oxygen_saturation" onchange = "copytext()">
+    <input type = "radio" name = "oxygen_saturation" value = "1" id = "oxygen_saturation" onchange = "copytext()">
     <label for = "1">remained stable</label><br>
 <br>
 
