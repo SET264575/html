@@ -81,6 +81,9 @@
     <input type = "checkbox" name = "pcp" id = "pcp" onchange = "copytext()">
     <label for = "pcp">Follow up with your primary care provider.</label><br>
 
+    <input type = "checkbox" name = "listpcp" id = "listpcp" onchange = "copytext()">
+    <label for = "listpcp">A list of providers has been included in this paperwork.</label><br>
+
     <input type = "checkbox" name = "rted" id = "rted" onchange = "copytext()">
     <label for = "rted">Return to the emergency department if your symptoms worsen or new symptoms develop.</label><br>
 
@@ -110,6 +113,7 @@
         var test = document.getElementById("test").checked;
         var test_type = document.getElementById("test_type").value;
         var pcp = document.getElementById("pcp").checked;
+        var listpcp = document.getElementById("listpcp").checked;
         var rted = document.getElementById("rted").checked;
         var t = "";
         t = t + problem;
@@ -168,6 +172,9 @@
         t = t + test_type;
         if (pcp == true) {
           t = t + "Follow up with your primary care provider.\n";
+        }
+        if (listpcp == true) {
+          t = t + "A list of providers has been included in this paperwork.\n";
         }
         if (rted == true) {
           t = t + "Return to the emergency department if your symptoms worsen or new symptoms develop.\n";
