@@ -13,29 +13,8 @@
       <option value = "joint reduction">joint reduction</option>
       <option value = "fracture reduction">fracture reduction</option>
       <option value = "electrical cardioversion">electrical cardioversion</option>
-   //   <option value = "">2 cm</option>
-   //   <option value = "2.5">2.5 cm</option>
-   //   <option value = "3">3 cm</option>
-  //    <option value = "3.5">3.5 cm</option>
-  //    <option value = "4">4 cm</option>
     </select><br><br>
    
-    
-    
-    <label for = "dose">Dose</label>
-    <select id = "dose" onchange = "copytext()">
-      <option value = "1">1 cc</option>
-      <option value = "2">2 cc</option>
-      <option value = "3">3 cc</option>
-      <option value = "4">4 cc</option>
-      <option value = "5">5 cc</option>
-      <option value = "6">6 cc</option>
-      <option value = "7">7 cc</option>
-      <option value = "8">8 cc</option>
-      <option value = "9">9 cc</option>
-      <option value = "10">10 cc</option>
-    </select><br><br>
-    
     <label for = "npo_time">Hours that patient had been NPO</label>
     <select id = "npo_time" onchange = "copytext()">
       <option value = "1">1</option>
@@ -51,6 +30,22 @@
       <option value = "11">11</option>
       <option value = "12">12</option>
     </select><br><br>
+    
+    <label for = "dose">Dose</label>
+    <select id = "dose" onchange = "copytext()">
+      <option value = "1">1 cc</option>
+      <option value = "2">2 cc</option>
+      <option value = "3">3 cc</option>
+      <option value = "4">4 cc</option>
+      <option value = "5">5 cc</option>
+      <option value = "6">6 cc</option>
+      <option value = "7">7 cc</option>
+      <option value = "8">8 cc</option>
+      <option value = "9">9 cc</option>
+      <option value = "10">10 cc</option>
+    </select><br><br>
+    
+
     
  <!--   <label for = "complications">Complications</label>
     <select id = "complications" onchange = "copytext()">
@@ -70,11 +65,11 @@
         var dose = document.getElementById("dose").value;
         var t = "";
         t = "Procedure Note:  Conscious sedation\n";
-        t = t + "Conscious sedation was indicated for "+indication+".";
-        t = t + "The risks, benefits and alternatives were discussed with the patient and written consent was obtained.";
+        t = t + "Conscious sedation was indicated for "+indication+". ";
+        t = t + "The risks, benefits and alternatives were discussed with the patient and written consent was obtained. ";
         t = t + "The patient had been NPO for over "+npo_time+" hours. ";
         t = t + "Standard preparations were made according to the ER sedation policy. ";
-        t = t + "Adequate sedation for achieved with the administration of " + dose + "mg of etomidate. ";
+        t = t + "Adequate sedation for achieved with the administration of " + dose + " mg of etomidate. ";
         t = t + "The patient was continuously monitored until they were alert. ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
         document.getElementById("text").value = t;
