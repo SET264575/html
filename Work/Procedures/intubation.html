@@ -14,3 +14,30 @@
     <h4>Results</h4>
     
     
+    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    
+    <script>
+      function copytext(){
+        var indication = document.getElementById("indication").value;
+        var description = document.getElementById("description").value;
+        var location = document.getElementById("location").value;
+        var anesthetic = document.getElementById("anesthetic").value;
+        var suture_size = document.getElementById("suture_size").value;
+        var suture_type = document.getElementById("suture_type").value;
+        var volume = document.getElementById("volume").value;
+        var suture_count = document.getElementById("suture_count").value;
+        var suture_style = document.getElementById("suture_style").value;
+        var t = "";
+        t = "Procedure Note:  Intubation+"\n";
+        t = t + "Intubation was indicated due to "+indication+". ";
+        t = t + "The area was prepped with Betadine and draped sterilely and then ";
+        t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
+        t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
+        t = t + "The wound was closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        document.getElementById("text").value = t;
+        navigator.clipboard.writeText(t);
+      }
+    </script>
+  </body>
+</html>
