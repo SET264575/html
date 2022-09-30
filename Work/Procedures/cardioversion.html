@@ -27,80 +27,6 @@
     <input type = "radio" name = "sedation" value = "3" id = "3">
     <label for = "3">Conscious sedation was not used for the procedure due to patient preference.</label><br>
 
-    <label for="description">Description</label>
-    <select id = "description" onchange = "copytext()">
-      <option value = "linear">Linear</option>
-      <option value = "curvilinear">Curvilinear</option>
-      <option value = "irregular">Irregular</option>
-      <option value = "stellate">Stellate</option>
-      <option value = "flap">Flap</option>
-    </select><br><br>
-    
-    <h4>Anesthetic</h4>
-    
-    <label for = "anesthetic">Anesthetic</label>
-    <select id = "anesthetic" onchange = "copytext()">
-      <option value = "1% lidocaine">1% lidocaine</option>
-      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
-      <option value = "2% lidocaine">2% lidocaine</option>
-      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
-    </select><br><br>
-    
-    <label for = "volume">Volume</label>
-    <select id = "volume" onchange = "copytext()">
-      <option value = "5">5 cc</option>
-      <option value = "1">1 cc</option>
-      <option value = "2">2 cc</option>
-      <option value = "3">3 cc</option>
-      <option value = "4">4 cc</option>
-      <option value = "5">5 cc</option>
-      <option value = "6">6 cc</option>
-      <option value = "7">7 cc</option>
-      <option value = "8">8 cc</option>
-      <option value = "9">9 cc</option>
-      <option value = "10">10 cc</option>
-    </select>
-   
-    <h4>Suture</h4>
-    
-    <label for = "suture_type">Type of Suture</label>
-    <select id = "suture_type" onchange = "copytext()">
-      <option value = "nylon">Nylon</option>
-      <option value = "Prolene">Prolene</option>
-      <option value = "Vicryl">Vicryl</option>
-    </select><br><br>
-    
-    <label for = "suture_size">Suture Size</label>
-    <select id = "suture_size" onchange = "copytext()">
-      <option value = "4-0">4-0</option>
-      <option value = "3-0">3-0</option>
-      <option value = "4-0">4-0</option>
-      <option value = "5-0">5-0</option>
-      <option value = "6-0">6-0</option>
-    </select><br><br>
-    
-    <label for = "suture_count">Number of Sutures</label>
-    <select id = "suture_count" onchange = "copytext()">
-      <option value = "1">1</option>
-      <option value = "2">2</option>
-      <option value = "3">3</option>
-      <option value = "4">4</option>
-      <option value = "5">5</option>
-      <option value = "6">6</option>
-      <option value = "7">7</option>
-      <option value = "8">8</option>
-      <option value = "9">9</option>
-      <option value = "10">10</option>
-      <option value = "11">11</option>
-      <option value = "12">12</option>
-    </select><br><br>
-    
-    <label for = "suture_style">Technique</label>
-    <select id = "suture_style" onchange = "copytext()">
-      <option value = "interrupted">interrupted</option>
-      <option value = "running">running</option>
-      <option value = "interrupted and running">interrupted and running</option>
-    </select><br><br>
       
     
    <!-- <button onclick = "copytext()" id="copy">Copy</button><br>  -->
@@ -110,21 +36,15 @@
     <script>
       function copytext(){
         var indication = document.getElementById("indication").value;
-        var anticoagulated = document.getElementById("anticoagulated").value;
+        var anticoagulated = document.getElementById("anticoagulated").checked;
         var sedation = getRadioButtonValue("sedation");
-        var anesthetic = document.getElementById("anesthetic").value;
-        var suture_size = document.getElementById("suture_size").value;
-        var suture_type = document.getElementById("suture_type").value;
-        var volume = document.getElementById("volume").value;
-        var suture_count = document.getElementById("suture_count").value;
-        var suture_style = document.getElementById("suture_style").value;
-        var t = "";
-        t = "Procedure Note:  Electrical Cardioversion\n";
+        console.log(sedation);
+        var t = "Procedure Note:  Electrical Cardioversion\n";
         t = t + "Electrical cardioversion was indicated due to "+indication+". ";
         t = t + "The risks, benefits and alternatives were explained to the patient who provided written consent for the procedure. ";
-          if (anticoagulated == true){
-        t = t + "The patient had been consistently taking anticoagulation for at least 3 weeks. ";
-          }
+        if (anticoagulated == true){
+            t = t + "The patient had been consistently taking anticoagulation for at least 3 weeks. ";
+        }
         switch(sedation){
           case 1:
             t = t + "Conscious sedation was used for the procedure.  ";
