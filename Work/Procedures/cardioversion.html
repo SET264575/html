@@ -8,7 +8,7 @@
     
     <h4>Indication</h4>
     
-    <label for="indication">Size</label>
+    <label for="indication">Indication</label>
     <select id = "indication" onchange = "copytext()">
       <option value = "atrial fibrillation with rapid ventricular response, uncontrolled with medication">atrial fibrillation with rapid ventricular response, uncontrolled with medication</option>
       <option value = "patient preference for management of atrial fibrillation">patient preference for management of atrial fibrillation</option>
@@ -17,14 +17,14 @@
       <option value = "ventricular fibrillation">ventricular fibrillation</option>
     </select><br><br>
       
-    <input type="checkbox" id = "anticoagulated">
+    <input type="checkbox" id = "anticoagulated" onchange = "copytext()">
     <label for = "anticoagulated">The patient had been consistently taking an oral anticoagulant for at least 3 weeks.</label><br><br>
     
-    <input type = "radio" name = "sedation" value = "1" id = "1">
+    <input type = "radio" name = "sedation" value = "1" id = "1" onchange = "copytext()">
     <label for="1">Conscious sedation was used for the procedure.</label><br>
-    <input type = "radio" name = "sedation" value = "2" id = "2">
+    <input type = "radio" name = "sedation" value = "2" id = "2" onchange = "copytext()">
     <label for = "2">Conscious sedation was not used for the procedure due to the instability of the patient.</label><br>
-    <input type = "radio" name = "sedation" value = "3" id = "3">
+    <input type = "radio" name = "sedation" value = "3" id = "3" onchange = "copytext()">
     <label for = "3">Conscious sedation was not used for the procedure due to patient preference.</label><br>
 
       
@@ -47,6 +47,7 @@
         }
         switch(sedation){
           case 1:
+            console.log("in 1");
             t = t + "Conscious sedation was used for the procedure.  ";
             break;
           case 2:
