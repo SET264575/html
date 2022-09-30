@@ -84,14 +84,13 @@
         var volume = document.getElementById("volume").value;
         var location = document.getElementById("location").value;
         var incision_size = document.getElementById("incision_size").value;
-        var t = "";
-        t = "Procedure Note: Abscess incision and drainage\n";
-        t = t + "The skin over the " + size + " cm " + " abscess on the " + location " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
+        var t = "Procedure Note: Abscess incision and drainage\n";
+        t = t + "The skin over the " + size + " cm abscess on the " + location " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
         t = t + "An #11 blade was used to make a "+incision_size+"cm incision into the abscess.  The abscess was probed with curved hemostats to break up loculations.  ";
         t = t + amount + " pus was expressed from the abscess. ";
-          if (gauze == true){
-        t = t + 'The cavity was packed with 1/4" iodoform gauze. ';
-          }
+        if (gauze == true){
+            t = t + 'The cavity was packed with 1/4" iodoform gauze. ';
+        }
         t = t + "The patient tolerated the procedure well.  There were no complications."
         document.getElementById("text").value = t;
         navigator.clipboard.writeText(t);
@@ -99,10 +98,3 @@
     </script>
   </body>
 </html>
-
-    <!--
-    Procedure note:  Abscess incision and drainage
-    The skin over the 3 cm diameter abscess on the left thigh was prepped with Betadine and anesthetized with 4 cc of 1% lidocaine.  An #11 blade was used to make a 2 cm incision
-    into the abscess.  The abscess was probed with curved hemostats to break up loculations.  A large amount of pus was expressed from the abscess.  The cavity was packed with 
-    1/4" iodoform gauze.  The patient tolerated the procedure well.  There were no complications.
-    -->
