@@ -181,10 +181,10 @@
           t = t + "Return to the emergency department if your symptoms worsen or new symptoms develop.\n";
         }
         if (referral == true){
-          t = t + "A referral to " + referral_type + " has been submitted.  You should expect a call in a few days.";
-        }\n
+          t = t + "A referral to " + referral_type + " has been submitted.  You should expect a call in a few days.\n";
+        }
         if (test == true){
-          t = t + "An outpatient " + test_type + " has been submitted.  You should expect a call in a few days.";
+          t = t + "An outpatient " + test_type + " has been submitted.  You should expect a call in a few days.\n";
         navigator.clipboard.writeText(t);
         document.getElementById("text").value = t;
       }
