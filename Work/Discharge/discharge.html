@@ -4,56 +4,85 @@
   </head>
   <body>
     <h3>Discharge instructions</h3>
-    <label for="problem">Problem</label>
+    <label for="problem">Choose instructions</label>
     <select id = "problem" onchange = "copytext()">
-      <option>kidney stone</option>
-      <option>chest pain</option>
+      <option>kidney stones</option>
     </select><br>
 
     <input type = "checkbox" name = "x0" id = "x0" onchange = "copytext()">
-    <label for = "x0">Zofran 4 mg every 6 hours as needed for nausea</label><br><br>
+    <label for = "x0">Zofran 4 mg every 6 hours as needed for nausea</label><br>
 
     <input type = "checkbox" name = "x10" id = "x10" onchange = "copytext()">
-    <label for = "x10">Percocet 1 tablet every 6 hours as needed for pain</label><br><br>
+    <label for = "x10">Percocet 1 tablet every 6 hours as needed for pain</label><br>
 
     <input type = "checkbox" name = "x20" id = "x20" onchange = "copytext()">
-    <label for = "x20">Norco 1 tablet every 6 hours as needed for pain</label><br><br>
+    <label for = "x20">Norco 1 tablet every 6 hours as needed for pain</label><br>
 
     <input type = "checkbox" name = "x30" id = "x30" onchange = "copytext()">
-    <label for = "x30">Tramadol 1 tablet every 6 hours as needed for pain</label><br><br>
+    <label for = "x30">Tramadol 1 tablet every 6 hours as needed for pain</label><br>
 
     <input type = "checkbox" name = "x40" id = "x40" onchange = "copytext()">
-    <label for = "x40">Flomax 0.4 mg daily</label><br><br>
+    <label for = "x40">Flomax 0.4 mg daily</label><br>
 
     <input type = "checkbox" name = "x50" id = "x50" onchange = "copytext()">
-    <label for = "x50">Cardizem CD 120 mg daily</label><br><br>
+    <label for = "x50">Cardizem CD 120 mg daily</label><br>
 
     <input type = "checkbox" name = "x60" id = "x60" onchange = "copytext()">
-    <label for = "x60">Lasix 20 mg daily</label><br><br>
+    <label for = "x60">Lasix 20 mg daily</label><br>
 
     <input type = "checkbox" name = "x70" id = "x70" onchange = "copytext()">
-    <label for = "x70">Amoxicillin 875 mg twice a day</label><br><br>
+    <label for = "x70">Amoxicillin 875 mg twice a day</label><br>
 
     <input type = "checkbox" name = "x80" id = "x80" onchange = "copytext()">
-    <label for = "x80">Penicillin 500 mg four times a day for 7 days</label><br><br>
+    <label for = "x80">Penicillin 500 mg four times a day for 7 days</label><br>
 
     <input type = "checkbox" name = "x90" id = "x90" onchange = "copytext()">
-    <label for = "x90">Cefdinir 300 mg twice a day for 7 days</label><br><br>
+    <label for = "x90">Cefdinir 300 mg twice a day for 7 days</label><br>
 
     <input type = "checkbox" name = "x100" id = "x100" onchange = "copytext()">
-    <label for = "x100">Cipro 500 mg twice a day for 7 days</label><br><br>
+    <label for = "x100">Cipro 500 mg twice a day for 7 days</label><br>
 
     <input type = "checkbox" name = "x110" id = "x110" onchange = "copytext()">
-    <label for = "x110">Flagyl 500 mg three times a day for 7 days</label><br><br>
+    <label for = "x110">Flagyl 500 mg three times a day for 7 days</label><br>
 
     <input type = "checkbox" name = "x120" id = "x120" onchange = "copytext()">
-    <label for = "x120">Macrobid 100 mg twice a day for 3 days</label><br><br>
+    <label for = "x120">Macrobid 100 mg twice a day for 3 days</label><br>
 
     <input type = "checkbox" name = "x130" id = "x130" onchange = "copytext()">
-    <label for = "x130">Bactrim 1 tablet twice a day for 7 days</label><br><br>
+    <label for = "x130">Bactrim 1 tablet twice a day for 7 days</label><br>
 
     <input type = "checkbox" name = "x140" id = "x140" onchange = "copytext()">
-    <label for = "x140">Prednisone 60 mg daily for 5 days</label><br><br>
+    <label for = "x140">Prednisone 60 mg daily for 5 days</label><br>
+
+    <input type = "checkbox" name = "referral" id = "referral" onchange = "copytext()">
+    <label for = "referral">A referral was made</label><br>
+
+    <label for="referral_type">Choose a specialty</label>
+    <select id = "referral_type" onchange = "copytext()">
+      <option>cardiology</option>
+      <option>neurology</option>
+      <option>the Columbia Orthopedic Group</option>
+    </select><br>
+
+    <input type = "checkbox" name = "test" id = "test" onchange = "copytext()">
+    <label for = "test">An outpatient test was ordered.</label><br>
+
+    <label for="test_type">Choose a test</label>
+    <select id = "test_type" onchange = "copytext()">
+      <option>Holter monitor</option>
+      <option>colonoscopy</option>
+      <option>echocardiogram</option>
+      <option>gall bladder ultrasound</option>
+      <option>pelvic ultrasound</option>
+      <option>stress test</option>
+      <option>upper endoscopy</option>
+    </select><br>
+
+    <input type = "checkbox" name = "pcp" id = "pcp" onchange = "copytext()">
+    <label for = "pcp">Follow up with your primary care provider.</label><br>
+
+    <input type = "checkbox" name = "rted" id = "rted" onchange = "copytext()">
+    <label for = "rted">Return to the emergency department if your symptoms worsen or new symptoms develop.</label><br>
 
     <br>
 
@@ -76,6 +105,12 @@
         var x120 = document.getElementById("x120").checked;
         var x130 = document.getElementById("x130").checked;
         var x140 = document.getElementById("x140").checked;
+        var referral = document.getElementById("referral").checked;
+        var referral_type = document.getElementById("referral_type").value;
+        var test = document.getElementById("test").checked;
+        var test_type = document.getElementById("test_type").value;
+        var pcp = document.getElementById("pcp").checked;
+        var rted = document.getElementById("rted").checked;
         var t = "";
         t = t + problem;
         if (x0 == true) {
@@ -122,6 +157,20 @@
         }
         if (x140 == true) {
           t = t + "Prednisone 60 mg daily for 5 days\n";
+        }
+        if (referral == true) {
+          t = t + "A referral was made\n";
+        }
+        t = t + referral_type;
+        if (test == true) {
+          t = t + "An outpatient test was ordered.\n";
+        }
+        t = t + test_type;
+        if (pcp == true) {
+          t = t + "Follow up with your primary care provider.\n";
+        }
+        if (rted == true) {
+          t = t + "Return to the emergency department if your symptoms worsen or new symptoms develop.\n";
         }
         navigator.clipboard.writeText(t);
         document.getElementById("text").value = t;
