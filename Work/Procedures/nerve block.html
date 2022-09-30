@@ -4,17 +4,18 @@
   </head>
   <body>
     <h3>Nerve block</h3>
+
     <label for = "indication">Indication</label>
-    <input type = "text" id = "indication"><br>
+    <input type = "text" id = "indication" onchange="copytext()"><br>
     <label for="type">Type of block</label>
-    <select id = "type">
+    <select id = "type" onchange="copytext()">
       <option>Digital block</option>
       <option>Mandibular block</option>
       <option>Mental block</option>
     </select><br>
 
     <label for="anesthetic">Anesthetic</label>
-    <select id = "anesthetic">
+    <select id = "anesthetic" onchange="copytext()">
       <option>1% lidocaine</option>
       <option>1% lidocaine with epinephrine</option>
       <option>2% lidocaine</option>
@@ -23,7 +24,7 @@
     </select><br>
 
     <label for="dose">Dose</label>
-    <select id = "dose">
+    <select id = "dose" onchange="copytext()">
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -37,8 +38,8 @@
     </select><br>
 
     <label for = "site">Site of injection</label>
-    <input type = "text" id = "site"><br>
-    <input kind = "checkbox" name = "aspiration" id = "aspiration">
+    <input type = "text" id = "site" onchange="copytext()"><br>
+    <input type = "checkbox" name = "aspiration" id = "aspiration"  onchange="copytext()">
     <label for = "aspiration">To avoid injecting into a blood vessel, aspiration was performed prior to injection.</label><br><br>
 
     <br>
