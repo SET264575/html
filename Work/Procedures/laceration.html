@@ -29,6 +29,9 @@
       <option value = "flap">Flap</option>
     </select><br><br>
     
+    <label for = "location">Location</label>
+    <input type = "text" id = "location">
+    
     <h4>Anesthetic</h4>
     
     <label for = "anesthetic">Anesthetic</label>
@@ -104,6 +107,7 @@
       function copytext(){
         var wound_length = document.getElementById("length").value;
         var description = document.getElementById("description").value;
+        var location = document.getElementById("location").value;
         var anesthetic = document.getElementById("anesthetic").value;
         var suture_size = document.getElementById("suture_size").value;
         var suture_type = document.getElementById("suture_type").value;
@@ -111,8 +115,8 @@
         var suture_count = document.getElementById("suture_count").value;
         var suture_style = document.getElementById("suture_style").value;
         var t = "";
-        t = "Procedure Note:  Laceration Repair\n";
-        t = t + "The " + wound_length + " cm " + description + " laceration was irrigated thoroughly with normal saline. ";
+        t = "Procedure Note:  Laceration repair on the "+location+"\n";
+        t = t + "The " + wound_length + " cm " + description + " laceration on the "+location+" was irrigated thoroughly with normal saline. ";
         t = t + "The area was prepped with Betadine and draped sterilely and then ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
         t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
