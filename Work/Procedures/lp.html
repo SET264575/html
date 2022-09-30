@@ -35,7 +35,7 @@
 <label for = "2">bloody</label><br><br>
         
         <label for = "pressure">Opening pressure</label>
-        <input type="text" id = "pressure" onchange = "copytext()">
+        <input type="text" id = "pressure" onchange = "copytext()"><br>
 
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
       
@@ -86,7 +86,7 @@
                 t = t + "L4-L5";
                 break;
         }
-        t = t + "interspace and approximately 4 cc of ";  
+        t = t + " interspace and approximately 4 cc of ";  
         switch(color){
             case "0":
                 t = t + "clear";
@@ -98,7 +98,7 @@
                 t = t + "bloody";
                 break;
         }
-        t = t + "fluid was obtained and sent for studies. Opening pressure was " + pressure + "cc water. ";
+        t = t + " fluid was obtained and sent for studies. Opening pressure was " + pressure + " cm water. ";
         t = t + "The needle was withdrawn, the puncture site was covered with a Band-Aid and the patient was placed prone. ";
         t = t + "The patient tolerated the procedure well.  There were no complications.";
         document.getElementById("text").value = t;
