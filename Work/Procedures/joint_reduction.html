@@ -1,0 +1,53 @@
+<!--
+
+Procedure Note:  Joint reduction of the right shoulder
+Risks, benefits and alternatives were discussed with the patient who gave written consent.
+Conscious sedation was used.
+Traction/countertraction was used to reduce the joint.
+The patient tolerated the procedure well.  There were no complications.
+-->
+
+<html>
+  <head>
+    <title>Joint Reduction</title>
+  </head>
+  <body>
+    <h3>Joint Reduction</h3>
+    <label for = "location">Location</label>
+    <input type = "text" id = "location">
+    <input kind = "checkbox" name = "sedation" id = "sedation">
+    <label for = "sedation">Conscious sedation was used for this procedure.</label><br><br>
+
+    <label for="technique"></label>
+    <select id = "technique">
+      <option>Traction/countertraction</option>
+      <option>Traction</option>
+      <option>Hennipenn maneuver</option>
+    </select>
+    <script>
+      function copytext(){
+        var location = document.getElementById("location").value;
+        var sedation = document.getElementById("sedation").value;
+        var technique = document.getElementById("technique").value;
+        var t = "Procedure Note: Joint Reduction of the ";
+        t = t + location.uppercase();
+        t = t + "The risks, benefits, and alternatives were discussed with the patient who gave written consent. ";
+        t = t + "Conscious sedation was used for this procedure. ";
+        t = t + technique + " was used to reduce the joint. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        t = t + "Post-reduction x-ray showed good anatomic alignment. ";
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+    </script>
+  </body>
+</html>
