@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Laceration Repair</title>
+    <title>Joint Aspiration</title>
   </head>
   
   <body>
@@ -21,15 +21,6 @@
       <option value = "wrist">Wrist</option>
       <option value = "elbow">Elbow</option>
       <option value = "ankle">Ankle/option>
-    </select><br><br>
-    
-    <label for="description">Description</label>
-    <select id = "description" onchange = "copytext()">
-      <option value = "linear">Linear</option>
-      <option value = "curvilinear">Curvilinear</option>
-      <option value = "irregular">Irregular</option>
-      <option value = "stellate">Stellate</option>
-      <option value = "flap">Flap</option>
     </select><br><br>
     
     <h4>Anesthetic</h4>
@@ -65,38 +56,25 @@
       <option value = "purulent">Prolene</option>
       <option value = "bloody">Vicryl</option>
     </select><br><br>
+   
     
-    <label for = "suture_size">Suture Size</label>
-    <select id = "suture_size" onchange = "copytext()">
-      <option value = "4-0">4-0</option>
-      <option value = "3-0">3-0</option>
-      <option value = "4-0">4-0</option>
-      <option value = "5-0">5-0</option>
-      <option value = "6-0">6-0</option>
-    </select><br><br>
-    
-    <label for = "suture_count">Number of Sutures</label>
-    <select id = "suture_count" onchange = "copytext()">
-      <option value = "1">1</option>
-      <option value = "2">2</option>
-      <option value = "3">3</option>
-      <option value = "4">4</option>
-      <option value = "5">5</option>
-      <option value = "6">6</option>
-      <option value = "7">7</option>
-      <option value = "8">8</option>
-      <option value = "9">9</option>
+    <label for = "volume2">Number of Sutures</label>
+    <select id = "volume2" onchange = "copytext()">
       <option value = "10">10</option>
-      <option value = "11">11</option>
-      <option value = "12">12</option>
+      <option value = "20">20</option>
+      <option value = "30">30</option>
+      <option value = "40">40</option>
+      <option value = "50">50</option>
+      <option value = "60">60</option>
+      <option value = "70">70</option>
+      <option value = "80">80</option>
+      <option value = "90">90</option>
+      <option value = "100">100</option>
+      <option value = "110">110</option>
+      <option value = "120">120</option>
     </select><br><br>
     
-    <label for = "suture_style">Technique</label>
-    <select id = "suture_style" onchange = "copytext()">
-      <option value = "interrupted">interrupted</option>
-      <option value = "running">running</option>
-      <option value = "interrupted and running">interrupted and running</option>
-    </select><br><br>
+    <input type="checkbox" id= "injected">Injected with Kenalog and lidocaine</input><br><br>
       
     
    <!-- <button onclick = "copytext()" id="copy">Copy</button><br>  -->
@@ -109,14 +87,15 @@
         var joint = document.getElementById("joint").value;
         var anesthetic = document.getElementById("anesthetic").value;
         var volume = document.getElementById("volume").value;
+        var volume2 = document.getElementById("volume2").value;
         var description = document.getElementById("description").value;
-        var suture_style = document.getElementById("suture_style").value;
+        var injected = document.getElementById("injected").value;
         var t = "";
         t = "Procedure Note:  Joint Aspiration\n";
         t = t + "The indications, risks, benefits and alternatives were discussed with teh patient and written consent was obtained. ";
         t = t + "A wide area around the " +side + " "+ joint + "was prepped with Betadine and the site was draped with sterile towels.  The puncture site was ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
-        t = t + "An 18 gauge needle was inserted into the joint and " + volume + "cc of " + description + "synovial fluid was aspirated and sent for testing. ";
+        t = t + "An 18 gauge needle was inserted into the joint and " + volume2 + "cc of " + description + "synovial fluid was aspirated and sent for testing. ";
         if (injected == true){
                 t = t + "The joint was then injected with 40 mg of Kenalog and 10 cc of 1% lidocaine. ";
         }
@@ -128,14 +107,4 @@
     </script>
   </body>
 </html>
-
-<!--
-        Procedure note:  Joint aspiration
-    The indications, risks, benefits and alternatives were discussed with the patient and written consent was obtained.  The wide area around right knee was prepped with 
-    Betadine and the site was draped with sterile towels.  The puncture site was anesthetized with 1% lidocaine.  An 18 gauge needle was inserted into the joint and 60 cc
-    of clear fluid was aspirated.  The joint was then injected with 40 mg of Kenalog and 10 cc of 1% lidocaine.  The needle was withdrawn and the puncture site was dressed 
-    with a Band-Aid.  Betadine was cleaned off the surrounding skin.  The patient tolerated the procedure well.  There were no complications.
-    
-    -->
-  
   
