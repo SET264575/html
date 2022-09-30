@@ -46,37 +46,47 @@
     <script>
       function copytext(){
         var problem = document.getElementById("problem").value;
-        var x0 = document.getElementById("x0").value;
-        var x10 = document.getElementById("x10").value;
-        var x20 = document.getElementById("x20").value;
-        var x30 = document.getElementById("x30").value;
-        var x40 = document.getElementById("x40").value;
-        var x50 = document.getElementById("x50").value;
-        var x60 = document.getElementById("x60").value;
-        var x70 = document.getElementById("x70").value;
-        var x80 = document.getElementById("x80").value;
-        var x90 = document.getElementById("x90").value;
+        var x0 = document.getElementById("x0").checked;
+        var x10 = document.getElementById("x10").checked;
+        var x20 = document.getElementById("x20").checked;
+        var x30 = document.getElementById("x30").checked;
+        var x40 = document.getElementById("x40").checked;
+        var x50 = document.getElementById("x50").checked;
+        var x60 = document.getElementById("x60").checked;
+        var x70 = document.getElementById("x70").checked;
+        var x80 = document.getElementById("x80").checked;
+        var x90 = document.getElementById("x90").checked;
         t = t + problem;
-        t = t + "Zofran 4 mg every 6 hours as needed for nausea"
-;
-        t = t + "Percocet 1 tablet every 6 hours as needed for pain"
-;
-        t = t + "Norco 1 tablet every 6 hours as needed for pain"
-;
-        t = t + "Tramadol 1 tablet every 6 hours as needed for pain"
-;
-        t = t + "Flomax 0.4 mg daily"
-;
-        t = t + "Cardizem CD 120 mg daily"
-;
-        t = t + "Lasix 20 mg daily"
-;
-        t = t + "Amoxicillin 875 mg twice a day"
-;
-        t = t + "Cipro 500 mg twice a day for 7 days"
-;
-        t = t + "Flagyl 500 mg three times a day for 7 days"
-;
+        if (x0 == true) {
+          t = t + "Zofran 4 mg every 6 hours as needed for nausea\n";
+        }
+        if (x10 == true) {
+          t = t + "Percocet 1 tablet every 6 hours as needed for pain\n";
+        }
+        if (x20 == true) {
+          t = t + "Norco 1 tablet every 6 hours as needed for pain\n";
+        }
+        if (x30 == true) {
+          t = t + "Tramadol 1 tablet every 6 hours as needed for pain\n";
+        }
+        if (x40 == true) {
+          t = t + "Flomax 0.4 mg daily\n";
+        }
+        if (x50 == true) {
+          t = t + "Cardizem CD 120 mg daily\n";
+        }
+        if (x60 == true) {
+          t = t + "Lasix 20 mg daily\n";
+        }
+        if (x70 == true) {
+          t = t + "Amoxicillin 875 mg twice a day\n";
+        }
+        if (x80 == true) {
+          t = t + "Cipro 500 mg twice a day for 7 days\n";
+        }
+        if (x90 == true) {
+          t = t + "Flagyl 500 mg three times a day for 7 days\n";
+        }
         navigator.clipboard.writeText(t);
         document.getElementById("text").value = t;
       }
