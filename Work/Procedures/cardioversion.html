@@ -46,18 +46,16 @@
             t = t + "The patient had been consistently taking anticoagulation for at least 3 weeks. ";
         }
         switch(sedation){
-          case 1:
+          case "1":
             console.log("in 1");
             t = t + "Conscious sedation was used for the procedure.  ";
             break;
-          case 2:
+          case "2":
             t = t + "Conscious sedation was not used for the procedure due to patient instability. ";
             break;
-          case 3:
+          case "3":
             t = t + "Conscious sedation was not used for the procedure due to patient preference. ";
             break;
-          default:
-            console.log("default");
         }
         t = t + "A shock of 200 J was administered with resulting cardioversion to a normal sinus rhythm.  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
