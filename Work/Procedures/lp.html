@@ -33,6 +33,9 @@
 <label for = "1">cloudy</label><br>
 <input type = "radio" name = "color" value = "2" id = "color" onchange = "copytext()">
 <label for = "2">bloody</label><br><br>
+        
+        <label for = "pressure">Opening pressure</label>
+        <input type="text" id = "pressure" onchange = "copytext()">
 
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
       
@@ -43,6 +46,7 @@
         var indication = getRadioButtonValue("indication");
         var interspace = getRadioButtonValue("interspace");
         var color = getRadioButtonValue("color");
+        var pressure = document.getElementById("pressure").value;
 
 
         var t = "Procedure Note:  Lumbar puncture\n";
