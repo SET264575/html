@@ -111,6 +111,7 @@
       function copytext(){
         var indication = document.getElementById("indication").value;
         var anticoagulated = document.getElementById("anticoagulated").value;
+        var sedation = getRadioButtonValue("sedation");
         var anesthetic = document.getElementById("anesthetic").value;
         var suture_size = document.getElementById("suture_size").value;
         var suture_type = document.getElementById("suture_type").value;
@@ -124,11 +125,31 @@
           if (anticoagulated == true){
         t = t + "The patient had been consistently taking anticoagulation for at least 3 weeks. ";
           }
-        t = t + "Conscious sedation was used for the procedure.  ";
-        t = t + "The wound was closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
+        switch(sedation){
+          case 1:
+            t = t + "Conscious sedation was used for the procedure.  ";
+            break;
+          case 2:
+            t = t + "Conscious sedation was not used for the procedure due to patient instability. ";
+            break;
+          case 3:
+            t = t + "Conscious sedation was not used for the procedure due to patient preference. ";
+            break;
+        }
+        t = t + "A shock of 200 J was administered with resulting cardioversion to a normal sinus rhythm + ".  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
         document.getElementById("text").value = t;
         navigator.clipboard.writeText(t);
+      }
+      
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
       }
     </script>
   </body>
