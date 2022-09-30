@@ -29,7 +29,7 @@
     <label for = "2">The patient did not require sedation or paralysis.</label><br>
 <br>
 
-    <label for="tube_size">Depth</label>
+    <label for="tube_size">Tube size</label>
     <select id = "tube_size" onchange = "copytext()">
       <option>8.0</option>
       <option>7.5</option>
@@ -37,7 +37,7 @@
       <option>6.5</option>
     </select><br>
 
-    <label for="depth"></label>
+    <label for="depth">Depth</label>
     <select id = "depth" onchange = "copytext()">
       <option>23</option>
       <option>24</option>
@@ -85,13 +85,13 @@
 
         switch(consent){
           case "0":
-            t = t + "Due to the patient's critical condition, consent could not be obtained.";
+            t = t + "Due to the patient's critical condition, consent could not be obtained. ";
             break;
           case "1":
-            t = t + "The patient provided verbal consent for the procedure.";
+            t = t + "The patient provided verbal consent for the procedure. ";
             break;
           case "2":
-            t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent.";
+            t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent. ";
             break;
         }
 
