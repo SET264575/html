@@ -35,10 +35,25 @@
     <label for = "x70">Amoxicillin 875 mg twice a day</label><br><br>
 
     <input type = "checkbox" name = "x80" id = "x80" onchange = "copytext()">
-    <label for = "x80">Cipro 500 mg twice a day for 7 days</label><br><br>
+    <label for = "x80">Penicillin 500 mg four times a day for 7 days</label><br><br>
 
     <input type = "checkbox" name = "x90" id = "x90" onchange = "copytext()">
-    <label for = "x90">Flagyl 500 mg three times a day for 7 days</label><br><br>
+    <label for = "x90">Cefdinir 300 mg twice a day for 7 days</label><br><br>
+
+    <input type = "checkbox" name = "x100" id = "x100" onchange = "copytext()">
+    <label for = "x100">Cipro 500 mg twice a day for 7 days</label><br><br>
+
+    <input type = "checkbox" name = "x110" id = "x110" onchange = "copytext()">
+    <label for = "x110">Flagyl 500 mg three times a day for 7 days</label><br><br>
+
+    <input type = "checkbox" name = "x120" id = "x120" onchange = "copytext()">
+    <label for = "x120">Macrobid 100 mg twice a day for 3 days</label><br><br>
+
+    <input type = "checkbox" name = "x130" id = "x130" onchange = "copytext()">
+    <label for = "x130">Bactrim 1 tablet twice a day for 7 days</label><br><br>
+
+    <input type = "checkbox" name = "x140" id = "x140" onchange = "copytext()">
+    <label for = "x140">Prednisone 60 mg daily for 5 days</label><br><br>
 
     <br>
 
@@ -56,6 +71,12 @@
         var x70 = document.getElementById("x70").checked;
         var x80 = document.getElementById("x80").checked;
         var x90 = document.getElementById("x90").checked;
+        var x100 = document.getElementById("x100").checked;
+        var x110 = document.getElementById("x110").checked;
+        var x120 = document.getElementById("x120").checked;
+        var x130 = document.getElementById("x130").checked;
+        var x140 = document.getElementById("x140").checked;
+        var t = "";
         t = t + problem;
         if (x0 == true) {
           t = t + "Zofran 4 mg every 6 hours as needed for nausea\n";
@@ -82,10 +103,25 @@
           t = t + "Amoxicillin 875 mg twice a day\n";
         }
         if (x80 == true) {
-          t = t + "Cipro 500 mg twice a day for 7 days\n";
+          t = t + "Penicillin 500 mg four times a day for 7 days\n";
         }
         if (x90 == true) {
+          t = t + "Cefdinir 300 mg twice a day for 7 days\n";
+        }
+        if (x100 == true) {
+          t = t + "Cipro 500 mg twice a day for 7 days\n";
+        }
+        if (x110 == true) {
           t = t + "Flagyl 500 mg three times a day for 7 days\n";
+        }
+        if (x120 == true) {
+          t = t + "Macrobid 100 mg twice a day for 3 days\n";
+        }
+        if (x130 == true) {
+          t = t + "Bactrim 1 tablet twice a day for 7 days\n";
+        }
+        if (x140 == true) {
+          t = t + "Prednisone 60 mg daily for 5 days\n";
         }
         navigator.clipboard.writeText(t);
         document.getElementById("text").value = t;
