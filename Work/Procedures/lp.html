@@ -6,20 +6,106 @@
         <h3>Lumbar Puncture</h3>
         
         <h4>Indication</h4>
-        <label for = "1">rule out meningitis</label>
-        <input type="radio" 
+<input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+<label for = "0">meningitis</label>
+<input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+<label for = "1">subarachnoid hemorrhage</label>
+
                
-               </body>
-        </html>
+               <h4>Needle Size</h4>
+    <input type = "radio" name = "needle" value = "0" id = "needle" onchange = "copytext()">
+<label for = "0">20 gauge</label>
+<input type = "radio" name = "needle" value = "1" id = "needle" onchange = "copytext()">
+<label for = "1">22 gauge</label>
+<input type = "radio" name = "needle" value = "2" id = "needle" onchange = "copytext()">
+<label for = "2">24 gauge</label>
+    
+        <h4>Interspace</h4>
+    <input type = "radio" name = "interspace" value = "0" id = "interspace" onchange = "copytext()">
+<label for = "0">L3-L4</label>
+<input type = "radio" name = "interspace" value = "1" id = "interspace" onchange = "copytext()">
+<label for = "1">l4-l5</label>
+
+        <h4>Fluid color</h4>
+        <input type = "radio" name = "color" value = "0" id = "color" onchange = "copytext()">
+<label for = "0">clear</label>
+<input type = "radio" name = "color" value = "1" id = "color" onchange = "copytext()">
+<label for = "1">cloudy</label>
+<input type = "radio" name = "color" value = "2" id = "color" onchange = "copytext()">
+<label for = "2">bloody</label>
+
+       
+<script>
+    function copytext(){
+        var needle = getRadioButtonValue("needle");
+        var indication = getRadioButtonValue("indication");
+        var interspace = getRadioButtonValue("interspace");
+        var color = getRadioButtonValue("color");
+
+
+        var t = "Procedure Note:  Lumbar puncture\n";
+        t = t + "The procedure was indicated to rule out ";
+        switch(indication){
+            case "0":
+                t = t + "meningitis";
+                break;
+            case "1":
+                t = t + "subarachnoid hemorrhage";
+            break;
+        }
+        t = t + ". ";
+        t = t + "The risks, benefits and alternatives were explained to the patient who provided written consent for the procedure. ";
+        t = t + "The patient was placed in a right lateral decubitus position. ";
+        t = t + "The procedure was performed under sterile conditions.  A wide area around the puncture site was prepped and draped sterilely using Betadine. ";
+        t = t + "The puncture site was anesthetized with 1% lidocaine. ";
+        t = t + "A ";
+        switch(needle){
+            case "0":
+                t = t + "20 gauge";
+                break;
+            case "1":
+                t = t + "22 gauge";
+                break;
+            case "2":
+                t = t + "24 gauge";
+                break;
+        }
+        t = t + " was inserted into the ";
+    
+        switch(interspace){
+             case "0":
+                t = t + "L3-L4";
+                break;
+              case "1":
+                t = t + "L4-L5";
+                break;
+        }
+        t = t + "interspace and approximately 4 cc of ";  
+        switch(color){
+            case "0":
+                t = t + "clear";
+                break;
+            case "1":
+                t = t + "cloudy";
+                break;
+            case "2":
+                t = t + "bloody";
+                break;
+        }
+        t = t + "fluid was obtained and sent for studies. Opening pressure was " + pressure + "cc water. ";
+        t = t + "The needle was withdrawn, the puncture site was covered with a Band-Aid and the patient was placed prone. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications.";
+        document.getElementById("text").value = t;
+        navigator.clipboard.writeText(t);
+    }
+    </script>
+        
+    </body>
+    
+    
+        
+</html>
     
 
-<!--
-    Procedure note: Lumbar puncture
-    A lumbar puncture was indicated to rule out meningitis.  The risks, benefits and alternatives were explained to the patient who provided written consent for the procedure.
-    The patient was placed in a right lateral decubitus position.  The procedure was performed under sterile conditions.  A wide area around the L3-L4 vertebral interspace
-    was prepped and draped sterilely using Betadine.  The puncture site was anesthetized with 1% lidocaine.  A 22 gauge needle was inserted into the L3-L4 vertebral interspace
-    and 4 cc of clear CSF was obtained and sent for studies.  Opening pressure was 15 cc water.  The needle was withdrawn, the puncture site was covered with a Band-Aid and 
-    the patient was placed prone.  The patient tolerated the procedure well.  There were no complications.
 
--->
 
