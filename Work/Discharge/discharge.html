@@ -225,27 +225,27 @@
     <label for = "rted">Return to the emergency department if your symptoms worsen or new symptoms develop.</label><br>
 
     <h4>Special instructions</h4>
-    <input type = "checkbox" name = "Detox" id = "Detox"  onchange = "populatePre(detox.txt)">
-    <label for = "Detox">Detox</label><br>
+    <input type = "checkbox" name = "detoxspecial" id = "detoxspecial"  onchange = "populatePre('Detox')">
+    <label for = "detoxspecial">detoxspecial</label><br>
 
-    <input type = "checkbox" name = "Robertson" id = "Robertson"  onchange = "populatePre(robertson.txt)">
-    <label for = "Robertson">Robertson</label><br>
+    <input type = "checkbox" name = "robertsonspecial" id = "robertsonspecial"  onchange = "populatePre('Robertson')">
+    <label for = "robertsonspecial">robertsonspecial</label><br>
 
-    <input type = "checkbox" name = "Seizure" id = "Seizure"  onchange = "populatePre('seizure.txt')">
-    <label for = "Seizure">Seizure</label><br>
+    <input type = "checkbox" name = "seizurespecial" id = "seizurespecial"  onchange = "populatePre('Seizure')">
+    <label for = "seizurespecial">seizurespecial</label><br>
 
-    <input type = "checkbox" name = "STD" id = "STD"  onchange = "populatePre(std.txt)">
-    <label for = "STD">STD</label><br>
+    <input type = "checkbox" name = "stdspecial" id = "stdspecial"  onchange = "populatePre('STD')">
+    <label for = "stdspecial">stdspecial</label><br>
 
     <h4>Warnings</h4>
-    <input type = "checkbox" name = "Doxycycline" id = "Doxycycline"  onchange = "populatePre('doxycycline.txt')">
-    <label for = "Doxycycline">Doxycycline</label><br>
+    <input type = "checkbox" name = "anticoagulantwarning" id = "anticoagulantwarning"  onchange = "populatePre('anticoagulant.txt')">
+    <label for = "anticoagulantwarning">anticoagulant</label><br>
 
-    <input type = "checkbox" name = "Prednisone" id = "Prednisone"  onchange = "populatePre(prednisone.txt)">
-    <label for = "Prednisone">Prednisone</label><br>
+    <input type = "checkbox" name = "doxycyclinewarning" id = "doxycyclinewarning"  onchange = "populatePre('doxycycline.txt')">
+    <label for = "doxycyclinewarning">Doxycycline</label><br>
 
-    <input type = "checkbox" name = "anticoagulant" id = "anticoagulant"  onchange = "populatePre(anticoagulant.txt)">
-    <label for = "anticoagulant">anticoagulant</label><br>
+    <input type = "checkbox" name = "prednisonewarning" id = "prednisonewarning"  onchange = "populatePre('prednisone.txt')">
+    <label for = "prednisonewarning">Prednisone</label><br>
 
     <br>
 
@@ -315,13 +315,13 @@
         var pcp = document.getElementById("pcp").checked;
         var listpcp = document.getElementById("listpcp").checked;
         var rted = document.getElementById("rted").checked;
-        var Detox = document.getElementById("Detox").checked;
-        var Robertson = document.getElementById("Robertson").checked;
-        var Seizure = document.getElementById("Seizure").checked;
-        var STD = document.getElementById("STD").checked;
-        var Doxycycline = document.getElementById("Doxycycline").checked;
-        var Prednisone = document.getElementById("Prednisone").checked;
-        var anticoagulant = document.getElementById("anticoagulant").checked;
+        var detoxspecial = document.getElementById("detoxspecial").checked;
+        var robertsonspecial = document.getElementById("robertsonspecial").checked;
+        var seizurespecial = document.getElementById("seizurespecial").checked;
+        var stdspecial = document.getElementById("stdspecial").checked;
+        var anticoagulantwarning = document.getElementById("anticoagulantwarning").checked;
+        var doxycyclinewarning = document.getElementById("doxycyclinewarning").checked;
+        var prednisonewarning = document.getElementById("prednisonewarning").checked;
         var t = "";
         if (rest == true && inpt[j].hidden == false) {
           t = t + "Rest\n";
@@ -503,26 +503,26 @@
         if (rted == true && inpt[j].hidden == false) {
           t = t + "Return to the emergency department if your symptoms worsen or new symptoms develop.\n";
         }
-        if (Detox == true && inpt[j].hidden == false) {
-          t = t + "Detox\n";
+        if (detoxspecial == true && inpt[j].hidden == false) {
+          t = t + "detoxspecial\n";
         }
-        if (Robertson == true && inpt[j].hidden == false) {
-          t = t + "Robertson\n";
+        if (robertsonspecial == true && inpt[j].hidden == false) {
+          t = t + "robertsonspecial\n";
         }
-        if (Seizure == true && inpt[j].hidden == false) {
-          t = t + "Seizure\n";
+        if (seizurespecial == true && inpt[j].hidden == false) {
+          t = t + "seizurespecial\n";
         }
-        if (STD == true && inpt[j].hidden == false) {
-          t = t + "STD\n";
+        if (stdspecial == true && inpt[j].hidden == false) {
+          t = t + "stdspecial\n";
         }
-        if (Doxycycline == true && inpt[j].hidden == false) {
+        if (anticoagulantwarning == true && inpt[j].hidden == false) {
+          t = t + "anticoagulant\n";
+        }
+        if (doxycyclinewarning == true && inpt[j].hidden == false) {
           t = t + "Doxycycline\n";
         }
-        if (Prednisone == true && inpt[j].hidden == false) {
+        if (prednisonewarning == true && inpt[j].hidden == false) {
           t = t + "Prednisone\n";
-        }
-        if (anticoagulant == true && inpt[j].hidden == false) {
-          t = t + "anticoagulant\n";
         }
         if (referral == true){
           t = t + "\nA referral to " + referral_type + " has been submitted.  You should expect a call in a few days.\n";
@@ -550,7 +550,7 @@
       function populatePre(url) {
         var xhr = new XMLHttpRequest();
         xhr.onload = function () {
-          document.getElementById("contents").textContent = document.getElementById("contents").textContent +"\n"+ this.responseText;
+          document.getElementById("contents").textContent = document.getElementById("contents").textContent + this.responseText;
         }
         xhr.open("GET", url);
         xhr.send();
