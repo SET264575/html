@@ -4,6 +4,15 @@
   </head>
   <body>
     <h3>Discharge instructions</h3>
+    <input type = "checkbox" name = "rice" id = "rice"  onchange = "copytext()">
+    <label for = "rice">Rest</label><br>
+
+    <input type = "checkbox" name = "ice" id = "ice"  onchange = "copytext()">
+    <label for = "ice">Ice the injured area for 20 minutes at a time</label><br>
+
+    <input type = "checkbox" name = "elevate" id = "elevate"  onchange = "copytext()">
+    <label for = "elevate">Elevate the injured area to minimize swelling</label><br>
+
     <label for="problem">Choose instructions</label>
     <select id = "problem" onchange = "copytext()">
       <option></option>
@@ -24,37 +33,53 @@
     <label for = "x30">Tramadol 1 tablet every 6 hours as needed for pain</label><br>
 
     <input type = "checkbox" name = "x40" id = "x40"  onchange = "copytext()">
-    <label for = "x40">Flomax 0.4 mg daily</label><br>
+    <label for = "x40">Tylenol as needed for pain</label><br>
 
     <input type = "checkbox" name = "x50" id = "x50"  onchange = "copytext()">
-    <label for = "x50">Cardizem CD 120 mg daily</label><br>
+    <label for = "x50">Ibuprofen 400 mg every 6 hours as needed for pain</label><br>
 
     <input type = "checkbox" name = "x60" id = "x60"  onchange = "copytext()">
-    <label for = "x60">Lasix 20 mg daily</label><br>
+    <label for = "x60">Flomax 0.4 mg daily</label><br>
 
     <input type = "checkbox" name = "x70" id = "x70"  onchange = "copytext()">
-    <label for = "x70">Amoxicillin 875 mg twice a day</label><br>
+    <label for = "x70">Cardizem CD 120 mg daily</label><br>
 
     <input type = "checkbox" name = "x80" id = "x80"  onchange = "copytext()">
-    <label for = "x80">Penicillin 500 mg four times a day for 7 days</label><br>
+    <label for = "x80">Lasix 20 mg daily</label><br>
 
     <input type = "checkbox" name = "x90" id = "x90"  onchange = "copytext()">
-    <label for = "x90">Cefdinir 300 mg twice a day for 7 days</label><br>
+    <label for = "x90">Amoxicillin 875 mg twice a day</label><br>
 
     <input type = "checkbox" name = "x100" id = "x100"  onchange = "copytext()">
-    <label for = "x100">Cipro 500 mg twice a day for 7 days</label><br>
+    <label for = "x100">Penicillin 500 mg four times a day for 7 days</label><br>
 
     <input type = "checkbox" name = "x110" id = "x110"  onchange = "copytext()">
-    <label for = "x110">Flagyl 500 mg three times a day for 7 days</label><br>
+    <label for = "x110">Cefdinir 300 mg twice a day for 7 days</label><br>
 
     <input type = "checkbox" name = "x120" id = "x120"  onchange = "copytext()">
-    <label for = "x120">Macrobid 100 mg twice a day for 3 days</label><br>
+    <label for = "x120">Cipro 500 mg twice a day for 7 days</label><br>
 
     <input type = "checkbox" name = "x130" id = "x130"  onchange = "copytext()">
-    <label for = "x130">Bactrim 1 tablet twice a day for 7 days</label><br>
+    <label for = "x130">Flagyl 500 mg three times a day for 7 days</label><br>
 
     <input type = "checkbox" name = "x140" id = "x140"  onchange = "copytext()">
-    <label for = "x140">Prednisone 60 mg daily for 5 days</label><br>
+    <label for = "x140">Macrobid 100 mg twice a day for 3 days</label><br>
+
+    <input type = "checkbox" name = "x150" id = "x150"  onchange = "copytext()">
+    <label for = "x150">Bactrim 1 tablet twice a day for 7 days</label><br>
+
+    <input type = "checkbox" name = "x160" id = "x160"  onchange = "copytext()">
+    <label for = "x160">Prednisone 60 mg daily for 5 days</label><br>
+
+    <h4>Other Medication Instructions</h4>
+    <input type = "checkbox" name = "Continue" id = "Continue"  onchange = "copytext()">
+    <label for = "Continue">Continue your current medications</label><br>
+
+    <input type = "checkbox" name = "Double" id = "Double"  onchange = "copytext()">
+    <label for = "Double">Double your Lasix for 3 days</label><br>
+
+    <input type = "checkbox" name = "increase" id = "increase"  onchange = "copytext()">
+    <label for = "increase">Increase your *** </label><br>
 
     <h4>Outpatient Tests</h4>
     <input type = "checkbox" name = "test" id = "test"  onchange = "copytext()">
@@ -100,6 +125,9 @@
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
     <script>
       function copytext(){
+        var rice = document.getElementById("rice").checked;
+        var ice = document.getElementById("ice").checked;
+        var elevate = document.getElementById("elevate").checked;
         var problem = document.getElementById("problem").value;
         var x0 = document.getElementById("x0").checked;
         var x10 = document.getElementById("x10").checked;
@@ -116,6 +144,11 @@
         var x120 = document.getElementById("x120").checked;
         var x130 = document.getElementById("x130").checked;
         var x140 = document.getElementById("x140").checked;
+        var x150 = document.getElementById("x150").checked;
+        var x160 = document.getElementById("x160").checked;
+        var Continue = document.getElementById("Continue").checked;
+        var Double = document.getElementById("Double").checked;
+        var increase = document.getElementById("increase").checked;
         var test = document.getElementById("test").checked;
         var test_type = document.getElementById("test_type").value;
         var stool = document.getElementById("stool").checked;
@@ -125,70 +158,94 @@
         var listpcp = document.getElementById("listpcp").checked;
         var rted = document.getElementById("rted").checked;
         var t = "";
+        if (rice == true and inpt[j].hidden == false) {
+          t = t + "Rest\n";
+        }
+        if (ice == true and inpt[j].hidden == false) {
+          t = t + "Ice the injured area for 20 minutes at a time\n";
+        }
+        if (elevate == true and inpt[j].hidden == false) {
+          t = t + "Elevate the injured area to minimize swelling\n";
+        }
         t = t + problem;
-        if (x0 == true) {
+        if (x0 == true and inpt[j].hidden == false) {
           t = t + "Zofran 4 mg every 6 hours as needed for nausea\n";
         }
-        if (x10 == true) {
+        if (x10 == true and inpt[j].hidden == false) {
           t = t + "Percocet 1 tablet every 6 hours as needed for pain\n";
         }
-        if (x20 == true) {
+        if (x20 == true and inpt[j].hidden == false) {
           t = t + "Norco 1 tablet every 6 hours as needed for pain\n";
         }
-        if (x30 == true) {
+        if (x30 == true and inpt[j].hidden == false) {
           t = t + "Tramadol 1 tablet every 6 hours as needed for pain\n";
         }
-        if (x40 == true) {
+        if (x40 == true and inpt[j].hidden == false) {
+          t = t + "Tylenol as needed for pain\n";
+        }
+        if (x50 == true and inpt[j].hidden == false) {
+          t = t + "Ibuprofen 400 mg every 6 hours as needed for pain\n";
+        }
+        if (x60 == true and inpt[j].hidden == false) {
           t = t + "Flomax 0.4 mg daily\n";
         }
-        if (x50 == true) {
+        if (x70 == true and inpt[j].hidden == false) {
           t = t + "Cardizem CD 120 mg daily\n";
         }
-        if (x60 == true) {
+        if (x80 == true and inpt[j].hidden == false) {
           t = t + "Lasix 20 mg daily\n";
         }
-        if (x70 == true) {
+        if (x90 == true and inpt[j].hidden == false) {
           t = t + "Amoxicillin 875 mg twice a day\n";
         }
-        if (x80 == true) {
+        if (x100 == true and inpt[j].hidden == false) {
           t = t + "Penicillin 500 mg four times a day for 7 days\n";
         }
-        if (x90 == true) {
+        if (x110 == true and inpt[j].hidden == false) {
           t = t + "Cefdinir 300 mg twice a day for 7 days\n";
         }
-        if (x100 == true) {
+        if (x120 == true and inpt[j].hidden == false) {
           t = t + "Cipro 500 mg twice a day for 7 days\n";
         }
-        if (x110 == true) {
+        if (x130 == true and inpt[j].hidden == false) {
           t = t + "Flagyl 500 mg three times a day for 7 days\n";
         }
-        if (x120 == true) {
+        if (x140 == true and inpt[j].hidden == false) {
           t = t + "Macrobid 100 mg twice a day for 3 days\n";
         }
-        if (x130 == true) {
+        if (x150 == true and inpt[j].hidden == false) {
           t = t + "Bactrim 1 tablet twice a day for 7 days\n";
         }
-        if (x140 == true) {
+        if (x160 == true and inpt[j].hidden == false) {
           t = t + "Prednisone 60 mg daily for 5 days\n";
         }
-        if (test == true) {
+        if (Continue == true and inpt[j].hidden == false) {
+          t = t + "Continue your current medications\n";
+        }
+        if (Double == true and inpt[j].hidden == false) {
+          t = t + "Double your Lasix for 3 days\n";
+        }
+        if (increase == true and inpt[j].hidden == false) {
+          t = t + "Increase your *** \n";
+        }
+        if (test == true and inpt[j].hidden == false) {
           t = t + "An outpatient test was ordered.\n";
         }
         t = t + test_type;
-        if (stool == true) {
+        if (stool == true and inpt[j].hidden == false) {
           t = t + "Outpatient stool studies for C. dif and GI pathogen panel.\n";
         }
-        if (referral == true) {
+        if (referral == true and inpt[j].hidden == false) {
           t = t + "A referral was made\n";
         }
         t = t + referral_type;
-        if (pcp == true) {
+        if (pcp == true and inpt[j].hidden == false) {
           t = t + "Follow up with your primary care provider.\n";
         }
-        if (listpcp == true) {
+        if (listpcp == true and inpt[j].hidden == false) {
           t = t + "A list of providers has been included in this paperwork.\n";
         }
-        if (rted == true) {
+        if (rted == true and inpt[j].hidden == false) {
           t = t + "Return to the emergency department if your symptoms worsen or new symptoms develop.\n";
         }
         if (referral == true){
