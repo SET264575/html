@@ -160,7 +160,7 @@
     <label for = "increase">Increase your *** </label><br>
 
     <h4>Outpatient Tests</h4>
-    <input type = "checkbox" name = "test" id = "test"  onchange = "copytext()">
+    <input type = "checkbox" name = "test" id = "test"  onchange = "populatePre(True)">
     <label for = "test">An outpatient test was ordered.</label><br>
 
     <label for="test_type">Choose a test</label>
@@ -178,7 +178,7 @@
     <label for = "stool">Outpatient stool studies for C. dif and GI pathogen panel.</label><br>
 
     <h4>Follow up</h4>
-    <input type = "checkbox" name = "referral" id = "referral"  onchange = "copytext()">
+    <input type = "checkbox" name = "referral" id = "referral"  onchange = "populatePre(True)">
     <label for = "referral">A referral was made</label><br>
 
     <label for="referral_type">Choose a specialty</label>
@@ -209,6 +209,9 @@
     <input type = "checkbox" name = "fhc" id = "fhc"  onchange = "copytext()">
     <label for = "fhc">Follow up at Compass Health</label><br>
 
+    <input type = "checkbox" name = "vasclab" id = "vasclab"  onchange = "copytext()">
+    <label for = "vasclab">Return to the Vascular Ultrasound lab between 9 am and 11 am tomorrow for an ultrasound to rule out a DVT.</label><br>
+
     <input type = "checkbox" name = "pt" id = "pt"  onchange = "copytext()">
     <label for = "pt">Outpatient physical therapy</label><br>
 
@@ -221,9 +224,33 @@
     <input type = "checkbox" name = "rted" id = "rted" checked = "True" onchange = "copytext()">
     <label for = "rted">Return to the emergency department if your symptoms worsen or new symptoms develop.</label><br>
 
+    <h4>Special instructions</h4>
+    <input type = "checkbox" name = "Detox" id = "Detox"  onchange = "populatePre(detox.txt)">
+    <label for = "Detox">Detox</label><br>
+
+    <input type = "checkbox" name = "Robertson" id = "Robertson"  onchange = "populatePre(robertson.txt)">
+    <label for = "Robertson">Robertson</label><br>
+
+    <input type = "checkbox" name = "Seizure" id = "Seizure"  onchange = "populatePre(seizure.txt)">
+    <label for = "Seizure">Seizure</label><br>
+
+    <input type = "checkbox" name = "STD" id = "STD"  onchange = "populatePre(std.txt)">
+    <label for = "STD">STD</label><br>
+
+    <h4>Warnings</h4>
+    <input type = "checkbox" name = "Doxycycline" id = "Doxycycline"  onchange = "populatePre(doxycycline.txt)">
+    <label for = "Doxycycline">Doxycycline</label><br>
+
+    <input type = "checkbox" name = "Prednisone" id = "Prednisone"  onchange = "populatePre(prednisone.txt)">
+    <label for = "Prednisone">Prednisone</label><br>
+
+    <input type = "checkbox" name = "anticoagulant" id = "anticoagulant"  onchange = "populatePre(anticoagulant.txt)">
+    <label for = "anticoagulant">anticoagulant</label><br>
+
     <br>
 
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    <pre id = "contents"></pre>
     <script>
       function copytext(){
         var rest = document.getElementById("rest").checked;
@@ -283,10 +310,18 @@
         var wound = document.getElementById("wound").checked;
         var burrell = document.getElementById("burrell").checked;
         var fhc = document.getElementById("fhc").checked;
+        var vasclab = document.getElementById("vasclab").checked;
         var pt = document.getElementById("pt").checked;
         var pcp = document.getElementById("pcp").checked;
         var listpcp = document.getElementById("listpcp").checked;
         var rted = document.getElementById("rted").checked;
+        var Detox = document.getElementById("Detox").checked;
+        var Robertson = document.getElementById("Robertson").checked;
+        var Seizure = document.getElementById("Seizure").checked;
+        var STD = document.getElementById("STD").checked;
+        var Doxycycline = document.getElementById("Doxycycline").checked;
+        var Prednisone = document.getElementById("Prednisone").checked;
+        var anticoagulant = document.getElementById("anticoagulant").checked;
         var t = "";
         if (rest == true && inpt[j].hidden == false) {
           t = t + "Rest\n";
@@ -453,6 +488,9 @@
         if (fhc == true && inpt[j].hidden == false) {
           t = t + "Follow up at Compass Health\n";
         }
+        if (vasclab == true && inpt[j].hidden == false) {
+          t = t + "Return to the Vascular Ultrasound lab between 9 am and 11 am tomorrow for an ultrasound to rule out a DVT.\n";
+        }
         if (pt == true && inpt[j].hidden == false) {
           t = t + "Outpatient physical therapy\n";
         }
@@ -464,6 +502,27 @@
         }
         if (rted == true && inpt[j].hidden == false) {
           t = t + "Return to the emergency department if your symptoms worsen or new symptoms develop.\n";
+        }
+        if (Detox == true && inpt[j].hidden == false) {
+          t = t + "Detox\n";
+        }
+        if (Robertson == true && inpt[j].hidden == false) {
+          t = t + "Robertson\n";
+        }
+        if (Seizure == true && inpt[j].hidden == false) {
+          t = t + "Seizure\n";
+        }
+        if (STD == true && inpt[j].hidden == false) {
+          t = t + "STD\n";
+        }
+        if (Doxycycline == true && inpt[j].hidden == false) {
+          t = t + "Doxycycline\n";
+        }
+        if (Prednisone == true && inpt[j].hidden == false) {
+          t = t + "Prednisone\n";
+        }
+        if (anticoagulant == true && inpt[j].hidden == false) {
+          t = t + "anticoagulant\n";
         }
         if (referral == true){
           t = t + "\nA referral to " + referral_type + " has been submitted.  You should expect a call in a few days.\n";
@@ -484,9 +543,17 @@
         return(-1);
       }
       function checkInstructions(x){
-        for (let i = 0; i < x.length();i++){
+        for (let i = 0; i < x.length;i++){
           document.getElementById(x[i]).setAttribute("checked","true");
         }
+      }
+      function populatePre(url) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+          document.getElementById("contents").textContent =+ this.responseText;
+        }
+        xhr.open("GET", url);
+        xhr.send();
       }
     </script>
   </body>
