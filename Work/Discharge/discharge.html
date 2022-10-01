@@ -4,8 +4,8 @@
   </head>
   <body>
     <h3>Discharge instructions</h3>
-    <input type = "checkbox" name = "rice" id = "rice"  onchange = "copytext()">
-    <label for = "rice">Rest</label><br>
+    <input type = "checkbox" name = "rest" id = "rest"  onchange = "copytext()">
+    <label for = "rest">Rest</label><br>
 
     <input type = "checkbox" name = "ice" id = "ice"  onchange = "copytext()">
     <label for = "ice">Ice the injured area for 20 minutes at a time</label><br>
@@ -13,63 +13,141 @@
     <input type = "checkbox" name = "elevate" id = "elevate"  onchange = "copytext()">
     <label for = "elevate">Elevate the injured area to minimize swelling</label><br>
 
-    <label for="problem">Choose instructions</label>
-    <select id = "problem" onchange = "copytext()">
+    <input type = "checkbox" name = "stopsmoking" id = "stopsmoking"  onchange = "copytext()">
+    <label for = "stopsmoking">Stop smoking</label><br>
+
+    <input type = "checkbox" name = "decreasealcohol" id = "decreasealcohol"  onchange = "copytext()">
+    <label for = "decreasealcohol">Decrease your alcohol use to no more than 2 drinks per day.</label><br>
+
+    <input type = "checkbox" name = "gethelp" id = "gethelp"  onchange = "copytext()">
+    <label for = "gethelp">Contact one of the resources below for help with stopping your alcohol use.</label><br>
+
+    <input type = "checkbox" name = "packing" id = "packing"  onchange = "copytext()">
+    <label for = "packing">Remove packing in 24-36 hours.</label><br>
+
+    <h4>Diet</h4>
+    <input type = "checkbox" name = "lowsalt" id = "lowsalt"  onchange = "copytext()">
+    <label for = "lowsalt">Low salt diet</label><br>
+
+    <input type = "checkbox" name = "lowfat" id = "lowfat"  onchange = "copytext()">
+    <label for = "lowfat">Low fat diet</label><br>
+
+    <input type = "checkbox" name = "ada" id = "ada"  onchange = "copytext()">
+    <label for = "ada">American Diabetic Association diet</label><br>
+
+    <input type = "checkbox" name = "clearliquid" id = "clearliquid"  onchange = "copytext()">
+    <label for = "clearliquid">Clear liquid diet for 24-48 hours</label><br>
+
+    <label for="instructions">Choose instructions</label>
+    <select id = "instructions" onchange = "checkInstructions()">
       <option></option>
-      <option>kidney stones</option>
+      <option>['abscess', ['Bactrim', 'Ibuprofen', 'packing']]</option>
+      <option>['acute bronchitis', ['Albuterol', 'Prednisone', 'stopsmoking']]</option>
+      <option>['alcohol', ['decreasealcohol', 'gethelp', 'Librium']]</option>
+      <option>['back pain', ['Ibuprofen', 'Flexeril', 'pt']]</option>
+      <option>['Bell palsy', ['Prednisone2', 'Lacrilube', 'Tears']]</option>
+      <option>['CHF', ['Lasix', 'lowsalt', 'cardiology']]</option>
+      <option>['contusion', ['rest', 'ice', 'elevate', 'Ibuprofen']]</option>
+      <option>['COPD exacerbation', ['Prednisone']]</option>
+      <option>['diverticulitis', ['Cipro', 'Flagyl', 'clearliquid']]</option>
+      <option>['DVT', ['Xarelto']]</option>
+      <option>['fracture', ['Percocet', 'robertson']]</option>
+      <option>['gall bladder', ['Percocet', 'lowfat', 'gallbladderUS']]</option>
+      <option>['kidney stones', ['Percocet', 'Toradol', 'Zofran', 'Flomax', 'urology']]</option>
+      <option>['seizure', ['Keppra', 'neurology']]</option>
+      <option>['STD', ['Doxycycline']]</option>
     </select><br>
 
     <h4>Medications</h4>
-    <input type = "checkbox" name = "x0" id = "x0"  onchange = "copytext()">
-    <label for = "x0">Zofran 4 mg every 6 hours as needed for nausea</label><br>
+    <input type = "checkbox" name = "Zofran" id = "Zofran"  onchange = "copytext()">
+    <label for = "Zofran">Zofran 4 mg every 6 hours as needed for nausea</label><br>
 
-    <input type = "checkbox" name = "x10" id = "x10"  onchange = "copytext()">
-    <label for = "x10">Percocet 1 tablet every 6 hours as needed for pain</label><br>
+    <input type = "checkbox" name = "Percocet" id = "Percocet"  onchange = "copytext()">
+    <label for = "Percocet">Percocet 1 tablet every 6 hours as needed for pain</label><br>
 
-    <input type = "checkbox" name = "x20" id = "x20"  onchange = "copytext()">
-    <label for = "x20">Norco 1 tablet every 6 hours as needed for pain</label><br>
+    <input type = "checkbox" name = "Norco" id = "Norco"  onchange = "copytext()">
+    <label for = "Norco">Norco 1 tablet every 6 hours as needed for pain</label><br>
 
-    <input type = "checkbox" name = "x30" id = "x30"  onchange = "copytext()">
-    <label for = "x30">Tramadol 1 tablet every 6 hours as needed for pain</label><br>
+    <input type = "checkbox" name = "Tramadol" id = "Tramadol"  onchange = "copytext()">
+    <label for = "Tramadol">Tramadol 1 tablet every 6 hours as needed for pain</label><br>
 
-    <input type = "checkbox" name = "x40" id = "x40"  onchange = "copytext()">
-    <label for = "x40">Tylenol as needed for pain</label><br>
+    <input type = "checkbox" name = "Tylenol1" id = "Tylenol1"  onchange = "copytext()">
+    <label for = "Tylenol1">Tylenol as needed for pain</label><br>
 
-    <input type = "checkbox" name = "x50" id = "x50"  onchange = "copytext()">
-    <label for = "x50">Ibuprofen 400 mg every 6 hours as needed for pain</label><br>
+    <input type = "checkbox" name = "Ibuprofen1" id = "Ibuprofen1"  onchange = "copytext()">
+    <label for = "Ibuprofen1">Ibuprofen 400 mg every 6 hours as needed for pain</label><br>
 
-    <input type = "checkbox" name = "x60" id = "x60"  onchange = "copytext()">
-    <label for = "x60">Flomax 0.4 mg daily</label><br>
+    <input type = "checkbox" name = "Flexeril" id = "Flexeril"  onchange = "copytext()">
+    <label for = "Flexeril">Flexeril 10 mg three times a day as needed</label><br>
 
-    <input type = "checkbox" name = "x70" id = "x70"  onchange = "copytext()">
-    <label for = "x70">Cardizem CD 120 mg daily</label><br>
+    <input type = "checkbox" name = "Flomax" id = "Flomax"  onchange = "copytext()">
+    <label for = "Flomax">Flomax 0.4 mg daily</label><br>
 
-    <input type = "checkbox" name = "x80" id = "x80"  onchange = "copytext()">
-    <label for = "x80">Lasix 20 mg daily</label><br>
+    <input type = "checkbox" name = "Pyridium" id = "Pyridium"  onchange = "copytext()">
+    <label for = "Pyridium">Pyridium 100 mg three times a day as needed.</label><br>
 
-    <input type = "checkbox" name = "x90" id = "x90"  onchange = "copytext()">
-    <label for = "x90">Amoxicillin 875 mg twice a day</label><br>
+    <input type = "checkbox" name = "Cardizem" id = "Cardizem"  onchange = "copytext()">
+    <label for = "Cardizem">Cardizem CD 120 mg daily</label><br>
 
-    <input type = "checkbox" name = "x100" id = "x100"  onchange = "copytext()">
-    <label for = "x100">Penicillin 500 mg four times a day for 7 days</label><br>
+    <input type = "checkbox" name = "Lasix" id = "Lasix"  onchange = "copytext()">
+    <label for = "Lasix">Lasix 20 mg daily</label><br>
 
-    <input type = "checkbox" name = "x110" id = "x110"  onchange = "copytext()">
-    <label for = "x110">Cefdinir 300 mg twice a day for 7 days</label><br>
+    <input type = "checkbox" name = "Amoxicillin" id = "Amoxicillin"  onchange = "copytext()">
+    <label for = "Amoxicillin">Amoxicillin 875 mg twice a day</label><br>
 
-    <input type = "checkbox" name = "x120" id = "x120"  onchange = "copytext()">
-    <label for = "x120">Cipro 500 mg twice a day for 7 days</label><br>
+    <input type = "checkbox" name = "Penicillin" id = "Penicillin"  onchange = "copytext()">
+    <label for = "Penicillin">Penicillin 500 mg four times a day for 7 days</label><br>
 
-    <input type = "checkbox" name = "x130" id = "x130"  onchange = "copytext()">
-    <label for = "x130">Flagyl 500 mg three times a day for 7 days</label><br>
+    <input type = "checkbox" name = "Cefdinir" id = "Cefdinir"  onchange = "copytext()">
+    <label for = "Cefdinir">Cefdinir 300 mg twice a day for 7 days</label><br>
 
-    <input type = "checkbox" name = "x140" id = "x140"  onchange = "copytext()">
-    <label for = "x140">Macrobid 100 mg twice a day for 3 days</label><br>
+    <input type = "checkbox" name = "Cipro" id = "Cipro"  onchange = "copytext()">
+    <label for = "Cipro">Cipro 500 mg twice a day for 7 days</label><br>
 
-    <input type = "checkbox" name = "x150" id = "x150"  onchange = "copytext()">
-    <label for = "x150">Bactrim 1 tablet twice a day for 7 days</label><br>
+    <input type = "checkbox" name = "Clindamycin" id = "Clindamycin"  onchange = "copytext()">
+    <label for = "Clindamycin">Clindamycin 300 mg four times a day for 7 days</label><br>
 
-    <input type = "checkbox" name = "x160" id = "x160"  onchange = "copytext()">
-    <label for = "x160">Prednisone 60 mg daily for 5 days</label><br>
+    <input type = "checkbox" name = "Doxycycline" id = "Doxycycline"  onchange = "copytext()">
+    <label for = "Doxycycline">Doxycycline 100 mg twice a day for 7 days</label><br>
+
+    <input type = "checkbox" name = "Flagyl" id = "Flagyl"  onchange = "copytext()">
+    <label for = "Flagyl">Flagyl 500 mg three times a day for 7 days</label><br>
+
+    <input type = "checkbox" name = "Macrobid" id = "Macrobid"  onchange = "copytext()">
+    <label for = "Macrobid">Macrobid 100 mg twice a day for 3 days</label><br>
+
+    <input type = "checkbox" name = "Bactrim" id = "Bactrim"  onchange = "copytext()">
+    <label for = "Bactrim">Bactrim 1 tablet twice a day for 7 days</label><br>
+
+    <input type = "checkbox" name = "Zpack" id = "Zpack"  onchange = "copytext()">
+    <label for = "Zpack">Z pack</label><br>
+
+    <input type = "checkbox" name = "Albuterol" id = "Albuterol"  onchange = "copytext()">
+    <label for = "Albuterol">Albuterol 2 puffs every 4 hours as needed</label><br>
+
+    <input type = "checkbox" name = "Prednisone" id = "Prednisone"  onchange = "copytext()">
+    <label for = "Prednisone">Prednisone 60 mg daily for 5 days</label><br>
+
+    <input type = "checkbox" name = "Prednisone2" id = "Prednisone2"  onchange = "copytext()">
+    <label for = "Prednisone2">Prednisone 60 mg daily for 3 days, then decrease by 10 mg daily until off</label><br>
+
+    <input type = "checkbox" name = "Lacrilube" id = "Lacrilube"  onchange = "copytext()">
+    <label for = "Lacrilube">Lacrilube to lower inner eyelid each night and tape eye shut.</label><br>
+
+    <input type = "checkbox" name = "Tears" id = "Tears"  onchange = "copytext()">
+    <label for = "Tears">Artificial tears hourly during the day.</label><br>
+
+    <input type = "checkbox" name = "Keppra" id = "Keppra"  onchange = "copytext()">
+    <label for = "Keppra">Keppra 500 mg twice a day</label><br>
+
+    <input type = "checkbox" name = "Librium" id = "Librium"  onchange = "copytext()">
+    <label for = "Librium">Librium</label><br>
+
+    <input type = "checkbox" name = "Eliquis" id = "Eliquis"  onchange = "copytext()">
+    <label for = "Eliquis">Eliquis 5 mg twice a day</label><br>
+
+    <input type = "checkbox" name = "Xarelto" id = "Xarelto"  onchange = "copytext()">
+    <label for = "Xarelto">Xarelto ***</label><br>
 
     <h4>Other Medication Instructions</h4>
     <input type = "checkbox" name = "Continue" id = "Continue"  onchange = "copytext()">
@@ -99,7 +177,7 @@
     <input type = "checkbox" name = "stool" id = "stool"  onchange = "copytext()">
     <label for = "stool">Outpatient stool studies for C. dif and GI pathogen panel.</label><br>
 
-    <h4>Referrals</h4>
+    <h4>Follow up</h4>
     <input type = "checkbox" name = "referral" id = "referral"  onchange = "copytext()">
     <label for = "referral">A referral was made</label><br>
 
@@ -110,7 +188,30 @@
       <option>the Columbia Orthopedic Group</option>
     </select><br>
 
-    <h4>Follow up</h4>
+    <input type = "checkbox" name = "cardiology" id = "cardiology"  onchange = "copytext()">
+    <label for = "cardiology">Follow up with cardiology</label><br>
+
+    <input type = "checkbox" name = "neurology" id = "neurology"  onchange = "copytext()">
+    <label for = "neurology">Follow up with neurology</label><br>
+
+    <input type = "checkbox" name = "urology" id = "urology"  onchange = "copytext()">
+    <label for = "urology">Follow up with urology</label><br>
+
+    <input type = "checkbox" name = "robertson" id = "robertson"  onchange = "copytext()">
+    <label for = "robertson">Follow up with Dr. Robertson</label><br>
+
+    <input type = "checkbox" name = "wound" id = "wound"  onchange = "copytext()">
+    <label for = "wound">Follow up at the Wound Clinic</label><br>
+
+    <input type = "checkbox" name = "burrell" id = "burrell"  onchange = "copytext()">
+    <label for = "burrell">Follow up at Burrell Behavioral Health</label><br>
+
+    <input type = "checkbox" name = "fhc" id = "fhc"  onchange = "copytext()">
+    <label for = "fhc">Follow up at Compass Health</label><br>
+
+    <input type = "checkbox" name = "pt" id = "pt"  onchange = "copytext()">
+    <label for = "pt">Outpatient physical therapy</label><br>
+
     <input type = "checkbox" name = "pcp" id = "pcp" checked = "True" onchange = "copytext()">
     <label for = "pcp">Follow up with your primary care provider.</label><br>
 
@@ -125,27 +226,48 @@
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
     <script>
       function copytext(){
-        var rice = document.getElementById("rice").checked;
+        var rest = document.getElementById("rest").checked;
         var ice = document.getElementById("ice").checked;
         var elevate = document.getElementById("elevate").checked;
-        var problem = document.getElementById("problem").value;
-        var x0 = document.getElementById("x0").checked;
-        var x10 = document.getElementById("x10").checked;
-        var x20 = document.getElementById("x20").checked;
-        var x30 = document.getElementById("x30").checked;
-        var x40 = document.getElementById("x40").checked;
-        var x50 = document.getElementById("x50").checked;
-        var x60 = document.getElementById("x60").checked;
-        var x70 = document.getElementById("x70").checked;
-        var x80 = document.getElementById("x80").checked;
-        var x90 = document.getElementById("x90").checked;
-        var x100 = document.getElementById("x100").checked;
-        var x110 = document.getElementById("x110").checked;
-        var x120 = document.getElementById("x120").checked;
-        var x130 = document.getElementById("x130").checked;
-        var x140 = document.getElementById("x140").checked;
-        var x150 = document.getElementById("x150").checked;
-        var x160 = document.getElementById("x160").checked;
+        var stopsmoking = document.getElementById("stopsmoking").checked;
+        var decreasealcohol = document.getElementById("decreasealcohol").checked;
+        var gethelp = document.getElementById("gethelp").checked;
+        var packing = document.getElementById("packing").checked;
+        var lowsalt = document.getElementById("lowsalt").checked;
+        var lowfat = document.getElementById("lowfat").checked;
+        var ada = document.getElementById("ada").checked;
+        var clearliquid = document.getElementById("clearliquid").checked;
+        var instructions = document.getElementById("instructions").value;
+        var Zofran = document.getElementById("Zofran").checked;
+        var Percocet = document.getElementById("Percocet").checked;
+        var Norco = document.getElementById("Norco").checked;
+        var Tramadol = document.getElementById("Tramadol").checked;
+        var Tylenol1 = document.getElementById("Tylenol1").checked;
+        var Ibuprofen1 = document.getElementById("Ibuprofen1").checked;
+        var Flexeril = document.getElementById("Flexeril").checked;
+        var Flomax = document.getElementById("Flomax").checked;
+        var Pyridium = document.getElementById("Pyridium").checked;
+        var Cardizem = document.getElementById("Cardizem").checked;
+        var Lasix = document.getElementById("Lasix").checked;
+        var Amoxicillin = document.getElementById("Amoxicillin").checked;
+        var Penicillin = document.getElementById("Penicillin").checked;
+        var Cefdinir = document.getElementById("Cefdinir").checked;
+        var Cipro = document.getElementById("Cipro").checked;
+        var Clindamycin = document.getElementById("Clindamycin").checked;
+        var Doxycycline = document.getElementById("Doxycycline").checked;
+        var Flagyl = document.getElementById("Flagyl").checked;
+        var Macrobid = document.getElementById("Macrobid").checked;
+        var Bactrim = document.getElementById("Bactrim").checked;
+        var Zpack = document.getElementById("Zpack").checked;
+        var Albuterol = document.getElementById("Albuterol").checked;
+        var Prednisone = document.getElementById("Prednisone").checked;
+        var Prednisone2 = document.getElementById("Prednisone2").checked;
+        var Lacrilube = document.getElementById("Lacrilube").checked;
+        var Tears = document.getElementById("Tears").checked;
+        var Keppra = document.getElementById("Keppra").checked;
+        var Librium = document.getElementById("Librium").checked;
+        var Eliquis = document.getElementById("Eliquis").checked;
+        var Xarelto = document.getElementById("Xarelto").checked;
         var Continue = document.getElementById("Continue").checked;
         var Double = document.getElementById("Double").checked;
         var increase = document.getElementById("increase").checked;
@@ -154,11 +276,19 @@
         var stool = document.getElementById("stool").checked;
         var referral = document.getElementById("referral").checked;
         var referral_type = document.getElementById("referral_type").value;
+        var cardiology = document.getElementById("cardiology").checked;
+        var neurology = document.getElementById("neurology").checked;
+        var urology = document.getElementById("urology").checked;
+        var robertson = document.getElementById("robertson").checked;
+        var wound = document.getElementById("wound").checked;
+        var burrell = document.getElementById("burrell").checked;
+        var fhc = document.getElementById("fhc").checked;
+        var pt = document.getElementById("pt").checked;
         var pcp = document.getElementById("pcp").checked;
         var listpcp = document.getElementById("listpcp").checked;
         var rted = document.getElementById("rted").checked;
         var t = "";
-        if (rice == true && inpt[j].hidden == false) {
+        if (rest == true && inpt[j].hidden == false) {
           t = t + "Rest\n";
         }
         if (ice == true && inpt[j].hidden == false) {
@@ -167,57 +297,120 @@
         if (elevate == true && inpt[j].hidden == false) {
           t = t + "Elevate the injured area to minimize swelling\n";
         }
-        t = t + problem;
-        if (x0 == true && inpt[j].hidden == false) {
+        if (stopsmoking == true && inpt[j].hidden == false) {
+          t = t + "Stop smoking\n";
+        }
+        if (decreasealcohol == true && inpt[j].hidden == false) {
+          t = t + "Decrease your alcohol use to no more than 2 drinks per day.\n";
+        }
+        if (gethelp == true && inpt[j].hidden == false) {
+          t = t + "Contact one of the resources below for help with stopping your alcohol use.\n";
+        }
+        if (packing == true && inpt[j].hidden == false) {
+          t = t + "Remove packing in 24-36 hours.\n";
+        }
+        if (lowsalt == true && inpt[j].hidden == false) {
+          t = t + "Low salt diet\n";
+        }
+        if (lowfat == true && inpt[j].hidden == false) {
+          t = t + "Low fat diet\n";
+        }
+        if (ada == true && inpt[j].hidden == false) {
+          t = t + "American Diabetic Association diet\n";
+        }
+        if (clearliquid == true && inpt[j].hidden == false) {
+          t = t + "Clear liquid diet for 24-48 hours\n";
+        }
+        t = t + instructions;
+        if (Zofran == true && inpt[j].hidden == false) {
           t = t + "Zofran 4 mg every 6 hours as needed for nausea\n";
         }
-        if (x10 == true && inpt[j].hidden == false) {
+        if (Percocet == true && inpt[j].hidden == false) {
           t = t + "Percocet 1 tablet every 6 hours as needed for pain\n";
         }
-        if (x20 == true && inpt[j].hidden == false) {
+        if (Norco == true && inpt[j].hidden == false) {
           t = t + "Norco 1 tablet every 6 hours as needed for pain\n";
         }
-        if (x30 == true && inpt[j].hidden == false) {
+        if (Tramadol == true && inpt[j].hidden == false) {
           t = t + "Tramadol 1 tablet every 6 hours as needed for pain\n";
         }
-        if (x40 == true && inpt[j].hidden == false) {
+        if (Tylenol1 == true && inpt[j].hidden == false) {
           t = t + "Tylenol as needed for pain\n";
         }
-        if (x50 == true && inpt[j].hidden == false) {
+        if (Ibuprofen1 == true && inpt[j].hidden == false) {
           t = t + "Ibuprofen 400 mg every 6 hours as needed for pain\n";
         }
-        if (x60 == true && inpt[j].hidden == false) {
+        if (Flexeril == true && inpt[j].hidden == false) {
+          t = t + "Flexeril 10 mg three times a day as needed\n";
+        }
+        if (Flomax == true && inpt[j].hidden == false) {
           t = t + "Flomax 0.4 mg daily\n";
         }
-        if (x70 == true && inpt[j].hidden == false) {
+        if (Pyridium == true && inpt[j].hidden == false) {
+          t = t + "Pyridium 100 mg three times a day as needed.\n";
+        }
+        if (Cardizem == true && inpt[j].hidden == false) {
           t = t + "Cardizem CD 120 mg daily\n";
         }
-        if (x80 == true && inpt[j].hidden == false) {
+        if (Lasix == true && inpt[j].hidden == false) {
           t = t + "Lasix 20 mg daily\n";
         }
-        if (x90 == true && inpt[j].hidden == false) {
+        if (Amoxicillin == true && inpt[j].hidden == false) {
           t = t + "Amoxicillin 875 mg twice a day\n";
         }
-        if (x100 == true && inpt[j].hidden == false) {
+        if (Penicillin == true && inpt[j].hidden == false) {
           t = t + "Penicillin 500 mg four times a day for 7 days\n";
         }
-        if (x110 == true && inpt[j].hidden == false) {
+        if (Cefdinir == true && inpt[j].hidden == false) {
           t = t + "Cefdinir 300 mg twice a day for 7 days\n";
         }
-        if (x120 == true && inpt[j].hidden == false) {
+        if (Cipro == true && inpt[j].hidden == false) {
           t = t + "Cipro 500 mg twice a day for 7 days\n";
         }
-        if (x130 == true && inpt[j].hidden == false) {
+        if (Clindamycin == true && inpt[j].hidden == false) {
+          t = t + "Clindamycin 300 mg four times a day for 7 days\n";
+        }
+        if (Doxycycline == true && inpt[j].hidden == false) {
+          t = t + "Doxycycline 100 mg twice a day for 7 days\n";
+        }
+        if (Flagyl == true && inpt[j].hidden == false) {
           t = t + "Flagyl 500 mg three times a day for 7 days\n";
         }
-        if (x140 == true && inpt[j].hidden == false) {
+        if (Macrobid == true && inpt[j].hidden == false) {
           t = t + "Macrobid 100 mg twice a day for 3 days\n";
         }
-        if (x150 == true && inpt[j].hidden == false) {
+        if (Bactrim == true && inpt[j].hidden == false) {
           t = t + "Bactrim 1 tablet twice a day for 7 days\n";
         }
-        if (x160 == true && inpt[j].hidden == false) {
+        if (Zpack == true && inpt[j].hidden == false) {
+          t = t + "Z pack\n";
+        }
+        if (Albuterol == true && inpt[j].hidden == false) {
+          t = t + "Albuterol 2 puffs every 4 hours as needed\n";
+        }
+        if (Prednisone == true && inpt[j].hidden == false) {
           t = t + "Prednisone 60 mg daily for 5 days\n";
+        }
+        if (Prednisone2 == true && inpt[j].hidden == false) {
+          t = t + "Prednisone 60 mg daily for 3 days, then decrease by 10 mg daily until off\n";
+        }
+        if (Lacrilube == true && inpt[j].hidden == false) {
+          t = t + "Lacrilube to lower inner eyelid each night and tape eye shut.\n";
+        }
+        if (Tears == true && inpt[j].hidden == false) {
+          t = t + "Artificial tears hourly during the day.\n";
+        }
+        if (Keppra == true && inpt[j].hidden == false) {
+          t = t + "Keppra 500 mg twice a day\n";
+        }
+        if (Librium == true && inpt[j].hidden == false) {
+          t = t + "Librium\n";
+        }
+        if (Eliquis == true && inpt[j].hidden == false) {
+          t = t + "Eliquis 5 mg twice a day\n";
+        }
+        if (Xarelto == true && inpt[j].hidden == false) {
+          t = t + "Xarelto ***\n";
         }
         if (Continue == true && inpt[j].hidden == false) {
           t = t + "Continue your current medications\n";
@@ -239,6 +432,30 @@
           t = t + "A referral was made\n";
         }
         t = t + referral_type;
+        if (cardiology == true && inpt[j].hidden == false) {
+          t = t + "Follow up with cardiology\n";
+        }
+        if (neurology == true && inpt[j].hidden == false) {
+          t = t + "Follow up with neurology\n";
+        }
+        if (urology == true && inpt[j].hidden == false) {
+          t = t + "Follow up with urology\n";
+        }
+        if (robertson == true && inpt[j].hidden == false) {
+          t = t + "Follow up with Dr. Robertson\n";
+        }
+        if (wound == true && inpt[j].hidden == false) {
+          t = t + "Follow up at the Wound Clinic\n";
+        }
+        if (burrell == true && inpt[j].hidden == false) {
+          t = t + "Follow up at Burrell Behavioral Health\n";
+        }
+        if (fhc == true && inpt[j].hidden == false) {
+          t = t + "Follow up at Compass Health\n";
+        }
+        if (pt == true && inpt[j].hidden == false) {
+          t = t + "Outpatient physical therapy\n";
+        }
         if (pcp == true && inpt[j].hidden == false) {
           t = t + "Follow up with your primary care provider.\n";
         }
@@ -265,6 +482,11 @@
           }
         }
         return(-1);
+      }
+      function checkInstructions(x){
+        for (let i = 0; i < x.length();i++){
+          document.getElementById(x[i]).setAttribute("checked","true"));
+        }
       }
     </script>
   </body>
