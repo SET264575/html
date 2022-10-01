@@ -39,23 +39,23 @@
     <label for = "clearliquid">Clear liquid diet for 24-48 hours</label><br>
 
     <label for="instructions">Choose instructions</label>
-    <select id = "instructions" onchange = "checkInstructions()">
+    <select id = "instructions" onchange = "checkInstructions(['Prednisone2', 'Lacrilube', 'Tears'])">
       <option></option>
-      <option>['abscess', ['Bactrim', 'Ibuprofen', 'packing']]</option>
-      <option>['acute bronchitis', ['Albuterol', 'Prednisone', 'stopsmoking']]</option>
-      <option>['alcohol', ['decreasealcohol', 'gethelp', 'Librium']]</option>
-      <option>['back pain', ['Ibuprofen', 'Flexeril', 'pt']]</option>
-      <option>['Bell palsy', ['Prednisone2', 'Lacrilube', 'Tears']]</option>
-      <option>['CHF', ['Lasix', 'lowsalt', 'cardiology']]</option>
-      <option>['contusion', ['rest', 'ice', 'elevate', 'Ibuprofen']]</option>
-      <option>['COPD exacerbation', ['Prednisone']]</option>
-      <option>['diverticulitis', ['Cipro', 'Flagyl', 'clearliquid']]</option>
-      <option>['DVT', ['Xarelto']]</option>
-      <option>['fracture', ['Percocet', 'robertson']]</option>
-      <option>['gall bladder', ['Percocet', 'lowfat', 'gallbladderUS']]</option>
-      <option>['kidney stones', ['Percocet', 'Toradol', 'Zofran', 'Flomax', 'urology']]</option>
-      <option>['seizure', ['Keppra', 'neurology']]</option>
-      <option>['STD', ['Doxycycline']]</option>
+      <option>abscess</option>
+      <option>acute bronchitis</option>
+      <option>alcohol</option>
+      <option>back pain</option>
+      <option>Bell palsy</option>
+      <option>CHF</option>
+      <option>contusion</option>
+      <option>COPD exacerbation</option>
+      <option>diverticulitis</option>
+      <option>DVT</option>
+      <option>fracture</option>
+      <option>gall bladder</option>
+      <option>kidney stones</option>
+      <option>seizure</option>
+      <option>STD</option>
     </select><br>
 
     <h4>Medications</h4>
@@ -485,7 +485,7 @@
       }
       function checkInstructions(x){
         for (let i = 0; i < x.length();i++){
-          document.getElementById(x[i]).setAttribute("checked","true"));
+          document.getElementById(x[i]).setAttribute("checked","true");
         }
       }
     </script>
