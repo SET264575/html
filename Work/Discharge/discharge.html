@@ -160,26 +160,26 @@
     <label for = "increase">Increase your *** </label><br>
 
     <h4>Outpatient Tests</h4>
-    <input type = "checkbox" name = "Holter monitor" id = "Holter monitor"  onchange = "copytext()">
-    <label for = "Holter monitor">Outpatient Holter monitor</label><br>
+    <input type = "checkbox" name = "Holter" id = "Holter"  onchange = "copytext()">
+    <label for = "Holter">Outpatient Holter monitor</label><br>
 
     <input type = "checkbox" name = "colonoscopy" id = "colonoscopy"  onchange = "copytext()">
     <label for = "colonoscopy">Outpatient colonoscopy</label><br>
 
-    <input type = "checkbox" name = "echocardiogram" id = "echocardiogram"  onchange = "copytext()">
-    <label for = "echocardiogram">Outpatient echocardiogram</label><br>
+    <input type = "checkbox" name = "echo" id = "echo"  onchange = "copytext()">
+    <label for = "echo">Outpatient echocardiogram</label><br>
 
-    <input type = "checkbox" name = "gall bladder ultrasound" id = "gall bladder ultrasound"  onchange = "copytext()">
-    <label for = "gall bladder ultrasound">Outpatient gall bladder ultrasound</label><br>
+    <input type = "checkbox" name = "egd" id = "egd"  onchange = "copytext()">
+    <label for = "egd">Outpatient upper endoscopy</label><br>
 
-    <input type = "checkbox" name = "pelvic ultrasound" id = "pelvic ultrasound"  onchange = "copytext()">
-    <label for = "pelvic ultrasound">Outpatient pelvic ultrasound</label><br>
+    <input type = "checkbox" name = "gbus" id = "gbus"  onchange = "copytext()">
+    <label for = "gbus">Outpatient gall bladder ultrasound</label><br>
 
-    <input type = "checkbox" name = "stress test" id = "stress test"  onchange = "copytext()">
-    <label for = "stress test">Outpatient stress test</label><br>
+    <input type = "checkbox" name = "pelvisus" id = "pelvisus"  onchange = "copytext()">
+    <label for = "pelvisus">Outpatient pelvic ultrasound</label><br>
 
-    <input type = "checkbox" name = "upper endoscopy" id = "upper endoscopy"  onchange = "copytext()">
-    <label for = "upper endoscopy">Outpatient upper endoscopy</label><br>
+    <input type = "checkbox" name = "stresstest" id = "stresstest"  onchange = "copytext()">
+    <label for = "stresstest">Outpatient stress test</label><br>
 
     <input type = "checkbox" name = "test" id = "test"  onchange = "copytext()">
     <label for = "test">An outpatient test was ordered.</label><br>
@@ -298,13 +298,13 @@
         var Continue = document.getElementById("Continue").checked;
         var Double = document.getElementById("Double").checked;
         var increase = document.getElementById("increase").checked;
-        var Holter monitor = document.getElementById("Holter monitor").checked;
+        var Holter = document.getElementById("Holter").checked;
         var colonoscopy = document.getElementById("colonoscopy").checked;
-        var echocardiogram = document.getElementById("echocardiogram").checked;
-        var gall bladder ultrasound = document.getElementById("gall bladder ultrasound").checked;
-        var pelvic ultrasound = document.getElementById("pelvic ultrasound").checked;
-        var stress test = document.getElementById("stress test").checked;
-        var upper endoscopy = document.getElementById("upper endoscopy").checked;
+        var echo = document.getElementById("echo").checked;
+        var egd = document.getElementById("egd").checked;
+        var gbus = document.getElementById("gbus").checked;
+        var pelvisus = document.getElementById("pelvisus").checked;
+        var stresstest = document.getElementById("stresstest").checked;
         var test = document.getElementById("test").checked;
         var stool = document.getElementById("stool").checked;
         var cardiology = document.getElementById("cardiology").checked;
@@ -460,26 +460,26 @@
         if (increase == true) {
           t = t + "Increase your *** \n";
         }
-        if (Holter monitor == true) {
+        if (Holter == true) {
           t = t + "Outpatient Holter monitor\n";
         }
         if (colonoscopy == true) {
           t = t + "Outpatient colonoscopy\n";
         }
-        if (echocardiogram == true) {
+        if (echo == true) {
           t = t + "Outpatient echocardiogram\n";
         }
-        if (gall bladder ultrasound == true) {
+        if (egd == true) {
+          t = t + "Outpatient upper endoscopy\n";
+        }
+        if (gbus == true) {
           t = t + "Outpatient gall bladder ultrasound\n";
         }
-        if (pelvic ultrasound == true) {
+        if (pelvisus == true) {
           t = t + "Outpatient pelvic ultrasound\n";
         }
-        if (stress test == true) {
+        if (stresstest == true) {
           t = t + "Outpatient stress test\n";
-        }
-        if (upper endoscopy == true) {
-          t = t + "Outpatient upper endoscopy\n";
         }
         if (stool == true) {
           t = t + "Outpatient stool studies for C. dif and GI pathogen panel.\n";
