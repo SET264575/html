@@ -4,6 +4,26 @@
   </head>
   <body>
     <h3>Discharge instructions</h3>
+    <label for="instructions">Choose instructions</label>
+    <select id = "instructions" onchange = "checkInstructions(this.value)">
+      <option value = "[]"></option>
+      <option value = "['Bactrim', 'Ibuprofen', 'packing']">abscess</option>
+      <option value = "['Albuterol', 'Prednisone', 'stopsmoking']">acute bronchitis</option>
+      <option value = "['decreasealcohol', 'gethelp', 'Librium']">alcohol</option>
+      <option value = "['Ibuprofen', 'Flexeril', 'pt']">back pain</option>
+      <option value = "['Prednisone2', 'Lacrilube', 'Tears']">Bell palsy</option>
+      <option value = "['Lasix', 'lowsalt', 'cardiology']">CHF</option>
+      <option value = "['rest', 'ice', 'elevate', 'Ibuprofen']">contusion</option>
+      <option value = "['Prednisone', 'prednisonewarning']">COPD exacerbation</option>
+      <option value = "['Cipro', 'Flagyl', 'clearliquid', 'flagylwarning']">diverticulitis</option>
+      <option value = "['Xarelto', 'vasclab', 'anticoagulantwarning']">DVT</option>
+      <option value = "['Percocet', 'robertson']">fracture</option>
+      <option value = "['Percocet', 'lowfat', 'gallbladderUS']">gall bladder</option>
+      <option value = "['Percocet', 'Toradol', 'Zofran', 'Flomax', 'urology']">kidney stones</option>
+      <option value = "['Keppra', 'neurology', 'seizurewarning']">seizure</option>
+      <option value = "['Doxycycline', 'stdspecial', 'doxycyclinewaring']">STD</option>
+    </select><br>
+
     <input type = "checkbox" name = "rest" id = "rest"  onchange = "copytext()">
     <label for = "rest">Rest</label><br>
 
@@ -37,26 +57,6 @@
 
     <input type = "checkbox" name = "clearliquid" id = "clearliquid"  onchange = "copytext()">
     <label for = "clearliquid">Clear liquid diet for 24-48 hours</label><br>
-
-    <label for="instructions">Choose instructions</label>
-    <select id = "instructions" onchange = "checkInstructions(this.value)">
-      <option value = "[]"></option>
-      <option value = "['Bactrim', 'Ibuprofen', 'packing']">abscess</option>
-      <option value = "['Albuterol', 'Prednisone', 'stopsmoking']">acute bronchitis</option>
-      <option value = "['decreasealcohol', 'gethelp', 'Librium']">alcohol</option>
-      <option value = "['Ibuprofen', 'Flexeril', 'pt']">back pain</option>
-      <option value = "['Prednisone2', 'Lacrilube', 'Tears']">Bell palsy</option>
-      <option value = "['Lasix', 'lowsalt', 'cardiology']">CHF</option>
-      <option value = "['rest', 'ice', 'elevate', 'Ibuprofen']">contusion</option>
-      <option value = "['Prednisone', 'prednisonewarning']">COPD exacerbation</option>
-      <option value = "['Cipro', 'Flagyl', 'clearliquid', 'flagylwarning']">diverticulitis</option>
-      <option value = "['Xarelto', 'vasclab', 'anticoagulantwarning']">DVT</option>
-      <option value = "['Percocet', 'robertson']">fracture</option>
-      <option value = "['Percocet', 'lowfat', 'gallbladderUS']">gall bladder</option>
-      <option value = "['Percocet', 'Toradol', 'Zofran', 'Flomax', 'urology']">kidney stones</option>
-      <option value = "['Keppra', 'neurology', 'seizurewarning']">seizure</option>
-      <option value = "['Doxycycline', 'stdspecial', 'doxycyclinewaring']">STD</option>
-    </select><br>
 
     <h4>Medications</h4>
     <input type = "checkbox" name = "Zofran" id = "Zofran"  onchange = "copytext()">
@@ -253,6 +253,7 @@
     <pre id = "contents"></pre>
     <script>
       function copytext(){
+        var instructions = document.getElementById("instructions").value;
         var rest = document.getElementById("rest").checked;
         var ice = document.getElementById("ice").checked;
         var elevate = document.getElementById("elevate").checked;
@@ -264,7 +265,6 @@
         var lowfat = document.getElementById("lowfat").checked;
         var ada = document.getElementById("ada").checked;
         var clearliquid = document.getElementById("clearliquid").checked;
-        var instructions = document.getElementById("instructions").value;
         var Zofran = document.getElementById("Zofran").checked;
         var Percocet = document.getElementById("Percocet").checked;
         var Norco = document.getElementById("Norco").checked;
@@ -327,6 +327,7 @@
         var doxycyclinewarning = document.getElementById("doxycyclinewarning").checked;
         var prednisonewarning = document.getElementById("prednisonewarning").checked;
         var t = "";
+        t = t + instructions;
         if (rest == true) {
           t = t + "Rest\n";
         }
@@ -360,7 +361,6 @@
         if (clearliquid == true) {
           t = t + "Clear liquid diet for 24-48 hours\n";
         }
-        t = t + instructions;
         if (Zofran == true) {
           t = t + "Zofran 4 mg every 6 hours as needed for nausea\n";
         }
@@ -520,13 +520,7 @@
         if (rted == true) {
           t = t + "Return to the emergency department if your symptoms worsen or new symptoms develop.\n";
         }
-        if (referral == true){
-          t = t + "\nA referral to " + referral_type + " has been submitted.  You should expect a call in a few days.\n";
-        }
-        if (test == true){
-          t = t + "\nAn outpatient " + test_type + " has been submitted.  You should expect a call in a few days.\n";
           t = t + document.getElementById("contents").value;
-        }
         navigator.clipboard.writeText(t);
         document.getElementById("text").value = t;
       }
