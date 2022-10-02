@@ -529,6 +529,7 @@
         }
         if (test == true){
           t = t + "\nAn outpatient " + test_type + " has been submitted.  You should expect a call in a few days.\n";
+          t = t + document.getElementById("contents").value;
         }
         navigator.clipboard.writeText(t);
         document.getElementById("text").value = t;
@@ -550,7 +551,7 @@
       function populatePre(url) {
         var xhr = new XMLHttpRequest();
         xhr.onload = function () {
-          document.getElementById("contents").textContent = document.getElementById("contents").textContent + this.responseText;
+          document.getElementById("contents").textContent = document.getElementById("contents").textContent +"\n"+ this.responseText;
         }
         xhr.open("GET", url);
         xhr.send();
