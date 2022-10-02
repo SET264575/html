@@ -39,23 +39,23 @@
     <label for = "clearliquid">Clear liquid diet for 24-48 hours</label><br>
 
     <label for="instructions">Choose instructions</label>
-    <select id = "instructions" onchange = "checkInstructions(['Prednisone2', 'Lacrilube', 'Tears'])">
-      <option></option>
-      <option>abscess</option>
-      <option>acute bronchitis</option>
-      <option>alcohol</option>
-      <option>back pain</option>
-      <option>Bell palsy</option>
-      <option>CHF</option>
-      <option>contusion</option>
-      <option>COPD exacerbation</option>
-      <option>diverticulitis</option>
-      <option>DVT</option>
-      <option>fracture</option>
-      <option>gall bladder</option>
-      <option>kidney stones</option>
-      <option>seizure</option>
-      <option>STD</option>
+    <select id = "instructions" onchange = "checkInstructions(this.value)">
+      <option value = "[]"></option>
+      <option value = "['Bactrim', 'Ibuprofen', 'packing']">abscess</option>
+      <option value = "['Albuterol', 'Prednisone', 'stopsmoking']">acute bronchitis</option>
+      <option value = "['decreasealcohol', 'gethelp', 'Librium']">alcohol</option>
+      <option value = "['Ibuprofen', 'Flexeril', 'pt']">back pain</option>
+      <option value = "['Prednisone2', 'Lacrilube', 'Tears']">Bell palsy</option>
+      <option value = "['Lasix', 'lowsalt', 'cardiology']">CHF</option>
+      <option value = "['rest', 'ice', 'elevate', 'Ibuprofen']">contusion</option>
+      <option value = "['Prednisone', 'prednisonewarning']">COPD exacerbation</option>
+      <option value = "['Cipro', 'Flagyl', 'clearliquid', 'flagylwarning']">diverticulitis</option>
+      <option value = "['Xarelto', 'vasclab', 'anticoagulantwarning']">DVT</option>
+      <option value = "['Percocet', 'robertson']">fracture</option>
+      <option value = "['Percocet', 'lowfat', 'gallbladderUS']">gall bladder</option>
+      <option value = "['Percocet', 'Toradol', 'Zofran', 'Flomax', 'urology']">kidney stones</option>
+      <option value = "['Keppra', 'neurology', 'seizurewarning']">seizure</option>
+      <option value = "['Doxycycline', 'stdspecial', 'doxycyclinewaring']">STD</option>
     </select><br>
 
     <h4>Medications</h4>
