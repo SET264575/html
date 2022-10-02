@@ -160,34 +160,34 @@
     <label for = "increase">Increase your *** </label><br>
 
     <h4>Outpatient Tests</h4>
-    <input type = "checkbox" name = "test" id = "test"  onchange = "populatePre(True)">
-    <label for = "test">An outpatient test was ordered.</label><br>
+    <input type = "checkbox" name = "Holter monitor" id = "Holter monitor"  onchange = "copytext()">
+    <label for = "Holter monitor">Outpatient Holter monitor</label><br>
 
-    <label for="test_type">Choose a test</label>
-    <select id = "test_type" onchange = "copytext()">
-      <option>Holter monitor</option>
-      <option>colonoscopy</option>
-      <option>echocardiogram</option>
-      <option>gall bladder ultrasound</option>
-      <option>pelvic ultrasound</option>
-      <option>stress test</option>
-      <option>upper endoscopy</option>
-    </select><br>
+    <input type = "checkbox" name = "colonoscopy" id = "colonoscopy"  onchange = "copytext()">
+    <label for = "colonoscopy">Outpatient colonoscopy</label><br>
+
+    <input type = "checkbox" name = "echocardiogram" id = "echocardiogram"  onchange = "copytext()">
+    <label for = "echocardiogram">Outpatient echocardiogram</label><br>
+
+    <input type = "checkbox" name = "gall bladder ultrasound" id = "gall bladder ultrasound"  onchange = "copytext()">
+    <label for = "gall bladder ultrasound">Outpatient gall bladder ultrasound</label><br>
+
+    <input type = "checkbox" name = "pelvic ultrasound" id = "pelvic ultrasound"  onchange = "copytext()">
+    <label for = "pelvic ultrasound">Outpatient pelvic ultrasound</label><br>
+
+    <input type = "checkbox" name = "stress test" id = "stress test"  onchange = "copytext()">
+    <label for = "stress test">Outpatient stress test</label><br>
+
+    <input type = "checkbox" name = "upper endoscopy" id = "upper endoscopy"  onchange = "copytext()">
+    <label for = "upper endoscopy">Outpatient upper endoscopy</label><br>
+
+    <input type = "checkbox" name = "test" id = "test"  onchange = "copytext()">
+    <label for = "test">An outpatient test was ordered.</label><br>
 
     <input type = "checkbox" name = "stool" id = "stool"  onchange = "copytext()">
     <label for = "stool">Outpatient stool studies for C. dif and GI pathogen panel.</label><br>
 
     <h4>Follow up</h4>
-    <input type = "checkbox" name = "referral" id = "referral"  onchange = "populatePre(True)">
-    <label for = "referral">A referral was made</label><br>
-
-    <label for="referral_type">Choose a specialty</label>
-    <select id = "referral_type" onchange = "copytext()">
-      <option>cardiology</option>
-      <option>neurology</option>
-      <option>the Columbia Orthopedic Group</option>
-    </select><br>
-
     <input type = "checkbox" name = "cardiology" id = "cardiology"  onchange = "copytext()">
     <label for = "cardiology">Follow up with cardiology</label><br>
 
@@ -225,26 +225,26 @@
     <label for = "rted">Return to the emergency department if your symptoms worsen or new symptoms develop.</label><br>
 
     <h4>Special instructions</h4>
-    <input type = "checkbox" name = "detoxspecial" id = "detoxspecial"  onchange = "populatePre('detox.txt')">
+    <input type = "checkbox" name = "detoxspecial" id = "detoxspecial" checked = "True" onchange = "copytext()">
     <label for = "detoxspecial">Detox</label><br>
 
-    <input type = "checkbox" name = "robertsonspecial" id = "robertsonspecial"  onchange = "populatePre('robertson.txt')">
+    <input type = "checkbox" name = "robertsonspecial" id = "robertsonspecial" checked = "True" onchange = "copytext()">
     <label for = "robertsonspecial">Robertson</label><br>
 
-    <input type = "checkbox" name = "seizurespecial" id = "seizurespecial"  onchange = "populatePre('seizure.txt')">
+    <input type = "checkbox" name = "seizurespecial" id = "seizurespecial" checked = "True" onchange = "copytext()">
     <label for = "seizurespecial">Seizure</label><br>
 
-    <input type = "checkbox" name = "stdspecial" id = "stdspecial"  onchange = "populatePre('std.txt')">
+    <input type = "checkbox" name = "stdspecial" id = "stdspecial" checked = "True" onchange = "copytext()">
     <label for = "stdspecial">STD</label><br>
 
     <h4>Warnings</h4>
-    <input type = "checkbox" name = "anticoagulantwarning" id = "anticoagulantwarning"  onchange = "populatePre('anticoagulant.txt')">
+    <input type = "checkbox" name = "anticoagulantwarning" id = "anticoagulantwarning" checked = "True" onchange = "copytext()">
     <label for = "anticoagulantwarning">anticoagulant</label><br>
 
-    <input type = "checkbox" name = "doxycyclinewarning" id = "doxycyclinewarning"  onchange = "populatePre('doxycycline.txt')">
+    <input type = "checkbox" name = "doxycyclinewarning" id = "doxycyclinewarning" checked = "True" onchange = "copytext()">
     <label for = "doxycyclinewarning">Doxycycline</label><br>
 
-    <input type = "checkbox" name = "prednisonewarning" id = "prednisonewarning"  onchange = "populatePre('prednisone.txt')">
+    <input type = "checkbox" name = "prednisonewarning" id = "prednisonewarning" checked = "True" onchange = "copytext()">
     <label for = "prednisonewarning">Prednisone</label><br>
 
     <br>
@@ -298,11 +298,15 @@
         var Continue = document.getElementById("Continue").checked;
         var Double = document.getElementById("Double").checked;
         var increase = document.getElementById("increase").checked;
+        var Holter monitor = document.getElementById("Holter monitor").checked;
+        var colonoscopy = document.getElementById("colonoscopy").checked;
+        var echocardiogram = document.getElementById("echocardiogram").checked;
+        var gall bladder ultrasound = document.getElementById("gall bladder ultrasound").checked;
+        var pelvic ultrasound = document.getElementById("pelvic ultrasound").checked;
+        var stress test = document.getElementById("stress test").checked;
+        var upper endoscopy = document.getElementById("upper endoscopy").checked;
         var test = document.getElementById("test").checked;
-        var test_type = document.getElementById("test_type").value;
         var stool = document.getElementById("stool").checked;
-        var referral = document.getElementById("referral").checked;
-        var referral_type = document.getElementById("referral_type").value;
         var cardiology = document.getElementById("cardiology").checked;
         var neurology = document.getElementById("neurology").checked;
         var urology = document.getElementById("urology").checked;
@@ -456,17 +460,30 @@
         if (increase == true) {
           t = t + "Increase your *** \n";
         }
-        if (test == true) {
-          t = t + "An outpatient test was ordered.\n";
+        if (Holter monitor == true) {
+          t = t + "Outpatient Holter monitor\n";
         }
-        t = t + test_type;
+        if (colonoscopy == true) {
+          t = t + "Outpatient colonoscopy\n";
+        }
+        if (echocardiogram == true) {
+          t = t + "Outpatient echocardiogram\n";
+        }
+        if (gall bladder ultrasound == true) {
+          t = t + "Outpatient gall bladder ultrasound\n";
+        }
+        if (pelvic ultrasound == true) {
+          t = t + "Outpatient pelvic ultrasound\n";
+        }
+        if (stress test == true) {
+          t = t + "Outpatient stress test\n";
+        }
+        if (upper endoscopy == true) {
+          t = t + "Outpatient upper endoscopy\n";
+        }
         if (stool == true) {
           t = t + "Outpatient stool studies for C. dif and GI pathogen panel.\n";
         }
-        if (referral == true) {
-          t = t + "A referral was made\n";
-        }
-        t = t + referral_type;
         if (cardiology == true) {
           t = t + "Follow up with cardiology\n";
         }
@@ -502,27 +519,6 @@
         }
         if (rted == true) {
           t = t + "Return to the emergency department if your symptoms worsen or new symptoms develop.\n";
-        }
-        if (detoxspecial == true) {
-          t = t + "Detox\n";
-        }
-        if (robertsonspecial == true) {
-          t = t + "Robertson\n";
-        }
-        if (seizurespecial == true) {
-          t = t + "Seizure\n";
-        }
-        if (stdspecial == true) {
-          t = t + "STD\n";
-        }
-        if (anticoagulantwarning == true) {
-          t = t + "anticoagulant\n";
-        }
-        if (doxycyclinewarning == true) {
-          t = t + "Doxycycline\n";
-        }
-        if (prednisonewarning == true) {
-          t = t + "Prednisone\n";
         }
         if (referral == true){
           t = t + "\nA referral to " + referral_type + " has been submitted.  You should expect a call in a few days.\n";
