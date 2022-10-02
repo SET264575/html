@@ -225,17 +225,17 @@
     <label for = "rted">Return to the emergency department if your symptoms worsen or new symptoms develop.</label><br>
 
     <h4>Special instructions</h4>
-    <input type = "checkbox" name = "detoxspecial" id = "detoxspecial"  onchange = "populatePre('Detox')">
-    <label for = "detoxspecial">detoxspecial</label><br>
+    <input type = "checkbox" name = "detoxspecial" id = "detoxspecial"  onchange = "populatePre('detox.txt')">
+    <label for = "detoxspecial">Detox</label><br>
 
-    <input type = "checkbox" name = "robertsonspecial" id = "robertsonspecial"  onchange = "populatePre('Robertson')">
-    <label for = "robertsonspecial">robertsonspecial</label><br>
+    <input type = "checkbox" name = "robertsonspecial" id = "robertsonspecial"  onchange = "populatePre('robertson.txt')">
+    <label for = "robertsonspecial">Robertson</label><br>
 
-    <input type = "checkbox" name = "seizurespecial" id = "seizurespecial"  onchange = "populatePre('Seizure')">
-    <label for = "seizurespecial">seizurespecial</label><br>
+    <input type = "checkbox" name = "seizurespecial" id = "seizurespecial"  onchange = "populatePre('seizure.txt')">
+    <label for = "seizurespecial">Seizure</label><br>
 
-    <input type = "checkbox" name = "stdspecial" id = "stdspecial"  onchange = "populatePre('STD')">
-    <label for = "stdspecial">stdspecial</label><br>
+    <input type = "checkbox" name = "stdspecial" id = "stdspecial"  onchange = "populatePre('std.txt')">
+    <label for = "stdspecial">STD</label><br>
 
     <h4>Warnings</h4>
     <input type = "checkbox" name = "anticoagulantwarning" id = "anticoagulantwarning"  onchange = "populatePre('anticoagulant.txt')">
@@ -323,205 +323,205 @@
         var doxycyclinewarning = document.getElementById("doxycyclinewarning").checked;
         var prednisonewarning = document.getElementById("prednisonewarning").checked;
         var t = "";
-        if (rest == true && inpt[j].hidden == false) {
+        if (rest == true) {
           t = t + "Rest\n";
         }
-        if (ice == true && inpt[j].hidden == false) {
+        if (ice == true) {
           t = t + "Ice the injured area for 20 minutes at a time\n";
         }
-        if (elevate == true && inpt[j].hidden == false) {
+        if (elevate == true) {
           t = t + "Elevate the injured area to minimize swelling\n";
         }
-        if (stopsmoking == true && inpt[j].hidden == false) {
+        if (stopsmoking == true) {
           t = t + "Stop smoking\n";
         }
-        if (decreasealcohol == true && inpt[j].hidden == false) {
+        if (decreasealcohol == true) {
           t = t + "Decrease your alcohol use to no more than 2 drinks per day.\n";
         }
-        if (gethelp == true && inpt[j].hidden == false) {
+        if (gethelp == true) {
           t = t + "Contact one of the resources below for help with stopping your alcohol use.\n";
         }
-        if (packing == true && inpt[j].hidden == false) {
+        if (packing == true) {
           t = t + "Remove packing in 24-36 hours.\n";
         }
-        if (lowsalt == true && inpt[j].hidden == false) {
+        if (lowsalt == true) {
           t = t + "Low salt diet\n";
         }
-        if (lowfat == true && inpt[j].hidden == false) {
+        if (lowfat == true) {
           t = t + "Low fat diet\n";
         }
-        if (ada == true && inpt[j].hidden == false) {
+        if (ada == true) {
           t = t + "American Diabetic Association diet\n";
         }
-        if (clearliquid == true && inpt[j].hidden == false) {
+        if (clearliquid == true) {
           t = t + "Clear liquid diet for 24-48 hours\n";
         }
         t = t + instructions;
-        if (Zofran == true && inpt[j].hidden == false) {
+        if (Zofran == true) {
           t = t + "Zofran 4 mg every 6 hours as needed for nausea\n";
         }
-        if (Percocet == true && inpt[j].hidden == false) {
+        if (Percocet == true) {
           t = t + "Percocet 1 tablet every 6 hours as needed for pain\n";
         }
-        if (Norco == true && inpt[j].hidden == false) {
+        if (Norco == true) {
           t = t + "Norco 1 tablet every 6 hours as needed for pain\n";
         }
-        if (Tramadol == true && inpt[j].hidden == false) {
+        if (Tramadol == true) {
           t = t + "Tramadol 1 tablet every 6 hours as needed for pain\n";
         }
-        if (Tylenol1 == true && inpt[j].hidden == false) {
+        if (Tylenol1 == true) {
           t = t + "Tylenol as needed for pain\n";
         }
-        if (Ibuprofen1 == true && inpt[j].hidden == false) {
+        if (Ibuprofen1 == true) {
           t = t + "Ibuprofen 400 mg every 6 hours as needed for pain\n";
         }
-        if (Flexeril == true && inpt[j].hidden == false) {
+        if (Flexeril == true) {
           t = t + "Flexeril 10 mg three times a day as needed\n";
         }
-        if (Flomax == true && inpt[j].hidden == false) {
+        if (Flomax == true) {
           t = t + "Flomax 0.4 mg daily\n";
         }
-        if (Pyridium == true && inpt[j].hidden == false) {
+        if (Pyridium == true) {
           t = t + "Pyridium 100 mg three times a day as needed.\n";
         }
-        if (Cardizem == true && inpt[j].hidden == false) {
+        if (Cardizem == true) {
           t = t + "Cardizem CD 120 mg daily\n";
         }
-        if (Lasix == true && inpt[j].hidden == false) {
+        if (Lasix == true) {
           t = t + "Lasix 20 mg daily\n";
         }
-        if (Amoxicillin == true && inpt[j].hidden == false) {
+        if (Amoxicillin == true) {
           t = t + "Amoxicillin 875 mg twice a day\n";
         }
-        if (Penicillin == true && inpt[j].hidden == false) {
+        if (Penicillin == true) {
           t = t + "Penicillin 500 mg four times a day for 7 days\n";
         }
-        if (Cefdinir == true && inpt[j].hidden == false) {
+        if (Cefdinir == true) {
           t = t + "Cefdinir 300 mg twice a day for 7 days\n";
         }
-        if (Cipro == true && inpt[j].hidden == false) {
+        if (Cipro == true) {
           t = t + "Cipro 500 mg twice a day for 7 days\n";
         }
-        if (Clindamycin == true && inpt[j].hidden == false) {
+        if (Clindamycin == true) {
           t = t + "Clindamycin 300 mg four times a day for 7 days\n";
         }
-        if (Doxycycline == true && inpt[j].hidden == false) {
+        if (Doxycycline == true) {
           t = t + "Doxycycline 100 mg twice a day for 7 days\n";
         }
-        if (Flagyl == true && inpt[j].hidden == false) {
+        if (Flagyl == true) {
           t = t + "Flagyl 500 mg three times a day for 7 days\n";
         }
-        if (Macrobid == true && inpt[j].hidden == false) {
+        if (Macrobid == true) {
           t = t + "Macrobid 100 mg twice a day for 3 days\n";
         }
-        if (Bactrim == true && inpt[j].hidden == false) {
+        if (Bactrim == true) {
           t = t + "Bactrim 1 tablet twice a day for 7 days\n";
         }
-        if (Zpack == true && inpt[j].hidden == false) {
+        if (Zpack == true) {
           t = t + "Z pack\n";
         }
-        if (Albuterol == true && inpt[j].hidden == false) {
+        if (Albuterol == true) {
           t = t + "Albuterol 2 puffs every 4 hours as needed\n";
         }
-        if (Prednisone == true && inpt[j].hidden == false) {
+        if (Prednisone == true) {
           t = t + "Prednisone 60 mg daily for 5 days\n";
         }
-        if (Prednisone2 == true && inpt[j].hidden == false) {
+        if (Prednisone2 == true) {
           t = t + "Prednisone 60 mg daily for 3 days, then decrease by 10 mg daily until off\n";
         }
-        if (Lacrilube == true && inpt[j].hidden == false) {
+        if (Lacrilube == true) {
           t = t + "Lacrilube to lower inner eyelid each night and tape eye shut.\n";
         }
-        if (Tears == true && inpt[j].hidden == false) {
+        if (Tears == true) {
           t = t + "Artificial tears hourly during the day.\n";
         }
-        if (Keppra == true && inpt[j].hidden == false) {
+        if (Keppra == true) {
           t = t + "Keppra 500 mg twice a day\n";
         }
-        if (Librium == true && inpt[j].hidden == false) {
+        if (Librium == true) {
           t = t + "Librium\n";
         }
-        if (Eliquis == true && inpt[j].hidden == false) {
+        if (Eliquis == true) {
           t = t + "Eliquis 5 mg twice a day\n";
         }
-        if (Xarelto == true && inpt[j].hidden == false) {
+        if (Xarelto == true) {
           t = t + "Xarelto ***\n";
         }
-        if (Continue == true && inpt[j].hidden == false) {
+        if (Continue == true) {
           t = t + "Continue your current medications\n";
         }
-        if (Double == true && inpt[j].hidden == false) {
+        if (Double == true) {
           t = t + "Double your Lasix for 3 days\n";
         }
-        if (increase == true && inpt[j].hidden == false) {
+        if (increase == true) {
           t = t + "Increase your *** \n";
         }
-        if (test == true && inpt[j].hidden == false) {
+        if (test == true) {
           t = t + "An outpatient test was ordered.\n";
         }
         t = t + test_type;
-        if (stool == true && inpt[j].hidden == false) {
+        if (stool == true) {
           t = t + "Outpatient stool studies for C. dif and GI pathogen panel.\n";
         }
-        if (referral == true && inpt[j].hidden == false) {
+        if (referral == true) {
           t = t + "A referral was made\n";
         }
         t = t + referral_type;
-        if (cardiology == true && inpt[j].hidden == false) {
+        if (cardiology == true) {
           t = t + "Follow up with cardiology\n";
         }
-        if (neurology == true && inpt[j].hidden == false) {
+        if (neurology == true) {
           t = t + "Follow up with neurology\n";
         }
-        if (urology == true && inpt[j].hidden == false) {
+        if (urology == true) {
           t = t + "Follow up with urology\n";
         }
-        if (robertson == true && inpt[j].hidden == false) {
+        if (robertson == true) {
           t = t + "Follow up with Dr. Robertson\n";
         }
-        if (wound == true && inpt[j].hidden == false) {
+        if (wound == true) {
           t = t + "Follow up at the Wound Clinic\n";
         }
-        if (burrell == true && inpt[j].hidden == false) {
+        if (burrell == true) {
           t = t + "Follow up at Burrell Behavioral Health\n";
         }
-        if (fhc == true && inpt[j].hidden == false) {
+        if (fhc == true) {
           t = t + "Follow up at Compass Health\n";
         }
-        if (vasclab == true && inpt[j].hidden == false) {
+        if (vasclab == true) {
           t = t + "Return to the Vascular Ultrasound lab between 9 am and 11 am tomorrow for an ultrasound to rule out a DVT.\n";
         }
-        if (pt == true && inpt[j].hidden == false) {
+        if (pt == true) {
           t = t + "Outpatient physical therapy\n";
         }
-        if (pcp == true && inpt[j].hidden == false) {
+        if (pcp == true) {
           t = t + "Follow up with your primary care provider.\n";
         }
-        if (listpcp == true && inpt[j].hidden == false) {
+        if (listpcp == true) {
           t = t + "A list of providers has been included in this paperwork.\n";
         }
-        if (rted == true && inpt[j].hidden == false) {
+        if (rted == true) {
           t = t + "Return to the emergency department if your symptoms worsen or new symptoms develop.\n";
         }
-        if (detoxspecial == true && inpt[j].hidden == false) {
-          t = t + "detoxspecial\n";
+        if (detoxspecial == true) {
+          t = t + "Detox\n";
         }
-        if (robertsonspecial == true && inpt[j].hidden == false) {
-          t = t + "robertsonspecial\n";
+        if (robertsonspecial == true) {
+          t = t + "Robertson\n";
         }
-        if (seizurespecial == true && inpt[j].hidden == false) {
-          t = t + "seizurespecial\n";
+        if (seizurespecial == true) {
+          t = t + "Seizure\n";
         }
-        if (stdspecial == true && inpt[j].hidden == false) {
-          t = t + "stdspecial\n";
+        if (stdspecial == true) {
+          t = t + "STD\n";
         }
-        if (anticoagulantwarning == true && inpt[j].hidden == false) {
+        if (anticoagulantwarning == true) {
           t = t + "anticoagulant\n";
         }
-        if (doxycyclinewarning == true && inpt[j].hidden == false) {
+        if (doxycyclinewarning == true) {
           t = t + "Doxycycline\n";
         }
-        if (prednisonewarning == true && inpt[j].hidden == false) {
+        if (prednisonewarning == true) {
           t = t + "Prednisone\n";
         }
         if (referral == true){
