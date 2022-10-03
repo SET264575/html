@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>Scalp Laceration Repair</title>
+  </head>
+  
+  <body>
+    <h3>Scalp Laceration Repair</h3>
+    
+    <h4>Wound Description</h4>
+    
+    <label for="length">Size</label>
+    <select id = "length" onchange = "copytext()">
+      <option value = "0.5">0.5 cm</option>
+      <option value = "1">1 cm</option>
+      <option value = "1.5">1.5 cm</option>
+      <option value = "2">2 cm</option>
+      <option value = "2.5">2.5 cm</option>
+      <option value = "3">3 cm</option>
+      <option value = "3.5">3.5 cm</option>
+      <option value = "4">4 cm</option>
+    </select><br><br>
+    
+    <label for="description">Description</label>
+    <select id = "description" onchange = "copytext()">
+      <option value = "linear">Linear</option>
+      <option value = "curvilinear">Curvilinear</option>
+      <option value = "irregular">Irregular</option>
+      <option value = "stellate">Stellate</option>
+      <option value = "flap">Flap</option>
+    </select><br><br>
+    
+    <label for = "location">Location</label>
+    <input type = "text" id = "location">
+    
+    <h4>Anesthetic</h4>
+    
+    <label for = "anesthetic">Anesthetic</label>
+    <select id = "anesthetic" onchange = "copytext()">
+      <option value = "1% lidocaine">1% lidocaine</option>
+      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
+      <option value = "2% lidocaine">2% lidocaine</option>
+      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
+    </select><br><br>
+    
+    <label for = "volume">Volume</label>
+    <select id = "volume" onchange = "copytext()">
+      <option value = "5">5 cc</option>
+      <option value = "1">1 cc</option>
+      <option value = "2">2 cc</option>
+      <option value = "3">3 cc</option>
+      <option value = "4">4 cc</option>
+      <option value = "5">5 cc</option>
+      <option value = "6">6 cc</option>
+      <option value = "7">7 cc</option>
+      <option value = "8">8 cc</option>
+      <option value = "9">9 cc</option>
+      <option value = "10">10 cc</option>
+    </select>
+   
+    <h4>Staples</h4>
+    
+    <label for = "suture_count">Number of Staples</label>
+    <select id = "suture_count" onchange = "copytext()">
+      <option value = "1">1</option>
+      <option value = "2">2</option>
+      <option value = "3">3</option>
+      <option value = "4">4</option>
+      <option value = "5">5</option>
+      <option value = "6">6</option>
+      <option value = "7">7</option>
+      <option value = "8">8</option>
+      <option value = "9">9</option>
+      <option value = "10">10</option>
+      <option value = "11">11</option>
+      <option value = "12">12</option>
+    </select><br><br>
+    
+    
+    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    
+    <script>
+      function copytext(){
+        var wound_length = document.getElementById("length").value;
+        var description = document.getElementById("description").value;
+        var location = document.getElementById("location").value;
+        var anesthetic = document.getElementById("anesthetic").value;
+        var volume = document.getElementById("volume").value;
+        var suture_count = document.getElementById("suture_count").value;
+        var t = "";
+        t = "Procedure Note:  Laceration repair on the "+location+"\n";
+        t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was ";
+        t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
+        t = t + "The wound was irrigated thoroughly with normal saline. ";
+        t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
+        t = t + "The wound was closed with " + suture_count + " " + " staples.  ";
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        document.getElementById("text").value = t;
+        navigator.clipboard.writeText(t);
+      }
+    </script>
+  </body>
+</html>
