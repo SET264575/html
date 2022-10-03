@@ -4,56 +4,6 @@
   </head>
   <body>
     <h3>Nail trephination</h3>
-    <label for = "location">Location</label>
-    <input type = "text" id = "location" onchange = "copytext()"><br>
-    <input kind = "checkbox" name = "block" id = "block" onchange = "copytext()">
-    <label for = "block">A digital block was performed.</label><br><br>
-
-    <label for="holes">Hole count</label>
-    <select id = "holes" onchange = "copytext()">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-    </select><br>
-
-    <br>
-
-    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
-    <script>
-      function copytext(){
-        var location = document.getElementById("location").value;
-        var block = document.getElementById("block").value;
-        var holes = document.getElementById("holes").value;
-        var t = "Procedure Note: Nail trephination
-";
-        t = t + "The risks, benefits, and alternatives were discussed with the patient who gave written consent. ";
-        t = t + location+". ";
-        t = t + "A digital block was performed.";
-        t = t + holes;
-        t = t + "The patient tolerated the procedure well.  There were no complications. ";
-        navigator.clipboard.writeText(t);
-        document.getElementById("text").value = t;
-      }
-      function getRadioButtonValue(name){
-        var ele = document.getElementsByName(name);
-        for (let i = 0; i < ele.length; i++){
-          if (ele[i].checked){
-            return(ele[i].value);
-          }
-        }
-        return(-1);
-      }
-    </script>
-  </body>
-</html>
->>> 
-========= RESTART: C:/Users/steve/Documents/Maker/Programming/Python/My Programs/HTML creator/Procedures/Nail trephination.py =========
-<html>
-  <head>
-    <title>Nail trephination</title>
-  </head>
-  <body>
-    <h3>Nail trephination</h3>
     <h4>side</h4>
     <input kind = "radio" name = "side" value = "0" id = "side" onchange = "copytext()">
     <label for = "0">right</label><br>
