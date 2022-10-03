@@ -128,7 +128,6 @@
     
     <pre style = "color: red">
       Things to fix:
-        radio buttons don't work
         contamination as radio button
       
     </pre>
@@ -148,6 +147,7 @@
         var tournicot = document.getElementById("tournicot").value;
         var skinhooks = document.getElementById("skinhooks").value;
         var contamination = document.getElementById("contamination").value;
+        var tendon = document.getRadioButtonValue("tendon");
         var t = "";
         t = "Procedure Note:  Laceration repair on the "+location+"\n";
         t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was prepped with Betadine and draped sterilely and then ";
@@ -167,13 +167,32 @@
         if (contamination) {
           t  = t + "no foreign body or contamination was found.  ";
         }
+        switch(tendon) {
+          case 0:
+            t = t + " Careful exploration to the bottom of the wound found no tendon or other deep structures. ";
+            break;
+          case 1:
+            t = t + " Exposed tendons were visualized through a full range of motion in a bloodless field and no injury was found.  ");
+            break;
+          case 2:
+            t = t + " Exposed tendons were visualized through a full range of motion in a bloodless field and an injury was found.  ");
+            break;
+        }
         
         t = t + "The wound was closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
         document.getElementById("text").value = t;
         navigator.clipboard.writeText(t);
       }
-   
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
     </script>
   </body>
 </html>
