@@ -4,12 +4,12 @@
   </head>
   
   <body>
-    <h3>Laceration Repair</h3>
+    <h3>Joint Aspiration</h3>
     
     <h4>Description</h4>
     
     <label for = "side">Side</label>
-    <select id = "side">
+    <select id = "side" onchange = "copytext()">
       <option value = "right">Right</option>
       <option value = "left">Left/option>
     </select><br><br>
@@ -48,9 +48,9 @@
       <option value = "10">10 cc</option>
     </select>
    
-    <h4>Suture</h4>
+    <h4>Results</h4>
     
-    <label for = "description">Type of Suture</label>
+    <label for = "description">Fluid description</label>
     <select id = "description" onchange = "copytext()">
       <option value = "clear">Nylon</option>
       <option value = "purulent">Prolene</option>
@@ -58,7 +58,7 @@
     </select><br><br>
    
     
-    <label for = "volume2">Number of Sutures</label>
+    <label for = "volume2">Volume</label>
     <select id = "volume2" onchange = "copytext()">
       <option value = "10">10</option>
       <option value = "20">20</option>
@@ -76,8 +76,6 @@
     
     <input type="checkbox" id= "injected">Injected with Kenalog and lidocaine</input><br><br>
       
-    
-   <!-- <button onclick = "copytext()" id="copy">Copy</button><br>  -->
     
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
     
