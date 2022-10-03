@@ -5,13 +5,13 @@
   <body>
     <h3>Joint Reduction</h3>
     <label for = "location">Location</label>
-    <input type = "text" id = "location"><br>
+    <input type = "text" id = "location" onchange="copytext()"><br>
     
-    <input type = "checkbox" name = "sedation" id = "sedation">
+    <input type = "checkbox" name = "sedation" id = "sedation"onchange="copytext()">
     <label for = "sedation">Conscious sedation was used for this procedure.</label><br><br>
 
     <label for="technique">Technique used</label>
-    <select id = "technique">
+    <select id = "technique" onchange="copytext()">
       <option>Traction/countertraction</option>
       <option>Traction</option>
       <option>Hennipenn maneuver</option>
