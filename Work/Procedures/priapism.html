@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>
+        Priapism management
+    </title>
+  </head>
+  <body>
+    <h3>
+    Priapism management
+    </h3>
+
+    <h4>Position</h4>
+    <input type = "radio" name = "position" value = "left" id = "left" onchange = "copytext()">
+    <label for = "left">2 o'clock (left)</label><br>
+    <input type = "radio" name = "position" value = "right" id = "right" onchange = "copytext()">
+    <label for = "right">10 o'clock (right)</label><br>
+<br>
+    
+        <h4>Result</h4>
+    <input type = "radio" name = "result" value = "arterial" id = "result1" onchange = "copytext()">
+    <label for = "result1">arterial blood returned </label><br>
+    <input type = "radio" name = "result" value = "detumescence" id = "result2" onchange = "copytext()">
+    <label for = "result2">detumescence was achieved</label><br>
+<br>
+
+
+   
+    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    <script>
+      function copytext(){
+        var position = getRadioButtonValue("position");
+        var result = getRadioButtonValue("result");
+
+        var t = "Procedure Note: Priapism Management \n";
+        
+        t = t + "The risks, benefits and alternatives were discussed with the patient who provided verbal consent. ";
+        t = t + "The patient was placed on a cardiac monitor and frequent blood pressure checks were performed.  ";
+        t = t + "The skin was prepped in the typical sterile fashion.  ";
+        t = t + "A butterfly needle was inserted into the corpus cavernosa at the ";
+        switch(position) {
+          case "right":
+            t = t + "10";
+            break;
+          case "left":
+            t = t + "2":
+            break;
+        }
+        t = t + " o'clock position.  Blood was aspirated until ";
+        switch(result) {
+          case "arterial":
+            t =t + "arterial blood was returned. "
+            break;
+          case "detumescence":
+            t = t + "detumescence was achieved. ";
+            break;
+        }
+        t = t + "200 mcg of phenylephrine diluted in 1 mL of normal saline was injected. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+    </script>
+  </body>
+</html>
