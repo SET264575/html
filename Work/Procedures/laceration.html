@@ -18,6 +18,12 @@
       <option value = "3">3 cm</option>
       <option value = "3.5">3.5 cm</option>
       <option value = "4">4 cm</option>
+      <option value = "4.5">4.5 cm</option>
+      <option value = "5">5 cm</option>
+      <option value = "5.5">5.5 cm</option>
+      <option value = "6">6 cm</option>
+      <option value = "6.5">6.5 cm</option>
+      <option value = "7">7 cm</option>
     </select><br><br>
     
     <label for="description">Description</label>
@@ -31,6 +37,23 @@
     
     <label for = "location">Location</label>
     <input type = "text" id = "location">
+    
+    <h4>Exploration</h4>
+    <label for = "bpcuff">A blood pressure cuff was used to help control bleeding.</label>
+    <input type = "checkbox" id = "bpcuff">
+    <label for = "tournicot">A tournicot was used to control bleeding.</label>
+    <label for = "skinhooks">Skin hooks were used.</label>
+    <input type = "checkbox" id = "skinhooks">
+    <label for = "contamination">There was no contamination.</label>
+    <input type = "checkbox" id = "contamination" checked = "true">
+    <br>
+    <input type = "radio" id = "tendon1">
+    <label for = "tendon1">No tendon was visualized through a full range of motion.</label>
+    <input type = "radio" id = "tendon2">
+    <label for = "tendon2">A tendon was inspected through full range of motion and no injury was found.</label>
+    <input type = "radio" id = "tendon3">
+    <label for = "tendon3">A tendon was inspected through full range of motion and a injury to the tendon was noted.</label>
+    
     
     <h4>Anesthetic</h4>
     
@@ -97,11 +120,16 @@
       <option value = "running">running</option>
       <option value = "interrupted and running">interrupted and running</option>
     </select><br><br>
-      
-    
-   <!-- <button onclick = "copytext()" id="copy">Copy</button><br>  -->
+     
     
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    
+    <pre style = "textcolor: red">
+      Things to fix:
+      radio buttons don't work
+      contamination as radio button
+      
+    </pre>
     
     <script>
       function copytext(){
@@ -114,12 +142,30 @@
         var volume = document.getElementById("volume").value;
         var suture_count = document.getElementById("suture_count").value;
         var suture_style = document.getElementById("suture_style").value;
+        var bpcuff = document.getElementById("bpcuff").value;
+        var tournicot = document.getElementById("tournicot").value;
+        var skinhooks = document.getElementById("skinhooks").value;
+        var contamination = document.getElementById("contamination").value;
         var t = "";
         t = "Procedure Note:  Laceration repair on the "+location+"\n";
         t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was prepped with Betadine and draped sterilely and then ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
         t = t + "The wound was irrigated thoroughly with normal saline. ";
-        t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
+        if (bpcuff) {
+          t = t + "A blood pressure cuff was used to help control bleeding. ";
+        }
+        if (tournicot) {
+          t = t + "A tournicot was used to control bleeding. ";
+        }
+        t = t + "The wound was explored ";
+        if (skinhooks) {
+          t = t + "using skinhooks ";
+        }
+        t = t + "in a bloodless field and ";
+        if (contamination) {
+          t  = t + "no foreign body or contamination was found.  ";
+        }
+        
         t = t + "The wound was closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
         document.getElementById("text").value = t;
