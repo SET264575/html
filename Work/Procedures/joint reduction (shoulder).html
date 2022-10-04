@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Joint Reduction</title>
+  </head>
+  <body>
+    <h3>Shoulder Joint Reduction</h3>
+    <h4>Side</h4>
+    <input type = "radio" value = "left" name = "side" id = "radio1">
+    <label id = "radio1">Left</label><br>
+    <input type = "radio" value = "right" name = "side" id = "radio2">
+    <label id = "radio2">Right</label><br>
+    
+    <input type = "radio" name = "sedation" id = "sedation"  value = "Conscious sedation was used for this procedure." onchange="copytext()">
+    <label for = "sedation">Conscious sedation was used for this procedure.</label><br><br>
+    <input type = "radio" name = "sedation" id = "sedation2" value = "Parenteral analgesia provided adequate pain relief and relaxation for the procedure." onchange = "copytext()">
+    <label for = "sedation2">Parenteral analgesia provided adequate pain relief and relaxation for the procedure.</label><br><br>
+    
+    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+ 
+    <script>
+      function copytext(){
+        var side = document.getElementById("side").value;
+        var sedation = getRadioButtonValue("sedation");
+        var technique = 'Traction';
+        var splint = document.getElementById("splint").value;
+        var t = "Procedure Note: Joint Reduction of the ";
+        t = t + side.toUpperCase() + " Shoulder\n";
+        t = t + "The risks, benefits, and alternatives were discussed with the patient who gave written consent. ";
+        t = t + sedation;
+        t = t + technique + " was used to reduce the joint. ";
+        t = t + "An arm sling was applied. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        t = t + "Findings from repeat neurovascular exam were unchanged. ";
+        t = t + "Post-reduction x-ray showed good anatomic alignment. ";
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+    </script>
+  </body>
+</html>
