@@ -27,7 +27,7 @@
  
     <script>
       function copytext(){
-        var side = document.getElementById("side").value;
+        var side = getRadioButtonValue("side");
         var sedation = getRadioButtonValue("sedation");
         var technique = document.getElementById("technique").value;
         var t = "Procedure Note: Joint Reduction of the ";
