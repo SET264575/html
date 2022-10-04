@@ -15,14 +15,20 @@
     <input type = "radio" name = "sedation" id = "sedation2" value = "Parenteral analgesia provided adequate pain relief and relaxation for the procedure." onchange = "copytext()">
     <label for = "sedation2">Parenteral analgesia provided adequate pain relief and relaxation for the procedure.</label><br><br>
     
+    <label for="technique">Technique used</label>
+    <select id = "technique" onchange="copytext()">
+      <option>Traction/countertraction</option>
+      <option>Traction</option>
+      <option>Hennipenn maneuver</option>
+    </select><br><br>
+    
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
  
     <script>
       function copytext(){
         var side = document.getElementById("side").value;
         var sedation = getRadioButtonValue("sedation");
-        var technique = 'Traction';
-        var splint = document.getElementById("splint").value;
+        var technique = document.getElementById("technique").value;
         var t = "Procedure Note: Joint Reduction of the ";
         t = t + side.toUpperCase() + " Shoulder\n";
         t = t + "The risks, benefits, and alternatives were discussed with the patient who gave written consent. ";
