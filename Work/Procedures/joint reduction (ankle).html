@@ -10,23 +10,23 @@
     <input type = "radio" value = "right" name = "side" id = "radio2">
     <label id = "radio2">Right</label>
     
-    <input type = "checkbox" name = "sedation" id = "sedation"onchange="copytext()">
+    <input type = "radio" name = "sedation" id = "sedation"  value = "Conscious sedation was used for this procedure." onchange="copytext()">
     <label for = "sedation">Conscious sedation was used for this procedure.</label><br><br>
+    <input type = "radio" name = "sedation" id = "sedation2" value = "Parenteral analgesia provided adequate pain relief and relaxation for the procedure." onchange = "copytext()">
+    <label for = "sedation2">Parenteral analgesia provided adequate pain relief and relaxation for the procedure.</label>
     
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
  
     <script>
       function copytext(){
         var side = document.getElementById("side").value;
-        var sedation = document.getElementById("sedation").value;
+        var sedation = getRadioButtonValue("sedation");
         var technique = 'Traction';
         var splint = document.getElementById("splint").value;
         var t = "Procedure Note: Joint Reduction of the ";
         t = t + side.toUpperCase() + " Ankle\n";
         t = t + "The risks, benefits, and alternatives were discussed with the patient who gave consent. ";
-        if (sedation) {
-          t = t + "Conscious sedation was used for this procedure. ";
-        }
+        t = t + sedation;
         t = t + technique + " was used to reduce the joint. ";
         t = t + 'An OCL 3 way splint was applied by staff and myself. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
