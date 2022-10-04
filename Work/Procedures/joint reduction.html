@@ -33,8 +33,8 @@
         var sedation = document.getElementById("sedation").value;
         var technique = document.getElementById("technique").value;
         var splint = document.getElementById("splint").value;
-        var t = "Procedure Note: Joint Reduction of the \n";
-        t = t + location.toLowerCase();
+        var t = "Procedure Note: Joint Reduction of the ";
+        t = t + location.toUpperCase()+'\n';
         t = t + "The risks, benefits, and alternatives were discussed with the patient who gave written consent. ";
         if (sedation) {
           t = t + "Conscious sedation was used for this procedure. ";
