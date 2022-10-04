@@ -747,7 +747,8 @@ function sortArray(){
 
 function copyAdmitDoc(){
 	var dr = document.getElementById("physicians").value;
-	navigator.clipboard.writeText("At "+currentTime() + ", I discussed the situation with Dr. "+dr.split(',')[0]+" who will admit");
+	var x = dr.split(",");
+	navigator.clipboard.writeText("At "+currentTime() + ", I discussed the situation with Dr. "+x[0]+" who will admit");
 }
 
 // Parse timestamp in YYYY-MM-DDTHH:mm:ss format as local
