@@ -5,9 +5,9 @@
   <body>
     <h3>Ankle Joint Reduction</h3>
     <h4>Side</h4>
-    <input type = "radio" value = "left" name = "side" id = "radio1">
+    <input type = "radio" value = "left" name = "side" id = "radio1" onchange = "copytext()">
     <label id = "radio1">Left</label><br>
-    <input type = "radio" value = "right" name = "side" id = "radio2">
+    <input type = "radio" value = "right" name = "side" id = "radio2" onchange = "copytext()">
     <label id = "radio2">Right</label><br>
     
     <h4>Sedation</h4>
@@ -24,7 +24,7 @@
         var sedation = getRadioButtonValue("sedation");
         var technique = 'Traction';
         var t = "Procedure Note: Joint Reduction of the ";
-        t = t + side.toUpperCase() + " Ankle\n";
+        t = t + side + " Ankle\n";
         t = t + "The risks, benefits, and alternatives were discussed with the patient who gave consent. ";
         t = t + sedation;
         t = t + technique + " was used to reduce the joint. ";
