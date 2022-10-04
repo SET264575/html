@@ -743,3 +743,9 @@ function indent(){
 function sortArray(){
 	awaitingList.sort(function(a,b){return(a.minutes - b.minutes)});
 }
+
+
+function copyAdmitDoc(){
+	var dr = getElementById("physicians").value;
+	navigator.clipboard.writeText("I discussed the situation with Dr. "+dr.split(',')[0]+" who will admit");
+}
