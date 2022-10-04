@@ -746,7 +746,7 @@ function sortArray(){
 
 
 function copyAdmitDoc(){
-	var dr = getElementById("physicians").value;
+	var dr = document.getElementById("physicians").value;
 	navigator.clipboard.writeText("At "+currentTime() + ", I discussed the situation with Dr. "+dr.split(',')[0]+" who will admit");
 }
 
