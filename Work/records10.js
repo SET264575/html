@@ -21,13 +21,13 @@
 
 
 //  *Pending labs:  UA, repeat troponin 
-//  *EKG disappears
+//  done - EKG disappears
 //  *national IV shortage
-//  *change text color
-//  *to do tasks:  print labs, prescriptions, work note, consult, 
-//  *buttons to show what needs done on pt:  see patient, consult, meds, labs, procedure, work note, prescription
-//  *separate box for plan
-//  *button to red
+//  done - change text color
+//  done - to do tasks:  print labs, prescriptions, work note, consult, 
+//  done - buttons to show what needs done on pt:  see patient, consult, meds, labs, procedure, work note, prescription
+//  done - separate box for plan
+//  done = button to red
 
 //  save to file
 //  IV contrast not used
