@@ -32,12 +32,14 @@
         var location = document.getElementById("location").value;
         var sedation = document.getElementById("sedation").value;
         var technique = document.getElementById("technique").value;
+        var splint = document.getElementById("splint").value;
         var t = "Procedure Note: Joint Reduction of the \n";
         t = t + location.toLowerCase();
         t = t + "The risks, benefits, and alternatives were discussed with the patient who gave written consent. ";
         t = t + "Conscious sedation was used for this procedure. ";
         t = t + technique + " was used to reduce the joint. ";
-        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        t = t + splint;
+        t = t + " The patient tolerated the procedure well.  There were no complications. ";
         t = t + "Findings from repeat neurovascular exam were unchanged. ";
         t = t + "Post-reduction x-ray showed good anatomic alignment. ";
         navigator.clipboard.writeText(t);
