@@ -747,5 +747,26 @@ function sortArray(){
 
 function copyAdmitDoc(){
 	var dr = getElementById("physicians").value;
-	navigator.clipboard.writeText("I discussed the situation with Dr. "+dr.split(',')[0]+" who will admit");
+	navigator.clipboard.writeText("At "+currentTime() + ", I discussed the situation with Dr. "+dr.split(',')[0]+" who will admit");
 }
+
+// Parse timestamp in YYYY-MM-DDTHH:mm:ss format as local
+function parseDateString(s) {
+  var b = s.split(/\D/g);
+  return new Date(b[0], --b[1], b[2], b[3], b[4], b[5], 0);
+}
+
+// Format time as hh:mm AM/PM
+function formatHHMM(date) {
+  function z(n) {
+    return (n < 10 ? '0' : '') + n;
+  }
+  var h = date.getHours();
+  return z(h % 12 || 12) + ':' + z(date.getMinutes()) + ' ' + (h < 12 ? 'AM' : 'PM');
+}
+
+function currentTime(){
+	return(formatHHMM(parseDateString(Date.now())));
+}
+		
+		
