@@ -769,7 +769,7 @@ function formatHHMM(date) {
 function currentTime(){
 //	return(formatHHMM(parseDateString(Date.now())));
 	var x = Date().toLocaleString();
-	return(x.slice(16,21);
+	return(x.slice(16,21));
 }
 		
 		
