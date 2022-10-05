@@ -36,16 +36,6 @@
 //  diagnosis at the top
 //  add to list of charts to finish
 
-//  Procedure note:
-//	laceration
-//	cardioversion
-//	conscious sedation
-//	joint reduction
-//	joint aspiration
-//	I&D
-//	paronychia drainage
-//	nerve block
-//	LP
 
 
 //  MDM:
