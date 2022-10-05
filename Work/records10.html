@@ -35,7 +35,7 @@
   <body>
 <table>
 <td style="vertical-align: top;">
-<select id = "physicians" onchange = "navigator.clipboard.writeText(this.value)" onmouseover = "navigator.clipboard.writeText(this.value)">
+<select id = "physicians" onchange = "function (){document.getElementById("dr_button").value = this.value; document.getElementById("dr_button").innerHTML = this.value;}">
 	<option>Brother,M</option>
 	<option>James,D</option>
 	<option>Koch,J</option>
@@ -47,6 +47,7 @@
 </select>
 
 <br>
+<button id = "dr_button" onclick = "navigator.clipboard.writeText(this.value)">Dr. Brother</button><br>	
 	
 <button id = "admit_button" onclick = "copyAdmitDoc()">Admit to Dr.</button><br><br><br>			   
 
