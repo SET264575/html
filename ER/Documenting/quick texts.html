@@ -5,33 +5,8 @@
     </title>
   </head>
   <body>
-    <button id = "text1" onclick = "copytext('Due to a high probability of clinically significant, life threatening deterioration, the patient required my 
-highest level of preparedness to intervene emergently and I personally spent this critical care time 
-directly and personally managing the patient. This critical care time included obtaining a history; 
-examining the patient; pulse oximetry; ordering and review of studies; arranging urgent treatment with 
-development of a management plan; evaluation of patient's response to treatment; frequent 
-reassessment; and, discussions with other providers. This critical care time was performed to assess and 
-manage the high probability of imminent, life-threatening deterioration that could result in multi-organ 
-failure. It was exclusive of separately billable procedures and treating other patients and teaching time.
- Total Critical Care Time: XX mins')">Critical Care </button><br>
-    <button id = "text2" onclick = "copytext('Hello,
-My name is Doctor Robertson, and I am the Trauma Surgeon for the Columbia Orthopaedic Group. If you 
-are receiving this letter, you have been diagnosed with a fracture (broken bone). Please call my nurse, 
-Tricia Massey at 573-441-3746 to make an appointment with me during normal business hours (Monday 
-through Friday between 7:30 am and 4:30 pm). You will be directed to my nurse, Tricia Massey. She is 
-with me in clinic from 8 am - 11:30 am every morning, and may not be able to return your call 
-immediately, so please be patient. Most fractures need to be seen within one week from injury, so 
-please contact my office as soon as possible to schedule an appointment. Keep in mind that if your 
-fracture is stable enough to be sent home from the emergency room, then the need for emergent 
-treatment is unlikely. Rest assured that you will be seen in a timely fashion, and well cared for. Keep your 
-injured extremity elevated as much as possible to minimize the swelling. Occasionally, you will be asked 
-to come to my office on an empty stomach, in case surgery is required. Do not be nervous if that is the 
-case. The final decision will not be made until after I see you and spend time explaining your injury and 
-all treatment options, giving you the ability to make an informed decision. So hang in there, and my 
-fracture team and I will get you through this and on the road to recovery.
-Sincerely,
-Michael Robertson, MD 
-Director of Orthopaedic Trauma/Boone Hospital Center')">Dr. Robertson Letter</button><br>
+    <button id = "text1" onclick = "copytext(1)">Critical Care </button><br>
+    <button id = "text2" onclick = "copytext(2)">Dr. Robertson Letter</button><br>
     
     <h5>The following has been copied to the clipboard and is ready to be pasted into your document:</h5><br>
     
@@ -39,6 +14,40 @@ Director of Orthopaedic Trauma/Boone Hospital Center')">Dr. Robertson Letter</bu
   </body>
   <script>
     function copytext(value){
+      var txt = '';
+      switch(value){
+        case 1:
+          txt = "Due to a high probability of clinically significant, life threatening deterioration, the patient required my \
+highest level of preparedness to intervene emergently and I personally spent this critical care time \
+directly and personally managing the patient. This critical care time included obtaining a history; \
+examining the patient; pulse oximetry; ordering and review of studies; arranging urgent treatment with \
+development of a management plan; evaluation of patient's response to treatment; frequent \
+reassessment; and, discussions with other providers. This critical care time was performed to assess and \
+manage the high probability of imminent, life-threatening deterioration that could result in multi-organ \
+failure. It was exclusive of separately billable procedures and treating other patients and teaching time.\
+ Total Critical Care Time: XX mins";
+          break;
+        case 2:
+          txt = "Hello,\
+My name is Doctor Robertson, and I am the Trauma Surgeon for the Columbia Orthopaedic Group. If you \
+are receiving this letter, you have been diagnosed with a fracture (broken bone). Please call my nurse, \
+Tricia Massey at 573-441-3746 to make an appointment with me during normal business hours (Monday \
+through Friday between 7:30 am and 4:30 pm). You will be directed to my nurse, Tricia Massey. She is \
+with me in clinic from 8 am - 11:30 am every morning, and may not be able to return your call \
+immediately, so please be patient. Most fractures need to be seen within one week from injury, so \
+please contact my office as soon as possible to schedule an appointment. Keep in mind that if your \
+fracture is stable enough to be sent home from the emergency room, then the need for emergent \
+treatment is unlikely. Rest assured that you will be seen in a timely fashion, and well cared for. Keep your \
+injured extremity elevated as much as possible to minimize the swelling. Occasionally, you will be asked \
+to come to my office on an empty stomach, in case surgery is required. Do not be nervous if that is the \
+case. The final decision will not be made until after I see you and spend time explaining your injury and \
+all treatment options, giving you the ability to make an informed decision. So hang in there, and my \
+fracture team and I will get you through this and on the road to recovery.\
+Sincerely,\
+Michael Robertson, MD \
+Director of Orthopaedic Trauma/Boone Hospital Center";
+          break;
+      }
       navigator.clipboard.writeText(value);
       document.getElementById("result").value = value;
     }
