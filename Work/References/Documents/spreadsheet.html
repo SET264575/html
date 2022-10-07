@@ -17,6 +17,7 @@
   </style>
   </head>
   <body>
+    <p id = "date"></p>
     <table>
       <tr>
         <td style = "width: 40px"></td><td style = "width: 80px">Name</td><td style = "width: 40px">Room</td><td style = "width: 80px">Diagnosis</td><td style = "width: 80px">Disp</td><td style = "width: 160px">Notes</td>
@@ -82,5 +83,9 @@
         20<br>
                </td><td></td><td></td><td></td><td></td></tr>
     </table>
+    <script>
+      document.getElementsById("date").innerHTML = Date().toLocaleString().slice(1,12);
+    </script>
   </body>
+
 </html>
