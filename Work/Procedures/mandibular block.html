@@ -35,8 +35,12 @@
       <option>10</option>
     </select><br>
 
-    <label for = "site">Side of injection</label>
-    <input type = "radio" id = "side" onchange="copytext()"><br>
+    <h4>Side</h4>
+    <input type = "radio" value = "left" name = "side" id = "radio1" onchange = "copytext()">
+    <label id = "left">Left</label><br>
+    <input type = "radio" value = "right" name = "side" id = "radio2" onchange = "copytext()">
+    <label id = "right">Right</label><br>
+    
     <input type = "checkbox" name = "aspiration" id = "aspiration"  onchange="copytext()">
     <label for = "aspiration">To avoid injecting into a blood vessel, aspiration was performed prior to injection.</label><br><br>
 
@@ -49,14 +53,14 @@
         var type = "Mandibular Block";
         var anesthetic = document.getElementById("anesthetic").value;
         var dose = document.getElementById("dose").value;
-        var site = document.getElementById("site").value;
+        var side = document.getElementById("side").value;
         var aspiration = document.getElementById("aspiration").value;
         var t = "Procedure Note: "+type+"\n";
         t = t +"The block was indicated for "+ indication+". ";
-        t = t + dose + " cc of ";
+        t = t + "Using the Halsted approach, "+dose + " cc of ";
         t = t + anesthetic;
-        t = t + " was injected at ";
-        t = t + site+". ";
+        t = t + " was injected on ";
+        t = t + side + " side. ";
         t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection.";
         t = t + "Adequate anesthesia was achieved. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
