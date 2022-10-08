@@ -14,6 +14,9 @@ There were no complications. Post-intubation x-ray showed the tube in proper loc
   </head>
   <body>
     <h3>Intubation</h3>
+    
+    <input type = "checkbox" id = "student">
+    <label for = "student">The procedure was performed by *** under my direct supervision.  I was present throughout the entire procedure."</label>
     <h4>indication</h4>
     <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
     <label for = "0">respiratory failure</label><br>
@@ -52,6 +55,7 @@ There were no complications. Post-intubation x-ray showed the tube in proper loc
 
     <label for="depth">Depth</label>
     <select id = "depth" onchange = "copytext()">
+      <option>22</option>
       <option>23</option>
       <option>24</option>
       <option>25</option>
@@ -63,6 +67,8 @@ There were no complications. Post-intubation x-ray showed the tube in proper loc
     <label for = "0">teeth</label><br>
     <input type = "radio" name = "secured_location" value = "1" id = "secured_location" onchange = "copytext()">
     <label for = "1">lip</label><br>
+    <input type = "radio" name = "secured_location" value = "2" id = "secured_location" onchange = "copytext()">
+    <label for = "2">gum</label><br>
 <br>
 
     <h4>oxygen_saturation</h4>
@@ -77,6 +83,7 @@ There were no complications. Post-intubation x-ray showed the tube in proper loc
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
     <script>
       function copytext(){
+        var student = document.getElementById("student");
         var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
         var sedation = getRadioButtonValue("sedation");
@@ -85,6 +92,10 @@ There were no complications. Post-intubation x-ray showed the tube in proper loc
         var secured_location = getRadioButtonValue("secured_location");
         var oxygen_saturation = getRadioButtonValue("oxygen_saturation");
         var t = "Procedure Note: Intubation\n";
+        
+        if (student){
+          t = t + "The procedure was performed by *** under my direct supervision.  I was present throughout the entire procedure. ";
+        }
         
         t = t + "Intubation was indicated for ";
         switch(indication){
@@ -128,6 +139,9 @@ There were no complications. Post-intubation x-ray showed the tube in proper loc
             break;
           case "1":
             t = t + "lip";
+            break;
+          case "2":
+            t = t + "gum";
             break;
         }
         t = t + ". Tube placement was confirmed by visualizing the tube passing through the vocal cords, auscultation of the lungs ";
