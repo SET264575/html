@@ -620,6 +620,7 @@ function checkboxChanged(value, label, i) {
 function pickRoom(i){
   room[i] = {...default_room};  //used to deep copy default values
   room[i].mine = true;
+  toDoList[i] = [];
   toDoButtonClicked(i,"SEE PATIENT");
   refreshTable();
   displayRecords();
