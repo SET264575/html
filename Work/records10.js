@@ -116,7 +116,7 @@ const toDo = [];
 const awaitingList = [];
 const toDoList = [];
 
-for (let i = 0; i < 16; i++){
+for (let i = 0; i < 17; i++){
 	toDoList[i] = [];
 }
 
