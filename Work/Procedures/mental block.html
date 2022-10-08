@@ -1,9 +1,9 @@
 <html>
   <head>
-    <title>Mental block</title>
+    <title>Mental Nerve Block</title>
   </head>
   <body>
-    <h3>Mental block</h3>
+    <h3>Mental Nerve Block</h3>
 
     <label for = "indication">Indication</label>
     <select id = "indication" onchange="copytext()">
@@ -35,8 +35,12 @@
       <option>10</option>
     </select><br>
 
-    <label for = "site">Site of injection</label>
-    <input type = "text" id = "site" onchange="copytext()"><br>
+    <h4>Side</h4>
+    <input type = "radio" value = "left" name = "side" id = "radio1" onchange = "copytext()">
+    <label id = "radio1" value = "left">Left</label><br>
+    <input type = "radio" value = "right" name = "side" id = "radio2" onchange = "copytext()">
+    <label id = "radio2" value = "right">Right</label><br>
+    
     <input type = "checkbox" name = "aspiration" id = "aspiration"  onchange="copytext()">
     <label for = "aspiration">To avoid injecting into a blood vessel, aspiration was performed prior to injection.</label><br><br>
 
@@ -49,14 +53,14 @@
         var type = "Mental block";
         var anesthetic = document.getElementById("anesthetic").value;
         var dose = document.getElementById("dose").value;
-        var site = document.getElementById("site").value;
+        var side = getRadioButtonValue("side");
         var aspiration = document.getElementById("aspiration").value;
         var t = "Procedure Note: "+type+"\n";
         t = t +"The block was indicated for "+ indication+". ";
         t = t + dose + " cc of ";
         t = t + anesthetic;
-        t = t + " was injected at ";
-        t = t + site+". ";
+        t = t + " was injected on the ";
+        t = t + side +" side. ";
         t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection.";
         t = t + "Adequate anesthesia was achieved. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
