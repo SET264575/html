@@ -28,11 +28,6 @@
       <option>3</option>
       <option>4</option>
       <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <option>8</option>
-      <option>9</option>
-      <option>10</option>
     </select><br>
 
     <h4>Side</h4>
@@ -41,9 +36,6 @@
     <input type = "radio" value = "right" name = "side" id = "radio2" onchange = "copytext()">
     <label id = "radio2" value = "right">Right</label><br>
     
-    <input type = "checkbox" name = "aspiration" id = "aspiration"  onchange="copytext()">
-    <label for = "aspiration">To avoid injecting into a blood vessel, aspiration was performed prior to injection.</label><br><br>
-
     <br>
 
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
@@ -54,14 +46,13 @@
         var anesthetic = document.getElementById("anesthetic").value;
         var dose = document.getElementById("dose").value;
         var side = getRadioButtonValue("side");
-        var aspiration = document.getElementById("aspiration").value;
         var t = "Procedure Note: "+type+"\n";
         t = t +"The block was indicated for "+ indication+". ";
         t = t + dose + " cc of ";
         t = t + anesthetic;
         t = t + " was injected on the ";
         t = t + side +" side. ";
-        t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection.";
+        t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection. ";
         t = t + "Adequate anesthesia was achieved. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
         navigator.clipboard.writeText(t);
