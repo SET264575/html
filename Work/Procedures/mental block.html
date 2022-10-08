@@ -6,12 +6,10 @@
     <h3>Mental block</h3>
 
     <label for = "indication">Indication</label>
-    <input type = "text" id = "indication" onchange="copytext()"><br>
-    <label for="type">Type of block</label>
-    <select id = "type" onchange="copytext()">
-      <option>Digital block</option>
-      <option>Mandibular block</option>
-      <option>Mental block</option>
+    <select id = "indication" onchange="copytext()">
+      <option>laceration repair</option>
+      <option>***</option>
+      <option>***</option>
     </select><br>
 
     <label for="anesthetic">Anesthetic</label>
@@ -54,13 +52,13 @@
         var site = document.getElementById("site").value;
         var aspiration = document.getElementById("aspiration").value;
         var t = "Procedure Note: "+type+"\n";
-        //t = t + "The risks, benefits, and alternatives were discussed with the patient who gave written consent. ";
         t = t +"The block was indicated for "+ indication+". ";
         t = t + dose + " cc of ";
         t = t + anesthetic;
         t = t + " was injected at ";
         t = t + site+". ";
         t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection.";
+        t = t + "Adequate anesthesia was achieved. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
         navigator.clipboard.writeText(t);
         document.getElementById("text").value = t;
