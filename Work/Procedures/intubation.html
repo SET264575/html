@@ -7,7 +7,7 @@
   <body>
     <h3>Intubation</h3>
     
-    <input type = "checkbox" id = "student">
+    <input type = "checkbox" id = "student" onchange="copytext()">
     <label for = "student">The procedure was performed by *** under my direct supervision.  I was present throughout the entire procedure."</label>
     <h4>indication</h4>
     <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
@@ -35,7 +35,6 @@
     <input type = "radio" name = "sedation" value = "2" id = "sedation2" onchange = "copytext()">
     <label for = "2">The patient did not require sedation or paralysis.</label><br>
 <br>
- 
 
     <label for="tube_size">Tube size</label>
     <select id = "tube_size" onchange = "copytext()">
