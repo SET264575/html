@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Inferior Alveolar Nerve Block</title>
+  </head>
+  <body>
+    <h3>Inferior Alveolar Nerve Block</h3>
+
+    <label for = "indication">Indication</label>
+    <select id = "indication" onchange="copytext()">
+      <option>dental pain</option>
+      <option>***</option>
+      <option>***</option>
+    </select><br>
+
+    <label for="anesthetic">Anesthetic</label>
+    <select id = "anesthetic" onchange="copytext()">
+      <option>1% lidocaine</option>
+      <option>1% lidocaine with epinephrine</option>
+      <option>2% lidocaine</option>
+      <option>2% lidocaine with epinephrine</option>
+      <option>bupivicaine</option>
+    </select><br>
+
+    <label for="dose">Dose</label>
+    <select id = "dose" onchange="copytext()">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select><br>
+
+    <label for = "site">Side of injection</label>
+    <input type = "radio" id = "side" onchange="copytext()"><br>
+    <input type = "checkbox" name = "aspiration" id = "aspiration"  onchange="copytext()">
+    <label for = "aspiration">To avoid injecting into a blood vessel, aspiration was performed prior to injection.</label><br><br>
+
+    <br>
+
+    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    <script>
+      function copytext(){
+        var indication = document.getElementById("indication").value;
+        var type = "Mandibular Block";
+        var anesthetic = document.getElementById("anesthetic").value;
+        var dose = document.getElementById("dose").value;
+        var site = document.getElementById("site").value;
+        var aspiration = document.getElementById("aspiration").value;
+        var t = "Procedure Note: "+type+"\n";
+        t = t +"The block was indicated for "+ indication+". ";
+        t = t + dose + " cc of ";
+        t = t + anesthetic;
+        t = t + " was injected at ";
+        t = t + site+". ";
+        t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection.";
+        t = t + "Adequate anesthesia was achieved. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+    </script>
+  </body>
+</html>
