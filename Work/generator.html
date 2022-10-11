@@ -48,9 +48,23 @@
         </td>
         <td style = "border: 1px solid black; border-collapse: collapse; vertical-align: top;">
           <h3>Checkbox</h3>
-          <label for = "label">Title</label>
-          <input type = "text" id = "label"><br>
+          <table>
+            <tr>
+              <td>
+                <label for = "values1">Labels</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <textarea id = "values1"></textarea>
+            </td>
+            </tr>
+            <tr>
+              <td>
           <button onclick = "makeCheckbox()">Add</button><br>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
       <tr>
@@ -131,18 +145,21 @@
       }
 	    
       function makeCheckbox(){
-        var label = document.getElementById("label").value;
+        var values = document.getElementById("values1").value.split('\n');
+        
+        for (let i = 0; i<values.length; i++){
 
-        t = t + '    <input type = "checkbox" id = "checkbox"'+label+'>\n';
-        t = t + '    <label for = "checkbox"'+label+'>'+label+'</label>\n';
-        x = x + "        var "+label + ' = document.getElementById("'+label+'").value;\n';
-	      z = z + '        if ('+label+'){\n';
+        t = t + '    <input type = "checkbox" id = "checkbox'+values[i]+'">\n';
+        t = t + '    <label for = "checkbox'+values[i]+'">'+values[i]+'</label>\n';
+        x = x + "        var "+values[i] + ' = document.getElementById("'+values[i]+'").value;\n';
+	      z = z + '        if ('+values[i]+'){\n';
 	      z = z + '        }\n';
         z = z + '        t = t + ;\n';
+        }
 	      document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
-	              document.getElementById('label').value = '';
+	      document.getElementById('label').value = '';
 	      
       }
 			
