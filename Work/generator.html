@@ -79,7 +79,7 @@
       
       function makeTitle(){
         title1 = document.getElementById("title1").value;
-        t = t + '      <h3>'+title1+'</h3>\n';
+        t = t + '    <h3>'+title1+'</h3>\n';
         document.getElementById('title1').value = '';
       }
       
@@ -109,11 +109,13 @@
       }
 	    
       function makeCheckbox(){
-        var label = document.getElementById("label").value;
-        document.getElementById('label').value = '';
+        var label = document.getElementById("label").checked;
+        document.getElementById('label').checked = None;
         t = t + '    <input type = "checkbox" id = "checkbox"'+label+'>\n';
         t = t + '    <label for = "checkbox"'+label+'>'+label+'</label>\n';
         x = x + "        var "+label + ' = document.getElementById("'+label+'").value;\n';
+	z = z + '        if ('+label+'){\n';
+	z = z + '        }\n';
         z = z + '        t = t + ;\n';
 	      document.getElementById("t").value = t;
         document.getElementById("x").value = x;
