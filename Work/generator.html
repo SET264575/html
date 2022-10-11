@@ -11,7 +11,7 @@
 	      vertical-align: top;
       }
 	    
-     textarea {
+     .textarea {
 			 width:  600px;
 			}
 	 
@@ -52,11 +52,11 @@
       </tr>
     </table>
     <button id = "finalize" onclick = "finalize()">Finalize</button><br>
-    <textarea id = "t"></textarea><br><br>
-    <textarea id = "x"></textarea><br><br>
-    <textarea id = "z"></textarea><br><br>
+    <textarea id = "t" class = ".textarea"></textarea><br><br>
+    <textarea id = "x" class = ".textarea"></textarea><br><br>
+    <textarea id = "z" class = ".textarea"></textarea><br><br>
     
-    <textarea id = "a"></textarea><br>
+    <textarea id = "a" class = ".textarea"></textarea><br>
     
     
     <script>
@@ -66,7 +66,7 @@
       function makeRadioButtons(){
         var title = document.getElementById("title").value;
         var values = document.getElementById("values").value.split('\n');
-				var number = values.length;
+	var number = values.length;
         t = t + "<h3>"+title+"</h3>\n";
         for (let i = 0; i < number; i ++){
           t = t + '<input type = "radio" id = "'+title+String(i)+'" name = "' + title + " value = "+String(i)+">\n";
