@@ -56,10 +56,10 @@
     </table>
     <button id = "finalize" onclick = "finalize()">Finalize</button><br>
     <textarea id = "t" style = "width: 600px; height: 400px;" ></textarea><br><br>
-    <textarea id = "x" class = ".textarea"></textarea><br><br>
-    <textarea id = "z" class = ".textarea"></textarea><br><br>
+    <textarea id = "x" style = "width: 600px; height: 400px;"></textarea><br><br>
+    <textarea id = "z" style = "width: 600px; height: 400px;"></textarea><br><br>
     
-    <textarea id = "a" class = ".textarea"></textarea><br>
+    <textarea id = "a" style = "width: 600px; height: 400px;"></textarea><br>
     
     
     <script>
@@ -100,17 +100,17 @@
         document.getElementById("z").value = z;
       }
 			
-			function makeSelect(){
-				var select_text = document.getElementById("select_text");
-				var values = document.getElementById('select').values.split('\n');
-				t = t + '      <select id = "'+select_text+'">\n';
-				for (i = 0; i < values.length; i++){
-					t = t +          <option>'+values[i]+'</option>\n';
-				}
-				t = t + "      </select>\n";
-				x = x + "      var "+select_text + ' = document.getElementById("'+select_text+'");\n';
-				z = z + "      t = t + ;\n";
-				document.getElementById("t").value = t;
+      function makeSelect(){
+        var select_text = document.getElementById("select_text");
+        var values = document.getElementById('select').values.split('\n');
+        t = t + '      <select id = "'+select_text+'">\n';
+        for (i = 0; i < values.length; i++){
+          t = t +          <option>'+values[i]+'</option>\n';
+        }
+        t = t + "      </select>\n";
+        x = x + "      var "+select_text + ' = document.getElementById("'+select_text+'").value;\n';
+        z = z + "      t = t + ;\n";
+	document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
 			}
@@ -119,7 +119,7 @@
 				var text_text = document.getElementById("text_text").value;
 				t = t + '<label for = "' + text_text + '">\n';
 				t = t + '<input type = "text" id = "' + text_text + '">\n';
-				x = x + "var " + text_text + ' = document.getElementById("'+text_text + '");\n';
+				x = x + "var " + text_text + ' = document.getElementById("'+text_text + '").value;\n';
 				z = z + 't = t + ;\n';
 				document.getElementById("t").value = t;
         document.getElementById("x").value = x;
