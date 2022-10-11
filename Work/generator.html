@@ -5,8 +5,7 @@
       Generator
     </title>
     <style>
-      table,td {
-        border: 1px solid black;
+      td {
         border-collapse: collapse;
 	      vertical-align: top;
       }
@@ -21,22 +20,33 @@
     </style>
   </head>
   <body>
-    <table>
+    <table style = "border: 1px solid black; border-collapse: collapse; vertical-align: top;">
       <tr>
 	      <td>
           <h3>Title</h3>
+          <table><td>
           <label for = "title1">Title</label>
+		  </td><td>
           <input type = "text" id = "title1"><br>
           <button onclick = "makeTitle()">Add</button><br>
+		  </td>
+		      </table>
         </td>
       </tr>
       <tr>
         <td>
           <h3>Radio</h3>
+	<table><tr><td>
           <label for = "title">Title</label>
+		</td><td>
           <input type = "text" id = "title"><br>
+		</td></tr><tr><td>
           <label for = "values">Values</label>
+		</td><td>
           <textarea id = "values"></textarea><br>
+		</td>
+		</tr>
+		</table>
           <button onclick = "makeRadioButtons()">Add</button><br>
         </td>
         <td>
@@ -51,6 +61,7 @@
           <h3>Select</h3>
 	  <label for = "select_text">Label</label>
 	  <input type = "text" id = "select_text"><br>
+	  <label for = "select">Options</label><br>
 	  <textarea id = "select"></textarea><br>
 	  <button onclick="makeSelect()">Add</button><br>
         </td>
