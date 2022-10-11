@@ -90,6 +90,26 @@
         x = x + "var "+label + ' = document.getElementById("'+label+'");\n';
         z = z + 't = t + ;\n';
       }
+			
+			function makeSelect(){
+				var select_text = document.getElementById("select_text");
+				var values = document.getElementById('select').values.split('\n');
+				t = t + '<select id = "'+select_text+">\n';
+				for (i = 0; i < values.length; i++){
+					t = t + '<option>'+values[i]+'</option>\n';
+				}
+				t = t + "</select>\n';
+				x = x + "var "+select_text + " = document.getElementById("'+select_text+'");\n';
+				z = z + "t = t + ;\n";
+			}
+			
+			function makeText(){
+				var text_text = document.getElementById("text_text").value;
+				t = t + '<label for = "' + text_text + '">\n';
+				t = t + '<input type = "text" id = "' + text_text + '">\n';
+				x = x + "var " + text_text + " = document.getElementById("'+text_text + '");\n';
+				z = z + 't = t + ;\n';
+			}
       
       function finalize(){
         var a = t +'\n'+ x +"\n' + z+'\n';
