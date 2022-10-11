@@ -102,7 +102,7 @@
 			
       function makeSelect(){
         var select_text = document.getElementById("select_text");
-        var values = document.getElementById('select').values.split('\n');
+        var values = document.getElementById('select').value.split('\n');
         t = t + '      <select id = "'+select_text+'">\n';
         for (i = 0; i < values.length; i++){
           t = t + '         <option>'+values[i]+'</option>\n';
