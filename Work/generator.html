@@ -91,8 +91,8 @@
 	    
       function makeCheckbox(){
         var label = document.getElementById("label").value;
-        t = t + '      <input type = "checkbox" id = "checkbox" >\n';
-        t = t + '      <label for = "checkbox">'+label+'</label>\n';
+        t = t + '    <input type = "checkbox" id = "checkbox" >\n';
+        t = t + '    <label for = "checkbox">'+label+'</label>\n';
         x = x + "        var "+label + ' = document.getElementById("'+label+'").value;\n';
         z = z + '        t = t + ;\n';
 	document.getElementById("t").value = t;
@@ -117,8 +117,8 @@
 			
       function makeText(){
         var text_text = document.getElementById("text_text").value;
-        t = t + '      <label for = "' + text_text + '">\n';
-        t = t + '      <input type = "text" id = "' + text_text + '">\n';
+        t = t + '        <label for = "' + text_text + '">\n';
+        t = t + '        <input type = "text" id = "' + text_text + '">\n';
         x = x + "         var " + text_text + ' = document.getElementById("'+text_text + '").value;\n';
         z = z + '         t = t + ;\n';
         document.getElementById("t").value = t;
