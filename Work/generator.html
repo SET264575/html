@@ -74,7 +74,7 @@
           t = t + '<label for = "'+title+'">\n';
         }
         
-        x = x + "var "+title+' = document.getElementById("'+title+'");\n';
+        x = x + "var "+title+' = getRadioButtonValue("'+title+'");\n';
         z = z + "switch("+title+"){\n";
         for (let i = 0; i< number; i ++){
           z = z + "  case "+values[i]+'":\n';
@@ -92,8 +92,11 @@
         var label = document.getElementById("label").value;
         t = t + '<input type = "checkbox" id = "checkbox" >\n';
         t = t + '<label for = "checkbox">'+label+'>\n';
-        x = x + "var "+label + ' = document.getElementById("'+label+'");\n';
+        x = x + "var "+label + ' = document.getElementById("'+label+'").value;\n';
         z = z + 't = t + ;\n';
+	      document.getElementById("t").value = t;
+        document.getElementById("x").value = x;
+        document.getElementById("z").value = z;
       }
 			
 			function makeSelect(){
@@ -106,6 +109,9 @@
 				t = t + "</select>\n";
 				x = x + "var "+select_text + ' = document.getElementById("'+select_text+'");\n';
 				z = z + "t = t + ;\n";
+				document.getElementById("t").value = t;
+        document.getElementById("x").value = x;
+        document.getElementById("z").value = z;
 			}
 			
 			function makeText(){
@@ -114,12 +120,17 @@
 				t = t + '<input type = "text" id = "' + text_text + '">\n';
 				x = x + "var " + text_text + ' = document.getElementById("'+text_text + '");\n';
 				z = z + 't = t + ;\n';
+				document.getElementById("t").value = t;
+        document.getElementById("x").value = x;
+        document.getElementById("z").value = z;
 			}
       
       function finalize(){
         var a = "<html>\n<head>\n<title></title>\n</head>\n<body>\n"+t +'\n';
-	a = a + "<script>\nfunction (){\n" + x + '\n' + z+'\n}\n';
-	a = a + "</body>\n</html>";
+	      a = a + "<script>\nfunction (){\n" + x + '\n' + z+'\n}\n';
+				a = a + '      function getRadioValue(id) {\n      	var ele = document.getElementsByName(id);\n        var value = "";\n\
+for(i = 0; i < ele.length; i++) {\n        	if(ele[i].checked){\n                	value = ele[i].value;\n		      }\n       }\n	      return(value);\n      }\n";
+	      a = a + "</body>\n</html>";
         document.getElementById("a").value = a;
       }
       
@@ -129,11 +140,10 @@
         for(i = 0; i < ele.length; i++) {
         	if(ele[i].checked){
                 	value = ele[i].value;
-			console.log(value);
-		}
-            }
-	return(value);
+		      }
         }
+	      return(value);
+      }
     </script>
   </body>
 </html>
