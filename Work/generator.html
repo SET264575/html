@@ -17,9 +17,7 @@
           <h3>Radio</h3>
           <label for = "title">Title</label>
           <input type = "text" id = "title">
-          <label for = "number">Number</label><br>
-          <input type = "text" id = "number">
-          <label for = "values">Values</label><br>
+          <label for = "values">Values</label>
           <textarea id = "values"></textarea><br>
           <button onclick = "makeRadioButtons()">Add</button><br>
         </td>
@@ -33,6 +31,9 @@
       <tr>
         <td>
           <h3>Select</h3>
+		<textarea id = "select"></textarea>
+		
+		
         </td>
         <td>
           <h3>Text</h3>
@@ -53,8 +54,8 @@
       var z = "";  //create text
       function makeRadioButtons(){
         var title = document.getElementById("title").value;
-        var number = document.getElemntById("number").value;
         var values = document.getElementById("values").value.split('\n');
+	var number = values.length;
         t = t + "<h3>"+title+"</h3>\n";
         for (let i = 0; i < number; i ++){
           t = t + '<input type = "radio" id = "'+title+String(i)+'" name = "' + title + " value = "+String(i)+">\n";
