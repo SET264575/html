@@ -39,9 +39,13 @@
         </td>
       </tr>
     </table>
-    <textarea id = "t"></textarea><br>
-    <textarea id = "x"></textarea><br>
-    <textarea id = "z"></textarea><br>
+    <button id = "finalize" onclick = "finalize()">Finalize</button><br>
+    <textarea id = "t"></textarea><br><br>
+    <textarea id = "x"></textarea><br><br>
+    <textarea id = "z"></textarea><br><br>
+    
+    <textarea id = "a"></textarea><br>
+    
     
     <script>
       var t = "";  //inputs
@@ -49,7 +53,7 @@
       var z = "";  //create text
       function makeRadioButtons(){
         var title = document.getElementById("title").value;
-        var number = document.getEleemntById("number").value;
+        var number = document.getElemntById("number").value;
         var values = document.getElementById("values").value.split('\n');
         t = t + "<h3>"+title+"</h3>\n";
         for (let i = 0; i < number; i ++){
@@ -78,6 +82,23 @@
         x = x + "var "+label + ' = document.getElementById("'+label+'");\n';
         z = z + 't = t + ;\n';
       }
+      
+      function finalize(){
+        var a = t +'\n'+ x +"\n' + z+'\n';
+        document.getElementById("a").value = a;
+      }
+      
+      function getRadioValue(id) {
+            var ele = document.getElementsByName(id);
+            var value = "";
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked){
+                	value = ele[i].value;
+			console.log(value);
+		}
+            }
+	return(value);
+        }
     </script>
   </body>
 </html>
