@@ -85,16 +85,15 @@
         document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
-        
-        
       }
+	    
       function makeCheckbox(){
         var label = document.getElementById("label").value;
-        t = t + '<input type = "checkbox" id = "checkbox" >\n';
-        t = t + '<label for = "checkbox">'+label+'>\n';
-        x = x + "var "+label + ' = document.getElementById("'+label+'").value;\n';
-        z = z + 't = t + ;\n';
-	      document.getElementById("t").value = t;
+        t = t + '      <input type = "checkbox" id = "checkbox" >\n';
+        t = t + '      <label for = "checkbox">'+label+'>\n';
+        x = x + "        var "+label + ' = document.getElementById("'+label+'").value;\n';
+        z = z + '        t = t + ;\n';
+	document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
       }
@@ -126,7 +125,7 @@
 			}
       
       function finalize(){
-        var a = "<html>\n<head>\n<title></title>\n</head>\n<body>\n"+t +'\n';
+        var a = "<html>\n  <head>\n    <title></title>\n  </head>\n  <body>\n"+t +'\n';
 	      a = a + "<script>\nfunction (){\n" + x + '\n' + z+'\n}\n';
 				a = a + '      function getRadioValue(id) {\n      	var ele = document.getElementsByName(id);\n        var value = "";\n\
 for(i = 0; i < ele.length; i++) {\n        	if(ele[i].checked){\n                	value = ele[i].value;\n		      }\n       }\n	      return(value);\n      }\n";
