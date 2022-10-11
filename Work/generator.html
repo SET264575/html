@@ -113,24 +113,24 @@
 	document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
-			}
+      }
 			
-			function makeText(){
-				var text_text = document.getElementById("text_text").value;
-				t = t + '<label for = "' + text_text + '">\n';
-				t = t + '<input type = "text" id = "' + text_text + '">\n';
-				x = x + "var " + text_text + ' = document.getElementById("'+text_text + '").value;\n';
-				z = z + 't = t + ;\n';
-				document.getElementById("t").value = t;
+      function makeText(){
+        var text_text = document.getElementById("text_text").value;
+        t = t + '      <label for = "' + text_text + '">\n';
+        t = t + '      <input type = "text" id = "' + text_text + '">\n';
+        x = x + "         var " + text_text + ' = document.getElementById("'+text_text + '").value;\n';
+        z = z + '         t = t + ;\n';
+        document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
-			}
+      }
       
       function finalize(){
         var a = "<html>\n  <head>\n    <title></title>\n  </head>\n  <body>\n"+t +'\n';
-	      a = a + "    <script>\nfunction (){\n" + x + '\n' + z+'\n}\n';
-				a = a + '      function getRadioValue(id) {\n      	var ele = document.getElementsByName(id);\n        var value = "";\n\
-for(i = 0; i < ele.length; i++) {\n        	if(ele[i].checked){\n                	value = ele[i].value;\n		      }\n       }\n	      return(value);\n      }\n';
+        a = a + "    <script>\nfunction (){\n" + x + '\n' + z+'\n}\n';
+        a = a + '      function getRadioValue(id) {\n      	var ele = document.getElementsByName(id);\n        var value = "";\n\
+      for(i = 0; i < ele.length; i++) {\n        	if(ele[i].checked){\n                	value = ele[i].value;\n		      }\n       }\n	      return(value);\n      }\n';
 	      a = a + "</body>\n</html>";
         document.getElementById("a").value = a;
       }
