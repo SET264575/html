@@ -62,7 +62,7 @@
       function makeRadioButtons(){
         var title = document.getElementById("title").value;
         var values = document.getElementById("values").value.split('\n');
-	var number = values.length;
+				var number = values.length;
         t = t + "<h3>"+title+"</h3>\n";
         for (let i = 0; i < number; i ++){
           t = t + '<input type = "radio" id = "'+title+String(i)+'" name = "' + title + " value = "+String(i)+">\n";
@@ -72,7 +72,7 @@
         x = x + "var "+title+' = document.getElementById("'+title+'");\n';
         z = z + "switch("+title+"){\n";
         for (let i = 0; i< number; i ++){
-          z = z + "  case "+values[i]+'":\n";
+          z = z + "  case "+values[i]+'":\n';
           z = z + "    t = t + "+values[i]+";\n";
           z = z + "    break;\n";
         }
