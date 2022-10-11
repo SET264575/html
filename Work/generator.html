@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <title>
@@ -31,7 +32,10 @@
       <tr>
         <td>
           <h3>Select</h3>
-		<textarea id = "select"></textarea>
+					<label for = "select_text">Label<\label>
+					<input type = "text" id = "select_text"><br>
+					<textarea id = "select"></textarea><br>
+						<button onclick="makeSelect()">Add</button><br>
 		
 		
         </td>
@@ -90,10 +94,10 @@
       }
       
       function getRadioValue(id) {
-            var ele = document.getElementsByName(id);
-            var value = "";
-            for(i = 0; i < ele.length; i++) {
-                if(ele[i].checked){
+      	var ele = document.getElementsByName(id);
+        var value = "";
+        for(i = 0; i < ele.length; i++) {
+        	if(ele[i].checked){
                 	value = ele[i].value;
 			console.log(value);
 		}
