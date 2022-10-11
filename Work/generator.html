@@ -167,11 +167,11 @@
         var values = document.getElementById('select').value.split('\n');
         document.getElementById('select_text').value = '';
         document.getElementById("select").value = '';
-        t = t + '      <select id = "'+select_text+'">\n';
+        t = t + '    <select id = "'+select_text+'">\n';
         for (i = 0; i < values.length; i++){
-          t = t + '         <option>'+values[i]+'</option>\n';
+          t = t + '       <option>'+values[i]+'</option>\n';
         }
-        t = t + "      </select>\n";
+        t = t + "    </select>\n";
         x = x + "      var "+select_text + ' = document.getElementById("'+select_text+'").value;\n';
         z = z + "      t = t + ;\n";
 	      document.getElementById("t").value = t;
@@ -181,7 +181,7 @@
 			
       function makeText(){
         var text_text = document.getElementById("text_text").value;
-        document.getElemetById('text_text').value = '';
+        document.getElementById('text_text').value = '';
         t = t + '        <label for = "' + text_text + '">\n';
         t = t + '        <input type = "text" id = "' + text_text + '">\n';
         x = x + "         var " + text_text + ' = document.getElementById("'+text_text + '").value;\n';
