@@ -121,7 +121,7 @@
 	    
       function makeCheckbox(){
         var label = document.getElementById("label").checked;
-        document.getElementById('label').checked = None;
+        document.getElementById('label').checked = false;
         t = t + '    <input type = "checkbox" id = "checkbox"'+label+'>\n';
         t = t + '    <label for = "checkbox"'+label+'>'+label+'</label>\n';
         x = x + "        var "+label + ' = document.getElementById("'+label+'").value;\n';
