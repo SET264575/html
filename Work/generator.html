@@ -14,6 +14,8 @@
      .textarea {
 			 width:  600px;
 	     height:  400px;
+	     rows = 10;
+	     cols = 100;
 			}
 	 
     </style>
@@ -78,7 +80,7 @@
         z = z + "    switch("+title+"){\n";
         for (let i = 0; i< number; i ++){
           z = z + "      case "+values[i]+'":\n';
-          z = z + "        t = t + "+values[i]+";\n";
+          z = z + '        t = t + "'+values[i]+'";\n';
           z = z + "        break;\n";
         }
         z = z + "    }\n\n";
@@ -126,7 +128,7 @@
       
       function finalize(){
         var a = "<html>\n  <head>\n    <title></title>\n  </head>\n  <body>\n"+t +'\n';
-	      a = a + "<script>\nfunction (){\n" + x + '\n' + z+'\n}\n';
+	      a = a + "    <script>\nfunction (){\n" + x + '\n' + z+'\n}\n';
 				a = a + '      function getRadioValue(id) {\n      	var ele = document.getElementsByName(id);\n        var value = "";\n\
 for(i = 0; i < ele.length; i++) {\n        	if(ele[i].checked){\n                	value = ele[i].value;\n		      }\n       }\n	      return(value);\n      }\n';
 	      a = a + "</body>\n</html>";
