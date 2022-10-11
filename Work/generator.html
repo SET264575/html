@@ -92,7 +92,7 @@
       function makeCheckbox(){
         var label = document.getElementById("label").value;
         t = t + '      <input type = "checkbox" id = "checkbox" >\n';
-        t = t + '      <label for = "checkbox">'+label+'>\n';
+        t = t + '      <label for = "checkbox">'+label+'</label>\n';
         x = x + "        var "+label + ' = document.getElementById("'+label+'").value;\n';
         z = z + '        t = t + ;\n';
 	document.getElementById("t").value = t;
@@ -103,13 +103,13 @@
 			function makeSelect(){
 				var select_text = document.getElementById("select_text");
 				var values = document.getElementById('select').values.split('\n');
-				t = t + '<select id = "'+select_text+'">\n';
+				t = t + '      <select id = "'+select_text+'">\n';
 				for (i = 0; i < values.length; i++){
-					t = t + '<option>'+values[i]+'</option>\n';
+					t = t +          <option>'+values[i]+'</option>\n';
 				}
-				t = t + "</select>\n";
-				x = x + "var "+select_text + ' = document.getElementById("'+select_text+'");\n';
-				z = z + "t = t + ;\n";
+				t = t + "      </select>\n";
+				x = x + "      var "+select_text + ' = document.getElementById("'+select_text+'");\n';
+				z = z + "      t = t + ;\n";
 				document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
