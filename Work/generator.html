@@ -18,6 +18,18 @@
           <button onclick = "makeRadioButtons()">Add</button>
         </td>
         <td>
+          <h3>Checkbox</h3>
+          <label for = "label">Title</label>
+          <input type = "text" id = "label">
+          <button onclick = "makeCheckbox()">Add</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Select</h3>
+        </td>
+        <td>
+          <h3>Text</h3>
         </td>
       </tr>
     </table>
@@ -52,6 +64,13 @@
         document.getElementById("z").value = z;
         
         
+      }
+      function makeCheckbox(){
+        var label = document.getElementById("label").value;
+        t = t + '<input type = "checkbox" id = "checkbox" >\n';
+        t = t + '<label for = "checkbox">'+label+'>\n';
+        x = x + "var "+label + ' = document.getElementById("'+label+'");\n';
+        z = z + 't = t + ;\n';
       }
     </script>
   </body>
