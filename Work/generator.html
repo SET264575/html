@@ -62,6 +62,7 @@
         </td>
       </tr>
     </table>
+	  <br>
     <button id = "finalize" onclick = "finalize()">Finalize</button><br>
     <textarea id = "t" style = "width: 600px; height: 400px;" ></textarea><br><br>
     <textarea id = "x" style = "width: 600px; height: 400px;"></textarea><br><br>
@@ -78,7 +79,7 @@
       
       function makeTitle(){
         title1 = document.getElementById("title1").value;
-        t = t + '<h3>'+title1+'</h3>\n';
+        t = t + '      <h3>'+title1+'</h3>\n';
         document.getElementById('title1').value = '';
       }
       
