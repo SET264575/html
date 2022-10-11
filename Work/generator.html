@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>
+      Generator
+    </title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <h3>Radio</h3>
+          <label for = "title">Title</label>
+          <input type = "text" id = "title">
+          <label for = "number">Number</label>
+          <input type = "text" id = "number">
+          <label for = "values">Values</label>
+          <textarea id = "values"></textarea>
+          <button onclick = "makeRadioButtons()">Add</button>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+    <textarea id = "t"></textarea><br>
+    <textarea id = "x"></textarea><br>
+    <textarea id = "z"></textarea><br>
+    
+    <script>
+      var t = "";  //inputs
+      var x = "";  //variables
+      var z = "";  //create text
+      function makeRadioButtons(){
+        var title = document.getElementById("title").value;
+        var number = document.getEleemntById("number").value;
+        var values = document.getElementById("values").value;
+        t = t + "<h3>"+title+"</h3>\n";
+        for (let i = 0; i < number; i ++){
+          t = t + '<input type = "radio" id = "'+title+String(i)+'" name = "' + title + " value = "+String(i)+">\n";
+          t = t + '<label for = "'+title+'">\n';
+        }
+        
+        x = x + "var "+title+' = document.getElementById("'+title+'");\n";
+        z = z + "switch("+title+"){\n";
+        for (let i = 0; i< number; i ++){
+          z = z + "  case "+String(i)+'":\n";
+          z = z + "    t = t + ;\n";
+          z = z + "    break;\n";
+        }
+        z = z + "}\n\n";
+        document.getElementById("t").value = t;
+        document.getElementById("x").value = x;
+        document.getElementById("z").value = z;
+        
+        
+      }
+    </script>
+  </body>
+</html>
+        
+        
+        
+    
+    
