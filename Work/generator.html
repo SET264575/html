@@ -59,6 +59,14 @@
             </tr>
             <tr>
               <td>
+                <label for = "labels2">Labels</label>
+              </td>
+              <td>
+                <textarea id = "labels2"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>
           <button onclick = "makeCheckbox()">Add</button><br>
               </td>
             </tr>
@@ -144,11 +152,12 @@
 	    
       function makeCheckbox(){
         var values = document.getElementById("values1").value.split('\n');
+        var labels = document.getElementById("labels2").value.split('\n');
         
         for (let i = 0; i<values.length; i++){
 
         t = t + '    <input type = "checkbox" id = "checkbox'+values[i]+'">\n';
-        t = t + '    <label for = "checkbox'+values[i]+'">'+values[i]+'</label>\n';
+        t = t + '    <label for = "checkbox'+values[i]+'">'+labels[i]+'</label>\n';
         x = x + "        var "+values[i] + ' = document.getElementById("'+values[i]+'").value;\n';
 	z = z + '        if ('+values[i]+'){\n';
 	z = z + '        t = t + ;\n';
