@@ -8,7 +8,13 @@
       table,td {
         border: 1px solid black;
         border-collapse: collapse;
+	      vertical-align: top;
       }
+	    
+     textarea {
+			 width:  600px;
+			}
+	 
     </style>
   </head>
   <body>
@@ -32,18 +38,16 @@
       <tr>
         <td>
           <h3>Select</h3>
-					<label for = "select_text">Label</label>
-					<input type = "text" id = "select_text"><br>
-					<textarea id = "select"></textarea><br>
-					<button onclick="makeSelect()">Add</button><br>
-		
-		
+	  <label for = "select_text">Label</label>
+	  <input type = "text" id = "select_text"><br>
+	  <textarea id = "select"></textarea><br>
+	  <button onclick="makeSelect()">Add</button><br>
         </td>
         <td>
           <h3>Text</h3>
-					<label for = "text_text">Label</label>
-					<input type = "text" id = "text_text"><br>
-					<button onclick = "makeText()">Add</button><br>
+	  <label for = "text_text">Label</label>
+	  <input type = "text" id = "text_text"><br>
+	  <button onclick = "makeText()">Add</button><br>
         </td>
       </tr>
     </table>
