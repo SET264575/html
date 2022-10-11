@@ -94,12 +94,12 @@
 			function makeSelect(){
 				var select_text = document.getElementById("select_text");
 				var values = document.getElementById('select').values.split('\n');
-				t = t + '<select id = "'+select_text+">\n';
+				t = t + '<select id = "'+select_text+'">\n';
 				for (i = 0; i < values.length; i++){
 					t = t + '<option>'+values[i]+'</option>\n';
 				}
 				t = t + "</select>\n';
-				x = x + "var "+select_text + " = document.getElementById("'+select_text+'");\n';
+				x = x + "var "+select_text + ' = document.getElementById("'+select_text+'");\n';
 				z = z + "t = t + ;\n";
 			}
 			
