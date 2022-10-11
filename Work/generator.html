@@ -117,7 +117,9 @@
 			}
       
       function finalize(){
-        var a = t +'\n'+ x + '\n' + z+'\n';
+        var a = "<html>\n<head>\n<title></title>\n</head>\n<body>\n"+t +'\n';
+	a = a + "<script>\nfunction (){\n" + x + '\n' + z+'\n}\n';
+	a = a + "</body>\n</html>";
         document.getElementById("a").value = a;
       }
       
