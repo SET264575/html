@@ -53,8 +53,6 @@
               <td>
                 <label for = "values1">Labels</label>
               </td>
-            </tr>
-            <tr>
               <td>
               <textarea id = "values1"></textarea>
             </td>
@@ -152,9 +150,10 @@
         t = t + '    <input type = "checkbox" id = "checkbox'+values[i]+'">\n';
         t = t + '    <label for = "checkbox'+values[i]+'">'+values[i]+'</label>\n';
         x = x + "        var "+values[i] + ' = document.getElementById("'+values[i]+'").value;\n';
-	      z = z + '        if ('+values[i]+'){\n';
-	      z = z + '        }\n';
-        z = z + '        t = t + ;\n';
+	z = z + '        if ('+values[i]+'){\n';
+	z = z + '        t = t + ;\n';
+	z = z + '        }\n';
+
         }
 	      document.getElementById("t").value = t;
         document.getElementById("x").value = x;
