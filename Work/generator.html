@@ -92,7 +92,7 @@
         t = t + "    <h3>"+title+"</h3>\n";
         for (let i = 0; i < number; i ++){
           t = t + '    <input type = "radio" id = "'+title+String(i)+'" name = "' + title + '" value = "'+String(i)+'">\n';
-          t = t + '    <label for = "'+title+String(i)+'">'+value[i]+'</label>\n';
+          t = t + '    <label for = "'+title+String(i)+'">'+values[i]+'</label>\n';
         }
         
         x = x + "    var "+title+' = getRadioButtonValue("'+title+'");\n';
