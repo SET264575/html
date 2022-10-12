@@ -1,57 +1,165 @@
+<!--
+Label CHADS VAsc and HAS bled
+link duplicates
+text
+
+
+-->
+
 <html>
   <head>
-    Atrial fibrillation
+    <title></title>
   </head>
   <body>
     <h3>Atrial fibrillation</h3>
-    <h4>CHA2DS2-Vasc score</h4>
-    <h5>Sex</h5>
-    <input type = "radio" id = "male" name="sex" onchange = "copytext()" value = "0">
-    <label for="male">Male</label><br>
-    <input type = "radio" id = "female" name="sex" onchange = "copytext()" value = "1">
-    <label for="female">Female</label><br><br>
-    
-    <h5>Age</h5>
-    <input type = "radio" id = "young" name="age" onchange = "copytext()" value = "0">
-    <label for="young">less than 65</label><br>
-    <input type = "radio" id = "medium" name="age" onchange = "copytext()" value = "1">
-    <label for="medium">65-74</label><br><br>
-    <input type = "radio" id = "old" name="age" onchange = "copytext()" value = "2">
-    <label for="old">75 or older</label><br>
+    <h3>Age</h3>
+    <input type = "radio" id = "Age0" name = "Age" value = "0" onchange = "copytext()">
+    <label for = "Age0">Less than 65</label>
+    <input type = "radio" id = "Age1" name = "Age" value = "1" onchange = "copytext()">
+    <label for = "Age1">65-74</label>
+    <input type = "radio" id = "Age2" name = "Age" value = "2" onchange = "copytext()">
+    <label for = "Age2">75 or older</label>
+    <input type = "checkbox" id = "checkboxfemale" onchange = "copytext()">
+    <label for = "checkboxfemale">Is the patient female?</label>
+    <input type = "checkbox" id = "checkboxchf" onchange = "copytext()">
+    <label for = "checkboxchf">History of CHF</label>
+    <input type = "checkbox" id = "checkboxhtn" onchange = "copytext()">
+    <label for = "checkboxhtn">History of Hypertension</label>
+    <input type = "checkbox" id = "checkboxcva" onchange = "copytext()">
+    <label for = "checkboxcva">History of stroke, TIA or thromboembolism</label>
+    <input type = "checkbox" id = "checkboxvasc" onchange = "copytext()">
+    <label for = "checkboxvasc">History of vascular disease, such as MI, PVD or aortic plaque</label>
+    <input type = "checkbox" id = "checkboxdm" onchange = "copytext()">
+    <label for = "checkboxdm">History of diabetes</label>
+    <input type = "checkbox" id = "checkboxhtn" onchange = "copytext()">
+    <label for = "checkboxhtn">Uncontrolled hypertension, > 160 mm systolic</label>
+    <input type = "checkbox" id = "checkboxrenal" onchange = "copytext()">
+    <label for = "checkboxrenal">Renal disease: dialysis, Cr > 2.26</label>
+    <input type = "checkbox" id = "checkboxliver" onchange = "copytext()">
+    <label for = "checkboxliver">Liver disease: cirrhosis or bilirubin > 2x normal with AST/ALT/AP > 3x normal</label>
+    <input type = "checkbox" id = "checkboxstroke" onchange = "copytext()">
+    <label for = "checkboxstroke">Stroke history</label>
+    <input type = "checkbox" id = "checkboxbleeding" onchange = "copytext()">
+    <label for = "checkboxbleeding">Prior major bleeding or predisposition to bleeding</label>
+    <input type = "checkbox" id = "checkboxinr" onchange = "copytext()">
+    <label for = "checkboxinr">Labile INR</label>
+    <input type = "checkbox" id = "checkboxage" onchange = "copytext()">
+    <label for = "checkboxage">Age > 65</label>
+    <input type = "checkbox" id = "checkboxmeds" onchange = "copytext()">
+    <label for = "checkboxmeds">Medication use predisposing to bleeding:  aspirin, Plavix, NSAIDs</label>
+    <input type = "checkbox" id = "checkboxalcohol" onchange = "copytext()">
+    <label for = "checkboxalcohol">Alcohol use: >= 8 drinks/week</label>
 
-    <input type = "checkbox" id = "chf" name="chf" onchange = "copytext()">
-    <label for="chf">History of CHF</label><br>
-    
-    <input type = "checkbox" id = "htn" onchange = "copytext()">
-    <label for="htn">History of HYPERTENSION</label><br>
-
-    
-    <input type = "checkbox" id = "cva" onchange = "copytext()">
-    <label for="cva">History of STROKE, TIA or thromboembolism</label><br>
-    
-    
-    <input type = "checkbox" id = "mi"  onchange = "copytext()">
-    <label for="mi">History of VASCULAR disease, such as previous MI, peripheral artery disease or aortic plaque</label><br>
-    
-    
-    <input type = "checkbox" id = "dm" onchange = "copytext()">
-    <label for="dm">History of DIABETES</label><br>
-    
-    <h4>HAS-BLED</h4>
-    
-    
+    <textarea id = "textarea"></textarea>
     <script>
       function copytext(){
-        
+      var score = 0;    var Age = getRadioButtonValue("Age");
+        var female = document.getElementById("female").value;
+        var chf = document.getElementById("chf").value;
+        var htn = document.getElementById("htn").value;
+        var cva = document.getElementById("cva").value;
+        var vasc = document.getElementById("vasc").value;
+        var dm = document.getElementById("dm").value;
+        var htn = document.getElementById("htn").value;
+        var renal = document.getElementById("renal").value;
+        var liver = document.getElementById("liver").value;
+        var stroke = document.getElementById("stroke").value;
+        var bleeding = document.getElementById("bleeding").value;
+        var inr = document.getElementById("inr").value;
+        var age = document.getElementById("age").value;
+        var meds = document.getElementById("meds").value;
+        var alcohol = document.getElementById("alcohol").value;
+
+    switch(Age){
+      case "Less than 65":
+        t = t + "Less than 65";
+        score = score + 0;
+        break;
+      case "65-74":
+        t = t + "65-74";
+        score = score + 0;
+        break;
+      case "75 or older":
+        t = t + "75 or older";
+        score = score + 0;
+        break;
+    }
+
+        if (female){
+          t = t + "";
+          score = score + 1;
+        }
+        if (chf){
+          t = t + "";
+          score = score + 1;
+        }
+        if (htn){
+          t = t + "";
+          score = score + 1;
+        }
+        if (cva){
+          t = t + "";
+          score = score + 1;
+        }
+        if (vasc){
+          t = t + "";
+          score = score + 1;
+        }
+        if (dm){
+          t = t + "";
+          score = score + 1;
+        }
+        if (htn){
+          t = t + "";
+          score = score + 1;
+        }
+        if (renal){
+          t = t + "";
+          score = score + 1;
+        }
+        if (liver){
+          t = t + "";
+          score = score + 1;
+        }
+        if (stroke){
+          t = t + "";
+          score = score + 1;
+        }
+        if (bleeding){
+          t = t + "";
+          score = score + 1;
+        }
+        if (inr){
+          t = t + "";
+          score = score + 1;
+        }
+        if (age){
+          t = t + "";
+          score = score + 1;
+        }
+        if (meds){
+          t = t + "";
+          score = score + 1;
+        }
+        if (alcohol){
+          t = t + "";
+          score = score + 1;
+        }
+
+      navigator.clipboard.writeText(t);
+        document.getElementById("textarea").value = t;
+      }
+
+    function getRadioValue(id) {
+     var ele = document.getElementsByName(id);
+      var value = "";
+        for(i = 0; i < ele.length; i++) {
+          if(ele[i].checked){
+            value = ele[i].value;
+          }
+       }
+       return(value);
       }
     </script>
   </body>
-</html> 
-
-
-
-
- 
-
-    
-    
+</html>
