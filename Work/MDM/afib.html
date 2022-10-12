@@ -1,58 +1,48 @@
-<!--
-Label CHADS VAsc and HAS bled
-link duplicates
-text
-
-
--->
-
 <html>
   <head>
-    <title>A fib</title>
+    <title></title>
   </head>
   <body>
     <h3>Atrial fibrillation</h3>
-    <h4>CHADS-Vasc score</h4>
-    <h5>Age</h5>
+    <h3>Age</h3>
     <input type = "radio" id = "Age0" name = "Age" value = "0" onchange = "copytext()">
-    <label for = "Age0">Less than 65</label>
+    <label for = "Age0">Less than 65</label><br>
     <input type = "radio" id = "Age1" name = "Age" value = "1" onchange = "copytext()">
-    <label for = "Age1">65-74</label>
+    <label for = "Age1">65-74</label><br>
     <input type = "radio" id = "Age2" name = "Age" value = "2" onchange = "copytext()">
-    <label for = "Age2">75 or older</label>
+    <label for = "Age2">75 or older</label><br>
     <input type = "checkbox" id = "checkboxfemale" onchange = "copytext()">
-    <label for = "checkboxfemale">Is the patient female?</label>
+    <label for = "checkboxfemale">Is the patient female?</label><br><br>
     <input type = "checkbox" id = "checkboxchf" onchange = "copytext()">
-    <label for = "checkboxchf">History of CHF</label>
+    <label for = "checkboxchf">History of CHF</label><br><br>
     <input type = "checkbox" id = "checkboxhtn" onchange = "copytext()">
-    <label for = "checkboxhtn">History of Hypertension</label>
+    <label for = "checkboxhtn">History of Hypertension</label><br><br>
     <input type = "checkbox" id = "checkboxcva" onchange = "copytext()">
-    <label for = "checkboxcva">History of stroke, TIA or thromboembolism</label>
+    <label for = "checkboxcva">History of Stroke, TIA or thromboembolism</label><br><br>
     <input type = "checkbox" id = "checkboxvasc" onchange = "copytext()">
-    <label for = "checkboxvasc">History of vascular disease, such as MI, PVD or aortic plaque</label>
+    <label for = "checkboxvasc">History of Vascular disease, such as MI, PVD or aortic plaque</label><br><br>
     <input type = "checkbox" id = "checkboxdm" onchange = "copytext()">
-    <label for = "checkboxdm">History of diabetes</label>
+    <label for = "checkboxdm">History of diabetes</label><br><br>
     <input type = "checkbox" id = "checkboxhtn" onchange = "copytext()">
-    <h5>HAS-BLED score</h5>
-    <label for = "checkboxhtn">Uncontrolled hypertension, > 160 mm systolic</label>
+    <label for = "checkboxhtn">Uncontrolled hypertension, >=160 mmHg systolic</label><br><br>
     <input type = "checkbox" id = "checkboxrenal" onchange = "copytext()">
-    <label for = "checkboxrenal">Renal disease: dialysis, Cr > 2.26</label>
+    <label for = "checkboxrenal">Renal disease: dialysis, Cr > 2.26</label><br><br>
     <input type = "checkbox" id = "checkboxliver" onchange = "copytext()">
-    <label for = "checkboxliver">Liver disease: cirrhosis or bilirubin > 2x normal with AST/ALT/AP > 3x normal</label>
+    <label for = "checkboxliver">Liver disease: cirrhosis or bilirubin > 2x normal with AST/ALT/AP > 3x normal</label><br><br>
     <input type = "checkbox" id = "checkboxstroke" onchange = "copytext()">
-    <label for = "checkboxstroke">Stroke history</label>
+    <label for = "checkboxstroke">Stroke history</label><br><br>
     <input type = "checkbox" id = "checkboxbleeding" onchange = "copytext()">
-    <label for = "checkboxbleeding">Prior major bleeding or predisposition to bleeding</label>
+    <label for = "checkboxbleeding">Prior major bleeding or predisposition to bleeding</label><br><br>
     <input type = "checkbox" id = "checkboxinr" onchange = "copytext()">
-    <label for = "checkboxinr">Labile INR</label>
+    <label for = "checkboxinr">Labile INR</label><br><br>
     <input type = "checkbox" id = "checkboxage" onchange = "copytext()">
-    <label for = "checkboxage">Age > 65</label>
+    <label for = "checkboxage">Age > 65</label><br><br>
     <input type = "checkbox" id = "checkboxmeds" onchange = "copytext()">
-    <label for = "checkboxmeds">Medication use predisposing to bleeding:  aspirin, Plavix, NSAIDs</label>
+    <label for = "checkboxmeds">Medication usage predisposing to bleeding: Aspirin, Plavix, NSAIDs</label><br><br>
     <input type = "checkbox" id = "checkboxalcohol" onchange = "copytext()">
-    <label for = "checkboxalcohol">Alcohol use: >= 8 drinks/week</label>
+    <label for = "checkboxalcohol">Alcohol use >= 8 drinks/week</label><br><br>
 
-    <textarea id = "textarea"></textarea>
+    <textarea id = "textarea" style = "rows: 10; cols: 100;"></textarea>
     <script>
       function copytext(){
       var score = 0;    var Age = getRadioButtonValue("Age");
