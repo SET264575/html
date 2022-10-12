@@ -50,21 +50,21 @@
         var Cscore = 0;    
         var Hscore = 0;
         var Age = getRadioButtonValue("Age");
-        var female = document.getElementById("female").value;
-        var chf = document.getElementById("chf").value;
-        var htn = document.getElementById("htn").value;
-        var cva = document.getElementById("cva").value;
-        var vasc = document.getElementById("vasc").value;
-        var dm = document.getElementById("dm").value;
-        var htn1 = document.getElementById("htn1").value;
-        var renal = document.getElementById("renal").value;
-        var liver = document.getElementById("liver").value;
-        var stroke = document.getElementById("stroke").value;
-        var bleeding = document.getElementById("bleeding").value;
-        var inr = document.getElementById("inr").value;
-        var age1 = document.getElementById("age1").value;
-        var meds = document.getElementById("meds").value;
-        var alcohol = document.getElementById("alcohol").value;
+        var female = document.getElementById("checkboxfemale").value;
+        var chf = document.getElementById("checkboxchf").value;
+        var htn = document.getElementById("checkboxhtn").value;
+        var cva = document.getElementById("checkboxcva").value;
+        var vasc = document.getElementById("checkboxvasc").value;
+        var dm = document.getElementById("checkboxdm").value;
+        var htn1 = document.getElementById("checkboxhtn1").value;
+        var renal = document.getElementById("checkboxrenal").value;
+        var liver = document.getElementById("checkboxliver").value;
+        var stroke = document.getElementById("checkboxstroke").value;
+        var bleeding = document.getElementById("checkboxbleeding").value;
+        var inr = document.getElementById("checkboxinr").value;
+        var age1 = document.getElementById("checkboxage1").value;
+        var meds = document.getElementById("checkboxmeds").value;
+        var alcohol = document.getElementById("checkboxalcohol").value;
 
     switch(Age){
       case "Less than 65":
@@ -129,7 +129,7 @@
           t = t + "";
           Hscore = Hscore + 1;
         }
-        if (age){
+        if (age1){
           t = t + "";
           Hscore = Hscore + 1;
         }
