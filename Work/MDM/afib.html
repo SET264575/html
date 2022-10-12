@@ -143,10 +143,10 @@
         }
 
         navigator.clipboard.writeText(t);
-        document.getElementById("textarea").value = t;
+        document.getElementById("textarea").value = String(Cscore)+'\n'+String(Hscore);
       }
 
-    function getRadioValue(id) {
+    function getRadioButtonValue(id) {
      var ele = document.getElementsByName(id);
       var value = "";
         for(i = 0; i < ele.length; i++) {
