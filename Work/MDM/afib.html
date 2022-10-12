@@ -143,16 +143,23 @@
           Hscore = Hscore + 1;
         }
         
-        switch(Cscore){
-            
+        if (Cscore < 2){
+            t = t + "CHADS-Vasc score = "+String(Cscore)+".  The risk of stroke is low enough that anticoagulation is not recommended at this time. ";
+        }
+        else if (Hscore < 2){
+            t = t+ "CHADS-Vasc score is "+String(Cscore)+" and HAS-BLED score is "+String(Hscore)+".  The risk of stroke is high enough and the risk ";
+            t = t + "major bleeding is low enough that anticoagulation is recommended.";
+        }
+        else {
+            t = t+ "CHADS-Vasc score is "+String(Cscore)+" and HAS-BLED score is "+String(Hscore)+".  The risk of stroke is high enough that anticoagulation ";
+            t = t + "should be considered.  However, the risk of major bleeding is also high.  Therefore, I will defer starting anticoagulation and have the ";
+            t = t + "patient follow up with cardiology for further management.";
         }
         
-        switch(Hscore){
-            
-        }
+
 
         navigator.clipboard.writeText(t);
-        document.getElementById("textarea").value = String(Cscore)+'\n'+String(Hscore);
+        document.getElementById("textarea").value = t;
       }
 
     function getRadioButtonValue(id) {
