@@ -133,7 +133,7 @@
 	      var number = values.length;
         t = t + "    <h3>"+title+"</h3>\n";
         for (let i = 0; i < number; i ++){
-          t = t + '    <input type = "radio" id = "'+title+String(i)+'" name = "' + title + '" value = "'+String(i)+'">\n';
+          t = t + '    <input type = "radio" id = "'+title+String(i)+'" name = "' + title + '" value = "'+String(i)+'" onchange = "copytext()">\n';
           t = t + '    <label for = "'+title+String(i)+'">'+values[i]+'</label>\n';
         }
         
@@ -156,11 +156,11 @@
         
         for (let i = 0; i<values.length; i++){
 
-        t = t + '    <input type = "checkbox" id = "checkbox'+values[i]+'">\n';
+        t = t + '    <input type = "checkbox" id = "checkbox'+values[i]+'" onchange = "copytext()">\n';
         t = t + '    <label for = "checkbox'+values[i]+'">'+labels[i]+'</label>\n';
         x = x + "        var "+values[i] + ' = document.getElementById("'+values[i]+'").value;\n';
 	z = z + '        if ('+values[i]+'){\n';
-	z = z + '        t = t + ;\n';
+	z = z + '          t = t + "";\n';
 	z = z + '        }\n';
 
         }
@@ -176,13 +176,13 @@
         var values = document.getElementById('select').value.split('\n');
         document.getElementById('select_text').value = '';
         document.getElementById("select").value = '';
-        t = t + '    <select id = "'+select_text+'">\n';
+        t = t + '    <select id = "'+select_text+'"  onchange = "copytext()">\n';
         for (i = 0; i < values.length; i++){
           t = t + '       <option>'+values[i]+'</option>\n';
         }
         t = t + "    </select>\n";
-        x = x + "      var "+select_text + ' = document.getElementById("'+select_text+'").value;\n';
-        z = z + "      t = t + ;\n";
+        x = x + "        var "+select_text + ' = document.getElementById("'+select_text+'").value;\n';
+        z = z + "        t = t + ;\n";
 	      document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
@@ -191,10 +191,10 @@
       function makeText(){
         var text_text = document.getElementById("text_text").value;
         document.getElementById('text_text').value = '';
-        t = t + '        <label for = "' + text_text + '">\n';
-        t = t + '        <input type = "text" id = "' + text_text + '">\n';
-        x = x + "         var " + text_text + ' = document.getElementById("'+text_text + '").value;\n';
-        z = z + '         t = t + ;\n';
+        t = t + '      <label for = "' + text_text + '">\n';
+        t = t + '      <input type = "text" id = "' + text_text + '" onchange = "copytext()">\n';
+        x = x + "        var " + text_text + ' = document.getElementById("'+text_text + '").value;\n';
+        z = z + '        t = t + ;\n';
         document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
@@ -202,11 +202,11 @@
       
       function finalize(){
         var a = "<html>\n  <head>\n    <title></title>\n  </head>\n  <body>\n"+t +'\n';
-	      a = a + '<textarea id = "textarea"></textarea>\n';
-        a = a + "    <script>\nfunction (){\n" + x + '\n' + z+'\n      navigator.clipboard.writeText(t);\ndocument.getElementById("textarea").value = t;\n}\n';
-        a = a + '      function getRadioValue(id) {\n      	var ele = document.getElementsByName(id);\n        var value = "";\n\
-      for(i = 0; i < ele.length; i++) {\n        	if(ele[i].checked){\n                	value = ele[i].value;\n		      }\n       }\n	      return(value);\n      }\n';
-	      a = a + "</body>\n</html>";
+	      a = a + '    <textarea id = "textarea"></textarea>\n';
+        a = a + "    <script>\n      function copytext(){\n" + x + '\n' + z+'\n      navigator.clipboard.writeText(t);\n        document.getElementById("textarea").value = t;\n      }\n\n';
+        a = a + '    function getRadioValue(id) {\n     var ele = document.getElementsByName(id);\n      var value = "";\n\
+        for(i = 0; i < ele.length; i++) {\n          if(ele[i].checked){\n            value = ele[i].value;\n          }\n       }\n       return(value);\n      }\n';
+	      a = a + "    </"+"script>\n  </body>\n</html>";
         document.getElementById("a").value = a;
       }
       
