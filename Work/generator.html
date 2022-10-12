@@ -147,7 +147,7 @@ score
         t = t + "    <h3>"+title+"</h3>\n";
         for (let i = 0; i < number; i ++){
           t = t + '    <input type = "radio" id = "'+title+String(i)+'" name = "' + title + '" value = "'+String(i)+'" onchange = "copytext()">\n';
-          t = t + '    <label for = "'+title+String(i)+'">'+values[i]+'</label>\n';
+          t = t + '    <label for = "'+title+String(i)+'">'+values[i]+'</label><br>\n';
         }
         
         x = x + "    var "+title+' = getRadioButtonValue("'+title+'");\n';
@@ -171,7 +171,7 @@ score
         for (let i = 0; i<values.length; i++){
 
         t = t + '    <input type = "checkbox" id = "checkbox'+values[i]+'" onchange = "copytext()">\n';
-        t = t + '    <label for = "checkbox'+values[i]+'">'+labels[i]+'</label>\n';
+        t = t + '    <label for = "checkbox'+values[i]+'">'+labels[i]+'</label><br><br>\n';
         x = x + "        var "+values[i] + ' = document.getElementById("'+values[i]+'").value;\n';
 	z = z + '        if ('+values[i]+'){\n';
 	z = z + '          t = t + "";\n';
