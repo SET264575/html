@@ -151,14 +151,14 @@ score
         }
         
         x = x + "    var "+title+' = getRadioButtonValue("'+title+'");\n';
-        z = z + "    switch("+title+"){\n";
+        z = z + "        switch("+title+"){\n";
         for (let i = 0; i< number; i ++){
-          z = z + '      case "' +values[i]+'":\n';
-          z = z + '        t = t + "'+values[i]+'";\n';
-	  z = z + '        score = score + 0;\n';
-          z = z + "        break;\n";
+          z = z + '          case "' +values[i]+'":\n';
+          z = z + '            t = t + "'+values[i]+'";\n';
+	  z = z + '            score = score + 0;\n';
+          z = z + "            break;\n";
         }
-        z = z + "    }\n\n";
+        z = z + "        }\n\n";
         document.getElementById("t").value = t;
         document.getElementById("x").value = x;
         document.getElementById("z").value = z;
