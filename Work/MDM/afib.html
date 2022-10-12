@@ -47,7 +47,9 @@
     <textarea id = "textarea" style = "rows: 10; cols: 100;"></textarea>
     <script>
       function copytext(){
-      var score = 0;    var Age = getRadioButtonValue("Age");
+        var Cscore = 0;    
+        var Hscore = 0;
+        var Age = getRadioButtonValue("Age");
         var female = document.getElementById("female").value;
         var chf = document.getElementById("chf").value;
         var htn = document.getElementById("htn").value;
@@ -67,80 +69,80 @@
     switch(Age){
       case "Less than 65":
         t = t + "Less than 65";
-        score = score + 0;
+        Cscore = Cscore + 0;
         break;
       case "65-74":
         t = t + "65-74";
-        score = score + 0;
+        Cscore = Cscore + 1;
         break;
       case "75 or older":
         t = t + "75 or older";
-        score = score + 0;
+        Cscore = Cscore + 2;
         break;
     }
 
         if (female){
           t = t + "";
-          score = score + 1;
+          Cscore = Cscore + 1;
         }
         if (chf){
           t = t + "";
-          score = score + 1;
+          Cscore = Cscore + 1;
         }
         if (htn){
           t = t + "";
-          score = score + 1;
+          Cscore = Cscore + 1;
         }
         if (cva){
           t = t + "";
-          score = score + 1;
+          Cscore = Cscore + 1;
         }
         if (vasc){
           t = t + "";
-          score = score + 1;
+          Cscore = Cscore + 1;
         }
         if (dm){
           t = t + "";
-          score = score + 1;
+          Cscore = Cscore + 1;
         }
         if (htn){
           t = t + "";
-          score = score + 1;
+          Hscore = Hscore + 1;
         }
         if (renal){
           t = t + "";
-          score = score + 1;
+          Hscore = Hscore + 1;
         }
         if (liver){
           t = t + "";
-          score = score + 1;
+          Hscore = Hscore + 1;
         }
         if (stroke){
           t = t + "";
-          score = score + 1;
+          Hscore = Hscore + 1;
         }
         if (bleeding){
           t = t + "";
-          score = score + 1;
+          Hscore = Hscore + 1;
         }
         if (inr){
           t = t + "";
-          score = score + 1;
+          Hscore = Hscore + 1;
         }
         if (age){
           t = t + "";
-          score = score + 1;
+          Hscore = Hscore + 1;
         }
         if (meds){
           t = t + "";
-          score = score + 1;
+          Hscore = Hscore + 1;
         }
         if (alcohol){
           t = t + "";
-          score = score + 1;
+          Hscore = Hscore + 1;
         }
 
-      navigator.clipboard.writeText(t);
+        navigator.clipboard.writeText(t);
         document.getElementById("textarea").value = t;
       }
 
