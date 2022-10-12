@@ -3,6 +3,7 @@ Things to fix:
 Variables for select
 Variables for radio buttons
 score
+Add title
 
 -->
 
@@ -130,6 +131,9 @@ score
         title1 = document.getElementById("title1").value;
         t = t + '    <h3>'+title1+'</h3>\n';
         document.getElementById('title1').value = '';
+        document.getElementById("t").value = t;
+        document.getElementById("x").value = x;
+        document.getElementById("z").value = z;	    
       }
       
       function makeRadioButtons(){
@@ -191,7 +195,7 @@ score
         }
         t = t + "    </select>\n";
         x = x + "        var "+select_text + ' = document.getElementById("'+select_text+'").value;\n';
-	z = z + "        score = score + 0;\n';
+	z = z + "        score = score + 0;\n";
         z = z + "        t = t + ;\n";
 	      document.getElementById("t").value = t;
         document.getElementById("x").value = x;
