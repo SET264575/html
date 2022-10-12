@@ -172,7 +172,7 @@ score
 
         t = t + '    <input type = "checkbox" id = "checkbox'+values[i]+'" onchange = "copytext()">\n';
         t = t + '    <label for = "checkbox'+values[i]+'">'+labels[i]+'</label><br><br>\n';
-        x = x + "        var "+values[i] + ' = document.getElementById(checkbox"'+values[i]+'").value;\n';
+        x = x + "        var "+values[i] + ' = document.getElementById(checkbox"'+values[i]+'").checked;\n';
 	z = z + '        if ('+values[i]+'){\n';
 	z = z + '          t = t + "";\n';
         z = z + '          score = score + 1;\n';
