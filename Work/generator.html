@@ -115,10 +115,10 @@ score
       </tr>
     </table>
 	  <br>
-    <button id = "finalize" onclick = "finalize()">Finalize</button><br>
-    <textarea id = "t" style = "width: 600px; height: 400px;" ></textarea><br><br>
+<!--    <button id = "finalize" onclick = "finalize()">Finalize</button><br>
+  <textarea id = "t" style = "width: 600px; height: 400px;" ></textarea><br><br>
     <textarea id = "x" style = "width: 600px; height: 400px;"></textarea><br><br>
-    <textarea id = "z" style = "width: 600px; height: 400px;"></textarea><br><br>
+    <textarea id = "z" style = "width: 600px; height: 400px;"></textarea><br><br>  -->
     
     <textarea id = "a" style = "width: 600px; height: 400px;"></textarea><br>
     
@@ -133,9 +133,10 @@ score
         title1 = document.getElementById("title1").value;
         t = t + '    <h3>'+title1+'</h3>\n';
         document.getElementById('title1').value = '';
-        document.getElementById("t").value = t;
-        document.getElementById("x").value = x;
-        document.getElementById("z").value = z;	    
+    //    document.getElementById("t").value = t;
+    //    document.getElementById("x").value = x;
+    //    document.getElementById("z").value = z;	    
+	finalize();
       }
       
       function makeRadioButtons(){
@@ -159,9 +160,10 @@ score
           z = z + "            break;\n";
         }
         z = z + "        }\n\n";
-        document.getElementById("t").value = t;
-        document.getElementById("x").value = x;
-        document.getElementById("z").value = z;
+ //       document.getElementById("t").value = t;
+ //       document.getElementById("x").value = x;
+ //       document.getElementById("z").value = z;
+	finalize();
       }
 	    
       function makeCheckbox(){
@@ -179,10 +181,11 @@ score
 	z = z + '        }\n';
 
         }
-	      document.getElementById("t").value = t;
-        document.getElementById("x").value = x;
-        document.getElementById("z").value = z;
+//	      document.getElementById("t").value = t;
+//        document.getElementById("x").value = x;
+ //       document.getElementById("z").value = z;
 	      document.getElementById('label').value = '';
+	finalize();
 	      
       }
 			
@@ -199,9 +202,10 @@ score
         x = x + "        var "+select_text + ' = document.getElementById("'+select_text+'").value;\n';
 	z = z + "        score = score + 0;\n";
         z = z + "        t = t + ;\n";
-	      document.getElementById("t").value = t;
-        document.getElementById("x").value = x;
-        document.getElementById("z").value = z;
+//	document.getElementById("t").value = t;
+  //      document.getElementById("x").value = x;
+    //    document.getElementById("z").value = z;
+	finalize();
       }
 			
       function makeText(){
@@ -211,9 +215,10 @@ score
         t = t + '      <input type = "text" id = "' + text_text + '" onchange = "copytext()">\n';
         x = x + "        var " + text_text + ' = document.getElementById("'+text_text + '").value;\n';
         z = z + '        t = t + "";\n';
-        document.getElementById("t").value = t;
-        document.getElementById("x").value = x;
-        document.getElementById("z").value = z;
+ //       document.getElementById("t").value = t;
+   //     document.getElementById("x").value = x;
+   //     document.getElementById("z").value = z;
+	finalize();
       }
       
       function finalize(){
