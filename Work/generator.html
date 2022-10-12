@@ -218,7 +218,7 @@ score
       
       function finalize(){
         var a = "<html>\n  <head>\n    <title></title>\n  </head>\n  <body>\n"+t +'\n';
-	      a = a + '    <textarea id = "textarea"></textarea>\n';
+	      a = a + '    <textarea id = "textarea" style = "rows: 10; cols: 100;"></textarea>\n';
         a = a + "    <script>\n      function copytext(){\n      var score = 0;" + x + '\n' + z+'\n      navigator.clipboard.writeText(t);\n        document.getElementById("textarea").value = t;\n      }\n\n';
         a = a + '    function getRadioValue(id) {\n     var ele = document.getElementsByName(id);\n      var value = "";\n\
         for(i = 0; i < ele.length; i++) {\n          if(ele[i].checked){\n            value = ele[i].value;\n          }\n       }\n       return(value);\n      }\n';
