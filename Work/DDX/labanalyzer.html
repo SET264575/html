@@ -1,0 +1,665 @@
+<!--
+translate text to lab data
+link to html file regarding each disease
+expand number of labs
+expand ddx
+
+enter abnormalities
+subtrees
+order abnormalities by most important
+
+
+
+-->
+
+
+<html>
+<head>
+<title>
+Calc
+</title>
+<style>
+input {
+	width: 40px;
+}
+table,td {
+	vertical-align: top;
+}
+</style>
+</head>
+
+<body>
+<table>
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td>Sodium</td>
+					<td><input type="radio" name = "sodiumR" value = "hyponatremia"><label for = "sodiumR">Low</label></td>
+					<td><input type="radio" name = "sodiumR" value = "normal"><label for = "sodiumR">Normal</label></td>
+					<td><input type="radio" name = "sodiumR" value = "hypernatremia"><label for = "sodiumR">High</label></td>
+				</tr>
+				<tr>
+					<td>Chloride</td>
+					<td><input type="radio" name = "chlorideR" value = "hypochloremia"><label for = "chlorideR">Low</label></td>
+					<td><input type="radio" name = "chlorideR" value = "normal"><label for = "chlorideR">Normal</label></td>
+					<td><input type="radio" name = "chlorideR" value = "hyperchloremia"><label for = "chlorideR">High</label></td>
+				</tr>
+				<tr>
+					<td>Bicarb</td>
+					<td><input type="radio" name = "bicarbR" value = "hypobicarbia"><label for = "bicarbR">Low</label></td>
+					<td><input type="radio" name = "bicarbR" value = "normal"><label for = "bicarbR">Normal</label></td>
+					<td><input type="radio" name = "bicarbR" value = "hyperbicarbia"><label for = "bicarbR">High</label></td>
+				</tr>
+				<tr>
+					<td>Potassium</td>
+					<td><input type="radio" name = "potassiumR" value = "hypokalemia"><label for = "potassiumR">Low</label></td>
+					<td><input type="radio" name = "potassiumR" value = "normal"><label for = "potassiumR">Normal</label></td>
+					<td><input type="radio" name = "potassiumR" value = "hyperkalemia"><label for = "potassiumR">High</label></td>
+				</tr>
+				<tr>
+					<td>BUN</td>
+					<td><input type="radio" name = "BUNR" value = "low BUN"><label for = "BUNR">Low</label></td>
+					<td><input type="radio" name = "BUNR" value = "normal"><label for = "BUNR">Normal</label></td>
+					<td><input type="radio" name = "BUNR" value = "elevated BUN"><label for = "BUNR">High</label></td>
+				</tr>
+				<tr>
+					<td>Creatinine</td>
+					<td><input type="radio" name = "CrR" value = "low creatinine"><label for = "creatinineR">Low</label></td>
+					<td><input type="radio" name = "CrR" value = "normal"><label for = "creatinineR">Normal</label></td>
+					<td><input type="radio" name = "CrR" value = "elevated creatinine"><label for = "creatinineR">High</label></td>
+				</tr>
+				<tr>
+					<td>Glucose </td>
+					<td><input type="radio" name = "glucoseR" value = "hypoglycemia"><label for = "glucoseR">Low</label></td>
+					<td><input type="radio" name = "glucoseR" value = "normal"><label for = "glucoseR">Normal</label></td>
+					<td><input type="radio" name = "glucoseR" value = "hyperglycemia"><label for = "glucoseR">High</label></td>
+				</tr>
+				<tr>
+					<td>AST </td>
+					<td><input type="radio" name = "ASTR" value = "low AST"><label for = "ASTR">Low</label></td>
+					<td><input type="radio" name = "ASTR" value = "normal"><label for = "ASTR">Normal</label></td>
+					<td><input type="radio" name = "ASTR" value = "elevated AST"><label for = "ASTR">High</label></td>
+				</tr>
+				<tr>
+					<td>ALT</td>
+					<td><input type="radio" name = "ALTR" value = "low ALT"><label for = "ALTR">Low</label></td>
+					<td><input type="radio" name = "ALTR" value = "normal"><label for = "ALTR">Normal</label></td>
+					<td><input type="radio" name = "ALTR" value = "elevated ALT"><label for = "ALTR">High</label></td>
+				</tr>
+				<tr>
+					<td>Alk Phos</td>
+					<td><input type="radio" name = "ALTR" value = "low alkaline phosphatase"><label for = "alkphosR">Low</label></td>
+					<td><input type="radio" name = "ALTR" value = "normal"><label for = "alkphosR">Normal</label></td>
+					<td><input type="radio" name = "ALTR" value = "elevated alkaline phosphatase"><label for = "alkphosR">High</label></td>
+				</tr>
+				<tr>
+					<td>Bilirubin</td>
+					<td><input type="radio" name = " bilirubinR" value = "hypobilirubinemia"><label for = "bilirubinR">Low</label></td>
+					<td><input type="radio" name = " bilirubinR" value = "normal"><label for = "bilirubinR">Normal</label></td>
+					<td><input type="radio" name = " bilirubinR" value = "hyperbilirubinemia"><label for = "bilirubinR">High</label></td>
+				</tr>
+				<tr>
+					<td>Calcium</td>
+					<td><input type="radio" name = "calciumR" value = "hypocalcemia"><label for = "calciumR">Low</label></td>
+					<td><input type="radio" name = "calciumR" value = "normal"><label for = "calciumR">Normal</label></td>
+					<td><input type="radio" name = "calciumR" value = "hypercalcemia"><label for = "calciumR">High</label></td>
+				</tr>
+				<tr>
+					<td>Albumin</td>
+					<td><input type="radio" name = "albuminR" value = "hypoalbuminemia"><label for = "albuminR">Low</label></td>
+					<td><input type="radio" name = "albuminR" value = "normal"><label for = "albuminR">Normal</label></td>
+					<td><input type="radio" name = "albuminR" value = "hyperalbuminemia"><label for = "albuminR">High</label></td>
+				</tr>
+			</table>
+
+			<button id = "Submit2" onclick = "radioCalc()">Submit</button><br>
+
+		</td>
+		<td style = "width: 200px">
+		</td>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<label for = "sodium">Sodium</label>
+					</td>
+					<td>
+						<input type = "text" id = "sodium"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "chloride" > Chloride </label>
+					</td>
+					<td>
+						<input type = "text" id = "chloride"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "potassium" > Potassium</label>
+					</td>
+					<td>
+						<input type = "text" id = "potassium"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "bicarb"> Bicarb</label>
+					</td>
+					<td>
+						<input type = "text" id = "bicarb"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "bun"> BUN</label>
+					</td>
+					<td>
+						<input type = "text" id = "bun"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "creatinine"> Creatinine</label>
+					</td>
+					<td>
+						<input type = "text" id = "creatinine"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "glucose"> Glucose</label>
+					</td>
+					<td>
+						<input type = "text" id = "glucose"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "AST">AST</label>
+					</td>
+					<td>
+						<input type = "text" id = "AST"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "ALT">ALT</label>
+					</td>
+					<td>
+						<input type = "text" id = "ALT"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "alkphos">Alkaline Phosphatase</label>
+					</td>
+					<td>
+						<input type = "text" id = "alkphos" ><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "bilirubin">bilirubin</label>
+					</td>
+					<td>
+						<input type = "text" id = "bilirubin"><br>
+					</td>
+				</tr>
+		
+				<tr>
+					<td>
+						<label for = "calcium">calcium</label>
+					</td>
+					<td>
+						<input type = "text" id = "calcium"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "albumin">albumin</label>
+					</td>
+					<td>
+						<input type = "text" id = "albumin" ><br>
+					</td>
+				</tr>
+			</table>
+
+			<button onclick="calc()">Submit</button>
+
+			<p id = "corrected sodium"></p>
+			<p id = "corrected calcium"></p>
+			<p id = "anion gap"></p>
+			<p id = "bun_cr ratio"></p>
+			<p id = "AST_ALT ratio"></p>
+			<p id = "ANC"></p>
+			<p id = "osmolality"></p>
+			
+
+		</td>
+	</tr>
+</table><br><br><br><br>
+
+<table>
+<tr>
+Differential diagnosis:
+<pre id = "ddx"></pre><br>
+</td></tr>
+<tr>
+<td>
+<iframe id = "website" name = "website" width = "1000" height = "1000"></iframe>
+</td>
+</tr>
+</table>
+
+
+<script>
+	class Lab{
+		constructor (name,symbol,low,high,low_name,high_name){
+			this.name = name;
+			this.symbol = symbol;
+			this.value = 0;
+			this.low_name = low_name;
+			this.low = low;
+			this.high_name = high_name;
+			this.high = high;
+
+		}
+
+		inRange(value){
+			if (value < this.low) {return(-1);}
+			if (value > this.high) {return(1);}
+			return(0);
+		}
+	}
+
+	class Disease{
+		constructor(name,description,additionalTests){
+			this.name = name;
+			this.description = description;
+			this.triggeringResult = "";
+			this.additionalTests = additionalTests;
+		}
+	}
+
+	class Condition{
+		constructor(name,value,relation,limit){
+			this.name = name;
+			this.value = value;
+			this.relation = relation;
+			this.limit = limit;
+		}
+		
+		get present(){
+			if (this.relation = ">" && this.value > this.limit) {return(true);}
+			if (this.relation = "<" && this.value < this.limit) {return(true);}
+			return(false);
+		}	
+	}
+
+	
+	class Abnormality{
+		constructor(name,ddx){
+			this.name = name;
+			this.ddx = ddx;
+		}
+	}
+
+	class Pairs{
+		constructor(first,second){
+			this.first = first;
+			this.second = second;
+		}
+	}
+
+	class Triplets{
+		constructor(first, second, third){
+			this.first = first;
+			this.second = second;
+			this.third = third;
+		}
+
+	}
+
+
+	condition = [];
+	condition.push(new Condition("hyponatremia",sodium,"<",135));
+
+	diseases = [];
+	diseases.push(new Disease("CHF","","Pro BNP"));
+	diseases.push(new Disease("psychogenic polydipsia","","water deprivation"));
+	
+
+	labs = [];
+	labs.push(new Lab("sodium","Na",135,145,'hyponatremia','hypernatremia'));
+	labs.push(new Lab("chloride","Cl",95,115,'hypochloremia','hyperchloremia'));
+	labs.push(new Lab("potassium","K",3,5,'hypokalemia','hyperkalemia'));
+	labs.push(new Lab("bicarb","HCO3",18,25,'hypobicarbia','hyperbicarbia'));
+	labs.push(new Lab("BUN","BUN",2,20,"low BUN","high BUN"));
+	labs.push(new Lab("creatinine","Cr",0,1,"low creatinine","elevated creatinine"));
+	labs.push(new Lab("glucose",'glucose',70,120,'hypoglycemia','hyperglycemia'));
+	labs.push(new Lab("AST","AST",0,50,'low AST','elevated AST'));
+	labs.push(new Lab("ALT","ALT",0,50,'low ALT','elevated ALT'));
+	labs.push(new Lab('alkaline phosphatase',"alk phos",0,50,'low alkaline phosphatase','elevated alkaline phosphatase'));
+	labs.push(new Lab('total protein',"TP",5,8,"low total protein","elevated total protein"));
+	labs.push(new Lab("albumin","albumin",4,4,"hypoalbuminemia","hyperalbuminemia"));
+	labs.push(new Lab("calcium","Ca",8,10,"hypocalcemia","hypercalcemia"));
+	labs.push(new Lab("magnesium","Mg",2,3,"hypmagnesemia","hypermagnesemia"));
+	labs.push(new Lab("bilirubin","bili",0,1,"hypobilirubinemia","hyperbilirubinemia"));
+	labs.push(new Lab("anion gap","anion gap",4,17,"low anion gap","high anion gap metabolic acidosis"));
+
+	var links = {};
+	links['hyponatremia'] = 'https://ddxof.com/hyponatremia/?sf_action=get_data&sf_data=all&_sf_s=hyponatremia';
+	links['adrenal insufficiency'] = 'https://en.wikipedia.org/wiki/Adrenal_insufficiency';
+	links['AST/ALT ratio > 2.5'] = 'https://en.wikipedia.org/wiki/AST/ALT_ratio';
+	links['milk-alkali syndrome'] = 'https://en.wikipedia.org/wiki/Milk-alkali_syndrome';
+
+	var abnormality = {};
+	abnormality["hyponatremia"] = ['CHF','Lasix use','SSRI use','psychogenic polydipsia',"cirrhosis","nephrotic syndrome","SIADH","hypothyroidism","beer potomania", "pregnancy","reset osmostat","hypovolemia due to fluid losses","hypovolemia due to decreased oral intake","pancreatitis","ecstasy use","prolonged sweating","adrenal insufficiency",'hypoaldosteronism','pseudohyponatremia due to elevated triglycerides','pseudohyponatremia due to paraproteinemia','pseudohyponatremia due to hyperglycemia','pseudohyponatremia due to mannitol'];
+	abnormality["hypernatremia"] = ['dehydration','diabetes insipidus','osmotic diuresis','excessive sodium administration','hyperaldosteronism',"Cushing's syndrome"];
+	abnormality["hypochloremia"] = ['milk-alkali syndrome'];
+	abnormality['hyperchloremia'] = ['renal tubular acidosis','hypoaldosteronism','potassium sparing diuretics','diarrhea','ureterosigmoidostomy','carbonic anhydrase inhibitors','saltwater drowning','ammonium chloride administration','IV lysine, arginine and histidine administration'];
+	abnormality["hypokalemia"] = ['inadequate intake - anorexia or ketogenic diet','diuretic use','DKA','hypomagnesemia','alkalosis','renal artery stenosis','adenal tumor','primary hyperaldosteronism',"Cushing's syndrome","licorice ingestion",'Bartter syndrome','Gitelman syndrome','insulin use','beta agonist use','theophylline use','stimulant use - amphetamines, cocaine use','hypokalemic periodic paralysis'];
+	abnormality["hyperkalemia"] = ['acute renal failure','chronic renal failure','obstructive uropathy','type IV renal tubular acidosis','primary hypoaldosteronism','ACE inhibitor use','potassium-sparing diuretic use','NSAID use','excess KCl supplementation','RBC transfusion','shift due to acidosis','beta blocker use','digoxin use','rhabdomyolysis','tumor lysis syndrome','crush injury','burn injury','intravascular hemolysis','in vitro hemolysis','cyclosporin use','tacrolimus use','trimethoprim use','pentamidine use','hyperkalemic periodic paralysis'];
+	abnormality['hyperbicarbia'] = ['chronic hypercarbia respiratory failure','milk-alkali syndrome','contraction alkalosis'];
+	abnormality['hypobicarbia'] = ['DKA'];
+	abnormality['decreased creatinine'] = ['decreased muscle mass','overhydration','portosystemic shunt','pregnancy','causes of polyuria'];
+	abnormality['elevated creatinine'] = ['acute renal failure','chronic renal failure','dehydration','postrenal obstruction','creatine supplementation','increased ingestion of cooked meat','intense exercise','assay interference from ketones, lipemia, hemolysis','assay interference from cephalosporins, barbiturates, N-acetylecyteine, nitromethane', 'decreased secretion due to trimethoprim, cimetidine','fibrate use'];
+	abnormality['elevated BUN'] = ['acute renal failure','chronic renal failure','upper GI bleeding','catabolic state','steroid use'];
+	abnormality['hypoglycemia'] = ['insulin use','starvation'];
+	abnormality['elevated AST'] = ['acute muscle damage','myocardial infarction','acute pancreatitis','acute hemolytic anemia','severe burns','acute renal injury','alcoholic liver disease'];
+	abnormality['elevated ALT'] = ['liver disease','viral hepatitis','diabetes','CHF','bile duct obstruction','infectious mononucleosis','myopathy','zileuton use','omega-3 acid ethy ester use','statin use','risperidone use','acetaminophen use','anticonvulsant use'];
+	abnormality['elevated alkaline phosphatase'] = ['bile duct obstruction','bone disease','osteoblastic bone tumor','osteomalacia','hepatitis','cirrhosis','acute cholecystitis','myelofibrosis','leukemoid reaction','lymphoma',"Paget's disease",'sarcoidosis','hyperthyroidism','hyperparathyroidism','myocardial infarction','pregnancy','high dose estrogen'];
+	abnormality['low alkaline phosphatase'] = ['hypophosphatasia','estrogen use','recent heart surgery','malnutrition','hypomagnesemia','severe anemia','congenital iodine deficiency','achondroplasia','severe enteritis','pernicious anemia','aplastic anemia',"Wilson's disease",'hypothyroidism','zinc deficiency','steroid use','colitis'];
+	abnormality['hyperbilirubinemia'] = ['reabsorption of a hematoma','ineffective erythropoiesis leading to increase RBC destruction',"Gilbert's syndrome","Crigler-Najjar syndrome",'viral hepatitis','common bile duct obstruction','Dubin-Johnson syndrome'];
+	abnormality['hypercalcemia'] = ['primary hyperparathyroidism', 'cancer', 'sarcoidosis', 'tuberculosis', 'Paget disease', 'multiple endocrine neoplasia', 'vitamin D toxicity','acromegaly','adrenal insufficiency','thiazide use','hyperthyroidism','vitamin A toxicity','histoplasmosis','Crohn disease','granulomatosis with polyangiitis'];
+	abnormality['hypocalcemia'] = ['hypomagnesemia','hyperphosphatemia','vitamin D deficiency','chronic liver disease','osteomalacia','chronic renal failure','hypoparathyroidism','hungry bone syndrome','tumor lysis syndrome','acute kidney injury','rhabdomyolysis','pancreatitis','alkalosis','massive RBC transfusion','foscarnet use','loop diuretic use','Crohn disease','lactic acidosis','pseudohypoparathyroidism'];
+	abnormality['hyperglycemia'] = ['new onset diabetes','DKA','steroid use',"Cushing's syndrome",'pheochromocytoma','acromegaly','hyperglycagonemia','hyperthyroidism','octreotide use','beta blocker use','thiazide diuretic use','statin use','niacin use','pentamidine use','protease inhibitor use','antipsychotic use','acute amphetamine use','stress due to stroke or MI'];
+	abnormality['elevated total protein'] = ['paraproteinemia',"Hodgkin's lymphoma",'leukemia','increased immunoglobulins','dehydration'];
+	abnormality['decreased total protein'] = ['low albumin concentration','liver disease','acute infection','immunodeficiency'];
+	abnormality['hypoalbuminemia'] = ['inflammation','infection','liver failure','nephrotic syndrome','chronic kidney disease','malnutrition','protein losing enteropathy'];
+	abnormality['leukocytosis'] = ['infection','sepsis'];
+	abnormality['leukopenia'] = ['viral infection','tick borne illness','sepsis','chemotherapy'];
+	abnormality['leukocytosis'] = ['infection','sepsis','vomiting','pain','steroid use'];
+	abnormality['polycythemia']=['PCV','COPD','OSA','renal cell carcinoma','liver tumors'];
+
+	abnormality['anemia'] = ['iron deficiency anemia','blood loss anemia','renal failure','hemolysis'];
+	abnormality['thrombocytopenia'] = ['ITP','TTP','liver disease'];
+	abnormality['eosinophilia'] = ['allergic reaction','parasitic infection','eosinophilic gastritis','DRESS syndrome','autoimmune disease','squamous cell cancer','blood cancers','Hodgkin lymphoma','ovarian cancer','cholesterol embolism','adrenal insufficiency']; 
+	abnormality['high anion gap acidosis'] = ['DKA','starvation','lactic acidosis','methanol ingestion','ethylene glycol ingestion','alcohol ingestion','acetaminophen ingestion','salicylate ingestion','' ];
+	abnormality['AST/ALT ratio > 2.5'] = ['muscle damage','bone disease', 'pregnancy', 'chronic renal failure', 'lymphoma', 'congestive heart failure'];
+	abnormality['AST/ALT ratio between 1.5 and 2.5'] = ['alcoholic liver disease'];
+	abnormality['AST/ALT ratio less than 0.9'] = ['resolving acute liver disease'];
+	abnormality["hyponatremia & hyperkalemia"]= ['adrenal insufficiency','renal failure','chylothorax','GI tract disorders'];
+	abnormality['hypernatremia & hypokalemia'] = ["Cushing's syndrome"];
+	abnormality['hypochloremia & hypokalemia & hypercalcemia'] = ['milk-alkali syndrome'];
+	abnormality["elevated LFTs & elevated creatinine"] = ['hepatorenal syndrome'];
+	abnormality["hyperglycemia & hypobicarbia"] = ['DKA'];
+	abnormality["leukocytosis & hyperglycemia"] = ['steroid use'];
+	abnormality['elevated AST & elevated ALT'] = ['cirrhosis','hepatitis','HELLP syndrome'];
+	abnormality["leukopenia & anemia & thrombocytopenia"] = ['pancytopenia'];
+	abnormality["hyponatremia & hyperkalemia & hypocalcemia"] = ['adrenal insufficiency'];
+	abnormality['elevated BUN','elevated creatinine','anemia'] = ['chronic kidney disease'];
+	abnormality['anemia & microcytosis & elevated BUN'] = ['chronic upper GI bleeding'];
+	abnormality['thrombocytopenia & hyponatremia'] = ['cirrhosis'];
+	abnormality['leukopenia & thrombocytopenia & hyponatremia'] = ['Ehrlichiosis'];
+	abnormality['anemia & thrombocytopenia & elevated creatinine'] = ['HUS','TTP'];
+	abnormality['elevated AST & elevated ALT & thrombocytopenia'] = ['HELLP syndrome'];
+	abnormality['polycythemia & leukocytosis & thrombocytosis'] = ['capillary leak syndrome'];
+	abnormality['polycythemia & thrombocytosis & hypoalbuminemia'] = ['capillary leak syndrome'];
+	abnormality['hypercalcemia & elevated creatinine'] = ['multiple myeloma','tertiary hyperparathyroidism','aluminum toxicity','milk-alkali syndrome'];
+	abnormality['hypercalcemia & anemia'] = ['multiple myeloma'];
+	abnormality['hypoalbuminemia & anemia & eosinophilia']=['eosinophilic gastritis'];
+	abnormality['high anion gap metabolic acidosis'] = ['DKA','lactic acidosis','alcohol toxicity','methanol toxicity','ethylene glycol toxicity','uremia','acetaminophen toxicity','carbon monoxide','cyanide','CHF','toluene abuse','aminoglycoside use','starvation ketoacidosis','phenformin use','iron use','isoniazid use','inborn errors of metabolism','salicylate use','metformin use'];
+	abnormality['low anion gap'] = ['hypoalbuminemia','multiple myeloma','hyperkalemia','hypercalcemia','lithium toxicity','increased cationic paraprotein','bromide toxicity','elevatd serum iodide'];
+	
+	
+
+
+	
+	var pairs = [];
+	pairs.push(new Pairs("hyponatremia","hyperkalemia"));
+	pairs.push(new Pairs("hyperglycemia","hypobicarbia"));
+	pairs.push(new Pairs("elevated LFTs","elevated creatinine"));
+	pairs.push(new Pairs("leukocytosis","hyperglycemia"));
+	pairs.push(new Pairs("thrombocytopenia","hyponatremia"));
+	pairs.push(new Pairs("elevated AST","elevated ALT"));
+	pairs.push(new Pairs("hypercalcemia","anemia"));
+	pairs.push(new Pairs("hypercalcemia","elevated creatinine"));
+
+	var triplets = [];
+	triplets.push(new Triplets("leukopenia","anemia","thrombocytopenia"));
+	triplets.push(new Triplets("hyponatremia","hyperkalemia","hypocalcemia"));
+	triplets.push(new Triplets("anemia","elevated BUN","elevated creatinine"));
+	triplets.push(new Triplets("leukopenia","thrombocytopenia","hyponatremia"));
+	triplets.push(new Triplets("anemia, thrombocytopenia, elevated creatinine"));
+	triplets.push(new Triplets("elevated AST","elevated ALT","thrombocytopenia"));
+	triplets.push(new Triplets("polycythemia","leukocytosis","thrombocytosis"));
+	triplets.push(new Triplets("polycythemia","thrombocytosis","hypoalbuminemia"));
+	triplets.push(new Triplets("hypoalbuminemia","anemia","eosinophilia"));
+	triplets.push(new Triplets("hypochloremia","hypokalemia","hypercalcemia"));
+	var results = {};
+	var ddx = {};
+//
+//Ehrlichiosis:  leukopenia, lymphopenia, thrombocytopenia, hyponatremia, elevated LFTs
+//DKA:  hyponatremia, hyperglycemia, hypobicarbia
+
+//elevated lfts:  elevated AST, ALT, AP, bilirubin
+//cirrhosis:  INR, thrombocytopenia, hyponatremia, 
+//polycythemia
+//macrocytosis
+//preeclampsia
+
+
+//ANC
+
+	function radioCalc(){
+		radios = ['sodiumR','chlorideR','bicarbR','potassiumR','BUNR',"CrR",'glucoseR','ASTR','ALTR','alkphosR','bilirubinR','calciumR','albuminR'];
+		abnormalities = [];
+		for (let i = 0; i < radios.length; i++){
+			x = getRadioButtonValue(radios[i]);
+			if ( x != "normal" && x != -1){
+					abnormalities.push(x);
+			}
+		}
+
+		console.log("before pairs");
+		for (let i = 0; i < pairs.length; i++){
+			if (abnormalities.includes(pairs[i].first) && abnormalities.includes(pairs[i].second)){
+				let temp = pairs[i].first + ' & ' + pairs[i].second;
+				abnormalities.push(temp);
+			}
+		}
+
+		console.log("before triplet");
+		for (let i = 0; i < triplets.length; i++){
+			console.log(abnormalities.hasOwnProperty(triplets[i].first));
+			if (abnormalities.includes(triplets[i].first) && abnormalities.includes(triplets[i].second) && abnormalities.includes(triplets[i].third)){
+				let temp = triplets[i].first + ' & ' + triplets[i].second + ' & ' + triplets[i].third;
+				abnormalities.push(temp);
+				console.log(temp);
+			}
+		}
+		developDifferential(abnormalities);
+
+	}
+
+	function calc(){
+		abnormalities= [];
+		ddx = {};
+
+		results.sodium = parseInt(document.getElementById( "sodium" ).value);
+		results.chloride = parseInt(document.getElementById( "chloride").value);
+		results.potassium = parseFloat(document.getElementById( "potassium").value);
+		results.bun = parseInt(document.getElementById( "bun").value);
+		results.bicarb = parseInt(document.getElementById( "bicarb").value);
+		results.creatinine = parseFloat(document.getElementById( "creatinine").value);
+		results.glucose = parseInt(document.getElementById( "glucose").value);
+		results.AST = parseInt(document.getElementById("AST").value);
+		results.ALT = parseInt(document.getElementById("ALT").value);
+		results['alkaline phosphatase'] = parseInt(document.getElementById("alkphos").value);
+		results.bilirubin = parseInt(document.getElementById("bilirubin").value);
+		results.calcium = parseFloat(document.getElementById('calcium').value);
+		results.albumin = parseFloat(document.getElementById('albumin').value);
+		results.wbc = 10;
+		results.percentneutrophils = 0.3;
+		
+		results["corrected sodium"] = calcCorrectedSodium(results.sodium, results.glucose);
+		results['corrected calcium'] = calcCorrectedCalcium(results.calcium, results.albumin);
+		results["anion gap"]= calcAnionGap(results.sodium, results.chloride, results.bicarb);
+		results["BUN/Cr ratio"] = calcBUN_CrRatio(results.bun,results.creatinine);
+		results["AST/ALT ratio"] = calcAST_ALTRatio(results.AST,results.ALT);
+		results["ANC"] = calcANC(results.wbc,results.percentneutrophils,results.bands);
+		results['osmolality'] = calcOsmolality(results.sodium,results.bun,results.glucose);
+//GFR
+//creatinine_clearance
+
+		
+		document.getElementById("corrected sodium").innerHTML = "Corrected sodium = " + results['corrected sodium'];
+		document.getElementById('corrected calcium').innerHTML = "Corrected calcium = " + results['corrected calcium'];
+		document.getElementById("anion gap").innerHTML = "Anion gap = "+ results['anion gap'];
+		document.getElementById("bun_cr ratio").innerHTML = "BUN/Cr ratio = " + results['BUN/Cr ratio'];
+		document.getElementById("AST_ALT ratio").innerHTML = "AST/ALT ratio = " + results['AST/ALT ratio'];
+		document.getElementById("ANC").innerHTML = "ANC = " + results['ANC'];
+		document.getElementById("osmolality").innerHTML = "serum osmolality = " + results['osmolality'];
+
+				console.log("before singles");
+		for (let i =0; i < labs.length; i ++){
+			switch(labs[i].inRange(results[labs[i].name])){
+				case -1:
+					abnormalities.push(labs[i].low_name);					
+					break;
+				case 1:
+					abnormalities.push(labs[i].high_name);					
+					break;
+			}
+		}
+		
+		console.log("before pairs");
+		for (let i = 0; i < pairs.length; i++){
+			if (abnormalities.includes(pairs[i].first) && abnormalities.includes(pairs[i].second)){
+				let temp = pairs[i].first + ' & ' + pairs[i].second;
+				abnormalities.push(temp);
+			}
+		}
+
+		console.log("before triplet");
+		for (let i = 0; i < triplets.length; i++){
+			console.log(triplets[i].first);
+			console.log(abnormalities.hasOwnProperty(triplets[i].first));
+			if (abnormalities.includes(triplets[i].first) && abnormalities.includes(triplets[i].second) && abnormalities.includes(triplets[i].third)){
+				let temp = triplets[i].first + ' & ' + triplets[i].second + ' & ' + triplets[i].third;
+				abnormalities.push(temp);
+				console.log(temp);
+			}
+		}
+
+		if (results['anion gap'] > 17){
+			abnormalities.push('high anion gap metabolic acidosis');
+		}
+
+		if (results['anion gap'] < 4){
+			abnormalities.push('low anion gap');
+		}
+
+		if(results['AST/ALT ratio']>2.5){
+			abnormalities.push('AST/ALT ratio > 2.5');
+		}
+
+		if(results['AST/ALT ratio']>1.5 && results['AST/ALT ratio'] <2.5){
+			abnormalities.push('AST/ALT ratio between 1.5 and 2.5');
+		}
+
+		if(results['AST/ALT ratio']<0.9){
+			abnormalities.push('AST/ALT ratio < 0.9');
+		}
+		developDifferential(abnormalities);		
+	}	
+
+
+	function developDifferential(abnormalities){
+		ddx = [];
+		var t  = '';
+
+		for (let i = 0; i < abnormalities.length; i++){
+			ddx[abnormalities[i]] = abnormality[abnormalities[i]];
+		}
+
+		var keys = Object.keys(ddx);
+		for (let i = 0; i < keys.length; i++){
+			if (links.hasOwnProperty(keys[i])){
+				t = t + '<a href="'+links[keys[i]];
+				t = t + '" target = "website">'+keys[i];
+				t = t +'</a><br>';
+			}
+			else {
+				t = t + keys[i] +'\n';
+			}		
+			for (let j = 0; j < ddx[keys[i]].length; j++){
+				if (links.hasOwnProperty(ddx[keys[i]][j])){
+					t = t + '<table><td style="width: 15px"></td><td><a href="'+links[ddx[keys[i]][j]]+'"target = "website">'+ddx[keys[i]][j]+'</a><td></table>';
+				}
+				else {
+					t = t + "   " + ddx[keys[i]][j]+'\n';
+				}
+		//document.getElementById("ddx").innerHTML = t;
+			}
+			t = t + "\n";
+		}
+	
+		document.getElementById("ddx").innerHTML = t;
+	}
+
+	function calcAnionGap(sodium, chloride, bicarb) {
+		return(sodium - chloride - bicarb);
+	}
+
+	function calcCorrectedSodium(sodium, glucose) {
+		return(sodium + 1.6*(glucose)/100-1);
+	}
+
+	function calcCorrectedCalcium(calcium,albumin) {
+		return(calcium + 0.8*(4 - albumin));
+	}
+
+	function calcBUN_CrRatio(bun,creatinine){
+		x = bun/creatinine*10;
+		y = parseInt(x);
+		z = y/10;
+		console.log(x,y,z);
+		return(z);
+	}
+
+	function calcAST_ALTRatio(AST,ALT){
+		return(AST/ALT);
+	}
+
+	function calcANC(wbc,neuts,bands){
+		return(wbc*(neuts+bands));
+	}
+
+	function calcOsmolality(sodium,bun,glucose) {
+		return(parseInt(2*sodium + (bun/2.8) + glucose/18));
+	}
+
+	function inRange(value,low,high){
+		if (value < low) {return(-1);}
+		if (value > high) {return(1);}
+		return(0);
+	}
+
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+</script>
+</body>
+</html>
+
