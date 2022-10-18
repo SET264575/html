@@ -622,6 +622,8 @@ function pickRoom(i){
   room[i].mine = true;
   toDoList[i] = [];
   toDoButtonClicked(i,"SEE PATIENT");
+  toDoButtonClicked(i,"ORDER LABS");
+  toDoButtonClicked(i,"ORDER MEDS");
   refreshTable();
   displayRecords();
 }
