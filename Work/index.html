@@ -33,32 +33,6 @@
     
     <br>
     <br>
-    <br>
 
-      
-  <label for="discharge">Select discharge instructions:</label>
-  <select name="discharge" id="discharge">
-    <option value="kidneystone">Kidney stones</option>
-    <option value="saab">Saab</option>
-    <option value="opel">Opel</option>
-    <option value="audi">Audi</option>
-  </select>
-
- <button onclick="getOption()"> Submit </button>
-    
-    <script type="text/javascript">
-    function getOption() {
-        selectElement = document.querySelector('#discharge');
-        output = selectElement.value;
-        switch(output){
-          case 'kidneystone': 
-            text = "Zofran 4 mg every 6 hours as needed for nausea.\nToradol 10 mg every 6 hours as needed for pain.\nPercocet 1 tablet every 6 hours as needed for pain.\nFlomax 0.4 mg daily.\nFollow up with a urologist if not improved in 1 week.\nReturn to the ER if your symptoms worsen or new symptoms develop."
-            break;
-          case 'chestpain':
-            break;
-        }
-        navigator.clipboard.writeText(text);
-    }
-    </script>
   </body>
 </html>
