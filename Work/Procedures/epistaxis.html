@@ -41,17 +41,11 @@
         var consent = getRadioButtonValue("consent");
         var sedation = getRadioButtonValue("sedation");
 
-        var t = "Procedure Note: *** \n";
+        var t = "Procedure Note: Epistaxis control \n";
         
-        t = t + "Intubation was indicated for ";
-        switch(indication){
-          case "0":
-            t = t + "respiratory failure. ";
-            break;
-          case "1":
-            t = t + "airway protection. ";
-            break;
-        }
+        t = t + "A cotton ball saturated with 4% cocaine was placed in the patient's nostril.  Once adequate anesthesia was obtained, the cotton ball was removed and ";
+        t = t + "the nasal mucosa was inspected with a nasal speculum. ";
+        t = t + "";
 
         switch(consent){
           case "0":
