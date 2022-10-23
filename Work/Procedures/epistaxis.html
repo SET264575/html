@@ -1,77 +1,72 @@
 <html>
   <head>
     <title>
-        ***
+        Epistaxis
     </title>
   </head>
   <body>
     <h3>
-    ***
+    Epistaxis control
     </h3>
-    <h4>indication</h4>
-    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
-    <label for = "0">respiratory failure</label><br>
-    <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
-    <label for = "1">airway protection</label><br>
+    <h4>Side</h4>
+    <input type = "radio" name = "side" value = "Left" id = "indication" onchange = "copytext()">
+    <label for = "0">Left</label><br>
+    <input type = "radio" name = "side" value = "Right" id = "indication" onchange = "copytext()">
+    <label for = "1">Right</label><br>
 <br>
 
-    <h4>consent</h4>
-    <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
-    <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
-    <input type = "radio" name = "consent" value = "1" id = "consent" onchange = "copytext()">
-    <label for = "1">The patient provided verbal consent for the procedure.</label><br>
-    <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
-    <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
+    <h4>Technique</h4>
+    <input type = "radio" name = "technique" value = "0" id = "technique" onchange = "copytext()">
+    <label for = "0">Silver nitrate</label><br>
+    <input type = "radio" name = "technique" value = "1" id = "technique" onchange = "copytext()">
+    <label for = "1">Merocel sponge</label><br>
+    <input type = "radio" name = "technique" value = "2" id = "technique" onchange = "copytext()">
+    <label for = "2">4.5 cm Rhino rocket</label><br>
+    <input type = "radio" name = "technique" value = "3" id = "technique" onchange = "copytext()">
+    <label for = "3">5.5 cm Rhino rocket</label><br>
+    <input type = "radio" name = "technique" value = "4" id = "technique" onchange = "copytext()">
+    <label for = "4">8 cm Rhino rocket</label><br>
 <br>
 
-    <h4>sedation</h4>
-    <input type = "radio" name = "sedation" value = "0" id = "sedation" onchange = "copytext()">
-    <label for = "0">The patient was sedated with 20 mg of Etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
-    <input type = "radio" name = "sedation" value = "1" id = "sedation" onchange = "copytext()">
-    <label for = "1">The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.</label><br>
-    <input type = "radio" name = "sedation" value = "2" id = "sedation" onchange = "copytext()">
-    <label for = "2">The patient did not require sedation or paralysis.</label><br>
-<br>
 
    
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
     <script>
       function copytext(){
-        var indication = getRadioButtonValue("indication");
-        var consent = getRadioButtonValue("consent");
-        var sedation = getRadioButtonValue("sedation");
+        var side = getRadioButtonValue("side");
+        var technique = getRadioButtonValue("technique");
 
         var t = "Procedure Note: Epistaxis control \n";
         
-        t = t + "A cotton ball saturated with 4% cocaine was placed in the patient's nostril.  Once adequate anesthesia was obtained, the cotton ball was removed and ";
+        t = t + "A cotton ball saturated with 4% cocaine was placed in the patient's '+side +'naris.  Once adequate anesthesia was obtained, the cotton ball was removed and ";
         t = t + "the nasal mucosa was inspected with a nasal speculum. ";
-        t = t + "";
+        
 
-        switch(consent){
+        switch(technique){
           case "0":
-            t = t + "Due to the patient's critical condition, consent could not be obtained. ";
+            t = t + "A bleeding site on the anterior septum was noted.  This was cauterized with silver nitrate. ";
             break;
           case "1":
-            t = t + "The patient provided verbal consent for the procedure. ";
+            t = t + "There was persistent actively bleeding but no obvious source on the anterior septum could be found. ";
+            t = t + "A Merocel sponge was trimmed and a new string was secured to the sponge.  The rounded end of the sponge was lubricated with antibiotic ointment and ";
+            t = t + "inserted into the nares.  ";
             break;
           case "2":
-            t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent. ";
+            t = t + "There was persistent actively bleeding but no obvious source on her anterior septum could be found. ";
+            t = t + "A 4.5 cm Rhino rocket was inserted into the nares and inflated. ";    
+            break;
+          case "3":
+            t = t + "There was persistent actively bleeding but no obvious source on her anterior septum could be found. ";
+            t = t + "A 5.5 cm Rhino rocket was inserted into the nares and inflated. ";    
+            break;
+          case "4":
+            t = t + "There was persistent actively bleeding but no obvious source on her anterior septum could be found. ";
+            t = t + "A 8 cm Rhino rocket was inserted into the nares and inflated. ";    
             break;
         }
 
-        switch(sedation){
-          case "0":
-            t = t + "The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.";
-            break;
-          case "1":
-            t = t + "The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.";
-            break;
-          case "2":
-            t = t + "The patient did not require sedation or paralysis.";
-            break;
-        }
  
-        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. The patient was observed for more than 30 minutes with no further bleeding.";
 
         navigator.clipboard.writeText(t);
         document.getElementById("text").value = t;
