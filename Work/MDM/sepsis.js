@@ -4,6 +4,7 @@ function copy2(){
 	var lactate = "";
 	var cause = "";
 	var treatment = [];
+	var pending = [];
 
 	if (getValue('leukocytosis')) {SIRS.push("leukocytosis");}
 	if (getValue('fever')) {SIRS.push("fever");}
@@ -40,7 +41,21 @@ function copy2(){
 		treatment.push("Flagyl");
 	}
 
-	text = text + "Treatment initiated in the ER included " + combine(treatment) +'.';
+	text = text + "Treatment initiated in the ER included " + combine(treatment) +'. ';
+	
+	if (getValue('CT')) {pending.push("CT chest, abdomen and pelvis");}
+	if (getValue('UA')) {pending.push('urinalysis');}
+	if (getValue('RPP')) {pending.push('respiratory pathogen panel');}
+	if (getValue('chest x-ray')) {pending.push('chest x-ray');}
+	if (getValue('procalcitonin')) {pending.push('procalcitonin');}
+	if (getValue('C dif')) {pending.push('C dif');}
+	if (getValue('GI path')) {pending.push('GI pathogen profile');}
+	if (getValue('ESR')) {pending.push('ESR');}
+	if (getValue('CRP')) {pending.push('CRP');}
+
+	if (pending.length > 0) {
+		text = text + 'Pending tests include ' + combine(pending);
+	}
 
 	document.getElementById('textarea').value = text;
 	navigator.clipboard.writeText(text);
