@@ -27,6 +27,18 @@ function copy2(){
 	if (getValue('Zithromax')) {treatment.push("Zithromax");}
 	if (getValue('Cipro')) {treatment.push("Cipro");}
 	if (getValue('Flagyl')) {treatment.push("Flagyl");}
+	if (getValue('Vanc & Zosyn')) {
+		treatment.push("Vanc");
+		treatment.push("Zosyn");
+	}
+	if (getValue('Rocephin & Zithromax')) {
+		treatment.push("Rocephin");
+		treatment.push("Zithromax");
+	}
+	if (getValue("Cipro & Flagyl")) {
+		treatment.push("Cipro");
+		treatment.push("Flagyl");
+	}
 
 	text = text + "Treatment initiated in the ER included " + combine(treatment) +'.';
 
