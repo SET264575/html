@@ -62,6 +62,7 @@ function copy2(){
 }
 
 function getValue(id){
+	console.log(id);
 	return(document.getElementById(id).checked);
 }
 
