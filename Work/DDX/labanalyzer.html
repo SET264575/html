@@ -1,34 +1,34 @@
 <!--
-translate text to lab data
 link to html file regarding each disease
-expand number of labs
 expand ddx
 
 enter abnormalities
-subtrees
 order abnormalities by most important
 
-put all into table using spaces to delineate subtrees
-normal ranges for calculated values
-highlight abnormals in red or blue
 
 split js from html
 
-add normal lab values
 add differential diagnoses
-add elements for WBC diff
+
 
 get age and gender from labs
 exclude certain diagnoses depending on gender and age
 
+expand/collapse ddx
+	add treeview - https://www.w3schools.com/howto/howto_js_treeview.asp
+critical values
+prioritize ddx
 
+additional labs:
+RBC morphology
+urinalysis
 -->
 
 
 <html>
 <head>
 <title>
-Calc
+Lab Analyzer
 </title>
 <style>
 input {
@@ -44,7 +44,14 @@ table,td {
 <table>
 	<tr>
 		<td>
-			<table>
+		<textarea id = "textarea" onchange = "parseLabs()"></textarea>
+		</td>
+		<td>
+		
+
+
+<!--
+	<table>
 				<tr>
 					<td>Sodium</td>
 					<td><input type="radio" name = "sodiumR" value = "hyponatremia"><label for = "sodiumR">Low</label></td>
@@ -133,8 +140,9 @@ table,td {
 
 			<button id = "Submit2" onclick = "radioCalc()">Submit</button><br>
 
-		</td>
-		<td style = "width: 200px">
+		</td> -->
+
+		<td style = "width: 50px">
 		</td>
 		<td>
 			<table>
@@ -275,7 +283,11 @@ table,td {
 						<input type = "text" id = "troponin"><br>
 					</td>
 				</tr>
-				<tr><td>-</td></tr>
+</table>
+<td style = "width: 40px"></td>
+<td>
+<table>
+				
 				<tr>
 					<td>
 						<label for = "WBC">WBC</label>
@@ -384,8 +396,11 @@ table,td {
 				</tr>
 				
 			</table>
+</td>
+<td style = "width: 40px"></td>
+<td>
 
-			<button onclick="calc()">Submit</button>
+
 
 			<p id = "corrected sodium"></p>
 			<p id = "corrected calcium"></p>
@@ -399,10 +414,10 @@ table,td {
 			
 
 		</td>
-		<td>
-		<textarea id = "textarea" onchange = "parseLabs()"></textarea>
-		</td>
+
 	</tr>
+<tr><td></td><td></td><td></td><td></td><td>			<button onclick="calc()">Submit</button>
+</td></tr>
 </table><br><br><br><br>
 
 <table>
@@ -499,11 +514,11 @@ table,td {
 	labs.push(new Lab("chloride","CL",97,110,'hypochloremia','hyperchloremia'));
 	labs.push(new Lab("potassium","K",3.3,4.9,'hypokalemia','hyperkalemia'));
 	labs.push(new Lab("bicarb","CO2",22,32,'hypobicarbia','hyperbicarbia'));
-	labs.push(new Lab("BUN","BUN",8,25,"low BUN","elevated BUN"));
+	labs.push(new Lab("BUN","BUN",8,25,"***ignore***","elevated BUN"));
 	labs.push(new Lab("creatinine","Creat",0.8,1.3,"low creatinine","elevated creatinine"));
 	labs.push(new Lab("glucose",'Glu',70,199,'hypoglycemia','hyperglycemia'));
-	labs.push(new Lab("AST","AST",10,50,'low AST','elevated AST'));
-	labs.push(new Lab("ALT","Alt",7,55,'low ALT','elevated ALT'));
+	labs.push(new Lab("AST","AST",10,50,'***ignore***','elevated AST'));
+	labs.push(new Lab("ALT","Alt",7,55,'***ignore***','elevated ALT'));
 	labs.push(new Lab('alkaline phosphatase',"Alk Phos",40,130,'low alkaline phosphatase','elevated alkaline phosphatase'));
 	labs.push(new Lab('total protein',"TP",6.5,8.5,"low total protein","elevated total protein"));
 	labs.push(new Lab("albumin","Alb",3.5,5,"hypoalbuminemia","hyperalbuminemia"));
@@ -527,6 +542,7 @@ table,td {
 	labs.push(new Lab('Abs Eosinophils','Eos Abs Auto',0,0.5,'***ignore***','***ignore***'));
 	labs.push(new Lab('Abs Basophils','Baso Abs Auto',0,0.1,'***ignore***','***ignore***'));
 	labs.push(new Lab('NRBC','NRBC',0,0.01,'***ignore***','***ignore***'));
+	labs.push(new Lab('ANC','ANC',2500,8000,'neutropenia','neutrophilia'));
 
 	
 
@@ -558,6 +574,7 @@ table,td {
 	abnormality['hypocalcemia'] = ['milk-alkali syndrome','hypomagnesemia','hyperphosphatemia','vitamin D deficiency','chronic liver disease','osteomalacia','chronic renal failure','hypoparathyroidism','hungry bone syndrome','tumor lysis syndrome','acute kidney injury','rhabdomyolysis','pancreatitis','alkalosis','massive RBC transfusion','foscarnet use','loop diuretic use','Crohn disease','lactic acidosis','pseudohypoparathyroidism'];
 	abnormality['hypomagnesemia'] = ['low magnesium']; //*****
 	abnormality['hypermagnesemia'] = ['high magnesium']; //***
+	abnormality['hypomagnesemia'] = ['other']; //**
 
 	abnormality['hyperglycemia'] = ['new onset diabetes','DKA','steroid use',"Cushing's syndrome",'pheochromocytoma','acromegaly','hyperglycagonemia','hyperthyroidism','octreotide use','beta blocker use','thiazide diuretic use','statin use','niacin use','pentamidine use','protease inhibitor use','antipsychotic use','acute amphetamine use','stress due to stroke or MI'];
 	abnormality['elevated total protein'] = ['paraproteinemia',"Hodgkin's lymphoma",'leukemia','multiple myeloma','increased immunoglobulins','dehydration','hepatitis B','hepatitis C','HIV','chronic inflammation'];
@@ -571,6 +588,8 @@ table,td {
 	abnormality['low A/G ratio'] = ['autoimmune disease','liver disease','kidney disease'];
 	abnormality['elevated A/G ratio'] = ['leukemia','hypothyroidism'];
 	abnormality['elevated troponin'] = ['ACS related','Acute MI (STEMI & NSTEMI)','Post‐PCI','Open heart surgery / Any cardiac surgery','Non‐ACS related','Tachycardia: SVT, V-Tach, A-Fib with RVR or any tachycardia','Atrial Fibrillation','Pericarditis, Myocarditis, Endocarditis','Massive or submassive Pulmonary Embolism','Sepsis','Hypotension','Critical illness (Medical ICU patients)','Viral illness','Hypertension','Thrombotic thrombocytopenic purpura','CVA (Stroke): Hemorrhagic stroke (Subarachnoid hemorrhage); Ischemic stroke','Head trauma','Asymptomatic patients with ESRD','Chronic kidney disease','Acute Aortic dissection','Acute Heart Failure','Chronic Heart Failure','Apical ballooning syndrome','Strenuous exercise/ultra‐endurance exercise','Cardiotoxic chemotherapy','Hypersensitivity drug reactions','High-frequency ablation/ current cardioversion‐defibrillator shocks','Cardiac infiltrative disorders: Amyloidosis, sarcoidosis, hemochromatosis, scleroderma','Left ventricular hypertrophy','Infiltrative disease','Heart transplant','Cardiac contusion after blunt chest wall trauma / Direct myocardial trauma','ARDS','COPD exacerbation','Severe GI bleeding','Rhabdomyolysis','Severe skin burns','Kawasaki disease','Neurofibromatosis','Duchenne muscular dystrophy','Klippel-Feil syndrome','Environmental exposure: Carbon monoxide, hydrogen sulfide','Diabetes','Hypothyroidism','Envenomation','False-positive troponin elevation'];
+	
+
 	abnormality['leukocytosis'] = ['infection','sepsis'];
 	abnormality['leukopenia'] = ['viral infection','tick borne illness','sepsis','chemotherapy'];
 	abnormality['leukocytosis'] = ['infection','sepsis','vomiting','pain','steroid use'];
@@ -580,11 +599,16 @@ table,td {
 	abnormality['microcytosis'] = ['iron deficiency anemia'];
 	abnormality['macrocytosis'] = ['vitamin B12 deficiency'];
 	abnormality['thrombocytopenia'] = ['ITP','TTP','liver disease'];
+	abnormality['thrombocytosis'] = ['essential thrombocytosis','infection','polycythemia vera']; //expand****
 	abnormality['eosinophilia'] = ['allergic reaction','parasitic infection','eosinophilic gastritis','DRESS syndrome','autoimmune disease','squamous cell cancer','blood cancers','Hodgkin lymphoma','ovarian cancer','cholesterol embolism','adrenal insufficiency']; 
 	abnormality['high anion gap acidosis'] = ['DKA','starvation','lactic acidosis','methanol ingestion','ethylene glycol ingestion','alcohol ingestion','acetaminophen ingestion','salicylate ingestion','' ];
 	abnormality['AST/ALT ratio > 2.5'] = ['muscle damage','bone disease', 'pregnancy', 'chronic renal failure', 'lymphoma', 'congestive heart failure'];
 	abnormality['AST/ALT ratio between 1.5 and 2.5'] = ['alcoholic liver disease'];
 	abnormality['AST/ALT ratio less than 0.9'] = ['resolving acute liver disease'];
+	abnormality['neutropenia'] = ['chemotherapy treatment'];
+	abnormality['neutrophilia'] = ['infection','leukemia'];
+
+
 	abnormality["hyponatremia & hyperkalemia"]= ['adrenal insufficiency','renal failure','chylothorax','GI tract disorders'];
 	abnormality['hypernatremia & hypokalemia'] = ["Cushing's syndrome"];
 	abnormality['hypochloremia & hypokalemia & hypercalcemia'] = ['milk-alkali syndrome'];
@@ -602,6 +626,7 @@ table,td {
 	abnormality['anemia & macrocytosis'] = ['vitamin B deficiency','folate deficiency'];
 	abnormality['anemia & thrombocytopenia & elevated creatinine'] = ['HUS','TTP'];
 	abnormality['anemia & elevated BUN & elevated creatinine'] = ['HUS','TTP','chronic renal disease'];
+	abnormality['anemia & elevated BUN'] = ['Upper GI bleeding'];
 	abnormality['elevated AST & elevated ALT & thrombocytopenia'] = ['HELLP syndrome'];
 	abnormality['polycythemia & leukocytosis & thrombocytosis'] = ['capillary leak syndrome'];
 	abnormality['polycythemia & thrombocytosis & hypoalbuminemia'] = ['capillary leak syndrome'];
@@ -626,6 +651,7 @@ table,td {
 	pairs.push(new Pairs("hypercalcemia","elevated creatinine"));
 	pairs.push(new Pairs('anemia','microcytosis'));
 	pairs.push(new Pairs('anemia','macrocytosis'));
+	pairs.push(new Pairs('anemia','elevated BUN'));
 
 	var triplets = [];
 	triplets.push(new Triplets("leukopenia","anemia","thrombocytopenia"));
@@ -727,26 +753,25 @@ table,td {
 		results["corrected sodium"] = calcCorrectedSodium(results.sodium, results.glucose);
 		results['corrected calcium'] = calcCorrectedCalcium(results.calcium, results.albumin);
 		results["anion gap"]= calcAnionGap(results.sodium, results.chloride, results.bicarb);
-		results["BUN/Cr ratio"] = calcBUN_CrRatio(results.bun,results.creatinine);
+		results["BUN/Cr ratio"] = calcBUN_CrRatio(results.BUN,results.creatinine);
 		results["AST/ALT ratio"] = calcAST_ALTRatio(results.AST,results.ALT);
-		results["ANC"] = calcANC(results.wbc,results.percentneutrophils,results.bands);
-		results['osmolality'] = calcOsmolality(results.sodium,results.bun,results.glucose);
+		results["ANC"] = calcANC(results['Abs Neutrophils'],results['Abs Imm Gran']);
+		results['osmolality'] = calcOsmolality(results.sodium,results.BUN,results.glucose);
 		results['A/G ratio'] = calcA_GRatio(results.albumin,results.totalprotein);
 		results['MELD'] = calcMELD(results.creatinine,results.bilirubin,results.sodium,1);
 //GFR
 //creatinine_clearance
-//absolute lymphocyte count
 
 		
-		document.getElementById("corrected sodium").innerHTML = "Corrected sodium = " + results['corrected sodium'];
-		document.getElementById('corrected calcium').innerHTML = "Corrected calcium = " + results['corrected calcium'];
-		document.getElementById("anion gap").innerHTML = "Anion gap = "+ results['anion gap'];
-		document.getElementById("bun_cr ratio").innerHTML = "BUN/Cr ratio = " + results['BUN/Cr ratio'];
-		document.getElementById("AST_ALT ratio").innerHTML = "AST/ALT ratio = " + results['AST/ALT ratio'];
-		document.getElementById("ANC").innerHTML = "ANC = " + results['ANC'];
-		document.getElementById("osmolality").innerHTML = "Serum osmolality = " + results['osmolality'];
-		document.getElementById("A_G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'];
-		document.getElementById("MELD").innerHTML = "MELD score (assuming no dialysis and normal INR) = " + results['MELD'];
+		document.getElementById("corrected sodium").innerHTML = "Corrected sodium = " + results['corrected sodium'] + ' (135-145)';
+		document.getElementById('corrected calcium').innerHTML = "Corrected calcium = " + results['corrected calcium'] + ' (8.5-10.3)';
+		document.getElementById("anion gap").innerHTML = "Anion gap = "+ results['anion gap'] + ' (4-17)';
+		document.getElementById("bun_cr ratio").innerHTML = "BUN/Cr ratio = " + results['BUN/Cr ratio'] + ' (<20)';
+		document.getElementById("AST_ALT ratio").innerHTML = "AST/ALT ratio = " + results['AST/ALT ratio'] +' (close to 1)';
+		document.getElementById("ANC").innerHTML = "ANC = " + results['ANC'] + ' (>2500)';
+		document.getElementById("osmolality").innerHTML = "Serum osmolality = " + results['osmolality'] + ' (275-295)';
+		document.getElementById("A_G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'] + ' (1-2)';
+		document.getElementById("MELD").innerHTML = "MELD score (assuming no dialysis and normal INR) = " + results['MELD']+ ' (<10)';
 
 		for (let i =0; i < labs.length; i ++){
 			print(labs[i].name,results[labs[i].name]);
@@ -754,13 +779,33 @@ table,td {
 				case -1:
 					print(labs[i].low_name);
 					if (labs[i].low_name != '***ignore***'){
-						abnormalities.push(labs[i].low_name);	
+						abnormalities.push(labs[i].low_name);
+						try {	
+							document.getElementById(labs[i].name).style = "color:  red";
+						}
+						catch(err){
+							//console.log(labs[i].symbol);
+						}
 					}				
+					break;
+				case 0:
+					try {	
+						document.getElementById(labs[i].name).style = "color:  black";
+					}
+					catch(err){
+						//console.log(labs[i].symbol);
+					}	
 					break;
 				case 1:
 print(labs[i].high_name);
 					if (labs[i].high_name != '***ignore***'){
 						abnormalities.push(labs[i].high_name);	
+						try {	
+							document.getElementById(labs[i].name).style = "color:  red";
+						}
+						catch(err){
+							//console.log(labs[i].symbol);
+						}
 					}				
 					break;
 			}
@@ -829,7 +874,7 @@ print(labs[i].high_name);
 print(i,keys[i],ddx[keys[i]]);	
 			for (let j = 0; j < ddx[keys[i]].length; j++){
 				if (links.hasOwnProperty(ddx[keys[i]][j])){
-					t = t + '<table><td style="width: 15px"></td><td><a href="'+links[ddx[keys[i]][j]]+'"target = "website">'+ddx[keys[i]][j]+'</a><td></table>';
+					t = t + '<table><td style="width: 50px"></td><td><a href="'+links[ddx[keys[i]][j]]+'"target = "website">'+ddx[keys[i]][j]+'</a><td></table>';
 				}
 				else {
 					t = t + "\t" + ddx[keys[i]][j]+'\n';
@@ -847,17 +892,20 @@ print(i,keys[i],ddx[keys[i]]);
 	}
 
 	function calcCorrectedSodium(sodium, glucose) {
-		return(sodium + 1.6*(glucose)/100-1);
+		return(parseInt(sodium + 1.6*(glucose)/100-1));
 	}
 
 	function calcCorrectedCalcium(calcium,albumin) {
-		return(calcium + 0.8*(4 - albumin));
+		return(parseInt((calcium + 0.8*(4 - albumin))*10)/10);
 	}
 
 	function calcBUN_CrRatio(bun,creatinine){
 		x = bun/creatinine*10;
+console.log(x);
 		y = parseInt(x);
+console.log(y);
 		z = y/10;
+console.log(z);
 		return(z);
 	}
 
@@ -865,8 +913,8 @@ print(i,keys[i],ddx[keys[i]]);
 		return(parseInt((AST/ALT)*100)/100);
 	}
 
-	function calcANC(wbc,neuts,bands){
-		return(wbc*(neuts+bands));
+	function calcANC(neuts,bands){
+		return((neuts+bands)*1000);
 	}
 
 	function calcOsmolality(sodium,bun,glucose) {
@@ -917,15 +965,16 @@ print(i,keys[i],ddx[keys[i]]);
 	//  then a word consisting of one or more digits and decimal points:  \b[\d|\.]+\b
 			if (b != null)
 			{
-				console.log(b);
+				//console.log(b);
 				for (let i = 0; i < labs.length; i++){
-					console.log(b[1].trim(),labs[i].symbol);
+					//console.log(b[1].trim(),labs[i].symbol);
 					if (b[1].trim() == labs[i].symbol) {document.getElementById(labs[i].name).value = b[2];}
 				}
 			}
 			
 		}
 		document.getElementById('textarea').value = '';
+		calc();
 	}
 
 	function print(){
