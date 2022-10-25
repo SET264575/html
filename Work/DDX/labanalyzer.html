@@ -261,6 +261,14 @@ table,td {
 				</tr>
 				<tr>
 					<td>
+						<label for = "lipase">lipase</label>
+					</td>
+					<td>
+						<input type = "text" id = "lipase"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<label for = "troponin">troponin</label>
 					</td>
 					<td>
@@ -317,6 +325,62 @@ table,td {
 					</td>
 				</tr>
 				<tr>
+					<td>
+						<label for = "Abs Neutrophils">Abs neutrophils</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Neutrophils"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Immature Granulocytes">Abs Imm Gran</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Immature Granulocytes"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Lymphocytes">Abs Lymphocytes</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Lymphocytes"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Monocytes">Abs Monocytes</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Monocytes"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Eosinophils">Abs Eosinophils</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Eosinophils"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Basophils">Abs Basophils</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Basophils"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "NRBC">NRBC</label>
+					</td>
+					<td>
+						<input type = "text" id = "NRBC"><br>
+					</td>
+				</tr>
+				<tr>
 				</tr>
 				
 			</table>
@@ -343,7 +407,6 @@ table,td {
 
 <table>
 <tr>
-Differential diagnosis:
 <pre id = "ddx"></pre><br>
 </td></tr>
 <tr>
@@ -445,17 +508,25 @@ Differential diagnosis:
 	labs.push(new Lab('total protein',"TP",6.5,8.5,"low total protein","elevated total protein"));
 	labs.push(new Lab("albumin","Alb",3.5,5,"hypoalbuminemia","hyperalbuminemia"));
 	labs.push(new Lab("calcium","CA",8.5,10.3,"hypocalcemia","hypercalcemia"));
-	labs.push(new Lab("magnesium","Mg",2,3,"hypmagnesemia","hypermagnesemia"));
-	labs.push(new Lab("bilirubin","Total Bilirubin",0.1,1.2,"hypobilirubinemia","hyperbilirubinemia"));
+	labs.push(new Lab("magnesium","MG",2,3,"hypmagnesemia","hypermagnesemia"));
+	labs.push(new Lab("bilirubin","Total Bilirubin",0.1,1.2,"***ignore***","hyperbilirubinemia"));
+	labs.push(new Lab("lipase","Lip",0,99,'***ignore***','elevated lipase'));
 	labs.push(new Lab('troponin','Troponin T',0,1,'***ignore***','elevated troponin'));
 	labs.push(new Lab("anion gap","anion gap",4,17,"low anion gap","high anion gap metabolic acidosis"));
 	labs.push(new Lab("A/G ratio","A/G ratio",0.8,2,'low A/G ratio','elevated A/G ratio'));
 	labs.push(new Lab("WBC","WBC",3.8,9.9,'leukocytopenia','leukocytosis'));
 	labs.push(new Lab("RBC","RBC",4.3,5.8,'***ignore***','***ignore***'));
-	labs.push(new Lab("Hgb","Hgb",13.0,17.5,'anemia','polycythemia'));
-	labs.push(new Lab("Hct","Hct",38.9,50.3,'anemia','polycythemia'));
+	labs.push(new Lab("Hgb","HGB",13.0,17.5,'anemia','polycythemia'));
+	labs.push(new Lab("Hct","HCT",38.9,50.3,'anemia','polycythemia'));
 	labs.push(new Lab("platelets",'Plt',150,400,'thrombocytopenia','thrombocytosis'));
 	labs.push(new Lab('MCV','MCV',81.3,96.4,'microcytosis','macrocytosis'));
+	labs.push(new Lab('Abs Neutrophils','Neut Abs Auto',1.7,6.5,'***ignore***','***ignore***'));
+	labs.push(new Lab('Abs Immature Granulocytes','ImmGr Abs Auto',0,0.1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Abs Lymphocytes','Lymph Abs Auto',0.8,3.3,'***ignore***','***ignore***'));
+	labs.push(new Lab('Abs Monocytes','Mono Abs Auto',0.2,0.8,'***ignore***','***ignore***'));
+	labs.push(new Lab('Abs Eosinophils','Eos Abs Auto',0,0.5,'***ignore***','***ignore***'));
+	labs.push(new Lab('Abs Basophils','Baso Abs Auto',0,0.1,'***ignore***','***ignore***'));
+	labs.push(new Lab('NRBC','NRBC',0,0.01,'***ignore***','***ignore***'));
 
 	
 
@@ -496,6 +567,7 @@ Differential diagnosis:
 
 	abnormality['low total protein'] = ['malnutrition'];
 	abnormality['elevated total protein'] = ['hepatitis C'];
+	abnormality['elevated lipase'] = ['pancreatitis','***other'];
 	abnormality['low A/G ratio'] = ['autoimmune disease','liver disease','kidney disease'];
 	abnormality['elevated A/G ratio'] = ['leukemia','hypothyroidism'];
 	abnormality['elevated troponin'] = ['ACS related','Acute MI (STEMI & NSTEMI)','Post‐PCI','Open heart surgery / Any cardiac surgery','Non‐ACS related','Tachycardia: SVT, V-Tach, A-Fib with RVR or any tachycardia','Atrial Fibrillation','Pericarditis, Myocarditis, Endocarditis','Massive or submassive Pulmonary Embolism','Sepsis','Hypotension','Critical illness (Medical ICU patients)','Viral illness','Hypertension','Thrombotic thrombocytopenic purpura','CVA (Stroke): Hemorrhagic stroke (Subarachnoid hemorrhage); Ischemic stroke','Head trauma','Asymptomatic patients with ESRD','Chronic kidney disease','Acute Aortic dissection','Acute Heart Failure','Chronic Heart Failure','Apical ballooning syndrome','Strenuous exercise/ultra‐endurance exercise','Cardiotoxic chemotherapy','Hypersensitivity drug reactions','High-frequency ablation/ current cardioversion‐defibrillator shocks','Cardiac infiltrative disorders: Amyloidosis, sarcoidosis, hemochromatosis, scleroderma','Left ventricular hypertrophy','Infiltrative disease','Heart transplant','Cardiac contusion after blunt chest wall trauma / Direct myocardial trauma','ARDS','COPD exacerbation','Severe GI bleeding','Rhabdomyolysis','Severe skin burns','Kawasaki disease','Neurofibromatosis','Duchenne muscular dystrophy','Klippel-Feil syndrome','Environmental exposure: Carbon monoxide, hydrogen sulfide','Diabetes','Hypothyroidism','Envenomation','False-positive troponin elevation'];
@@ -636,6 +708,7 @@ Differential diagnosis:
 		results.magnesium = parseFloat(document.getElementById('magnesium').value);
 		results.albumin = parseFloat(document.getElementById('albumin').value);
 		results.totalprotein = parseFloat(document.getElementById('total protein').value);
+		results.lipase = parseInt(document.getElementById('lipase').value);
 		results.troponin = parseFloat(document.getElementById('troponin').value);
 		results.WBC = parseFloat(document.getElementById('WBC').value);
 		results.RBC = parseFloat(document.getElementById('RBC').value);
@@ -643,8 +716,13 @@ Differential diagnosis:
 		results.Hct = parseFloat(document.getElementById('Hct').value);
 		results.platelets = parseFloat(document.getElementById('platelets').value);
 		results.MCV = parseFloat(document.getElementById('MCV').value);
-		//results.wbc = parseFloat(document.getElementById('WBC').value);
-		//results.percentneutrophils = 0.3;
+		results['Abs Neutrophils'] = parseFloat(document.getElementById('Abs Neutrophils').value);
+		results['Abs Imm Gran'] = parseFloat(document.getElementById('Abs Immature Granulocytes').value);
+		results['Abs Lymphocytes'] = parseFloat(document.getElementById('Abs Lymphocytes').value);
+		results['Abs Monocytes'] = parseFloat(document.getElementById('Abs Monocytes').value);
+		results['Abs Eosinophils'] = parseFloat(document.getElementById('Abs Eosinophils').value);
+		results['Abs Basophils'] = parseFloat(document.getElementById('Abs Basophils').value);
+		results['NRBC'] = parseFloat(document.getElementById('NRBC').value);
 		
 		results["corrected sodium"] = calcCorrectedSodium(results.sodium, results.glucose);
 		results['corrected calcium'] = calcCorrectedCalcium(results.calcium, results.albumin);
@@ -754,7 +832,7 @@ print(i,keys[i],ddx[keys[i]]);
 					t = t + '<table><td style="width: 15px"></td><td><a href="'+links[ddx[keys[i]][j]]+'"target = "website">'+ddx[keys[i]][j]+'</a><td></table>';
 				}
 				else {
-					t = t + "   " + ddx[keys[i]][j]+'\n';
+					t = t + "\t" + ddx[keys[i]][j]+'\n';
 				}
 		//document.getElementById("ddx").innerHTML = t;
 			}
@@ -829,7 +907,9 @@ print(i,keys[i],ddx[keys[i]]);
 		t = document.getElementById("textarea").value;
 		x = t.split('\n');
 		for (let i = 0; i < x.length; i++){
-			b = x[i].match(/\b([A-Z][a-z]?)\b\s+\|\s+\b([\d|\.]+)\b/);
+			//b = x[i].match(/\b([A-Z][a-z]?)\b\s+\|\s+\b([\d|\.]+)\b/);		
+			b = x[i].match(/\s+([A-Z][^\|]*)\|\s+\b([\d|\.]+)\b/);
+			  //b = x[i].match(/\s+([A-Za-z]
 	//  matches word with capital letter by itself or followed by one lower case letter:  \b[A-Z][a-z]?\b
 	//  then followed by one or more spaces:  \s+
 	//  then a pipe symbol :  |
@@ -837,13 +917,15 @@ print(i,keys[i],ddx[keys[i]]);
 	//  then a word consisting of one or more digits and decimal points:  \b[\d|\.]+\b
 			if (b != null)
 			{
-				print(b);
+				console.log(b);
 				for (let i = 0; i < labs.length; i++){
-					if (b[1] == labs[i].symbol) {document.getElementById(labs[i].name).value = b[2];}
+					console.log(b[1].trim(),labs[i].symbol);
+					if (b[1].trim() == labs[i].symbol) {document.getElementById(labs[i].name).value = b[2];}
 				}
 			}
 			
 		}
+		document.getElementById('textarea').value = '';
 	}
 
 	function print(){
