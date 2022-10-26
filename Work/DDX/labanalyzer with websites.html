@@ -398,6 +398,43 @@ table,td {
 				
 			</table>
 </td>
+		<td style = "width: 40px"></td>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<label for = "pH">pH</label>
+					</td>
+					<td>
+						<input type = "text" id = "pH"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "pCO2">pCO2</label>
+					</td>
+					<td>
+						<input type = "text" id = "pCO2"><br>
+					</td>
+				</tr>	
+				<tr>
+					<td>
+						<label for = "pO2">pO2</label>
+					</td>
+					<td>
+						<input type = "text" id = "pO2"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "BE">BE</label>
+					</td>
+					<td>
+						<input type = "text" id = "BE"><br>
+					</td>
+				</tr>
+			</table>
+		</td>
 <td style = "width: 40px"></td>
 <td>
 
@@ -872,6 +909,11 @@ table,td {
 		results['Abs Basophils'] = parseFloat(document.getElementById('Abs Basophils').value);
 		results['NRBC'] = parseFloat(document.getElementById('NRBC').value);
 		
+		results['pH'] = parseFloat(document.getElementById('pH').value);
+		results.pCO2 = parseFloat(document.getElementById('pCO2').value);
+		results.pO2 = parseFloat(document.getElementById('pO2').value);
+		results.BE = parseFloat(document.getElementById('BE').value);
+		
 		results["corrected sodium"] = calcCorrectedSodium(results.sodium, results.glucose);
 		results['corrected calcium'] = calcCorrectedCalcium(results.calcium, results.albumin);
 		results["anion gap"]= calcAnionGap(results.sodium, results.chloride, results.bicarb);
@@ -1000,8 +1042,8 @@ print(labs[i].high_name);
 console.log(keys);
 		for (let i = 0; i < keys.length; i++){
 console.log(keys[i]);
-			t = t + getText(abnormality_site[keys[i]]);
-				//appendDifferential(abnormality_site[keys[i]]);
+			//t = t + getText(abnormality_site[keys[i]]);
+				appendDifferential(abnormality_site[keys[i]]);
 //t = t + '<iframe src="'+abnormality_site[keys[i]] + '" style = "width: 500px; height: auto;"></iframe><br>';
 			}
 
