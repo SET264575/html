@@ -1,0 +1,438 @@
+<!--
+link to html file regarding each disease
+expand ddx
+
+enter abnormalities
+order abnormalities by most important
+
+
+split js from html
+
+add differential diagnoses
+
+
+get age and gender from labs
+exclude certain diagnoses depending on gender and age
+
+expand/collapse ddx
+	add treeview - https://www.w3schools.com/howto/howto_js_treeview.asp
+critical values
+prioritize ddx
+
+additional labs:
+RBC morphology
+urinalysis
+ABG
+-->
+
+
+<html>
+<head>
+<title>
+Lab Analyzer
+</title>
+<style>
+input {
+	width: 40px;
+}
+table,td {
+	vertical-align: top;
+}
+</style>
+</head>
+
+<body>
+<table>
+	<tr>
+		<td>
+		<textarea id = "textarea" onchange = "parseLabs()"></textarea>
+		</td>
+		<td style = "width: 50px">
+		</td>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<label for = "sodium">Sodium</label>
+					</td>
+					<td>
+						<input type = "text" id = "sodium"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "chloride" > Chloride </label>
+					</td>
+					<td>
+						<input type = "text" id = "chloride"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "potassium" > Potassium</label>
+					</td>
+					<td>
+						<input type = "text" id = "potassium"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "bicarb"> Bicarb</label>
+					</td>
+					<td>
+						<input type = "text" id = "bicarb"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "BUN"> BUN</label>
+					</td>
+					<td>
+						<input type = "text" id = "BUN"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "creatinine"> Creatinine</label>
+					</td>
+					<td>
+						<input type = "text" id = "creatinine"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "glucose"> Glucose</label>
+					</td>
+					<td>
+						<input type = "text" id = "glucose"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "AST">AST</label>
+					</td>
+					<td>
+						<input type = "text" id = "AST"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "ALT">ALT</label>
+					</td>
+					<td>
+						<input type = "text" id = "ALT"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "alkaline phosphatase">Alkaline Phosphatase</label>
+					</td>
+					<td>
+						<input type = "text" id = "alkaline phosphatase"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "bilirubin">bilirubin</label>
+					</td>
+					<td>
+						<input type = "text" id = "bilirubin"><br>
+					</td>
+				</tr>
+		
+				<tr>
+					<td>
+						<label for = "calcium">calcium</label>
+					</td>
+					<td>
+						<input type = "text" id = "calcium"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "magnesium">magnesium</label>
+					</td>
+					<td>
+						<input type = "text" id = "magnesium"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "albumin">albumin</label>
+					</td>
+					<td>
+						<input type = "text" id = "albumin"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "total protein">total protein</label>
+					</td>
+					<td>
+						<input type = "text" id = "total protein"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "lipase">lipase</label>
+					</td>
+					<td>
+						<input type = "text" id = "lipase"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "troponin">troponin</label>
+					</td>
+					<td>
+						<input type = "text" id = "troponin"><br>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style = "width: 40px"></td>
+		<td>
+			<table>
+				
+				<tr>
+					<td>
+						<label for = "WBC">WBC</label>
+					</td>
+					<td>
+						<input type = "text" id = "WBC"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "RBC">RBC</label>
+					</td>
+					<td>
+						<input type = "text" id = "RBC"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Hgb">Hgb</label>
+					</td>
+					<td>
+						<input type = "text" id = "Hgb"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Hct">Hct</label>
+					</td>
+					<td>
+						<input type = "text" id = "Hct"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "platelets">Platelets</label>
+					</td>
+					<td>
+						<input type = "text" id = "platelets"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "MCV">MCV</label>
+					</td>
+					<td>
+						<input type = "text" id = "MCV"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Neutrophils">Abs neutrophils</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Neutrophils"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Immature Granulocytes">Abs Imm Gran</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Immature Granulocytes"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Lymphocytes">Abs Lymphocytes</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Lymphocytes"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Monocytes">Abs Monocytes</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Monocytes"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Eosinophils">Abs Eosinophils</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Eosinophils"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Abs Basophils">Abs Basophils</label>
+					</td>
+					<td>
+						<input type = "text" id = "Abs Basophils"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "NRBC">NRBC</label>
+					</td>
+					<td>
+						<input type = "text" id = "NRBC"><br>
+					</td>
+				</tr>
+				<tr>
+				</tr>
+				
+			</table>
+		</td>
+		<td style = "width: 40px"></td>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<label for = "pH">pH</label>
+					</td>
+					<td>
+						<input type = "text" id = "pH"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "pCO2">pCO2</label>
+					</td>
+					<td>
+						<input type = "text" id = "pCO2"><br>
+					</td>
+				</tr>	
+				<tr>
+					<td>
+						<label for = "pO2">pO2</label>
+					</td>
+					<td>
+						<input type = "text" id = "pO2"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "BE">BE</label>
+					</td>
+					<td>
+						<input type = "text" id = "BE"><br>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style = "width: 40px"></td>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<label for = "BE">BE</label>
+					</td>
+					<td>
+						<input type = "text" id = "BE"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "BE">BE</label>
+					</td>
+					<td>
+						<input type = "text" id = "BE"><br>
+					</td>
+				</tr>
+					<tr>
+					<td>
+						<label for = "BE">BE</label>
+					</td>
+					<td>
+						<input type = "text" id = "BE"><br>
+					</td>
+				</tr>
+					<tr>
+					<td>
+						<label for = "BE">BE</label>
+					</td>
+					<td>
+						<input type = "text" id = "BE"><br>
+					</td>
+				</tr>
+					<tr>
+					<td>
+						<label for = "BE">BE</label>
+					</td>
+					<td>
+						<input type = "text" id = "BE"><br>
+					</td>
+				</tr>
+					<tr>
+					<td>
+						<label for = "BE">BE</label>
+					</td>
+					<td>
+						<input type = "text" id = "BE"><br>
+					</td>
+				</tr>
+					<tr>
+					<td>
+						<label for = "BE">BE</label>
+					</td>
+					<td>
+						<input type = "text" id = "BE"><br>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style = "width: 40px"></td>
+		<td>
+			<p id = "corrected sodium"></p>
+			<p id = "corrected calcium"></p>
+			<p id = "anion gap"></p>
+			<p id = "bun_cr ratio"></p>
+			<p id = "AST_ALT ratio"></p>
+			<p id = "ANC"></p>
+			<p id = "osmolality"></p>
+			<p id = 'A_G ratio'></p>
+			<p id = 'MELD'></p>
+		</td>
+
+	</tr>
+<tr><td></td><td></td><td></td><td></td><td>			<button onclick="calc()">Submit</button>
+</td></tr>
+</table><br><br><br><br>
+
+<table>
+<tr>
+<td>
+<pre id = "ddx"></pre><br>
+</td>
+<td>
+<pre id = "suggestions"></pre>
+</td>
+</tr>
+</table>
+<p id = "website" name = "website" width = "1000" height = "1000"></p>
+
+
+<script src = "labanalyzer2.js">
+  </script>
+</body>
+</html>
