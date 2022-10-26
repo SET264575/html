@@ -1041,8 +1041,11 @@ console.log(t);
 
 	function copyIframe(iframeId,divId) {
 		var CurrentDiv = document.getElementById? document.getElementById(divId): null;
+		var t = "";
 		if (window.frames[iframeId] && CurrentDiv ) {
-			CurrentDiv.innerHTML = window.frames[iframeId].document.body.innerHTML;
+			t = window.frames[iframeId].document.body.innerHTML;
+			CurrentDiv.innerHTML = t;
+			console.log(t);
 			CurrentDiv.style.display = 'block';
 		}
 	}
