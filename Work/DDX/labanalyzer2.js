@@ -369,37 +369,6 @@
 	
 	var FRAMECOUNT = 0;
 
-	function radioCalc(){
-		radios = ['sodiumR','chlorideR','bicarbR','potassiumR','BUNR',"CrR",'glucoseR','ASTR','ALTR','alkphosR','bilirubinR','calciumR','albuminR','totalproteinR'];
-		abnormalities = [];
-		for (let i = 0; i < radios.length; i++){
-			x = getRadioButtonValue(radios[i]);
-			if ( x != "normal" && x != -1){
-					abnormalities.push(x);
-			}
-		}
-
-		print("before pairs");
-		for (let i = 0; i < pairs.length; i++){
-			if (abnormalities.includes(pairs[i].first) && abnormalities.includes(pairs[i].second)){
-				let temp = pairs[i].first + ' & ' + pairs[i].second;
-				abnormalities.push(temp);
-			}
-		}
-
-		print("before triplet");
-		for (let i = 0; i < triplets.length; i++){
-			print(abnormalities.hasOwnProperty(triplets[i].first));
-			if (abnormalities.includes(triplets[i].first) && abnormalities.includes(triplets[i].second) && abnormalities.includes(triplets[i].third)){
-				let temp = triplets[i].first + ' & ' + triplets[i].second + ' & ' + triplets[i].third;
-				abnormalities.push(temp);
-				print(temp);
-			}
-		}
-		developDifferential(abnormalities);
-
-	}
-
 	function calc(){
 		abnormalities= [];
 		ddx = {};
@@ -565,11 +534,12 @@ print(labs[i].high_name);
 
 		t = t + '\n\n';
 		var keys = Object.keys(ddx);
+		FRAMECOUNT = 0;
 console.log(keys);
 		for (let i = 0; i < keys.length; i++){
 console.log(keys[i]);
 			//t = t + getText(abnormality_site[keys[i]]);
-				appendDifferential_backup(abnormality_site[keys[i]]);
+				appendDifferential(abnormality_site[keys[i]]);
 //t = t + '<iframe src="'+abnormality_site[keys[i]] + '" style = "width: 500px; height: auto;"></iframe><br>';
 			}
 
