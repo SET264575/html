@@ -24,7 +24,7 @@
     <input type = "radio" name = "interspace" value = "0" id = "interspace" onchange = "copytext()">
 <label for = "0">L3-L4</label><br>
 <input type = "radio" name = "interspace" value = "1" id = "interspace" onchange = "copytext()">
-<label for = "1">l4-l5</label><br><br>
+<label for = "1">L4-L5</label><br><br>
 
         <h4>Fluid color</h4>
         <input type = "radio" name = "color" value = "0" id = "color" onchange = "copytext()">
@@ -98,7 +98,8 @@
                 t = t + "bloody";
                 break;
         }
-        t = t + " fluid was obtained and sent for studies. Opening pressure was " + pressure + " cm water. ";
+        t = t + " fluid was obtained and sent for studies. ";
+        if (pressure != '') {Opening pressure was " + pressure + " cm water. ";}
         t = t + "The needle was withdrawn, the puncture site was covered with a Band-Aid and the patient was placed prone. ";
         t = t + "The patient tolerated the procedure well.  There were no complications.";
         document.getElementById("text").value = t;
