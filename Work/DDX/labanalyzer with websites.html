@@ -47,102 +47,6 @@ table,td {
 		<td>
 		<textarea id = "textarea" onchange = "parseLabs()"></textarea>
 		</td>
-		<td>
-		
-
-
-<!--
-	<table>
-				<tr>
-					<td>Sodium</td>
-					<td><input type="radio" name = "sodiumR" value = "hyponatremia"><label for = "sodiumR">Low</label></td>
-					<td><input type="radio" name = "sodiumR" value = "normal"><label for = "sodiumR">Normal</label></td>
-					<td><input type="radio" name = "sodiumR" value = "hypernatremia"><label for = "sodiumR">High</label></td>
-				</tr>
-				<tr>
-					<td>Chloride</td>
-					<td><input type="radio" name = "chlorideR" value = "hypochloremia"><label for = "chlorideR">Low</label></td>
-					<td><input type="radio" name = "chlorideR" value = "normal"><label for = "chlorideR">Normal</label></td>
-					<td><input type="radio" name = "chlorideR" value = "hyperchloremia"><label for = "chlorideR">High</label></td>
-				</tr>
-				<tr>
-					<td>Bicarb</td>
-					<td><input type="radio" name = "bicarbR" value = "hypobicarbia"><label for = "bicarbR">Low</label></td>
-					<td><input type="radio" name = "bicarbR" value = "normal"><label for = "bicarbR">Normal</label></td>
-					<td><input type="radio" name = "bicarbR" value = "hyperbicarbia"><label for = "bicarbR">High</label></td>
-				</tr>
-				<tr>
-					<td>Potassium</td>
-					<td><input type="radio" name = "potassiumR" value = "hypokalemia"><label for = "potassiumR">Low</label></td>
-					<td><input type="radio" name = "potassiumR" value = "normal"><label for = "potassiumR">Normal</label></td>
-					<td><input type="radio" name = "potassiumR" value = "hyperkalemia"><label for = "potassiumR">High</label></td>
-				</tr>
-				<tr>
-					<td>BUN</td>
-					<td><input type="radio" name = "BUNR" value = "low BUN"><label for = "BUNR">Low</label></td>
-					<td><input type="radio" name = "BUNR" value = "normal"><label for = "BUNR">Normal</label></td>
-					<td><input type="radio" name = "BUNR" value = "elevated BUN"><label for = "BUNR">High</label></td>
-				</tr>
-				<tr>
-					<td>Creatinine</td>
-					<td><input type="radio" name = "CrR" value = "low creatinine"><label for = "creatinineR">Low</label></td>
-					<td><input type="radio" name = "CrR" value = "normal"><label for = "creatinineR">Normal</label></td>
-					<td><input type="radio" name = "CrR" value = "elevated creatinine"><label for = "creatinineR">High</label></td>
-				</tr>
-				<tr>
-					<td>Glucose </td>
-					<td><input type="radio" name = "glucoseR" value = "hypoglycemia"><label for = "glucoseR">Low</label></td>
-					<td><input type="radio" name = "glucoseR" value = "normal"><label for = "glucoseR">Normal</label></td>
-					<td><input type="radio" name = "glucoseR" value = "hyperglycemia"><label for = "glucoseR">High</label></td>
-				</tr>
-				<tr>
-					<td>AST </td>
-					<td><input type="radio" name = "ASTR" value = "low AST"><label for = "ASTR">Low</label></td>
-					<td><input type="radio" name = "ASTR" value = "normal"><label for = "ASTR">Normal</label></td>
-					<td><input type="radio" name = "ASTR" value = "elevated AST"><label for = "ASTR">High</label></td>
-				</tr>
-				<tr>
-					<td>ALT</td>
-					<td><input type="radio" name = "ALTR" value = "low ALT"><label for = "ALTR">Low</label></td>
-					<td><input type="radio" name = "ALTR" value = "normal"><label for = "ALTR">Normal</label></td>
-					<td><input type="radio" name = "ALTR" value = "elevated ALT"><label for = "ALTR">High</label></td>
-				</tr>
-				<tr>
-					<td>Alk Phos</td>
-					<td><input type="radio" name = "ALTR" value = "low alkaline phosphatase"><label for = "alkphosR">Low</label></td>
-					<td><input type="radio" name = "ALTR" value = "normal"><label for = "alkphosR">Normal</label></td>
-					<td><input type="radio" name = "ALTR" value = "elevated alkaline phosphatase"><label for = "alkphosR">High</label></td>
-				</tr>
-				<tr>
-					<td>Bilirubin</td>
-					<td><input type="radio" name = " bilirubinR" value = "hypobilirubinemia"><label for = "bilirubinR">Low</label></td>
-					<td><input type="radio" name = " bilirubinR" value = "normal"><label for = "bilirubinR">Normal</label></td>
-					<td><input type="radio" name = " bilirubinR" value = "hyperbilirubinemia"><label for = "bilirubinR">High</label></td>
-				</tr>
-				<tr>
-					<td>Calcium</td>
-					<td><input type="radio" name = "calciumR" value = "hypocalcemia"><label for = "calciumR">Low</label></td>
-					<td><input type="radio" name = "calciumR" value = "normal"><label for = "calciumR">Normal</label></td>
-					<td><input type="radio" name = "calciumR" value = "hypercalcemia"><label for = "calciumR">High</label></td>
-				</tr>
-				<tr>
-					<td>Albumin</td>
-					<td><input type="radio" name = "albuminR" value = "hypoalbuminemia"><label for = "albuminR">Low</label></td>
-					<td><input type="radio" name = "albuminR" value = "normal"><label for = "albuminR">Normal</label></td>
-					<td><input type="radio" name = "albuminR" value = "hyperalbuminemia"><label for = "albuminR">High</label></td>
-				</tr>
-				<tr>
-					<td>Total Protein</td>
-					<td><input type="radio" name = "totalproteinR" value = "low total protein"><label for = "totalproteinR">Low</label></td>
-					<td><input type="radio" name = "totalproteinR" value = "normal"><label for = "totalproteinR">Normal</label></td>
-					<td><input type="radio" name = "totalproteinR" value = "elevated total protein"><label for = "totalproteinR">High</label></td>
-				</tr>
-			</table>
-
-			<button id = "Submit2" onclick = "radioCalc()">Submit</button><br>
-
-		</td> -->
-
 		<td style = "width: 50px">
 		</td>
 		<td>
@@ -284,10 +188,11 @@ table,td {
 						<input type = "text" id = "troponin"><br>
 					</td>
 				</tr>
-</table>
-<td style = "width: 40px"></td>
-<td>
-<table>
+			</table>
+		</td>
+		<td style = "width: 40px"></td>
+		<td>
+			<table>
 				
 				<tr>
 					<td>
@@ -397,7 +302,7 @@ table,td {
 				</tr>
 				
 			</table>
-</td>
+		</td>
 		<td style = "width: 40px"></td>
 		<td>
 			<table>
@@ -435,11 +340,8 @@ table,td {
 				</tr>
 			</table>
 		</td>
-<td style = "width: 40px"></td>
-<td>
-
-
-
+		<td style = "width: 40px"></td>
+		<td>
 			<p id = "corrected sodium"></p>
 			<p id = "corrected calcium"></p>
 			<p id = "anion gap"></p>
@@ -449,8 +351,6 @@ table,td {
 			<p id = "osmolality"></p>
 			<p id = 'A_G ratio'></p>
 			<p id = 'MELD'></p>
-			
-
 		</td>
 
 	</tr>
@@ -1068,13 +968,14 @@ console.log(t);
 		FRAMECOUNT = FRAMECOUNT + 1;
 		var t = '';
 		t = t + '<div id = "display'+FRAMECOUNT + '"></div>';
-		t = t + '<iframe width="0" height = "0" id = "buffer';
+		t = t + '<iframe width="100" height = "100" id = "buffer';
 		t = t + FRAMECOUNT + '" name="buffer' + FRAMECOUNT + '" src="'+target+'" ';
 		t = t + 'onload="copyIframe(';
 		t = t + '\'buffer'+FRAMECOUNT+'\',';
 		t = t + '\'display'+FRAMECOUNT+'\'';
 		t = t + ')"></iframe>\n';
 		document.getElementById('ddx').innerHTML = t;
+		console.log(t);
 	}
 
 	function copyIframe(iframeId,divId) {
