@@ -23,14 +23,13 @@ class Lab{
 		constructor(name,indicators){
 			this.name = name;
 			this.indicators = indicators;
-			this.flags = [];
 			/*this.description = description;
 			this.triggeringResult = "";
 			this.additionalTests = additionalTests;*/
 		}
 		
-		get score(){
-			score = 0;
+		get score(abnormalities){
+			var score = 0;
 			for (let i = 0; i<this.indicators.length; i++) {
 				if (this.indicators[i] in abnormalities) {
 					score++;
@@ -40,22 +39,6 @@ class Lab{
 		}
 				
 	}
-
-	class Condition{
-		constructor(name,value,relation,limit){
-			this.name = name;
-			this.value = value;
-			this.relation = relation;
-			this.limit = limit;
-		}
-		
-		get present(){
-			if (this.relation = ">" && this.value > this.limit) {return(true);}
-			if (this.relation = "<" && this.value < this.limit) {return(true);}
-			return(false);
-		}	
-	}
-
 	
 	class Abnormality{
 		constructor(name,ddx){
@@ -81,8 +64,6 @@ class Lab{
 	}
 
 
-	condition = [];
-	condition.push(new Condition("hyponatremia",sodium,"<",135));
 
 	diseases = [];
 	diseases.push(new Disease("CHF",['elevated Pro-BNP','hyponatremia']));
@@ -622,8 +603,24 @@ print(labs[i].high_name);
 		if(results['AST/ALT ratio']<0.9){
 			abnormalities.push('AST/ALT ratio < 0.9');
 		}
+		createDiseaseList(abnormalities);
 		developDifferential(abnormalities);		
 	}	
+
+	function createDiseaseList(abnormalities){
+		var t = 'Possible Conditions:\n';
+		for (let i = 0; i<diseases.length; i++) {
+			if (diseases[i].score > 1) {
+				t = t + diseases[i].name + "   " + diseases[i].score(abnormalities) + "\n";
+				for (let j = 0; j < diseases[i].indicators; j++) {
+					if (diseases[i].indicators[j] in abnormalities) {
+						t = t + "\t"+diseases[i].indicators[j] + "\n";
+					}
+				}
+			}
+		}
+		document.getElementById('diseases').innerHTML = t;	
+	}
 
 
 	function developDifferential(abnormalities){
