@@ -1,4 +1,4 @@
-//uric acid, CK, procalcitonin
+//uric acid, CK, procalcitonin, bands, lactate
 
 console.log("at 10:41");
 
@@ -22,10 +22,11 @@ class Lab{
 	}
 
 	class Disease{
-		constructor(name,indicators,essential,link){
+		constructor(name,indicators,essential,minimum,link){
 			this.name = name;
 			this.indicators = indicators;
 			this.essential = "";
+			this.minimum = minimum;
 			this.link = "";
 		}
 		
@@ -68,34 +69,31 @@ class Lab{
 
 	diseases = [];
 
-	diseases.push(new Disease("CHF",['elevated Pro-BNP','hyponatremia'],'',''));
-	diseases.push(new Disease("adrenal insufficiency",["hyponatremia","hyperkalemia","hypocalcemia"],'',''));
-	diseases.push(new Disease("DKA",["hyperkalemia","hyperglycemia","high anion gap metabolic acidosis","hypobicarbia"],'',''));
-	diseases.push(new Disease("sepsis",["leukocytosis","neutrophilia","toxic granulation","high anion gap metabolic acidosis"],'',''));
-	diseases.push(new Disease("renal failure",["elevated BUN","elevated creatinine","hyperkalemia","anemia"],'',''));
-	diseases.push(new Disease("upper GI bleeding",["elevated BUN","anemia"],'',''));
-	diseases.push(new Disease("hypomagnesemia",['hypocalcemia','hypokalemia'],'',''));
-	diseases.push(new Disease("capillary leak syndrome",['polycythemia','leukocytosis','thrombocytosis','hypoalbuminemia'],'',''));
-	diseases.push(new Disease("HELLP syndrome",["elevated AST","elevated ALT","thrombocytopenia","elevated LDH"],'',''));
-	diseases.push(new Disease("iron deficiency anemia",["anemia","microcytosis"],'',''));
-	diseases.push(new Disease("Cushing's syndrome",["hypernatremia","hypokalemia"],'',''));
-	diseases.push(new Disease("hepatorenal syndrome",["elevated creatinine","elevated AST","elevated ALT"],'',''));
-	diseases.push(new Disease("milk-alkali syndrome",['hypochloremia','hypokalemia','hypercalcemia'],'',''));
-	diseases.push(new Disease("steroid use",['hyperglycemia','leukocytosis'],'',''));
-	diseases.push(new Disease("pancytopenia",['anemia','leukopenia','thrombocytopenia']));
-	diseases.push(new Disease("cirrhosis",["anemia","thrombocytopenia","elevated AST","elevated ALT","hyponatremia"],'',''));
-	diseases.push(new Disease("Ehrlichiosis",["leukopenia","lymphopenia","thrombocytopenia","hyponatremia","elevated AST","elevated ALT"],'',''));
-	diseases.push(new Disease("hemolytic-uremic syndrome",['anemia','thrombocytopenia','elevated creatinine','elevated BUN'],'',''));
-	diseases.push(new Disease("TTP",['anemia','thrombocytopenia','elevated creatinine','elevated BUN'],'',''));
-	diseases.push(new Disease("multiple myeloma",["hypercalcemia","elevated creatinine","anemia"],'',''));
-	diseases.push(new Disease("tertiary hyperparathyroidism",['hypercalcemia','elevated creatinine'],'',''));
-	diseases.push(new Disease("aluminum toxicity",['hyercalcemia','elevated creatinine'],'',''));
-	diseases.push(new Disease("eosinophilic gastritis",["hypoalbuinemia","anemia","eosinophilia"],'',''));
-	diseases.push(new Disease("vitamin B12 deficiency",['anemia','macrocytosis'],'',''));
-	diseases.push(new Disease("folate deficiency",['anemia','macrocytosis'],'',''));
-
-
-	
+	diseases.push(new Disease("CHF",['elevated pro-BNP','hyponatremia'],['elevated pro-BNP'],2,''));
+	diseases.push(new Disease("adrenal insufficiency",["hyponatremia","hyperkalemia","hypocalcemia"],[''],2,''));
+	diseases.push(new Disease("DKA",["hyperkalemia","hyperglycemia","high anion gap metabolic acidosis","hypobicarbia"],['hyperglycemia'],2,''));
+	diseases.push(new Disease("sepsis",["leukocytosis","neutrophilia","bandemia","toxic granulation","high anion gap metabolic acidosis"],'',2,''));
+	diseases.push(new Disease("renal failure",["elevated BUN","elevated creatinine","hyperkalemia","anemia"],[''],2,''));
+	diseases.push(new Disease("upper GI bleeding",["elevated BUN","anemia"],[''],2,''));
+	diseases.push(new Disease("hypomagnesemia",['hypocalcemia','hypokalemia'],[''],2,''));
+	diseases.push(new Disease("capillary leak syndrome",['polycythemia','leukocytosis','thrombocytosis','hypoalbuminemia'],['hypoalbuminemia'],3,''));
+	diseases.push(new Disease("HELLP syndrome",["elevated AST","elevated ALT","thrombocytopenia","elevated LDH"],['thrombocytopenia'],2,''));
+	diseases.push(new Disease("iron deficiency anemia",["anemia","microcytosis"],[''],2,''));
+	diseases.push(new Disease("Cushing's syndrome",["hypernatremia","hypokalemia"],[''],2,''));
+	diseases.push(new Disease("hepatorenal syndrome",["elevated creatinine","elevated AST","elevated ALT"],['elevated creatinine'],2,''));
+	diseases.push(new Disease("milk-alkali syndrome",['hypochloremia','hypokalemia','hypercalcemia'],[''],2,''));
+	diseases.push(new Disease("steroid use",['hyperglycemia','leukocytosis'],[''],2,''));
+	diseases.push(new Disease("pancytopenia",['anemia','leukopenia','thrombocytopenia'],[''],3,''));
+	diseases.push(new Disease("cirrhosis",["anemia","thrombocytopenia","elevated AST","elevated ALT","hyponatremia"],['thrombocytopenia'],3,''));
+	diseases.push(new Disease("Ehrlichiosis",["leukopenia","lymphopenia","thrombocytopenia","hyponatremia","elevated AST","elevated ALT"],[''],2,''));
+	diseases.push(new Disease("hemolytic-uremic syndrome",['anemia','thrombocytopenia','elevated creatinine','elevated BUN'],['anemia'],3,''));
+	diseases.push(new Disease("TTP",['anemia','thrombocytopenia','elevated creatinine','elevated BUN'],['thrombocytopenia'],3,''));
+	diseases.push(new Disease("multiple myeloma",["hypercalcemia","elevated creatinine","anemia"],['hypercalcemia'],2,''));
+	diseases.push(new Disease("tertiary hyperparathyroidism",['hypercalcemia','elevated creatinine'],['hypercalcemia'],2,''));
+	diseases.push(new Disease("aluminum toxicity",['hyercalcemia','elevated creatinine'],['hypercalcemia'],2,''));
+	diseases.push(new Disease("eosinophilic gastritis",["hypoalbuinemia","anemia","eosinophilia"],['eosinophilia'],2,''));
+	diseases.push(new Disease("vitamin B12 deficiency",['anemia','macrocytosis'],[''],2,''));
+	diseases.push(new Disease("folate deficiency",['anemia','macrocytosis'],[''],2,''));
 
 	labs = [];
 	labs.push(new Lab("sodium","NA",135,145,'hyponatremia','hypernatremia'));
