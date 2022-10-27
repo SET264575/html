@@ -564,13 +564,13 @@ console.log(t);
 		FRAMECOUNT = FRAMECOUNT + 1;
 		var t = '';
 		t = t + '<div id = "display'+FRAMECOUNT + '"></div>';
-		t = t + '<iframe width="100" height = "100" id = "buffer';
+		t = t + '<iframe width="0" height = "0" id = "buffer';
 		t = t + FRAMECOUNT + '" name="buffer' + FRAMECOUNT + '" src="'+target+'" ';
 		t = t + 'onload="copyIframe(';
 		t = t + '\'buffer'+FRAMECOUNT+'\',';
 		t = t + '\'display'+FRAMECOUNT+'\'';
 		t = t + ')"></iframe>\n';
-		document.getElementById('ddx').innerHTML = t;
+		document.getElementById('ddx').innerHTML = document.getElementById('ddx').innerHTML + t;
 	//	console.log(t);
 	}
 
