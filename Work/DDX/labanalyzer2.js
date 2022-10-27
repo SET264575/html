@@ -463,7 +463,7 @@ class Lab{
 		setTestValues();
 	}
 
-	printAbnormalities();
+	//printAbnormalities();
 	
 	var FRAMECOUNT = 0;
 
