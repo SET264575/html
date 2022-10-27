@@ -392,7 +392,7 @@ class Lab{
 		setTestValues();
 	}
 
-//	printAbnormalities();
+	printAbnormalities();
 	
 	var FRAMECOUNT = 0;
 
@@ -756,7 +756,8 @@ console.log(t);
 		var b = "";
 		var keys = Object.keys(abnormality);
 		for (let i = 0; i< keys.length; i++){
-			b = b + '\tsuggestion["'+keys[i]+'"] = "";\n';
+			b = b + '\tabnormality_site["'+keys[i]+'"] = "'+keys[i]+'.html";\n';
 		}
 		document.getElementById('ddx').innerHTML = b;
 	}
+
