@@ -88,15 +88,17 @@ class Lab{
 	labs.push(new Lab("ALT","Alt",7,55,'***ignore***','elevated ALT'));
 	labs.push(new Lab('alkaline phosphatase',"Alk Phos",40,130,'low alkaline phosphatase','elevated alkaline phosphatase'));
 	labs.push(new Lab('total protein',"TP",6.5,8.5,"low total protein","elevated total protein"));
-	labs.push(new Lab("albumin","Alb",3.5,5,"hypoalbuminemia","hyperalbuminemia"));
+	labs.push(new Lab("albumin","Alb",3.5,5,"hypoalbuminemia","***ignore***"));
 	labs.push(new Lab("calcium","CA",8.5,10.3,"hypocalcemia","hypercalcemia"));
-	labs.push(new Lab("magnesium","MG",2,3,"hypomagnesemia","hypermagnesemia"));
+	labs.push(new Lab("magnesium","MG",2,3,"hypomagnesemia","***ignore***"));
 	labs.push(new Lab("bilirubin","Total Bilirubin",0.1,1.2,"***ignore***","hyperbilirubinemia"));
 	labs.push(new Lab("lipase","Lip",0,99,'***ignore***','elevated lipase'));
 	labs.push(new Lab('troponin','Troponin T',0,0.1,'***ignore***','elevated troponin'));
+
 	labs.push(new Lab("anion gap","anion gap",4,17,"low anion gap","high anion gap metabolic acidosis"));
 	labs.push(new Lab("A/G ratio","A/G ratio",0.8,2,'low A/G ratio','elevated A/G ratio'));
 	labs.push(new Lab("MELD","MELD",0,10,'***ignore***','elevated MELD score'));
+
 	labs.push(new Lab("WBC","WBC",3.8,9.9,'leukocytopenia','leukocytosis'));
 	labs.push(new Lab("RBC","RBC",4.3,5.8,'***ignore***','***ignore***'));
 	labs.push(new Lab("Hgb","HGB",13.0,17.5,'anemia','polycythemia'));
