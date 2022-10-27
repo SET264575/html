@@ -242,6 +242,7 @@
 	abnormality_site['hypomagnesemia'] = 'hypomagnesemia.html';
 	abnormality_site['anemia'] = 'anemia.html';
 	abnormality_site['eosinophilia'] = 'eosinophilia.html';
+	abnormality_site['high anion gap metabolic acidosis'] = 'high anion gap metabolic acidosis.html';
 
 
 	
