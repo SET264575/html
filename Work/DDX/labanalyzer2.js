@@ -134,6 +134,9 @@ class Lab{
 	labs.push(new Lab('Abs Basophils','Baso Abs Auto',0,0.1,'***ignore***','***ignore***'));
 	labs.push(new Lab('NRBC','NRBC',0,0.01,'***ignore***','***ignore***'));
 	labs.push(new Lab('ANC','ANC',2500,8000,'neutropenia','neutrophilia'));
+
+//complete the following
+/*
 	labs.push(new Lab('Vacuolated Neutrophils','Vacuolated Neuts'));
 	labs.push(new Lab('Dohle Bodies','Dohle Bodies'));
 	labs.push(new Lab('Giant Platelets','Gt Plts'));
@@ -150,16 +153,22 @@ class Lab{
 	labs.push(new Lab('Procalcitonin'));
 	labs.push(new Lab('Total Creatinine Kinase'));
 	labs.push(new Lab('Pro-BNP'));
+*/
 	labs.push(new Lab('Ammonia','Ammonia',25,94,'***ignore***','hyperammonemia'));
 
 	
-
+/*
 	var links = {};
 	links['hyponatremia'] = 'https://ddxof.com/hyponatremia/?sf_action=get_data&sf_data=all&_sf_s=hyponatremia';
 	links['adrenal insufficiency'] = 'https://en.wikipedia.org/wiki/Adrenal_insufficiency';
 	links['AST/ALT ratio > 2.5'] = 'https://en.wikipedia.org/wiki/AST/ALT_ratio';
 	links['milk-alkali syndrome'] = 'https://en.wikipedia.org/wiki/Milk-alkali_syndrome';
+	*/
 
+
+//delete the following:
+
+/*
 	var abnormality = {};
 	abnormality["hyponatremia"] = ['CHF','Lasix use','SSRI use','psychogenic polydipsia',"cirrhosis","nephrotic syndrome","SIADH","hypothyroidism","beer potomania", "pregnancy","reset osmostat","hypovolemia due to fluid losses","hypovolemia due to decreased oral intake","pancreatitis","ecstasy use","prolonged sweating","adrenal insufficiency",'hypoaldosteronism','pseudohyponatremia due to elevated triglycerides','pseudohyponatremia due to paraproteinemia','pseudohyponatremia due to hyperglycemia','pseudohyponatremia due to mannitol'];
 	abnormality["hypernatremia"] = ['dehydration','diabetes insipidus','osmotic diuresis','excessive sodium administration','hyperaldosteronism',"Cushing's syndrome"];
@@ -232,6 +241,8 @@ class Lab{
 	abnormality['bands'] = ['sepsis','infection','inflammatory conditions'];
 	abnormality['toxic granulation'] = ['inflammation'];
 	abnormality['hypersegmented'] = ['vitamin B12 deficiency','folate deficiency','myelodysplastic syndromes'];
+	
+	*/
 
 	/*abnormality["hyponatremia & hyperkalemia"]= ['adrenal insufficiency','renal failure','chylothorax','GI tract disorders'];
 	abnormality['hypernatremia & hypokalemia'] = ["Cushing's syndrome"];
@@ -258,10 +269,10 @@ class Lab{
 	abnormality['hypercalcemia & elevated creatinine'] = ['multiple myeloma','tertiary hyperparathyroidism','aluminum toxicity','milk-alkali syndrome'];
 	abnormality['hypercalcemia & anemia'] = ['multiple myeloma'];
 	abnormality['hypoalbuminemia & anemia & eosinophilia']=['eosinophilic gastritis'];
-	*/
+	
 	abnormality['high anion gap metabolic acidosis'] = ['DKA','lactic acidosis','alcohol toxicity','methanol toxicity','ethylene glycol toxicity','uremia','acetaminophen toxicity','carbon monoxide','cyanide','CHF','toluene abuse','aminoglycoside use','starvation ketoacidosis','phenformin use','iron use','isoniazid use','inborn errors of metabolism','salicylate use','metformin use'];
 	abnormality['low anion gap'] = ['hypoalbuminemia','multiple myeloma','hyperkalemia','hypercalcemia','lithium toxicity','increased cationic paraprotein','bromide toxicity','elevated serum iodide'];
-	
+	*/
 	abnormality_site = [];
 	
 	abnormality_site["hyponatremia"] = "hyponatremia.html";
@@ -684,8 +695,7 @@ print(labs[i].high_name);
 
 
 		//document.getElementById("ddx").innerHTML = t;
-console.log(t);
-		//document.getElementById("suggestions").innerHTML = s;
+		document.getElementById("suggestions").innerHTML = s;
 	}
 
 /*
