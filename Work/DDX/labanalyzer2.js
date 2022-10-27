@@ -85,7 +85,11 @@ class Lab{
 	diseases.push(new Disease("Ehrlichiosis",["leukopenia","lymphopenia","thrombocytopenia","hyponatremia","elevated AST","elevated ALT"]));
 	diseases.push(new Disease("hemolytic-uremic syndrome",['anemia','thrombocytopenia','elevated creatinine','elevated BUN']));
 	diseases.push(new Disease("TTP",['anemia','thrombocytopenia','elevated creatinine','elevated BUN']));
-
+	diseases.push(new Disease("multiple myeloma",["hypercalcemia","elevated creatinine","anemia"]));
+	diseases.push(new Disease("tertiary hyperparathyroidism",['hypercalcemia','elevated creatinine']));
+	diseases.push(new Disease("aluminum toxicity",['hyercalcemia','elevated creatinine']));
+	diseases.push(new Disease("eosinophilic gastritis",["hypoalbuinemia","anemia","eosinophilia"]));
+	
 /*
 	abnormality["hyponatremia & hyperkalemia"]= ['adrenal insufficiency','renal failure','chylothorax','GI tract disorders'];
 
@@ -98,12 +102,7 @@ class Lab{
 
 	abnormality['anemia & macrocytosis'] = ['vitamin B deficiency','folate deficiency'];
 
-	abnormality['elevated AST & elevated ALT & thrombocytopenia'] = ['HELLP syndrome'];
-	abnormality['polycythemia & leukocytosis & thrombocytosis'] = ['capillary leak syndrome'];
-	abnormality['polycythemia & thrombocytosis & hypoalbuminemia'] = ['capillary leak syndrome'];
-	abnormality['hypercalcemia & elevated creatinine'] = ['multiple myeloma','tertiary hyperparathyroidism','aluminum toxicity','milk-alkali syndrome'];
-	abnormality['hypercalcemia & anemia'] = ['multiple myeloma'];
-	abnormality['hypoalbuminemia & anemia & eosinophilia']=['eosinophilic gastritis'];
+
 	*/
 
 	
