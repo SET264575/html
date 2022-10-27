@@ -239,33 +239,104 @@ class Lab{
 	abnormality['low anion gap'] = ['hypoalbuminemia','multiple myeloma','hyperkalemia','hypercalcemia','lithium toxicity','increased cationic paraprotein','bromide toxicity','elevated serum iodide'];
 	
 	abnormality_site = [];
-	abnormality_site['hyponatremia'] = 'hyponatremia.html';
-	abnormality_site['hypernatremia'] = 'hypernatremia.html';
-	abnormality_site['hypochloremia'] = 'hypochloremia.html';
-	abnormality_site['hyperchloremia'] = 'hyperchlorermia.html';
-	abnormality_site['hypokalemia'] = 'hypokalemia.html';
-	abnormality_site['hyperkalemia'] = 'hyperkalemia.html';
-	abnormality_site['elevated BUN'] = 'elevated BUN.html';
-	abnormality_site['elevated creatinine'] = 'elevated creatinine.html';
-	abnormality_site['hypoglycemia'] = 'hypoglycemia.html';
-	abnormality_site['hyperglycemia'] = 'hyperglycemia.html';
-	abnormality_site['elevated AST'] = 'elevated AST.html';
-	abnormality_site['elevated ALT'] = 'elevated ALT.html';
-	abnormality_site['elevated alkaline phospatase'] = 'elevated alkaline phosphatase.html';
-	abnormality_site['low alkaline phosphatase'] = 'low alkaline phosphatase.html';
-	abnormality_site['hypocalcemia'] = 'hypocalcemia.html';
-	abnormality_site['hypercalcemia'] = 'hypercalcemia.html';
-	abnormality_site['hypermagnesemia'] = 'hypermagnesemia.html';
-	abnormality_site['hypomagnesemia'] = 'hypomagnesemia.html';
-	abnormality_site['hypoalbuminemia'] = 'hypoalbuminemia.html';
-	abnormality_site['hyperalbuminemia'] = 'hyperalbuminemia.html';
-	abnormality_site['hypoproteinemia'] = 'hypoproteinemia.html';
-	abnormality_site['hyperproteinemia'] = 'hyperproteinemia.html';
-	abnormality_site['elevated troponin'] = 'elevated troponin.html';
-//	abnormality_site[''] = '';
-	abnormality_site['anemia'] = 'anemia.html';
-	abnormality_site['eosinophilia'] = 'eosinophilia.html';
-	abnormality_site['high anion gap metabolic acidosis'] = 'high anion gap metabolic acidosis.html';
+	
+	abnormality_site["hyponatremia"] = "hyponatremia.html";
+	abnormality_site["hypernatremia"] = "hypernatremia.html";
+	abnormality_site["hypochloremia"] = "hypochloremia.html";
+	abnormality_site["hyperchloremia"] = "hyperchloremia.html";
+	abnormality_site["hypokalemia"] = "hypokalemia.html";
+	abnormality_site["hyperkalemia"] = "hyperkalemia.html";
+	abnormality_site["hyperbicarbia"] = "hyperbicarbia.html";
+	abnormality_site["hypobicarbia"] = "hypobicarbia.html";
+	abnormality_site["decreased creatinine"] = "decreased creatinine.html";
+	abnormality_site["elevated creatinine"] = "elevated creatinine.html";
+	abnormality_site["elevated BUN"] = "elevated BUN.html";
+	abnormality_site["hypoglycemia"] = "hypoglycemia.html";
+	abnormality_site["elevated AST"] = "elevated AST.html";
+	abnormality_site["elevated ALT"] = "elevated ALT.html";
+	abnormality_site["elevated alkaline phosphatase"] = "elevated alkaline phosphatase.html";
+	abnormality_site["low alkaline phosphatase"] = "low alkaline phosphatase.html";
+	abnormality_site["hyperbilirubinemia"] = "hyperbilirubinemia.html";
+	abnormality_site["hypercalcemia"] = "hypercalcemia.html";
+	abnormality_site["hypocalcemia"] = "hypocalcemia.html";
+	abnormality_site["hypomagnesemia"] = "hypomagnesemia.html";
+	abnormality_site["hypermagnesemia"] = "hypermagnesemia.html";
+	abnormality_site["hyperglycemia"] = "hyperglycemia.html";
+	abnormality_site["elevated total protein"] = "elevated total protein.html";
+	abnormality_site["decreased total protein"] = "decreased total protein.html";
+	abnormality_site["hypoalbuminemia"] = "hypoalbuminemia.html";
+	abnormality_site["hyperalbuminemia"] = "hyperalbuminemia.html";
+	abnormality_site["low total protein"] = "low total protein.html";
+/*
+	abnormality_site["elevated lipase"] = "elevated lipase.html";
+	abnormality_site["low A/G ratio"] = "low A/G ratio.html";
+	abnormality_site["elevated A/G ratio"] = "elevated A/G ratio.html";
+*/
+	abnormality_site["elevated troponin"] = "elevated troponin.html";
+/*
+	abnormality_site["leukocytosis"] = "leukocytosis.html";
+	abnormality_site["leukopenia"] = "leukopenia.html";
+	abnormality_site["polycythemia"] = "polycythemia.html";
+*/
+	abnormality_site["anemia"] = "anemia.html";
+/*
+	abnormality_site["microcytosis"] = "microcytosis.html";
+	abnormality_site["macrocytosis"] = "macrocytosis.html";
+	abnormality_site["thrombocytopenia"] = "thrombocytopenia.html";
+	abnormality_site["thrombocytosis"] = "thrombocytosis.html";
+*/
+	abnormality_site["eosinophilia"] = "eosinophilia.html";
+/*	abnormality_site["high anion gap acidosis"] = "high anion gap acidosis.html";
+	abnormality_site["AST/ALT ratio > 2.5"] = "AST/ALT ratio > 2.5.html";
+	abnormality_site["AST/ALT ratio between 1.5 and 2.5"] = "AST/ALT ratio between 1.5 and 2.5.html";
+	abnormality_site["AST/ALT ratio less than 0.9"] = "AST/ALT ratio less than 0.9.html";
+	abnormality_site["neutropenia"] = "neutropenia.html";
+	abnormality_site["neutrophilia"] = "neutrophilia.html";
+
+	abnormality_site["teardrop"] = "teardrop.html";
+	abnormality_site["smudge"] = "smudge.html";
+	abnormality_site["ovalocyte"] = "ovalocyte.html";
+	abnormality_site["spherocyte"] = "spherocyte.html";
+	abnormality_site["target"] = "target.html";
+	abnormality_site["helmet"] = "helmet.html";
+	abnormality_site["schistocyte"] = "schistocyte.html";
+	abnormality_site["burr"] = "burr.html";
+	abnormality_site["Howell-Jelly"] = "Howell-Jelly.html";
+	abnormality_site["acanthocyte"] = "acanthocyte.html";
+	abnormality_site["sickle"] = "sickle.html";
+	abnormality_site["stomatocyte"] = "stomatocyte.html";
+	abnormality_site["basophilic stippling"] = "basophilic stippling.html";
+	abnormality_site["Rouleaux"] = "Rouleaux.html";
+	abnormality_site["bands"] = "bands.html";
+	abnormality_site["toxic granulation"] = "toxic granulation.html";
+	abnormality_site["hypersegmented"] = "hypersegmented.html";
+	abnormality_site["hyponatremia & hyperkalemia"] = "hyponatremia & hyperkalemia.html";
+	abnormality_site["hypernatremia & hypokalemia"] = "hypernatremia & hypokalemia.html";
+	abnormality_site["hypochloremia & hypokalemia & hypercalcemia"] = "hypochloremia & hypokalemia & hypercalcemia.html";
+	abnormality_site["hypokalemia & hypocalcemia"] = "hypokalemia & hypocalcemia.html";
+	abnormality_site["elevated LFTs & elevated creatinine"] = "elevated LFTs & elevated creatinine.html";
+	abnormality_site["hyperglycemia & hypobicarbia"] = "hyperglycemia & hypobicarbia.html";
+	abnormality_site["leukocytosis & hyperglycemia"] = "leukocytosis & hyperglycemia.html";
+	abnormality_site["elevated AST & elevated ALT"] = "elevated AST & elevated ALT.html";
+	abnormality_site["leukopenia & anemia & thrombocytopenia"] = "leukopenia & anemia & thrombocytopenia.html";
+	abnormality_site["hyponatremia & hyperkalemia & hypocalcemia"] = "hyponatremia & hyperkalemia & hypocalcemia.html";
+	abnormality_site["anemia & microcytosis & elevated BUN"] = "anemia & microcytosis & elevated BUN.html";
+	abnormality_site["thrombocytopenia & hyponatremia"] = "thrombocytopenia & hyponatremia.html";
+	abnormality_site["leukopenia & thrombocytopenia & hyponatremia"] = "leukopenia & thrombocytopenia & hyponatremia.html";
+	abnormality_site["anemia & microcytosis"] = "anemia & microcytosis.html";
+	abnormality_site["anemia & macrocytosis"] = "anemia & macrocytosis.html";
+	abnormality_site["anemia & thrombocytopenia & elevated creatinine"] = "anemia & thrombocytopenia & elevated creatinine.html";
+	abnormality_site["anemia & elevated BUN & elevated creatinine"] = "anemia & elevated BUN & elevated creatinine.html";
+	abnormality_site["anemia & elevated BUN"] = "anemia & elevated BUN.html";
+	abnormality_site["elevated AST & elevated ALT & thrombocytopenia"] = "elevated AST & elevated ALT & thrombocytopenia.html";
+	abnormality_site["polycythemia & leukocytosis & thrombocytosis"] = "polycythemia & leukocytosis & thrombocytosis.html";
+	abnormality_site["polycythemia & thrombocytosis & hypoalbuminemia"] = "polycythemia & thrombocytosis & hypoalbuminemia.html";
+	abnormality_site["hypercalcemia & elevated creatinine"] = "hypercalcemia & elevated creatinine.html";
+	abnormality_site["hypercalcemia & anemia"] = "hypercalcemia & anemia.html";
+	abnormality_site["hypoalbuminemia & anemia & eosinophilia"] = "hypoalbuminemia & anemia & eosinophilia.html";
+*/
+	abnormality_site["high anion gap metabolic acidosis"] = "high anion gap metabolic acidosis.html";
+	abnormality_site["low anion gap"] = "low anion gap.html";
 
 
 	
