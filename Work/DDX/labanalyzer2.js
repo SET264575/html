@@ -28,7 +28,7 @@ class Lab{
 			this.additionalTests = additionalTests;*/
 		}
 		
-		get score(abnormalities){
+		score(abnormalities){
 			var score = 0;
 			for (let i = 0; i<this.indicators.length; i++) {
 				if (this.indicators[i] in abnormalities) {
