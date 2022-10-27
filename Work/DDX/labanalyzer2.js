@@ -648,9 +648,11 @@ print(labs[i].high_name);
 
 	function createDiseaseList(abnormalities){
 		var t = 'Possible Conditions:\n';
+		var s = '';
 		for (let i = 0; i<diseases.length; i++) {
 			if (diseases[i].score > 1) {
 				t = t + diseases[i].name + "   " + diseases[i].score(abnormalities) + "\n";
+				s = s + suggestion[diseases[i].name] + '\n';
 				for (let j = 0; j < diseases[i].indicators; j++) {
 					if (diseases[i].indicators[j] in abnormalities) {
 						t = t + "\t"+diseases[i].indicators[j] + "\n";
@@ -659,6 +661,7 @@ print(labs[i].high_name);
 			}
 		}
 		document.getElementById('diseases').innerHTML = t;	
+		document.getElementById('disease_suggestions').innerHTML = s;
 	}
 
 
