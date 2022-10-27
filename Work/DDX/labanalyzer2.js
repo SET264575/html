@@ -1,4 +1,6 @@
-	class Lab{
+//uric acid, CK, procalcitonin
+
+class Lab{
 		constructor (name,symbol,low,high,low_name,high_name){
 			this.name = name;
 			this.symbol = symbol;
