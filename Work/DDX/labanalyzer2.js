@@ -250,7 +250,7 @@ class Lab{
 	abnormality_site["hyperkalemia"] = "hyperkalemia.html";
 	abnormality_site["hyperbicarbia"] = "hyperbicarbia.html";
 	abnormality_site["hypobicarbia"] = "hypobicarbia.html";
-	abnormality_site["decreased creatinine"] = "decreased creatinine.html";
+	abnormality_site["low creatinine"] = "low creatinine.html";
 	abnormality_site["elevated creatinine"] = "elevated creatinine.html";
 	abnormality_site["elevated BUN"] = "elevated BUN.html";
 	abnormality_site["hypoglycemia"] = "hypoglycemia.html";
