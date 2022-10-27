@@ -344,7 +344,7 @@ class Lab{
 	abnormality_site["bands"] = "bands.html";
 	abnormality_site["toxic granulation"] = "toxic granulation.html";
 	abnormality_site["hypersegmented"] = "hypersegmented.html";
-	/*abnormality_site["hyponatremia & hyperkalemia"] = "hyponatremia & hyperkalemia.html";
+	abnormality_site["hyponatremia & hyperkalemia"] = "hyponatremia & hyperkalemia.html";
 	abnormality_site["hypernatremia & hypokalemia"] = "hypernatremia & hypokalemia.html";
 	abnormality_site["hypochloremia & hypokalemia & hypercalcemia"] = "hypochloremia & hypokalemia & hypercalcemia.html";
 	abnormality_site["hypokalemia & hypocalcemia"] = "hypokalemia & hypocalcemia.html";
@@ -367,7 +367,7 @@ class Lab{
 	abnormality_site["polycythemia & thrombocytosis & hypoalbuminemia"] = "polycythemia & thrombocytosis & hypoalbuminemia.html";
 	abnormality_site["hypercalcemia & elevated creatinine"] = "hypercalcemia & elevated creatinine.html";
 	abnormality_site["hypercalcemia & anemia"] = "hypercalcemia & anemia.html";
-	abnormality_site["hypoalbuminemia & anemia & eosinophilia"] = "hypoalbuminemia & anemia & eosinophilia.html"; */
+	abnormality_site["hypoalbuminemia & anemia & eosinophilia"] = "hypoalbuminemia & anemia & eosinophilia.html";
 */
 	abnormality_site["high anion gap metabolic acidosis"] = "high anion gap metabolic acidosis.html";
 	abnormality_site["low anion gap"] = "low anion gap.html";
