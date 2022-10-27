@@ -571,18 +571,19 @@ console.log(t);
 		t = t + '\'display'+FRAMECOUNT+'\'';
 		t = t + ')"></iframe>\n';
 		document.getElementById('ddx').innerHTML = t;
-		console.log(t);
+	//	console.log(t);
 	}
 
 	function copyIframe(iframeId,divId) {
 		var CurrentDiv = document.getElementById? document.getElementById(divId): null;
 		var t = "";
-		console.log(CurrentDiv);
-		console.log(window.frames[iframeId].body.innerHTML);
+		console.log('in copyIframe');
+//console.log(CurrentDiv);
+		//console.log(window.frames[iframeId].body.innerHTML);
 		if (window.frames[iframeId] && CurrentDiv ) {
 			t = window.frames[iframeId].document.body.innerHTML;
 			CurrentDiv.innerHTML = t;
-			console.log(t);
+			//console.log(t);
 			CurrentDiv.style.display = 'block';
 		}
 	}
