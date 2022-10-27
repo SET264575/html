@@ -518,12 +518,12 @@ class Lab{
 //ANC
 
 	
-		var testVersion = false;
-/*
+		var testVersion = true;
+
 	var testResults = "all high";
 	if (testVersion){
 		setTestValues();
-	} */
+	} 
 
 	//printAbnormalities();
 	
