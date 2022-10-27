@@ -544,7 +544,7 @@ console.log(keys[i]);
 			}
 
 
-		document.getElementById("ddx").innerHTML = t;
+		//document.getElementById("ddx").innerHTML = t;
 console.log(t);
 		//document.getElementById("suggestions").innerHTML = s;
 	}
