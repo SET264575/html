@@ -22,7 +22,7 @@ ABG
 -->
 */
 
-console.log("at 10:41");
+console.log("at 12:14");
 
 class Lab{
 		constructor (name,symbol,low,high,low_name,high_name){
@@ -615,7 +615,6 @@ class Lab{
 					}	
 					break;
 				case 1:
-print(labs[i].high_name);
 					if (labs[i].high_name != '***ignore***'){
 						abnormalities.push(labs[i].high_name);	
 						try {	
