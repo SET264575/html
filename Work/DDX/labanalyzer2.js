@@ -20,12 +20,25 @@ class Lab{
 	}
 
 	class Disease{
-		constructor(name,description,additionalTests){
+		constructor(name,indicators){
 			this.name = name;
-			this.description = description;
+			this.indicators = indicators;
+			this.flags = [];
+			/*this.description = description;
 			this.triggeringResult = "";
-			this.additionalTests = additionalTests;
+			this.additionalTests = additionalTests;*/
 		}
+		
+		get score(){
+			score = 0;
+			for (let i = 0; i<this.indicators.length; i++) {
+				if (this.indicators[i] in abnormalities) {
+					score++;
+				}
+			}
+			return(score);
+		}
+				
 	}
 
 	class Condition{
@@ -72,8 +85,12 @@ class Lab{
 	condition.push(new Condition("hyponatremia",sodium,"<",135));
 
 	diseases = [];
-	diseases.push(new Disease("CHF","","Pro BNP"));
-	diseases.push(new Disease("psychogenic polydipsia","","water deprivation"));
+	diseases.push(new Disease("CHF",['elevated Pro-BNP','hyponatremia']));
+	diseases.push(new Disease("adrenal insufficiency",["hyponatremia","hyperkalemia"]));
+	diseases.push(new Disease("DKA",["hyperkalemia","hyperglycemia","high anion gap metabolic acidosis"]));
+	diseases.push(new Disease("sepsis",["leukocytosis","neutrophilia","toxic granulation","high anion gap metabolic acidosis"]));
+	diseases.push(new Disease("renal failure",["elevated BUN","elevated creatinine","hyperkalemia"]));
+	
 	
 
 	labs = [];
