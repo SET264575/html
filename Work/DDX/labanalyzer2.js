@@ -71,7 +71,40 @@ class Lab{
 	diseases.push(new Disease("DKA",["hyperkalemia","hyperglycemia","high anion gap metabolic acidosis"]));
 	diseases.push(new Disease("sepsis",["leukocytosis","neutrophilia","toxic granulation","high anion gap metabolic acidosis"]));
 	diseases.push(new Disease("renal failure",["elevated BUN","elevated creatinine","hyperkalemia"]));
-	
+	diseases.push(new Disease("hypomagnesemia",['hypocalcemia','hypokalemia']));
+	diseases.push(new Disease("capillary leak syndrome",['polycythemia','leukocytosis','thrombocytosis','hypoalbuminemia']));
+	diseases.push(new Disease("HELLP syndrome",["elevated AST","elevated ALT","thrombocytopenia","elevated LDH"]));
+	diseases.psuh(new Disease("iron deficiency anemia",["anemia","microcytosis"]));
+	diseases.push(new Disease("Cushing's syndrome",["hypernatremia","hypokalemia"]));
+
+/*
+	abnormality["hyponatremia & hyperkalemia"]= ['adrenal insufficiency','renal failure','chylothorax','GI tract disorders'];
+	abnormality['hypernatremia & hypokalemia'] = ["Cushing's syndrome"];
+	abnormality['hypochloremia & hypokalemia & hypercalcemia'] = ['milk-alkali syndrome'];
+	abnormality['hypokalemia & hypocalcemia'] = ['hypomagnesemia'];
+	abnormality["elevated LFTs & elevated creatinine"] = ['hepatorenal syndrome'];
+	abnormality["hyperglycemia & hypobicarbia"] = ['DKA'];
+	abnormality["leukocytosis & hyperglycemia"] = ['steroid use'];
+	abnormality['elevated AST & elevated ALT'] = ['cirrhosis','hepatitis','HELLP syndrome'];
+	abnormality["leukopenia & anemia & thrombocytopenia"] = ['pancytopenia'];
+	abnormality["hyponatremia & hyperkalemia & hypocalcemia"] = ['adrenal insufficiency'];
+	abnormality['elevated BUN','elevated creatinine','anemia'] = ['chronic kidney disease'];
+	abnormality['anemia & microcytosis & elevated BUN'] = ['chronic upper GI bleeding'];
+	abnormality['thrombocytopenia & hyponatremia'] = ['cirrhosis'];
+	abnormality['leukopenia & thrombocytopenia & hyponatremia'] = ['Ehrlichiosis'];
+	abnormality['anemia & microcytosis'] = ['iron deficiency anemia'];
+	abnormality['anemia & macrocytosis'] = ['vitamin B deficiency','folate deficiency'];
+	abnormality['anemia & thrombocytopenia & elevated creatinine'] = ['HUS','TTP'];
+	abnormality['anemia & elevated BUN & elevated creatinine'] = ['HUS','TTP','chronic renal disease'];
+	abnormality['anemia & elevated BUN'] = ['Upper GI bleeding'];
+	abnormality['elevated AST & elevated ALT & thrombocytopenia'] = ['HELLP syndrome'];
+	abnormality['polycythemia & leukocytosis & thrombocytosis'] = ['capillary leak syndrome'];
+	abnormality['polycythemia & thrombocytosis & hypoalbuminemia'] = ['capillary leak syndrome'];
+	abnormality['hypercalcemia & elevated creatinine'] = ['multiple myeloma','tertiary hyperparathyroidism','aluminum toxicity','milk-alkali syndrome'];
+	abnormality['hypercalcemia & anemia'] = ['multiple myeloma'];
+	abnormality['hypoalbuminemia & anemia & eosinophilia']=['eosinophilic gastritis'];
+	*/
+
 	
 
 	labs = [];
