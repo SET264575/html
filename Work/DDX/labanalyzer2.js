@@ -1,5 +1,7 @@
 //uric acid, CK, procalcitonin
 
+console.log("at 10:41");
+
 class Lab{
 		constructor (name,symbol,low,high,low_name,high_name){
 			this.name = name;
