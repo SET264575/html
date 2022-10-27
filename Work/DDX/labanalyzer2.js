@@ -516,8 +516,9 @@ class Lab{
 
 //ANC
 
-	/*
+	
 		var testVersion = false;
+/*
 	var testResults = "all high";
 	if (testVersion){
 		setTestValues();
