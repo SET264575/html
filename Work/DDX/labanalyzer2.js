@@ -317,7 +317,7 @@ class Lab{
 	abnormality_site["macrocytosis"] = "macrocytosis.html";
 	abnormality_site["thrombocytopenia"] = "thrombocytopenia.html";
 	abnormality_site["thrombocytosis"] = "thrombocytosis.html";
-*/
+*/ 
 	abnormality_site["eosinophilia"] = "eosinophilia.html";
 /*	abnormality_site["high anion gap acidosis"] = "high anion gap acidosis.html";
 	abnormality_site["AST/ALT ratio > 2.5"] = "AST/ALT ratio > 2.5.html";
