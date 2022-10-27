@@ -708,7 +708,7 @@ print(labs[i].high_name);
 			if (suggestion[abnormalities[i]] != ''){
 				s = s + abnormalities[i] + '\n\t' + suggestion[abnormalities[i]] + '\n\n';
 			}
-			ddx[abnormalities[i]] = abnormality[abnormalities[i]];
+			//ddx[abnormalities[i]] = abnormality[abnormalities[i]];
 		}
 
 		t = t + '\n\n';
