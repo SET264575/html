@@ -695,12 +695,14 @@ class Lab{
 		t = t + 'Abnormalities\n';
 		s = s + 'Suggestions\n';
 
+		/*
 		if(false){
 			var keys = Object.keys(suggestion);
 			for (let i = 0; i<keys.length;i++){
 				s = s + keys[i] + '\n\t' + suggestion[keys[i]]+'\n\n';
 			}
 		}
+		*/
 
 
 		for (let i = 0; i < abnormalities.length; i++){
@@ -746,6 +748,7 @@ class Lab{
 		t = t + '\'buffer'+FRAMECOUNT+'\',';
 		t = t + '\'display'+FRAMECOUNT+'\'';
 		t = t + ')"></iframe>\n';
+		console.log(t);
 		document.getElementById('ddx').innerHTML = document.getElementById('ddx').innerHTML + t + target;
 	}
 
@@ -755,6 +758,7 @@ class Lab{
 		if (window.frames[iframeId] && CurrentDiv ) {
 			t = window.frames[iframeId].document.body.innerHTML;
 			CurrentDiv.innerHTML = t;
+			console.log(t,'in copyIframe');
 			CurrentDiv.style.display = 'block';
 		}
 	}
