@@ -231,7 +231,7 @@ class Lab{
 	abnormality['toxic granulation'] = ['inflammation'];
 	abnormality['hypersegmented'] = ['vitamin B12 deficiency','folate deficiency','myelodysplastic syndromes'];
 
-	abnormality["hyponatremia & hyperkalemia"]= ['adrenal insufficiency','renal failure','chylothorax','GI tract disorders'];
+	/*abnormality["hyponatremia & hyperkalemia"]= ['adrenal insufficiency','renal failure','chylothorax','GI tract disorders'];
 	abnormality['hypernatremia & hypokalemia'] = ["Cushing's syndrome"];
 	abnormality['hypochloremia & hypokalemia & hypercalcemia'] = ['milk-alkali syndrome'];
 	abnormality['hypokalemia & hypocalcemia'] = ['hypomagnesemia'];
@@ -256,6 +256,7 @@ class Lab{
 	abnormality['hypercalcemia & elevated creatinine'] = ['multiple myeloma','tertiary hyperparathyroidism','aluminum toxicity','milk-alkali syndrome'];
 	abnormality['hypercalcemia & anemia'] = ['multiple myeloma'];
 	abnormality['hypoalbuminemia & anemia & eosinophilia']=['eosinophilic gastritis'];
+	*/
 	abnormality['high anion gap metabolic acidosis'] = ['DKA','lactic acidosis','alcohol toxicity','methanol toxicity','ethylene glycol toxicity','uremia','acetaminophen toxicity','carbon monoxide','cyanide','CHF','toluene abuse','aminoglycoside use','starvation ketoacidosis','phenformin use','iron use','isoniazid use','inborn errors of metabolism','salicylate use','metformin use'];
 	abnormality['low anion gap'] = ['hypoalbuminemia','multiple myeloma','hyperkalemia','hypercalcemia','lithium toxicity','increased cationic paraprotein','bromide toxicity','elevated serum iodide'];
 	
@@ -331,7 +332,7 @@ class Lab{
 	abnormality_site["bands"] = "bands.html";
 	abnormality_site["toxic granulation"] = "toxic granulation.html";
 	abnormality_site["hypersegmented"] = "hypersegmented.html";
-	abnormality_site["hyponatremia & hyperkalemia"] = "hyponatremia & hyperkalemia.html";
+	/*abnormality_site["hyponatremia & hyperkalemia"] = "hyponatremia & hyperkalemia.html";
 	abnormality_site["hypernatremia & hypokalemia"] = "hypernatremia & hypokalemia.html";
 	abnormality_site["hypochloremia & hypokalemia & hypercalcemia"] = "hypochloremia & hypokalemia & hypercalcemia.html";
 	abnormality_site["hypokalemia & hypocalcemia"] = "hypokalemia & hypocalcemia.html";
@@ -354,14 +355,14 @@ class Lab{
 	abnormality_site["polycythemia & thrombocytosis & hypoalbuminemia"] = "polycythemia & thrombocytosis & hypoalbuminemia.html";
 	abnormality_site["hypercalcemia & elevated creatinine"] = "hypercalcemia & elevated creatinine.html";
 	abnormality_site["hypercalcemia & anemia"] = "hypercalcemia & anemia.html";
-	abnormality_site["hypoalbuminemia & anemia & eosinophilia"] = "hypoalbuminemia & anemia & eosinophilia.html";
+	abnormality_site["hypoalbuminemia & anemia & eosinophilia"] = "hypoalbuminemia & anemia & eosinophilia.html"; */
 */
 	abnormality_site["high anion gap metabolic acidosis"] = "high anion gap metabolic acidosis.html";
 	abnormality_site["low anion gap"] = "low anion gap.html";
 
 
 	
-	var pairs = [];
+	/*var pairs = [];
 	pairs.push(new Pairs("hyponatremia","hyperkalemia"));
 	pairs.push(new Pairs("hyperglycemia","hypobicarbia"));
 	pairs.push(new Pairs("elevated LFTs","elevated creatinine"));
@@ -385,7 +386,8 @@ class Lab{
 	triplets.push(new Triplets("polycythemia","leukocytosis","thrombocytosis"));
 	triplets.push(new Triplets("polycythemia","thrombocytosis","hypoalbuminemia"));
 	triplets.push(new Triplets("hypoalbuminemia","anemia","eosinophilia"));
-	triplets.push(new Triplets("hypochloremia","hypokalemia","hypercalcemia"));
+	triplets.push(new Triplets("hypochloremia","hypokalemia","hypercalcemia")); 
+	*/
 
 	var suggestion = [];
 	suggestion["hyponatremia"] = "Calculate corrected sodium level.";
@@ -436,8 +438,9 @@ class Lab{
 	suggestion["neutropenia"] = "";
 	suggestion["neutrophilia"] = "Look for other SIRS criteria and obtain sepsis lactate, initiate IV fluids, blood cultures and antibiotics if indicated.";
 	suggestion['eosinophilia'] = '';
-	suggestion["hyponatremia & hyperkalemia"] = "Consider adrenal insufficiency\n\tIf the patient is hypotensive, give hydrocortisone 100 mg IV";
-	suggestion["hypernatremia & hypokalemia"] = "";
+	/*
+	suggestion["hyponatremia & hyperkalemia"] = "Consider adrenal insufficiency\n\tIf the patient is hypotensive, give hydrocortisone 100 mg IV"; */
+/*	suggestion["hypernatremia & hypokalemia"] = "";
 	suggestion["hypochloremia & hypokalemia & hypercalcemia"] = "";
 	suggestion["hypokalemia & hypocalcemia"] = "";
 	suggestion["elevated LFTs & elevated creatinine"] = "";
@@ -459,7 +462,8 @@ class Lab{
 	suggestion["polycythemia & thrombocytosis & hypoalbuminemia"] = "";
 	suggestion["hypercalcemia & elevated creatinine"] = "";
 	suggestion["hypercalcemia & anemia"] = "";
-	suggestion["hypoalbuminemia & anemia & eosinophilia"] = "";
+	suggestion["hypoalbuminemia & anemia & eosinophilia"] = ""; 
+*/
 	suggestion["high anion gap metabolic acidosis"] = "Consider ordering:\n\t\tbeta hydroxybutyrate\n\t\tlactate\n\t\tethanol\n\t\tacetaminophen level\n\t\tserum osmolality";
 	suggestion["low anion gap"] = "";
 
@@ -478,11 +482,12 @@ class Lab{
 
 //ANC
 
-	var testVersion = false;
+	/*
+		var testVersion = false;
 	var testResults = "all high";
 	if (testVersion){
 		setTestValues();
-	}
+	} */
 
 	//printAbnormalities();
 	
@@ -589,7 +594,7 @@ print(labs[i].high_name);
 			}
 		}
 		
-
+/*
 		for (let i = 0; i < pairs.length; i++){
 			if (abnormalities.includes(pairs[i].first) && abnormalities.includes(pairs[i].second)){
 				let temp = pairs[i].first + ' & ' + pairs[i].second;
@@ -604,6 +609,7 @@ print(labs[i].high_name);
 				print(temp);
 			}
 		}
+		*/
 
 		if (results['anion gap'] > 17){
 			abnormalities.push('high anion gap metabolic acidosis');
@@ -670,13 +676,9 @@ print(labs[i].high_name);
 		t = t + '\n\n';
 		var keys = Object.keys(ddx);
 		FRAMECOUNT = 0;
-console.log(keys);
 		for (let i = 0; i < keys.length; i++){
-console.log(keys[i]);
-			//t = t + getText(abnormality_site[keys[i]]);
-				appendDifferential(abnormality_site[keys[i]]);
-//t = t + '<iframe src="'+abnormality_site[keys[i]] + '" style = "width: 500px; height: auto;"></iframe><br>';
-			}
+			appendDifferential(abnormality_site[keys[i]]);
+		}
 
 
 		//document.getElementById("ddx").innerHTML = t;
@@ -684,6 +686,7 @@ console.log(t);
 		//document.getElementById("suggestions").innerHTML = s;
 	}
 
+/*
 	function appendDifferential_backup(target) {
 		FRAMECOUNT = FRAMECOUNT + 1;
 		document.write('<div id = "display'+FRAMECOUNT + '"></div>');
@@ -694,6 +697,7 @@ console.log(t);
 		document.write('\display'+FRAMECOUNT+'\'');
 		document.write(')"></iframe>\n');
 	}
+	*/
 
 	function appendDifferential(target) {
 		FRAMECOUNT = FRAMECOUNT + 1;
@@ -718,6 +722,7 @@ console.log(t);
 		}
 	}
 
+/*
 
 	function getText(target){
 		var request = new XMLHttpRequest();
@@ -732,6 +737,7 @@ console.log(t);
 			}
 		}
 	}
+	*/
 
 	function calcAnionGap(sodium, chloride, bicarb) {
 		return(sodium - chloride - bicarb);
