@@ -20,12 +20,11 @@ class Lab{
 	}
 
 	class Disease{
-		constructor(name,indicators){
+		constructor(name,indicators,essential,link){
 			this.name = name;
 			this.indicators = indicators;
-			/*this.description = description;
-			this.triggeringResult = "";
-			this.additionalTests = additionalTests;*/
+			this.essential = "";
+			this.link = "";
 		}
 		
 		score(abnormalities){
@@ -66,44 +65,33 @@ class Lab{
 
 
 	diseases = [];
-	diseases.push(new Disease("CHF",['elevated Pro-BNP','hyponatremia']));
-	diseases.push(new Disease("adrenal insufficiency",["hyponatremia","hyperkalemia","hypocalcemia"]));
-	diseases.push(new Disease("DKA",["hyperkalemia","hyperglycemia","high anion gap metabolic acidosis","hypobicarbia"]));
-	diseases.push(new Disease("sepsis",["leukocytosis","neutrophilia","toxic granulation","high anion gap metabolic acidosis"]));
-	diseases.push(new Disease("renal failure",["elevated BUN","elevated creatinine","hyperkalemia","anemia"]));
-	diseases.push(new Disease("upper GI bleeding",["elevated BUN","anemia"]));
-	diseases.push(new Disease("hypomagnesemia",['hypocalcemia','hypokalemia']));
-	diseases.push(new Disease("capillary leak syndrome",['polycythemia','leukocytosis','thrombocytosis','hypoalbuminemia']));
-	diseases.push(new Disease("HELLP syndrome",["elevated AST","elevated ALT","thrombocytopenia","elevated LDH"]));
-	diseases.push(new Disease("iron deficiency anemia",["anemia","microcytosis"]));
-	diseases.push(new Disease("Cushing's syndrome",["hypernatremia","hypokalemia"]));
-	diseases.push(new Disease("hepatorenal syndrome",["elevated creatinine","elevated AST","elevated ALT"]));
-	diseases.push(new Disease("milk-alkali syndrome",['hypochloremia','hypokalemia','hypercalcemia']));
-	diseases.push(new Disease("steroid use",['hyperglycemia','leukocytosis']));
+
+	diseases.push(new Disease("CHF",['elevated Pro-BNP','hyponatremia'],'',''));
+	diseases.push(new Disease("adrenal insufficiency",["hyponatremia","hyperkalemia","hypocalcemia"],'',''));
+	diseases.push(new Disease("DKA",["hyperkalemia","hyperglycemia","high anion gap metabolic acidosis","hypobicarbia"],'',''));
+	diseases.push(new Disease("sepsis",["leukocytosis","neutrophilia","toxic granulation","high anion gap metabolic acidosis"],'',''));
+	diseases.push(new Disease("renal failure",["elevated BUN","elevated creatinine","hyperkalemia","anemia"],'',''));
+	diseases.push(new Disease("upper GI bleeding",["elevated BUN","anemia"],'',''));
+	diseases.push(new Disease("hypomagnesemia",['hypocalcemia','hypokalemia'],'',''));
+	diseases.push(new Disease("capillary leak syndrome",['polycythemia','leukocytosis','thrombocytosis','hypoalbuminemia'],'',''));
+	diseases.push(new Disease("HELLP syndrome",["elevated AST","elevated ALT","thrombocytopenia","elevated LDH"],'',''));
+	diseases.push(new Disease("iron deficiency anemia",["anemia","microcytosis"],'',''));
+	diseases.push(new Disease("Cushing's syndrome",["hypernatremia","hypokalemia"],'',''));
+	diseases.push(new Disease("hepatorenal syndrome",["elevated creatinine","elevated AST","elevated ALT"],'',''));
+	diseases.push(new Disease("milk-alkali syndrome",['hypochloremia','hypokalemia','hypercalcemia'],'',''));
+	diseases.push(new Disease("steroid use",['hyperglycemia','leukocytosis'],'',''));
 	diseases.push(new Disease("pancytopenia",['anemia','leukopenia','thrombocytopenia']));
-	diseases.push(new Disease("cirrhosis",["anemia","thrombocytopenia","elevated AST","elevated ALT","hyponatremia"]));
-	diseases.push(new Disease("Ehrlichiosis",["leukopenia","lymphopenia","thrombocytopenia","hyponatremia","elevated AST","elevated ALT"]));
-	diseases.push(new Disease("hemolytic-uremic syndrome",['anemia','thrombocytopenia','elevated creatinine','elevated BUN']));
-	diseases.push(new Disease("TTP",['anemia','thrombocytopenia','elevated creatinine','elevated BUN']));
-	diseases.push(new Disease("multiple myeloma",["hypercalcemia","elevated creatinine","anemia"]));
-	diseases.push(new Disease("tertiary hyperparathyroidism",['hypercalcemia','elevated creatinine']));
-	diseases.push(new Disease("aluminum toxicity",['hyercalcemia','elevated creatinine']));
-	diseases.push(new Disease("eosinophilic gastritis",["hypoalbuinemia","anemia","eosinophilia"]));
-	
-/*
-	abnormality["hyponatremia & hyperkalemia"]= ['adrenal insufficiency','renal failure','chylothorax','GI tract disorders'];
+	diseases.push(new Disease("cirrhosis",["anemia","thrombocytopenia","elevated AST","elevated ALT","hyponatremia"],'',''));
+	diseases.push(new Disease("Ehrlichiosis",["leukopenia","lymphopenia","thrombocytopenia","hyponatremia","elevated AST","elevated ALT"],'',''));
+	diseases.push(new Disease("hemolytic-uremic syndrome",['anemia','thrombocytopenia','elevated creatinine','elevated BUN'],'',''));
+	diseases.push(new Disease("TTP",['anemia','thrombocytopenia','elevated creatinine','elevated BUN'],'',''));
+	diseases.push(new Disease("multiple myeloma",["hypercalcemia","elevated creatinine","anemia"],'',''));
+	diseases.push(new Disease("tertiary hyperparathyroidism",['hypercalcemia','elevated creatinine'],'',''));
+	diseases.push(new Disease("aluminum toxicity",['hyercalcemia','elevated creatinine'],'',''));
+	diseases.push(new Disease("eosinophilic gastritis",["hypoalbuinemia","anemia","eosinophilia"],'',''));
+	diseases.push(new Disease("vitamin B12 deficiency",['anemia','macrocytosis'],'',''));
+	diseases.push(new Disease("folate deficiency",['anemia','macrocytosis'],'',''));
 
-
-	abnormality['elevated AST & elevated ALT'] = ['cirrhosis','hepatitis','HELLP syndrome'];
-
-	abnormality["hyponatremia & hyperkalemia & hypocalcemia"] = ['adrenal insufficiency'];
-	abnormality['elevated BUN','elevated creatinine','anemia'] = ['chronic kidney disease'];
-	abnormality['anemia & microcytosis & elevated BUN'] = ['chronic upper GI bleeding'];
-
-	abnormality['anemia & macrocytosis'] = ['vitamin B deficiency','folate deficiency'];
-
-
-	*/
 
 	
 
