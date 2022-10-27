@@ -1,5 +1,27 @@
 //uric acid, CK, procalcitonin, bands, lactate
 
+/*
+
+<!--
+link to html file regarding each disease
+expand ddx
+enter abnormalities
+order abnormalities by most important
+
+add differential diagnoses
+get age and gender from labs
+exclude certain diagnoses depending on gender and age
+expand/collapse ddx
+	add treeview - https://www.w3schools.com/howto/howto_js_treeview.asp
+critical values
+prioritize ddx
+additional labs:
+RBC morphology
+urinalysis
+ABG
+-->
+*/
+
 console.log("at 10:41");
 
 class Lab{
