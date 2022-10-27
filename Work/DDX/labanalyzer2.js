@@ -237,7 +237,10 @@
 	abnormality['low anion gap'] = ['hypoalbuminemia','multiple myeloma','hyperkalemia','hypercalcemia','lithium toxicity','increased cationic paraprotein','bromide toxicity','elevated serum iodide'];
 	
 	abnormality_site = [];
+	abnormality_site['elevated alkaline phospatase'] = 'elevated alkaline phosphatase.html';
+	abnormality_site['low alkaline phosphatase'] = 'low alkaline phosphatase.html';
 	abnormality_site['hypomagnesemia'] = 'hypomagnesemia.html';
+	abnormality_site['anemia'] = 'anemia.html';
 	abnormality_site['eosinophilia'] = 'eosinophilia.html';
 
 
