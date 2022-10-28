@@ -601,6 +601,10 @@ class Lab{
 		results.pO2 = parseFloat(document.getElementById('pO2').value);
 		results.BE = parseFloat(document.getElementById('BE').value);
 		
+		/* UA results
+		
+		*/
+		
 		results["corrected sodium"] = calcCorrectedSodium(results.sodium, results.glucose);
 		results['corrected calcium'] = calcCorrectedCalcium(results.calcium, results.albumin);
 		results["anion gap"]= calcAnionGap(results.sodium, results.chloride, results.bicarb);
@@ -610,6 +614,11 @@ class Lab{
 		results['osmolality'] = calcOsmolality(results.sodium,results.BUN,results.glucose);
 		results['A/G ratio'] = calcA_GRatio(results.albumin,results.totalprotein);
 		results['MELD'] = calcMELD(results.creatinine,results.bilirubin,results.sodium,1);
+		
+		/*ABG calculations
+		results['ABG interpretation'] = calcABGinterpretation(results.pH,results.pCO2,results.pO2,results.BE);
+		
+		*/
 //GFR
 //creatinine_clearance
 
@@ -623,6 +632,9 @@ class Lab{
 		document.getElementById("osmolality").innerHTML = "Serum osmolality = " + results['osmolality'] + ' (275-295)';
 		document.getElementById("A_G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'] + ' (1-2)';
 		document.getElementById("MELD").innerHTML = "MELD score (assuming no dialysis and normal INR) = " + results['MELD']+ ' (<10)';
+		/*
+		document.getElementById("ABG interpretation").innerHTML = "ABG interpretation: " + results["ABG interpretation"];
+		*/
 
 		for (let i =0; i < labs.length; i ++){
 			print(labs[i].name,results[labs[i].name]);
