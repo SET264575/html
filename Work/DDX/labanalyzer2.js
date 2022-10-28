@@ -713,7 +713,7 @@ class Lab{
 				t = t + diseases[i].name + "   " + diseases[i].score(abnormalities) + "\n";
 				s = s + suggestion[diseases[i].name] + '\n';
 				for (let j = 0; j < diseases[i].indicators; j++) {
-					if (diseases[i].indicators[j] in abnormalities) {
+					if (abnormalities.includes(diseases[i].indicators[j])) {
 						t = t + "\t"+diseases[i].indicators[j] + "\n";
 					}
 				}
@@ -751,13 +751,14 @@ class Lab{
 		}
 
 		t = t + '\n\n';
+		console.log(t,'in developDiff');
 		var keys = Object.keys(ddx);
 		FRAMECOUNT = 0;
 		for (let i = 0; i < keys.length; i++){
 			appendDifferential(abnormality_site[keys[i]]);
 		}
 
-
+		console.log(t,"at ddx");
 		document.getElementById("ddx").innerHTML = t;
 		document.getElementById("suggestions").innerHTML = s;
 	}
