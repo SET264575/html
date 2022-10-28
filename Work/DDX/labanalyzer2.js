@@ -70,7 +70,7 @@ class Lab{
 		score(abnormalities){
 			var score = 0;
 			for (let i = 0; i<this.indicators.length; i++) {
-				if ( abnormalities(this.indicators[i])) {
+				if ( abnormalities.includes(this.indicators[i])) {
 					score++;
 				}
 			}
