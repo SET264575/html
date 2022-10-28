@@ -5,12 +5,13 @@ Things to fix:
 	
 Things to do:
 	Add labs:
-		uric acid, CK, procalcitonin, bands, lactate
+		uric acid, CK, procalcitonin, bands, lactate, etc
 	Add websites for abnormalities
 	Format websites with tree views
 	Add websites for conditions
 	Add suggestions for diseases
 	Add functionality for UA and ABG
+		respiratory acidosis/alkalosis calculations
 	Delete unneeded code
 	
 	*/
@@ -152,6 +153,7 @@ class Lab{
 	labs.push(new Lab("bilirubin","Total Bilirubin",0.1,1.2,"***ignore***","hyperbilirubinemia"));
 	labs.push(new Lab("lipase","Lip",0,99,'***ignore***','elevated lipase'));
 	labs.push(new Lab('troponin','Troponin T',0,0.1,'***ignore***','elevated troponin'));
+	labs.push(new Lab('Ammonia','Ammonia',25,94,'***ignore***','hyperammonemia'));
 /*  needs normal ranges and terms and description from lab report	
 	labs.push(new Lab('uric acid','uric acid',0,1,'***ignore***','***ignore***'));
 	labs.push(new Lab('CPK','CK',0,1,'***ignore***','***ignore***'));
@@ -199,8 +201,14 @@ class Lab{
 	labs.push(new Lab('Schistocytes','Schistocytes'));
 
 */
-	labs.push(new Lab('Ammonia','Ammonia',25,94,'***ignore***','hyperammonemia'));
 
+/*ABG functionality
+	labs.push(new Lab('pH','pH',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('pCO2','pCO2',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('pO2','pO2',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('BE','BE',0,1,'***ignore***','***ignore***'));
+	*/
+	
 	
 /*
 	var links = {};
