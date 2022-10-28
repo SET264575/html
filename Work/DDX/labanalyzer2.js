@@ -767,6 +767,7 @@ class Lab{
 		document.getElementById("suggestions").innerHTML = s;
 
 		var keys = Object.keys(abnormalities);
+		console.log(keys,'keys');
 		FRAMECOUNT = 0;
 		for (let i = 0; i < keys.length; i++){
 			appendDifferential(abnormality_site[keys[i]]);
