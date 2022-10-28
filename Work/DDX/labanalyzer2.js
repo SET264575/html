@@ -665,6 +665,7 @@ class Lab{
 		if(results['AST/ALT ratio']<0.9){
 			abnormalities.push('AST/ALT ratio < 0.9');
 		}
+		console.log(abnormalities);
 		createDiseaseList(abnormalities);
 		developDifferential(abnormalities);		
 	}	
@@ -683,6 +684,7 @@ class Lab{
 				}
 			}
 		}
+		console.log(t);
 		document.getElementById('diseases').innerHTML = t;	
 		document.getElementById('disease_suggestions').innerHTML = s;
 	}
@@ -721,7 +723,7 @@ class Lab{
 		}
 
 
-		//document.getElementById("ddx").innerHTML = t;
+		document.getElementById("ddx").innerHTML = t;
 		document.getElementById("suggestions").innerHTML = s;
 	}
 
