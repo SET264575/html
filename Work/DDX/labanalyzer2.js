@@ -373,7 +373,7 @@ class Lab{
 	abnormality_site["thrombocytopenia"] = "thrombocytopenia.html";
 	abnormality_site["thrombocytosis"] = "thrombocytosis.html";
 */ 
-	console.log('at line 321');
+//	console.log('at line 321');
 	abnormality_site["eosinophilia"] = "eosinophilia.html";
 /*	abnormality_site["high anion gap acidosis"] = "high anion gap acidosis.html";
 	abnormality_site["AST/ALT ratio > 2.5"] = "AST/ALT ratio > 2.5.html";
@@ -722,17 +722,17 @@ class Lab{
 				//console.log(diseases[i].name,'in createDiseaseList');
 				t = t + diseases[i].name + "\t" + diseases[i].score(abnormalities) + "\n";
 				s = s + suggestion[diseases[i].name] + '\n';
-				console.log('j = '+diseases[i].indicators);
+				//console.log('j = '+diseases[i].indicators);
 				t = t + "\t" + "suggested by:\n";
 				for (let j = 0; j < diseases[i].indicators.length; j++) {
-					console.log(diseases[i].indicators[j],'in inner loop');
+					//console.log(diseases[i].indicators[j],'in inner loop');
 					if (abnormalities.includes(diseases[i].indicators[j])) {
 						t = t + "\t"+diseases[i].indicators[j] + "\n";
 					}
 				}
 			}
 		}
-		console.log(t,'in createDiseaseList');
+		//console.log(t,'in createDiseaseList');
 		document.getElementById('diseases').innerHTML = t;	
 		document.getElementById('disease_suggestions').innerHTML = s;
 	}
@@ -790,7 +790,7 @@ class Lab{
 
 	function appendDifferential(target) {
 		FRAMECOUNT = FRAMECOUNT + 1;
-		console.log(target,'target');
+		//console.log(target,'target');
 		var t = '';
 		t = t + '<div id = "display'+FRAMECOUNT + '"></div>';
 		t = t + '<iframe width="0" height = "0" id = "buffer';
@@ -799,7 +799,7 @@ class Lab{
 		t = t + '\'buffer'+FRAMECOUNT+'\',';
 		t = t + '\'display'+FRAMECOUNT+'\'';
 		t = t + ')"></iframe>\n';
-		console.log(t,'appendDiff');
+		//console.log(t,'appendDiff');
 		document.getElementById('ddx').innerHTML = document.getElementById('ddx').innerHTML + t + target;
 	}
 
@@ -809,7 +809,7 @@ class Lab{
 		if (window.frames[iframeId] && CurrentDiv ) {
 			t = window.frames[iframeId].document.body.innerHTML;
 			CurrentDiv.innerHTML = t;
-			console.log(t,'in copyIframe');
+			//console.log(t,'in copyIframe');
 			CurrentDiv.style.display = 'block';
 		}
 	}
