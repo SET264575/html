@@ -725,7 +725,7 @@ class Lab{
 				t = t + diseases[i].name + "\t" + diseases[i].score(abnormalities) + "\n";
 				s = s + suggestion[diseases[i].name] + '\n';
 				for (let j = 0; j < diseases[i].indicators; j++) {
-					console.log(diseases[i].indicators[i]);
+					console.log(diseases[i].indicators[j],'in inner loop');
 					if (abnormalities.includes(diseases[i].indicators[j])) {
 						t = t + "\t"+diseases[i].indicators[j] + "\n";
 					}
