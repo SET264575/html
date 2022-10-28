@@ -152,6 +152,17 @@ class Lab{
 	labs.push(new Lab("bilirubin","Total Bilirubin",0.1,1.2,"***ignore***","hyperbilirubinemia"));
 	labs.push(new Lab("lipase","Lip",0,99,'***ignore***','elevated lipase'));
 	labs.push(new Lab('troponin','Troponin T',0,0.1,'***ignore***','elevated troponin'));
+/*  needs normal ranges and terms and description from lab report	
+	labs.push(new Lab('uric acid','uric acid',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('CPK','CK',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('procalcitonin','procalcitonin',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('lactate','lactate',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Phosphorus','Phos',2.3,4.5,'hypophosphatemia','hyperphosphatemia'));
+	labs.push(new Lab('Procalcitonin'));
+	labs.push(new Lab('Total Creatinine Kinase'));
+	labs.push(new Lab('Pro-BNP'));
+	*/
+	
 
 	labs.push(new Lab("anion gap","anion gap",4,17,"low anion gap","high anion gap metabolic acidosis"));
 	labs.push(new Lab("A/G ratio","A/G ratio",0.8,2,'low A/G ratio','elevated A/G ratio'));
@@ -186,10 +197,7 @@ class Lab{
 	labs.push(new Lab('Ovalocytes'));
 	labs.push(new Lab('Burr Cells','Burr Cells'));
 	labs.push(new Lab('Schistocytes','Schistocytes'));
-	labs.push(new Lab('Phosphorus','Phos',2.3,4.5,'hypophosphatemia','hyperphosphatemia'));
-	labs.push(new Lab('Procalcitonin'));
-	labs.push(new Lab('Total Creatinine Kinase'));
-	labs.push(new Lab('Pro-BNP'));
+
 */
 	labs.push(new Lab('Ammonia','Ammonia',25,94,'***ignore***','hyperammonemia'));
 
