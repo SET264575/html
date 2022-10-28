@@ -1,4 +1,8 @@
 /*
+
+Things to fix:
+	create list of ddx list from abnormalities
+	
 Things to do:
 	Add labs:
 		uric acid, CK, procalcitonin, bands, lactate
