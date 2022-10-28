@@ -772,8 +772,6 @@ class Lab{
 			appendDifferential(abnormality_site[keys[i]]);
 			console.log(keys[i]);
 		}
-
-
 	}
 
 /*
