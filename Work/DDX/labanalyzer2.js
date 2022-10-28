@@ -616,7 +616,7 @@ class Lab{
 		results['MELD'] = calcMELD(results.creatinine,results.bilirubin,results.sodium,1);
 		
 		/*ABG calculations
-		results['ABG interpretation'] = calcABGinterpretation(results.pH,results.pCO2,results.pO2,results.BE);
+		results['ABG interpretation'] = calcABGinterpretation(results.pH,results.pCO2,results.HCO3,results.BE);
 		
 		*/
 //GFR
@@ -884,6 +884,12 @@ class Lab{
 			MELD = MELDi;
 		}
 		return(parseInt(MELD));
+	}
+
+	function calcABGinterpretation(pH,pCO2,HCO3,BE){
+		var interpretation = "";
+		
+		return(interpretation);
 	}
 		
 
