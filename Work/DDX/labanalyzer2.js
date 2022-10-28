@@ -674,7 +674,8 @@ class Lab{
 		var t = 'Possible Conditions:\n';
 		var s = '';
 		for (let i = 0; i<diseases.length; i++) {
-			if (diseases[i].score > 1) {
+			if (diseases[i].score(abnormalities) > 1) {
+				console.log(diseases[i].name);
 				t = t + diseases[i].name + "   " + diseases[i].score(abnormalities) + "\n";
 				s = s + suggestion[diseases[i].name] + '\n';
 				for (let j = 0; j < diseases[i].indicators; j++) {
