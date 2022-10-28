@@ -770,6 +770,7 @@ class Lab{
 		FRAMECOUNT = 0;
 		for (let i = 0; i < keys.length; i++){
 			appendDifferential(abnormality_site[keys[i]]);
+			console.log(keys[i]);
 		}
 
 
@@ -790,6 +791,7 @@ class Lab{
 
 	function appendDifferential(target) {
 		FRAMECOUNT = FRAMECOUNT + 1;
+		console.log(target,'target');
 		var t = '';
 		t = t + '<div id = "display'+FRAMECOUNT + '"></div>';
 		t = t + '<iframe width="0" height = "0" id = "buffer';
@@ -798,7 +800,7 @@ class Lab{
 		t = t + '\'buffer'+FRAMECOUNT+'\',';
 		t = t + '\'display'+FRAMECOUNT+'\'';
 		t = t + ')"></iframe>\n';
-		console.log(t);
+		console.log(t,'appendDiff');
 		document.getElementById('ddx').innerHTML = document.getElementById('ddx').innerHTML + t + target;
 	}
 
