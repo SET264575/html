@@ -38,7 +38,7 @@ ABG
 -->
 */
 
-console.log("at 12:14");
+console.log("at 7:40");
 
 class Lab{
 		constructor (name,symbol,low,high,low_name,high_name){
@@ -721,7 +721,7 @@ class Lab{
 		for (let i = 0; i<diseases.length; i++) {
 		//	console.log(diseases[i].score(abnormalities));
 			if (diseases[i].score(abnormalities) > 1) {
-				console.log(diseases[i].name,'in createDiseaseList');
+				//console.log(diseases[i].name,'in createDiseaseList');
 				t = t + diseases[i].name + "\t" + diseases[i].score(abnormalities) + "\n";
 				s = s + suggestion[diseases[i].name] + '\n';
 				for (let j = 0; j < diseases[i].indicators; j++) {
@@ -745,7 +745,7 @@ class Lab{
 		t = t + 'Abnormalities\n';
 		s = s + 'Suggestions\n';
 
-		/*
+		/*show all suggestions
 		if(false){
 			var keys = Object.keys(suggestion);
 			for (let i = 0; i<keys.length;i++){
@@ -760,14 +760,12 @@ class Lab{
 			if (suggestion[abnormalities[i]] != ''){
 				s = s + abnormalities[i] + '\n\t' + suggestion[abnormalities[i]] + '\n\n';
 			}
-			//ddx[abnormalities[i]] = abnormality[abnormalities[i]];
 		}
 
 		t = t + '\n\n';
 		document.getElementById("ddx").innerHTML = t;
 		document.getElementById("suggestions").innerHTML = s;
-		
-		console.log(t,'in developDiff');
+
 		var keys = Object.keys(ddx);
 		FRAMECOUNT = 0;
 		for (let i = 0; i < keys.length; i++){
