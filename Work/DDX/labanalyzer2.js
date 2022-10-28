@@ -70,7 +70,7 @@ class Lab{
 		score(abnormalities){
 			var score = 0;
 			for (let i = 0; i<this.indicators.length; i++) {
-				if (this.indicators[i] in abnormalities) {
+				if ( abnormalities(this.indicators[i])) {
 					score++;
 				}
 			}
@@ -689,7 +689,9 @@ class Lab{
 	function createDiseaseList(abnormalities){
 		var t = 'Possible Conditions:\n';
 		var s = '';
+		console.log(abnormalities, 'in createDiseaseList');
 		for (let i = 0; i<diseases.length; i++) {
+			console.log(diseases[i].score(abnormalities));
 			if (diseases[i].score(abnormalities) > 1) {
 				console.log(diseases[i].name,'in createDiseaseList');
 				t = t + diseases[i].name + "   " + diseases[i].score(abnormalities) + "\n";
