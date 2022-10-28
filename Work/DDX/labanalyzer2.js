@@ -766,12 +766,12 @@ class Lab{
 		document.getElementById("ddx").innerHTML = t;
 		document.getElementById("suggestions").innerHTML = s;
 
-		var keys = Object.keys(abnormalities);
-		console.log(keys,'keys');
+		//var keys = Object.keys(abnormalities);
+		//console.log(keys,'keys');
 		FRAMECOUNT = 0;
-		for (let i = 0; i < keys.length; i++){
-			appendDifferential(abnormality_site[keys[i]]);
-			console.log(keys[i]);
+		for (let i = 0; i < abnormalities.length; i++){
+			appendDifferential(abnormality_site[abnormalities[i]]);
+			//console.log(keys[i]);
 		}
 	}
 
