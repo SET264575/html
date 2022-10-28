@@ -717,14 +717,15 @@ class Lab{
 	function createDiseaseList(abnormalities){
 		var t = 'Possible Conditions:\n';
 		var s = '';
-		console.log(abnormalities, 'in createDiseaseList');
+	//	console.log(abnormalities, 'in createDiseaseList');
 		for (let i = 0; i<diseases.length; i++) {
-			console.log(diseases[i].score(abnormalities));
+		//	console.log(diseases[i].score(abnormalities));
 			if (diseases[i].score(abnormalities) > 1) {
 				console.log(diseases[i].name,'in createDiseaseList');
-				t = t + diseases[i].name + "   " + diseases[i].score(abnormalities) + "\n";
+				t = t + diseases[i].name + "\t" + diseases[i].score(abnormalities) + "\n";
 				s = s + suggestion[diseases[i].name] + '\n';
 				for (let j = 0; j < diseases[i].indicators; j++) {
+					console.log(diseases[i].indicators[i]);
 					if (abnormalities.includes(diseases[i].indicators[j])) {
 						t = t + "\t"+diseases[i].indicators[j] + "\n";
 					}
