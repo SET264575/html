@@ -724,6 +724,7 @@ class Lab{
 				//console.log(diseases[i].name,'in createDiseaseList');
 				t = t + diseases[i].name + "\t" + diseases[i].score(abnormalities) + "\n";
 				s = s + suggestion[diseases[i].name] + '\n';
+				console.log('j = '+diseases[i].indicators);
 				for (let j = 0; j < diseases[i].indicators; j++) {
 					console.log(diseases[i].indicators[j],'in inner loop');
 					if (abnormalities.includes(diseases[i].indicators[j])) {
@@ -732,7 +733,7 @@ class Lab{
 				}
 			}
 		}
-		console.log(t);
+		console.log(t,'in createDiseaseList');
 		document.getElementById('diseases').innerHTML = t;	
 		document.getElementById('disease_suggestions').innerHTML = s;
 	}
