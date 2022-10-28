@@ -637,10 +637,8 @@ class Lab{
 		*/
 
 		for (let i =0; i < labs.length; i ++){
-			print(labs[i].name,results[labs[i].name]);
 			switch(labs[i].inRange(results[labs[i].name])){
 				case -1:
-					print(labs[i].low_name);
 					if (labs[i].low_name != '***ignore***'){
 						abnormalities.push(labs[i].low_name);
 						try {	
