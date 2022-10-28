@@ -772,7 +772,7 @@ class Lab{
 		}
 
 		console.log(t,"at ddx");
-		document.getElementById("ddx").innerHTML = t;
+	//	document.getElementById("ddx").innerHTML = t;
 		document.getElementById("suggestions").innerHTML = s;
 	}
 
