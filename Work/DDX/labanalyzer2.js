@@ -764,6 +764,9 @@ class Lab{
 		}
 
 		t = t + '\n\n';
+		document.getElementById("ddx").innerHTML = t;
+		document.getElementById("suggestions").innerHTML = s;
+		
 		console.log(t,'in developDiff');
 		var keys = Object.keys(ddx);
 		FRAMECOUNT = 0;
@@ -771,9 +774,7 @@ class Lab{
 			appendDifferential(abnormality_site[keys[i]]);
 		}
 
-		console.log(t,"at ddx");
-	//	document.getElementById("ddx").innerHTML = t;
-		document.getElementById("suggestions").innerHTML = s;
+
 	}
 
 /*
