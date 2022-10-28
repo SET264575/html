@@ -1,4 +1,15 @@
-//uric acid, CK, procalcitonin, bands, lactate
+/*
+Things to do:
+	Add labs:
+		uric acid, CK, procalcitonin, bands, lactate
+	Add websites for abnormalities
+	Format websites with tree views
+	Add websites for conditions
+	Add suggestions for diseases
+	Add functionality for UA and ABG
+	Delete unneeded code
+	
+	*/
 
 /*
 
