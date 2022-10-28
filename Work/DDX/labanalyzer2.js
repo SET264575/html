@@ -901,14 +901,8 @@ class Lab{
 	}
 
 	function setTestValues(){
-		var testValue = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-		//var testValue = [132,109,2.5,15,23,2.1,500,90,40,40,2,12,2.5,8,1,2,-1,-1,12,4,15,35,155,4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
-		//var testValue =   [140,115,4  ,18,14,1,  100,40,40,40,8,4,8,   2,1,2,-1,-1, 8,4,15,37,155,4,-1,-1,-1,-1,-1,-1,-1,-1,-1];
 		for (let i = 0; i < labs.length; i++){
-			print(i,testValue[i],labs[i].name);
-			if (testValue[i] > -1){
-				document.getElementById(labs[i].name).value = testValue[i];
-			}
+			document.getElementById(labs[i].name).value = 0;
 		}
 	}
 
