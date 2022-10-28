@@ -924,7 +924,7 @@ class Lab{
 		calc();
 	}
 
-	function print(){
+/*	function print(){
 		if (testVersion){
 			switch(arguments.length){
 				case 1:
@@ -941,7 +941,7 @@ class Lab{
 					break;
 			}
 		}
-	}
+	} */
 
 	function setTestValues(){
 		for (let i = 0; i < 16; i++){
