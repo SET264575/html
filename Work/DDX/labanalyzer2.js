@@ -906,7 +906,7 @@ class Lab{
 	}
 
 	function setTestValues(){
-		for (let i = 0; i < labs.length; i++){
+		for (let i = 0; i < 16; i++){
 			document.getElementById(labs[i].name).value = 0;
 		}
 	}
