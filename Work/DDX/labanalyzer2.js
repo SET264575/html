@@ -626,22 +626,6 @@ class Lab{
 			}
 		}
 		
-/*
-		for (let i = 0; i < pairs.length; i++){
-			if (abnormalities.includes(pairs[i].first) && abnormalities.includes(pairs[i].second)){
-				let temp = pairs[i].first + ' & ' + pairs[i].second;
-				abnormalities.push(temp);
-			}
-		}
-
-		for (let i = 0; i < triplets.length; i++){
-			if (abnormalities.includes(triplets[i].first) && abnormalities.includes(triplets[i].second) && abnormalities.includes(triplets[i].third)){
-				let temp = triplets[i].first + ' & ' + triplets[i].second + ' & ' + triplets[i].third;
-				abnormalities.push(temp);
-				print(temp);
-			}
-		}
-		*/
 
 		if (results['anion gap'] > 17){
 			abnormalities.push('high anion gap metabolic acidosis');
@@ -845,24 +829,6 @@ class Lab{
 		calc();
 	}
 
-/*	function print(){
-		if (testVersion){
-			switch(arguments.length){
-				case 1:
-					console.log(arguments[0]);
-					break;
-				case 2:
-					console.log(arguments[0],arguments[1]);
-					break;				
-				case 3:
-					console.log(arguments[0],arguments[1],arguments[2]);
-					break;
-				case 4:
-					console.log(arguments[0],arguments[1],arguments[2],arguments[3]);
-					break;
-			}
-		}
-	} */
 
 	function setTestValues(){
 		for (let i = 0; i < 16; i++){
