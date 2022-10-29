@@ -685,7 +685,7 @@ class Lab{
 	}	
 
 	function createDiseaseList(abnormalities){
-		var t = 'Possible Conditions:\n';
+		var t = '<h4>Possible Conditions:</h4>\n';
 		var s = '';
 	//	console.log(abnormalities, 'in createDiseaseList');
 		for (let i = 0; i<diseases.length; i++) {
