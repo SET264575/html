@@ -480,7 +480,7 @@ class Lab{
 
 	suggestion['adrenal insufficiency'] = "Consider adrenal crisis.\nGive hydrocortisone 100 mg IV if refractory shock.";
 	suggestion["CHF"] = "";
-	suggestion["DKA"] = "";
+	suggestion["DKA"] = "Consider ordering VBG and beta hydroxybutyrate to confirm diagnosis.";
 	suggestion["sepsis"] = "";
 	suggestion["renal failure"] = "";
 	suggestion["upper GI bleeding"] = "";
@@ -492,9 +492,9 @@ class Lab{
 	suggestion["hepatorenal syndrome"] = "";
 	suggestion["milk-alkali syndrome"] = "";
 	suggestion["steroid use"] = "";
-	suggestion["pancytopenia"] = "";
+	suggestion["pancytopenia"] = "Consider whether the patient has multiple distinct problems (such as an acute viral illness, chronic anemia and chronic liver disease) or truly has bone marrow failure.\nCalculate ANC.";
 	suggestion["cirrhosis"] = "";
-	suggestion["Ehrlichiosis"] = "";
+	suggestion["Ehrlichiosis"] = "Lymphopenia, thrombocytopenia, hyponatremia, and elevated LFTs are suggestive of Ehrlichiosis.\nIn the right setting (such as unexplained fever and possible tick exposure), treatment for Ehrlichiosis without other testing may be appropriate.\nConsider RMSF, and check for a rash, particularly on the wrists and ankles.\nTreatment is doxycycline 100 mg bid.";
 	suggestion["hemolytic-uremic syndrome"] = "";
 	suggestion["TTP"] = "";
 	suggestion["multiple myeloma"] = "";
@@ -527,7 +527,6 @@ class Lab{
 		setTestValues();
 	} 
 
-	printAbnormalities();
 	
 	var FRAMECOUNT = 0;
 
@@ -592,6 +591,7 @@ class Lab{
 //GFR
 //creatinine_clearance
 
+	printAbnormalities();
 		
 		document.getElementById("corrected sodium").innerHTML = "Corrected sodium = " + results['corrected sodium'] + ' (135-145)';
 		document.getElementById('corrected calcium').innerHTML = "Corrected calcium = " + results['corrected calcium'] + ' (8.5-10.3)';
