@@ -1,7 +1,14 @@
 /*
 
+Currently working on:
+	1. Tree view
+	2. Add suggestions for diseases
+	3. Add differential diagnoses for current labs
+	4. Add suggestions for current labs
+	5. Add new labs
+	
 Things to fix:
-	create list of ddx list from abnormalities
+	
 	
 Things to do:
 	Add labs:
@@ -658,6 +665,7 @@ class Lab{
 			if (diseases[i].score(abnormalities) > 1) {
 				t = t + diseases[i].name +"\n";
 				s = s + suggestion[diseases[i].name] + '\n';
+				console.log(s);
 			//	t = t + "\t" + "suggested by:\n";
 				for (let j = 0; j < diseases[i].indicators.length; j++) {
 					//console.log(diseases[i].indicators[j],'in inner loop');
