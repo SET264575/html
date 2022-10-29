@@ -656,7 +656,7 @@ class Lab{
 		var s = '';
 		for (let i = 0; i<diseases.length; i++) {
 			if (diseases[i].score(abnormalities) > 1) {
-				t = t + diseases[i].name + "\t" + diseases[i].score(abnormalities) + "\n";
+				t = t + diseases[i].name +"\n";
 				s = s + suggestion[diseases[i].name] + '\n';
 			//	t = t + "\t" + "suggested by:\n";
 				for (let j = 0; j < diseases[i].indicators.length; j++) {
@@ -692,7 +692,7 @@ class Lab{
 		for (let i = 0; i < abnormalities.length; i++){
 			t = t + '  ' + abnormalities[i] + '\n';
 			if (suggestion[abnormalities[i]] != ''){
-				s = s + '<h4>'+abnormalities[i]+ '</h4>' + '\n\t' + suggestion[abnormalities[i]] + '\n\n';
+				s = s + '<h4>'+abnormalities[i]+ '</h4>' + '\t' + suggestion[abnormalities[i]] + '\n\n';
 			}
 		}
 
