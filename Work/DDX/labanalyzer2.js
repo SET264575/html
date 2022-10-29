@@ -88,24 +88,7 @@ class Lab{
 		}
 	}
 
-/*
-	class Pairs{
-		constructor(first,second){
-			this.first = first;
-			this.second = second;
-		}
-	}
 
-	class Triplets{
-		constructor(first, second, third){
-			this.first = first;
-			this.second = second;
-			this.third = third;
-		}
-
-	}
-
-*/
 
 	diseases = [];
 
@@ -685,17 +668,13 @@ class Lab{
 	}	
 
 	function createDiseaseList(abnormalities){
-		var t = '<h4>Possible Conditions:</h4>\n';
+		var t = '<h3>Possible Conditions:</h3>\n';
 		var s = '';
-	//	console.log(abnormalities, 'in createDiseaseList');
 		for (let i = 0; i<diseases.length; i++) {
-		//	console.log(diseases[i].score(abnormalities));
 			if (diseases[i].score(abnormalities) > 1) {
-				//console.log(diseases[i].name,'in createDiseaseList');
 				t = t + diseases[i].name + "\t" + diseases[i].score(abnormalities) + "\n";
 				s = s + suggestion[diseases[i].name] + '\n';
-				//console.log('j = '+diseases[i].indicators);
-				t = t + "\t" + "suggested by:\n";
+			//	t = t + "\t" + "suggested by:\n";
 				for (let j = 0; j < diseases[i].indicators.length; j++) {
 					//console.log(diseases[i].indicators[j],'in inner loop');
 					if (abnormalities.includes(diseases[i].indicators[j])) {
@@ -704,7 +683,6 @@ class Lab{
 				}
 			}
 		}
-		//console.log(t,'in createDiseaseList');
 		document.getElementById('diseases').innerHTML = t;	
 		document.getElementById('disease_suggestions').innerHTML = s;
 	}
@@ -714,8 +692,8 @@ class Lab{
 		ddx = [];
 		var t  = '';
 		var s = '';
-		t = t + 'Abnormalities\n';
-		s = s + 'Suggestions\n';
+		t = t + '<h3>Abnormal Labs</h3>\n';
+		s = s + '<h3>Suggestions</h3>\n';
 
 		/*show all suggestions
 		if(false){
@@ -730,7 +708,7 @@ class Lab{
 		for (let i = 0; i < abnormalities.length; i++){
 			t = t + '  ' + abnormalities[i] + '\n';
 			if (suggestion[abnormalities[i]] != ''){
-				s = s + abnormalities[i] + '\n\t' + suggestion[abnormalities[i]] + '\n\n';
+				s = s + '<h4>'+abnormalities[i]+ '</h4>' + '\n\t' + suggestion[abnormalities[i]] + '\n\n';
 			}
 		}
 
@@ -746,19 +724,6 @@ class Lab{
 			//console.log(keys[i]);
 		}
 	}
-
-/*
-	function appendDifferential_backup(target) {
-		FRAMECOUNT = FRAMECOUNT + 1;
-		document.write('<div id = "display'+FRAMECOUNT + '"></div>');
-		document.write('<iframe width="0" height = "0" id = "buffer');
-		document.write(FRAMECOUNT + '" name="buffer' + FRAMECOUNT + '" src="'+target+'" ');
-		document.write('onload="copyIframe(');
-		document.write('\buffer'+FRAMECOUNT+'\',');
-		document.write('\display'+FRAMECOUNT+'\'');
-		document.write(')"></iframe>\n');
-	}
-	*/
 
 	function appendDifferential(target) {
 		FRAMECOUNT = FRAMECOUNT + 1;
@@ -786,22 +751,6 @@ class Lab{
 		}
 	}
 
-/*
-
-	function getText(target){
-		var request = new XMLHttpRequest();
-		request.open('GET',target,true);
-		request.send(null);
-		request.onreadystatechange= function (){
-			if (request.readyState=== 4 && request.status === 200) {
-				var type = request.getResponseHeader('Content-Type');
-				if (type.indexOf('text') !== 1) {
-					return (request.responseText);
-				}
-			}
-		}
-	}
-	*/
 
 	function calcAnionGap(sodium, chloride, bicarb) {
 		return(sodium - chloride - bicarb);
