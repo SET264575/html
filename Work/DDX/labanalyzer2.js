@@ -721,7 +721,7 @@ class Lab{
 		t = t + '\'display'+FRAMECOUNT+'\'';
 		t = t + ')"></iframe>\n';
 		//console.log(t,'appendDiff');
-		document.getElementById('ddx').innerHTML = document.getElementById('ddx').innerHTML + t + target;
+		document.getElementById('ddx').innerHTML = document.getElementById('ddx').innerHTML + t;
 	}
 
 	function copyIframe(iframeId,divId) {
