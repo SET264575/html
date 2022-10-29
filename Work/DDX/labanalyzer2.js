@@ -664,8 +664,8 @@ class Lab{
 	}	
 
 	function createDiseaseList(abnormalities){
-		var t = '<h3>Possible Conditions:</h3>\n';
-		var s = '';
+		var t = '<h3>Possible Conditions:</h3>';
+		var s = '<h3>Suggestions:</h3>';
 		for (let i = 0; i<diseases.length; i++) {
 			if (diseases[i].score(abnormalities) > 1) {
 				t = t + diseases[i].name +"\n";
@@ -690,7 +690,7 @@ class Lab{
 		var t  = '';
 		var s = '';
 		t = t + '<h3>Abnormal Labs</h3>\n';
-		s = s + '<h3>Suggestions</h3>\n';
+		//s = s + '<h3>Suggestions</h3>\n';
 
 		/*show all suggestions
 		if(false){
