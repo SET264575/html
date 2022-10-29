@@ -863,7 +863,7 @@ class Lab{
 		var b = "";
 		var keys = Object.keys(diseases);
 		for (let i = 0; i< keys.length; i++){
-			b = b + 'suggestion["'+keys[i]+'"] = "";\n';
+			b = b + 'suggestion["'+diseases[keys[i]]+'"] = "";\n';
 		}
 		document.getElementById('ddx').innerHTML = b;
 	}
