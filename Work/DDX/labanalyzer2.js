@@ -212,31 +212,10 @@ class Lab{
 //delete the following:
 
 /*
-	var abnormality = {};
-	abnormality["hyponatremia"] = ['CHF','Lasix use','SSRI use','psychogenic polydipsia',"cirrhosis","nephrotic syndrome","SIADH","hypothyroidism","beer potomania", "pregnancy","reset osmostat","hypovolemia due to fluid losses","hypovolemia due to decreased oral intake","pancreatitis","ecstasy use","prolonged sweating","adrenal insufficiency",'hypoaldosteronism','pseudohyponatremia due to elevated triglycerides','pseudohyponatremia due to paraproteinemia','pseudohyponatremia due to hyperglycemia','pseudohyponatremia due to mannitol'];
-	abnormality["hypernatremia"] = ['dehydration','diabetes insipidus','osmotic diuresis','excessive sodium administration','hyperaldosteronism',"Cushing's syndrome"];
-	abnormality["hypochloremia"] = ['milk-alkali syndrome'];
-	abnormality['hyperchloremia'] = ['renal tubular acidosis','hypoaldosteronism','potassium sparing diuretics','diarrhea','ureterosigmoidostomy','carbonic anhydrase inhibitors','saltwater drowning','ammonium chloride administration','IV lysine, arginine and histidine administration'];
-	abnormality["hypokalemia"] = ['inadequate intake - anorexia or ketogenic diet','diuretic use','DKA','hypomagnesemia','alkalosis','renal artery stenosis','adenal tumor','primary hyperaldosteronism',"Cushing's syndrome","licorice ingestion",'Bartter syndrome','Gitelman syndrome','insulin use','beta agonist use','theophylline use','stimulant use - amphetamines, cocaine use','hypokalemic periodic paralysis','milk-alkali syndrome'];
-	abnormality["hyperkalemia"] = ['acute renal failure','chronic renal failure','obstructive uropathy','type IV renal tubular acidosis','primary hypoaldosteronism','ACE inhibitor use','potassium-sparing diuretic use','NSAID use','excess KCl supplementation','RBC transfusion','shift due to acidosis','beta blocker use','digoxin use','rhabdomyolysis','tumor lysis syndrome','crush injury','burn injury','intravascular hemolysis','in vitro hemolysis','cyclosporin use','tacrolimus use','trimethoprim use','pentamidine use','hyperkalemic periodic paralysis'];
-	abnormality['hyperbicarbia'] = ['chronic hypercarbia respiratory failure','milk-alkali syndrome','contraction alkalosis'];
-	abnormality['hypobicarbia'] = ['DKA'];
-	abnormality['decreased creatinine'] = ['decreased muscle mass','overhydration','portosystemic shunt','pregnancy','causes of polyuria'];
-	abnormality['elevated creatinine'] = ['acute renal failure','chronic renal failure','dehydration','postrenal obstruction','creatine supplementation','increased ingestion of cooked meat','intense exercise','assay interference from ketones, lipemia, hemolysis','assay interference from cephalosporins, barbiturates, N-acetylecyteine, nitromethane', 'decreased secretion due to trimethoprim, cimetidine','fibrate use'];
-	abnormality['elevated BUN'] = ['acute renal failure','chronic renal failure','upper GI bleeding','catabolic state','steroid use'];
-	abnormality['hypoglycemia'] = ['insulin use','starvation'];
-	abnormality['elevated AST'] = ['acute muscle damage','myocardial infarction','acute pancreatitis','acute hemolytic anemia','severe burns','acute renal injury','alcoholic liver disease'];
-	abnormality['elevated ALT'] = ['liver disease','viral hepatitis','diabetes','CHF','bile duct obstruction','infectious mononucleosis','myopathy','zileuton use','omega-3 acid ethy ester use','statin use','risperidone use','acetaminophen use','anticonvulsant use'];
-	abnormality['elevated alkaline phosphatase'] = ['bile duct obstruction','bone disease','osteoblastic bone tumor','osteomalacia','hepatitis','cirrhosis','acute cholecystitis','myelofibrosis','leukemoid reaction','lymphoma',"Paget's disease",'sarcoidosis','hyperthyroidism','hyperparathyroidism','myocardial infarction','pregnancy','high dose estrogen'];
-	abnormality['low alkaline phosphatase'] = ['hypophosphatasia','estrogen use','recent heart surgery','malnutrition','hypomagnesemia','severe anemia','congenital iodine deficiency','achondroplasia','severe enteritis','pernicious anemia','aplastic anemia',"Wilson's disease",'hypothyroidism','zinc deficiency','steroid use','colitis'];
-	abnormality['hyperbilirubinemia'] = ['reabsorption of a hematoma','ineffective erythropoiesis leading to increase RBC destruction',"Gilbert's syndrome","Crigler-Najjar syndrome",'viral hepatitis','common bile duct obstruction','Dubin-Johnson syndrome'];
-	abnormality['hypercalcemia'] = ['primary hyperparathyroidism', 'cancer', 'sarcoidosis', 'tuberculosis', 'Paget disease', 'multiple endocrine neoplasia', 'vitamin D toxicity','acromegaly','adrenal insufficiency','thiazide use','hyperthyroidism','vitamin A toxicity','histoplasmosis','Crohn disease','granulomatosis with polyangiitis'];
-	abnormality['hypocalcemia'] = ['milk-alkali syndrome','hypomagnesemia','hyperphosphatemia','vitamin D deficiency','chronic liver disease','osteomalacia','chronic renal failure','hypoparathyroidism','hungry bone syndrome','tumor lysis syndrome','acute kidney injury','rhabdomyolysis','pancreatitis','alkalosis','massive RBC transfusion','foscarnet use','loop diuretic use','Crohn disease','lactic acidosis','pseudohypoparathyroidism'];
-	abnormality['hypomagnesemia'] = ['low magnesium']; //*****
+
 	abnormality['hypermagnesemia'] = ['high magnesium']; //***
 	abnormality['hypomagnesemia'] = ['other']; //**
 
-	abnormality['hyperglycemia'] = ['new onset diabetes','DKA','steroid use',"Cushing's syndrome",'pheochromocytoma','acromegaly','hyperglycagonemia','hyperthyroidism','octreotide use','beta blocker use','thiazide diuretic use','statin use','niacin use','pentamidine use','protease inhibitor use','antipsychotic use','acute amphetamine use','stress due to stroke or MI'];
 	abnormality['elevated total protein'] = ['paraproteinemia',"Hodgkin's lymphoma",'leukemia','multiple myeloma','increased immunoglobulins','dehydration','hepatitis B','hepatitis C','HIV','chronic inflammation'];
 	abnormality['decreased total protein'] = ['low albumin concentration','liver disease','acute infection','immunodeficiency'];
 	abnormality['hypoalbuminemia'] = ['inflammation','infection','liver failure','nephrotic syndrome','chronic kidney disease','malnutrition','protein losing enteropathy'];
@@ -446,7 +425,7 @@ class Lab{
 	suggestion["hypoalbuminemia"] = "";
 	suggestion["hyperalbuminemia"] = "";
 	suggestion["low total protein"] = "";
-	suggestion["elevated lipase"] = "";
+	suggestion["elevated lipase"] = "Acute pancreatitis is usually associated with a lipase at least 3 x the upper limit of normal.\nIf the patient's abdominal pain is non-specific and not clearly suggestive of pancreatitis, further evaluation of mild lipase elevation is usually not cost-effective.";
 	suggestion["low A/G ratio"] = "";
 	suggestion["elevated A/G ratio"] = "";
 	suggestion["elevated troponin"] = "Consider whether troponin elevation might be due to renal insufficiency.\n\tConsider other causes of elevated troponin that cause chest pain including PE, CHF, myocarditis.\n\tReview EKG.  Consider repeating EKG.\n\tRepeat troponin";
