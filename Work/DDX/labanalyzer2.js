@@ -479,6 +479,30 @@ class Lab{
 //      Disease suggestions
 
 	suggestion['adrenal insufficiency'] = "Consider adrenal crisis.\nGive hydrocortisone 100 mg IV if refractory shock.";
+	suggestion["CHF"] = "";
+	suggestion["DKA"] = "";
+	suggestion["sepsis"] = "";
+	suggestion["renal failure"] = "";
+	suggestion["upper GI bleeding"] = "";
+	suggestion["hypomagnesemia"] = "";
+	suggestion["capillary leak syndrome"] = "";
+	suggestion["HELLP syndrome"] = "";
+	suggestion["iron deficiency anemia"] = "";
+	suggestion["Cushing's syndrome"] = "";
+	suggestion["hepatorenal syndrome"] = "";
+	suggestion["milk-alkali syndrome"] = "";
+	suggestion["steroid use"] = "";
+	suggestion["pancytopenia"] = "";
+	suggestion["cirrhosis"] = "";
+	suggestion["Ehrlichiosis"] = "";
+	suggestion["hemolytic-uremic syndrome"] = "";
+	suggestion["TTP"] = "";
+	suggestion["multiple myeloma"] = "";
+	suggestion["tertiary hyperparathyroidism"] = "";
+	suggestion["aluminum toxicity"] = "";
+	suggestion["eosinophilic gastritis"] = "";
+	suggestion["vitamin B12 deficiency"] = "";
+	suggestion["folate deficiency"] = "";
 
 	var results = {};
 	var ddx = {};
