@@ -524,7 +524,7 @@ class Lab{
 		setTestValues();
 	} 
 
-	//printAbnormalities();
+	printAbnormalities();
 	
 	var FRAMECOUNT = 0;
 
@@ -861,9 +861,9 @@ class Lab{
 
 	function printAbnormalities(){
 		var b = "";
-		var keys = Object.keys(abnormality);
+		var keys = Object.keys(diseases);
 		for (let i = 0; i< keys.length; i++){
-			b = b + '\tabnormality_site["'+keys[i]+'"] = "'+keys[i]+'.html";\n';
+			b = b + 'suggestion["'+keys[i]+'"] = "";\n';
 		}
 		document.getElementById('ddx').innerHTML = b;
 	}
