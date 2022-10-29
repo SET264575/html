@@ -348,7 +348,7 @@ class Lab{
 	abnormality_site["hypercalcemia"] = "hypercalcemia.html";
 	abnormality_site["hypocalcemia"] = "hypocalcemia.html";
 	abnormality_site["hypomagnesemia"] = "hypomagnesemia.html";
-	abnormality_site["hypermagnesemia"] = "hypermagnesemia.html";
+	abnormality_site["hypermagnesemia"] = "hypermagnesemia2.html";
 	abnormality_site["hyperglycemia"] = "hyperglycemia.html";
 	abnormality_site["elevated total protein"] = "elevated total protein.html";
 	abnormality_site["decreased total protein"] = "decreased total protein.html";
