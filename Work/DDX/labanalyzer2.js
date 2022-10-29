@@ -214,7 +214,7 @@ class Lab{
 /*
 
 	abnormality['hypermagnesemia'] = ['high magnesium']; //***
-	abnormality['hypomagnesemia'] = ['other']; //**
+
 
 	abnormality['elevated total protein'] = ['paraproteinemia',"Hodgkin's lymphoma",'leukemia','multiple myeloma','increased immunoglobulins','dehydration','hepatitis B','hepatitis C','HIV','chronic inflammation'];
 	abnormality['decreased total protein'] = ['low albumin concentration','liver disease','acute infection','immunodeficiency'];
@@ -824,8 +824,10 @@ class Lab{
 
 	function setTestValues(){
 		for (let i = 0; i < 16; i++){
-			document.getElementById(labs[i].name).value = 0;
+			//document.getElementById(labs[i].name).value = 0;
 		}
+		//var keys = Object.keys(results);
+		
 	}
 
       function getRadioButtonValue(name){
@@ -840,9 +842,9 @@ class Lab{
 
 	function printAbnormalities(){
 		var b = "";
-		var keys = Object.keys(diseases);
+		//var keys = Object.keys(diseases);
 		for (let i = 0; i< keys.length; i++){
-			b = b + 'suggestion["'+diseases[keys[i]]+'"] = "";\n';
+			b = b + 'suggestion["'+diseases[keys[i]].name+'"] = "";\n';
 		}
 		document.getElementById('ddx').innerHTML = b;
 	}
