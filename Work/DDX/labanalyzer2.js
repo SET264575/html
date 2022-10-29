@@ -496,7 +496,7 @@ class Lab{
 //ANC
 
 	
-		var testVersion = false;
+		var testVersion = true;
 
 	var testResults = "all high";
 	if (testVersion){
@@ -826,7 +826,11 @@ class Lab{
 		for (let i = 0; i < 16; i++){
 			//document.getElementById(labs[i].name).value = 0;
 		}
-		//var keys = Object.keys(results);
+		var keys = Object.keys(results);
+		for (let i = 0; i < keys.length; i++){
+			results[keys[i]] = 0;
+		}
+		
 		
 	}
 
@@ -842,7 +846,7 @@ class Lab{
 
 	function printAbnormalities(){
 		var b = "";
-		//var keys = Object.keys(diseases);
+		var keys = Object.keys(diseases);
 		for (let i = 0; i< keys.length; i++){
 			b = b + 'suggestion["'+diseases[keys[i]].name+'"] = "";\n';
 		}
