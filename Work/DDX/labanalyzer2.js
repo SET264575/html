@@ -496,6 +496,11 @@ class Lab{
 	suggestion["high anion gap metabolic acidosis"] = "Consider ordering:\n\t\tbeta hydroxybutyrate\n\t\tlactate\n\t\tethanol\n\t\tacetaminophen level\n\t\tserum osmolality";
 	suggestion["low anion gap"] = "";
 
+	
+//      Disease suggestions
+
+	suggestion['adrenal insufficiency'] = "Consider adrenal crisis.\nGive hydrocortisone 100 mg IV if refractory shock.";
+
 	var results = {};
 	var ddx = {};
 //
