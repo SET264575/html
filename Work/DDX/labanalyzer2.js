@@ -428,34 +428,6 @@ class Lab{
 	abnormality_site["low anion gap"] = "low anion gap.html";
 
 
-	
-	/*var pairs = [];
-	pairs.push(new Pairs("hyponatremia","hyperkalemia"));
-	pairs.push(new Pairs("hyperglycemia","hypobicarbia"));
-	pairs.push(new Pairs("elevated LFTs","elevated creatinine"));
-	pairs.push(new Pairs("leukocytosis","hyperglycemia"));
-	pairs.push(new Pairs("thrombocytopenia","hyponatremia"));
-	pairs.push(new Pairs("elevated AST","elevated ALT"));
-	pairs.push(new Pairs("hypercalcemia","anemia"));
-	pairs.push(new Pairs("hypercalcemia","elevated creatinine"));
-	pairs.push(new Pairs('anemia','microcytosis'));
-	pairs.push(new Pairs('anemia','macrocytosis'));
-	pairs.push(new Pairs('anemia','elevated BUN'));
-	pairs.push(new Pairs('hypokalemia','hypocalcemia'));
-
-	var triplets = [];
-	triplets.push(new Triplets("leukopenia","anemia","thrombocytopenia"));
-	triplets.push(new Triplets("hyponatremia","hyperkalemia","hypocalcemia"));
-	triplets.push(new Triplets("anemia","elevated BUN","elevated creatinine"));
-	triplets.push(new Triplets("leukopenia","thrombocytopenia","hyponatremia"));
-	triplets.push(new Triplets("anemia, thrombocytopenia, elevated creatinine"));
-	triplets.push(new Triplets("elevated AST","elevated ALT","thrombocytopenia"));
-	triplets.push(new Triplets("polycythemia","leukocytosis","thrombocytosis"));
-	triplets.push(new Triplets("polycythemia","thrombocytosis","hypoalbuminemia"));
-	triplets.push(new Triplets("hypoalbuminemia","anemia","eosinophilia"));
-	triplets.push(new Triplets("hypochloremia","hypokalemia","hypercalcemia")); 
-	*/
-
 	var suggestion = [];
 	suggestion["hyponatremia"] = "Calculate corrected sodium level.";
 	suggestion["hypernatremia"] = "";
@@ -550,7 +522,7 @@ class Lab{
 //ANC
 
 	
-		var testVersion = true;
+		var testVersion = false;
 
 	var testResults = "all high";
 	if (testVersion){
