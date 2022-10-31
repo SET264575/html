@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Joint Aspiration</title>
+  </head>
+  
+  <body>
+    <h3>Ankle Joint Aspiration</h3>
+    
+    <h4>Description</h4>
+    
+    <label for = "side">Side</label>
+    <select id = "side" onchange = "copytext()">
+      <option value = "right">Right</option>
+      <option value = "left">Left</option>
+    </select><br><br>
+                
+    <h4>Anesthetic</h4>
+    
+    <label for = "anesthetic">Anesthetic</label>
+    <select id = "anesthetic" onchange = "copytext()">
+      <option value = "1% lidocaine">1% lidocaine</option>
+      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
+      <option value = "2% lidocaine">2% lidocaine</option>
+      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
+    </select><br><br>
+    
+    <label for = "volume">Volume</label>
+    <select id = "volume" onchange = "copytext()">
+      <option value = "5">5 cc</option>
+      <option value = "1">1 cc</option>
+      <option value = "2">2 cc</option>
+      <option value = "3">3 cc</option>
+      <option value = "4">4 cc</option>
+      <option value = "5">5 cc</option>
+      <option value = "6">6 cc</option>
+      <option value = "7">7 cc</option>
+      <option value = "8">8 cc</option>
+      <option value = "9">9 cc</option>
+      <option value = "10">10 cc</option>
+    </select>
+   
+    <h4>Results</h4>
+    
+    <label for = "description">Fluid description</label>
+    <select id = "description" onchange = "copytext()">
+      <option value = "clear">clear</option>
+      <option value = "purulent">purulent</option>
+      <option value = "bloody">bloody</option>
+    </select><br><br>
+   
+    
+    <label for = "volume2">Volume</label>
+    <select id = "volume2" onchange = "copytext()">
+      <option value = "10">1</option>
+      <option value = "20">2</option>
+      <option value = "30">3</option>
+      <option value = "40">4</option>
+      <option value = "50">5</option>
+      <option value = "60">6</option>
+      <option value = "70">7</option>
+      <option value = "80">8</option>
+      <option value = "90">9</option>
+      <option value = "100">10</option>
+      <option value = "110">11</option>
+      <option value = "120">12</option>
+    </select><br><br>
+    
+    <input type="checkbox" id= "injected">Injected with Kenalog and lidocaine</input><br><br>
+      
+    
+    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    
+    <script>
+      function copytext(){
+        var side = document.getElementById("side").value;
+        var anesthetic = document.getElementById("anesthetic").value;
+        var volume = document.getElementById("volume").value;
+        var volume2 = document.getElementById("volume2").value;
+        var description = document.getElementById("description").value;
+        var injected = document.getElementById("injected").value;
+        var t = "";
+        t = "Procedure Note:  Joint Aspiration\n";
+        t = t + "The indications, risks, benefits and alternatives were discussed with the patient and written consent was obtained. ";
+        t = t + "A wide area around the " +side + " ankle was prepped with Betadine and the site was draped with sterile towels.  The puncture site was ";
+        t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
+        t = t + "An 18 gauge needle was inserted into the joint and " + volume2 + " cc of " + description + "synovial fluid was aspirated and sent for testing. ";
+        if (injected == true){
+                t = t + "The joint was then injected with 20 mg of Kenalog and 10 cc of 1% lidocaine. ";
+        }
+        t = t + "The needle was withdrawn and the puncture site was dressed with a Band-Aid.  Betadine was cleaned off the surrounding skin. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        document.getElementById("text").value = t;
+        navigator.clipboard.writeText(t);
+      }
+    </script>
+  </body>
+</html>
