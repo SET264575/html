@@ -11,7 +11,7 @@
     <label for = "side">Side</label>
     <select id = "side" onchange = "copytext()">
       <option value = "right">Right</option>
-      <option value = "left">Left/option>
+      <option value = "left">Left</option>
     </select><br><br>
             
     <label for="joint">Size</label>
@@ -20,7 +20,7 @@
       <option value = "shoulder">Shoulder/option>
       <option value = "wrist">Wrist</option>
       <option value = "elbow">Elbow</option>
-      <option value = "ankle">Ankle/option>
+      <option value = "ankle">Ankle</option>
     </select><br><br>
     
     <h4>Anesthetic</h4>
@@ -52,9 +52,9 @@
     
     <label for = "description">Fluid description</label>
     <select id = "description" onchange = "copytext()">
-      <option value = "clear">Nylon</option>
-      <option value = "purulent">Prolene</option>
-      <option value = "bloody">Vicryl</option>
+      <option value = "clear">clear</option>
+      <option value = "purulent">purulent</option>
+      <option value = "bloody">bloody</option>
     </select><br><br>
    
     
@@ -90,10 +90,10 @@
         var injected = document.getElementById("injected").value;
         var t = "";
         t = "Procedure Note:  Joint Aspiration\n";
-        t = t + "The indications, risks, benefits and alternatives were discussed with teh patient and written consent was obtained. ";
+        t = t + "The indications, risks, benefits and alternatives were discussed with the patient and written consent was obtained. ";
         t = t + "A wide area around the " +side + " "+ joint + "was prepped with Betadine and the site was draped with sterile towels.  The puncture site was ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
-        t = t + "An 18 gauge needle was inserted into the joint and " + volume2 + "cc of " + description + "synovial fluid was aspirated and sent for testing. ";
+        t = t + "An 18 gauge needle was inserted into the joint and " + volume2 + " cc of " + description + "synovial fluid was aspirated and sent for testing. ";
         if (injected == true){
                 t = t + "The joint was then injected with 40 mg of Kenalog and 10 cc of 1% lidocaine. ";
         }
