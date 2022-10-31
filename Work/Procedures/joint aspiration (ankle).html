@@ -38,7 +38,11 @@
       <option value = "9">9 cc</option>
       <option value = "10">10 cc</option>
     </select>
-   
+    <h4> Technique</h4>
+        <label for = "approach">Approach</label>
+    <select id = "side" onchange = "copytext()">
+      <option value = "medial">medial</option>
+      <option value = "lateral">lateral</option>
     <h4>Results</h4>
     
     <label for = "description">Fluid description</label>
@@ -75,6 +79,7 @@
         var side = document.getElementById("side").value;
         var anesthetic = document.getElementById("anesthetic").value;
         var volume = document.getElementById("volume").value;
+        var approach = document.getElementById("approach").value;
         var volume2 = document.getElementById("volume2").value;
         var description = document.getElementById("description").value;
         var injected = document.getElementById("injected").value;
@@ -83,7 +88,7 @@
         t = t + "The indications, risks, benefits and alternatives were discussed with the patient and written consent was obtained. ";
         t = t + "A wide area around the " +side.toLowerCase() + " ankle was prepped with Betadine and the site was draped with sterile towels.  The puncture site was ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
-        t = t + "An 18 gauge needle was inserted into the joint and " + volume2 + " cc of " + description + " synovial fluid was aspirated and sent for testing. ";
+        t = t + "An 18 gauge needle was inserted into the joint using a " + approach + " approach and " + volume2 + " cc of " + description + " synovial fluid was aspirated and sent for testing. ";
         if (injected == true){
                 t = t + "The joint was then injected with 20 mg of Kenalog and 10 cc of 1% lidocaine. ";
         }
