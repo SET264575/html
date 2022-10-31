@@ -10,8 +10,8 @@
     
     <label for = "side">Side</label>
     <select id = "side" onchange = "copytext()">
-      <option value = "right">Right</option>
-      <option value = "left">Left</option>
+      <option value = "Right">Right</option>
+      <option value = "Left">Left</option>
     </select><br><br>
                 
     <h4>Anesthetic</h4>
@@ -79,9 +79,9 @@
         var description = document.getElementById("description").value;
         var injected = document.getElementById("injected").value;
         var t = "";
-        t = "Procedure Note: "+side.toUpperCase() +" Ankle Joint Aspiration\n";
+        t = "Procedure Note: "+side +" Ankle Joint Aspiration\n";
         t = t + "The indications, risks, benefits and alternatives were discussed with the patient and written consent was obtained. ";
-        t = t + "A wide area around the " +side + " ankle was prepped with Betadine and the site was draped with sterile towels.  The puncture site was ";
+        t = t + "A wide area around the " +side.toLowerCase() + " ankle was prepped with Betadine and the site was draped with sterile towels.  The puncture site was ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
         t = t + "An 18 gauge needle was inserted into the joint and " + volume2 + " cc of " + description + " synovial fluid was aspirated and sent for testing. ";
         if (injected == true){
