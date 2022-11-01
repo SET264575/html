@@ -520,7 +520,7 @@ class Lab{
 //ANC
 
 	
-		var testVersion = true;
+		var testVersion = false;
 
 	var testResults = "all high";
 	if (testVersion){
