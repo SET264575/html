@@ -54,15 +54,15 @@ Tolerated
        <option>8 cc</option>
        <option>9 cc</option>
        <option>10 cc</option>
-    </select>
+    </select><br>
     <select id = "Tube drainage"  onchange = "copytext()">
        <option>none</option>
        <option>small amount of air</option>
        <option>large amount of air</option>
        <option>clear fluid</option>
        <option>bloody fluid</option>
-    </select>
-
+    </select><br>
+<br>
     <textarea id = "textarea" style = "rows: 10; cols: 100;"></textarea>
     <script>
       function copytext(){
@@ -124,7 +124,7 @@ Tolerated
         }
 
         t = t + ".  An skin incision was then made with a #15 blade and the tissues were bluntly dissected to the pleural space.  A ";
-        switch(size of tube){
+        switch(size){
           case "20 Fr":
             t = t + "20 Fr";
             break;
