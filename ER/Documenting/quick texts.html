@@ -3,10 +3,16 @@
     <title>
       Quick Texts
     </title>
+    <style>
+      button {
+        width: 100px;
+      }
+      <style>
   </head>
   <body>
     <button id = "text1" onclick = "copytext(1)">Critical Care </button><br>
     <button id = "text2" onclick = "copytext(2)">Dr. Robertson Letter</button><br>
+    <button id = "text3" onclick = "">Drug & Alcohol Detox List</button><br>
     
     <h5>The following has been copied to the clipboard and is ready to be pasted into your document:</h5><br>
     
@@ -46,6 +52,8 @@ fracture team and I will get you through this and on the road to recovery.\n\
 Sincerely,\n\
 Michael Robertson, MD \n\
 Director of Orthopaedic Trauma/Boone Hospital Center";
+          break;
+        case 3:
           break;
       }
       navigator.clipboard.writeText(txt);
