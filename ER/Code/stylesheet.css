@@ -1,0 +1,17 @@
+table, th, td {
+  font-size:  30px;
+  border-collapse:  collapse;
+  border:  1px solid black;
+}
+
+p {
+  font-size: 30px;
+}
+
+pre {
+  font-size: 30px;
+}
+
+textarea {
+  font-size: 30px;
+}
