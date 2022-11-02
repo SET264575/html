@@ -52,6 +52,7 @@ function copy2(){
 	if (getValue('GI path')) {pending.push('GI pathogen profile');}
 	if (getValue('ESR')) {pending.push('ESR');}
 	if (getValue('CRP')) {pending.push('CRP');}
+	if (getValue('lactate2')) {pending.push('lactate');}
 
 	if (pending.length > 0) {
 		text = text + 'Pending tests include ' + combine(pending);
