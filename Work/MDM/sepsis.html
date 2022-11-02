@@ -4,24 +4,24 @@
   </head>
 <body>
 SIRS criteria:<br>
-<input type="checkbox" id="leukocytosis" >
+<input type="checkbox" id="leukocytosis" onchange = "copy2()">
 <label for="leukocytosis">Leukocytosis</label><br>
-<input type = "checkbox" id = "fever" >
+<input type = "checkbox" id = "fever"  onchange = "copy2()">
 <label for = "fever">Fever</label><br>
-<input type = "checkbox" id = "tachycardia"  >
+<input type = "checkbox" id = "tachycardia"   onchange = "copy2()">
 <label for = "tachycardia">Tachycardia</label><br>
-<input type = "checkbox" id = "tachypnea" >
+<input type = "checkbox" id = "tachypnea"  onchange = "copy2()">
 <label for = "tachypnea">Tachypnea</label><br>
 <br><br>
 Lactate was:<br>
-<input type = "radio" name = "lactate" id = "highlactate">
+<input type = "radio" name = "lactate" id = "highlactate" onchange = "copy2()">
 <label for="highlactate">Elevated</label><br>
-<input type = "radio" name = "lactate" id = "lowlactate">
+<input type = "radio" name = "lactate" id = "lowlactate" onchange = "copy2()">
 <label for="lowlactate">Not elevated</label><br>
 <br>
 <br>
 <label for="cause">Cause:</label>
-<select id="cause">
+<select id="cause" onchange = "copy2()">
   <option>pneumonia</option>
   <option>a UTI</option>
   <option>Covid</option>
@@ -37,53 +37,55 @@ Lactate was:<br>
 <br>
 <br>
 Treatment:<br>
-<input type = "checkbox" id = "IVF"> 
+<input type = "checkbox" id = "IVF" onchange = "copy2()"> 
 <label for = "">IV fluids</label><br>
-<input type = "checkbox" id = "IVF30"> 
+<input type = "checkbox" id = "IVF30" onchange = "copy2()"> 
 <label for = "IVF30">IV normal saline at 30 cc/kg </label><br>
-<input type = "checkbox" id = "Rocephin"> 
+<input type = "checkbox" id = "Rocephin" onchange = "copy2()"> 
 <label for = "Rocephin">Rocephin </label><br>
-<input type = "checkbox" id = "Rocephin & Zithromax">
+<input type = "checkbox" id = "Rocephin & Zithromax" onchange = "copy2()">
 <label for = "Rocephin & Zithromax">Rocephin & Zithromax</label><br>
-<input type = "checkbox" id = "Vanc"> 
+<input type = "checkbox" id = "Vanc" onchange = "copy2()"> 
 <label for = "Vanc">Vancomycin</label><br>
-<input type = "checkbox" id = "Zosyn"> 
+<input type = "checkbox" id = "Zosyn" onchange = "copy2()"> 
 <label for = "Zosyn">Zosyn </label><br>
-<input type = "checkbox" id = "Vanc & Zosyn"> 
+<input type = "checkbox" id = "Vanc & Zosyn" onchange = "copy2()"> 
 <label for = "Vanc & Zosyn">Vanc & Zosyn </label><br>
-<input type = "checkbox" id = "Zithromax"> 
+<input type = "checkbox" id = "Zithromax" onchange = "copy2()"> 
 <label for = "Zithromax">Zithromax</label><br>
-<input type = "checkbox" id = "Cipro"> 
+<input type = "checkbox" id = "Cipro" onchange = "copy2()"> 
 <label for = "Cipro">Cipro </label><br>
-<input type = "checkbox" id = "Cipro & Flagyl"> 
+<input type = "checkbox" id = "Cipro & Flagyl" onchange = "copy2()"> 
 <label for = "Cipro & Flagyl">Cipro & Flagyl </label><br>
-<input type = "checkbox" id = "Flagyl"> 
+<input type = "checkbox" id = "Flagyl" onchange = "copy2()"> 
 <label for = "Flagyl">Flagyl</label><br>
-<input type = "checkbox" id = "Invanz"> 
+<input type = "checkbox" id = "Invanz" onchange = "copy2()"> 
 <label for = "Invanz">Invanz</label><br>
 <br> 
 
   <h3>Tests pending:</h3>
-  <input type = "checkbox" id = "CT">
+  <input type = "checkbox" id = "CT" onchange = "copy2()">
   <label for = "CT">CT chest, abdomen & pelvis</label><br>
-  <input type = "checkbox" id = "procalcitonin">
+  <input type = "checkbox" id = "procalcitonin" onchange = "copy2()">
   <label for = "procalcitonin">procalcitonin</label><br>
-  <input type = "checkbox" id = "chest x-ray">
+  <input type = "checkbox" id = "chest x-ray" onchange = "copy2()">
   <label for = "chest x-ray">chest x-ray</label><br>
-  <input type = "checkbox" id = "UA">
+  <input type = "checkbox" id = "UA" onchange = "copy2()">
   <label for = "UA">urinalysis</label><br>
-  <input type = 'checkbox' id = 'RPP'>
+  <input type = 'checkbox' id = 'RPP' onchange = "copy2()">
   <label for = "RPP">respiratory pathogen panel</label><br>
-  <input type = 'checkbox' id = 'GI path'>
+  <input type = 'checkbox' id = 'GI path' onchange = "copy2()">
   <label for = 'GI path'>GI pathogen profile</label><br>
-  <input type = 'checkbox' id = 'C dif'>
+  <input type = 'checkbox' id = 'C dif' onchange = "copy2()">
   <label for = 'C dif'>C. dif</label><br>
-  <input type = 'checkbox' id = 'ESR'>
+  <input type = 'checkbox' id = 'ESR' onchange = "copy2()">
   <label for = 'ESR'>ESR</label><br>
-  <input type = 'checkbox' id = 'CRP'>
+  <input type = 'checkbox' id = 'CRP' onchange = "copy2()">
   <label for = 'CRP'>CRP</label><br>
+  <input type = 'checkbox' id = 'lactate2'  onchange = "copy2()">
+  <label for = 'lactate2'>Lactate</label><br>
   <br>
-<button id = "button" onclick = "copy2()">Copy</button><br>
+<!--button id = "button" onclick = "copy2()">Copy</button><br-->
 
 
 <textarea id = "textarea" rows = "10" cols = "40"></textarea>
