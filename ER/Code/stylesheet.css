@@ -41,6 +41,11 @@ textarea {
 	
 }
 
+.policysectintitle::before {
+	content: '\A';
+	white-space: pre;
+}
+
 .policysectiontitle {
 	font-size: 1.2em;
 	font-family: Arial;
@@ -49,7 +54,6 @@ textarea {
 
 .policybody {
 	font-family: Arial;
-	white-space: pre;
 	}
 
 .policy{
