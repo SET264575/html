@@ -1,6 +1,6 @@
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-  background-color: yellow;
+  background-color: deepskyblue;
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -26,7 +26,7 @@
 }
 
 button {
-  background-color:  blue;
+  background-color:  darkslateblue;
   font-family: Arial;
   font-size: 1em;
 }
