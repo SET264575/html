@@ -30,6 +30,7 @@ textarea {
 	align: center;
 }
 
+
 .policyblock {
 	border: 1px solid black;
 	border-radius: 3px;
@@ -37,6 +38,7 @@ textarea {
 	font-family: Arial;
 	font-size: 1em;
 	margin: 20px;
+	white-space: pre;
 	
 }
 
@@ -74,6 +76,6 @@ textarea {
 	font-style: italic;
 }
 
-.template {
+#template {
 	display: none;
 }
