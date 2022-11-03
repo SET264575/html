@@ -59,6 +59,7 @@ textarea {
 .policytitle {
 	font-size: 1em;
 	font-weight: bold;
+	white-space: pre;
 }
 
 .policytext {
