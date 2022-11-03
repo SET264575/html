@@ -54,22 +54,22 @@ textarea {
 }
 
 .policytitle {
-	font-size: 20px;
+	font-size: 1em;
 	font-weight: bold;
 }
 
 .policytext {
-	font-size: 16px;
+	font-size: 1em;
 	text-indent: 30px;
 }
 
 .policysource {
-	font-size: 16px;
+	font-size: .8em;
 	font-style: italic;
 }
 
 .policydate {
-	font-size: 16px;
+	font-size: .8em;
 	font-style: italic;
 }
 
