@@ -19,19 +19,21 @@ textarea {
 .pagetitle {
 	font-size:  2em;
 	font-weight: bold;
+	align: center;
 	}
 
 .directory {
 	border: 1px solid blue;
 	margin: 20px;
+	padding: 20px;
 	font-size: 1em;
+	align: center;
 }
 
 .policyblock {
 	border: 1px solid black;
 	border-radius: 3px;
 	padding: 10px;
-	width: 90%;
 	font-family: Arial;
 	font-size: 1em;
 	margin: 20px;
@@ -39,7 +41,6 @@ textarea {
 }
 
 .policysectiontitle {
-	border: 1px solid black;
 	font-size: 1.2em;
 	font-family: Arial;
 	font-weight: bold;
