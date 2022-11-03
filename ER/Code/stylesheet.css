@@ -15,3 +15,56 @@ pre {
 textarea {
   font-size: 30px;
 }
+
+.pagetitle {
+	font-size:  2em;
+	font-weight: bold;
+	}
+
+.directory {
+	border: 1px solid blue;
+	margin: 10px;
+	font-size: 1em;
+}
+
+.policyblock {
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 10px;
+	width: 90%;
+	font-family: Arial;
+	font-size: 1em;
+	
+}
+
+.policysectiontitle {
+	border: 1px solid black;
+	}
+
+.policybody {
+	font-family: Arial;
+	}
+
+.policy{
+
+}
+
+.policytitle {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.policytext {
+	font-size: 16px;
+	text-indent: 30px;
+}
+
+.policysource {
+	font-size: 16px;
+	font-style: italic;
+}
+
+.policydate {
+	font-size: 16px;
+	font-style: italic;
+}
