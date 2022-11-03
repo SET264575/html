@@ -23,7 +23,7 @@ textarea {
 
 .directory {
 	border: 1px solid blue;
-	margin: 10px;
+	margin: 20px;
 	font-size: 1em;
 }
 
@@ -34,11 +34,15 @@ textarea {
 	width: 90%;
 	font-family: Arial;
 	font-size: 1em;
+	margin: 20px;
 	
 }
 
 .policysectiontitle {
 	border: 1px solid black;
+	font-size: 1.2em;
+	font-family: Arial;
+	font-weight: bold;
 	}
 
 .policybody {
