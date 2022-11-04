@@ -182,8 +182,8 @@ function displayRecords(){
       j = j + 1;
       createRecord(i,j);
     }
-	  document.getElementById("rm"+String(newest)+"_dx").focus();
   }
+  document.getElementById("rm"+String(newest)+"_dx").focus();
 }
 
 function createAwaitList(){
