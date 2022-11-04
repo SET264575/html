@@ -220,16 +220,27 @@
         }
         if (age == 0) {
           tube = '3.0 uncuffed tube<br>Use a Miller 0 blade';
-          depth = '7 cm at lip';
         }
         if (age > 0 & age < 7) {
-          tube = '3.0-3.5 cuffed tube<br>Use a Miller 1 blade';
+          tube = '3.0-3.5 cuffed tube<br>Use a Miller 0 or 1 blade';
+          depth = '9-10 cm at lip';
+        }
+        if (age > 6 & age < 13) {
+          tube = '3.5-4.0 cuffed tube<br>Use a Miller 0 or 1 blade';
+          depth = '10-12 cm at lip';
+        }
+        if (age > 12 & age < 25) {
+          tube = '4.0-4.5 cuffed tube<br>Use a Miller 1 or 2 blade';
+          depth = '12.5-13.5 cm at lip';
         }
         if (weight == 3) {
           depth = '9 cm at lip';
         }
         if (weight == 2) {
           depth = '8 cm at lip';
+        }
+        if (weight == 1) {
+          depth = '7 cm at lip';
         }
         
         document.getElementById('hr').innerHTML = hr;
