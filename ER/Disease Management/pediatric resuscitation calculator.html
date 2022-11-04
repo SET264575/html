@@ -202,20 +202,20 @@
         po = String(100*weight) + ' mL/day';
         uop = String(weight) + '-' + String(weight*3) + " cc/hr";
         if (weight > 0 & weight < 11) {
-          ivf = String(100*weight/24) + ' cc/hr';
+          ivf = String(parseInt(100*weight/24)) + ' cc/hr';
         }
         if (weight > 10 & weight < 21) {
-          ivf = String( (1000 + 50 *weight)/24) + ' cc/hr';
+          ivf = String( parseInt((1000 + 50 *weight)/24)) + ' cc/hr';
         }
         if (weight > 20 ){
-          ivf = String( (1500 + 20 *weight)/24) + " cc/hr";
+          ivf = String( parseInt((1500 + 20 *weight)/24)) + " cc/hr";
         }
         if (age == 0) {
-          tube = '3.0 uncuffed tube\nUse a Miller 0 blade';
+          tube = '3.0 uncuffed tube<br>Use a Miller 0 blade';
           depth = '7 cm at lip';
         }
         if (age > 0 & age < 7) {
-          tube = '3.0-3.5 cuffed tube\nUse a Miller 1 blade';
+          tube = '3.0-3.5 cuffed tube<br>Use a Miller 1 blade';
         }
         if (weight == 3) {
           depth = '9 cm at lip';
