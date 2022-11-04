@@ -7,7 +7,7 @@ td {
   width:  300px;
 }
 
-body {
+body, pre {
   font-family: Arial;
   font-size: 1em;
 }
