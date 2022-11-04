@@ -1,16 +1,23 @@
 <html>
-<body>
-<pre>
-elevated AST
-	acute muscle damage
-	myocardial infarction
-	acute pancreatitis
-	acute hemolytic anemia
-	severe burns
-	acute renal injury
-	acute liver disease
-		alcoholic liver disease
-		viral hepatitis
-</pre>
-</body>
+<head>
+<link rel = 'stylesheet' href = 'style.css'>
+</head>
+	<body>
+		<ul id = 'myUL'>
+<li><span class = 'caret'>elevated AST</span>
+	<ul class = 'nested'>
+<li>&nbsp&nbsp&nbsp&nbsp&nbspacute muscle damage</li>
+<li>&nbsp&nbsp&nbsp&nbsp&nbspmyocardial infarction</li>
+<li>&nbsp&nbsp&nbsp&nbsp&nbspacute pancreatitis</li>
+<li>&nbsp&nbsp&nbsp&nbsp&nbspacute hemolytic anemia</li>
+<li>&nbsp&nbsp&nbsp&nbsp&nbspsevere burns</li>
+<li>&nbsp&nbsp&nbsp&nbsp&nbspacute renal injury</li>
+<li><span class = 'caret'>acute liver disease</span>
+	<ul class = 'nested'>
+<li>&nbsp&nbsp&nbsp&nbsp&nbspalcoholic liver disease</li>
+<li>&nbsp&nbsp&nbsp&nbsp&nbspviral hepatitis</li>
+</ul>
+</ul>
+<script src = 'tree.js'></script>
+	</body>
 </html>
