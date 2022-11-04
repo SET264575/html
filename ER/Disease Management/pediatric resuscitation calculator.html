@@ -1,0 +1,231 @@
+<html>
+  <head>
+    <title>Pediatric Resuscitation Calculator</title>
+  </head>
+  <body>
+    <h3>Enter body weight in kilograms</h3>
+    <input type="text" id = "weight"></input><br>
+  <h3>Enter age</h3>
+  <input type="text" id = "age"></input><br>
+  
+  <table>
+    <tr>
+      <td>
+      Normal Heart Rate
+      </td>
+      <td>
+        <p id = "hr"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+      Normal Respiratory Rate
+      </td>
+      <td>
+        <p id = "rr"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Tube size
+      </td>
+      <td>
+        <p id = "tube"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Tube depth
+      </td>
+      <td>
+        <p id = "depth"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Etomidate
+      </td>
+      <td>
+        <p id = "etomidate"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Ketamine
+      </td>
+      <td>
+        <p id = "ketamine"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Succinylcholine
+      </td>
+      <td>
+        <p id = "sux"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+       Rocuronium
+      </td>
+      <td>
+        <p id = "roc"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Versed
+      </td>
+      <td>
+        <p id = "versed"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Fentanyl
+      </td>
+      <td>
+        <p id = "fentanyl"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Tidal volume
+      </td>
+      <td>
+        <p id = "tv"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Vent rate
+      </td>
+      <td>
+        <p id = "rate"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Formula/day
+      </td>
+      <td>
+        <p id = "po"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Urine output/day
+      </td>
+      <td>
+        <p id = "uop"></p>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Maintenance IV fluid rate
+      </td>
+      <td>
+        <p id = "ivf"></p>
+      </td>
+    </tr>
+</table><br><br>
+
+<button id = "submit" onclick = "submit">Submit</button><br>
+
+<script>
+  function submit(){
+    var age = parseInt(document.getElementById("age").value);
+    var weight = parseInt(document.getElementById("weight").value);
+    var hr;
+    var rr;
+    var tube;
+    var depth;
+    var etomidate;
+    var ketamine;
+    var sux;
+    var roc;
+    var versed;
+    var fentanyl;
+    var tv;
+    var rate;
+    var po;
+    var uop;
+    var ivf;
+    
+    
+    if (age > 0 and age < 25) {
+      if (weight > 0 and weight < 20) {
+        if (age < 1) {
+          hr = '90-190 (avg 125)';
+          rr = '30-50';
+        }
+        if (age > 0 and age < 13) {
+          hr = '90-160 (avg 120)';
+          rr = '30-50';
+        }
+        if (age >12 and age < 25) {
+          hr = '80-120';
+          rr = '22-40';
+        }
+        
+        etomidate = String(0.3*weight)+"mg";
+        ketamine = String(weight)+'-'+String(2*weight)+' mg';
+        roc = String(weight) + " mg";
+        if (weight <10) {
+          sux = String(1.5*weight) + '-' + String(2*weight)+' mg';
+        }
+        else {
+          sux = String(weight) + '-' + String(1.5*weight)+' mg';
+        }
+        
+        versed = String (0.1*weight)+ ' mg';
+        fentanyl = String(weight ) + '-' + String(2*weight) + ' mcg';
+        tv = String(weight * 6) + '-' + String(weight * 8) + ' mL';
+        if (weight > 2 and weight < 10) {
+          rate = '20-25 bpm';
+        }
+        if (weight >8 and weight < 19) {
+          rate = '15-25 bpm';
+        }
+        if (weight > 18 and weight < 37) {
+          rate = '12-20';
+        }
+        po = String(100*weight) + ' mL/day';
+        uop = String(weight) + '-' + String(weight*3) + " cc/hr";
+        if (weight > 0 and weight < 11) {
+          ivf = String(100*weight/24) + ' cc/hr';
+        }
+        if (weight > 10 and weight < 21) {
+          ivf = String( (1000 + 50 *weight)/24) + ' cc/hr';
+        }
+        if (weight > 20 ){
+          ivf = String( (1500 + 20 *weight)/24) + " cc/hr";
+        }
+        document.getElementById('hr').value = hr;
+        document.getElementById('rr').value = rr;
+        document.getElementById('tube').value = tube;
+        document.getElementById('depth').value = depth ;
+        document.getElementById('etomidate').value = etomidate;
+        document.getElementById('ketamine').value = ketamine;   
+        document.getElementById('sux').value = sux;
+        document.getElementById('roc').value = roc;    
+        document.getElementById('versed').value = versed;
+        document.getElementById('fentanyl').value = fentanyl;     
+        document.getElementById('tv').value = tv;
+        document.getElementById('rate').value = rate;     
+        document.getElementById('po').value = po;
+        document.getElementById('uop').value = uop;
+        document.getElementById('ivf').value = ivf;
+      }
+      else {
+        warning = 'This calculator only works for ages of 0-24 months and weights of 0-20 kg'.;
+      }
+      
+
+    }
+          
+      
+    
+    
+      
