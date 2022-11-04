@@ -182,6 +182,7 @@ function displayRecords(){
       j = j + 1;
       createRecord(i,j);
     }
+	  document.getElementById("rm"+String(newest)+"_dx").focus();
   }
 }
 
@@ -352,9 +353,6 @@ function createTextbox(i) {
   x.setAttribute("onchange","recordTextboxValue(this.name,this.value)");
   x.setAttribute("id","rm"+String(i)+"_dx");
   x.setAttribute("name",i);
-  if (i == newest) {
-	  x.setAttribute("autofocus",true);
-  }
   x.value = room[i].wu_dx;
   t.appendChild(x);
 
