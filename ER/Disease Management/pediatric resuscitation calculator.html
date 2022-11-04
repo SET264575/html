@@ -157,8 +157,8 @@
     var ivf;
     
     
-    if (age > 0 and age < 25) {
-      if (weight > 0 and weight < 20) {
+    if (age > -1 and age < 25) {
+      if (weight > -0.01 and weight < 20) {
         if (age < 1) {
           hr = '90-190 (avg 125)';
           rr = '30-50';
@@ -185,21 +185,21 @@
         versed = String (0.1*weight)+ ' mg';
         fentanyl = String(weight ) + '-' + String(2*weight) + ' mcg';
         tv = String(weight * 6) + '-' + String(weight * 8) + ' mL';
-        if (weight > 2 and weight < 10) {
+        if (weight > 2 & weight < 10) {
           rate = '20-25 bpm';
         }
-        if (weight >8 and weight < 19) {
+        if (weight >8 & weight < 19) {
           rate = '15-25 bpm';
         }
-        if (weight > 18 and weight < 37) {
+        if (weight > 18 & weight < 37) {
           rate = '12-20';
         }
         po = String(100*weight) + ' mL/day';
         uop = String(weight) + '-' + String(weight*3) + " cc/hr";
-        if (weight > 0 and weight < 11) {
+        if (weight > 0 & weight < 11) {
           ivf = String(100*weight/24) + ' cc/hr';
         }
-        if (weight > 10 and weight < 21) {
+        if (weight > 10 & weight < 21) {
           ivf = String( (1000 + 50 *weight)/24) + ' cc/hr';
         }
         if (weight > 20 ){
@@ -209,7 +209,7 @@
           tube = '3.0 uncuffed tube\nUse a Miller 0 blade';
           depth = '7 cm at lip';
         }
-        if (age > 0 and age < 7) {
+        if (age > 0 & age < 7) {
           tube = '3.0-3.5 cuffed tube\nUse a Miller 1 blade';
         }
         if (weight == 3) {
