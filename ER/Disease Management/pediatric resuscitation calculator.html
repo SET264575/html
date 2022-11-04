@@ -185,17 +185,17 @@
           rr = '22-40';
         }
         
-        etomidate = String(0.3*weight)+"mg";
+        etomidate = String(parseInt(0.3*weight*10)/10)+"mg";
         ketamine = String(weight)+'-'+String(2*weight)+' mg';
         roc = String(weight) + " mg";
         if (weight <10) {
-          sux = String(1.5*weight) + '-' + String(2*weight)+' mg';
+          sux = String(parseInt(1.5*weight*10)/10) + '-' + String(2*weight)+' mg';
         }
         else {
-          sux = String(weight) + '-' + String(1.5*weight)+' mg';
+          sux = String(weight) + '-' + String(parseInt(1.5*weight*10)/10)+' mg';
         }
         
-        versed = String (0.1*weight)+ ' mg';
+        versed = String (parseInt(10*0.1*weight)/10)+ ' mg';
         fentanyl = String(weight ) + '-' + String(2*weight) + ' mcg';
         tv = String(weight * 6) + '-' + String(weight * 8) + ' mL';
         if (weight > 2 & weight < 10) {
