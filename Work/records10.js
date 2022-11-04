@@ -46,6 +46,7 @@
 
 console.log("429");
 
+var newest = 0;
 
 function Room() {
   this.mine = false;
@@ -351,6 +352,9 @@ function createTextbox(i) {
   x.setAttribute("onchange","recordTextboxValue(this.name,this.value)");
   x.setAttribute("id","rm"+String(i)+"_dx");
   x.setAttribute("name",i);
+  if (i == newest) {
+	  x.setAttribute("autofocus",true);
+  }
   x.value = room[i].wu_dx;
   t.appendChild(x);
 
@@ -620,6 +624,7 @@ function checkboxChanged(value, label, i) {
 function pickRoom(i){
   room[i] = {...default_room};  //used to deep copy default values
   room[i].mine = true;
+  newest = i;
   toDoList[i] = [];
   toDoButtonClicked(i,"SEE PATIENT");
   toDoButtonClicked(i,"ORDER LABS");
