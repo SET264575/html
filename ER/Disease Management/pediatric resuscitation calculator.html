@@ -7,7 +7,7 @@
     <input type="text" id = "weight"></input><br>
   <h3>Enter age</h3>
   <input type="text" id = "age"></input><br>
-  
+<p id = "warning" style = "color: red; font-weight: bold"></p><br>
   <table>
     <tr>
       <td>
@@ -202,6 +202,20 @@
         if (weight > 20 ){
           ivf = String( (1500 + 20 *weight)/24) + " cc/hr";
         }
+        if (age == 0) {
+          tube = '3.0 uncuffed tube\nUse a Miller 0 blade';
+          depth = '7 cm at lip';
+        }
+        if (age > 0 and age < 7) {
+          tube = '3.0-3.5 cuffed tube\nUse a Miller 1 blade';
+        }
+        if (weight == 3) {
+          depth = '9 cm at lip';
+        }
+        if (weight == 2) {
+          depth = '8 cm at lip';
+        }
+        
         document.getElementById('hr').value = hr;
         document.getElementById('rr').value = rr;
         document.getElementById('tube').value = tube;
