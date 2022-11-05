@@ -69,7 +69,8 @@ textarea {
 .policytext {
 	font-size: 1em;
 	text-indent: 45px;
-	width: 80%
+	width: 80%;
+	white-space: pre;
 }
 
 .policysource {
