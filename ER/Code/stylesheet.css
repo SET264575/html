@@ -71,6 +71,7 @@ textarea {
 	text-indent: 45px;
 	width: 80%;
 	white-space: pre;
+	overflow-wrap: break-word;
 }
 
 .policysource {
