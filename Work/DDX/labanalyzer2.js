@@ -12,7 +12,7 @@ Things to fix:
 	
 Things to do:
 	Add labs:
-		uric acid, CK, procalcitonin, bands, lactate, etc
+		uric acid, CK, procalcitonin, bands, lactate, phosphorus, probnp, tsh, total thyroxine, pt, ptt, ammonia
 	Add websites for abnormalities
 	Format websites with tree views
 	Add websites for conditions
@@ -20,7 +20,9 @@ Things to do:
 	Add functionality for UA and ABG
 		respiratory acidosis/alkalosis calculations
 	Delete unneeded code
-	
+	Red abnormal calculated values
+	Label suggestions with disease names
+	biliary obstruction - elevated lfts, elevated alk phos, elevated bilirubin
 	*/
 
 /*
