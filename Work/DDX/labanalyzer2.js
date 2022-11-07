@@ -591,7 +591,7 @@ printAbnormalities();
 //GFR
 //creatinine_clearance
 
-		setTestValues();
+		//setTestValues();
 		
 		document.getElementById("corrected sodium").innerHTML = "Corrected sodium = " + results['corrected sodium'] + ' (135-145)';
 		document.getElementById('corrected calcium').innerHTML = "Corrected calcium = " + results['corrected calcium'] + ' (8.5-10.3)';
