@@ -3,6 +3,69 @@
     <!--link rel="stylesheet" href="..\Code\stylesheet.css"-->
     <title>Incidentalomas</title>
     <style>
+      .pagetitle {
+	font-size:  2em;
+	font-weight: bold;
+	text-align: center;
+	}
+
+.directory {
+	padding: 20px;
+	font-size: 1em;
+	margin: auto;
+	width: 66%;
+	border: 1px solid blue;
+}
+
+
+.policyblock {
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 10px;
+	font-family: Arial;
+	font-size: 1em;
+	margin: 20px;
+	
+}
+
+.policysectiontitle::before {
+	content: '\A';
+	white-space: pre;
+}
+
+.policysectiontitle {
+	font-size: 1.2em;
+	font-family: Arial;
+	font-weight: bold;
+	}
+
+.policybody {
+	font-family: Arial;
+	}
+
+.policytitle {
+	font-size: 1em;
+	font-weight: bold;
+	white-space: pre;
+}
+
+.policytext {
+	font-size: 1em;
+	text-indent: 45px;
+	width: 80%;
+	white-space: pre;
+	overflow-wrap: break-word;
+}
+
+.policysource {
+	font-size: .8em;
+	text-align: right;
+}
+
+
+#template {
+	display: none;
+}
       .policytextnormal{
         white-space: normal;
         padding-left:  30px;
@@ -21,7 +84,7 @@
     
     <div class="directory">
       <table style = "border: none; font-size: 1em; width: 800px;">
-        <td>
+        <td style= "border: none">
       <h4>Head</h4>
       <a href = "#cerebral aneurysm">Aneurysm, cerebral</a><br>
       <a href = "#arachnoid cyst">Arachnoid cyst</a><br>
@@ -55,7 +118,7 @@
       <a href = "#pulmonary nodule">Pulmonary nodule</a><br>
       <a href = "#thoracic aneurysm">Thoracic aneurysm</a><br>
         </td>
-        <td>
+        <td style="border: none">
       <h4>Abdomen</h4>
       <a hre = "#aaa">Abdominal aortic aneurysm</a><br>
       <a href = "#adrenal mass">Adrenal mass</a><br>
