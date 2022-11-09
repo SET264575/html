@@ -6,6 +6,13 @@ Currently working on:
 	3. Add differential diagnoses for current labs
 	4. Add suggestions for current labs
 	5. Add new labs
+
+How to add a new lab:
+	1. Add lab = 
+	2. Add HTML for text box
+	3. Add var result = 
+	4. Add ddx list as .html
+	5. Add suggestions for low or high values
 	
 Things to fix:
 	
@@ -607,7 +614,7 @@ printAbnormalities();
 		document.getElementById("AST_ALT ratio").innerHTML = "AST/ALT ratio = " + results['AST/ALT ratio'] +' (close to 1)';
 		document.getElementById("ANC").innerHTML = "ANC = " + results['ANC'] + ' (>2500)';
 		document.getElementById("osmolality").innerHTML = "Serum osmolality = " + results['osmolality'] + ' (275-295)';
-		document.getElementById("A_G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'] + ' (0.8-2)';
+		document.getElementById("A/G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'] + ' (0.8-2)';
 		document.getElementById("MELD").innerHTML = "MELD score (assuming no dialysis and normal INR) = " + results['MELD']+ ' (<10)';
 		/*
 		document.getElementById("ABG interpretation").innerHTML = "ABG interpretation: " + results["ABG interpretation"];
