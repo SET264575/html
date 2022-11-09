@@ -861,13 +861,11 @@ printAbnormalities();
 	}
 
 
-	function setTestValues(){
-		for (let i = 0; i < 16; i++){
-			//document.getElementById(labs[i].name).value = 0;
-		}
+	function setTestValues(k){
 		var keys = Object.keys(results);
 		for (let i = 0; i < keys.length; i++){
-			results[keys[i]] = 0;
+			results[keys[i]] = k;
+			document.getElementById(keys[i]).value = k;
 		}
 		
 		
