@@ -15,7 +15,8 @@ How to add a new lab:
 	5. Add suggestions for low or high values
 	
 Things to fix:
-	
+	AST/ALT doesn't turn red
+	ANC calculated wrong
 	
 Things to do:
 	Add labs:
@@ -27,7 +28,6 @@ Things to do:
 	Add functionality for UA and ABG
 		respiratory acidosis/alkalosis calculations
 	Delete unneeded code
-	Red abnormal calculated values
 	Label suggestions with disease names
 	biliary obstruction - elevated lfts, elevated alk phos, elevated bilirubin
 	*/
@@ -687,7 +687,7 @@ printAbnormalities();
 		for (let i = 0; i<diseases.length; i++) {
 			if (diseases[i].score(abnormalities) > 1) {
 				t = t + diseases[i].name +"\n";
-				s = s + suggestion[diseases[i].name] + '\n';
+				s = s + diseases[i].name + "\n"+suggestion[diseases[i].name] + '\n';
 				console.log(s);
 			//	t = t + "\t" + "suggested by:\n";
 				for (let j = 0; j < diseases[i].indicators.length; j++) {
