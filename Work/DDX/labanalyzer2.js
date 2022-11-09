@@ -157,10 +157,15 @@ class Lab{
 	labs.push(new Lab('Pro-BNP'));
 	*/
 	
-
+	labs.push(new Lab("corrected sodium","corrected sodium",135,145,"hyponatremia","hypernatremia"));
+	labs.push(new Lab("corrected calcium","corrected calcium",8.5,10.3,"hypocalcemia","hypercalcemia"));
 	labs.push(new Lab("anion gap","anion gap",4,17,"low anion gap","high anion gap metabolic acidosis"));
 	labs.push(new Lab("A/G ratio","A/G ratio",0.8,2,'low A/G ratio','elevated A/G ratio'));
 	labs.push(new Lab("MELD","MELD",0,10,'***ignore***','elevated MELD score'));
+	labs.push(new Lab("BUN/Cr ratio","BUN/Cr ratio",5,20,'***ignore***','elevated BUN/Cr ratio'));
+	labs.push(new Lab("ANC","ANC",2500,7000,"neutropenia","neutrophilia"));
+	labs.push(new Lab('osmolality','osmolality',275,295,'low osmolality','elevated osmolality'));
+
 
 	labs.push(new Lab("WBC","WBC",3.8,9.9,'leukocytopenia','leukocytosis'));
 	labs.push(new Lab("RBC","RBC",4.3,5.8,'***ignore***','***ignore***'));
@@ -602,11 +607,12 @@ printAbnormalities();
 		document.getElementById("AST_ALT ratio").innerHTML = "AST/ALT ratio = " + results['AST/ALT ratio'] +' (close to 1)';
 		document.getElementById("ANC").innerHTML = "ANC = " + results['ANC'] + ' (>2500)';
 		document.getElementById("osmolality").innerHTML = "Serum osmolality = " + results['osmolality'] + ' (275-295)';
-		document.getElementById("A_G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'] + ' (1-2)';
+		document.getElementById("A_G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'] + ' (0.8-2)';
 		document.getElementById("MELD").innerHTML = "MELD score (assuming no dialysis and normal INR) = " + results['MELD']+ ' (<10)';
 		/*
 		document.getElementById("ABG interpretation").innerHTML = "ABG interpretation: " + results["ABG interpretation"];
 		*/
+			     
 
 		for (let i =0; i < labs.length; i ++){
 			switch(labs[i].inRange(results[labs[i].name])){
