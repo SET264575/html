@@ -12,45 +12,47 @@ How to add a new lab:
 	2. Add HTML for text box
 	3. Add var result = 
 	4. Add ddx list as .html
-	5. Add suggestions for low or high values
+	5. Add abnormalities_sites = .html
+	6. Add suggestions for low or high values
 	
 Things to fix:
 	AST/ALT doesn't turn red
 	ANC calculated wrong
 	
-Things to do:
+Things to complete:
 	Add labs:
 		uric acid, CK, procalcitonin, bands, lactate, phosphorus, probnp, tsh, total thyroxine, pt, ptt, ammonia
+		UA, ABG, RBC morphology
+	Add diseases:
+		biliary obstruction - elevated lfts, elevated alk phos, elevated bilirubin
+	Add ddx.htmls:
+	
+	Expand DDX for:
+		
+New features:
+	get age and gender from labs
+	critical values
+	order abnormalities by most important
 	Add websites for abnormalities
-	Format websites with tree views
+	*Format websites with tree views
 	Add websites for conditions
-	Add suggestions for diseases
 	Add functionality for UA and ABG
 		respiratory acidosis/alkalosis calculations
 	Delete unneeded code
-	Label suggestions with disease names
-	biliary obstruction - elevated lfts, elevated alk phos, elevated bilirubin
+	*Label suggestions with disease names
+
 	*/
 
 /*
 
 <!--
 link to html file regarding each disease
-expand ddx
 enter abnormalities
-order abnormalities by most important
 
-add differential diagnoses
-get age and gender from labs
 exclude certain diagnoses depending on gender and age
-expand/collapse ddx
-	add treeview - https://www.w3schools.com/howto/howto_js_treeview.asp
-critical values
+
 prioritize ddx
-additional labs:
-RBC morphology
-urinalysis
-ABG
+
 -->
 */
 
