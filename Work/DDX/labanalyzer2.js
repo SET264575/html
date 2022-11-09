@@ -623,7 +623,7 @@ printAbnormalities();
 							document.getElementById(labs[i].name).style = "color:  red";
 						}
 						catch(err){
-							//console.log(labs[i].symbol);
+							console.log(labs[i].symbol);
 						}
 					}				
 					break;
@@ -642,7 +642,7 @@ printAbnormalities();
 							document.getElementById(labs[i].name).style = "color:  red";
 						}
 						catch(err){
-							//console.log(labs[i].symbol);
+							console.log(labs[i].symbol);
 						}
 					}				
 					break;
