@@ -82,16 +82,15 @@
     <script>
       function copytext(){
         var size = document.getElementById("size").value;
-     //   var description = document.getElementById("description").value;
         var anesthetic = document.getElementById("anesthetic").value;
-        var gauze = document.getElementById("gauze").value;
         var amount = document.getElementById("amount").value;
         var volume = document.getElementById("volume").value;
         var location = document.getElementById("location").value;
         var incision_size = document.getElementById("incision_size").value;
+        var gauze = document.getElementById("gauze").checked;
         var t = "Procedure Note: Abscess incision and drainage\n";
         t = t + "The skin over the " + size + " cm abscess on the " + location + " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
-        t = t + "An #11 blade was used to make a "+incision_size+"cm incision into the abscess.  The abscess was probed with curved hemostats to break up loculations.  ";
+        t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  The abscess was probed with curved hemostats to break up loculations.  ";
         t = t + amount + " pus was expressed from the abscess. ";
         if (gauze == true){
             t = t + 'The cavity was packed with 1/4" iodoform gauze. ';
