@@ -47,6 +47,8 @@
 console.log("429");
 
 var newest = 0;
+var all_dx = "";
+var all_plans = "";
 
 function Room() {
   this.mine = false;
@@ -634,6 +636,11 @@ function pickRoom(i){
 function deleteRoom(i){
   room[i].mine = false;
   toDoList[i] = [];
+  all_dx = all_dx + "\n"+document.getElementById("rm"+String(i)+"_dx").value;
+  all_plans = all_plans + "\n" + document.getElementById("rm"+String(i)+"_plan").value;
+  document.getElementById('dx').value = add_dx;
+  document.getElementById('plans').value = add_plans;
+	
  
   refreshTable();
   displayRecords();
