@@ -726,11 +726,11 @@ function refreshTable(){
         <td class = "td1"> <p id="demo10"></p> </td>\
         <td class = "td1"> <p id="demo11"></p> </td>\
         <td class = "td1"> <p id="demo12"></p> </td>\
-      </tr>\
-	<h3>Diagnoses</h3\
+      </tr>';
+/*	<h3>Diagnoses</h3\
     <pre id="dx" /><br><br>\
 	<h3>Plans</h3>\
-    <pre id="plans" /><br>';
+    <pre id="plans" /><br>'; */
 }
 
 function recordTextboxValue(i,value){
