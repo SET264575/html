@@ -638,8 +638,8 @@ function deleteRoom(i){
   toDoList[i] = [];
   all_dx = all_dx + "\n"+document.getElementById("rm"+String(i)+"_dx").value;
   all_plans = all_plans + "\n" + document.getElementById("rm"+String(i)+"_plan").value;
-  document.getElementById('dx').value = add_dx;
-  document.getElementById('plans').value = add_plans;
+  document.getElementById('dx').value = all_dx;
+  document.getElementById('plans').value = all_plans;
 	
  
   refreshTable();
@@ -726,7 +726,11 @@ function refreshTable(){
         <td class = "td1"> <p id="demo10"></p> </td>\
         <td class = "td1"> <p id="demo11"></p> </td>\
         <td class = "td1"> <p id="demo12"></p> </td>\
-      </tr>';
+      </tr>\
+	<h3>Diagnoses</h3\
+    <pre id="dx" /><br><br>\
+	<h3>Plans</h3>\
+    <pre id="plans" /><br>';
 }
 
 function recordTextboxValue(i,value){
