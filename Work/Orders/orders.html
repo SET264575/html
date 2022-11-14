@@ -396,10 +396,14 @@ for (let i of tx_consider.values()) {
 	}
 }
 
-
-var t = "";
 for (let i of orders.values()) {
-t = t + order[order_dict[i]] +"<br>";
+	sorted_orders.push(String(order[order_dict[i]]));
+}
+sorted_orders.sort(function(a,b)(return a.sequence_number - b.sequence_number));
+	
+var t = "";
+for (let i of sorted_orders) {
+t = t + i.name +"<br>";
 }
 document.getElementById("orders").innerHTML = t;
 
