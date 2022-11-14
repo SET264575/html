@@ -638,8 +638,8 @@ function deleteRoom(i){
   all_plans = all_plans + "\n" + document.getElementById("rm"+String(i)+"_plan").value;
   room[i].mine = false;
   toDoList[i] = [];
-  document.getElementById('dx').value = all_dx;
-  document.getElementById('plans').value = "test"; //all_plans;
+  document.getElementById('dx').innerHTML = all_dx;
+  document.getElementById('plans').innerHTML = all_plans; //all_plans;
 	
   refreshTable();
   displayRecords();
