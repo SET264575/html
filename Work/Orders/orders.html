@@ -183,8 +183,21 @@ class Condition {
 		this.tx_consider = tx_consider;
 	}
 }
+	
+class Order {
+	constructor (name,synonyms,section, sequence_number) {
+		this.name = name;
+		this.synonyms = synonyms;
+		this.section = section;
+		this.sequence_number = sequence_number;
+	}
+}
 
 const condition = [];
+const order = [];
+	
+
+	
 
 condition['abdominal pain'] = new Condition('abdominal pain',['CBC','CMP','UA','HCG'],['lipase','EKG','troponin','CT abd/pelvis','pelvic US','gall bladder US','CTA'],[],['IVF','Toradol','Dilaudid','Zofran']);
 
@@ -337,6 +350,23 @@ condition['syncope'] = new Condition('syncope',['No orders for syncope'],[],[],[
 condition['lactic acidosis'] = new Condition('lactic acidosis',['No orders for lactic acidosis'],[],[],[]);
 condition['lightheadedness'] = new Condition('lightheadedness',['No orders for lightheadedness'],[],[],[]);
 	
+order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein'],'Laboratory',50);
+order['Blood Culture'] = new Order('Blood Culture',['Blood Culture','blood cx'],'Laboratory',75);
+order['CBC'] = new Order('CBC','CBC','Laboratory',100);
+order['CMP'] = new Order('CMP','CMP','Laboratory',200);	
+order['Influenza RSV Covid PCR'] = new Order('Influenza RSV Covid PCR',['Influenza RSV Covid PCR','flu','Covid','rsv'],'Laboratory',300);
+order['Urinalysis rflx Micro Culture'] = new Order('Urinalysis rflx Micro Culture',['Urinalysis rflx Micro Culture','UA'],'Laboratory',400);
+order['Cell Count CSF'] = new Order('Cell Count CSF',['Cell Count CSF','CSF cell count'],'Laboratory',500);
+order['Manual Differential'] = new Order('Manual Differential',['Manual Differential','Man Diff'],'Laboratory',600);
+order['Herpes Simplex V DNA PCR CSF'] = new Order('Herpes Simplex V DNA PCR CSF',['Herpes Simplex V DNA PCR CSF'],'Laboratory',700);
+	
+order_dict = {};
+for (x of Object.keys(order)) {
+	for (y of x.synonym) {
+		order_dict[y] = x;
+	}
+}
+	
 orders = [];
 orders_consider = [];
 tx = [];
@@ -369,7 +399,7 @@ for (let i of tx_consider.values()) {
 
 var t = "";
 for (let i of orders.values()) {
-t = t + i +"<br>";
+t = t + order[order_dict[i]] +"<br>";
 }
 document.getElementById("orders").innerHTML = t;
 
