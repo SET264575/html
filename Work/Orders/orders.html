@@ -362,8 +362,8 @@ order['Manual Differential'] = new Order('Manual Differential',['Manual Differen
 order['Herpes Simplex V DNA PCR CSF'] = new Order('Herpes Simplex V DNA PCR CSF',['Herpes Simplex V DNA PCR CSF'],'Laboratory',700);
 	
 order_dict = {};
-for (x of Object.keys(order)) {
-	for (y of x.synonyms) {
+for (let x of Object.keys(order)) {
+	for (let y of order[x].synonyms) {
 		order_dict[y] = x;
 	}
 }
