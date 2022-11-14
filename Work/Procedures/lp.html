@@ -17,7 +17,7 @@
         <input type = 'radio' id = "consent" name = "consent" value = 1 onchange = "copytext()">
         <label for = "consent">Patient consented</label><br>
         <input type = 'radio' id = "consent" name = "consent" value = 2 onchange = "copytext()">
-        <label for = "consent">Parent consented</label><br>
+        <label for = "consent">Parent consented</label><br><br>
 
                        
 
@@ -88,7 +88,7 @@
                 
         t = t + "The patient was placed in a right lateral decubitus position. ";
         t = t + "The procedure was performed under sterile conditions.  A wide area around the puncture site was prepped and draped sterilely using Betadine. ";
-        If (lidocaine) {
+        If (lidocaine == true) {
             t = t + "The puncture site was anesthetized with 1% lidocaine. ";
         }
         
