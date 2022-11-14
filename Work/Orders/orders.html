@@ -399,12 +399,12 @@ for (let i of tx_consider.values()) {
 for (let i of orders.values()) {
 	sorted_orders.push(String(order[order_dict[i]]));
 }
-sorted_orders.sort(function(a,b)(return a.sequence_number - b.sequence_number));
+sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
 
 for (let i or orders_consider.values()) {
 	sorted_orders_consider.push(String(order[order_dict[i]]));
 }
-sorted_orders_consider.sort(function(a,b)(return a.sequence_number - b.sequence_number));
+sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_number});
 
 var t = "";
 for (let i of sorted_orders) {
