@@ -14,6 +14,8 @@
     <label for = "left">2 o'clock (left)</label><br>
     <input type = "radio" name = "position" value = "right" id = "right" onchange = "copytext()">
     <label for = "right">10 o'clock (right)</label><br>
+    <input type = "radio" name = "position" value = "right and left" onchange = "copytext()">
+    <label for = "right and left">2 o'clock & 10 o'clock</label><br>
 <br>
     
         <h4>Result</h4>
@@ -23,14 +25,26 @@
     <label for = "result2">detumescence was achieved</label><br>
 <br>
 
-
+    <h4>Amount of Phenylephrine Used</h4>
+    <select id = "dose">
+      <option value = "0">None</option>
+      <option value = "100">100 mcg</option>
+      <option value = "200">200 mcg</option>
+      <option value = "300">300 mcg</option>
+      <option value = "400">400 mcg</option>
+      <option value = "500">500 mcg</option>
+    </select><br>
+    
+    <input type = "checkbox" name = "multiple">
+    <label for = "multiple">Multiple injections were required</label><br>
    
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
     <script>
       function copytext(){
         var position = getRadioButtonValue("position");
         var result = getRadioButtonValue("result");
-
+        var multiple = document.getElementById("multiple").checked;
+        var dose = document.getElementById("dose".value
         var t = "Procedure Note: Priapism Management \n";
         
         t = t + "The risks, benefits and alternatives were discussed with the patient who provided verbal consent. ";
@@ -39,13 +53,16 @@
         t = t + "A butterfly needle was inserted into the corpus cavernosa at the ";
         switch(position) {
           case "right":
-            t = t + "10";
+            t = t + "10 o'clock position. ";
             break;
           case "left":
-            t = t + "2";
+            t = t + "2 o'clock position. ";
             break;
+       //   case "right & left":
+       //     t = t= + "2 o'clock and 10 o'clock positions. ";
+       //     break;
         }
-        t = t + " o'clock position.  Blood was aspirated until ";
+        t = t + " Blood was aspirated until ";
         switch(result) {
           case "arterial":
             t =t + "arterial blood was returned. "
@@ -54,7 +71,12 @@
             t = t + "detumescence was achieved. ";
             break;
         }
-        t = t + "200 mcg of phenylephrine diluted in 1 mL of normal saline was injected. ";
+        if (multiple) {
+          t = t + "Multiple injections of phenylephrine were required for a total of " + String(dose) + "mcg. ";
+        }
+        else {
+          t = t + String(dose) + " mcg of phenylephrine were injected. ";
+        }
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
         navigator.clipboard.writeText(t);
