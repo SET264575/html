@@ -97,16 +97,22 @@ synonym['leukocytosis'] = ['leukocytosis'];
 synonym['asthma'] = ['asthma'];
 synonym['copd'] = ['copd'];
 synonym['allergic reaction'] = ['allergic reaction'];
-synonym['dental pain'] = ['dental pain'];
-synonym['std'] = ['std'];
+synonym['dental pain'] = ['dental pain','toothache'];
+synonym['std'] = ['std','gc','chlamydia','syphilis','syphillis'];
 synonym['chf'] = ['chf'];
 synonym['urinary retention'] = ['urinary retention'];
-synonym['shock'] = ['shock'];
+synonym['shock'] = ['shock','septic shock','distributive shock','cardiogenic shock'];
 synonym['atrial fibrillation'] = ['atrial fibrillation','atrial fib','af','atrial fib with rvr','rvr'];
 /*
 dislocation
+back pain
+compression fx
+meningitis
+croup
+cauda equina
 
-
+neutropenia
+thrombocytopenia
 
 */
 dict = {};
@@ -166,6 +172,8 @@ const condition = [];
 
 condition['abdominal pain'] = new Condition('abdominal pain',['CBC','CMP','UA','HCG'],['lipase','EKG','troponin','CT abd/pelvis','pelvic US','gall bladder US','CTA'],[],['IVF','Toradol','Dilaudid','Zofran']);
 
+condition['allergic reaction'] = new Condition('allergic reaction',[],[],['Benadryl 50 mg IV','Pepcid 20 mg IV'],['Solu Medrol 125 mg IV','epinephrine SC','albuterol']);
+	
 condition['altered mental status'] = new Condition('altered mental status',['CBC','CMP','UA','CXR'],['CT head','UDS','ETOH','acetaminophen level','salicylate level','TSH','ammonia','ABG','EEG'],[],['Narcan']);
 
 condition['anemia'] = new Condition('anemia',['CBC','CMP'],['PT/PTT','iron panel','ferritin','haptoglobin','reticulocyte count','LDH','vitamin B12','folate','fecal occult blood'],[],['transfuse','reverse anticoagulation']);
@@ -178,6 +186,8 @@ condition['atrial fibrillation'] = new Condition('atrial fib',['CBC','CMP','trop
 condition['cancer'] = new Condition('cancer',['Nothing for cancer'],[],[],[]);
 
 condition['chest pain'] = new Condition('chest pain',['CBC','CMP','CXR','EKG','troponin'],['D dimer','pro BNP','CT chest PE protocol','CTA chest, abdomen, pelvis'],[],['nitroglycerin','morphine','Lasix']);
+
+condition['copd'] = new Condition('copd',['CBC','CMP','CXR'],['EKG','ABG','respiratory pathogen panel','blood cultures','sepsis lactate','CT chest','procalcitonin'],['Duoneb'],['Albuterol','Solu Medrol','IV antibiotics']);
 
 condition['cough'] = new Condition('cough',[],['CBC','CMP','EKG','CXR','pro BNP','CT chest PE protocol','Covid','respiratory pathogen panel','blood culture','sepsis lactate'],[],['Duoneb','Lasix','IV antibiotics']);
 
@@ -274,13 +284,12 @@ condition['hypernatremia'] = new Condition('hypernatremia',['No orders for hyper
 condition['palliative care'] = new Condition('palliative care',[],[],['palliative care','extubation'],[]);
 condition['extubation'] = new Condition('extubation',['No orders for extubation'],[],[],[]);
 condition['leukocytosis'] = new Condition('leukocytosis',['No orders for leukocytosis'],[],[],[]);
-condition['copd'] = new Condition('copd',['No orders for copd'],[],[],[]);
-condition['allergic reaction'] = new Condition('allergic reaction',['No orders for allergic reaction'],[],[],[]);
+
 condition['dental pain'] = new Condition('dental pain',['No orders for dental pain'],[],[],[]);
 condition['std'] = new Condition('std',['No orders for std'],[],[],[]);
 condition['chf'] = new Condition('chf',['No orders for chf'],[],[],[]);
 condition['urinary retention'] = new Condition('urinary retention',['No orders for urinary retention'],[],[],[]);
-condition['shock'] = new Condition('shock',['CBC','CMP','EKG','UA',''],[],[],[]);
+condition['shock'] = new Condition('shock',['CBC','CMP','EKG','UA','CXR','sepsis lactate'],[],['IVF'],['Levophed','Dobutamine','NeoSynephrine','Vasopressin']);
 
 orders = [];
 orders_consider = [];
