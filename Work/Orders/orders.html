@@ -398,7 +398,12 @@ for (let i of tx_consider.values()) {
 }
 
 for (let i of orders.values()) {
+	try {
 	sorted_orders.push(String(order[order_dict[i]]));
+	}
+	catch {
+	sorted_orders.push(new Order(i,[],'Laboratory',0));
+	}
 }
 sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
 
