@@ -478,7 +478,6 @@ for (let i of orders.values()) {
 	}
 }
 
-
 sorted_orders.sort(function(a,b){return a.name - b.name});
 //sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
 
@@ -491,11 +490,13 @@ for (let i of orders_consider.values()) {
 		order_dict[i] = i;
 	}
 }
+	console.log(sorted_orders_consider);
 sorted_orders_consider.sort(function(a,b){return a.name - b.name});
+	console.log(sorted_orders_consider);
 //sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_number});
 
 var t = "";
-var oldcat = 0;
+//var oldcat = 0;
 for (let i of sorted_orders) {
 /*	var cat = parseInt(i.sequence_number/10000);
 	if (cat != oldcat) {
@@ -531,7 +532,7 @@ t = t + i.name +"<br>";
 document.getElementById('orders').innerHTML = t;
 	
 t = "";
-oldcat = 0;
+//oldcat = 0;
 for (let i of sorted_orders_consider) {
 	/*var cat = parseInt(i.sequence_number/10000);
 	if (cat != oldcat) {
@@ -556,6 +557,7 @@ for (let i of sorted_orders_consider) {
 t = t + i.name +"<br>";
 }
 document.getElementById("orders_consider").innerHTML = t;
+	console.log(t);
 
 t = "";
 for (let i of tx.values()) {
