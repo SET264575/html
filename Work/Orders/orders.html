@@ -353,14 +353,19 @@ condition['lactic acidosis'] = new Condition('lactic acidosis',['No orders for l
 condition['lightheadedness'] = new Condition('lightheadedness',['No orders for lightheadedness'],[],[],[]);
 
 temp_set  = new Set();
-for (let i in Object.keys(condition)){
-	for (let j in i.orders) {
+for (let i of Object.keys(condition)){
+	for (let j of i.orders) {
 	temp_set.add(j);
 	}
 }
 temp_array = new Array(temp_set);
 temp_array.sort();
 console.log(temp_array);
+var t = "";
+for (let i of temp_array) {
+	t = t + i + '\n';
+}
+document.getElementById("orders").innerHTML = t;
 	
 order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein','CSF total protein'],30050);
 order['Blood Culture'] = new Order('Blood Culture',['Blood Culture','blood cx'],30075);
