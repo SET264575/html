@@ -415,7 +415,13 @@ sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
 //console.log(sorted_orders.values());
 	
 for (let i of orders_consider.values()) {
+	try {
 	sorted_orders_consider.push(order[order_dict[i]]);
+	}
+	catch {
+		sorted_orders_consider.push(new Order(i,[],"Laboratory",5000));
+		order_dict[i];
+	}
 }
 sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_number});
 
