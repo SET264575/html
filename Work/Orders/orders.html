@@ -426,6 +426,7 @@ for (let i of orders_consider.values()) {
 sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_number});
 
 var t = "";
+	console.log(sorted_orders);
 for (let i of sorted_orders) {
 console.log(i);
 t = t + i.name +"<br>";
