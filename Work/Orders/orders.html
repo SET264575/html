@@ -102,7 +102,7 @@ synonym['dental pain'] = ['dental pain','toothache'];
 synonym['std'] = ['std','gc','chlamydia','syphilis','syphillis'];
 synonym['chf'] = ['chf'];
 synonym['urinary retention'] = ['urinary retention'];
-synonym['shock'] = ['shock','septic shock','distributive shock','cardiogenic shock'];
+synonym['shock'] = ['shock','septic shock','distributive shock','cardiogenic shock','hypotension','low blood pressure'];
 synonym['atrial fibrillation'] = ['atrial fibrillation','atrial fib','af','atrial fib with rvr','rvr'];
 synonym['dislocation'] = ['dislocation','ankle dislocation','knee dislocation','patellar dislocation','hip dislocation','shoulder dislocation'];
 synonym['finger dislocation'] = ['finger dislocation'];
@@ -131,6 +131,7 @@ synonym['lightheadedness'] = ['lightheadedness','lh'];
 joint effusion
 joint pain
 post-intubation
+hypertensive emergency
 */
 dict = {};
 for (x of Object.keys(synonym)) {
@@ -328,14 +329,13 @@ condition['extubation'] = new Condition('extubation',['No orders for extubation'
 condition['leukocytosis'] = new Condition('leukocytosis',['No orders for leukocytosis'],[],[],[]);
 
 condition['dental pain'] = new Condition('dental pain',['No orders for dental pain'],[],[],[]);
-condition['std'] = new Condition('std',['No orders for std'],[],[],[]);
-condition['chf'] = new Condition('chf',['No orders for chf'],[],[],[]);
+condition['std'] = new Condition('std',['CTNG'],['syphilis screen','wet prep','UA','HCG','pelvic ultrasound'],[],['Rocephin 500 mg IM']);
+condition['chf'] = new Condition('chf',['CBC','CMP','EKG','pro BNP','CXR'],[],['Lasix'],['NTG','BiPAP']);
 condition['urinary retention'] = new Condition('urinary retention',['No orders for urinary retention'],[],[],[]);
 condition['shock'] = new Condition('shock',['CBC','CMP','EKG','UA','CXR','sepsis lactate'],[],['IVF'],['Levophed','Dobutamine','NeoSynephrine','Vasopressin']);
 condition['dislocation'] = new Condition('dislocation',['No orders for dislocation'],[],[],[]);
 condition['back pain'] = new Condition('back pain',['No orders for back pain'],[],[],[]);
 condition['compression fracture'] = new Condition('compression fracture',['No orders for compression fracture'],[],[],[]);
-condition['croup'] = new Condition('croup',['No orders for croup'],[],[],[]);
 condition['cauda equina'] = new Condition('cauda equina',['No orders for cauda equina'],[],[],[]);
 condition['urinary retention'] = new Condition('urinary retention',['No orders for urinary retention'],[],[],[]);
 condition['neutropenia'] = new Condition('neutropenia',['No orders for neutropenia'],[],[],[]);
