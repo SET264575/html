@@ -429,7 +429,7 @@ sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_
 
 var t = "";
 var oldcat = 0;
-	console.log(sorted_orders);
+	console.log(t);
 for (let i of sorted_orders) {
 	var cat = parseInt(i.sequence_number/10000);
 	if (cat != oldcat) {
@@ -452,6 +452,7 @@ for (let i of sorted_orders) {
 		}
 	}
 t = t + i.name +"<br>";
+	console.log(t);
 }
 document.getElementById("orders").innerHTML = t;
 
