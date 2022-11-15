@@ -47,7 +47,7 @@
 console.log("429");
 
 var newest = 0;
-var activeElement = '';
+var activeElement = 'none';
 var all_dx = "";
 var all_plans = "";
 var pt_count = 0;
