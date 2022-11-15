@@ -379,8 +379,53 @@ order['Cell Count CSF'] = new Order('Cell Count CSF',['Cell Count CSF','CSF cell
 order['Manual Differential'] = new Order('Manual Differential',['Manual Differential','Man Diff'],30600);
 order['Herpes Simplex V DNA PCR CSF'] = new Order('Herpes Simplex V DNA PCR CSF',['Herpes Simplex V DNA PCR CSF'],30700);
 
+
+order("BOHB") = new Order("BOHB",["BOHB"],30000);
+order("CBC") = new Order("CBC",["CBC"],30000);
+order("CMP") = new Order("CMP",["CMP"],30000);
+order("CRP") = new Order("CRP",["CRP"],30000);
+order("CSF cell count") = new Order("CSF cell count",["CSF cell count"],30000);
+order("CSF culture & gram stain") = new Order("CSF culture & gram stain",["CSF culture & gram stain"],30000);
+order("CSF glucose") = new Order("CSF glucose",["CSF glucose"],30000);
+order("CTNG") = new Order("CTNG",["CTNG"],30000);
+
+order("ESR") = new Order("ESR",["ESR"],30000);
+order("ETOH") = new Order("ETOH",["ETOH"],30000);
+order("Flu") = new Order("Flu",["Flu"],30000);
+order("HCG") = new Order("HCG",["HCG"],30000);
+
+
+order("PT/PTT") = new Order("PT/PTT",["PT/PTT"],30000);
+order("RSV") = new Order("RSV",["RSV"],30000);
+order("TSH") = new Order("TSH",["TSH"],30000);
+order("UA") = new Order("UA",["UA"],30000);
+order("UDS") = new Order("UDS",["UDS"],30000);
+order("acetaminophen") = new Order("acetaminophen",["acetaminophen"],30000);
+order("blood culture") = new Order("blood culture",["blood culture"],30000);
+order("lactate") = new Order("lactate",["lactate"],30000);
+order("pro BNP") = new Order("pro BNP",["pro BNP"],30000);
+order("respiratory pathogen panel") = new Order("respiratory pathogen panel",["respiratory pathogen panel"],30000);
+order("salicylate") = new Order("salicylate",["salicylate"],30000);
+order("sepsis lactate") = new Order("sepsis lactate",["sepsis lactate"],30000);
+order("troponin") = new Order("troponin",["troponin"],30000);
+order("type & screen") = new Order("type & screen",["type & screen"],30000);
+order("wet prep") = new Order("wet prep",["wet prep"],30000);
+
 order['Chest xray'] = new Order('Chest xray',['chest xray','cxr','CXR','Chest xray'],40100);
+order("CT abd/pelvis") = new Order("CT abd/pelvis",["CT abd/pelvis"],40000);
+order("CTA chest PE protocol") = new Order("CTA chest PE protocol",["CTA chest PE protocol"],40000);
+order("CTA chest, abd, pelvis") = new Order("CTA chest, abd, pelvis",["CTA chest, abd, pelvis"],40000);
 order['EKG'] = new Order('EKG',['EKG'],40200);
+order("IR LP") = new Order("IR LP",["IR LP"],40000);
+order("duplex US lower extremities") = new Order("duplex US lower extremities",["duplex US lower extremities"],40000);
+order("finger xray") = new Order("finger xray",["finger xray"],40000);
+order("pelvic ultrasound") = new Order("pelvic ultrasound",["pelvic ultrasound"],40000);
+order("xray of body part") = new Order("xray of body part",["xray of body part"],40000);
+order("xray of limb") = new Order("xray of limb",["xray of limb"],40000);	
+	
+order("ABG") = new Order("ABG",["ABG"],50000);
+order("VBG") = new Order("VBG",["VBG"],50000);
+order("POC glucose") = new Order("POC glucose",["POC glucose"],50000);
 	
 order_dict = {};
 for (let x of Object.keys(order)) {
@@ -464,6 +509,7 @@ for (let i of sorted_orders) {
 				t = t + "<h4>Imaging</h4>\n";
 				break;
 			case 5:
+				t =t  + "<h4>POC</h4>\n";
 				break;
 		}
 	}
