@@ -361,6 +361,9 @@ order['Urinalysis rflx Micro Culture'] = new Order('Urinalysis rflx Micro Cultur
 order['Cell Count CSF'] = new Order('Cell Count CSF',['Cell Count CSF','CSF cell count'],30500);
 order['Manual Differential'] = new Order('Manual Differential',['Manual Differential','Man Diff'],30600);
 order['Herpes Simplex V DNA PCR CSF'] = new Order('Herpes Simplex V DNA PCR CSF',['Herpes Simplex V DNA PCR CSF'],30700);
+
+order['Chest xray'] = new Order('Chest xray',['chest xray','cxr','CXR','Chest xray'],40100);
+order['EKG'] = new Order('EKG',['EKG'],40200);
 	
 order_dict = {};
 for (let x of Object.keys(order)) {
@@ -405,7 +408,7 @@ for (let i of orders.values()) {
 		sorted_orders.push(order[order_dict[i]]);
 	}
 	else {
-	sorted_orders.push(new Order(i,[],'Laboratory',50000));
+	sorted_orders.push(new Order(i,[],50000));
 	order_dict[i] = i;
 	}
 }
@@ -425,8 +428,28 @@ for (let i of orders_consider.values()) {
 sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_number});
 
 var t = "";
-	
+var oldcat = 0;
 for (let i of sorted_orders) {
+	var cat = parseInt(i.sequence_number/10000);
+	if (cat != oldcat) {
+		oldcat = cat;
+		switch(cat) {
+			case 1:
+				t = t + "\n";
+				break;
+			case 2:
+				t = t + "\n";
+				break;
+			case 3:
+				t = t + "<h5>Laboratory</h5>\n";
+				break;
+			case 4:
+				t = t + "<h5>Imaging</h5>\m";
+				break;
+			case 5:
+				break;
+		}
+	}
 t = t + i.name +"<br>";
 }
 document.getElementById("orders").innerHTML = t;
