@@ -406,7 +406,7 @@ for (let i of orders.values()) {
 	}
 	catch {
 	console.log(i,"Undefined");
-	sorted_orders.push(new Order(i,[],'Laboratory',0));
+	sorted_orders.push(new Order(i,[],'Laboratory',5000));
 	order_dict[i] = i;
 	}
 }
