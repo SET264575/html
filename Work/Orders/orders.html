@@ -130,7 +130,7 @@ synonym['lightheadedness'] = ['lightheadedness','lh'];
 /*
 joint effusion
 joint pain
-
+post-intubation
 */
 dict = {};
 for (x of Object.keys(synonym)) {
@@ -186,10 +186,9 @@ class Condition {
 }
 	
 class Order {
-	constructor (name,synonyms,section, sequence_number) {
+	constructor (name,synonyms,sequence_number) {
 		this.name = name;
 		this.synonyms = synonyms;
-		this.section = section;
 		this.sequence_number = sequence_number;
 	}
 }
@@ -222,7 +221,7 @@ condition['copd'] = new Condition('copd',['CBC','CMP','CXR'],['EKG','ABG','respi
 
 condition['cough'] = new Condition('cough',[],['CBC','CMP','EKG','CXR','pro BNP','CT chest PE protocol','Covid','respiratory pathogen panel','blood culture','sepsis lactate'],[],['Duoneb','Lasix','IV antibiotics']);
 
-condition['critical care'] = new Condition('critical care',['CBC','CMP','UA','ABG','EKG','CXR','troponin','sepsis lactate','blood culture'],['CT head','CT chest PE, abd, pelvis','ESR','CRP','ammonia','magnesium','phosphorus','iCa','LDH','CK','BOHB','procalcitonin','DIC panel','PT/PTT','respiratory pathogen panel','UDS','ETOH','acetaminophen','salicylate','D dimer','pro BNP'],['IVF','propofol','Levophed','NTG drip','Cardizem drip','IV antibiotics'],['etomidate','sux']);
+condition['critical care'] = new Condition('critical care',['CBC','CMP','UA','ABG','EKG','CXR','troponin','sepsis lactate','blood culture'],['CT head','CT chest PE, abd, pelvis','ESR','CRP','ammonia','magnesium','phosphorus','iCa','LDH','CK','BOHB','procalcitonin','DIC panel','PT/PTT','respiratory pathogen panel','UDS','ETOH','acetaminophen','salicylate','D dimer','pro BNP'],['IVF','propofol','Levophed','NTG drip','Cardizem drip','IV antibiotics'],['BiPAP'.'etomidate','sux']);
 
 condition['dehydration'] = new Condition('dehydration',['CBC','CMP'],['UA','CK','EKG'],['IVF'],['Zofran']);
 
@@ -353,15 +352,15 @@ condition['syncope'] = new Condition('syncope',['No orders for syncope'],[],[],[
 condition['lactic acidosis'] = new Condition('lactic acidosis',['No orders for lactic acidosis'],[],[],[]);
 condition['lightheadedness'] = new Condition('lightheadedness',['No orders for lightheadedness'],[],[],[]);
 	
-order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein','CSF total protein'],'Laboratory',50);
-order['Blood Culture'] = new Order('Blood Culture',['Blood Culture','blood cx'],'Laboratory',75);
-order['CBC'] = new Order('CBC',['CBC'],'Laboratory',100);
-order['CMP'] = new Order('CMP',['CMP'],'Laboratory',200);	
-order['Influenza RSV Covid PCR'] = new Order('Influenza RSV Covid PCR',['Influenza RSV Covid PCR','flu','Covid','rsv'],'Laboratory',300);
-order['Urinalysis rflx Micro Culture'] = new Order('Urinalysis rflx Micro Culture',['Urinalysis rflx Micro Culture','UA'],'Laboratory',400);
-order['Cell Count CSF'] = new Order('Cell Count CSF',['Cell Count CSF','CSF cell count'],'Laboratory',500);
-order['Manual Differential'] = new Order('Manual Differential',['Manual Differential','Man Diff'],'Laboratory',600);
-order['Herpes Simplex V DNA PCR CSF'] = new Order('Herpes Simplex V DNA PCR CSF',['Herpes Simplex V DNA PCR CSF'],'Laboratory',700);
+order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein','CSF total protein'],30050);
+order['Blood Culture'] = new Order('Blood Culture',['Blood Culture','blood cx'],30075);
+order['CBC'] = new Order('CBC',['CBC'],30100);
+order['CMP'] = new Order('CMP',['CMP'],30200);	
+order['Influenza RSV Covid PCR'] = new Order('Influenza RSV Covid PCR',['Influenza RSV Covid PCR','flu','Covid','rsv'],30300);
+order['Urinalysis rflx Micro Culture'] = new Order('Urinalysis rflx Micro Culture',['Urinalysis rflx Micro Culture','UA'],30400);
+order['Cell Count CSF'] = new Order('Cell Count CSF',['Cell Count CSF','CSF cell count'],30500);
+order['Manual Differential'] = new Order('Manual Differential',['Manual Differential','Man Diff'],30600);
+order['Herpes Simplex V DNA PCR CSF'] = new Order('Herpes Simplex V DNA PCR CSF',['Herpes Simplex V DNA PCR CSF'],30700);
 	
 order_dict = {};
 for (let x of Object.keys(order)) {
@@ -400,19 +399,14 @@ for (let i of tx_consider.values()) {
 	}
 }
 
-	console.log("Orders*****");
-for (let i of orders.values()) {
-	console.log(i);
-}
 	
 for (let i of orders.values()) {
 	if (order[order_dict[i]] != undefined) {
 		sorted_orders.push(order[order_dict[i]]);
 	}
 	else {
-	sorted_orders.push(new Order(i,[],'Laboratory',5000));
+	sorted_orders.push(new Order(i,[],'Laboratory',50000));
 	order_dict[i] = i;
-	console.log(i,"in dict");
 	}
 }
 
@@ -424,7 +418,7 @@ for (let i of orders_consider.values()) {
 		sorted_orders_consider.push(order[order_dict[i]]);
 	}
 	else {
-		sorted_orders_consider.push(new Order(i,[],"Laboratory",5000));
+		sorted_orders_consider.push(new Order(i,[],50000));
 		order_dict[i] = i;
 	}
 }
