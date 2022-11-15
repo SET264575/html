@@ -387,10 +387,6 @@ orders_consider = new Set(orders_consider.flat());
 tx = new Set(tx.flat());
 tx_consider = new Set(tx_consider.flat());
 
-console.log("Orders*****");
-for (let i of orders.values()) {
-	console.log(i);
-}
 	
 for (let i of orders_consider.values()) {
 	if (orders.has(i)) {
@@ -404,8 +400,14 @@ for (let i of tx_consider.values()) {
 	}
 }
 
+	console.log("Orders*****");
+for (let i of orders.values()) {
+	console.log(i);
+}
+	
 for (let i of orders.values()) {
 	if (order[order_dict[i]] != undefined) {
+		console.log(i,order_dict[i]);
 		sorted_orders.push(order[order_dict[i]]);
 	}
 	else {
