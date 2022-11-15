@@ -712,7 +712,7 @@ function updateAwaitList(){
 		awaitingList[i].clr = 2;
 	}
   }
-  activeElement = document.activeElement();
+  activeElement = document.activeElement;
   refreshTable();
   displayRecords();
 }
