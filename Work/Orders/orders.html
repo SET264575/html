@@ -455,7 +455,28 @@ t = t + i.name +"<br>";
 document.getElementById("orders").innerHTML = t;
 
 t = "";
+oldcat = 0;
 for (let i of sorted_orders_consider) {
+	var cat = parseInt(i.sequence_number/10000);
+	if (cat != oldcat) {
+		oldcat = cat;
+		switch(cat) {
+			case 1:
+				t = t + "\n";
+				break;
+			case 2:
+				t = t + "\n";
+				break;
+			case 3:
+				t = t + "<h5>Laboratory</h5>\n";
+				break;
+			case 4:
+				t = t + "<h5>Imaging</h5>\m";
+				break;
+			case 5:
+				break;
+		}
+	}
 t = t + i.name +"<br>";
 }
 document.getElementById("orders_consider").innerHTML = t;
