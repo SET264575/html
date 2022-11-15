@@ -47,6 +47,7 @@
 console.log("429");
 
 var newest = 0;
+var activeElement = '';
 var all_dx = "";
 var all_plans = "";
 var pt_count = 0;
@@ -186,7 +187,12 @@ function displayRecords(){
       createRecord(i,j);
     }
   }
+  if (activeElement = 'none') {
   document.getElementById("rm"+String(newest)+"_dx").focus();
+  }
+  else {
+	  activeElement.focus();
+  }
 }
 
 function createAwaitList(){
@@ -626,6 +632,7 @@ function pickRoom(i){
   room[i] = {...default_room};  //used to deep copy default values
   room[i].mine = true;
   newest = i;
+  activeElement = 'none';
   pt_count++;
   toDoList[i] = [];
   toDoButtonClicked(i,"SEE PATIENT");
@@ -705,6 +712,7 @@ function updateAwaitList(){
 		awaitingList[i].clr = 2;
 	}
   }
+  activeElement = document.activeElement();
   refreshTable();
   displayRecords();
 }
