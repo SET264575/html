@@ -358,7 +358,9 @@ for (let i in Object.keys(condition)){
 	temp_set.add(j);
 	}
 }
-console.log(temp_set);
+temp_array = new Array(temp_set);
+temp_array.sort();
+console.log(temp_array);
 	
 order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein','CSF total protein'],30050);
 order['Blood Culture'] = new Order('Blood Culture',['Blood Culture','blood cx'],30075);
