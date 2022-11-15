@@ -387,6 +387,11 @@ orders_consider = new Set(orders_consider.flat());
 tx = new Set(tx.flat());
 tx_consider = new Set(tx_consider.flat());
 
+console.log("Orders*****");
+for (let i of orders.values()) {
+	console.log(i);
+}
+	
 for (let i of orders_consider.values()) {
 	if (orders.has(i)) {
 		orders_consider.delete(i);
@@ -408,6 +413,11 @@ for (let i of orders.values()) {
 	order_dict[i] = i;
 	console.log(i,"in dict");
 	}
+}
+
+console.log("*** Sorted Orders ***");
+for (let i of sorted_orders()) {
+	console.log(i);
 }
 
 sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
