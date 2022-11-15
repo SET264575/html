@@ -407,8 +407,10 @@ for (let i of orders.values()) {
 	sorted_orders.push(new Order(i,[],'Laboratory',0));
 	}
 }
+console.log(sorted_orders);
 sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
-
+console.log(sorted_orders);
+	
 for (let i of orders_consider.values()) {
 	sorted_orders_consider.push(String(order[order_dict[i]]));
 }
@@ -416,6 +418,7 @@ sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_
 
 var t = "";
 for (let i of sorted_orders) {
+console.log(i);
 t = t + i.name +"<br>";
 }
 document.getElementById("orders").innerHTML = t;
