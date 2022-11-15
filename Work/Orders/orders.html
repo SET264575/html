@@ -354,7 +354,7 @@ condition['lightheadedness'] = new Condition('lightheadedness',['No orders for l
 
 temp_set  = new Set();
 for (let i of Object.keys(condition)){
-	for (let j of condition[i].orders) {
+	for (let j of condition[i].order) {
 	temp_set.add(j);
 	}
 }
