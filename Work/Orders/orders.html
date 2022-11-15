@@ -400,12 +400,14 @@ for (let i of tx_consider.values()) {
 }
 
 for (let i of orders.values()) {
-	try {
+	//try {
 	console.log(order_dict[i]);
-	sorted_orders.push(order[order_dict[i]]);
+	if (order[order_dict[i]] != undefined) {
+		sorted_orders.push(order[order_dict[i]]);
 	}
-	catch {
+	//catch {
 	//console.log(i,"Undefined");
+	else {
 	sorted_orders.push(new Order(i,[],'Laboratory',5000));
 	order_dict[i] = i;
 //	console.log(i,"in dict");
