@@ -175,7 +175,7 @@ for (let i = 1; i < 17; i++){
   room[i] = new Room;
 }
 
-setInterval(updateAwaitList,60000);
+setInterval(updateAwaitList,15000);
 
 function displayRecords(){
   createAwaitList();
