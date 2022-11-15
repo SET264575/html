@@ -192,6 +192,7 @@ function displayRecords(){
   }
   else {
     document.getElementById(activeElement).focus();
+	  console.log(activeElement);
   }
 }
 
@@ -713,6 +714,7 @@ function updateAwaitList(){
 	}
   }
   activeElement = document.activeElement.id;
+	console.log(activeElement);
   refreshTable();
   displayRecords();
 }
