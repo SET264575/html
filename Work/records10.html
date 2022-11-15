@@ -35,7 +35,7 @@
   <body>
 <table>
 <td style="vertical-align: top;">
-<select id = "physicians" onchange = 'document.getElementById("dr_button").value = this.value; document.getElementById("dr_button").innerHTML = this.value;'>
+<!--select id = "physicians" onchange = 'document.getElementById("dr_button").value = this.value; document.getElementById("dr_button").innerHTML = this.value;'>
 	<option>Brother,M</option>
 	<option>Edo-Ohanba,O</option>
 	<option>Goble,M</option>
@@ -53,7 +53,8 @@
 <br>
 <button id = "dr_button" onclick = "navigator.clipboard.writeText(this.value)">Dr. Brother</button><br>	
 	
-<button id = "admit_button" onclick = "copyAdmitDoc()">Admit to Dr.</button><br><br><br>			   
+<button id = "admit_button" onclick = "copyAdmitDoc()">Admit to Dr.</button><br><br><br>-->	
+	<p id="pt_count"></p>
 
 <a href = "References/references.html" target = "references">References</a><br>
 <!--a href = "PE/physical exam.html" target = "recommendations">Physical exam</a><br-->
