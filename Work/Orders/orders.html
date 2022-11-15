@@ -352,6 +352,7 @@ condition['syncope'] = new Condition('syncope',['No orders for syncope'],[],[],[
 condition['lactic acidosis'] = new Condition('lactic acidosis',['No orders for lactic acidosis'],[],[],[]);
 condition['lightheadedness'] = new Condition('lightheadedness',['No orders for lightheadedness'],[],[],[]);
 
+	/* used to get list of orders
 temp_set  = new Set();
 for (let i of Object.keys(condition)){
 	for (let j of condition[i].order) {
@@ -368,6 +369,8 @@ for (let i =0; i<temp_array.length; i++) {
 	t = t + temp_array[i] + '<br>';
 }
 document.getElementById("orders").innerHTML = t;
+*/
+	
 	
 order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein','CSF total protein'],30050);
 order['Blood Culture'] = new Order('Blood Culture',['Blood Culture','blood cx'],30075);
@@ -381,8 +384,6 @@ order['Herpes Simplex V DNA PCR CSF'] = new Order('Herpes Simplex V DNA PCR CSF'
 
 
 order("BOHB") = new Order("BOHB",["BOHB"],30000);
-order("CBC") = new Order("CBC",["CBC"],30000);
-order("CMP") = new Order("CMP",["CMP"],30000);
 order("CRP") = new Order("CRP",["CRP"],30000);
 order("CSF cell count") = new Order("CSF cell count",["CSF cell count"],30000);
 order("CSF culture & gram stain") = new Order("CSF culture & gram stain",["CSF culture & gram stain"],30000);
@@ -391,40 +392,40 @@ order("CTNG") = new Order("CTNG",["CTNG"],30000);
 
 order("ESR") = new Order("ESR",["ESR"],30000);
 order("ETOH") = new Order("ETOH",["ETOH"],30000);
-order("Flu") = new Order("Flu",["Flu"],30000);
+//order("Flu") = new Order("Flu",["Flu"],30000);
 order("HCG") = new Order("HCG",["HCG"],30000);
 
 
 order("PT/PTT") = new Order("PT/PTT",["PT/PTT"],30000);
-order("RSV") = new Order("RSV",["RSV"],30000);
+//order("RSV") = new Order("RSV",["RSV"],30000);
 order("TSH") = new Order("TSH",["TSH"],30000);
 order("UA") = new Order("UA",["UA"],30000);
 order("UDS") = new Order("UDS",["UDS"],30000);
-order("acetaminophen") = new Order("acetaminophen",["acetaminophen"],30000);
-order("blood culture") = new Order("blood culture",["blood culture"],30000);
-order("lactate") = new Order("lactate",["lactate"],30000);
-order("pro BNP") = new Order("pro BNP",["pro BNP"],30000);
-order("respiratory pathogen panel") = new Order("respiratory pathogen panel",["respiratory pathogen panel"],30000);
-order("salicylate") = new Order("salicylate",["salicylate"],30000);
-order("sepsis lactate") = new Order("sepsis lactate",["sepsis lactate"],30000);
-order("troponin") = new Order("troponin",["troponin"],30000);
-order("type & screen") = new Order("type & screen",["type & screen"],30000);
-order("wet prep") = new Order("wet prep",["wet prep"],30000);
+order("Acetaminophen") = new Order("acetaminophen",["acetaminophen"],30000);
+order("Blood culture") = new Order("blood culture",["blood culture"],30000);
+order("Lactate") = new Order("lactate",["lactate"],30000);
+order("Pro BNP") = new Order("pro BNP",["pro BNP"],30000);
+order("Respiratory pathogen panel") = new Order("respiratory pathogen panel",["respiratory pathogen panel"],30000);
+order("Salicylate") = new Order("salicylate",["salicylate"],30000);
+order("Sepsis lactate") = new Order("sepsis lactate",["sepsis lactate"],30000);
+order("Troponin") = new Order("troponin",["troponin"],30000);
+order("Type & screen") = new Order("type & screen",["type & screen"],30000);
+order("Wet prep") = new Order("wet prep",["wet prep"],30000);
 
-order['Chest xray'] = new Order('Chest xray',['chest xray','cxr','CXR','Chest xray'],40100);
+order['XR Chest'] = new Order('Chest xray',['chest xray','cxr','CXR','Chest xray'],40100);
 order("CT abd/pelvis") = new Order("CT abd/pelvis",["CT abd/pelvis"],40000);
 order("CTA chest PE protocol") = new Order("CTA chest PE protocol",["CTA chest PE protocol"],40000);
 order("CTA chest, abd, pelvis") = new Order("CTA chest, abd, pelvis",["CTA chest, abd, pelvis"],40000);
 order['EKG'] = new Order('EKG',['EKG'],40200);
 order("IR LP") = new Order("IR LP",["IR LP"],40000);
-order("duplex US lower extremities") = new Order("duplex US lower extremities",["duplex US lower extremities"],40000);
-order("finger xray") = new Order("finger xray",["finger xray"],40000);
-order("pelvic ultrasound") = new Order("pelvic ultrasound",["pelvic ultrasound"],40000);
-order("xray of body part") = new Order("xray of body part",["xray of body part"],40000);
-order("xray of limb") = new Order("xray of limb",["xray of limb"],40000);	
+order("EV duplex US lower extremities") = new Order("duplex US lower extremities",["duplex US lower extremities"],40000);
+order("XR finger") = new Order("finger xray",["finger xray"],40000);
+order("US pelvis") = new Order("pelvic ultrasound",["pelvic ultrasound"],40000);
+order("XR of body part") = new Order("xray of body part",["xray of body part"],40000);
+order("XR of limb") = new Order("xray of limb",["xray of limb"],40000);	
 	
-order("ABG") = new Order("ABG",["ABG"],50000);
-order("VBG") = new Order("VBG",["VBG"],50000);
+order("POC ABG") = new Order("ABG",["ABG"],50000);
+order("POC VBG") = new Order("VBG",["VBG"],50000);
 order("POC glucose") = new Order("POC glucose",["POC glucose"],50000);
 	
 order_dict = {};
@@ -476,8 +477,9 @@ for (let i of orders.values()) {
 }
 
 
-sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
-	
+sorted_orders.sort(function(a,b){return a.name - b.name});
+//sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
+
 for (let i of orders_consider.values()) {
 	if (order[order_dict[i]] != undefined) {
 		sorted_orders_consider.push(order[order_dict[i]]);
@@ -487,12 +489,13 @@ for (let i of orders_consider.values()) {
 		order_dict[i] = i;
 	}
 }
-sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_number});
+sorted_orders_consider.sort(function(a,b){return a.name - b.name});
+//sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_number});
 
 var t = "";
 var oldcat = 0;
 for (let i of sorted_orders) {
-	var cat = parseInt(i.sequence_number/10000);
+/*	var cat = parseInt(i.sequence_number/10000);
 	if (cat != oldcat) {
 		oldcat = cat;
 		switch(cat) {
@@ -512,15 +515,16 @@ for (let i of sorted_orders) {
 				t =t  + "<h4>POC</h4>\n";
 				break;
 		}
-	}
+	}*/
 t = t + i.name +"<br>";
 }
 //document.getElementById("orders").outerHTML = '<pre id = "orders">'+t+'</pre>';
-
+document.getElementById('orders').innerHTML = t;
+	
 t = "";
 oldcat = 0;
 for (let i of sorted_orders_consider) {
-	var cat = parseInt(i.sequence_number/10000);
+	/*var cat = parseInt(i.sequence_number/10000);
 	if (cat != oldcat) {
 		oldcat = cat;
 		switch(cat) {
@@ -539,7 +543,7 @@ for (let i of sorted_orders_consider) {
 			case 5:
 				break;
 		}
-	}
+	}*/
 t = t + i.name +"<br>";
 }
 document.getElementById("orders_consider").innerHTML = t;
