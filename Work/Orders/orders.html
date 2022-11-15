@@ -364,8 +364,8 @@ temp_array = new Array(temp_set);
 temp_array.sort();
 console.log(temp_array);
 var t = "";
-for (let i of temp_array.entries()) {
-	t = t + i + '\n';
+for (let i =0; i<temp_array.length; i++) {
+	t = t + temp_array[i] + '\n';
 }
 document.getElementById("orders").innerHTML = t;
 	
