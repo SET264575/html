@@ -401,14 +401,14 @@ for (let i of tx_consider.values()) {
 
 for (let i of orders.values()) {
 	try {
-	//console.log(i,order_dict[i]);
+	console.log(order_dict[i]);
 	sorted_orders.push(order[order_dict[i]]);
 	}
 	catch {
-	console.log(i,"Undefined");
+	//console.log(i,"Undefined");
 	sorted_orders.push(new Order(i,[],'Laboratory',5000));
 	order_dict[i] = i;
-	console.log(i,"in dict");
+//	console.log(i,"in dict");
 	}
 }
 //console.log(sorted_orders.values());
