@@ -351,6 +351,14 @@ condition['syncope'] = new Condition('syncope',['No orders for syncope'],[],[],[
 
 condition['lactic acidosis'] = new Condition('lactic acidosis',['No orders for lactic acidosis'],[],[],[]);
 condition['lightheadedness'] = new Condition('lightheadedness',['No orders for lightheadedness'],[],[],[]);
+
+temp_set  = new Set();
+for (let i in Object.keys(condition)){
+	for (let j in i.orders) {
+	temp_set.add(j);
+	}
+}
+console.log(temp_set);
 	
 order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein','CSF total protein'],30050);
 order['Blood Culture'] = new Order('Blood Culture',['Blood Culture','blood cx'],30075);
