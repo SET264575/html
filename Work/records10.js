@@ -49,6 +49,7 @@ console.log("429");
 var newest = 0;
 var all_dx = "";
 var all_plans = "";
+var pt_count = 0;
 
 function Room() {
   this.mine = false;
@@ -625,12 +626,14 @@ function pickRoom(i){
   room[i] = {...default_room};  //used to deep copy default values
   room[i].mine = true;
   newest = i;
+  pt_count++;
   toDoList[i] = [];
   toDoButtonClicked(i,"SEE PATIENT");
   toDoButtonClicked(i,"ORDER LABS");
   toDoButtonClicked(i,"ORDER MEDS");
   refreshTable();
   displayRecords();
+  document.getElementById("pt_count").innerHTML = pt_count;
 }
 
 function deleteRoom(i){
