@@ -407,7 +407,6 @@ for (let i of orders.values()) {
 	
 for (let i of orders.values()) {
 	if (order[order_dict[i]] != undefined) {
-		console.log(i,order_dict[i]);
 		sorted_orders.push(order[order_dict[i]]);
 	}
 	else {
@@ -417,18 +416,14 @@ for (let i of orders.values()) {
 	}
 }
 
-console.log("*** Sorted Orders ***");
-for (let i of sorted_orders) {
-	console.log(i);
-}
 
 sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
 	
 for (let i of orders_consider.values()) {
-	try {
-	sorted_orders_consider.push(order[order_dict[i]]);
+	if (order[order_dict[i]] != undefined) {
+		sorted_orders_consider.push(order[order_dict[i]]);
 	}
-	catch {
+	else {
 		sorted_orders_consider.push(new Order(i,[],"Laboratory",5000));
 		order_dict[i] = i;
 	}
@@ -438,9 +433,7 @@ sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_
 var t = "";
 	
 for (let i of sorted_orders) {
-console.log(i,"in t loop");
 t = t + i.name +"<br>";
-	document.getElementById("orders").innerHTML = t;
 }
 document.getElementById("orders").innerHTML = t;
 
