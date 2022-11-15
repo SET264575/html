@@ -187,7 +187,7 @@ function displayRecords(){
       createRecord(i,j);
     }
   }
-  if (activeElement = 'none') {
+  if (activeElement == 'none') {
   document.getElementById("rm"+String(newest)+"_dx").focus();
   }
   else {
