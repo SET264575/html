@@ -353,10 +353,10 @@ condition['syncope'] = new Condition('syncope',['No orders for syncope'],[],[],[
 condition['lactic acidosis'] = new Condition('lactic acidosis',['No orders for lactic acidosis'],[],[],[]);
 condition['lightheadedness'] = new Condition('lightheadedness',['No orders for lightheadedness'],[],[],[]);
 	
-order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein'],'Laboratory',50);
+order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein','CSF total protein'],'Laboratory',50);
 order['Blood Culture'] = new Order('Blood Culture',['Blood Culture','blood cx'],'Laboratory',75);
-order['CBC'] = new Order('CBC','CBC','Laboratory',100);
-order['CMP'] = new Order('CMP','CMP','Laboratory',200);	
+order['CBC'] = new Order('CBC',['CBC'],'Laboratory',100);
+order['CMP'] = new Order('CMP',['CMP'],'Laboratory',200);	
 order['Influenza RSV Covid PCR'] = new Order('Influenza RSV Covid PCR',['Influenza RSV Covid PCR','flu','Covid','rsv'],'Laboratory',300);
 order['Urinalysis rflx Micro Culture'] = new Order('Urinalysis rflx Micro Culture',['Urinalysis rflx Micro Culture','UA'],'Laboratory',400);
 order['Cell Count CSF'] = new Order('Cell Count CSF',['Cell Count CSF','CSF cell count'],'Laboratory',500);
@@ -409,9 +409,9 @@ for (let i of orders.values()) {
 	sorted_orders.push(new Order(i,[],'Laboratory',0));
 	}
 }
-console.log(sorted_orders);
+console.log(sorted_orders.values());
 sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
-console.log(sorted_orders);
+console.log(sorted_orders.values());
 	
 for (let i of orders_consider.values()) {
 	sorted_orders_consider.push(String(order[order_dict[i]]));
