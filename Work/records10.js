@@ -175,7 +175,7 @@ for (let i = 1; i < 17; i++){
   room[i] = new Room;
 }
 
-setInterval(updateAwaitList,15000);
+setInterval(updateAwaitList,60000);
 
 function displayRecords(){
   createAwaitList();
@@ -192,7 +192,6 @@ function displayRecords(){
   }
   else {
     document.getElementById(activeElement).focus();
-	  console.log(activeElement);
   }
 }
 
@@ -714,7 +713,6 @@ function updateAwaitList(){
 	}
   }
   activeElement = document.activeElement.id;
-	console.log(activeElement);
   refreshTable();
   displayRecords();
 }
