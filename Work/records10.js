@@ -496,7 +496,7 @@ t.appendChild(document.createElement("br"));
 for (let j = 0; j < toDoList[i].length; j++){
 	var x = document.createElement("button");
 	x.innerHTML = toDoList[i][j].label;
-	console.log(toDoList[i][j].label);
+	//console.log(toDoList[i][j].label);
 	x.setAttribute("onclick","toDoListButtonClicked("+String(i)+","+String(j)+")");
 	x.setAttribute("style","width:  200px; color:  red;");
 	t.appendChild(x);
