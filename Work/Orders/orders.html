@@ -65,7 +65,6 @@ synonym['hematuria'] = ['hematuria','blood in urine'];
 synonym['ovarian mass'] = ['ovarian mass','ovarian cyst'];
 synonym['anemia'] = ['anemia','iron deficiency anemia','blood loss anemia'];
 synonym['hypoglycemia'] = ['hypoglycemia','low blood sugar','low sugar'];
-synonym['hypertension'] = ['hypertension','hypertensive urgency','hypertensive emergency','high blood pressure'];
 synonym['pulmonary embolism'] = ['pulmonary embolism','pe'];
 synonym['dvt'] = ['dvt','deep venous thrombosis','venous thrombosis','blood clot'];
 synonym['elevated anion gap'] = ['elevated anion gap','high anion gap','high ag', 'hi ag'];
@@ -127,10 +126,11 @@ synonym['respiratory failure'] = ['respiratory failure','co2 retention','hypoxia
 synonym['elevated d dimer'] = ['elevated d dimer'];
 synonym['lactic acidosis'] = ['lactic acidosis','elevated lactate','high lactate'];
 synonym['lightheadedness'] = ['lightheadedness','lh'];
+synonym['post-intubation'] = ['post=intubation','post-intubation','post-intubation','intubation'];
+synonym['hypertension'] = ['hypertensive emergency','hypertensive urgency','hypertension','high blood pressure','elevated blood pressure','htn'];
 /*
 joint effusion
 joint pain
-post-intubation
 hypertensive emergency
 */
 dict = {};
@@ -282,6 +282,8 @@ condition['ovarian torsion'] = new Condition('ovarian torsion',['CBC','CMP','pel
 
 condition['pelvic pain'] = new Condition('pelvic pain',['CBC','CMP','UA','HCG'],['wet prep','CTNG','pelvic US'],[],['IVF','analgesia']);
 
+condition['post-intubation'] = new Condition('post-intubation',['ABG','chest xray','KUB','restraints','Foley'],[],['etomidate','sux','propofol'],['Versed','Fentanyl']);
+	
 condition['priapism'] = new Condition('priapism',[],['ABG','CBC','UDS'],['lidocaine','phenylephrine 500 mcg'],[]);
 	
 condition['pulmonary embolism'] = new Condition('pulmonary embolism',['CBC','CMP','EKG','CTA chest PE protocol'],['troponin','echo','duplex US lower extremities'],['Lovenox'],['Xarelto','Eliquis']);
