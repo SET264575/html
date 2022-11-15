@@ -355,7 +355,7 @@ condition['lightheadedness'] = new Condition('lightheadedness',['No orders for l
 temp_set  = new Set();
 for (let i of Object.keys(condition)){
 	for (let j of condition[i].order) {
-		if (j.startsWith("Nothing") == false) {
+		if (j.startsWith("No") == false) {
 			temp_set.add(j);
 	}
 	}
@@ -365,7 +365,7 @@ temp_array.sort();
 console.log(temp_array);
 var t = "";
 for (let i =0; i<temp_array.length; i++) {
-	t = t + temp_array[i] + '\n';
+	t = t + temp_array[i] + '<br>';
 }
 document.getElementById("orders").innerHTML = t;
 	
