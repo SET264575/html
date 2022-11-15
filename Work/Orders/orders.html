@@ -409,9 +409,9 @@ for (let i of orders.values()) {
 	sorted_orders.push(new Order(i,[],'Laboratory',0));
 	}
 }
-console.log(sorted_orders.values());
+//console.log(sorted_orders.values());
 sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
-console.log(sorted_orders.values());
+//console.log(sorted_orders.values());
 	
 for (let i of orders_consider.values()) {
 	sorted_orders_consider.push(order[order_dict[i]]);
