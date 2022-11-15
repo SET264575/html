@@ -510,7 +510,7 @@ for (let j = 0; j < toDoList[i].length; j++){
 
 function toDoButtonClicked(room,label){
 	toDoList[room].push(new Awaiting(label,-1));
-	console.log(label);
+	//console.log(label);
 	refreshTable();
 	displayRecords();
 }
