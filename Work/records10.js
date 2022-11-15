@@ -191,7 +191,7 @@ function displayRecords(){
   document.getElementById("rm"+String(newest)+"_dx").focus();
   }
   else {
-	  activeElement.focus();
+    document.getElementById(activeElement).focus();
   }
 }
 
