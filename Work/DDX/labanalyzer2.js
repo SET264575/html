@@ -823,11 +823,117 @@ printAbnormalities();
 		return(parseInt(MELD));
 	}
 
-	function calcABGinterpretation(pH,pCO2,HCO3,BE){
-		var interpretation = "";
+	function calcABGinterpretation(pH,pO2,pCO2,HCO3,BE){
+		var step1 = "";
+		var step2 = "";
+		var step3 = "";
+		var step4 = "";
+		var step5 = "";
+		var step6 = "";
+		
+		//step1.  Is ABG internally consistent?
+		var h = 24*(pCO2)/HCO3;
+		var expectedH = [];
+		expectedH['7']=100;
+		expectedH['7.05']=89;
+		expectedH['7.1']=79;
+		expectedH['7.15']=71;
+		expectedH['7.2']=63;
+		expectedH['7.25']=56;
+		expectedH['7.3']=50;
+		expectedH['7.35']=45;
+		expectedH['7.4']=40;
+		expectedH['7.45']=35;
+		expectedH['7.5']=32;
+		expectedH['7.55']=28;
+		expectedH['7.6']=25;
+		expectedH['7.65']=22;
+		var lowpH = parseInt(pH*10*2)/20;
+		var highpH = lowpH + 0.05;
+		var extrapolatedH = (expectedH[lowpH]-expectedH[highpH])/0.05*(pH - lowpH);
+		var deltaH = h - extrapolatedH;
+		console.log(deltaH);
+
+
+		//step2.  
+		
+		
+		
+		var co2interpretation = "normal";
+		var o2interpretation = "normal";
+		var p = 'n';
+		var o = 'n';
+		var c = 'n';
+		var b = 'n';
+		var h = 'n';
+		/*
+		p = pH
+		o = pO2
+		c = pCO2
+		b = be
+		h = hc3
+		*/
+		
+		/*
+		h = high
+		n = normal
+		l = low
+		*/
+		
+		if (pO2 < 75) {
+			o = 'l';
+		}
+		if (pO2 < 60) {
+			o = 'L';
+		}
+		
+		if (pH < 7.35) {
+			p = 'l';
+		}
+		if (pH > 7.45) {
+			p = 'h';
+		}
+		if (pCO2 < 35) {
+			c = 'l';
+		}
+		if (pCO2 > 45) {
+			c = 'h';
+		}
+		if (HCO3 < 22) {
+			h = 'l';
+		}
+		if (HCO3 > 26) {
+			h = 'h';
+		}
+		if (BE > 2) {
+			b = "h";
+		}
+		if (BE < 2) {
+			b = "l";
+		}
+		
+		var result = p+c+o+h+b;
+		var i = [];
+		
+		i['lhnnn'] = 'normoxemic with respiratory acidosis';
+		i['hlnnn'] = 'normoxemic with respiratory alkalosis';
+		i['lhnhn'] = 'normoxemic with respiratory acidosis with metabolic compensation';
+		i['nhnhn'] = 'normoxemic with respiratory acidosis with metabolic compensation';
+		i['hlnln'] = 'normoxemic with respiratory alkalosis with metabolic compensation';
+		i['nlnln'] = 'normoxemic with respiratory alkalosis with metabolic compensation';
+				
+		//with hypoxemia
+		i['lhlnn'] = 'hypoxemia with respiratory acidosis';
+		i['hllnn'] = 'hypoxemia with respiratory alkalosis';
+		i['lhlhn'] = 'hypoxemia with respiratory acidosis with metabolic compensation';
+		i['nhlhn'] = 'hypoxemia with respiratory acidosis with metabolic compensation';
+		i['hllln'] = 'hypoxemia with respiratory alkalosis with metabolic compensation';
+		i['nllln'] = 'hypoxemia with respiratory alkalosis with metabolic compensation';
+		
+		
 		
 		return(interpretation);
-	}
+	} 
 		
 
 	function inRange(value,low,high){
