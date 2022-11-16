@@ -831,6 +831,72 @@ printAbnormalities();
 		var step4 = "";
 		var step5 = "";
 		var step6 = "";
+		var oxygenation = "normal";
+		var acid_basestatus = "normal";
+		var process = "none";
+		var compensation = "none";
+		
+		//oxygenation
+		if (pO2 < 75) {
+			oxygenation = "hypoxemic";
+		}
+		if (pO2 < 60) {
+			oxygenation = "hypoxemic respiratory failure";
+		}
+		
+		if (pH < 7.35) {
+			if (HCO3 < 22) {
+				if (pCO2 > 35 && pCO2 < 45) {
+					process = "acute uncompensated metabolic acidosis";
+				}
+				if (pCO2 < 35) {
+					process = "partially compensated metabolic acidosis";
+				}
+				if (pCO2 > 45) {
+					process = "metabolic acidosis & respiratory acidosis";
+				}
+			}
+			
+			if (pCO2 > 45) {
+				if (HCO3 > 22 && HCO3 < 26) {
+					process = "acute uncompensated respiratory acidosis";
+				}
+				if (HCO3 > 26) {
+					process = "respiratory acidosis with partial compensation";
+				}
+				if (HC3 < 22) {
+					process = "combined respiratory acidosis & metabolic acidosis";
+				}
+			}
+		}
+		if (pH > 7.45) {
+			if (pCO2 < 35) {
+				process = "respiratory alkalosis";
+				if (HCO3 > 22 && HCO3 < 26) {
+					process = "acute respiratory alkalosis";
+				}
+				if (HCO3 < 22) {
+					process = "partially compensated respiratory alkalosis";
+				}
+			}
+			if (pCO2 > 35) {
+				process = "metabolic alkalosis";
+				if (HCO3 > 22 && HCO3 < 26) {
+					process = "acute respiratory alkalosis";//***
+				}
+			}
+		}
+		if (pH > 7.34 && pH < 7.46) {
+			process = "normal";
+			if (HCO3 < 22 && pCO2 < 35) {
+				process = "normal pH, likely mixed respiratory alkalosis & metabolic acidosis OR chronic (fully compensated) respiratory alkalosis" ;
+			}
+			if (HCO3 > 26 && pCO2 > 45) {
+				process = "normal pH, likely chronic (fully compensated) respiratory failure OR mixed respiratory acidosis & metabolic alkalosis";
+			}
+		}
+		
+		
 		
 		//step1.  Is ABG internally consistent?
 		var h = 24*(pCO2)/HCO3;
@@ -853,13 +919,40 @@ printAbnormalities();
 		var highpH = lowpH + 0.05;
 		var extrapolatedH = (expectedH[lowpH]-expectedH[highpH])/0.05*(pH - lowpH);
 		var deltaH = h - extrapolatedH;
-		console.log(deltaH);
+		console.log("deltaH = ",deltaH);
 
 
-		//step2.  
+		//step2 & 3.  
+		if (pH < 7.35) {
+			if (pCO2 > 45) {
+				step3 = "respiratory acidosis";
+			}
+			if (pCO2 < 35) {
+				step3 = "metabolic acidosis";
+			}
+		}
+		if (pH > 7.45) {
+			if (pCO2 < 35) {
+				step3 = "respiratory alkalosis";
+			}
+			if (pCO2 > 45) {
+				step3 = "metabolic acidosis";
+			}
+		}
 		
+		//step 4:
+		var compensation = "";
+		if (step3 == "metabolic acidosis") {
+			var expectedCO2compensation = (1.5*HCO3)+8;
+			var deltaCO2 = pCO2 - expectedCO2compensation;
+			if (deltaCO2 > -2 && deltaCO2 < -2) {compensation = "with respiratory compensation"};
+		}
 		
-		
+		if (step3 == "metabolic alkalosis") {
+			var expectedCO2compensation = 40+0.6*(HCO3 - 24);
+			var deltaCO2 = pCO2 - expectedCO2compensation;
+			if (deltaCO2 > -2 && deltaCO2 < -2) {compensation = "with respiratory compensation"};
+		}
 		var co2interpretation = "normal";
 		var o2interpretation = "normal";
 		var p = 'n';
