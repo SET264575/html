@@ -131,7 +131,27 @@ synonym['hypertension'] = ['hypertensive emergency','hypertensive urgency','hype
 /*
 joint effusion
 joint pain
-hypertensive emergency
+found down
+weakness
+tia
+ckd
+esrd
+secondary hyperparathyroidism
+gerd
+hld
+mha
+cough
+knee pain
+adhd
+bph
+tachycardia
+fall
+dizzy
+vertigo
+leukopenia
+thrombocytopenia
+alcohol abuse
+neck pain
 */
 dict = {};
 for (x of Object.keys(synonym)) {
@@ -412,6 +432,7 @@ order["Sepsis lactate"] = new Order("sepsis lactate",["sepsis lactate"],30000);
 order["Troponin"] = new Order("troponin",["troponin"],30000);
 order["Type & screen"] = new Order("type & screen",["type & screen"],30000);
 order["Wet prep"] = new Order("wet prep",["wet prep"],30000);
+order["Urine pregnancy test"] = new Order("urine pregnancy test",["HCG","hcg"],30000);
 
 order['XR Chest'] = new Order('Chest xray',['chest xray','cxr','CXR','Chest xray'],40100);
 order["CT abd/pelvis"] = new Order("CT abd/pelvis",["CT abd/pelvis"],40000);
