@@ -601,10 +601,9 @@ printAbnormalities();
 		results['A/G ratio'] = calcA_GRatio(results.albumin,results.totalprotein);
 		results['MELD'] = calcMELD(results.creatinine,results.bilirubin,results.sodium,1);
 		
-		/*ABG calculations
-		results['ABG interpretation'] = calcABGinterpretation(results.pH,results.pCO2,results.HCO3,results.BE);
 		
-		*/
+		results['ABG interpretation'] = calcABGinterpretation(results.pH,results.pO2,results.pCO2,results.HCO3,results.BE);
+		
 //GFR
 //creatinine_clearance
 
@@ -619,6 +618,7 @@ printAbnormalities();
 		document.getElementById("osmolality").innerHTML = "Serum osmolality = " + results['osmolality'] + ' (275-295)';
 		document.getElementById("A/G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'] + ' (0.8-2)';
 		document.getElementById("MELD").innerHTML = "MELD score (assuming no dialysis and normal INR) = " + results['MELD']+ ' (<10)';
+		document.getElementById("ABG interpretation').innerHTML = "ABG interpretation: " + results['ABG interpretation'];
 		/*
 		document.getElementById("ABG interpretation").innerHTML = "ABG interpretation: " + results["ABG interpretation"];
 		*/
@@ -831,9 +831,9 @@ printAbnormalities();
 		var step4 = "";
 		var step5 = "";
 		var step6 = "";
-		var oxygenation = "normal";
+		var oxygenation = "normal oxygenation";
 		var acid_basestatus = "normal";
-		var process = "none";
+		var process = "normal acid/base status";
 		var compensation = "none";
 		
 		//oxygenation
@@ -864,25 +864,32 @@ printAbnormalities();
 				if (HCO3 > 26) {
 					process = "respiratory acidosis with partial compensation";
 				}
-				if (HC3 < 22) {
+				if (HCO3 < 22) {
 					process = "combined respiratory acidosis & metabolic acidosis";
 				}
 			}
 		}
 		if (pH > 7.45) {
 			if (pCO2 < 35) {
-				process = "respiratory alkalosis";
 				if (HCO3 > 22 && HCO3 < 26) {
 					process = "acute respiratory alkalosis";
 				}
 				if (HCO3 < 22) {
 					process = "partially compensated respiratory alkalosis";
 				}
+				if (HCO3 > 26) {
+					process = "respiratory alkalosis && metabolic alkalosis";
+				}
 			}
-			if (pCO2 > 35) {
-				process = "metabolic alkalosis";
-				if (HCO3 > 22 && HCO3 < 26) {
-					process = "acute respiratory alkalosis";//***
+			if (HCO3 > 26) {
+				if (pCO2 > 35 && pCO2 < 45) {
+					process = "acute metabolic alkalosis";
+				}
+				if (pCO2 > 45) {
+					process = "partially compensated metabolic alkalosis";
+				}
+				if (pCO2 < 35) {
+					process = "respiratory alkalosis & metabolic alkalosis";
 				}
 			}
 		}
@@ -899,7 +906,7 @@ printAbnormalities();
 		
 		
 		//step1.  Is ABG internally consistent?
-		var h = 24*(pCO2)/HCO3;
+		/*var h = 24*(pCO2)/HCO3;
 		var expectedH = [];
 		expectedH['7']=100;
 		expectedH['7.05']=89;
@@ -973,6 +980,7 @@ printAbnormalities();
 		n = normal
 		l = low
 		*/
+		/*
 		
 		if (pO2 < 75) {
 			o = 'l';
@@ -1024,9 +1032,9 @@ printAbnormalities();
 		i['hllln'] = 'hypoxemia with respiratory alkalosis with metabolic compensation';
 		i['nllln'] = 'hypoxemia with respiratory alkalosis with metabolic compensation';
 		
+		*/
 		
-		
-		return(interpretation);
+		return(oxygenation + "with " + process);
 	} 
 		
 
