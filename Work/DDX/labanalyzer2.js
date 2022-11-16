@@ -584,6 +584,7 @@ printAbnormalities();
 		results['pH'] = parseFloat(document.getElementById('pH').value);
 		results.pCO2 = parseFloat(document.getElementById('pCO2').value);
 		results.pO2 = parseFloat(document.getElementById('pO2').value);
+		results.HCO3 = parseFloat(document.getElementById('HCO3').value);
 		results.BE = parseFloat(document.getElementById('BE').value);
 		
 		/* UA results
