@@ -846,7 +846,7 @@ printAbnormalities();
 		
 		if (pH < 7.35) {
 			if (HCO3 < 22) {
-				if (pCO2 > 35 && pCO2 < 45) {
+				if (pCO2 => 35 && pCO2 <= 45) {
 					process = "acute uncompensated metabolic acidosis";
 				}
 				if (pCO2 < 35) {
@@ -858,7 +858,7 @@ printAbnormalities();
 			}
 			
 			if (pCO2 > 45) {
-				if (HCO3 > 22 && HCO3 < 26) {
+				if (HCO3 => 22 && HCO3 <= 26) {
 					process = "acute uncompensated respiratory acidosis";
 				}
 				if (HCO3 > 26) {
@@ -871,7 +871,7 @@ printAbnormalities();
 		}
 		if (pH > 7.45) {
 			if (pCO2 < 35) {
-				if (HCO3 > 22 && HCO3 < 26) {
+				if (HCO3 => 22 && HCO3 <= 26) {
 					process = "acute respiratory alkalosis";
 				}
 				if (HCO3 < 22) {
@@ -882,7 +882,7 @@ printAbnormalities();
 				}
 			}
 			if (HCO3 > 26) {
-				if (pCO2 > 35 && pCO2 < 45) {
+				if (pCO2 >= 35 && pCO2 <= 45) {
 					process = "acute metabolic alkalosis";
 				}
 				if (pCO2 > 45) {
