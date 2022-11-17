@@ -646,7 +646,13 @@ printAbnormalities();
 		document.getElementById("ANC").innerHTML = "ANC = " + results['ANC'] + ' (>2500)';
 		document.getElementById("osmolality").innerHTML = "Serum osmolality = " + results['osmolality'] + ' (275-295)';
 		document.getElementById("A/G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'] + ' (0.8-2)';
-		document.getElementById("MELD").innerHTML = "MELD score (assuming no dialysis and normal INR) = " + results['MELD']+ ' (<10)';
+		if (results.inr == NaN) {
+			document.getElementById("MELD").innerHTML = "MELD score (assuming no dialysis and normal INR) = " + results['MELD']+ ' (<10)';
+		}
+		else
+		{
+			document.getElementById("MELD").innerHTML = "MELD score: " + results.MELD + " (<10)";
+		}
 		document.getElementById("ABG interpretation").innerHTML = "ABG interpretation: " + results['ABG interpretation'];
 		/*
 		document.getElementById("ABG interpretation").innerHTML = "ABG interpretation: " + results["ABG interpretation"];
@@ -835,11 +841,12 @@ printAbnormalities();
 	}
 
 	function calcMELD(creatinine,bilirubin,sodium,INR) {
-		console.log(INR);
 		if (creatinine < 1) {creatinine = 1};
 		if (bilirubin < 1) {bilirubin = 1};
 		if (INR < 1) {INR = 1};
-		if (INR == undefined) {INR = 1};
+		if (INR == NaN) {
+			INR = 1;
+		};
 		if (creatinine > 4) {creatinine = 4};
 		if (sodium < 125) {sodium = 125};
 		if (sodium > 137) {sodium = 137};
