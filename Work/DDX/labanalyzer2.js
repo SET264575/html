@@ -843,6 +843,9 @@ printAbnormalities();
 		if (pO2 < 60) {
 			oxygenation = "hypoxemic respiratory failure";
 		}
+		if (pO2 < 45) {
+			oxygenation = "hypoxemic respiratory failure (consider venous sample)";
+		}
 		
 		if (pH < 7.35) {
 			if (HCO3 < 22) {
@@ -911,7 +914,7 @@ printAbnormalities();
 		}
 		
 		//step1.  Is ABG internally consistent?
-		/*var h = 24*(pCO2)/HCO3;
+		var h = 24*(pCO2)/HCO3;
 		var expectedH = [];
 		expectedH['7']=100;
 		expectedH['7.05']=89;
@@ -932,6 +935,7 @@ printAbnormalities();
 		var extrapolatedH = (expectedH[lowpH]-expectedH[highpH])/0.05*(pH - lowpH);
 		var deltaH = h - extrapolatedH;
 		console.log("deltaH = ",deltaH);
+		/*
 
 
 		//step2 & 3.  
