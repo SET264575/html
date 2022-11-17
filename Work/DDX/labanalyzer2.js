@@ -155,16 +155,27 @@ class Lab{
 	labs.push(new Lab("lipase","Lip",0,99,'***ignore***','elevated lipase'));
 	labs.push(new Lab('troponin','Troponin T',0,0.1,'***ignore***','elevated troponin'));
 	labs.push(new Lab('Ammonia','Ammonia',25,94,'***ignore***','hyperammonemia'));
+labs.push(new Lab('Uric acid','Uric acid',0,0,'***ignore***','***ignore***'));
+labs.push(new Lab('CK','CK',0,0,'***ignore***','***ignore***'));
+labs.push(new Lab('procalcitonin','Procalcitonin',0,1,'***ignore***','***ignore***'));
+labs.push(new Lab('lactate','Lactate',0,2,'***ignore***','***ignore***'));
+labs.push(new Lab('phosphorus','phosphorus',2.3,4.5,'***ignore***','***ignore***'));
+labs.push(new Lab('pro bnp','Pro-BNP',0,0,'***ignore***','***ignore***'));
+labs.push(new Lab('TSH','TSH',0,0,'***ignore***','***ignore***'));
+labs.push(new Lab('total thyroxine','total thyroxine',0,0,'***ignore***','***ignore***'));
+labs.push(new Lab('PT','PT',0,0,'***ignore***','***ignore***'));
+labs.push(new Lab('INR','INR',0,0,'***ignore***','***ignore***'));
+labs.push(new Lab('PTT','PTT',0,0,'***ignore***','***ignore***'));
+
+/*
+labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
+labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
+labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
+*/
+
+
 /*  needs normal ranges and terms and description from lab report	
-	labs.push(new Lab('uric acid','uric acid',0,1,'***ignore***','***ignore***'));
-	labs.push(new Lab('CPK','CK',0,1,'***ignore***','***ignore***'));
-	labs.push(new Lab('procalcitonin','procalcitonin',0,1,'***ignore***','***ignore***'));
-	labs.push(new Lab('lactate','lactate',0,1,'***ignore***','***ignore***'));
-	labs.push(new Lab('Phosphorus','Phos',2.3,4.5,'hypophosphatemia','hyperphosphatemia'));
-	labs.push(new Lab('Procalcitonin'));
-	labs.push(new Lab('Total Creatinine Kinase'));
-	labs.push(new Lab('Pro-BNP'));
-	*/
+
 	
 	labs.push(new Lab("corrected sodium","corrected sodium",135,145,"hyponatremia","hypernatremia"));
 	labs.push(new Lab("corrected calcium","corrected calcium",8.5,10.3,"hypocalcemia","hypercalcemia"));
@@ -208,12 +219,13 @@ class Lab{
 
 */
 
-/*ABG functionality
-	labs.push(new Lab('pH','pH',0,1,'***ignore***','***ignore***'));
-	labs.push(new Lab('pCO2','pCO2',0,1,'***ignore***','***ignore***'));
-	labs.push(new Lab('pO2','pO2',0,1,'***ignore***','***ignore***'));
-	labs.push(new Lab('BE','BE',0,1,'***ignore***','***ignore***'));
-	*/
+//*ABG functionality
+	labs.push(new Lab('pH','pH',7.35,7.45,'***ignore***','***ignore***'));
+	labs.push(new Lab('pCO2','pCO2',35,45,'***ignore***','***ignore***'));
+	labs.push(new Lab('pO2','pO2',75,500,'***ignore***','***ignore***'));
+	labs.push(new Lab('HCO3','HCO3',22,26,'***ignore***','***ignore***'));
+	labs.push(new Lab('BE','BE',-2,2,'***ignore***','***ignore***'));
+//	*/
 	
 	
 /*
@@ -567,6 +579,20 @@ printAbnormalities();
 		results.totalprotein = parseFloat(document.getElementById('total protein').value);
 		results.lipase = parseInt(document.getElementById('lipase').value);
 		results.troponin = parseFloat(document.getElementById('troponin').value);
+		
+		results['uric acid'] = parseFloat(document.getElementById('uric acid').value);
+		results.ck = parseFloat(document.getElementById('ck').value);
+		results.procalcitonin = parseFloat(document.getElementById('procalcitonin').value);
+		results.lactate = parseFloat(document.getElementById('lactate').value);
+		results.phosphorus = parseFloat(document.getElementById('phosphorus').value);
+		results.probnp = parseFloat(document.getElementById('pro bnp').value);
+		results.tsh = parseFloat(document.getElementById('tsh').value);
+		results['total thyroxine'] = parseFloat(document.getElementById('total thyroxine').value);
+		results.pt = parseFloat(document.getElementById('pt').value);
+		results.inr = parseFloat(document.getElementById('inr').value);
+		results.ptt = parseFloat(document.getElementById('ptt').value);
+		results.ammonia = parseFloat(document.getElementById('ammonia').value);
+		
 		results.WBC = parseFloat(document.getElementById('WBC').value);
 		results.RBC = parseFloat(document.getElementById('RBC').value);
 		results.Hgb = parseFloat(document.getElementById('Hgb').value);
@@ -575,6 +601,7 @@ printAbnormalities();
 		results.MCV = parseFloat(document.getElementById('MCV').value);
 		results['Abs Neutrophils'] = parseFloat(document.getElementById('Abs Neutrophils').value);
 		results['Abs Imm Gran'] = parseFloat(document.getElementById('Abs Immature Granulocytes').value);
+		results['Abs Bands'] = parseFloat(document.getElementById('Abs Bands').value);
 		results['Abs Lymphocytes'] = parseFloat(document.getElementById('Abs Lymphocytes').value);
 		results['Abs Monocytes'] = parseFloat(document.getElementById('Abs Monocytes').value);
 		results['Abs Eosinophils'] = parseFloat(document.getElementById('Abs Eosinophils').value);
@@ -586,6 +613,7 @@ printAbnormalities();
 		results.pO2 = parseFloat(document.getElementById('pO2').value);
 		results.HCO3 = parseFloat(document.getElementById('HCO3').value);
 		results.BE = parseFloat(document.getElementById('BE').value);
+		
 		
 		/* UA results
 		
@@ -599,7 +627,8 @@ printAbnormalities();
 		results["ANC"] = calcANC(results['Abs Neutrophils'],results['Abs Imm Gran']);
 		results['osmolality'] = calcOsmolality(results.sodium,results.BUN,results.glucose);
 		results['A/G ratio'] = calcA_GRatio(results.albumin,results.totalprotein);
-		results['MELD'] = calcMELD(results.creatinine,results.bilirubin,results.sodium,1);
+		
+		results['MELD'] = calcMELD(results.creatinine,results.bilirubin,results.sodium,results.inr);
 		
 		
 		results['ABG interpretation'] = calcABGinterpretation(results.pH,results.pO2,results.pCO2,results.HCO3,results.BE);
@@ -806,9 +835,11 @@ printAbnormalities();
 	}
 
 	function calcMELD(creatinine,bilirubin,sodium,INR) {
+		console.log(INR);
 		if (creatinine < 1) {creatinine = 1};
 		if (bilirubin < 1) {bilirubin = 1};
 		if (INR < 1) {INR = 1};
+		if (INR == undefined) {INR = 1};
 		if (creatinine > 4) {creatinine = 4};
 		if (sodium < 125) {sodium = 125};
 		if (sodium > 137) {sodium = 137};
