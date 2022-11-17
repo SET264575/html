@@ -27,25 +27,30 @@ ABG
 
 
 <html>
-<head>
-<title>
-Lab Analyzer
-</title>
-<style>
-input {
-	width: 40px;
-}
-table,td {
-	vertical-align: top;
-}
-</style>
-<link rel="stylesheet" href = "style.css">
-</head>
+	<head>
+		<title>
+			Lab Analyzer
+		</title>
+		<style>
+			input {
+				width: 40px;
+			}
+			table,td {
+				vertical-align: top;
+			}
+			hr {
+				width: 80%;
+				border-top: 3px solid blue;
+				height: 20px;
+			}
+		</style>
+		<link rel="stylesheet" href = "style.css">
+	</head>
 
 <body>
 	<h4>This is a beta version.  Information provided is incomplete and possibly wrong. It can be used to suggest additional diagnoses or actions. <br>
 		It should not be relied upon.  Functionality is subject to frequent changes and occasional breakage.</h4>
-	<hr style = "width: 80%; margin: auto; border-top: 3px solid black">
+	<hr>
 	<table>
 		<tr>
 			<td>
@@ -65,7 +70,7 @@ table,td {
 			</td>
 		</tr>
 	</table>
-	<hr style = "width: 100%; border-top: 3px solid blue;">
+	<hr>
 	<table>
 		<td style = "width: 50px">
 		</td>
@@ -182,6 +187,14 @@ table,td {
 				</tr>
 				<tr>
 					<td>
+						<label for = "phosphorus">Phosphorus</label>
+					</td>
+					<td>
+						<input type = "text" id = "phosphorus"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<label for = "albumin">albumin</label>
 					</td>
 					<td>
@@ -283,30 +296,6 @@ table,td {
 					</td>
 					<td>
 						<input type = "text" id = "lactate"><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label for = "pt">PT</label>
-					</td>
-					<td>
-						<input type = "text" id = "PT"><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label for = "inr">INR</label>
-					</td>
-					<td>
-						<input type = "text" id = "inr"><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label for = "ptt">PTT</label>
-					</td>
-					<td>
-						<input type = "text" id = "ptt"><br>
 					</td>
 				</tr>
 			</table>
@@ -484,6 +473,37 @@ table,td {
 						<input type = "text" id = "BE"><br>
 					</td>
 				</tr>
+				<tr>
+				</tr>
+				<tr>
+					<td style = "column-span: 2">
+						<h4>Coags</h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "pt">PT</label>
+					</td>
+					<td>
+						<input type = "text" id = "PT"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "inr">INR</label>
+					</td>
+					<td>
+						<input type = "text" id = "inr"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "ptt">PTT</label>
+					</td>
+					<td>
+						<input type = "text" id = "ptt"><br>
+					</td>
+				</tr>
 			</table>
 		</td>
 		<td style = "width: 40px"></td>
@@ -554,6 +574,7 @@ table,td {
 		</tr>
 	<tr><td></td><td></td><td></td><td></td><td>			<button onclick="calc()">Submit</button></td></tr>
 	</table>
+	<hr>
 	<table>
 		</tr>
 		<td style = "width: 40px"></td>
