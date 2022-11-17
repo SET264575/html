@@ -48,8 +48,8 @@ table,td {
 <table>
 	<tr>
 		<td>
-		<textarea id = "textarea" onchange = "parseLabs()"></textarea><br>
-		<p style="width: 400px">
+		<textarea id = "textarea" style="width: 200px; height: 200px" onchange = "parseLabs()"></textarea><br>
+		<p style="width: 200px">
 		Lab results can be bulk copied from Meditech using the lab summary under the "Activity" tab and then pasted into the box above.<br>
 		The parser is very robust.  You can copy everything on the webpage with Ctrl-A and Ctrl-C and paste it here.
 			</p><br>
@@ -195,6 +195,14 @@ table,td {
 					</td>
 					<td>
 						<input type = "text" id = "troponin"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for = "Pro BNP">pro BNP</label>
+					</td>
+					<td>
+						<input type = "text" id = "pro bnp"><br>
 					</td>
 				</tr>
 			</table>
