@@ -43,25 +43,30 @@ ABG
 				border-top: 3px solid blue;
 				height: 20px;
 			}
+			.centered {
+				margin: auto;
+			}
 		</style>
 		<link rel="stylesheet" href = "style.css">
 	</head>
 
 <body>
+	<div class="centered">
 	<h4>This is a beta version.  Information provided is incomplete and possibly wrong. It can be used to suggest additional diagnoses or actions. <br>
 		It should not be relied upon.  Functionality is subject to frequent changes and occasional breakage.</h4>
+	</div>
 	<hr>
 	<table>
 		<tr>
-			<td  style = "width: 33%">
+			<td  style = "width: 33%" class="centered">
 				<p style="width: 200px">
 				Lab results can be bulk copied from Meditech using the lab summary under the "Activity" tab and then pasted into the box to the right.<br>
 				The parser is very robust.  You can copy everything on the webpage with Ctrl-A and Ctrl-C and paste it here.</p><br>
 			</td>
-			<td style = "width: 33%">
+			<td style = "width: 33%" class = "centered">
 				<textarea id = "textarea" style="width: 200px; height: 200px" onchange = "parseLabs()"></textarea><br>
 			</td>
-			<td style = "width: 33%">
+			<td style = "width: 33%" class="centered">
 				<div style="border: 1px solid black">
 					<h3>These buttons are for testing purposes.</h3>
 					<button onclick="setTestValues(0)">Set Values Low</button><br>
