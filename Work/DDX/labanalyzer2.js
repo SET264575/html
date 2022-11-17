@@ -896,14 +896,19 @@ printAbnormalities();
 		if (pH > 7.34 && pH < 7.46) {
 			process = "normal";
 			if (HCO3 < 22 && pCO2 < 35) {
-				process = "normal pH, likely mixed respiratory alkalosis & metabolic acidosis OR chronic (fully compensated) respiratory alkalosis" ;
+				process = "normal pH, likely mixed respiratory alkalosis & metabolic acidosis OR chronic (fully compensated) respiratory alkalosis";
 			}
 			if (HCO3 > 26 && pCO2 > 45) {
 				process = "normal pH, likely chronic (fully compensated) respiratory failure OR mixed respiratory acidosis & metabolic alkalosis";
 			}
 		}
 		
-		
+		if (BE > 2) {
+			process = ". BE suggests a metabolic alkalosis.";
+		}
+		if (BE < -2) {
+			process = ". BE suggests a metabolic acidosis.";
+		}
 		
 		//step1.  Is ABG internally consistent?
 		/*var h = 24*(pCO2)/HCO3;
@@ -1034,7 +1039,7 @@ printAbnormalities();
 		
 		*/
 		
-		return(oxygenation + "with " + process);
+		return(oxygenation + " with " + process);
 	} 
 		
 
