@@ -618,7 +618,7 @@ printAbnormalities();
 		document.getElementById("osmolality").innerHTML = "Serum osmolality = " + results['osmolality'] + ' (275-295)';
 		document.getElementById("A/G ratio").innerHTML = "Albumin/Globulin ratio = " + results['A/G ratio'] + ' (0.8-2)';
 		document.getElementById("MELD").innerHTML = "MELD score (assuming no dialysis and normal INR) = " + results['MELD']+ ' (<10)';
-		document.getElementById("ABG interpretation').innerHTML = "ABG interpretation: " + results['ABG interpretation'];
+		document.getElementById("ABG interpretation").innerHTML = "ABG interpretation: " + results['ABG interpretation'];
 		/*
 		document.getElementById("ABG interpretation").innerHTML = "ABG interpretation: " + results["ABG interpretation"];
 		*/
