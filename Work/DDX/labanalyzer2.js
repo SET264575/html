@@ -904,10 +904,10 @@ printAbnormalities();
 		}
 		
 		if (BE > 2) {
-			process = ". BE suggests a metabolic alkalosis.";
+			process = process + ". BE suggests a metabolic alkalosis.";
 		}
 		if (BE < -2) {
-			process = ". BE suggests a metabolic acidosis.";
+			process = process + ". BE suggests a metabolic acidosis.";
 		}
 		
 		//step1.  Is ABG internally consistent?
