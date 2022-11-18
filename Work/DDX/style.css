@@ -3,7 +3,7 @@ ul, #myUL {
   margin: 0;
 }
 
-#myUL {
+li,#myUL {
   margin: 0;
   padding: 0;
 }
