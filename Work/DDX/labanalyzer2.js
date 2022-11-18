@@ -1166,7 +1166,7 @@ console.log("in tree");
 		//  toggler[i].parentElement.querySelector(".nested").classList.toggle("active");//
 		//  toggler[i].classList.toggle("caret-down");
 		  toggler[i].addEventListener("click", function() {
-		    console.log('clicked');
+		//    console.log('clicked');
 		    this.parentElement.querySelector(".nested").classList.toggle("active");
 		    this.classList.toggle("caret-down");
 		  });
