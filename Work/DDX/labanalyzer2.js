@@ -733,7 +733,7 @@ printAbnormalities();
 		//console.log(abnormalities);
 		createDiseaseList(abnormalities);
 		developDifferential(abnormalities);		
-		setTimeout(tree,15000);
+		setTimeout(tree,8000);
 	}	
 
 	function createDiseaseList(abnormalities){
