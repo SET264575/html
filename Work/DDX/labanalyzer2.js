@@ -730,9 +730,10 @@ printAbnormalities();
 		if(results['AST/ALT ratio']<0.9){
 			abnormalities.push('AST/ALT ratio < 0.9');
 		}
-		console.log(abnormalities);
+		//console.log(abnormalities);
 		createDiseaseList(abnormalities);
 		developDifferential(abnormalities);		
+		setInterval(tree(),15000);
 	}	
 
 	function createDiseaseList(abnormalities){
@@ -792,8 +793,7 @@ printAbnormalities();
 			appendDifferential(abnormality_site[abnormalities[i]]);
 			//console.log(keys[i]);
 		}
-		console.log("entering tree");
-		tree();
+
 	}
 
 	function appendDifferential(target) {
