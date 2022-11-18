@@ -93,7 +93,6 @@ class Lab{
 					score++;
 				}
 			}
-			console.log(this.name,score);
 			return(score);
 		}
 				
