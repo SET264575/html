@@ -35,4 +35,5 @@ ul, #myUL {
 
 .active {
   display: block;
+  margin: 0;
 }
