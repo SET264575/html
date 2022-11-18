@@ -792,6 +792,7 @@ printAbnormalities();
 			appendDifferential(abnormality_site[abnormalities[i]]);
 			//console.log(keys[i]);
 		}
+		console.log("entering tree");
 		tree();
 	}
 
@@ -1158,7 +1159,7 @@ printAbnormalities();
 	function tree() {
 		var toggler = document.getElementsByClassName("caret");
 		var i;
-
+console.log("in tree");
 		for (i = 0; i < toggler.length; i++) {
 		//  toggler[i].parentElement.querySelector(".nested").classList.toggle("active");//
 		//  toggler[i].classList.toggle("caret-down");
