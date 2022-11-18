@@ -155,17 +155,34 @@ class Lab{
 	labs.push(new Lab("lipase","Lip",0,99,'***ignore***','elevated lipase'));
 	labs.push(new Lab('troponin','Troponin T',0,0.1,'***ignore***','elevated troponin'));
 	labs.push(new Lab('Ammonia','Ammonia',25,94,'***ignore***','hyperammonemia'));
-labs.push(new Lab('Uric acid','Uric acid',0,0,'***ignore***','***ignore***'));
-labs.push(new Lab('CK','CK',0,0,'***ignore***','***ignore***'));
-labs.push(new Lab('procalcitonin','Procalcitonin',0,1,'***ignore***','***ignore***'));
-labs.push(new Lab('lactate','Lactate',0,2,'***ignore***','***ignore***'));
-labs.push(new Lab('phosphorus','phosphorus',2.3,4.5,'***ignore***','***ignore***'));
-labs.push(new Lab('pro bnp','Pro-BNP',0,0,'***ignore***','***ignore***'));
-labs.push(new Lab('TSH','TSH',0,0,'***ignore***','***ignore***'));
-labs.push(new Lab('total thyroxine','total thyroxine',0,0,'***ignore***','***ignore***'));
-labs.push(new Lab('PT','PT',0,0,'***ignore***','***ignore***'));
-labs.push(new Lab('INR','INR',0,0,'***ignore***','***ignore***'));
-labs.push(new Lab('PTT','PTT',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Uric acid','Uric acid',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('CK','CK',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('procalcitonin','Procalcitonin',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('lactate','Lactate',0,2,'***ignore***','***ignore***'));
+	labs.push(new Lab('phosphorus','phosphorus',2.3,4.5,'***ignore***','***ignore***'));
+	labs.push(new Lab('pro bnp','Pro-BNP',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('TSH','TSH',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('total thyroxine','total thyroxine',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('PT','PT',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('INR','INR',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('PTT','PTT',0,0,'***ignore***','***ignore***'));
+
+/*ddx to add as .html
+
+elevated uric acid
+elevated ck
+elevated procalcitonin
+elevated lactate
+hyperphosphatemia
+hypophosphatemia
+elevated pro bnp
+elevated tsh
+low tsh
+elevated thyroxine
+low thyroxine
+elevated INR
+elevated PTT
+*/
 
 /*
 labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
