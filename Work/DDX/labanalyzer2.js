@@ -891,7 +891,9 @@ printAbnormalities();
 		var acid_basestatus = "normal";
 		var process = "normal acid/base status";
 		var compensation = "none";
-		
+		if (pH == NaN || pO2 == NaN || pCO2 == NaN || HCO3 == NaN || BE == NaN) {
+			return("incomplete data");
+		}
 		//oxygenation
 		if (pO2 < 75) {
 			oxygenation = "hypoxemic";
