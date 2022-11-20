@@ -125,6 +125,7 @@ class Lab{
 	diseases.push(new Disease("steroid use",['hyperglycemia','leukocytosis'],[''],2,''));
 	diseases.push(new Disease("pancytopenia",['anemia','leukopenia','thrombocytopenia'],[''],3,''));
 	diseases.push(new Disease("cirrhosis",["anemia","thrombocytopenia","elevated AST","elevated ALT","hyponatremia"],['thrombocytopenia'],3,''));
+	diseases.push(new Disease("biliary obstruction",['elevated alkaline phosphatase','hyperbilirubinemia','elevated AST','elevated ALT'],['elevated alkaline phosphatase'],3,''));
 	diseases.push(new Disease("Ehrlichiosis",["leukopenia","lymphopenia","thrombocytopenia","hyponatremia","elevated AST","elevated ALT"],[''],2,''));
 	diseases.push(new Disease("hemolytic-uremic syndrome",['anemia','thrombocytopenia','elevated creatinine','elevated BUN'],['anemia'],3,''));
 	diseases.push(new Disease("TTP",['anemia','thrombocytopenia','elevated creatinine','elevated BUN'],['thrombocytopenia'],3,''));
@@ -181,6 +182,10 @@ elevated thyroxine
 low thyroxine
 elevated INR
 elevated PTT
+
+elevated specific gravity
+elevated urine glucose
+elevated urine leukocyte esterase
 */
 
 /*
