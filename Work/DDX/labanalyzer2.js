@@ -897,6 +897,7 @@ printAbnormalities();
 		var acid_basestatus = "normal";
 		var process = "normal acid/base status";
 		var compensation = "none";
+		console.log('pH=',pH);
 		if (pH == NaN | pO2 == NaN | pCO2 == NaN | HCO3 == NaN | BE == NaN) {
 			return("incomplete data");
 		}
