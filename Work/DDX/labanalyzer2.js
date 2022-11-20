@@ -789,6 +789,7 @@ printAbnormalities();
 
 		t = t + '<h3>Differential Diagnoses</h3>';
 		document.getElementById("ddx").innerHTML = t;
+		console.log(t);
 		document.getElementById("suggestions").innerHTML = s;
 
 		//var keys = Object.keys(abnormalities);
