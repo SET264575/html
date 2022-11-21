@@ -1,7 +1,6 @@
 /*
 
 Currently working on:
-	1. Tree view
 	2. Add suggestions for diseases
 	3. Add differential diagnoses for current labs
 	4. Add suggestions for current labs
@@ -18,6 +17,7 @@ How to add a new lab:
 Things to fix:
 	AST/ALT doesn't turn red
 	ANC calculated wrong
+	Shrink tree view spacing
 	
 Things to complete:
 	Add labs:
@@ -898,7 +898,7 @@ printAbnormalities();
 		var process = "normal acid/base status";
 		var compensation = "none";
 		console.log('pH=',pH);
-		if (pH == NaN | pO2 == NaN | pCO2 == NaN | HCO3 == NaN | BE == NaN) {
+		if (isNaN(pH) | isNaN(pO2) | isNaN(pCO2) | isNaN(HCO3)| isNaN(BE)) {
 			return("incomplete data");
 		}
 		//oxygenation
