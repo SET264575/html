@@ -373,6 +373,30 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 	abnormality_site["hypoalbuminemia"] = "hypoalbuminemia.html";
 	abnormality_site["hyperalbuminemia"] = "hyperalbuminemia.html";
 	abnormality_site["low total protein"] = "low total protein.html";
+	abnormality_site['hypophosphatemia'] = 'hypophosphatemia.html';
+	abnormality_site['hyperphosphatemia'] = 'hyperphosphatemia.html';
+	abnormality_site['agrandulocytosis'] = 'agranulocytosis.html';
+	abnormality_site['basophilia'] = 'basophilia.html';
+	abnormaltiy_site['elevated creatine phosphokinase'] = 'elevated creatine phosphokinase';
+	abnormality_site['elevated ESR'] = 'elevated ESR.html';
+	abnormality_site['elevated INR'] = 'elevated INR.html';
+	abnormality_site['elevated osmolar gap'] = 'elevated osmolar gap.html';
+	abnormality_site['elevated pro BNP'] = 'elevated pro BNP.html';
+	abnormality_site['elevated procalcitonin'] = 'elevated procalcitonin.html';
+	abnormality_site['elevated uric acid'] = 'elevated uric acid.html';
+	abnormality_site['leukemoid reaction'] = 'leukemoid reaction.html';
+	abnormality_site['leukopenia'] = 'leukopenia.html';
+	abnormality_site['lymphocytosis'] = 'lymphocytosis.html';
+	abnormality_site['monocytosis'] = 'monocytosis.html';
+	abnormality_site['eosinophilia'] = 'eosinophilia.html';
+	abnormality_site['neutropenia'] = 'neutropenia.html';
+	abnormality_site['neutrophilia'] = 'neutrophilia.html';
+	abnormality_site['polycythemia'] = 'polycythemia.html';
+	abnormality_site['thrombocytopenia'] = 'thrombocytopenia.html';
+	abnormality_site['thrombocytosis'] = 'thrombocytosis.html';
+/*	abnormality_site[''] = '';
+	abnormality_site[''] = '';*/
+
 /*
 	abnormality_site["elevated lipase"] = "elevated lipase.html";
 	abnormality_site["low A/G ratio"] = "low A/G ratio.html";
@@ -380,25 +404,16 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 */
 	abnormality_site["elevated troponin"] = "elevated troponin.html";
 /*
-	abnormality_site["leukocytosis"] = "leukocytosis.html";
-	abnormality_site["leukopenia"] = "leukopenia.html";
-	abnormality_site["polycythemia"] = "polycythemia.html";
-*/
-	abnormality_site["anemia"] = "anemia.html";
-/*
+
 	abnormality_site["microcytosis"] = "microcytosis.html";
 	abnormality_site["macrocytosis"] = "macrocytosis.html";
-	abnormality_site["thrombocytopenia"] = "thrombocytopenia.html";
-	abnormality_site["thrombocytosis"] = "thrombocytosis.html";
+
 */ 
-//	console.log('at line 321');
-	abnormality_site["eosinophilia"] = "eosinophilia.html";
+
 /*	abnormality_site["high anion gap acidosis"] = "high anion gap acidosis.html";
 	abnormality_site["AST/ALT ratio > 2.5"] = "AST/ALT ratio > 2.5.html";
 	abnormality_site["AST/ALT ratio between 1.5 and 2.5"] = "AST/ALT ratio between 1.5 and 2.5.html";
 	abnormality_site["AST/ALT ratio less than 0.9"] = "AST/ALT ratio less than 0.9.html";
-	abnormality_site["neutropenia"] = "neutropenia.html";
-	abnormality_site["neutrophilia"] = "neutrophilia.html";
 
 	abnormality_site["teardrop"] = "teardrop.html";
 	abnormality_site["smudge"] = "smudge.html";
