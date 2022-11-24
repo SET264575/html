@@ -840,7 +840,7 @@ printAbnormalities();
 			t.replace('\t','');
 			CurrentDiv.innerHTML = t;
 			//console.log(t,'in copyIframe');
-			CurrentDiv.style.display = 'block';
+			//CurrentDiv.style.display = 'block';
 		}
 	}
 
