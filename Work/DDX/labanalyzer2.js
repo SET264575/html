@@ -753,6 +753,8 @@ printAbnormalities();
 		//console.log(abnormalities);
 		createDiseaseList(abnormalities);
 		developDifferential(abnormalities);		
+		document.getElementById('ddx').innerHTML.replace('</div>','');
+		document.getElemnetById('ddx').innerHTML.replace('<div','<divx');
 		setTimeout(tree,6000);
 	}	
 
@@ -842,6 +844,7 @@ printAbnormalities();
 			t = t.replaceAll('</div>','');
 				   
 			CurrentDiv.innerHTML = t;
+			console.log(t);
 			//console.log(t,'in copyIframe');
 			//CurrentDiv.style.display = 'block';
 		}
