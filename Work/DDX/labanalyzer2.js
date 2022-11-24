@@ -753,9 +753,7 @@ printAbnormalities();
 		//console.log(abnormalities);
 		createDiseaseList(abnormalities);
 		developDifferential(abnormalities);		
-		document.getElementById('ddx').innerHTML.replaceAll('</div>','');
-		document.getElementById('ddx').innerHTML.replaceAll('<div','<divx');
-		console.log(document.getElementById('ddx').innerHTML);
+
 		setTimeout(tree,6000);
 	}	
 
@@ -1188,17 +1186,19 @@ printAbnormalities();
 	function tree() {
 		var toggler = document.getElementsByClassName("caret");
 		var i;
+		
+		document.getElementById('ddx').innerHTML.replaceAll('</div>','');
+		document.getElementById('ddx').innerHTML.replaceAll('<div','<divx');
+		console.log(document.getElementById('ddx').innerHTML);
 console.log("in tree");
 		for (i = 0; i < toggler.length; i++) {
-		//  toggler[i].parentElement.querySelector(".nested").classList.toggle("active");//
-		//  toggler[i].classList.toggle("caret-down");
 		  toggler[i].addEventListener("click", function() {
-		//    console.log('clicked');
 		    this.parentElement.querySelector(".nested").classList.toggle("active");
 		    this.classList.toggle("caret-down");
 		  });
 		}
 	}
+
 
 
 	function printAbnormalities(){
