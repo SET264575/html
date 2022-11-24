@@ -1190,6 +1190,8 @@ printAbnormalities();
 		
 		t = document.getElementById('ddx').innerHTML.replaceAll('</div>','');
 		t = t.replaceAll('<div','<divx');
+		t = t.replaceAll('\t','');
+		t = t.replaceAll('\n','');
 		document.getElementById('ddx').innerHTML = t;
 		console.log(document.getElementById('ddx').innerHTML);
 console.log("in tree");
