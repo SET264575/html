@@ -1186,9 +1186,11 @@ printAbnormalities();
 	function tree() {
 		var toggler = document.getElementsByClassName("caret");
 		var i;
+		var t;
 		
-		document.getElementById('ddx').innerHTML.replaceAll('</div>','');
-		document.getElementById('ddx').innerHTML.replaceAll('<div','<divx');
+		t = document.getElementById('ddx').innerHTML.replaceAll('</div>','');
+		t = t.replaceAll('<div','<divx');
+		document.getElementById('ddx').innerHTML = t;
 		console.log(document.getElementById('ddx').innerHTML);
 console.log("in tree");
 		for (i = 0; i < toggler.length; i++) {
