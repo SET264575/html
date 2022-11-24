@@ -842,7 +842,7 @@ printAbnormalities();
 			t = window.frames[iframeId].document.body.innerHTML;
 				   
 			CurrentDiv.innerHTML = t;
-			console.log(t);
+			//console.log(t);
 			//console.log(t,'in copyIframe');
 			//CurrentDiv.style.display = 'block';
 		}
