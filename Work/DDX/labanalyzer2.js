@@ -837,6 +837,7 @@ printAbnormalities();
 		var t = "";
 		if (window.frames[iframeId] && CurrentDiv ) {
 			t = window.frames[iframeId].document.body.innerHTML;
+			t.replace('\t','');
 			CurrentDiv.innerHTML = t;
 			//console.log(t,'in copyIframe');
 			CurrentDiv.style.display = 'block';
