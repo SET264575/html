@@ -377,7 +377,7 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 	abnormality_site['hyperphosphatemia'] = 'hyperphosphatemia.html';
 	abnormality_site['agrandulocytosis'] = 'agranulocytosis.html';
 	abnormality_site['basophilia'] = 'basophilia.html';
-	abnormaltiy_site['elevated creatine phosphokinase'] = 'elevated creatine phosphokinase';
+	abnormaltiy_site['elevated creatine phosphokinase'] = 'elevated creatine phosphokinase.html';
 	abnormality_site['elevated ESR'] = 'elevated ESR.html';
 	abnormality_site['elevated INR'] = 'elevated INR.html';
 	abnormality_site['elevated osmolar gap'] = 'elevated osmolar gap.html';
