@@ -3,71 +3,111 @@
 		<link rel = 'stylesheet' href = 'style.css'>
 	</head>
 	<body>
+		<button onclick = 'showAll()'>Show All</button>
 		<ul id = 'myUL'>
-<li><span class = 'caret'>Neck pain</span>
-	<ul class = 'nested'>
-<li><span class = 'caret'>By system:</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspSkeletal:</li>
-</ul>
-</ul>
-<li><span class = 'caret'></span>
-	<ul class = 'nested'>
-<li><span class = 'caret'>Vascular:</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspTemporal (giant cell) arteritis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspCarotid artery aneurysm or carotid dissection</li>
-</ul>
-<li><span class = 'caret'>Neurologic:</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspNeoplasm e.g. spinal cord tumor</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspMetastatic cancer</li>
-</ul>
-<li><span class = 'caret'>Endocrine:</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspThyroiditis</li>
-</ul>
-<li><span class = 'caret'>Referred from brain:</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspSubarachnoid hemorrhage</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspMeningitis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspMigraine</li>
-</ul>
-<li><span class = 'caret'>Infection:</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspOsteomyelitis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspDeep neck infection, eg, Ludwig’s angina</li>
-</ul>
-<li><span class = 'caret'>Skeletal:</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspNeck strain, eg, poor sleeping posture, whiplash injury</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspWhiplash associated disorder (WAD)</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspDystonia</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspTorticollis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspFibromyalgia</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspThoracic outlet syndrome</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspShoulder disorder</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspCompression fracture</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspOsteoarthritis, eg, cervical spondylosis seen on x-ray</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspDiffuse idiopathic skeletal hyperostosis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspSpinal stenosis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspTrauma</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHerniated disk (discogenic neck pain)</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspRadiculopathy</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspCervical myelopathy</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspReferred pain</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspmultiple sclerosis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspMotor neuron disease</li>
-</ul>
-<li><span class = 'caret'>Rheumatologic:</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspRheumatoid arthritis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspAnkylosing spondylitis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspSpondyloarthropathies</li>
-</ul>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspAxial neck pain</li>
-</ul>
-</ul>
+		<li><span class = 'caret'>Neck pain</span>
+		<ul class = 'nested'>
+		<li><span class = 'caret'>By system:</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSkeletal:</li>
+		</ul>
+		</ul>
+		<li><span class = 'caret'></span>
+		<ul class = 'nested'>
+		<li><span class = 'caret'>Vascular:</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspTemporal (giant cell) arteritis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCarotid artery aneurysm or carotid dissection</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspJugular venous thrombosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCarotidynia</li>
+		</ul>
+		<li><span class = 'caret'>Cancer:</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspNeoplasm e.g. spinal cord tumor</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMetastatic cancer</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHead & neck cancer</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspChordoma</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMultiple myeloma</li>
+		</ul>
+		<li><span class = 'caret'>Endocrine:</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspThyroiditis</li>
+		</ul>
+		<li><span class = 'caret'>GI:</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspEsophageal trauma</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspEsophageal obstruction</li>
+		</ul>
+		<li><span class = 'caret'>Referred from brain:</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSubarachnoid hemorrhage</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMigraine</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAcute coronary syndrome</li>
+		</ul>
+		<li><span class = 'caret'>Infection:</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspOsteomyelitis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspDiskitis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspEpidural abscess</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHerpes zoster</li>
+		<li><span class = 'caret'>Deep neck infection</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspLudwig’s angina</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspLemeire's syndrome</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspRetropharyngeal abscess</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspEpiglottitis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMeningitis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMononucleosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspRubella</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspLymphadenitis</li>
+		</ul>
+		<li><span class = 'caret'>Skeletal:</span>
+		<ul class = 'nested'>
+		<li><span class = 'caret'>Neck strain</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbsppoor sleeping posture</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspwhiplash injury</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspWhiplash associated disorder (WAD)</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspDystonia</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspTorticollis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspFibromyalgia</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspThoracic outlet syndrome</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspShoulder disorder</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCompression fracture</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCervical fracture</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspJumped facet</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspOsteoarthritis, eg, cervical spondylosis seen on x-ray</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspDiffuse idiopathic skeletal hyperostosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSpinal stenosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCongenital cervical rib</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspTrauma</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHerniated disk (discogenic neck pain)</li>
+		</ul>
+		<li><span class = 'caret'>Neurologic:</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspRadiculopathy</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCervical myelopathy</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspReferred pain</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspmultiple sclerosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMotor neuron disease</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspTransverse myelitis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAmyotrophic lateral sclerosis</li>
+		</ul>
+		<li><span class = 'caret'>Rheumatologic:</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspRheumatoid arthritis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAnkylosing spondylitis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSpondyloarthropathies</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspPolymyalgia rheumatica</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAnkylosing spondylitis</li>
+		</ul>
+		<li><span class = 'caret'>Axial neck pain</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCervical strain</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCervical discogenic pain</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCervicl facet syndrome</li>
 		</ul>
 		<script src = 'tree.js'></script>
 	</body>

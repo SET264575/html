@@ -1,15 +1,88 @@
 <html>
-<head>
-<link rel = 'stylesheet' href = 'style.css'>
-</head>
+	<head>
+		<link rel = 'stylesheet' href = 'style.css'>
+	</head>
 	<body>
+		<button onclick = 'showAll()'>Show All</button>
 		<ul id = 'myUL'>
-<li><span class = 'caret'>hypoglycemia</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspinsulin use</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspsulfonylurea use</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspstarvation</li>
-</ul>
-<script src = 'tree.js'></script>
+		<li><span class = 'caret'>Hypoglycemia</span>
+		<ul class = 'nested'>
+		<li><span class = 'caret'>Endocrinopathies</span>
+		<ul class = 'nested'>
+		<li><span class = 'caret'>Adrenal insufficiency</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAddison disease</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspACTH deficiency</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspGrowth hormone deficiency</li>
+		<li><span class = 'caret'>Hyperinsulinism</span>
+		<ul class = 'nested'>
+		<li><span class = 'caret'>Endogenous</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspGenetic</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspBeta-cell tumor</li>
+		</ul>
+		<li><span class = 'caret'>Exogenous</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspIntentional</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAccidental overdose</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspInadequate calorie intake with normal insulin use</li>
+		</ul>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHyperthyroidism</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHypopituitarism</li>
+		</ul>
+		<li><span class = 'caret'>Congenital</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMedium chain acyl-CoA dehydrogenase deficiencies</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspGlycogen storage diseases - Types 0, I, IV, V and VI</li>
+		</ul>
+		<li><span class = 'caret'>Drugs</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspInsulin</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspOral secretagogue</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAlcohol</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspBeta-blocker</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspACE inhibitor</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAcetaminophen overdose</li>
+		</ul>
+		<li><span class = 'caret'>Critical illness</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSepsis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMI</li>
+		</ul>
+		<li><span class = 'caret'>Organ failure</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspLiver failure</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspRenal failure</li>
+		</ul>
+		<li><span class = 'caret'>Malignancy</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspInsulinoma</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspNon-islet cell tumor</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspInsulin/receptor autoantibodies</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHigh tumor burden</li>
+		</ul>
+		<li><span class = 'caret'>Artifactual</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSpecimen collection</li>
+		<li><span class = 'caret'>Consumption</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspLeukemia</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspErythrocytosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHemolytic disease</li>
+		</ul>
+		</ul>
+		<li><span class = 'caret'>Post-surgical</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspGastric bypass</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspGastrectomy</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspPylorplasty</li>
+		</ul>
+		<li><span class = 'caret'>Starvation</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAnorexia nervosa</li>
+		</ul>
+		<script src = 'tree.js'></script>
 	</body>
 </html>
