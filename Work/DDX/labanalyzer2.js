@@ -820,10 +820,7 @@ Ur Bact trace
 			if (diseases[i].score(abnormalities) > 1) {
 				t = t + diseases[i].name +"\n";
 				s = s + diseases[i].name + "\n"+suggestion[diseases[i].name] + '\n';
-				console.log(s);
-			//	t = t + "\t" + "suggested by:\n";
 				for (let j = 0; j < diseases[i].indicators.length; j++) {
-					//console.log(diseases[i].indicators[j],'in inner loop');
 					if (abnormalities.includes(diseases[i].indicators[j])) {
 						t = t + "\t"+diseases[i].indicators[j] + "\n";
 					}
@@ -840,17 +837,6 @@ Ur Bact trace
 		var t  = '';
 		var s = '';
 		t = t + '<h3>Abnormal Labs</h3>\n';
-		//s = s + '<h3>Suggestions</h3>\n';
-
-		/*show all suggestions
-		if(false){
-			var keys = Object.keys(suggestion);
-			for (let i = 0; i<keys.length;i++){
-				s = s + keys[i] + '\n\t' + suggestion[keys[i]]+'\n\n';
-			}
-		}
-		*/
-
 
 		for (let i = 0; i < abnormalities.length; i++){
 			t = t + '  ' + abnormalities[i] + '\n';
@@ -861,22 +847,17 @@ Ur Bact trace
 
 		t = t + '<h3>Differential Diagnoses</h3>';
 		document.getElementById("ddx").innerHTML = t;
-		console.log(t);
 		document.getElementById("suggestions").innerHTML = s;
 
-		//var keys = Object.keys(abnormalities);
-		//console.log(keys,'keys');
 		FRAMECOUNT = 0;
 		for (let i = 0; i < abnormalities.length; i++){
 			appendDifferential(abnormality_site[abnormalities[i]]);
-			//console.log(keys[i]);
 		}
 
 	}
 
 	function appendDifferential(target) {
 		FRAMECOUNT = FRAMECOUNT + 1;
-		//console.log(target,'target');
 		var t = '';
 		t = t + '<div id = "display'+FRAMECOUNT + '"></div>';
 		t = t + '<iframe width="0" height = "0" id = "buffer';
@@ -885,8 +866,6 @@ Ur Bact trace
 		t = t + '\'buffer'+FRAMECOUNT+'\',';
 		t = t + '\'display'+FRAMECOUNT+'\'';
 		t = t + ')"></iframe>\n';
-		//console.log(t,'appendDiff');
-		console.log('in appendDiff');
 		document.getElementById('ddx').innerHTML = document.getElementById('ddx').innerHTML + t;
 	}
 
@@ -897,8 +876,6 @@ Ur Bact trace
 			t = window.frames[iframeId].document.body.innerHTML;
 				   console.log('in copyIframe');
 			CurrentDiv.innerHTML = t;
-			//console.log(t);
-			//console.log(t,'in copyIframe');
 			//CurrentDiv.style.display = 'block';
 		}
 	}
@@ -1248,15 +1225,9 @@ Ur Bact trace
 		t = document.getElementById('ddx').innerHTML.replaceAll('</div>','');
 		t = t.replaceAll('<div','<divx');
 		t = t.replaceAll('onload','oload');
-		//console.log(t);
-		console.log(t.length);
 		t = t.replaceAll('\t','');
 		t = t.replaceAll('\n','');
-		console.log(t.length);
-		console.log(t);
 		document.getElementById('ddx').innerHTML = t;
-		console.log(document.getElementById('ddx').innerHTML);
-console.log("in tree");
 		for (i = 0; i < toggler.length; i++) {
 		  toggler[i].addEventListener("click", function() {
 		    this.parentElement.querySelector(".nested").classList.toggle("active");
