@@ -410,6 +410,8 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 	abnormality_site['polycythemia'] = 'polycythemia.html';
 	abnormality_site['thrombocytopenia'] = 'thrombocytopenia.html';
 	abnormality_site['thrombocytosis'] = 'thrombocytosis.html';
+
+	abnormality_site['abnormal urine color'] = 'urine color.html';
 /*	abnormality_site[''] = '';
 	abnormality_site[''] = '';*/
 
