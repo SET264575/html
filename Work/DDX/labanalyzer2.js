@@ -1194,7 +1194,7 @@ printAbnormalities();
 		t = t.replaceAll('\t','');
 		t = t.replaceAll('\n','');
 		console.log(t);
-		document.getElementById('ddx').innerHTML = t;
+		document.getElementById('ddx').innerHTML = 'test\n\n\n\n'+t;
 		//console.log(document.getElementById('ddx').innerHTML);
 console.log("in tree");
 		for (i = 0; i < toggler.length; i++) {
