@@ -1193,8 +1193,13 @@ printAbnormalities();
 		//console.log(t);
 		t = t.replaceAll('\t','');
 		t = t.replaceAll('\n','');
+		var s = t.split('\n');
+		var u = '';
+		for (let j = 0; j<s.length; j++) {
+			u = u + s[j];
+		}
 		console.log(t);
-		document.getElementById('ddx').innerHTML = 'test\n\n\n\n'+t;
+		document.getElementById('ddx').innerHTML = 'test\n\n\n\n'+t + u;
 		//console.log(document.getElementById('ddx').innerHTML);
 console.log("in tree");
 		for (i = 0; i < toggler.length; i++) {
