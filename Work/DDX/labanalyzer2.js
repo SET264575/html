@@ -412,6 +412,16 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 	abnormality_site['thrombocytosis'] = 'thrombocytosis.html';
 
 	abnormality_site['abnormal urine color'] = 'urine color.html';
+	abnormality_site['proteinuria'] = 'proteinuria.html';
+	abnormality_site['ketonuria'] = 'ketonuria.html';
+	abnormality_site['hematuria'] = 'hematuria.html';
+	abnormality_site['glycosuria'] = 'glycosuria.html';
+	abnormality_site['alkaline urine'] = 'alkaline urine.html';
+	abnormality_site['urine bilirubin'] = 'bilirubin.html';
+	abnormality_site['casts'] = 'casts.html';
+	abnormality_site['low specific gravity'] = 'low specific gravity.html';
+	abnormality_site['elevated specific gravity'] = 'elevated specific gravity.html';
+	abnormality_site['pyuria'] = 'pyruria.html';
 /*	abnormality_site[''] = '';
 	abnormality_site[''] = '';*/
 
