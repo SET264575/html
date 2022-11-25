@@ -886,6 +886,7 @@ Ur Bact trace
 		t = t + '\'display'+FRAMECOUNT+'\'';
 		t = t + ')"></iframe>\n';
 		//console.log(t,'appendDiff');
+		console.log('in appendDiff');
 		document.getElementById('ddx').innerHTML = document.getElementById('ddx').innerHTML + t;
 	}
 
@@ -894,7 +895,7 @@ Ur Bact trace
 		var t = "";
 		if (window.frames[iframeId] && CurrentDiv ) {
 			t = window.frames[iframeId].document.body.innerHTML;
-				   
+				   console.log('in copyIframe');
 			CurrentDiv.innerHTML = t;
 			//console.log(t);
 			//console.log(t,'in copyIframe');
