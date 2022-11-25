@@ -1247,6 +1247,7 @@ Ur Bact trace
 		
 		t = document.getElementById('ddx').innerHTML.replaceAll('</div>','');
 		t = t.replaceAll('<div','<divx');
+		t = t.replaceAll('onload','oload');
 		//console.log(t);
 		console.log(t.length);
 		t = t.replaceAll('\t','');
