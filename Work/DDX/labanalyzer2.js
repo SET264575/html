@@ -1211,8 +1211,9 @@ printAbnormalities();
 		t = t.replaceAll('\t','');
 		t = t.replaceAll('\n','');
 		console.log(t.length);
+		console.log(t);
 		document.getElementById('ddx').innerHTML = t;
-		//console.log(document.getElementById('ddx').innerHTML);
+		console.log(document.getElementById('ddx').innerHTML);
 console.log("in tree");
 		for (i = 0; i < toggler.length; i++) {
 		  toggler[i].addEventListener("click", function() {
