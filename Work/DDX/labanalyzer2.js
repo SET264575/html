@@ -7,8 +7,8 @@ Currently working on:
 	5. Add new labs
 
 How to add a new lab:
-	1. Add lab = 
-	2. Add HTML for text box
+	1. Add lab = *
+	2. Add HTML for text box *
 	3. Add var result = 
 	4. Add ddx list as .html
 	5. Add abnormalities_sites = .html
@@ -665,6 +665,46 @@ printAbnormalities();
 		results.pO2 = parseFloat(document.getElementById('pO2').value);
 		results.HCO3 = parseFloat(document.getElementById('HCO3').value);
 		results.BE = parseFloat(document.getElementById('BE').value);
+		
+		results['Urine pH'] = parseFloat(document.getElementById('Urine pH').value);
+		results['Urine Specific Gravity'] = parseFloat(document.getElementById('Urine Specific Gravity').value);
+		results['Urine Bilirubin'] = document.getElementById('Urine Bilirubin').value;
+		results['Urine Urobilinogen'] = document.getElementById('Urine Urobilinogen').value;
+		results['Urine Protein'] = document.getElementById('Urine Protein').value;
+		results['Urine Glucose'] = document.getElementById('Urine Glucose').value;
+		results['Urine RBC'] = document.getElementById('Urine RBC').value;
+		results['Urine WBC'] = document.getElementById('Urine WBC').value;
+		results['Urine WBC Clumps'] = document.getElementById('Urine WBC Clumps').value;
+		results['Urine Nitrite'] = document.getElementById('Urine Nitrite').value;
+		results['Urine Ketones'] = document.getElementById('Urine Ketones').value;
+		results['Urine Blood'] = document.getElementById('Urine Blood').value;
+		results['Urine Leukocyte Esterase'] = document.getElementById('Urine Leukocyte Esterase').value;
+		results['Urine Bacteria'] = document.getElementById('Urine Bacteria').value;
+		
+		/*
+		results[''] = document.getElementById('').value;
+		results[''] = document.getElementById('').value;
+		results[''] = document.getElementById('').value;
+		results[''] = document.getElementById('').value;
+		results[''] = document.getElementById('').value;
+		
+		Ur Color Yellow, Colorless*
+Ur Clarity, Clear, Hazy*
+Ur pH (5.0-8.0)xx
+Ur SG (1.010-1.025) < 1.005x
+Ur Prot Negativex
+Ur Glu UA Negativex
+Ur Keto Negativex
+Ur Nitrite Negativex
+Ur Bilirubin Negativex
+Ur Blood Negative 2+x
+Ur Uro  <2.0x
+Ur Leu Esterase Negative 2+x
+Ur RBC 11-20 (0-5)x
+Ur WBC >50 (0-5)x
+Ur WBC Clump None Seen 1-5x
+Ur Bact trace
+		*/
 		
 		
 		/* UA results
