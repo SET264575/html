@@ -806,6 +806,11 @@ Ur Bact trace
 		if(results['AST/ALT ratio']<0.9){
 			abnormalities.push('AST/ALT ratio < 0.9');
 		}
+		
+		if(results['Urine Blood'] != 'Negative') {
+			abnormalities.push('hematuria');
+		}
+		
 		//console.log(abnormalities);
 		createDiseaseList(abnormalities);
 		developDifferential(abnormalities);		
