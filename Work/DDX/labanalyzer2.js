@@ -9,7 +9,7 @@ Currently working on:
 How to add a new lab:
 	1. Add lab = *
 	2. Add HTML for text box *
-	3. Add var result = 
+	3. Add var result = *
 	4. Add ddx list as .html
 	5. Add abnormalities_sites = .html
 	6. Add suggestions for low or high values
