@@ -1207,17 +1207,11 @@ printAbnormalities();
 		t = document.getElementById('ddx').innerHTML.replaceAll('</div>','');
 		t = t.replaceAll('<div','<divx');
 		//console.log(t);
+		console.log(t.length);
 		t = t.replaceAll('\t','');
 		t = t.replaceAll('\n','');
-		var s = t.split('\n');
-		console.log('split');
-		console.log(s);
-		var u = '';
-		for (let j = 0; j<s.length; j++) {
-			u = u + s[j];
-		}
-		console.log(t);
-		document.getElementById('ddx').innerHTML = 'test\n\n\n\n'+t + u;
+		console.log(t.length);
+		document.getElementById('ddx').innerHTML = t;
 		//console.log(document.getElementById('ddx').innerHTML);
 console.log("in tree");
 		for (i = 0; i < toggler.length; i++) {
