@@ -898,7 +898,7 @@ Ur Bact trace
 		var t = "";
 		if (window.frames[iframeId] && CurrentDiv ) {
 			t = window.frames[iframeId].document.body.innerHTML;
-				   console.log('in copyIframe');
+			t = t.replaceAll('\n','');
 			CurrentDiv.innerHTML = t;
 			//CurrentDiv.style.display = 'block';
 		}
@@ -1250,7 +1250,7 @@ Ur Bact trace
 		t = t.replaceAll('<div','<divx');
 		t = t.replaceAll('onload','oload');
 		t = t.replaceAll('\t','');
-		t = t.replaceAll('\n','');
+		//t = t.replaceAll('\n','');
 		document.getElementById('ddx').innerHTML = t;
 		for (i = 0; i < toggler.length; i++) {
 		  toggler[i].addEventListener("click", function() {
