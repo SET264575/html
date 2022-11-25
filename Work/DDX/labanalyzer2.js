@@ -240,14 +240,30 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 
 */
 
-//*ABG functionality
+//ABG
 	labs.push(new Lab('pH','pH',7.35,7.45,'***ignore***','***ignore***'));
 	labs.push(new Lab('pCO2','pCO2',35,45,'***ignore***','***ignore***'));
 	labs.push(new Lab('pO2','pO2',75,500,'***ignore***','***ignore***'));
 	labs.push(new Lab('HCO3','HCO3',22,26,'***ignore***','***ignore***'));
 	labs.push(new Lab('BE','BE',-2,2,'***ignore***','***ignore***'));
-//	*/
-	
+//Urine
+	labs.push(new Lab('Urine Color','Ur Color',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Clarity','Ur Clarity',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine pH','Ur pH',5,8,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Specific Gravity','Ur SG',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Protein','Ur Prot',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Glucose','Ur Gluc UA',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Ketones','Ur Keto',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Nitrite','Ur Nitrite',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Bilirubin','Ur Bilirubin',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Blood','Ur Blood',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Urobilinogen','Ur Uro',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Leukocyte Esterase','Ur Leu Esterase',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine RBC','Ur RBC',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine WBC','Ur WBC',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine WBC Clumps','Ur WBC Clump',0,1,'***ignore***','***ignore***'));
+	labs.push(new Lab('Urine Bacteria','Ur Bact',0,1,'***ignore***','***ignore***'));
+
 	
 /*
 	var links = {};
