@@ -166,6 +166,7 @@ class Lab{
 	labs.push(new Lab('PT','PT',0,0,'***ignore***','***ignore***'));
 	labs.push(new Lab('INR','INR',0,0,'***ignore***','***ignore***'));
 	labs.push(new Lab('PTT','PTT',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('D dimer','D dimer',0,500,'***ignore***','elevated D dimer'));
 
 /*ddx to add as .html
 
@@ -396,6 +397,7 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 	abnormality_site['elevated creatine phosphokinase'] = 'elevated creatine phosphokinase.html';
 	abnormality_site['elevated ESR'] = 'elevated ESR.html';
 	abnormality_site['elevated INR'] = 'elevated INR.html';
+	abnormality_site['elevated D dimer'] = 'elevated d dimer.html';
 	abnormality_site['elevated osmolar gap'] = 'elevated osmolar gap.html';
 	abnormality_site['elevated pro BNP'] = 'elevated pro BNP.html';
 	abnormality_site['elevated procalcitonin'] = 'elevated procalcitonin.html';
