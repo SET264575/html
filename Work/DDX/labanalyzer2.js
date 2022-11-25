@@ -680,6 +680,7 @@ printAbnormalities();
 		results.HCO3 = parseFloat(document.getElementById('HCO3').value);
 		results.BE = parseFloat(document.getElementById('BE').value);
 		
+		results['Urine Color'] = document.getElementById('Urine Color').value;
 		results['Urine pH'] = parseFloat(document.getElementById('Urine pH').value);
 		results['Urine Specific Gravity'] = parseFloat(document.getElementById('Urine Specific Gravity').value);
 		results['Urine Bilirubin'] = document.getElementById('Urine Bilirubin').value;
