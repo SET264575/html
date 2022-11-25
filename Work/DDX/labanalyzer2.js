@@ -1210,6 +1210,8 @@ printAbnormalities();
 		t = t.replaceAll('\t','');
 		t = t.replaceAll('\n','');
 		var s = t.split('\n');
+		console.log('split');
+		console.log(s);
 		var u = '';
 		for (let j = 0; j<s.length; j++) {
 			u = u + s[j];
