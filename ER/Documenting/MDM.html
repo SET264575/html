@@ -99,10 +99,25 @@
       function copytext(){
         var id = [11,12,13,14,15,16,17,18,19,20,21,22,23,111,112,113,114,115,116,211,212,213,214,215,216,217,218,219,220];
         const cb = {};
+        var copa = '';
+        var data = '';
+        var risk = '';
         for (let i = 0; i<id.length; i++) {
           cb[id[i]] = document.getElementById(String(id[i])).checked;
         }
         console.log(cb);
+        if (cb[id[11] || cb[id[12]|| cb[id[13] || cb[id[15] ) {
+          copa = 'Low';
+        }
+        if (cb[id[16] || cb[id[17]] || cb[id[18]] || cb[id[19]] || cb[id[20]] || cb[id[21]]) {
+          copa = 'Moderate';
+        }
+        if (cb[id[22]] || cb[id[23]]) {
+          copa = 'High';
+        }
+        
+        
+        document.getElementById('COPA').innerHTML = copa;
       }
         
     </script>
