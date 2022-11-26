@@ -103,6 +103,7 @@
         var data = '';
         var risk = '';
         for (let i = 0; i<id.length; i++) {
+          console.log(id[i]);
           cb[id[i]] = document.getElementById(String(id[i])).checked;
         }
         console.log(cb);
