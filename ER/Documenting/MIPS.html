@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>
+      MIPS Phrases
+    </title>
+    <!--link rel="stylesheet" href="..\Code\stylesheet.css"-->
+    <style>
+      button {
+        width: 100px;
+      }
+      </style>
+  </head>
+  <body>
+    <button id = "text1" onclick = "copytext(1)">URI</button><br>
+    <button id = "text2" onclick = "copytext(2)">Otitis Externa</button><br>
+    <button id = "text3" onclick = "copytext(3)">Bronchitis</button><br>
+    <button id = "text1" onclick = "copytext(4)">Stroke</button><br>
+    <button id = "text2" onclick = "copytext(5)">US in pregnancy</button><br>
+    <button id = "text3" onclick = "copytext(6)">Sinusitis</button><br>
+    <button id = "text1" onclick = "copytext(7)">Sinusitis</button><br>
+    <button id = "text2" onclick = "copytext(8)">CT minor head trauma (adult)</button><br>
+    <button id = "text3" onclick = "copytext(9)">CT minor head trauma (pediatric)</button><br>
+    <h5>The following has been copied to the clipboard and is ready to be pasted into your document:</h5><br>
+    
+    <pre id = "result" width = "500px"></pre>
+  </body>
+  <script>
+    function copytext(value){
+      var txt = '';
+      switch(value){
+        case 1: //URI
+          txt = "";
+          break;
+        case 2:  //Otitis Externa
+          txt = "";
+          break;
+        case 3:  //Bronchitis
+          txt = "";
+          break;
+        case 4:  //Stroke
+          txt = "";
+          break;
+        case 5: //US in pregnancy
+          txt = "";
+          break;
+        case 6:  //Sinusitis
+          txt = "";
+          break;
+        case 7:  //Sinusitis
+          txt = "";
+          break;
+        case 8:  //CT minor head trauma (adult)
+          txt = "";
+          break;
+        case 9:  //CT minor head trauma (pediatric)
+          txt = "";
+          break;
+      }
+      navigator.clipboard.writeText(txt);
+      document.getElementById("result").innerHTML = txt;
+    }
+  </script>
+</html>
+      
