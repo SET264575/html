@@ -117,9 +117,17 @@
           copa = 'High';
         }
         
-       // var cat1 = cb[
+        var cat1 = (cb[111]?1:0) + (cb[112]?1:0) + (cb[113]?1:0) + (cb[114]?1:0);
+        
+        if ((cat1 >= 3) || cb[115] || cb[116]) {
+          data = "Moderate";
+        }
+        if (((cat1 >=3)?1:0) + (cb[115]?1:0) +(cb[116]?1:0))>=2) {
+          data = "High";
+        }
         
         document.getElementById('COPA').innerHTML = copa;
+        document.getElementById('DATA').innerHTML = data;
       }
         
     </script>
