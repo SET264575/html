@@ -70,7 +70,7 @@
           <input type = "checkbox" onchange = "copytext()" id = "211">
           <label for="211">Drugs prescribed</label><br>
           <input type = "checkbox" onchange = "copytext()" id = "212">
-          <label for="212">Discussion regarding minor surgery with identified patient or procedure risk factors</label><br>
+          <label for="212">Decision regarding minor surgery with identified patient or procedure risk factors</label><br>
           <input type = "checkbox" onchange = "copytext()" id = "213">
           <label for="213">Decision regarding elective major surgery without identified risk factors</label><br>
           <input type = "checkbox" onchange = "copytext()" id = "214">
@@ -126,8 +126,17 @@
           data = "High";
         }
         
+        if (cb[211] || cb[212] || cb[213] || cb[214]) {
+          risk = 'Moderate';
+        }
+        
+        if (cb[215] || cb[216] || cb[217] || cb[218] || cb[219] || cb[220]) {
+          risk = 'High';
+        }
+        
         document.getElementById('COPA').innerHTML = copa;
         document.getElementById('DATA').innerHTML = data;
+        document.getElementById('RISK').innerHTML = risk;
       }
         
     </script>
