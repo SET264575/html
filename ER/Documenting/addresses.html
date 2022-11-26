@@ -16,10 +16,15 @@
         font-size: 1em;
         font-family: Arial;
       }
+      .center {
+        display: flex;
+        
+      }
 
     </style>
   </head>
   <body>
+    <div class = "center"><div>
     <button id = "text1" onclick = "copytext('Burrell Behavioral Health\n3401 Berrywood Dr.\nColumbia, Missouri 65201\n573-777-8300')">Burrell </button><br>
     <button id = "text6" onclick = "copytext('CenterPointe Hospital of Columbia\n1201 International Drive\nColumbia, MO 65202\n(833) 922-1362')">CenterPointe</button><br>
     <button id = "text3" onclick = "copytext('Family Health Center\n1001 W Worley St\nColumbia, MO 65203\n(573) 214-2314')">Family Health Center</button><br>
@@ -51,6 +56,8 @@ Pediatric Epilepsy</pre>
     <h4>The following has been copied to the clipboard and is ready to be pasted into your document:</h4><br>
     
     <pre id = "result" width = "500px"></pre>
+      </div>
+    </div>
   </body>
   <script>
     function copytext(value){
