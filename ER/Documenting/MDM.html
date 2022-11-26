@@ -13,81 +13,99 @@
         <td>Data</td>
         <td>Risk</td>
       </tr>
-      <td>
-        <input type = "checkbox" id = "11"/>
-        <label for="11">1 self-limited or minor problem (Straightforward)</label><br>
-        
-        <input type = "checkbox" id = "12"/>
-        <label for="12">2 self-limited or minor problems (Low)</label><br>
-        
-        <input type = "checkbox" id = "13">
-        <label for="13">1 stable, chronic illness (Low)</label><br>
-        
-        <input type = "checkbox" id = "14">
-        <label for="14">1 stable, acute illness (Low)</label><br>
-        
-        <input type = "checkbox" id = "15">
-        <label for="15">1 stable, acute illness (Low)</label><br>
-         
-        <input type = "checkbox" id = "17">
-        <label for="17">1 or more chronic illnesses with exacerbation, progression or side effects of treatment (Moderate)</label><br>
-        
-        <input type = "checkbox" id = "18">
-        <label for="18">2 or more stable, chronic illnesses (Moderate)</label><br>
-        
-        <input type = "checkbox" id = "19">
-        <label for="19">1 undiagnosed new problem with uncertain prognosis (Moderate)</label><br>
-        
-        <input type = "checkbox" id = "20">
-        <label for="20"><b>1 acute illness with systemic systems (Moderate)</b></label><br>
-        
-        <input type = "checkbox" id = "21">
-        <label for="21">1 acute, complicated injury (Moderate)</label><br>
-        
-        <input type = "checkbox" id = "22">
-        <label for="22">1 or more chronic illnesses with severe exacerbation, progression or side effects of treatment (High)</label><br>
-        
-        <input type = "checkbox" id = "23">
-        <label for="23">1 acute or chronic illness or injury that poses a threat to life or bodily function (High)</label><br>
-        
-      </td>
-      <td>
-        <input type = "checkbox" id = "111">
-        <label for="111">Review of prior external notes</label><br>
-        <input type = "checkbox" id = "112">
-        <label for="112">Review of results of each unique test</label><br>
-        <input type = "checkbox" id = "113">
-        <label for="113">Ordering each unique test</label><br>
-        <input type = "checkbox" id = "114">
-        <label for="114">Assessment required an independent historian</label><br>
-        <input type = "checkbox" id = "115">
-        <label for="115">Independent interpretation of tests</label><br>
-        <input type = "checkbox" id = "116">
-        <label for="116">Discussion of management or test interpretation</label><br>
-      </td>
-      <td>
-        <input type = "checkbox" id = "211">
-        <label for="211">Drugs prescribed</label><br>
-        <input type = "checkbox" id = "212">
-        <label for="212">Discussion regarding minor surgery with identified patient or procedure risk factors</label><br>
-        <input type = "checkbox" id = "213">
-        <label for="213">Decision regarding elective major surgery without identified risk factors</label><br>
-        <input type = "checkbox" id = "214">
-        <label for="214">Diagnosis or treatment significantly limited by social determinants of health</label><br>
-        <input type = "checkbox" id = "215">
-        <label for="215">Drug therapy requiring intensive monitoring for toxicity</label><br>
-        <input type = "checkbox" id = "216">
-        <label for="216">Decision regarding elective major surgery with identified patient or procedure risk factors</label><br>
-        <input type = "checkbox" id = "217">
-        <label for="217">Decision regarding emergency major surgery</label><br>
-        <input type = "checkbox" id = "218">
-        <label for="218">Decision regarding hospitalization or escalation of hospital-level care</label><br>
-        <input type = "checkbox" id = "219">
-        <label for="219">Decision not to resuscitate or to de-escalate care because of poor prognosis</label><br>
-        <input type = "checkbox" id = "220">
-        <label for="220">Parenteral controlled substances</label><br>
-      </td>
+      <tr>
+        <td>
+          <input type = "checkbox" onchange = "copytext()" id = "11"/>
+          <label for="11">1 self-limited or minor problem (Straightforward)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "12"/>
+          <label for="12">2 self-limited or minor problems (Low)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "13">
+          <label for="13">1 stable, chronic illness (Low)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "14">
+          <label for="14">1 stable, acute illness (Low)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "15">
+          <label for="15">1 stable, acute illness (Low)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "17">
+          <label for="17">1 or more chronic illnesses with exacerbation, progression or side effects of treatment (Moderate)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "18">
+          <label for="18">2 or more stable, chronic illnesses (Moderate)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "19">
+          <label for="19">1 undiagnosed new problem with uncertain prognosis (Moderate)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "20">
+          <label for="20"><b>1 acute illness with systemic systems (Moderate)</b></label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "21">
+          <label for="21">1 acute, complicated injury (Moderate)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "22">
+          <label for="22">1 or more chronic illnesses with severe exacerbation, progression or side effects of treatment (High)</label><br>
+
+          <input type = "checkbox" onchange = "copytext()" id = "23">
+          <label for="23">1 acute or chronic illness or injury that poses a threat to life or bodily function (High)</label><br>
+
+        </td>
+        <td>
+          <input type = "checkbox" onchange = "copytext()" id = "111">
+          <label for="111">Review of prior external notes</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "112">
+          <label for="112">Review of results of each unique test</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "113">
+          <label for="113">Ordering each unique test</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "114">
+          <label for="114">Assessment required an independent historian</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "115">
+          <label for="115">Independent interpretation of tests</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "116">
+          <label for="116">Discussion of management or test interpretation</label><br>
+        </td>
+        <td>
+          <input type = "checkbox" onchange = "copytext()" id = "211">
+          <label for="211">Drugs prescribed</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "212">
+          <label for="212">Discussion regarding minor surgery with identified patient or procedure risk factors</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "213">
+          <label for="213">Decision regarding elective major surgery without identified risk factors</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "214">
+          <label for="214">Diagnosis or treatment significantly limited by social determinants of health</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "215">
+          <label for="215">Drug therapy requiring intensive monitoring for toxicity</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "216">
+          <label for="216">Decision regarding elective major surgery with identified patient or procedure risk factors</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "217">
+          <label for="217">Decision regarding emergency major surgery</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "218">
+          <label for="218">Decision regarding hospitalization or escalation of hospital-level care</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "219">
+          <label for="219">Decision not to resuscitate or to de-escalate care because of poor prognosis</label><br>
+          <input type = "checkbox" onchange = "copytext()" id = "220">
+          <label for="220">Parenteral controlled substances</label><br>
+        </td>
+      </tr>
+      <tr>
+        <td><p id = "COPA"></p></td>
+        <td><p id = "DATA"></p></td>
+        <td><p id = "RISK"></p></td>
+      </tr>
     </table>
+    <script>
+      function copytext(){
+        var id = [11,12,13,14,15,16,17,18,19,20,21,22,23,111,112,113,114,115,116,211,212,213,214,215,216,217,218,219,220];
+        var cb = [];
+        for (let i = 0; i<id.length; i++) {
+          cb[id[i]] = document.getElementById(String(id[i])).checked;
+        }
+        console.log(cb);
+      }
+        
+    </script>
   </body>
 </html>
         
