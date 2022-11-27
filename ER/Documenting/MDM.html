@@ -138,6 +138,15 @@
         document.getElementById('DATA').innerHTML = data;
         document.getElementById('RISK').innerHTML = risk;
       }
+      
+      function ddx(){
+        const ddx = {};
+        ddx['chest pain'] = ['ACS','PE','aortic dissection','pneumonia','chest wall pain','GERD'];
+        ddx['dyspnea'] = ['pneumonia','PE','COPD exacerbation','asthma exacerbation','pneumothorax'];
+        ddx['cough'] = ['pneumonia','bronchitis','foreign body aspiration','URI'];
+        ddx['headache'] = ['migraine','tension headache','subarachnoid hemorrhage','brain tumor'];
+        ddx['unilateral weakness'] = ['stroke','TIA','conversion disorder','seizure'];
+        ddx['abdominal pain'] = ['pancreatitis','chole
         
     </script>
   </body>
