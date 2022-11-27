@@ -54,7 +54,9 @@
 
           <input type = "checkbox" onchange = "copytext()" id = "21">
           <label for="21">1 acute, complicated injury</label><br>
+          
           <h4>High</h4>
+          
           <input type = "checkbox" onchange = "copytext()" id = "22">
           <label for="22">1 or more chronic illnesses with severe exacerbation, progression or side effects of treatment </label><br>
 
@@ -112,7 +114,9 @@
     </datalist>
     <!--button onclick="ddx('chest pain')">Submit</button><br-->
     <h3>Differential Diagnosis</h3>
-    <pre id = "ddx"></pre>
+    <pre id = "ddx"></pre><br>
+    <h3>Dictate in MDM</h3>
+    <pre id="MDM"></pre>
     <script src="..\Code\searchProblems.js"></script>
     <script>
       function copytext(){
@@ -121,11 +125,55 @@
         var copa = '';
         var data = '';
         var risk = '';
+        var dictationList = [];
+        
         for (let i = 0; i<id.length; i++) {
           console.log(id[i]);
           cb[id[i]] = document.getElementById(String(id[i])).checked;
         }
-        console.log(cb);
+        
+        if (cb[22]) {
+          dictationList.push('Describe presentation, including where acute new illness or acute exacerbation of existing illness.  Describe why severe.');
+        }
+        
+        dictationList.push('Discuss differential diagnoses');
+        
+        if (cb[111]) {
+          dictationList.push('Reviewed prior external notes');
+        }
+        
+        if (cb[112]) {
+          dictationList.push('Reviewed results of the tests documented in this note.');
+        }
+        
+        if (cb[113]) {
+          dictationList.push('Ordered results of the tests documented in this note.');
+        }
+        
+        if (cb[114]) {
+          dictationList.push('Independent historians I obtained history from');
+        }
+        
+        if (cb[115]) {
+          dictationList.push('My independent interpretation of CXR/CT/EKG showed ');
+        }
+        
+        if (cb[116]) {
+           dictationList.push('I discussed the situation with ... who ');
+        }
+        
+        if (cb[211]) {
+          dictationList.push('I prescribed...');
+        }
+        
+        if (cb[218]) {
+          dictationList.push('I discussed admission with the patient and family...');
+        }
+        
+        
+        
+        
+        
         if (cb[11] || cb[12] || cb[13] || cb[14] || cb[15] ) {
           copa = 'Low';
         }
@@ -156,6 +204,13 @@
         document.getElementById('COPA').innerHTML = copa;
         document.getElementById('DATA').innerHTML = data;
         document.getElementById('RISK').innerHTML = risk;
+        var s = "<ul>";
+        for (let i = 0; i<dictationList.length; i++) {
+          s = s + '<li>'+dictationList[i]+'</li>';
+        }
+        s = s + '</ul>';
+        document.getElementById('MDM').innerHTML = s;
+          
       }
       
       function ddx(cc){
