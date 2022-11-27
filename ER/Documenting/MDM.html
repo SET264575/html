@@ -4,6 +4,9 @@
       MDM
     </title>
     <style>
+      p {
+        color: red;
+      }
     </style>
   </head>
   <body>
@@ -15,41 +18,42 @@
       </tr>
       <tr>
         <td>
+          <h4>Straightforward</h4>
           <input type = "checkbox" onchange = "copytext()" id = "11"/>
-          <label for="11">1 self-limited or minor problem (Straightforward)</label><br>
-
+          <label for="11">1 self-limited or minor problem</label><br>
+          <h4>Low</h4>
           <input type = "checkbox" onchange = "copytext()" id = "12"/>
-          <label for="12">2 self-limited or minor problems (Low)</label><br>
+          <label for="12">2 self-limited or minor problems</label><br>
 
           <input type = "checkbox" onchange = "copytext()" id = "13">
-          <label for="13">1 stable, chronic illness (Low)</label><br>
+          <label for="13">1 stable, chronic illness</label><br>
 
           <input type = "checkbox" onchange = "copytext()" id = "14">
-          <label for="14">1 stable, acute illness (Low)</label><br>
+          <label for="14">1 stable, acute illness</label><br>
 
           <input type = "checkbox" onchange = "copytext()" id = "15">
-          <label for="15">1 stable, acute illness (Low)</label><br>
-
+          <label for="15">1 stable, acute illness</label><br>
+          <h4>Moderate</h4>
           <input type = "checkbox" onchange = "copytext()" id = "17">
-          <label for="17">1 or more chronic illnesses with exacerbation, progression or side effects of treatment (Moderate)</label><br>
+          <label for="17">1 or more chronic illnesses with exacerbation, progression or side effects of treatment</label><br>
 
           <input type = "checkbox" onchange = "copytext()" id = "18">
-          <label for="18">2 or more stable, chronic illnesses (Moderate)</label><br>
+          <label for="18">2 or more stable, chronic illnesses </label><br>
 
           <input type = "checkbox" onchange = "copytext()" id = "19">
-          <label for="19">1 undiagnosed new problem with uncertain prognosis (Moderate)</label><br>
+          <label for="19">1 undiagnosed new problem with uncertain prognosis</label><br>
 
           <input type = "checkbox" onchange = "copytext()" id = "20">
-          <label for="20"><b>1 acute illness with systemic systems (Moderate)</b></label><br>
+          <label for="20"><b>1 acute illness with systemic systems</b></label><br>
 
           <input type = "checkbox" onchange = "copytext()" id = "21">
-          <label for="21">1 acute, complicated injury (Moderate)</label><br>
-
+          <label for="21">1 acute, complicated injury</label><br>
+          <h4>High</h4>
           <input type = "checkbox" onchange = "copytext()" id = "22">
-          <label for="22">1 or more chronic illnesses with severe exacerbation, progression or side effects of treatment (High)</label><br>
+          <label for="22">1 or more chronic illnesses with severe exacerbation, progression or side effects of treatment </label><br>
 
           <input type = "checkbox" onchange = "copytext()" id = "23">
-          <label for="23">1 acute or chronic illness or injury that poses a threat to life or bodily function (High)</label><br>
+          <label for="23">1 acute or chronic illness or injury that poses a threat to life or bodily function</label><br>
 
         </td>
         <td>
@@ -67,6 +71,7 @@
           <label for="116">Discussion of management or test interpretation</label><br>
         </td>
         <td>
+          <h4>Moderate</h4>
           <input type = "checkbox" onchange = "copytext()" id = "211">
           <label for="211">Drugs prescribed</label><br>
           <input type = "checkbox" onchange = "copytext()" id = "212">
@@ -75,6 +80,7 @@
           <label for="213">Decision regarding elective major surgery without identified risk factors</label><br>
           <input type = "checkbox" onchange = "copytext()" id = "214">
           <label for="214">Diagnosis or treatment significantly limited by social determinants of health</label><br>
+          <h4>High</h4>
           <input type = "checkbox" onchange = "copytext()" id = "215">
           <label for="215">Drug therapy requiring intensive monitoring for toxicity</label><br>
           <input type = "checkbox" onchange = "copytext()" id = "216">
@@ -146,7 +152,8 @@
         ddx['cough'] = ['pneumonia','bronchitis','foreign body aspiration','URI'];
         ddx['headache'] = ['migraine','tension headache','subarachnoid hemorrhage','brain tumor'];
         ddx['unilateral weakness'] = ['stroke','TIA','conversion disorder','seizure'];
-        ddx['abdominal pain'] = ['pancreatitis','chole
+        ddx['abdominal pain'] = ['pancreatitis','cholecystitis','gastritis','peptic ulcer','bowel perforation'];
+      }
         
     </script>
   </body>
