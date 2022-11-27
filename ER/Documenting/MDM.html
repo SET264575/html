@@ -292,6 +292,20 @@
         ddx['joint pain'] = ['septic joint','gout','occult fracture'];
         ddx['joint problem'] = ddx['joint pain'];
         ddx['joint swelling'] = ddx['joint pain'];
+        ddx['vomiting'] = ['SBO','DKA','MI','intracranial lesions','dehydration','electrolyte imbalance'];
+        ddx['diarrhea'] = ['GI bleeding','C. dif','dehydration','electrolyte imbalance'];
+        ddx['sore throat'] = ['strep','mono','paratonsillar abscess','agranulocytosis','acute HIV'];
+        ddx['neck pain'] = ['cervical radiculopathy','abscess','hematoma','pharyngitis','meningitis','aortic dissection','epidural abscess'];
+        ddx['back pain'] = ['occult fracture','epidural abscess','cauda equina'];
+        ddx['flank pain'] = ['pyelonephritis','obstruction','external compression of ureter','aortic dissection'];
+        ddx['leg swelling'] = ['DVT','cellulitis','CHF','lymphedema'];
+        ddx['weakness'] = ['UTI','pneumonia','electrolyte imbalance','ACS'];
+        ddx['anxiety'] = ['MI','infection','electrolyte imbalance'];
+        ddx['confusion'] = ['intracranial hemorrhage','stroke','infection','electrolyte imbalance'];
+        ddx['palpitations'] = ['heart arrhythmia','ACS','electrolyte imbalance','thyroid problem'];
+        ddx['blood in stool'] = ['GI bleeding','colitis','hemorrhoid'];
+        ddx['hematuria'] = ['UTI','coagulopathy','tumor','kidney stone'];
+        ddx['tachycardia'] = ['PE','dehydration','anemia','hyperthyroidism','arrhythmia'];
         for (let i = 0; i<ddx[cc].length; i++){
           t = t+ ddx[cc][i]+'\n';
         }
