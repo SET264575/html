@@ -128,7 +128,6 @@
         var dictationList = [];
         
         for (let i = 0; i<id.length; i++) {
-          console.log(id[i]);
           cb[id[i]] = document.getElementById(String(id[i])).checked;
         }
         
@@ -281,6 +280,16 @@
         ddx['headache'] = ['migraine','tension headache','subarachnoid hemorrhage','brain tumor'];
         ddx['unilateral weakness'] = ['stroke','TIA','conversion disorder','seizure','hypoglycemia'];
         ddx['abdominal pain'] = ['pancreatitis','cholecystitis','gastritis','peptic ulcer','bowel perforation'];
+        ddx['pelvic pain'] = ['PID','ovarian torsion','ectopic pregnancy','threatened abortion'];
+        ddx['leg pain'] = ['DVT','cellulitis','arthritis','occult fracture'];
+        ddx['wound'] = ['osteomyelitis','cellulitis'];
+        ddx['dizziness'] = ['stroke','BPPV','infection'];
+        ddx['fever'] = ['sepsis','pneumonia','UTI'];
+        ddx['rhinorrhea'] = ['flu','sinusitis'];
+        ddx['rash'] = ['zoster','cellulitis','Stevens-Johnson','infection'];
+        ddx['joint pain'] = ['septic joint','gout','occult fracture'];
+        ddx['joint problem'] = ddx['joint pain'];
+        ddx['joint swelling'] = ddx['joint pain'];
         for (let i = 0; i<ddx[cc].length; i++){
           t = t+ ddx[cc][i]+'\n';
         }
