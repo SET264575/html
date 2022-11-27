@@ -133,6 +133,8 @@
           cb[id[i]] = document.getElementById(String(id[i])).checked;
         }
         
+        dictationList.push('<b>Patient presentation</b>");
+                   
         if (cb[17]) {
           dictationList.push('Describe presentation, including chronic with exacerbation, progression or side effects of treatment');
         }
@@ -161,12 +163,19 @@
           dictationList.push('Describe presentation, including why acute exacerbation of existing illness.  Describe why severe.');
         }
         
-        dictationList.push('Discuss differential diagnoses');
+        
+        if (cb[114]) {
+          dictationList.push('Independent historians I obtained history from (EMS, parents, family, PCP, law enforcement)');
+        }
         
         if (cb[111]) {
           dictationList.push('Reviewed prior external notes');
         }
         
+        dictationList.push('<b>Differential diagnosis</b>');
+        dictationList.push('Discuss problems and diagnoses addressed and considered ruled out, unlikely, or presumptive or definitive.');
+        
+        dictationList.push('<b>Data review/analysis</b>');
         if (cb[112] && cb[113]){
           dictationList.push('Ordered and reviewed the results of the tests documented in this note.  Significant results include...');
         }
@@ -180,18 +189,26 @@
           }
         }
         
-        if (cb[114]) {
-          dictationList.push('Independent historians I obtained history from (EMS, parents, family, PCP, law enforcement)');
-        }
+        dictationList.push('<b>Independent review of studies</b>');
         
         if (cb[115]) {
           dictationList.push('My independent interpretation of CXR/CT/EKG showed ');
         }
         
+        dictationList.push('<b>Independent clinician</b>');
+        
         if (cb[116]) {
            dictationList.push('I discussed the situation with ... who ');
         }
         
+        dictationList.push('<b>Risk stratification tools/clinical decision rules</b>');
+        dictationList.push('Discuss rules used to make decisions, including not ordering tests.');
+        
+        dictationList.push('<b>Disposition</b>');
+        dictationList.push('Discuss factors that affected your decision including:');
+        dictationList.push('\tshared-decision making');
+        dictationList.push('\tsocial determinants of health: economic, living situation, social support, education, language barriers, job, school, travel');
+        dictationList.push('\tfollow up arrangements');
         if (cb[211]) {
           dictationList.push('I prescribed...');
         }
