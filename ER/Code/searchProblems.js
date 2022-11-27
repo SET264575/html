@@ -1,0 +1,576 @@
+/*
+
+<input type="text" list="cars" id = "in" autofocus>
+<datalist id="cars">
+</datalist>
+<br><br<br><br><br>
+<pre id = "selected" />
+*/
+function searchProblems(){
+const selected = [];
+
+synonym = {};
+synonym['gi bleeding'] = ['gi bleeding','gi hemorrhage','brbpr','blood in stool','hematemesis'];
+synonym['hyperkalemia'] = ['hyperkalemia','hi k','elevated potassium','hi potassium','high k','high potassium','elevated k'];
+synonym['chest pain'] = ['chest pain','cp'];
+synonym['abdominal pain'] =['abdominal pain','ap','abd pain'];
+synonym['dehydration'] = ['dehydration'];
+synonym['sepsis'] = ['sepsis','sirs'];
+synonym['critical care'] = ['critical care','cc'];
+synonym['altered mental status'] = ['altered mental status','ams','confusion','obtundation','obtunded','confused','coma'];
+synonym['osteomyelitis'] = ['osteomyelitis','diabetic foot infection','bone infection'];
+synonym['flank pain'] = ['flank pain','kidney stone','k stone','stone'];
+synonym['dyspnea'] = ['dyspnea','sob','shortness of breath'];
+synonym['vomiting'] = ['vomiting','emesis','nausea'];
+synonym['hypokalemia'] = ['hypokalemia','low k','low potassium'];
+synonym['drug overdose'] = ['drug overdose','overdose','od'];
+synonym['suicidal'] = ['suicidal','psych placement','depression','psychotic','psychosis'];
+synonym['headache'] = ['headache','ha','head pain'];
+synonym['stroke'] = ['stroke','cva','acute stroke','acute cva'];
+synonym['intracranial hemorrhage'] = ['intracranial hemorrhage','head bleed','sah','subarachnoid hemorrhage','epidural bleed','subdural bleed','intraparenchymal bleeding'];
+synonym['diarrhea'] = ['diarrhea'];
+synonym['cough'] = ['cough'];
+synonym['dka'] = ['dka','hyperglycemia','high sugar','high blood sugar','diabetic ketoacidosis'];
+synonym['trauma'] = ['trauma','major trauma','minor trauma','trunk injury','head injury'];
+synonym['uti'] = ['uti','dysuria','urinary frequency','urinary urgency','pyelonephritis','kidney infection','bladder infection'];
+synonym['hematuria'] = ['hematuria','blood in urine'];
+synonym['ovarian mass'] = ['ovarian mass','ovarian cyst'];
+synonym['anemia'] = ['anemia','iron deficiency anemia','blood loss anemia'];
+synonym['hypoglycemia'] = ['hypoglycemia','low blood sugar','low sugar'];
+synonym['pulmonary embolism'] = ['pulmonary embolism','pe'];
+synonym['dvt'] = ['dvt','deep venous thrombosis','venous thrombosis','blood clot'];
+synonym['elevated anion gap'] = ['elevated anion gap','high anion gap','high ag', 'hi ag'];
+synonym['seizure'] = ['seizure','sz'];
+synonym['cancer'] = ['cancer','ca','mets','lung cancer','liver mets','bone mets','brain mets','liver cancer','colon cancer'];
+synonym['weight loss'] = ['weight loss','wt loss'];
+synonym['dissection'] = ['dissection'];
+synonym['mi'] = ['mi','stemi','myocardial infarction','heart attack'];
+synonym['ovarian torsion'] = ['ovarian torsion'];
+synonym['pelvic pain'] = ['pelvic pain'];
+synonym['vaginal discharge'] = ['vaginal discharge'];
+synonym['fracture'] = ['fracture','fx','broken bone'];
+synonym['pleural effusion'] = ['pleural effusion'];
+synonym['pericardial effusion'] = ['pericardial effusion'];
+synonym['cellulitis'] = ['cellulitis'];
+synonym['seizure'] = ['seizure'];
+synonym['weakness'] = ['weakness'];
+synonym['dizziness'] = ['dizziness'];
+synonym['neck pain'] = ['neck pain'];
+synonym['epistaxis'] = ['epistaxis','nose bleed'];
+synonym['hemoptysis'] = ['hemoptysis'];
+synonym['leg swelling'] = ['leg swelling'];
+synonym['leg pain'] = ['leg pain'];
+synonym['hyponatremia'] = ['hyponatremia','low na','low sodium','lo na','lo sodium'];
+synonym['hypernatremia'] = ['hypernatremia'];
+synonym['laceration'] = ['laceration','lac','head lac','hand lac','finger lac','arm lac'];
+synonym['palliative care'] = ['palliative care'];
+synonym['extubation'] = ['extubation'];
+synonym['leukocytosis'] = ['leukocytosis'];
+synonym['asthma'] = ['asthma'];
+synonym['copd'] = ['copd'];
+synonym['allergic reaction'] = ['allergic reaction'];
+synonym['dental pain'] = ['dental pain','toothache'];
+synonym['std'] = ['std','gc','chlamydia','syphilis','syphillis'];
+synonym['chf'] = ['chf'];
+synonym['urinary retention'] = ['urinary retention'];
+synonym['shock'] = ['shock','septic shock','distributive shock','cardiogenic shock','hypotension','low blood pressure'];
+synonym['atrial fibrillation'] = ['atrial fibrillation','atrial fib','af','atrial fib with rvr','rvr'];
+synonym['dislocation'] = ['dislocation','ankle dislocation','knee dislocation','patellar dislocation','hip dislocation','shoulder dislocation'];
+synonym['finger dislocation'] = ['finger dislocation'];
+synonym['back pain'] = ['back pain','low back pain','lbp','thoracic back pain','lumbar pain','upper back pain','lumbar back pain'];
+synonym['compression fracture'] = ['compression fracture','vertebral compression fracture'];
+synonym['meningitis'] = ['meningitis'];
+synonym['croup'] = ['croup'];
+synonym['cauda equina'] = ['cauda equina'];
+synonym['urinary retention'] = ['urinary retention'];
+synonym['neutropenia'] = ['neutropenia','low white blood count'];
+synonym['thrombocytopenia'] = ['thrombocytopenia','low platelet count'];
+synonym['rsv'] = ['rsv'];
+synonym['flu'] = ['flu','influenza'];
+synonym['croup'] = ['croup'];
+synonym['fall'] = ['fall'];
+synonym['jaw pain'] = ['jaw pain'];
+synonym['leg pain'] = ['leg pain'];
+synonym['priapism'] = ['priapism'];
+synonym['esrd'] = ['esrd'];
+synonym['syncope'] = ['syncope','fainting'];
+synonym['respiratory failure'] = ['respiratory failure','co2 retention','hypoxia','hypoxemia','hypercarbia','hypercapnea'];
+synonym['elevated d dimer'] = ['elevated d dimer'];
+synonym['lactic acidosis'] = ['lactic acidosis','elevated lactate','high lactate'];
+synonym['lightheadedness'] = ['lightheadedness','lh'];
+synonym['post-intubation'] = ['post=intubation','post-intubation','post intubation','intubation'];
+synonym['hypertension'] = ['hypertensive emergency','hypertensive urgency','hypertension','high blood pressure','elevated blood pressure','htn'];
+/*
+joint effusion
+joint pain
+found down
+weakness
+tia
+ckd
+esrd
+secondary hyperparathyroidism
+gerd
+hld
+mha
+cough
+knee pain
+adhd
+bph
+tachycardia
+fall
+dizzy
+vertigo
+leukopenia
+thrombocytopenia
+alcohol abuse
+neck pain
+*/
+dict = {};
+for (x of Object.keys(synonym)) {
+	for (y of synonym[x]) {
+		dict[y] = x;
+	}
+}
+
+symptomlist = Object.keys(dict);
+symptomlist.sort();
+
+var t = "";
+for (let i = 0; i<symptomlist.length; i++) {
+  t = t + '<option>'+symptomlist[i]+'</option>';
+}
+document.getElementById('cars').innerHTML = t;
+
+const input = document.getElementById('in');
+input.addEventListener('keyup',(event) => {
+	if (event.keyCode === 13) {
+		let prefix = document.getElementById('in').value;
+		let elm = document.getElementById('cars').firstElementChild;
+		let count = 0;
+		let q = "";
+		while (elm) {
+			if (elm.value.startsWith(prefix)) {
+				count++;
+				q = elm.value;
+			}
+		
+			elm = elm.nextElementSibling;
+		}
+		if (count == 1) {
+			document.getElementById('in').value = '';
+			selected.push(dict[q]);
+			document.getElementById('selected').innerHTML = document.getElementById('selected').innerHTML + '\n'+dict[q];
+			showOrders();
+		}
+	}
+});
+
+
+function showOrders(){
+
+class Condition {
+	constructor (name,order,order_consider,tx,tx_consider) {
+		this.name = name;
+		this.order = order;
+		this.order_consider = order_consider;
+		this.tx = tx;
+		this.tx_consider = tx_consider;
+	}
+}
+	
+class Order {
+	constructor (name,synonyms,sequence_number) {
+		this.name = name;
+		this.synonyms = synonyms;
+		this.sequence_number = sequence_number;
+	}
+}
+
+const condition = [];
+const order = [];
+const sorted_orders = [];
+const sorted_orders_consider= [];
+	
+
+	
+
+condition['abdominal pain'] = new Condition('abdominal pain',['CBC','CMP','UA','HCG'],['lipase','EKG','troponin','CT abd/pelvis','pelvic US','gall bladder US','CTA'],[],['IVF','Toradol','Dilaudid','Zofran']);
+
+condition['allergic reaction'] = new Condition('allergic reaction',[],[],['Benadryl 50 mg IV','Pepcid 20 mg IV'],['Solu Medrol 125 mg IV','epinephrine SC','albuterol']);
+	
+condition['altered mental status'] = new Condition('altered mental status',['CBC','CMP','UA','CXR'],['CT head','UDS','ETOH','acetaminophen level','salicylate level','TSH','ammonia','ABG','EEG'],[],['Narcan']);
+
+condition['anemia'] = new Condition('anemia',['CBC','CMP'],['PT/PTT','iron panel','ferritin','haptoglobin','reticulocyte count','LDH','vitamin B12','folate','fecal occult blood'],[],['transfuse','reverse anticoagulation']);
+
+condition['asthma'] = new Condition('asthma',[],['CBC','CMP','CXR','respiratory pathogen panel'],['Duoneb'],['Albuterol','Solu Medrol 125 mg IV','Magnesium sulfate IV']);
+
+condition['atrial fibrillation'] = new Condition('atrial fib',['CBC','CMP','troponin','EKG','CXR'],['pro BNP','TSH','sepsis lactate'],['Cardizem'],['Cardizem drip','amiodarone','etomidate','Versed']);
+	
+condition['cancer'] = new Condition('cancer',['Nothing for cancer'],[],[],[]);
+
+condition['chest pain'] = new Condition('chest pain',['CBC','CMP','CXR','EKG','troponin'],['D dimer','pro BNP','CT chest PE protocol','CTA chest, abdomen, pelvis'],[],['nitroglycerin','morphine','Lasix']);
+
+condition['copd'] = new Condition('copd',['CBC','CMP','CXR'],['EKG','ABG','respiratory pathogen panel','blood cultures','sepsis lactate','CT chest','procalcitonin'],['Duoneb'],['Albuterol','Solu Medrol','IV antibiotics']);
+
+condition['cough'] = new Condition('cough',[],['CBC','CMP','EKG','CXR','pro BNP','CT chest PE protocol','Covid','respiratory pathogen panel','blood culture','sepsis lactate'],[],['Duoneb','Lasix','IV antibiotics']);
+
+condition['critical care'] = new Condition('critical care',['CBC','CMP','UA','ABG','EKG','CXR','troponin','sepsis lactate','blood culture'],['CT head','CT chest PE, abd, pelvis','ESR','CRP','ammonia','magnesium','phosphorus','iCa','LDH','CK','BOHB','procalcitonin','DIC panel','PT/PTT','respiratory pathogen panel','UDS','ETOH','acetaminophen','salicylate','D dimer','pro BNP'],['IVF','propofol','Levophed','NTG drip','Cardizem drip','IV antibiotics'],['BiPAP','etomidate','sux']);
+
+condition['dehydration'] = new Condition('dehydration',['CBC','CMP'],['UA','CK','EKG'],['IVF'],['Zofran']);
+
+condition['dka'] = new Condition('DKA',['CBC','CMP','UA','HCG','CXR','VBG','BOHB'],[],['IVF','IV insulin'],[]);
+
+condition['diarrhea'] = new Condition('diarrhea',['CBC','CMP'],['GI pathogen panel','C dif','CT abd/pelvis','sepsis lactate','fecal occult blood'],['IVF'],['Lomotil','IV antibiotics']);
+
+condition['drug overdose'] = new Condition('drug overdose',[],['CBC','CMP','HCG','UA','EKG','UDS','ETOH','acetaminophen','salicylate'],[],['IVF','Narcan','sodium bicarb','activated charcoal']);
+
+condition['dyspnea'] = new Condition('dyspnea',['CBC','CMP','EKG','CXR'],['pro BNP','D dimer','CT chest PE protocol','troponin','Covid','respiratory pathogen panel','blood culture','sepsis lactate'],[],['Duoneb','Lasix','IV antibiotics','BiPAP','etomidate','sux']);
+
+condition['finger dislocation'] = new Condition('finger dislocation',['finger xray'],[],['lidocaine'],['Dilaudid']);
+	
+condition['flank pain'] = new Condition('flank pain',['CBC','CMP','UA','CT abd/pelvis'],[],['Toradol'],['Dilaudid']);
+
+condition['headache'] = new Condition('headache',[],['CBC','CMP','UA','CT head','LP','MRI brain'],['IVF','Toradol','Compazine'],['Benadryl','Haldol','Dilaudid','Depakote','IV antibiotics','reverse anticoagulation']);
+
+condition['dissection'] = new Condition('dissection',['CBC','CMP','PT/PTT','type & screen','CTA chest, abd, pelvis'],[],[],['blood pressure control','transfuse','heparin']);
+
+condition['dvt'] = new Condition('dvt',['duplex US lower extremities'],['CBC','CMP','EKG','troponin','echo','CTA chest PE protocol'],['Lovenox'],['Xarelto','Eliquis']);
+
+condition['elevated anion gap'] = new Condition('elevated anion gap',['lactate','BOHB'],['ETOH','acetaminophen','salicylate'],[],['sodium bicarb']);
+
+condition['elevated d dimer'] = new Condition('elevated d dimer',[],['CT chest PE','venous duplex US lower extremities'],[],[]);
+	
+condition['epistaxis'] = new Condition('epistaxis',[],['PT/PTT'],[],[]);
+
+condition['fall'] = new Condition('fall',[],['CT head','CT neck','CT facial bones','xrays','UA','CBC','CMP','PT/PTT','EKG','CXR'],[],[]);
+	
+condition['fracture'] = new Condition('fracture',['xray of body part'],[],[],['Dilaudid','Percocet','Tylenol']);
+
+condition['gi bleeding'] = new Condition('gi bleeding',['CBC','CMP'],['PT/PTT','fecal occult blood'],['IVF'],['transfuse','Protonix 80 mg IV','Vitamin K']);
+
+condition['hematuria'] = new Condition('hematuria',['UA'],['CBC','CMP','PT/PTT','CT abdomen & pelvis','CT urogram'],[],['IV antibiotics','IVF','continuous bladder irrigation']);
+
+condition['hyperkalemia'] = new Condition('hyperkalemia',[],['repeat K level','magnesium'],['IV calcium gluconate','IV calcium chloride'],['insulin 10 units IV','glucose 50 grams IV','albuterol HFN','sodium bicarb 50 grams IV','Lokelma 10 mg po']);
+
+condition['hypertension'] = new Condition('hypertension',[],['CBC','CMP','UA','HCG','uric acid','LDH','EKG','troponin','pro BNP','UDS','CT head','CXR'],[],['po clonidine','home medication','IV hydralazine','IV labetolol','nicardapine drip','Ativan','IV magnesium']);
+
+condition['hypoglycemia'] = new Condition('hypoglycemia',['CBC','CMP'],['POC glucose','sepsis lactate','serum insulin','C peptide','sulfonylurea level'],['po glucose','IV glucose'],['glucagon']);
+
+condition['hypokalemia'] = new Condition('hypokalemia',[],['magnesium'],['KCl 20 mEq IV','KCl 20 mEq po'],[]);
+
+condition['intracranial hemorrhage'] = new Condition('intracranial hemorrhage',['CBC','CMP','UA','PT/PTT','POC glucose'],['non-contrast CT head','CTA head/neck','CTA head/neck with perfusion'],[],['tPA','blood pressure control','reverse anticoagulation']);
+
+condition['laceration'] = new Condition('laceration',[],[],['lidocaine'],['TDaP']);
+
+condition['meningitis'] = new Condition('meningitis',['CBC','CMP','IR LP','CSF total protein','CSF glucose','CSF cell count','CSF culture & gram stain'],['Herpes Simplex V DNA PCR'],['IV antibiotics','IV acyclovir'],['IV dexamethasone']);
+	
+condition['MI'] = new Condition('MI',['CBC','CMP','troponin','EKG','CXR'],['repeat troponin','repeat EKG'],['aspirin','nitroglycerin spray'],['morphine','nitroglycerin drip','Effient','Brilinta','metoprolol','Lovenox']);
+
+condition['osteomyelitis'] = new Condition('osteomyelitis',['CBC','CMP','ESR','CRP','xray of limb'],['sepsis lactate','blood culture','CT of part'],[],['IVF','IV antibiotics','analgesia']);
+
+condition['ovarian mass'] = new Condition('ovarian mass',['pelvic US','HCG'],['CBC','CMP','CA 125','CT abd, pelvis'],[],[]);
+
+condition['ovarian torsion'] = new Condition('ovarian torsion',['CBC','CMP','pelvic ultrasound'],[],['analgesia','NPO'],[]);
+
+condition['pelvic pain'] = new Condition('pelvic pain',['CBC','CMP','UA','HCG'],['wet prep','CTNG','pelvic US'],[],['IVF','analgesia']);
+
+condition['post-intubation'] = new Condition('post-intubation',['ABG','chest xray','KUB','restraints','Foley'],[],['etomidate','sux','propofol'],['Versed','Fentanyl']);
+	
+condition['priapism'] = new Condition('priapism',[],['ABG','CBC','UDS'],['lidocaine','phenylephrine 500 mcg'],[]);
+	
+condition['pulmonary embolism'] = new Condition('pulmonary embolism',['CBC','CMP','EKG','CTA chest PE protocol'],['troponin','echo','duplex US lower extremities'],['Lovenox'],['Xarelto','Eliquis']);
+
+condition['respiratory failure'] = new Condition('respiratory failure',['CBC','CMP','EKG','CXR','ABG','troponin','respiratory pathogen panel','pro BNP','sepsis lactate'],['D dimer','CT chest PE protocol','blood culture'],[],['Duoneb','Lasix','Solu Medrol','IV antibiotics','BiPAP','etomidate','sux']);
+
+condition['seizure'] = new Condition('seizure',[],['CBC','CMP','UA','EKG','CT head','valproic level','carbimazepine level','phenytoin level','prolactin','EEG'],[],['Ativan','Keppra','fosphenytoin']);
+
+condition['sepsis'] = new Condition('sepsis',['CBC','CMP','UA','CXR','sepsis lactate'],['blood culture','procalcitonin','respiratory pathogen panel','CT chest, abdomen * pelvis'],['IVF'],['IV antibiotics']);
+
+condition['stroke'] = new Condition('stroke',['CBC','CMP','UA','PT/PTT','POC glucose'],['non-contrast CT head','CTA head/neck','CTA head/neck with perfusion'],[],['tPA','blood pressure control','reverse anticoagulation']);
+
+condition['suicidal'] = new Condition('suicidal',['CBC','CMP','HCG','UA','EKG','UDS','ETOH','acetaminophen','salicylate','TSH'],[],[],['IVF','Narcan','sodium bicarb','activated charcoal']);
+
+condition['trauma'] = new Condition('trauma',[],['CBC','CMP','UA','CT head','CT facial bones','CT c-spine','CT chest','CT abd, pelvis','CT chest, abd, pelvis','xrays'],[],['IVF','IV analgesia','lidocaine','TDaP']);
+
+condition['uti'] = new Condition('uti',['UA'],['CBC','CMP','HCG','CT abd/pelvis','sepsis lactate'],[],['IVF','IV antibiotics','Pyridium']);
+
+condition['vaginal discharge'] = new Condition('pelvic pain',['wet prep','CTNG'],['CBC','CMP','UA','HCG','pelvic US'],[],[]);
+
+condition['vomiting'] = new Condition('vomiting',['CBC','CMP','UA','HCG'],['lipase','CT abd/pelvis','CT head'],['IVF'],['Zofran','Compazine','Droperidol','Haldol','Ativan']);
+
+condition['weakness'] = new Condition('weakness',['CBC','CMP','UA','CXR','EKG'],[],[],['IVF']);
+
+condition['weight loss'] = new Condition('weight loss',['No orders for weight loss'],[],[],[]);
+
+
+
+condition['pleural effusion'] = new Condition('pleural effusion',['No orders for pleural effusion'],[],[],[]);
+condition['pericardial effusion'] = new Condition('pericardial effusion',['No orders for pericardial effusion'],[],[],[]);
+condition['cellulitis'] = new Condition('cellulitis',['No orders for cellulitis'],[],[],[]);
+
+
+condition['dizziness'] = new Condition('dizziness',['No orders for dizziness'],[],[],[]);
+condition['neck pain'] = new Condition('neck pain',['No orders for neck pain'],[],[],[]);
+
+condition['hemoptysis'] = new Condition('hemoptysis',['No orders for hemoptysis'],[],[],[]);
+condition['leg swelling'] = new Condition('leg swelling',['No orders for leg swelling'],[],[],[]);
+condition['leg pain'] = new Condition('leg pain',['No orders for leg pain'],[],[],[]);
+condition['hyponatremia'] = new Condition('hyponatremia',['No orders for hyponatremia'],[],[],[]);
+condition['hypernatremia'] = new Condition('hypernatremia',['No orders for hypernatremia'],[],[],[]);
+
+condition['palliative care'] = new Condition('palliative care',[],[],['palliative care','extubation'],[]);
+condition['extubation'] = new Condition('extubation',['No orders for extubation'],[],[],[]);
+condition['leukocytosis'] = new Condition('leukocytosis',['No orders for leukocytosis'],[],[],[]);
+
+condition['dental pain'] = new Condition('dental pain',['No orders for dental pain'],[],[],[]);
+condition['std'] = new Condition('std',['CTNG'],['syphilis screen','wet prep','UA','HCG','pelvic ultrasound'],[],['Rocephin 500 mg IM']);
+condition['chf'] = new Condition('chf',['CBC','CMP','EKG','pro BNP','CXR'],[],['Lasix'],['NTG','BiPAP']);
+condition['urinary retention'] = new Condition('urinary retention',['No orders for urinary retention'],[],[],[]);
+condition['shock'] = new Condition('shock',['CBC','CMP','EKG','UA','CXR','sepsis lactate'],[],['IVF'],['Levophed','Dobutamine','NeoSynephrine','Vasopressin']);
+condition['dislocation'] = new Condition('dislocation',['No orders for dislocation'],[],[],[]);
+condition['back pain'] = new Condition('back pain',['No orders for back pain'],[],[],[]);
+condition['compression fracture'] = new Condition('compression fracture',['No orders for compression fracture'],[],[],[]);
+condition['cauda equina'] = new Condition('cauda equina',['No orders for cauda equina'],[],[],[]);
+condition['urinary retention'] = new Condition('urinary retention',['No orders for urinary retention'],[],[],[]);
+condition['neutropenia'] = new Condition('neutropenia',['No orders for neutropenia'],[],[],[]);
+condition['thrombocytopenia'] = new Condition('thrombocytopenia',['No orders for thrombocytopenia'],[],[],[]);
+condition['rsv'] = new Condition('rsv',['RSV'],['CXR'],[],[]);
+condition['flu'] = new Condition('flu',['Flu'],['CXR'],['Tamiflu'],[]);
+condition['croup'] = new Condition('croup',[],[],['Decadron 0.6 mg/kg po or IV'],[]);
+condition['jaw pain'] = new Condition('jaw pain',['No orders for jaw pain'],[],[],[]);
+condition['leg pain'] = new Condition('leg pain',['No orders for leg pain'],[],[],[]);
+
+condition['esrd'] = new Condition('esrd',['No orders for esrd'],[],[],[]);
+condition['syncope'] = new Condition('syncope',['No orders for syncope'],[],[],[]);
+
+condition['lactic acidosis'] = new Condition('lactic acidosis',['No orders for lactic acidosis'],[],[],[]);
+condition['lightheadedness'] = new Condition('lightheadedness',['No orders for lightheadedness'],[],[],[]);
+
+	/* used to get list of orders
+temp_set  = new Set();
+for (let i of Object.keys(condition)){
+	for (let j of condition[i].order) {
+		if (j.startsWith("No") == false) {
+			temp_set.add(j);
+	}
+	}
+}
+temp_array =  Array.from(temp_set);
+temp_array.sort();
+console.log(temp_array);
+var t = "";
+for (let i =0; i<temp_array.length; i++) {
+	t = t + temp_array[i] + '<br>';
+}
+document.getElementById("orders").innerHTML = t;
+*/
+	
+	
+order['Total Protein CSF'] = new Order('Total Protein CSF',['CSF Total Protein','CSF Protein','CSF total protein'],30050);
+order['Blood Culture'] = new Order('Blood Culture',['Blood Culture','blood cx'],30075);
+order['CBC'] = new Order('CBC',['CBC'],30100);
+order['CMP'] = new Order('CMP',['CMP'],30200);	
+order['Influenza RSV Covid PCR'] = new Order('Influenza RSV Covid PCR',['Influenza RSV Covid PCR','flu','Covid','rsv'],30300);
+order['Urinalysis rflx Micro Culture'] = new Order('Urinalysis rflx Micro Culture',['Urinalysis rflx Micro Culture','UA'],30400);
+order['Cell Count CSF'] = new Order('Cell Count CSF',['Cell Count CSF','CSF cell count'],30500);
+order['Manual Differential'] = new Order('Manual Differential',['Manual Differential','Man Diff'],30600);
+order['Herpes Simplex V DNA PCR CSF'] = new Order('Herpes Simplex V DNA PCR CSF',['Herpes Simplex V DNA PCR CSF'],30700);
+
+order["BOHB"] = new Order("BOHB",["BOHB"],30000);
+order["CRP"] = new Order("CRP",["CRP"],30000);
+order["CSF cell count"] = new Order("CSF cell count",["CSF cell count"],30000);
+order["CSF culture & gram stain"] = new Order("CSF culture & gram stain",["CSF culture & gram stain"],30000);
+order["CSF glucose"] = new Order("CSF glucose",["CSF glucose"],30000);
+order["CTNG"] = new Order("CTNG",["CTNG"],30000);
+
+order["ESR"] = new Order("ESR",["ESR"],30000);
+order["ETOH"] = new Order("ETOH",["ETOH"],30000);
+//order["Flu"] = new Order("Flu",["Flu"],30000);
+order["HCG"] = new Order("HCG",["HCG"],30000);
+
+
+order["PT/PTT"] = new Order("PT/PTT",["PT/PTT"],30000);
+//order["RSV"] = new Order("RSV",["RSV"],30000);
+order["TSH"] = new Order("TSH",["TSH"],30000);
+order["UA"] = new Order("UA",["UA"],30000);
+order["UDS"] = new Order("UDS",["UDS"],30000);
+order["Acetaminophen"] = new Order("acetaminophen",["acetaminophen"],30000);
+order["Blood culture"] = new Order("blood culture",["blood culture"],30000);
+order["Lactate"] = new Order("lactate",["lactate"],30000);
+order["Pro BNP"] = new Order("pro BNP",["pro BNP"],30000);
+order["Respiratory pathogen panel"] = new Order("respiratory pathogen panel",["respiratory pathogen panel"],30000);
+order["Salicylate"] = new Order("salicylate",["salicylate"],30000);
+order["Sepsis lactate"] = new Order("sepsis lactate",["sepsis lactate"],30000);
+order["Troponin"] = new Order("troponin",["troponin"],30000);
+order["Type & screen"] = new Order("type & screen",["type & screen"],30000);
+order["Wet prep"] = new Order("wet prep",["wet prep"],30000);
+order["Urine pregnancy test"] = new Order("urine pregnancy test",["HCG","hcg"],30000);
+
+order['XR Chest'] = new Order('Chest xray',['chest xray','cxr','CXR','Chest xray'],40100);
+order["CT abd/pelvis"] = new Order("CT abd/pelvis",["CT abd/pelvis"],40000);
+order["CTA chest PE protocol"] = new Order("CTA chest PE protocol",["CTA chest PE protocol"],40000);
+order["CTA chest, abd, pelvis"] = new Order("CTA chest, abd, pelvis",["CTA chest, abd, pelvis"],40000);
+order['EKG'] = new Order('EKG',['EKG'],40200);
+order["IR LP"] = new Order("IR LP",["IR LP"],40000);
+order["EV duplex US lower extremities"] = new Order("duplex US lower extremities",["duplex US lower extremities"],40000);
+order["XR finger"] = new Order("finger xray",["finger xray"],40000);
+order["US pelvis"] = new Order("pelvic ultrasound",["pelvic ultrasound"],40000);
+order["XR of body part"] = new Order("xray of body part",["xray of body part"],40000);
+order["XR of limb"] = new Order("xray of limb",["xray of limb"],40000);	
+	
+order["POC ABG"] = new Order("ABG",["ABG"],50000);
+order["POC VBG"] = new Order("VBG",["VBG"],50000);
+order["POC glucose"] = new Order("POC glucose",["POC glucose"],50000);
+order["GI Pathogen Profile"] = new Order("GI Pathogen Profile",['GI Pathogen Profile','GI pathogens'],50000);
+order["Restraints Non-Violent"] = new Order("Restraints Non-Violent",['Restraints Non-Violent','restraints'],50000);
+
+	
+order_dict = {};
+for (let x of Object.keys(order)) {
+	for (let y of order[x].synonyms) {
+		order_dict[y] = x;
+	}
+}
+	
+orders = [];
+orders_consider = [];
+tx = [];
+tx_consider = [];
+
+for (let i = 0; i<selected.length; i++) {
+	orders.push(condition[selected[i]].order);
+	orders_consider.push(condition[selected[i]].order_consider);
+	tx.push(condition[selected[i]].tx);
+	tx_consider.push(condition[selected[i]].tx_consider);
+}
+
+orders = new Set(orders.flat());
+orders_consider = new Set(orders_consider.flat());
+tx = new Set(tx.flat());
+tx_consider = new Set(tx_consider.flat());
+
+	
+for (let i of orders_consider.values()) {
+	if (orders.has(i)) {
+		orders_consider.delete(i);
+	}
+}
+
+for (let i of tx_consider.values()) {
+	if (tx.has(i)) {
+		tx_consider.delete(i);
+	}
+}
+
+	
+for (let i of orders.values()) {
+	if (order[order_dict[i]] != undefined) {
+		sorted_orders.push(order[order_dict[i]]);
+	}
+	else {
+	sorted_orders.push(new Order(i,[],50000));
+	order_dict[i] = i;
+	}
+}
+
+sorted_orders.sort(function(a,b){return a.name - b.name});
+//sorted_orders.sort(function(a,b){return a.sequence_number - b.sequence_number});
+
+for (let i of orders_consider.values()) {
+	if (order[order_dict[i]] != undefined) {
+		sorted_orders_consider.push(order[order_dict[i]]);
+	}
+	else {
+		sorted_orders_consider.push(new Order(i,[],50000));
+		order_dict[i] = i;
+	}
+}
+	console.log(sorted_orders_consider);
+sorted_orders_consider.sort(function(a,b){return a.name - b.name});
+	console.log(sorted_orders_consider);
+//sorted_orders_consider.sort(function(a,b){return a.sequence_number - b.sequence_number});
+
+var t = "";
+//var oldcat = 0;
+for (let i of sorted_orders) {
+/*	var cat = parseInt(i.sequence_number/10000);
+	if (cat != oldcat) {
+		oldcat = cat;
+		switch(cat) {
+			case 1:
+				t = t + "IV fluids\n";
+				break;
+			case 2:
+				t = t + "Medications\n";
+				break;
+			case 3:
+				t = t + "<h4>Laboratory</h4>\n";
+				break;
+			case 4:
+				t = t + "<h4>Imaging</h4>\n";
+				break;
+			case 5:
+				t =t  + "<h4>Dietary</h4>\n";
+				break;
+				
+				Admit
+				Care
+				Code
+				Consults
+				Microbiology
+				
+		}
+	}*/
+t = t + i.name +"<br>";
+}
+//document.getElementById("orders").outerHTML = '<pre id = "orders">'+t+'</pre>';
+document.getElementById('orders').innerHTML = t;
+	
+t = "";
+//oldcat = 0;
+for (let i of sorted_orders_consider) {
+	/*var cat = parseInt(i.sequence_number/10000);
+	if (cat != oldcat) {
+		oldcat = cat;
+		switch(cat) {
+			case 1:
+				t = t + "\n";
+				break;
+			case 2:
+				t = t + "\n";
+				break;
+			case 3:
+				t = t + "<h5>Laboratory</h5>\n";
+				break;
+			case 4:
+				t = t + "<h5>Imaging</h5>\n";
+				break;
+			case 5:
+				break;
+		}
+	}*/
+t = t + i.name +"<br>";
+}
+document.getElementById("orders_consider").innerHTML = t;
+	console.log(t);
+
+t = "";
+for (let i of tx.values()) {
+t = t + i +"<br>";
+}
+document.getElementById("tx").innerHTML = t;
+
+
+t = "";
+for (let i of tx_consider.values()) {
+t = t + i +"<br>";
+}
+document.getElementById("tx_consider").innerHTML = t;
+}
+
+function select(s){
+	document.getElementById("entered").innerHTML = s;
+}
+</script>
+</body>
+</html>
