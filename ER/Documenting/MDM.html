@@ -166,16 +166,21 @@
           dictationList.push('Reviewed prior external notes');
         }
         
-        if (cb[112]) {
-          dictationList.push('Reviewed results of the tests documented in this note.');
+        if (cb[112] && cb[113]){
+          dictationList.push('Ordered and reviewed the results of the tests documented in this note.  Significant results include...');
         }
-        
-        if (cb[113]) {
-          dictationList.push('Ordered results of the tests documented in this note.');
+        else {
+          if (cb[112]) {
+            dictationList.push('Reviewed results of the tests documented in this note.  Significant results include...');
+          }
+
+          if (cb[113]) {
+            dictationList.push('Ordered results of the tests documented in this note.');
+          }
         }
         
         if (cb[114]) {
-          dictationList.push('Independent historians I obtained history from');
+          dictationList.push('Independent historians I obtained history from (EMS, parents, family, PCP, law enforcement)');
         }
         
         if (cb[115]) {
