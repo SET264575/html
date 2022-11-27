@@ -156,7 +156,8 @@
 			}
 			if (count == 1) {
 				document.getElementById('in').value = '';
-				document.getElementById('selected').innerHTML = dict[q]);
+				ddx(dict[q]);
+				//document.getElementById('selected').innerHTML = dict[q]);
 				//selected.push(dict[q]);
 				//document.getElementById('selected').innerHTML = document.getElementById('selected').innerHTML + '\n'+dict[q];
 				//showOrders();
