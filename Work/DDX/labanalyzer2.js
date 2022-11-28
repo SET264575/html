@@ -1195,6 +1195,7 @@ Ur Bact trace
 	}
 	
 	function parseLabs(){
+		console.log('in parseLabs');
 		t = document.getElementById("textarea").value;
 		x = t.split('\n');
 		for (let i = 0; i < x.length; i++){
