@@ -1199,6 +1199,7 @@ Ur Bact trace
 		t = document.getElementById("textarea").value;
 		x = t.split('\n');
 		for (let i = 0; i < x.length; i++){
+			console.log(x[i]);
 			//b = x[i].match(/\b([A-Z][a-z]?)\b\s+\|\s+\b([\d|\.]+)\b/);		
 			b = x[i].match(/\s+([A-Z][^\|]*)\|\s+\b([\d|\.]+)\b/);
 			  //b = x[i].match(/\s+([A-Za-z]
