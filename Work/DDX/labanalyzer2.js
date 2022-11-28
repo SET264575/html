@@ -1212,7 +1212,7 @@ Ur Bact trace
 			{
 				console.log(b);
 				for (let i = 0; i < labs.length; i++){
-					//console.log(b[1].trim(),labs[i].symbol);
+					console.log(b[1].trim(),labs[i].symbol);
 					if (b[1].trim() == labs[i].symbol) {document.getElementById(labs[i].name).value = b[2];}
 				}
 			}
