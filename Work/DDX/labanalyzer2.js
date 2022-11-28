@@ -1209,7 +1209,7 @@ Ur Bact trace
 	//  then a word consisting of one or more digits and decimal points:  \b[\d|\.]+\b
 			if (b != null)
 			{
-				//console.log(b);
+				console.log(b);
 				for (let i = 0; i < labs.length; i++){
 					//console.log(b[1].trim(),labs[i].symbol);
 					if (b[1].trim() == labs[i].symbol) {document.getElementById(labs[i].name).value = b[2];}
