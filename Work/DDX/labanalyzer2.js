@@ -826,7 +826,7 @@ Ur Bact trace
 			abnormalities.push('hematuria');
 		}
 		
-		if(results['Urine Color'] != 'Clear' && results['Urine Color'] != 'Yellow') {
+		if(results['Urine Color'] != 'Clear' && results['Urine Color'] != 'Yellow' && results['Urine Color'] != '') {
 		   abnormalities.push('abnormal urine color');
 		}
 		
