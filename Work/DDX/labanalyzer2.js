@@ -18,11 +18,14 @@ Things to fix:
 	AST/ALT doesn't turn red
 	ANC calculated wrong
 	Shrink tree view spacing
+	Phosphorus & Total protein doesn't turn red when too high
+	Check limits on others, CBC, ABG, UA
+	Check pasted labs for CBC, UA, ABG, PT?PTT, TSH, Ammonia
+	
 	
 Things to complete:
 	Add labs:
-		uric acid, CK, procalcitonin, bands, lactate, phosphorus, probnp, tsh, total thyroxine, pt, ptt, ammonia
-		UA, ABG, RBC morphology
+
 	Add diseases:
 		biliary obstruction - elevated lfts, elevated alk phos, elevated bilirubin
 	Add ddx.htmls:
@@ -34,12 +37,8 @@ New features:
 	critical values
 	order abnormalities by most important
 	Add websites for abnormalities
-	*Format websites with tree views
 	Add websites for conditions
-	Add functionality for UA and ABG
-		respiratory acidosis/alkalosis calculations
 	Delete unneeded code
-	*Label suggestions with disease names
 
 	*/
 
