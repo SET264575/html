@@ -196,7 +196,7 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 */
 
 
-/*  needs normal ranges and terms and description from lab report	
+//  needs normal ranges and terms and description from lab report	
 
 	
 	labs.push(new Lab("corrected sodium","corrected sodium",135,145,"hyponatremia","hypernatremia"));
