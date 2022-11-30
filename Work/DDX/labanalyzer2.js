@@ -223,22 +223,25 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 	labs.push(new Lab('NRBC','NRBC',0,0.01,'***ignore***','***ignore***'));
 	labs.push(new Lab('ANC','ANC',2500,8000,'neutropenia','neutrophilia'));
 
-//complete the following
-/*
-	labs.push(new Lab('Vacuolated Neutrophils','Vacuolated Neuts'));
-	labs.push(new Lab('Dohle Bodies','Dohle Bodies'));
-	labs.push(new Lab('Giant Platelets','Gt Plts'));
-	labs.push(new Lab('Polychromasia','Polychromasia'));
-	labs.push(new Lab('Poikilocytosis','Poikilocytosis'));
-	labs.push(new Lab('Basophilic Stippling','Basophilic Stippling'));
-	labs.push(new Lab('Anisocytosis','Anisocytosis'));
-	labs.push(new Lab('Tear Drop Cells','Tear Drop Cells'));
-	labs.push(new Lab('Toxic Granulation','Toxic Gran'));
-	labs.push(new Lab('Ovalocytes'));
-	labs.push(new Lab('Burr Cells','Burr Cells'));
-	labs.push(new Lab('Schistocytes','Schistocytes'));
+	labs.push(new Lab('Acanthocytes','Acanthocytes',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Anisocytosis','Anisocytosis',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Basophilic Stippling','Basophilic Stippling',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Burr Cells','Burr Cells',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Dohle Bodies','Dohle Bodies',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Giant Platelets','Gt Plts',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Ovalocytes',"Ovalocytes',0,0,'***ignore***','***ignore***'));
+	//labs.push(new Lab('Polychromasia','Polychromasia',0,0,'***ignore***','***ignore***'));
+	//labs.push(new Lab('Poikilocytosis','Poikilocytosis',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Schistocytes','Schistocytes',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Spherocytes','Spherocytes',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Smudge cells','Smudge cells',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Stomatocytes','Stomatocytes',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Tear Drop Cells','Tear Drop Cells',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Target Cells','Target Cells',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Toxic Granulation','Toxic Gran',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Vacuolated Neutrophils','Vacuolated Neuts',0,0,'***ignore***','***ignore***'));
 
-*/
+
 
 //ABG
 	labs.push(new Lab('pH','pH',7.35,7.45,'***ignore***','***ignore***'));
