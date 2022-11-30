@@ -672,7 +672,21 @@ printAbnormalities();
 		results['Abs Eosinophils'] = parseFloat(document.getElementById('Abs Eosinophils').value);
 		results['Abs Basophils'] = parseFloat(document.getElementById('Abs Basophils').value);
 		results['NRBC'] = parseFloat(document.getElementById('NRBC').value);
-		
+		results['Acanthocytes'] = document.getElementById('Acanthocytes').checked;
+		results['Anisocytosis'] = document.getElementById('Anisocytosis').checked;
+		results['Basophilic stippling'] = document.getElementById('Basophilic stippling').checked;
+		results['Burr cells'] = document.getElementById('Burr cells').checked;
+		results['Dohle bodies'] = document.getElementById('Dohle bodies').checked;
+		results['Giant platelets'] = document.getElementById('Giant platelets').checked;
+		results['Ovalocytes'] = document.getElementById('Ovalocytes').checked;
+		results['Schistocytes'] = document.getElementById('Schistocytes').checked;
+		results['Spherocytes'] = document.getElementById('Spherocytes').checked;
+		results['Stomatocytes'] = document.getElementById('Stomatocytes').checked;
+		results['Smudge cells'] = document.getElementById('Smudge cells').checked;
+		results['Target cells'] = document.getElementById('Target cells').checked;
+		results['Tear drop cells'] = document.getElementById('Tear drop cells').checked;
+		results['Toxic granulation'] = document.getElementById('Toxic granulation').checked;
+		results['Vacuolated neutrophls'] = document.getElementById('Vacuolated neutrophils').checked;
 		results['pH'] = parseFloat(document.getElementById('pH').value);
 		results.pCO2 = parseFloat(document.getElementById('pCO2').value);
 		results.pO2 = parseFloat(document.getElementById('pO2').value);
@@ -766,6 +780,9 @@ Ur Bact trace
 			     
 
 		for (let i =0; i < labs.length; i ++){
+			if (results[labs[i].name]]){
+				abnormalities.push(abnormalities.push(labs[i].name));
+			}
 			switch(labs[i].inRange(results[labs[i].name])){
 				case -1:
 					if (labs[i].low_name != '***ignore***'){
@@ -820,6 +837,7 @@ Ur Bact trace
 		if(results['AST/ALT ratio']<0.9){
 			abnormalities.push('AST/ALT ratio < 0.9');
 		}
+		
 		
 		if(results['Urine Blood'] != 'Negative' && results['Urine Blood'] != '') {
 			abnormalities.push('hematuria');
