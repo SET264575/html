@@ -10,7 +10,7 @@
   </head>
   <body>
     <h2>Give Feedback to Our Website.</h2>
-    <form action="mailto:" method="get" enctype="text/plain">
+    <form action="mailto:" method="get" enctype="text/plain" id = 'mailto'>
       <div>
         <label for="name">Name:
           <input type="text" name="name" id="name" />
@@ -31,5 +31,9 @@
         <input type="reset" name="reset" value="Clear Form" />
       </div>
     </form>
+    <script>
+      var x = 'scottsm7000';
+      document.getElementById('mailto').setAttribute('action','mailto:'+x+'@gmail.com');
+    </script>
   </body>
 </html>
