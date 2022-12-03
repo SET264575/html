@@ -783,7 +783,7 @@ Ur Bact trace
 			     
 
 		for (let i =0; i < labs.length; i ++){
-			if (results[labs[i].name]]){
+			if (results[labs[i].name]){
 				abnormalities.push(abnormalities.push(labs[i].name));
 			}
 			switch(labs[i].inRange(results[labs[i].name])){
