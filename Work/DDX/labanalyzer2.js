@@ -229,7 +229,7 @@ labs.push(new Lab('','',0,0,'***ignore***','***ignore***'));
 	labs.push(new Lab('Burr Cells','Burr Cells',0,0,'***ignore***','***ignore***'));
 	labs.push(new Lab('Dohle Bodies','Dohle Bodies',0,0,'***ignore***','***ignore***'));
 	labs.push(new Lab('Giant Platelets','Gt Plts',0,0,'***ignore***','***ignore***'));
-	labs.push(new Lab('Ovalocytes',"Ovalocytes',0,0,'***ignore***','***ignore***'));
+	labs.push(new Lab('Ovalocytes','Ovalocytes',0,0,'***ignore***','***ignore***'));
 	//labs.push(new Lab('Polychromasia','Polychromasia',0,0,'***ignore***','***ignore***'));
 	//labs.push(new Lab('Poikilocytosis','Poikilocytosis',0,0,'***ignore***','***ignore***'));
 	labs.push(new Lab('Schistocytes','Schistocytes',0,0,'***ignore***','***ignore***'));
