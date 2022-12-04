@@ -28,9 +28,9 @@
           <a href="..\..\..\..\Work\DDX\ddx.html" target = "content">Differential Diagnoses</a><br>
           <a href="..\..\..\..\Work\index.html" target = "content">Websites</a><br>
 
-          <div class="subnav">
-            <button class="subnavbtn">Disease Management <i class="fa fa-caret-down"></i></button><br>
-            <div class="subnav-content">
+          <div class="dropdown">
+            <button class="dropdown-btn">Disease Management <i class="fa fa-caret-down"></i></button><br>
+            <div class="dropdown-container">
               <a href="#company">Critical Care</a><br>
               <a href="#team">Neurology</a><br>
               <a href="#careers">Pediatrics</a><br>
@@ -40,8 +40,8 @@
             </div>
           </div>
           <div class="subnav">
-            <button class="subnavbtn">Boone Info <i class="fa fa-caret-down"></i></button><br>
-            <div class="subnav-content">
+            <button class="dropdown-btn">Boone Info <i class="fa fa-caret-down"></i></button><br>
+            <div class="dropdown-container">
               <a href="#bring">Phone Numbers</a><br>
               <a href="#deliver">Deliver</a><br>
               <a href="#package">Package</a><br>
@@ -49,8 +49,8 @@
             </div>
           </div>
           <div class="subnav">
-            <button class="subnavbtn">ER/Hospital Policies <i class="fa fa-caret-down"></i></button><br>
-            <div class="subnav-content">
+            <button class="dropdown-btn">ER/Hospital Policies <i class="fa fa-caret-down"></i></button><br>
+            <div class="dropdown-container">
                 <a href = "Policies/Boone ED Intro Onboarding 8-22-22.pdf" target = "recommendations">On-boarding</a><br>
                 <a href = "Policies/EchoVascular Call Policy 2022.docx" target = "recommendations">EchoVascular Call Policy</a><br>
                 <a href = "Policies/Ultrasound Call Policy 2022_DRAFT_08.31.22 (1).docx" target = "recommendations">Ultrasound Call Policy</a><br>
@@ -59,8 +59,8 @@
             </div>
           </div>
           <div class="subnav">
-            <button class="subnavbtn">Physicians <i class="fa fa-caret-down"></i></button><br>
-            <div class="subnav-content">
+            <button class="dropdown-btn">Physicians <i class="fa fa-caret-down"></i></button><br>
+            <div class="dropdown-container">
                 <a href = "https://boone.health/provider-directory/" target = "recommendations">Boone Physicians</a><br>
                 <a href="https://www.columbiaorthogroup.com/physicians/" target = "recommendations">COG Physicians</a><br>
                 <a href="https://gicolumbia.com/physicians-staff/" target = "recommendations">GI Associates</a><br>
@@ -78,6 +78,22 @@
         <iframe class="content" id = "content" name = "content"></iframe>
       </td>
     </table>
-    
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+      </script>
   </body>
 </html>
