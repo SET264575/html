@@ -95,7 +95,7 @@
       }
       
       function deactivate() {
-        dropdownContent = document.getElementByClassName("dropdown-content");
+        dropdownContent = document.getElementsByClassName("dropdown-content");
         for (i = 0; i<dropdownContent.length; i++) {
           dropdownContent[i].style.display = 'none';
         }
