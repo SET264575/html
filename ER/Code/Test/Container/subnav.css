@@ -37,6 +37,7 @@
   color: #2196F3;
   font-family: inherit;
   margin: 0;
+  left: 0;
 }
 
 /* Add a red background color to navigation links on hover */
@@ -59,6 +60,8 @@
 .subnav-content a {
   float: left;
   color: #2196F3;
+  padding: 6px 8px 6px 16px;
+  display: block;
   text-decoration: none;
 }
 
