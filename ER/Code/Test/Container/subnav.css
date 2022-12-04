@@ -32,6 +32,7 @@
   border: none;
   outline: none;
   zpadding: 14px 16px;
+  padding: 6px 8px 6px 16px;
   background-color: inherit;
   color: #818181;
   font-family: inherit;
@@ -40,7 +41,7 @@
 
 /* Add a red background color to navigation links on hover */
 .sidenav a:hover, .subnav:hover .subnavbtn {
-  background-color: gray;
+  background-color: white;
 }
 
 /* Style the subnav content - positioned absolute */
@@ -62,7 +63,7 @@
 
 /* Add a grey background color on hover */
 .subnav-content a:hover {
-  background-color: #eee;
+  background-color: white;
   color: black;
 }
 
