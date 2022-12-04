@@ -38,7 +38,7 @@
 }
 
 /* Add a red background color to navigation links on hover */
-.navbar a:hover, .subnav:hover .subnavbtn {
+.sidenav a:hover, .subnav:hover .subnavbtn {
   background-color: gray;
 }
 
