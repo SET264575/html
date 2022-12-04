@@ -83,6 +83,7 @@
 
       for (i = 0; i < dropdown.length; i++) {
         dropdown[i].addEventListener("click", function() {
+          deactivate();
           this.classList.toggle("active");
           var dropdownContent = this.nextElementSibling;
           if (dropdownContent.style.display === "block") {
@@ -91,6 +92,13 @@
             dropdownContent.style.display = "block";
           }
         });
+      }
+      
+      function deactivate() {
+        dropdownContent = document.getElementByClassName("dropdown-content");
+        for (i = 0; i<dropdownContent.length; i++) {
+          dropdownContent[i].style.display = 'none';
+        }
       }
       </script>
   </body>
