@@ -56,8 +56,8 @@
 
 /* Style the subnav links */
 .subnav-content a {
-  float: right;
-  zcolor: white;
+  float: left;
+  color: white;
   text-decoration: none;
 }
 
