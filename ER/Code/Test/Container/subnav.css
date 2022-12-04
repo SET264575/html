@@ -34,7 +34,7 @@
   zpadding: 14px 16px;
   padding: 6px 8px 6px 16px;
   background-color: inherit;
-  color: #818181;
+  color: #2196F3;
   font-family: inherit;
   margin: 0;
 }
@@ -58,14 +58,14 @@
 /* Style the subnav links */
 .subnav-content a {
   float: left;
-  color: white;
+  color: #2196F3;
   text-decoration: none;
 }
 
 /* Add a grey background color on hover */
 .subnav-content a:hover {
   zbackground-color: white;
-  color: 064579;
+  color: #064579;
 }
 
 /* When you move the mouse over the subnav container, open the subnav content */
