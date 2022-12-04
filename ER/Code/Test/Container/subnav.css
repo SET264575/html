@@ -41,7 +41,8 @@
 
 /* Add a red background color to navigation links on hover */
 .sidenav a:hover, .subnav:hover .subnavbtn {
-  background-color: white;
+  zbackground-color: white;
+  color:  #064579;
 }
 
 /* Style the subnav content - positioned absolute */
@@ -63,8 +64,8 @@
 
 /* Add a grey background color on hover */
 .subnav-content a:hover {
-  background-color: white;
-  color: black;
+  zbackground-color: white;
+  color: 064579;
 }
 
 /* When you move the mouse over the subnav container, open the subnav content */
