@@ -22,7 +22,7 @@
 
 /* The subnavigation menu */
 .subnav {
-  float: right;
+  float: left;
   overflow: hidden;
 }
 
