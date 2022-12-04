@@ -38,7 +38,7 @@
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
-  display: none;
+  display: active; /*none*/
   background-color: #262626;
   color: #2196F3;
   font-size: 20px;
