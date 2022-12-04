@@ -28,11 +28,12 @@
 
 /* Subnav button */
 .subnav .subnavbtn {
-  zfont-size: 16px;
+  font-size: 16px;
   border: none;
   outline: none;
   zpadding: 14px 16px;
   background-color: inherit;
+  color: #818181;
   font-family: inherit;
   margin: 0;
 }
