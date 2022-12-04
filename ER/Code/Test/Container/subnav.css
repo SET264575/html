@@ -119,6 +119,8 @@
 .dropdown-container {
   display: none;
   background-color: #262626;
+  color: #2196F3;
+  font-size: 20px;
   padding-left: 8px;
 }
 
