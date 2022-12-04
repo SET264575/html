@@ -6,7 +6,6 @@
 
 /* Navigation links */
 .navbar a {
-  float: left;
   font-size: 16px;
   color: white;
   text-align: center;
@@ -16,7 +15,7 @@
 
 /* The subnavigation menu */
 .subnav {
-  float: left;
+  float: right;
   overflow: hidden;
 }
 
@@ -49,7 +48,7 @@
 
 /* Style the subnav links */
 .subnav-content a {
-  float: left;
+  float: right;
   color: white;
   text-decoration: none;
 }
