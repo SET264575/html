@@ -87,8 +87,10 @@
           var dropdownContent = this.nextElementSibling;
           if (dropdownContent.style.display === "block") {
             dropdownContent.style.display = "none";
+            console.log(dropdownContent.name,'off');
           } else {
             dropdownContent.style.display = "block";
+            console.log(dropdownContent.name,'on');
           }
         });
       }
