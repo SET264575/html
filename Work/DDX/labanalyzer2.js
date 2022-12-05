@@ -680,7 +680,7 @@ printAbnormalities();
 		results['Basophilic stippling'] = document.getElementById('Basophilic stippling').checked;
 		results['Burr cells'] = document.getElementById('Burr cells').checked;
 		results['Dohle bodies'] = document.getElementById('Dohle bodies').checked;
-		results['Giant platelets'] = document.getElementById('Giant platelets').checked;
+		results['Giant platelets'] = document.getElementById('Giant plts').checked;
 		results['Ovalocytes'] = document.getElementById('Ovalocytes').checked;
 		results['Schistocytes'] = document.getElementById('Schistocytes').checked;
 		results['Spherocytes'] = document.getElementById('Spherocytes').checked;
