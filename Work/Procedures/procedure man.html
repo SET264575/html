@@ -46,12 +46,12 @@
       drawCircle(200,200,'mouth');
       
       function drawCircle(x,y,t) {
-        ctx.strokeStyle = "lightgray";
+        ctx.fillStyle = "lightgray";
         ctx.lineWidth = 3;
         ctx.beginPath();
         ctx.arc(x, y, 3, 0, 2 * Math.PI, true);
         ctx.fill();
-        ctx.strokeStyle = "white";
+        ctx.fillStyle = "white";
         ctx.fillText(t, x, y);
       }
     </script>
