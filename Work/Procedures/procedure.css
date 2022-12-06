@@ -42,7 +42,7 @@ h3 {
 
 footer {
   background-color: lightblue;
-  position: static;
+  position: fixed;
   margin-top: 50px;
   left: 0;
   bottom: 0;
