@@ -33,7 +33,7 @@ meetsStandard2::after {
 .copyBtn::after {
   content: 'Copy Edited Text';
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 
 h3 {
