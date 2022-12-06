@@ -7,7 +7,7 @@
   <body>
     <img src="Man.jpeg" usemap = "#proceduremap" id='theImg'>
     <map name="proceduremap">
-      <area shape="circle" coords="100,100,30"  href="computer.htm">
+      <area shape="circle" coords="10,10,3"  href="computer.htm">
       <area shape="circle" coords="200,200,20"  href="phone.htm">
       <area shape="circle" coords="300,300,10"  href="coffee.htm">
     </map>
@@ -22,7 +22,7 @@
   
   var ctx = cnvs.getContext("2d");
   ctx.beginPath();
-  ctx.arc(250, 210, 200, 0, 2 * Math.PI, false);
+  ctx.arc(100, 100, 10, 0, 2 * Math.PI, true);
   ctx.lineWidth = 3;
   ctx.strokeStyle = '#00ff00';
   ctx.stroke();
