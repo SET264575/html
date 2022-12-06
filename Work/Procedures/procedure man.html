@@ -26,7 +26,7 @@
         console.log(e.x,e.y);
       }
     </script>
-    <!--script>
+    <script>
    
       
   var img = document.getElementById("theImg");
@@ -35,8 +35,8 @@
   cnvs.style.position = "absolute";
   cnvs.style.left = img.offsetLeft + "px";
   cnvs.style.top = img.offsetTop + "px";
-  cnvs.style.width = img.width+"px";
-  cnvs.style.height = img.height+"px";
+  cnvs.width = img.width;
+  cnvs.height = img.height;
   
   var ctx = cnvs.getContext("2d");
   ctx.font = "10px Arial";
