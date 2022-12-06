@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Joint Reduction</title>
+    <link rel="stylesheet" href="procedure.css">
   </head>
   <body>
     <h3>Joint Reduction</h3>
@@ -26,6 +27,25 @@
     </select><br><br>
     
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+            <br>
+    <div class="hasBeenCopied"></div>
+    
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
  
     <script>
       function copytext(){
