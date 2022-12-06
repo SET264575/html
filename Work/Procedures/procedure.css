@@ -6,6 +6,11 @@
   content: 'The generated text was last changed on ";
 }
 
+.hasBeenCopied {
+  content: 'This text has been copied to the clipboard and is ready to be pasted in your document.<br>If you have edited the text, you can copy it to the clipboard with the button below.';
+  font-weight: bold;
+}
+
 footer {
   background-color: lightblue;
   position: fixed;
