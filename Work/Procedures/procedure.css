@@ -25,6 +25,10 @@ meetsStandard2::after {
   content: 'This webpage conforms to the standard as of 12/12/99';
   /*
   displays when not all require fields are completed
+  includes indication
+  includes consent
+  identified problems fixed
+  checkboxes work
   */
 }
 
