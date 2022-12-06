@@ -3,18 +3,36 @@
     <title>
       Procedures
     </title>
+    <style>
+      .hidden {
+        display: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+      
+      .active {
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <div>
     <img src="Man.jpeg" usemap = "#proceduremap" id='theImg' style="margin-left:  100px;" donclick="pos()">
     <map name="proceduremap">
-      <area shape="circle" coords="125,19,10"  href="scalp.html">
+      <area shape="circle" coords="125,19,10"  onclick = 'showProcedures('scalp')'>
       <area shape="circle" coords="68,60,10"  href="ear.html">
       <area shape="circle" coords="105,50,10"  href="eye.html">
       <area shape="circle" coords="125,62,10"  href="nose.html">
       <area shape="circle" coords="125,83,10"  href="mouth.html">
       <area shape="circle" coords="72,182,10"  href="SKIN.html">
     </map>
+    </div>
+    <div class="hidden">
+      <pre>
+      foreign body removal<br>
+      scalp laceration<br>
+      </pre>
     </div>
     <canvas name="myCanvas" id = "myCanvas"/>
     
@@ -24,6 +42,10 @@
       
       function pos(e) {
         console.log(e.x,e.y);
+      }
+      
+      function showProcedures(t) {
+        document.getElementById(t).classList.add('active');
       }
     </script>
     <script>
