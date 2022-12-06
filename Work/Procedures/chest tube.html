@@ -13,6 +13,7 @@ Tolerated
 <html>
   <head>
     <title>Chest tube</title>
+    <link rel="stylesheet" href="procedure.css">
   </head>
   <body>
     <h3>Chest tube</h3>
@@ -63,7 +64,27 @@ Tolerated
        <option>bloody fluid</option>
     </select><br>
 <br>
-    <textarea id = "textarea" style = "rows: 10; cols: 100;"></textarea>
+    <textarea id = "textarea"></textarea>
+    
+            <br>
+    <div class="hasBeenCopied"></div>
+    
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Not Tested as of 12/6/22</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+    
     <script>
       function copytext(){
         var t = '';
