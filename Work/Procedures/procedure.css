@@ -6,6 +6,10 @@
   content: 'The generated text was last changed on ';
 }
 
+.meetsStandard1 {
+  content: 'This webpage conforms to the standard as of 12/6/22';
+}
+
 .hasBeenCopied {
   content: 'This text has been copied to the clipboard and is ready to be pasted in your document.<br>If you have edited the text, you can copy it to the clipboard with the button below.';
   font-weight: bold;
