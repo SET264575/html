@@ -3,20 +3,21 @@
 <html>
   <head>
     <title>Intubation</title>
+    <link rel="stylesheet" href="procedure.css">
   </head>
   <body>
     <h3>Intubation</h3>
     
     <input type = "checkbox" id = "student" onchange="copytext()">
     <label for = "student">The procedure was performed by *** under my direct supervision.  I was present throughout the entire procedure.</label>
-    <h4>indication</h4>
+    <h4>Indication</h4>
     <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
     <label for = "0">respiratory failure</label><br>
     <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
     <label for = "1">airway protection</label><br>
 <br>
 
-    <h4>consent</h4>
+    <h4>Consent</h4>
     <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
     <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
     <input type = "radio" name = "consent" value = "1" id = "consent" onchange = "copytext()">
@@ -25,7 +26,7 @@
     <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
 <br>
 
-    <h4>sedation</h4>
+    <h4>Sedation</h4>
     <input type = "radio" name = "sedation" value = "3" id = "sedation3" onchange = "copytext()">
     <label for = "3">The patient was sedated with 20 mg of etomidate and paralyzed with 100 mg of succinylcholine.</label><br>
     <input type = "radio" name = "sedation" value = "0" id = "sedation0" onchange = "copytext()">
@@ -53,7 +54,7 @@
       <option>26</option>
     </select><br>
 
-    <h4>secured_location</h4>
+    <h4>Secured location</h4>
     <input type = "radio" name = "secured_location" value = "0" id = "secured_location" onchange = "copytext()">
     <label for = "0">teeth</label><br>
     <input type = "radio" name = "secured_location" value = "1" id = "secured_location" onchange = "copytext()">
@@ -62,7 +63,7 @@
     <label for = "2">gum</label><br>
 <br>
 
-    <h4>oxygen_saturation</h4>
+    <h4>Oxygen_saturation</h4>
     <input type = "radio" name = "oxygen_saturation" value = "0" id = "oxygen_saturation" onchange = "copytext()">
     <label for = "0">improved</label><br>
     <input type = "radio" name = "oxygen_saturation" value = "1" id = "oxygen_saturation" onchange = "copytext()">
@@ -72,6 +73,26 @@
     <br>
 
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    
+        <br>
+    <div class="hasBeenCopied"></div>
+    
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+    
     <script>
       function copytext(){
         var student = document.getElementById("student").checked;
