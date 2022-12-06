@@ -34,12 +34,13 @@
     <label for = "2">The patient did not require sedation or paralysis.</label><br>
 <br>
 
-   
-    <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    <div class="textarea">
+    <textarea id = "text"></textarea><br>
     <br>
     <div class="hasBeenCopied"></div>
     
     <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    </div>
     
     <footer>
       <div class="dateChanged">12/6/22</div>
