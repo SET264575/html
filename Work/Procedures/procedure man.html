@@ -40,54 +40,10 @@
   
   var ctx = cnvs.getContext("2d");
   ctx.font = "10px Arial";
-  ctx.strokeStyle = "#f2f2f2";
   ctx.lineWidth = 3;
-  ctx.beginPath();
-  ctx.arc(255, 147, 10, 0, 2 * Math.PI, true);
-      ctx.fill();
-      ctx.fillText("ear", 255, 147);
-      
-      ctx.beginPath();
-      ctx.arc(200, 200, 10, 0, 2 * Math.PI, true);
-      ctx.fill();
-      ctx.fillText("heart", 200, 200);
-      
-      ctx.beginPath();
-      ctx.arc(150, 250, 10, 0, 2 * Math.PI, true);
-      ctx.fill();
-      ctx.fillText("scalp", 150, 250);
-      
-      ctx.beginPath();
-      ctx.arc(150, 250, 10, 0, 2 * Math.PI, true);
-      ctx.fill();
-      ctx.fillText("nose", 150, 250);
-      
-      ctx.beginPath();
-      ctx.arc(150, 250, 10, 0, 2 * Math.PI, true);
-      ctx.fill();
-      ctx.fillText("mouth", 150, 250);
-      
-      ctx.beginPath();
-      ctx.arc(50, 250, 10, 0, 2 * Math.PI, true);
-      ctx.lineWidth = 3;
-      ctx.strokeStyle = '#00ff00';
-      ctx.fill();
-      ctx.fillText("skin", 50, 250);
-      
-      ctx.beginPath();
-      ctx.arc(100, 450, 10, 0, 2 * Math.PI, true);
-      ctx.fill();
-      ctx.fillText("GU", 50, 450);
-      
-      ctx.beginPath();
-      ctx.arc(100, 450, 10, 0, 2 * Math.PI, true);
-      ctx.fill();
-      ctx.fillText("knee", 100, 750);
-       
-      ctx.beginPath();
-      ctx.arc(100, 900, 10, 0, 2 * Math.PI, true);
-      ctx.fill();
-      ctx.fillText("ankle", 100, 900);     
+  drawCircle(50,50,'eye');
+      drawCircle(90,90,'ear');
+      drawCircle(200,200,'mouth');
       
       function drawCircle(x,y,t) {
         ctx.strokeStyle = "lightgray";
