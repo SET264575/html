@@ -147,8 +147,9 @@
       }
       
       function printFrame() {
-        window.frames['content'].focus();
-        window.frames['content'].contentWindow.print();
+        var frm = document.getElementById('content');
+        frm.focus();
+        frm.print();
       }
       </script>
   </body>
