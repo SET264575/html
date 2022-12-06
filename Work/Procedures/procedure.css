@@ -1,8 +1,8 @@
-tested:: before {
+.tested:: before {
   content: 'Status:';
 }
 
-dateChanged:: before {
+.dateChanged:: before {
   content: 'The generated text was last changed on ";
 }
 
