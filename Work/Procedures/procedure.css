@@ -1,0 +1,13 @@
+tested:: before {
+  content: 'Status:';
+}
+
+dateChanged:: before {
+  content: 'The generated text was last changed on ";
+}
+
+footer {
+  background-color: lightblue;
+  position: fixed;
+  margin: -30px;
+}
