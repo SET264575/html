@@ -49,14 +49,6 @@ h3 {
   text-align: center;
 }
 
-label {
-  font-weight: bold;
-}
-
-radio {
-  font-weight: normal;
-}
-
 label::before {
   content: '\A';
 }
