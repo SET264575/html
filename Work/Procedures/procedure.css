@@ -53,6 +53,10 @@ label {
   font-weight: bold;
 }
 
+radio {
+  font-weight: normal;
+}
+
 label::before {
   content: '\A';
 }
