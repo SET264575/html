@@ -5,11 +5,27 @@
     </title>
   </head>
   <body>
-    <img src="Man.jpeg" usemap = "#proceduremap">
+    <img src="Man.jpeg" usemap = "#proceduremap" id='theImg'>
     <map name="proceduremap">
       <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
       <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
       <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
     </map>
+    <canvas name="myCanvas" id = "myCanvas" width = "300px" height = "500"/>
+    <script>
+  var img = document.getElementById("theImg");
+  var cnvs = document.getElementById("myCanvas");
+  
+  cnvs.style.position = "absolute";
+  cnvs.style.left = img.offsetLeft + "px";
+  cnvs.style.top = img.offsetTop + "px";
+  
+  var ctx = cnvs.getContext("2d");
+  ctx.beginPath();
+  ctx.arc(250, 210, 200, 0, 2 * Math.PI, false);
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = '#00ff00';
+  ctx.stroke();
+    </script>
   </body>
 </html>
