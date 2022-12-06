@@ -61,14 +61,14 @@ label::after {
   top: 50px;
 }
 
-textarea {
+#text {
   width: 500px;
   height: 300px;
   margin-bottom: 20px;
   font: 16px Arial;
 }
 
-smalltextarea {
+zsmalltextarea {
   width: 40px;
   height: 20px;
 }
