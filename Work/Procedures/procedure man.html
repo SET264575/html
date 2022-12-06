@@ -20,15 +20,15 @@
     <div>
     <img src="Man.jpeg" usemap = "#proceduremap" id='theImg' style="margin-left:  100px;" donclick="pos()">
     <map name="proceduremap">
-      <area shape="circle" coords="125,19,10"  onclick = 'showProcedures('scalp')'>
-      <area shape="circle" coords="68,60,10"  href="ear.html">
-      <area shape="circle" coords="105,50,10"  href="eye.html">
-      <area shape="circle" coords="125,62,10"  href="nose.html">
-      <area shape="circle" coords="125,83,10"  href="mouth.html">
-      <area shape="circle" coords="72,182,10"  href="SKIN.html">
+      <area shape="circle" coords="125,19,10"  onclick = 'showProcedures("scalp")'>
+      <area shape="circle" coords="68,60,10" onclick = 'showProcedures("ear")'>
+      <area shape="circle" coords="105,50,10" onclick = 'showProcedures("eye")'>
+      <area shape="circle" coords="125,62,10" onclick = 'showProcedures("nose")'>
+      <area shape="circle" coords="125,83,10" onclick = 'showProcedures("mouth")'>
+      <area shape="circle" coords="72,182,10" onclick = 'showProcedures("skin")'>
     </map>
     </div>
-    <div class="hidden">
+    <div class="hidden" id = "scalp">
       <pre>
       foreign body removal<br>
       scalp laceration<br>
