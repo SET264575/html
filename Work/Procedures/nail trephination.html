@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Nail trephination</title>
+    <link rel="stylesheet" href="procedure.css'>
   </head>
   <body>
     <h3>Nail trephination</h3>
@@ -9,16 +10,23 @@
     <label for = "0">right</label><br>
     <input type = "radio" name = "side" value = "1" id = "side" onchange = "copytext()">
     <label for = "1">left</label><br>
-<br>
+    <br>
 
     <label for="digit">Digit</label>
     <select id = "digit" onchange = "copytext()">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option>first</option>
+      <option>second</option>
+      <option>third</option>
+      <option>fourth</option>
+      <option>fifth</option>
     </select><br>
+    <br>
+    <input type = "radio" name = "finger" value = "finger" id = "finger" onchange = "copytext()">
+    <label for = "0">finger</label><br>
+    <input type = "radio" name = "finger" value = "toe" id = "finger" onchange = "copytext()">
+    <label for = "1">toe</label><br>
+    <br>
+   
 
     <input type = "checkbox" name = "block" id = "block" onchange = "copytext()">
     <label for = "block">A digital block was performed.</label><br><br>
@@ -33,10 +41,17 @@
     <br>
 
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
+    
+    <div class="dateChanged">12/6/22</div>
+    <div class="tested">Works</div>
+                                               
+                            
+    
     <script>
       function copytext(){
         var side = getRadioButtonValue("side");
         var digit = document.getElementById("digit").value;
+        var finger = getRadioButtonValue("finger");
         var block = document.getElementById("block").value;
         var holes = document.getElementById("holes").value;
         var t = "";
@@ -48,12 +63,12 @@
             t = t + "left";
             break;
         }
-        t = t + digit;
+        t = t + " " + digit + " " + finger+'nail';
         var location = t;
         
-        var t = "Procedure Note: Nail trephination of the "+location+"\n";
+        var t = "Procedure Note: Trephination of the "+location+"\n";
         t = t + "The procedure was indicated for a painful subungal hematoma. ";
-        t = t + "The risks, benefits, and alternatives were discussed with the patient who gave written consent. ";
+        t = t + "The risks, benefits, and alternatives were discussed with the patient who gave verbal consent. ";
         if (block == true){
           t = t + "A digital block was performed.";
         }
@@ -80,10 +95,3 @@
     </script>
   </body>
 </html>
-
-<!--
-Procedure Note:  Nail trephination
-The procedure was indicated for a painful subungal hematoma of the right first fingernail.  A digital block was performed.  The nail and surrounding skin was prepped with 
-Betadine.  A high-temperature cauterizer was used to burn 2 holes through the nail.  Blood was expressed through the hole.  The patient tolerated the procedure well.  
-There were no complications.
-    -->
