@@ -25,19 +25,13 @@ meetsStandard2::after {
 }
 
 .hasBeenCopied::after {
-  zposition: fixed;
-  zright: 600px;
-  ztop: 500px;
   content: 'This text has been copied to the clipboard and is ready to be pasted in your document.\AIf you have edited the text, you can copy it to the clipboard with the button below.';
   font-weight: bold;
   white-space: pre;
 }
 
 .copyBtn {
-  zposition: fixed;
-  ztop: 550px;
-  zright: 600px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 80px;
 }
 
@@ -66,6 +60,8 @@ label::after {
 textarea {
   width: 500px;
   height: 200px;
+  margin-bottom: 20px;
+  font: 16px Arial;
 }
 
 smalltextarea {
