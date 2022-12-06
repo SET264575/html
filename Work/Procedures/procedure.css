@@ -49,6 +49,14 @@ h3 {
   text-align: center;
 }
 
+label {
+  font-weight: bold;
+}
+
+label::after {
+  content: '\A';
+}
+
 textarea {
   position: fixed;
   right: -600px;
