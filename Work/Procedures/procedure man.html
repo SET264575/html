@@ -104,6 +104,11 @@
       }
       
       function showProcedures(t) {
+        var hiddendiv = document.getElementsByClassName('div');
+        for (let i = 0; i<hiddendiv.length; i++) {
+          hiddendiv[i].classList.remove('active');
+        }
+        console.log(t,document.getElementById(t));
         document.getElementById(t).classList.add('active');
         console.log(document.getElementById(t).classList);
       }
