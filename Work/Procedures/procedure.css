@@ -3,7 +3,7 @@
 }
 
 .dateChanged:: before {
-  content: 'The generated text was last changed on ";
+  content: 'The generated text was last changed on ';
 }
 
 .hasBeenCopied {
