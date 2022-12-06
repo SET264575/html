@@ -42,6 +42,8 @@
 
     <textarea id = "text" style = "width:  1000px; height: 200px;"></textarea><br>
     
+    <button id="copyBtn" onclick="copyEdited()">Copy</button><br>
+    
     <footer>
       <div class="dateChanged">12/6/22</div>
       <div class="tested">Works</div>
@@ -49,6 +51,12 @@
                                                
                             
     
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+      
     <script>
       function copytext(){
         var side = getRadioButtonValue("side");
