@@ -75,6 +75,7 @@ smalltextarea {
 
 footer {
   background-color: lightblue;
+  opacity: 50%;
   position: fixed;
   margin-top: 50px;
   left: 0;
