@@ -5,7 +5,7 @@
     </title>
   </head>
   <body>
-    <img src="Man.jpeg" usemap = "#proceduremap" id='theImg' style="margin: auto; width: 600px">
+    <img src="Man.jpeg" usemap = "#proceduremap" id='theImg' style="margin: auto; width: 600px" onclick="pos()">
     <map name="proceduremap">
       <area shape="circle" coords="10,10,3"  href="HEENT.html">
       <area shape="circle" coords="200,200,20"  href="CHEST.html">
@@ -14,7 +14,14 @@
       <area shape="circle" coords="100,100,20"  href="ORTHO.html">
       <area shape="circle" coords="150,125,10"  href="SKIN.html">
     </map>
-    <canvas name="myCanvas" id = "myCanvas" width = "300px" height = "500"/>
+    <!--canvas name="myCanvas" id = "myCanvas" width = "300px" height = "500"/-->
+    
+    <p id = "x"></p>
+    <script>
+      function pos() {
+        console.log();
+      }
+    </script>
     <!--script>
   var img = document.getElementById("theImg");
   var cnvs = document.getElementById("myCanvas");
