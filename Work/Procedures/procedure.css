@@ -68,6 +68,11 @@ textarea {
   height: 200px;
 }
 
+smalltextarea {
+  width: 40px;
+  height: 20px;
+}
+
 footer {
   background-color: lightblue;
   position: fixed;
