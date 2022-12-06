@@ -6,7 +6,7 @@
   </head>
   <body>
     <div>
-    <img src="Man.jpeg" usemap = "#proceduremap" id='theImg' style="margin: auto; width: 600px" donclick="pos()">
+    <img src="Man.jpeg" usemap = "#proceduremap" id='theImg' style="margin-left:  100px; width: 600px" donclick="pos()">
     <map name="proceduremap">
       <area shape="circle" coords="10,10,3"  href="HEENT.html">
       <area shape="circle" coords="200,200,20"  href="CHEST.html">
@@ -23,7 +23,7 @@
       document.getElementById('theImg').addEventListener('click',pos,false);
       
       function pos(e) {
-        console.log(e);
+        console.log(e.x,e.y);
       }
     </script>
     <!--script>
