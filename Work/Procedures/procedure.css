@@ -53,6 +53,10 @@ label {
   font-weight: bold;
 }
 
+label::before {
+  content: '\A';
+}
+
 label::after {
   content: '\A';
 }
