@@ -21,6 +21,7 @@
   <body>
 
         <div class="sidenav">
+          <button onclick="printFrame()">Print</button><br>
           <a href="example2.html" target = "content" onclick="deactivate()">References</a><br>
           <a href="..\..\..\..\Work\DDX\labanalyzer2.html" target = "content"  onclick="deactivate()">Lab Analyzer</a><br>
           <a href="..\..\..\..\Work\Orders\orders.html" target = "content" onclick="deactivate()">Orders</a><br>
@@ -143,6 +144,11 @@
           console.log(dropdownContent[i].style.display);
           dropdownContent[i].style.display = 'none';
         }
+      }
+      
+      function printFrame() {
+        window.frames['content'].focus();
+        window.frames['content'].contentWindow.print();
       }
       </script>
   </body>
