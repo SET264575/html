@@ -18,7 +18,7 @@
 }
 
 .hasBeenCopied::after {
-  content: 'This text has been copied to the clipboard and is ready to be pasted in your document.<br>If you have edited the text, you can copy it to the clipboard with the button below.';
+  content: 'This text has been copied to the clipboard and is ready to be pasted in your document.\nIf you have edited the text, you can copy it to the clipboard with the button below.';
   font-weight: bold;
 }
 
