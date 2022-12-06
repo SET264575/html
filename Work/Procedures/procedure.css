@@ -22,6 +22,10 @@
   font-weight: bold;
 }
 
+.copyBtn::after {
+  content: 'Copy Edited Text';
+}
+
 footer {
   background-color: lightblue;
   position: fixed;
