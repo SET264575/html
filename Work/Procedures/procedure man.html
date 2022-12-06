@@ -68,20 +68,20 @@
   ctx.lineWidth = 3;
   drawCircle(105,50,'eye');
       drawCircle(68,60,'ear');
-      drawCircle(125,83,'mouth');
-      drawCircle(125,19,'scalp');
-      drawCircle(125,62,'nose');
-      drawCircle(125,144,'heart');
+      drawCircle(120,83,'mouth');
+      drawCircle(120,19,'scalp');
+      drawCircle(120,62,'nose');
+      drawCircle(120,144,'heart');
       drawCircle(85,118,'shoulder');
       drawCircle(72,182,'skin');
-      drawCircle(125,187,'abd');
-      drawCircle(125,204,'GU');
+      drawCircle(120,187,'abd');
+      drawCircle(120,204,'GU');
       drawCircle(210,141,'wrist');
       function drawCircle(x,y,t) {
         ctx.fillStyle = "lightgray";
         ctx.lineWidth = 3;
         ctx.beginPath();
-        ctx.arc(x, y, 10, 0, 2 * Math.PI, true);
+        ctx.arc(x, y, 14, 0, 2 * Math.PI, true);
         ctx.fill();
         ctx.fillStyle = "black";
         ctx.fillText(t, x-5, y);
