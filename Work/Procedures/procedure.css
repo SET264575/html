@@ -25,14 +25,18 @@ meetsStandard2::after {
 }
 
 .hasBeenCopied::after {
-  position: relative;
+  position: fixed;
+  right: -600px;
+  top: 500px;
   content: 'This text has been copied to the clipboard and is ready to be pasted in your document.\AIf you have edited the text, you can copy it to the clipboard with the button below.';
   font-weight: bold;
   white-space: pre;
 }
 
 .copyBtn {
-  position: relative;
+  position: fixed;
+  top: 550px;
+  right: -600px;
   margin-top: 20px;
   margin-bottom: 80px;
 }
@@ -47,7 +51,7 @@ h3 {
 
 textarea {
   position: fixed;
-  right: -500px;
+  right: -600px;
   top: 50px;
   width: 500px;
   height: 200px;
