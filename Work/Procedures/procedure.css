@@ -6,7 +6,7 @@
   content: 'The generated text was last changed on ';
 }
 
-.meetsStandard1 {
+.meetsStandard1::after {
   content: 'This webpage conforms to the standard as of 12/6/22';
   /*
   has title
