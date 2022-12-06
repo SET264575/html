@@ -14,7 +14,7 @@
       <area shape="circle" coords="100,100,20"  href="ORTHO.html">
       <area shape="circle" coords="150,125,10"  href="SKIN.html">
     </map>
-    <!--canvas name="myCanvas" id = "myCanvas" width = "300px" height = "500"/-->
+    <canvas name="myCanvas" id = "myCanvas"/>
     
     <p id = "x"></p>
     <script>
@@ -31,6 +31,8 @@
   cnvs.style.position = "absolute";
   cnvs.style.left = img.offsetLeft + "px";
   cnvs.style.top = img.offsetTop + "px";
+  cnvs.style.width = img.width+"px";
+  cnvs.style.height = img.height+"px";
   
   var ctx = cnvs.getContext("2d");
   ctx.font = "10px Arial";
