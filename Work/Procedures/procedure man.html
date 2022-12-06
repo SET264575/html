@@ -89,6 +89,15 @@
       ctx.fill();
       ctx.fillText("ankle", 100, 900);     
       
+      function drawCircle(x,y,t) {
+        ctx.strokeStyle = "lightgray";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, 2 * Math.PI, true);
+        ctx.fill();
+        ctx.strokeStyle = "white";
+        ctx.fillText(t, x, y);
+      }
     </script>
   </body>
 </html>
