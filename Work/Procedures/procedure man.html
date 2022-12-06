@@ -22,7 +22,12 @@
         console.log();
       }
     </script>
-    <!--script>
+    <script>
+      
+      img.addEventListener(e){
+        console.log(e);
+      }
+      
   var img = document.getElementById("theImg");
   var cnvs = document.getElementById("myCanvas");
   
@@ -48,6 +53,12 @@
       ctx.lineWidth = 3;
       ctx.strokeStyle = '#00ff00';
       ctx.fill();
-    </script-->
+      
+      ctx.beginPath();
+      ctx.arc(150, 250, 10, 0, 2 * Math.PI, true);
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = '#00ff00';
+      ctx.fill();
+    </script>
   </body>
 </html>
