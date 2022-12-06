@@ -30,10 +30,13 @@ meetsStandard2::after {
   white-space: pre;
 }
 
+.copyBtn {
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
 .copyBtn::after {
   content: 'Copy Edited Text';
-  margin-top: 10px;
-  margin-bottom: 80px;
 }
 
 h3 {
