@@ -138,7 +138,7 @@
       toe reduction<br>
       </pre>
     </div>
-    <!--canvas name="myCanvas" id = "myCanvas"/-->
+    <canvas name="myCanvas" id = "myCanvas"/>
 
     <script>
       /*document.getElementById('theImg').addEventListener('click',pos,false);
@@ -159,12 +159,12 @@
         console.log(document.getElementById(t).classList);
       }
     </script>
-    <!--script>
+    <script>
    
       
   var img = document.getElementById("theImg");
   var cnvs = document.getElementById("myCanvas");
-  
+  var txt = "";
   cnvs.style.position = "absolute";
   cnvs.style.left = img.offsetLeft + "px";
   cnvs.style.top = img.offsetTop + "px";
@@ -174,23 +174,24 @@
   var ctx = cnvs.getContext("2d");
   ctx.font = "10px Arial";
   ctx.lineWidth = 3;
-      drawCircle(95,50,'eye');
-      drawCircle(60,60,'ear');
-      drawCircle(120,83,'mouth');
-      drawCircle(120,8,'scalp');
-      drawCircle(120,62,'nose');
-      drawCircle(120,144,'heart');
-      drawCircle(85,118,'shoulder');
-      drawCircle(72,175,'skin');
-      drawCircle(120,175,'abd');
-      drawCircle(120,204,'GU');
-      drawCircle(210,141,'wrist');
-      drawCircle(187,130,'elbow');
-      drawCircle(14,149,'hand');
-      drawCircle(82,200,'hip');
-      drawCircle(172,225,'knee');
-      drawCircle(68,256,'ankle');
-      drawCircle(220,248,'foot');
+      txt = txt + drawCircle(95,50,'eye');
+      txt = txt + drawCircle(60,60,'ear');
+      txt = txt + drawCircle(120,83,'mouth');
+      txt = txt + drawCircle(120,8,'scalp');
+      txt = txt + drawCircle(120,62,'nose');
+      txt = txt + drawCircle(120,144,'heart');
+      txt = txt + drawCircle(85,118,'shoulder');
+      txt = txt + drawCircle(72,175,'skin');
+      txt = txt + drawCircle(120,175,'abd');
+      txt = txt + drawCircle(120,204,'GU');
+      txt = txt + drawCircle(210,141,'wrist');
+      txt = txt + drawCircle(187,130,'elbow');
+      txt = txt + drawCircle(14,149,'hand');
+      txt = txt + drawCircle(82,200,'hip');
+      txt = txt + drawCircle(172,225,'knee');
+      txt = txt + drawCircle(68,256,'ankle');
+      txt = txt + drawCircle(220,248,'foot');
+      console.log(txt);
      // drawCircle(210,141,'wrist');
       function drawCircle(x,y,t) {
         ctx.fillStyle = "lightgray";
@@ -200,7 +201,8 @@
         ctx.fill();
         ctx.fillStyle = "black";
         ctx.fillText(t, x-7, y);
+        return('<area shape="circle" coords="'+x+','+y+',10" onclick="showProcedures('+"'"+t+"'"+")'>\n");
       }
-    </script-->
+    </script>
   </body>
 </html>
