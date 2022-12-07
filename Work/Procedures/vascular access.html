@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>
+        Vascular access
+    </title>
+    <link rel="stylesheet" href="procedure.css">
+  </head>
+  <body>
+    <h3>
+    ***
+    </h3>
+    <div class=".reference">
+    Reference:
+    <a hhref = "">Procedure Video</a>
+    </div>
+    
+    <h4>Indication</h4>
+    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+    <label for = "0">vascular access</label><br>
+    <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+    <label for = "1">administration of IV fluids</label><br>
+<br>
+    
+    <h4>Procedure</h4>
+    <input type = "radio" name = "procedure" value = "0" id = "proc1" onchange = "copytext()">
+    <label for = "0">IJ central line</label><br>
+    <input type = "radio" name = "procedure" value = "1" id = "proc2" onchange = "copytext()">
+    <label for = "1">subclavian central line</label><br>
+    <input type = "radio" name = "procedure" value = "2" id = "proc3" onchange = "copytext()">
+    <label for = "2">femoral central line</label><br>
+<br>
+
+    <h4>Consent</h4>
+    <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
+    <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
+    <input type = "radio" name = "consent" value = "1" id = "consent" onchange = "copytext()">
+    <label for = "1">The patient provided verbal consent for the procedure.</label><br>
+    <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
+    <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
+<br>
+
+    <!--h4>Sedation</h4>
+    <input type = "radio" name = "sedation" value = "0" id = "sedation" onchange = "copytext()">
+    <label for = "0">The patient was sedated with 20 mg of Etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
+    <input type = "radio" name = "sedation" value = "1" id = "sedation" onchange = "copytext()">
+    <label for = "1">The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.</label><br>
+    <input type = "radio" name = "sedation" value = "2" id = "sedation" onchange = "copytext()">
+    <label for = "2">The patient did not require sedation or paralysis.</label><br>
+<br-->
+    
+    
+
+    <div class="textarea">
+    <textarea id = "text"></textarea><br>
+    <br>
+    <div class="hasBeenCopied"></div>
+    
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="tested">Not tested</div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getRadioButtonValue("indication");
+        var procedure = getRadioButtonValue("procedure");
+        var consent = getRadioButtonValue("consent");
+        var sedation = getRadioButtonValue("sedation");
+
+        var t = "Procedure Note: "+procedure+" \n";
+        
+        t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "vascular access. ";
+            break;
+          case "1":
+            t = t + "IV fluid administration. ";
+            break;
+        }
+
+        switch(consent){
+          case "0":
+            t = t + "Due to the patient's critical condition, consent could not be obtained. ";
+            break;
+          case "1":
+            t = t + "The risks, benefits and alternatives were discussed with the patient provided verbal consent for the procedure. ";
+            break;
+          case "2":
+            t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent for the procedure. ";
+            break;
+        }
+        t = t + "The patient was prepped and draped in the usual sterile fashion. ";
+        t = t + "Ultrasound guidance was used to visualize the right internal jugular vein and surrounding structures.  ";
+        t = t + "The IV catheter was placed using the Seldinger techiquie and secured to the skin with 2-0 silk suture. ";
+        t = t + "Proper location was confirmed with x-ray. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+    </script>
+  </body>
+</html>
