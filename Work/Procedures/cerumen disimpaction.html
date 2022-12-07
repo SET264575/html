@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>
+        Cerumen disimpaction
+    </title>
+    <link rel="stylesheet" href="procedure.css">
+  </head>
+  <body>
+    <h3>
+    ***
+    </h3>
+    <div class=".reference">
+    Reference:
+    <a hhref = "https://www.msdmanuals.com/professional/cardiovascular-disorders/myocarditis-and-pericarditis/pericarditis#v939996">Procedure Video</a>
+    </div>
+    
+    <h4>Indication</h4>
+    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+    <label for = "0">complete occlusion of the ear canal</label><br>
+    <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+    <label for = "1">decreased hearing</label><br>
+    <input type = "radio" name = "indication" value = "2" id = "indication" onchange = "copytext()">
+    <label for = "1">pain</label><br>
+<br>
+    
+    <h4>Side</h4>
+    <input type = "radio" name = "side" value = "right" id = "side1" onchange = "copytext()">
+    <label for = "side1">right ear</label><br>
+    <input type = "radio" name = "side" value = "left" id = "side2" onchange = "copytext()">
+    <label for = "side2">left ear</label><br>
+    <input type = "radio" name = "side" value = "bilateral" id = "side3" onchange = "copytext()">
+    <label for = "side3">bilateral ears</label><br>
+
+    <!--h4>Consent</h4>
+    <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
+    <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
+    <input type = "radio" name = "consent" value = "1" id = "consent" onchange = "copytext()">
+    <label for = "1">The patient provided verbal consent for the procedure.</label><br>
+    <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
+    <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
+<br-->
+
+    <h4>Technique</h4>
+    <input type = "radio" name = "technique" value = "0" id = "tech1" onchange = "copytext()">
+    <label for = "0"></label><br>
+    <input type = "radio" name = "technique" value = "1" id = "tech2" onchange = "copytext()">
+    <label for = "1"></label><br>
+    <input type = "radio" name = "technique" value = "2" id = "tech3" onchange = "copytext()">
+    <label for = "2"></label><br>
+<br>
+
+    <div class="textarea">
+    <textarea id = "text"></textarea><br>
+    <br>
+    <div class="hasBeenCopied"></div>
+    
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="tested">Not tested</div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getRadioButtonValue("indication");
+        var side = getRadioButtonValue("side");
+        var technique = getRadioButtonValue("technique");
+
+        var t = "Procedure Note: Cerumen disimpaction of the " + side + "\n";
+        
+        t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "complete occlusion of the ear canal. ";
+            break;
+          case "1":
+            t = t + "decreased hearing. ";
+            break;
+          case "2":
+            t = t + "pain. ";
+            break;
+        }
+        
+        switch(technique){
+          case "0":
+            t = t + "using alligator forceps.";
+            break;
+          case "1":
+            t = t + "using an ear curette.";
+            break;
+        }
+        t = t + "Visual inspection after the procedure revealed adequate clearance of the ear canal with no injury to the ear canal or tympanic membrane. ";
+ 
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+    </script>
+  </body>
+</html>
