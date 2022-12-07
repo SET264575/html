@@ -7,7 +7,7 @@
   </head>
   <body>
     <h3>
-    ***
+    Cerumen disimpaction
     </h3>
     <div class=".reference">
     Reference:
@@ -24,11 +24,11 @@
 <br>
     
     <h4>Side</h4>
-    <input type = "radio" name = "side" value = "right" id = "side1" onchange = "copytext()">
+    <input type = "radio" name = "side" value = "right ear" id = "side1" onchange = "copytext()">
     <label for = "side1">right ear</label><br>
-    <input type = "radio" name = "side" value = "left" id = "side2" onchange = "copytext()">
+    <input type = "radio" name = "side" value = "lef eart" id = "side2" onchange = "copytext()">
     <label for = "side2">left ear</label><br>
-    <input type = "radio" name = "side" value = "bilateral" id = "side3" onchange = "copytext()">
+    <input type = "radio" name = "side" value = "bilateral ears" id = "side3" onchange = "copytext()">
     <label for = "side3">bilateral ears</label><br>
 
     <!--h4>Consent</h4>
@@ -42,11 +42,11 @@
 
     <h4>Technique</h4>
     <input type = "radio" name = "technique" value = "0" id = "tech1" onchange = "copytext()">
-    <label for = "0"></label><br>
+    <label for = "0">Alligator forceps.</label><br>
     <input type = "radio" name = "technique" value = "1" id = "tech2" onchange = "copytext()">
-    <label for = "1"></label><br>
+    <label for = "1">Ear curette</label><br>
     <input type = "radio" name = "technique" value = "2" id = "tech3" onchange = "copytext()">
-    <label for = "2"></label><br>
+    <label for = "2">Irrigation</label><br>
 <br>
 
     <div class="textarea">
@@ -92,13 +92,16 @@
             break;
         }
         
+        t = t + "Wax was removed ";
         switch(technique){
           case "0":
-            t = t + "using alligator forceps.";
+            t = t + "using alligator forceps. ";
             break;
           case "1":
-            t = t + "using an ear curette.";
+            t = t + "using an ear curette. ";
             break;
+          case "2":
+            t = t + "with irrigation. ";
         }
         t = t + "Visual inspection after the procedure revealed adequate clearance of the ear canal with no injury to the ear canal or tympanic membrane. ";
  
