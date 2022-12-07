@@ -13,11 +13,11 @@
 <label for = "1">subarachnoid hemorrhage</label><br><br>
         
         <h4>Consent</h4>
-        <input type = 'radio' id = "consent" name = "consent" value = 0 onchange = "copytext()">
+        <input type = 'radio' id = "consent" name = "consent" value = '0' onchange = "copytext()">
         <label for = "consent">Unable to consent</label><br>
-        <input type = 'radio' id = "consent" name = "consent" value = 1 onchange = "copytext()">
+        <input type = 'radio' id = "consent" name = "consent" value = '1' onchange = "copytext()">
         <label for = "consent">Patient consented</label><br>
-        <input type = 'radio' id = "consent" name = "consent" value = 2 onchange = "copytext()">
+        <input type = 'radio' id = "consent" name = "consent" value = '2' onchange = "copytext()">
         <label for = "consent">Parent consented</label><br><br>
 
                        
@@ -93,13 +93,13 @@
         }
         t = t + ". ";
         switch(consent) {
-            case 0:
+            case '0':
                 t = t + "The patient was unable to provide consent to the procedure due to mental status changes.";
                 break;
-            case 1:
+            case '1':
                 t = t + "The risks, benefits and alternatives were explained to the patient who provided written consent for the procedure. ";
                 break;
-            case 2:
+            case '2':
                 t = t + "The risks, benefits and alternatives were explained to the patient's parent who provided written consent for the procedure. ";
                 break;
         }
