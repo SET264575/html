@@ -21,10 +21,12 @@
   </head>
   <body>
     <div>
-    <img src="Man.jpeg" usemap = "#proceduremap" id='theImg' style="margin-left:  100px;" donclick="pos()">
+    <img src="Man.jpeg" usemap = "#proceduremap" id='theImg' style="margin-left:  100px; width: 600px" donclick="pos()">
     <map name="proceduremap">
       <area shape="circle" coords="95,50,10" onclick="showProcedures('eye')">
+      <area shape="circle" coords="145,50,10" onclick="showProcedures('eye')">
       <area shape="circle" coords="60,60,10" onclick="showProcedures('ear')">
+      <area shape="circle" coords="180,60,10" onclick="showProcedures('ear')">
       <area shape="circle" coords="120,83,10" onclick="showProcedures('mouth')">
       <area shape="circle" coords="120,8,10" onclick="showProcedures('scalp')">
       <area shape="circle" coords="120,62,10" onclick="showProcedures('nose')">
@@ -162,6 +164,7 @@
       function showProcedures(t) {
         console.log('in showProcedures');
         var hiddendiv = document.getElementsByClassName('div');
+        console.log(hiddendiv);
         for (let i = 0; i<hiddendiv.length; i++) {
           hiddendiv[i].classList.remove('active');
         }
