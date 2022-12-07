@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>
+        ***
+    </title>
+    <link rel="stylesheet" href="procedure.css">
+  </head>
+  <body>
+    <h3>
+    Paraphimosis reduction
+    </h3>
+
+
+    <div class="textarea">
+    <textarea id = "text"></textarea><br>
+    <br>
+    <div class="hasBeenCopied"></div>
+    
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Not tested</div>
+      <div class="xmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      copytext();
+      
+      function copytext(){
+
+        var t = "Procedure Note: paraphimosis reduction\n";
+        t = t + "2% lidocaine jelly was applied to the glans and foreskin to achieve adequate anesthesia. ";
+        t = t + "Gentle manual pressure was applied to reduce the edema in the glans. ";
+        t = t + "The glans was then pushed through the phimotic ring to achieve reduction of the foreskin. "
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+    </script>
+  </body>
+</html>
+<!--
+Procedure Note: paraphimosis reduction
+2% lidocaine jelly was applied to the glans and foreskin to achieve adequate anesthesia. Gentle manual pressure was applied to reduce the edema in the glans. 
+ The glans was then pushed through the phimotic ring to achieve reduction of the foreskin.
