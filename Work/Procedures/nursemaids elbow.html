@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>
+        Nursemaid's elbow
+    </title>
+    <link rel="stylesheet" href="procedure.css">
+  </head>
+  <body>
+    <h3>
+    Nursemaid's elbow reduction
+    </h3>
+    <div class=".reference">
+    Reference:
+    <a hhref = "https://www.msdmanuals.com/professional/cardiovascular-disorders/myocarditis-and-pericarditis/pericarditis#v939996">Procedure Video</a>
+    </div>
+    
+
+    <div class="textarea">
+    <textarea id = "text"></textarea><br>
+    <br>
+    <div class="hasBeenCopied"></div>
+    
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nontested"></div>
+      <div class="dmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      copytext();
+      function copytext(){
+
+        var t = "Procedure Note: Reduction of nursemaid's elbow \n";
+        
+        t = t + "The procedure was explained to the child's parent who gave verbal consent. ";
+        t = t + "The radial head was reduced with supination and flexion of the forearm while applying pressure to the radial head. ";
+        t = t + "A palpable click was noted on successful reduction. ";
+        t = t + "Reduction was confirmed by significantly improved voluntary flexion of the elbow. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+    </script>
+  </body>
+</html>
