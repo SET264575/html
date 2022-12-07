@@ -20,6 +20,13 @@
       .scalp {
         position: absolute;
         top: 30px;
+        left: 100px;
+        width: 100px;
+        height: 40px;
+      }
+      .scalp {
+        position: absolute;
+        top: 30px;
         left: 350px;
         width: 100px;
         height: 40px;
@@ -76,11 +83,18 @@
       .resp {
         position: absolute;
         top: 340px;
-        left: 280px;
-        width: 100px;
+        left: 300px;
+        width: 80px;
         height: 50px;
       }
       .skin {
+        position: absolute;
+        top: 440px;
+        left: 500px;
+        width: 50px;
+        height: 50px;
+      }
+      .lp {
         position: absolute;
         top: 440px;
         left: 600px;
@@ -129,9 +143,9 @@
       
       .shoulder {
        position: absolute;
-        top: 270px;
+        top: 220px;
         left: 330px;
-        width: 100px;
+        width: 80px;
         height: 50px;
       }
       
@@ -146,7 +160,7 @@
      .elbow {
         position: absolute;
         top: 310px;
-        left: 250px;
+        left: 200px;
         width: 50px;
         height: 50px;
       }
@@ -185,7 +199,7 @@
       
       .wrist {
          position: absolute;
-        top: 360px;
+        top: 335px;
         left: 150px;
         width: 50px;
         height: 50px;
@@ -214,6 +228,7 @@
   <body>
     <div>
       <img src="Man.jpeg" id='theImg' style="margin-left:  100px; width: 600px" donclick="pos()">
+      <button class="sedation" onclick="showProcedures('sedation')">sedation</button>
       <button class="scalp" onclick="showProcedures('scalp')">scalp</button>
       <button class="eye1" onclick="showProcedures('eye')">eye</button>
       <button class="eye2" onclick="showProcedures('eye')">eye</button>
@@ -234,6 +249,11 @@
       <button class="hand" onclick="showProcedures('hand')">hand</button>
       <button class="wrist" onclick="showProcedures('wrist')">wrist</button>
       <button class="elbow" onclick="showProcedures('elbow')">elbow</button>
+      <button class="lp" onclick="showProcedures('lp')">LP</button>
+    </div>
+    <div class="hidden" id = "sedation">
+      <h4>sedation</h4>
+      <a href="">conscious sedation</a>
     </div>
     <div class="hidden" id = "scalp">
       <h4>scalp</h4>
@@ -270,8 +290,12 @@
     </div>
     <div class="hidden" id = "skin">
       <h4>skin</h4></a><br>
-    <a href="">laceration</a><br>
-    <a href="">Abscess I&D</a><br>
+      <a href="">laceration</a><br>
+      <a href="">Abscess I&D</a><br>
+    </div>
+    <div class="hidden" id = "lp">
+      <h4>Neuro</h4></a><br>
+      <a href="">lumbar puncture</a><br>
     </div>
     <div class="hidden" id = "abd">
       <h4>abdomen</h4>
