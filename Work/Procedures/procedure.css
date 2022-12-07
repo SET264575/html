@@ -6,6 +6,16 @@ body {
   content: 'Status:';
 }
 
+.nottested::before {
+  content: 'Status: '
+}
+
+.nottested {
+  content: 'Not tested';
+  color: red;
+  font-weight: bold;
+}
+
 .dateChanged::before {
   content: 'The generated text was last changed on ';
 }
