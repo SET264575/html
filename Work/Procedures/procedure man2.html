@@ -131,7 +131,13 @@
         width: 50px;
         height: 50px;
       }
-      
+      .compartment {
+        position: absolute;
+        top: 550px;
+        left: 560px;
+        width: 50px;
+        height: 50px;
+      }
       .hip {
         position: absolute;
         top: 500px;
@@ -166,8 +172,8 @@
       
      .elbow {
         position: absolute;
-        top: 310px;
-        left: 200px;
+        top: 290px;
+        left: 220px;
         width: 50px;
         height: 50px;
       }
@@ -197,17 +203,17 @@
       }
       
       .hand {
-         position: absolute;
-        top: 380px;
-        left: 100px;
+        position: absolute;
+        top: 360px;
+        left: 120px;
         width: 50px;
         height: 50px;
       }
       
       .wrist {
-         position: absolute;
-        top: 335px;
-        left: 150px;
+        position: absolute;
+        top: 315px;
+        left: 170px;
         width: 50px;
         height: 50px;
       }
@@ -253,6 +259,7 @@
       <button class="foot" onclick="showProcedures('foot')">foot</button>
       <button class="hip" onclick="showProcedures('ankle')">hip</button>
       <button class="knee" onclick="showProcedures('knee')">knee</button>
+      <button class="compartment" onclick="showProcedures('compartment')">compartments</button>
       <button class="ankle" onclick="showProcedures('ankle')">ankle</button>
       <button class="hand" onclick="showProcedures('hand')">hand</button>
       <button class="wrist" onclick="showProcedures('wrist')">wrist</button>
@@ -307,8 +314,12 @@
       <a href="i&d.html">Abscess I&D</a><br>
     </div>
     <div class="hidden" id = "lp">
-      <h4>Neuro</h4></a><br>
+      <h4>neuro</h4></a><br>
       <a href="lp.html">lumbar puncture</a><br>
+    </div>
+    <div class="hidden" id = "compartment">
+      <h4>compartments</h4></a><br>
+      <a hhref="">compartment pressure</a><br>
     </div>
     <div class="hidden" id = "abd">
       <h4>abdomen</h4>
