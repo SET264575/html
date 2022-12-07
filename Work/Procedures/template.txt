@@ -11,7 +11,7 @@
     </h3>
     <div class=".reference">
     Reference:
-    <a href = "https://www.msdmanuals.com/professional/cardiovascular-disorders/myocarditis-and-pericarditis/pericarditis#v939996">Procedure Video</a>
+    <a hhref = "">Procedure Video</a>
     </div>
     
     <h4>Indication</h4>
@@ -48,9 +48,9 @@
     </div>
     
     <footer>
-      <div class="dateChanged">12/6/22</div>
-      <div class="tested">Works</div>
-      <div class="meetsStandard1"></div>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
      </footer>
                                                
                             
