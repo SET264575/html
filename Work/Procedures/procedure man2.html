@@ -1,0 +1,224 @@
+<html>
+  <head>
+    <title>
+      Procedures
+    </title>
+    <style>
+      .hidden {
+        background-color: black;
+        color: white;
+        font: 16px Arial;
+        display: none;
+        position: fixed;
+        right: 100px;
+        top: 0;
+      }
+      
+      .active {
+        display: block;
+      }
+      .scalp {
+        position: absolute;
+        top: 80px;
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+
+    <img src="Man.jpeg" id='theImg' style="margin-left:  100px; width: 600px" donclick="pos()">
+      <button class="scalp"></button>
+      <button class="eye1"></button>
+      <button class="eye2"></button>
+      <button class="ear1"></button>
+      <button class="ear2"></button>
+      <button class="nose"></button>
+      <button class="mouth"></button>
+      <button class="chest"></button>
+      <button class="heart"></button>
+      <button class="skin"></button>
+      <button class="abd"></button>
+      <button class="gu"></button>
+      <button class="leg1"></button>
+      <button class="knee"></button>
+      <button class="ankle"></button>
+    </div>
+    <div class="hidden" id = "scalp">
+      <pre>
+      foreign body removal<br>
+      scalp laceration<br>
+      </pre>
+    </div>
+    <!--canvas name="myCanvas" id = "myCanvas"/-->
+    <div class="hidden" id = "ear">
+      <pre>
+      foreign body removal<br>
+      cerumen disimpaction<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "eye">
+      <pre>
+      foreign body removal<br>
+     
+      </pre>
+    </div>
+    <div class="hidden" id = "mouth">
+      <pre>
+      foreign body removal<br>
+      lip laceration<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "heart">
+      <pre>
+      cardioversion<br>
+      <br>
+      </pre>
+    </div>
+    <div class="hidden" id = "shoulder">
+      <pre>
+      shoulder aspiration<br>
+      shoulder reduction<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "skin">
+      <pre>
+      foreign body removal<br>
+      laceration<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "abd">
+      <pre>
+      paracentesis<br>
+      FAST exam<br>
+      G tube replacement<br>
+      suprapubic catheter replacement<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "GU">
+      <pre>
+      priapism<br>
+      scalp laceration<br>
+      suprapubic cathether replacement<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "wrist">
+      <pre>
+      wrist joint aspiration<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "nose">
+      <pre>
+      epistaxis<br>
+      foreign body removal<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "elbow">
+      <pre>
+      elbow aspiration<br>
+      nursemaid's elbow<br>
+      elbow reduction<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "hand">
+      <pre>
+      finger laceration<br>
+      finger reduction<br>
+      subungal hematoma<br>
+      fishhook removal<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "hip">
+      <pre>
+      hip reduction<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "knee">
+      <pre>
+      knee aspiration<br>
+      patellar reduction<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "ankle">
+      <pre>
+      ankle aspiration<br>
+      ankle reduction<br>
+      </pre>
+    </div>
+    <div class="hidden" id = "foot">
+      <pre>
+      subungal hematoma<br>
+      toe reduction<br>
+      </pre>
+    </div>
+    <!--canvas name="myCanvas" id = "myCanvas"/-->
+
+    <script>
+      document.getElementById('theImg').addEventListener('click',pos,false);
+      
+      function pos(e) {
+        console.log(e.x,e.y);
+      }
+      
+      
+      function showProcedures(t) {
+        console.log('in showProcedures');
+        var hiddendiv = document.getElementsByClassName('active');
+        console.log(hiddendiv);
+        for (let i =0; i<hiddendiv.length; i++) {
+          console.log(hiddendiv[0]);
+          hiddendiv[0].classList.remove('active');
+          console.log(hiddendiv[0]);
+        }
+      //  console.log(t,document.getElementById(t));
+        document.getElementById(t).classList.add('active');
+     //   console.log(document.getElementById(t).classList);
+      }
+    </script>
+    <!--script>
+   
+      
+  var img = document.getElementById("theImg");
+  var cnvs = document.getElementById("myCanvas");
+  var txt = "";
+  cnvs.style.position = "absolute";
+  cnvs.style.left = img.offsetLeft + "px";
+  cnvs.style.top = img.offsetTop + "px";
+  cnvs.width = img.width;
+  cnvs.height = img.height;
+  
+  var ctx = cnvs.getContext("2d");
+  ctx.font = "10px Arial";
+  ctx.lineWidth = 3;
+      txt = txt + drawCircle(95,50,'eye');
+      txt = txt + drawCircle(60,60,'ear');
+      txt = txt + drawCircle(120,83,'mouth');
+      txt = txt + drawCircle(120,8,'scalp');
+      txt = txt + drawCircle(120,62,'nose');
+      txt = txt + drawCircle(120,144,'heart');
+      txt = txt + drawCircle(85,118,'shoulder');
+      txt = txt + drawCircle(72,175,'skin');
+      txt = txt + drawCircle(120,175,'abd');
+      txt = txt + drawCircle(120,204,'GU');
+      txt = txt + drawCircle(210,141,'wrist');
+      txt = txt + drawCircle(187,130,'elbow');
+      txt = txt + drawCircle(14,149,'hand');
+      txt = txt + drawCircle(82,200,'hip');
+      txt = txt + drawCircle(172,225,'knee');
+      txt = txt + drawCircle(68,256,'ankle');
+      txt = txt + drawCircle(220,248,'foot');
+      console.log(txt);
+     // drawCircle(210,141,'wrist');
+      function drawCircle(x,y,t) {
+        ctx.fillStyle = "lightgray";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(x, y, 14, 0, 2 * Math.PI, true);
+        ctx.fill();
+        ctx.fillStyle = "black";
+        ctx.fillText(t, x-7, y);
+        return('<area shape="circle" coords="'+x+','+y+',10" onclick="showProcedures('+"'"+t+"'"+')">\n');
+      }
+    </script-->
+  </body>
+</html>
