@@ -170,7 +170,7 @@
           var om = getRadioButtonLabel('om');
           var bronchitis = getRadioButtonLabel('bronchitis');
           var sinusitis = getRadioButtonLabel("sinusitis");
-          var abdpain = getRadioButtonLabel("abdpain");
+          var abdpain = getRadioButtonLabel("abd pain");
           var ctadult = getRadioButtonLabel("ctadult");
           var ctped = getRadioButtonLabel("ctped");
           var cva = getRadioButtonLabel("cva");
@@ -206,10 +206,12 @@
             }
             t = t + "\n\n";
           }
+          
           if (abdpain != -1) {
             t = t + "#254 - Ultrasound for Patients with Abdominal Pain\n";
             t = t + abdpain+'\n\n';
           }
+          
           if (ctadult != -1) {
             t = t + "#415 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Adult)\n";
             t = t + ctadult;
