@@ -162,6 +162,7 @@
         function copytext(){
           var uri = getRadioButtonLabel('uri');
           var om = getRadioButtonLabel('om');
+          var bronchitis = getRadioButtonLabel('bronchitis');
           var sinusitis = getRadioButtonLabel("sinusitis");
           var abdpain = getRadioButtonLabel("abdpain");
           var ctadult = getRadioButtonLabel("ctadult");
@@ -169,31 +170,57 @@
           var cva = getRadioButtonLabel("cva");
           
           var t = "";
-          if (uri <> -1) {
+          if (uri != -1) {
             t = t + uri;
           }
-          if (om <> -1) {
+          if (om != -1) {
             t = t + om;
           }
-          if (sinusitis <> -1) {
+          if (bronchitis != -1){
+            t = t + bronchitis;
+            if (isChecked('bronchitis2')) {
+              t = t + getReasons(['bronchitis3','bronchitis4','bronchitis5']);
+            }
+              
+          }
+          if (sinusitis != -1) {
             t = t + sinusitis;
           }
-          if (abdpain <> -1) {
+          if (abdpain != -1) {
             t = t + abdpain;
           }
-          if (ctadult <> -1) {
+          if (ctadult != -1) {
             t = t + ctadult;
           }
-          if (ctped <> -1) {
+          if (ctped != -1) {
             t = t + ctped;
           }
-          if (cva <> -1 ) {
+          if (cva != -1 ) {
             t = t + cva;
           }
           
           navigator.clipboard.writeText(t);
           document.getElementById("text").innerHTML = t;
         }
+        
+        function getReasons(list){
+          var z = [];
+          var t = "";
+          for (let i = 0; i< list.length; i++) {
+            if (document.getElementById(list[i]).checked) {
+              z.push(document.getElementById(list[i]).labels[0].innerText);
+            }
+          }
+          if (z.length>1) {
+            for (let i = 0; i < z.length-1; i++) {
+              t = t + z[i] + ", ";
+            }
+          }
+          t = t + z[z.length-1];
+          return(t);
+        }
+                        
+            
         
         function getRadioButtonValue(name){
           var ele = document.getElementsByName(name);
@@ -203,6 +230,10 @@
             }
           }
           return(-1);
+        }
+        
+        function isChecked(name){
+          return(document.getElementById(name).checked);
         }
         
         function getRadioButtonLabel(name){
