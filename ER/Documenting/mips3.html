@@ -65,6 +65,15 @@ clear button
     <div class="content">
       <input type = "radio" id = "uri1" name="uri" onclick = "copytext()"><label for ="uri1">The patient was diagnosed with Upper Respiratory Infection and was not prescribed or dispensed an antibiotic</label><br>
       <input type = "radio" id = "uri2" name="uri" onclick = "copytext()"><label for ="uri2">The patient has competing comorbid conditions within the last 12 months.  The comorbid condition was_________ (e.g., neutropenia, cystic fibrosis, chronic bronchitis, pulmonary edema, respiratory failure, rheumatoid lung disease)</label><br>
+      <div class="sub">
+        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">neutropenia.</label>
+        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">cystic fibrosis.</label>
+        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">chronic bronchitis.</label>
+        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">pulmonary edema.</label>
+        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">respiratory failure.</label>
+        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">rheumatoid lung disease.</label>
+        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">____________.</label>
+      </div>
       <input type = "radio" id = "uri3" name="uri" onclick = "copytext()"><label for ="uri3">The patient is already on antibiotics or has taken them within the last 30 days</label><br>
       <input type = "radio" id = "uri4" name="uri" onclick = "copytext()"><label for ="uri4">The patient had a competing diagnosis of </label><br>
       <div class="sub">
@@ -242,6 +251,9 @@ clear button
           if (uri != -1) {
             t = t + "# 65 - Appropriate Treatment for Patients with URI\n"
             t = t + uri;
+            if (isChecked('uri2')) {
+              t = t + getRadioButtonLabel('uri2');
+            }
             if (isChecked('uri4')) {
               t = t + getRadioButtonLabel('uri41');
             }
