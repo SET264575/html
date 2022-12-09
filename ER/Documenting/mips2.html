@@ -10,9 +10,10 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #f2f2f2;
+        background-color: #a2a2a2;
         height: 200px;
         margin-bottom: 20px;
+        width: 100%;
       }
       .sub {
         margin-left: 40px;
@@ -29,8 +30,13 @@
     </style>
   </head>
   <body>
-    <h4 style='text-align: center'>MIPS</h4>
-
+    <div class="header">
+    <h3 style='text-align: center'>MIPS</h3>
+      <h4>The following text has been copied into the clipboard and is ready to be pasted into your document:</h4>
+        <pre id = "text"></pre>
+      </div>
+        
+    
     <button type="button" class="collapsible"># 65 - Appropriate Treatment for Patients with URI</button>
     <div class="content">
     <input type = "radio" id = "uri1" name="uri" onclick = "copytext()"><label for ="uri1">The patient was diagnosed with Upper Respiratory Infection and was not prescribed or dispensed an antibiotic</label><br>
@@ -174,11 +180,7 @@
       </div>
       </div><br><br>
       
-      <div class="header">
-      <h4>The following text has been copied into the clipboard and is ready to be pasted into your document:</h4>
-        <pre id = "text"></pre>
-      </div>
-        
+
         
      <script src = "../Code/collapsible.js"></script>
       <script>
