@@ -63,18 +63,18 @@ clear button
     
     <button type="button" class="collapsible"># 65 - Appropriate Treatment for Patients with URI</button>
     <div class="content">
-      <input type = "radio" id = "uri1" name="uri" onclick = "copytext()"><label for ="uri1">The patient was diagnosed with Upper Respiratory Infection and was not prescribed or dispensed an antibiotic</label><br>
+      <input type = "radio" id = "uri1" name="uri" onclick = "copytext()"; unchecked(['uri21','uri22','uri23','uri24','uri25','uri26','uri27'])><label for ="uri1">The patient was diagnosed with Upper Respiratory Infection and was not prescribed or dispensed an antibiotic</label><br>
       <input type = "radio" id = "uri2" name="uri" onclick = "copytext()"><label for ="uri2">The patient has competing comorbid conditions within the last 12 months.  The comorbid condition was </label><br>
       <div class="sub">
         <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">neutropenia.</label><br>
-        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">cystic fibrosis.</label><br>
-        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">chronic bronchitis.</label><br>
-        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">pulmonary edema.</label><br>
-        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">respiratory failure.</label><br>
-        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">rheumatoid lung disease.</label><br>
-        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">____________.</label><br>
+        <input type="radio" id = "uri22" name = "uri2" onclick = "copytext()"><label for = "uri22">cystic fibrosis.</label><br>
+        <input type="radio" id = "uri23" name = "uri2" onclick = "copytext()"><label for = "uri23">chronic bronchitis.</label><br>
+        <input type="radio" id = "uri24" name = "uri2" onclick = "copytext()"><label for = "uri24">pulmonary edema.</label><br>
+        <input type="radio" id = "uri25" name = "uri2" onclick = "copytext()"><label for = "uri25">respiratory failure.</label><br>
+        <input type="radio" id = "uri26" name = "uri2" onclick = "copytext()"><label for = "uri26">rheumatoid lung disease.</label><br>
+        <input type="radio" id = "uri27" name = "uri2" onclick = "copytext()"><label for = "uri27">____________.</label><br>
       </div>
-      <input type = "radio" id = "uri3" name="uri" onclick = "copytext()"><label for ="uri3">The patient is already on antibiotics or has taken them within the last 30 days</label><br>
+      <input type = "radio" id = "uri3" name="uri" onclick = "copytext();  unchecked(['uri21','uri22','uri23','uri24','uri25','uri26','uri27'])"><label for ="uri3">The patient is already on antibiotics or has taken them within the last 30 days</label><br>
       <input type = "radio" id = "uri4" name="uri" onclick = "copytext()"><label for ="uri4">The patient had a competing diagnosis of </label><br>
       <div class="sub">
         <input type = "radio" id = "uri41" name="uri41" onclick="copytext()"><label for = 'uri41'>acute otitis media</label><br>
@@ -83,31 +83,31 @@ clear button
         <input type = "radio" id = 'uri44' name="uri41" onclick='copytext()'><label for = 'uri44'>UTI</label><br>
         <input type = "radio" id = 'uri45' name="uri41" onclick='copytext()'<label for = 'uri45'>_______</label><br>
       </div>
-      <input type = "radio" id = "uri5" name="uri" onclick = "copytext()"><label for ="uri5" class='red'>The patient was diagnosed with an Upper Respiratory Infection and prescribed or dispensed an antibiotic</label><br>
+      <input type = "radio" id = "uri5" name="uri" onclick = "copytext(); unchecked(['uri21','uri22','uri23','uri24','uri25','uri26','uri27'])"><label for ="uri5" class='red'>The patient was diagnosed with an Upper Respiratory Infection and prescribed or dispensed an antibiotic</label><br>
     </div><br><br>
     
     <button type="button" class="collapsible">#93 - Acute Otitis Externa (AOE): Systemic Antimicrobial Therapy</button>
     <div class="content">
-    <input type = "radio" id = "om1" name="om" onclick = "copytext()"><label for ="om1">The patient has Acute Otitis Externa and was not prescribed oral/systemic antibiotics today.</label><br>
+    <input type = "radio" id = "om1" name="om" onclick = "copytext(); unchecked(['om21','om22','om23'])"><label for ="om1">The patient has Acute Otitis Externa and was not prescribed oral/systemic antibiotics today.</label><br>
     <input type = "radio" id = "om2" name="om" onclick = "copytext()"><label for ="om2">The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics because__________ (ex. immunocompromised, secondary infection)</label><br>
     <div class="sub">
       <input type="radio" id = "om21" name = "om2" onclick = "copytext()"><label for = "om21">immunocompromised.</label><br>
        <input type="radio" id = "om22" name = "om2" onclick = "copytext()"><label for = "om22">secondary infection.</label><br>
       <input type="radio" id = "om23" name = "om2" onclick = "copytext()"><label for = "om23">_____________.</label><br>
       </div>
-      <input type = "radio" id = "om3" name="om" onclick = "copytext()"><label for ="om3" class='red'>The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics today</label><br>
+      <input type = "radio" id = "om3" name="om" onclick = "copytext(); unchecked(['om21','om22','om23'])"><label for ="om3" class='red'>The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics today</label><br>
 </div><br><br>
     
     <button type="button" class="collapsible">#116 - Avoidance of Antibiotic Treatment of Acute Bronchitis/Bronchiolitis</button>
     <div class="content">
-      <input type = "radio" id = "bronchitis1" name="bronchitis" onclick = "copytext(); uncheckCheckbox(['bronchitis3','bronchitis4','bronchitis5'])"><label for ="bronchitis1">The patient has acute bronchitis/bronchiolitis and antibiotics were not prescribed or dispensed today</label><br>
+      <input type = "radio" id = "bronchitis1" name="bronchitis" onclick = "copytext(); unchecked(['bronchitis3','bronchitis4','bronchitis5'])"><label for ="bronchitis1">The patient has acute bronchitis/bronchiolitis and antibiotics were not prescribed or dispensed today</label><br>
       <input type = "radio" id = "bronchitis2" name="bronchitis" onclick = "copytext()"><label for ="bronchitis2">The patient has acute bronchitis/bronchiolitis. Antibiotics were prescribed or dispensed because the patient meets one of the following:</label><br>
       <div class="sub">
         <input type = "checkbox" id = "bronchitis3" name="bronchitis" onclick = "copytext()"><label for ="bronchitis3">The patient has a medical condition for prescribing or dispensing an antibiotic.  That reason is________ (ex. COPD, bacterial infection, acute sinusitis, etc)</label><br>
         <input type = "checkbox" id = "bronchitis4" name="bronchitis" onclick = "copytext()"><label for ="bronchitis4">The patient is currently on antibiotics or has been in the last 30 days</label><br>
         <input type = "checkbox" id = "bronchitis5" name="bronchitis" onclick = "copytext()"><label for ="bronchitis5">The patient's visit resulted in an inpatient admission</label><br>
       </div>
-      <input type = "radio" id = "bronchitis6" name="bronchitis" onclick = "copytext(); uncheckCheckbox(['bronchitis3','bronchitis4','bronchitis5'])"><label for ="bronchitis6" class='red'>The patient has acute bronchitis/bronchiolitis and antibiotics were prescribed and dispensed today.</label><br>
+      <input type = "radio" id = "bronchitis6" name="bronchitis" onclick = "copytext(); unchecked(['bronchitis3','bronchitis4','bronchitis5'])"><label for ="bronchitis6" class='red'>The patient has acute bronchitis/bronchiolitis and antibiotics were prescribed and dispensed today.</label><br>
     </div><br><br>
     
     <button type="button" class="collapsible">#187 - Stroke and Stroke Rehabilitation: Thrombolytic Therapy</button>
@@ -234,12 +234,10 @@ clear button
           document.getElementById(id).checked = true;
         }
         
-        function uncheckCheckbox(id,list){
-          if (document.getElementById(id).checked == true) {
+        function uncheck(list) {
             for (let i = 0; i<list.length;i++) {
               document.getElementById(list[i]).checked = false;
             }
-          }
         }
         
         function copytext(){
