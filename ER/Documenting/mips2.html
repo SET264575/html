@@ -169,6 +169,8 @@
           var ele = document.getElementsByName(name);
           for (let i = 0; i < ele.length; i++){
             if (ele[i].checked){
+              console.log("in getLabel");
+              console.log(ele[i].labels[0].innerText);
               return(ele[i].labels[0].innerText);
             }
           }
