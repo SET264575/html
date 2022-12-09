@@ -5,6 +5,7 @@ Fill in the blanks (9)
 *Remove (select)
 uncapitalize words
 uncheck checkboxes
+check radio buttons when checkboxes checked
 clear button
 *copybutton
 -->
@@ -78,12 +79,12 @@ clear button
     
     <button type="button" class="collapsible">#116 - Avoidance of Antibiotic Treatment of Acute Bronchitis/Bronchiolitis</button>
     <div class="content">
-    <input type = "radio" id = "bronchitis1" name="bronchitis" onclick = "copytext()"><label for ="bronchitis1">The patient has acute bronchitis/bronchiolitis and antibiotics were not prescribed or dispensed today</label><br>
-    <input type = "radio" id = "bronchitis2" name="bronchitis" onclick = "copytext()"><label for ="bronchitis2">The patient has acute bronchitis/bronchiolitis. Antibiotics were prescribed or dispensed because the patient meets one of the following:</label><br>
-    <div class="sub">
-      <input type = "checkbox" id = "bronchitis3" name="bronchitis" onclick = "copytext()"><label for ="bronchitis3">The patient has a medical condition for prescribing or dispensing an antibiotic.  That reason is________ (ex. COPD, bacterial infection, acute sinusitis, etc)</label><br>
-      <input type = "checkbox" id = "bronchitis4" name="bronchitis" onclick = "copytext()"><label for ="bronchitis4">The patient is currently on antibiotics or has been in the last 30 days</label><br>
-      <input type = "checkbox" id = "bronchitis5" name="bronchitis" onclick = "copytext()"><label for ="bronchitis5">The patient's visit resulted in an inpatient admission</label><br>
+      <input type = "radio" id = "bronchitis1" name="bronchitis" onclick = "copytext()"><label for ="bronchitis1">The patient has acute bronchitis/bronchiolitis and antibiotics were not prescribed or dispensed today</label><br>
+      <input type = "radio" id = "bronchitis2" name="bronchitis" onclick = "copytext(); uncheckCheckbox('bronchitis2',['bronchitis3','bronchitis4','bronchitis5'])"><label for ="bronchitis2">The patient has acute bronchitis/bronchiolitis. Antibiotics were prescribed or dispensed because the patient meets one of the following:</label><br>
+      <div class="sub">
+        <input type = "checkbox" id = "bronchitis3" name="bronchitis" onclick = "copytext()"><label for ="bronchitis3">The patient has a medical condition for prescribing or dispensing an antibiotic.  That reason is________ (ex. COPD, bacterial infection, acute sinusitis, etc)</label><br>
+        <input type = "checkbox" id = "bronchitis4" name="bronchitis" onclick = "copytext()"><label for ="bronchitis4">The patient is currently on antibiotics or has been in the last 30 days</label><br>
+        <input type = "checkbox" id = "bronchitis5" name="bronchitis" onclick = "copytext()"><label for ="bronchitis5">The patient's visit resulted in an inpatient admission</label><br>
       </div>
       <input type = "radio" id = "bronchitis6" name="bronchitis" onclick = "copytext()"><label for ="bronchitis6" class='red'>The patient has acute bronchitis/bronchiolitis and antibiotics were prescribed and dispensed today.</label><br>
     </div><br><br>
@@ -207,6 +208,19 @@ clear button
         
      <script src = "../Code/collapsible.js"></script>
       <script>
+        
+        function checkRadio(id) {
+          document.getElementById(id).checked = true;
+        }
+        
+        function uncheckCheckbox(id,list){
+          if (document.getElementById(id).checked == true) {
+            for (let i = 0; i<list.length;i++) {
+              document.getElementById(list[i]).checked = false;
+            }
+          }
+        }
+        
         function copytext(){
           var uri = getRadioButtonLabel('uri');
           var om = getRadioButtonLabel('om');
