@@ -135,9 +135,21 @@
       <script>
         function copytext(){
           var uri = getRadioButtonLabel('uri');
+          var om = getRadioButtonLabel('om');
+          var sinusitis = getRadioButtonLabel("sinusitis");
+          var abdpain = getRadioButtonLabel("abdpain");
+          var ctadult = getRadioButtonLabel("ctadult");
+          var ctped = getRadioButtonLabel("ctped");
+          var cva = getRadioButtonLabel("cva");
           
           var t = "";
           t = t + uri;
+          t = t + om;
+          t = t + sinusitis;
+          t = t + abdpain;
+          t = t + ctadult;
+          t = t + ctped;
+          t = t + cva;
           
           navigator.clipboard.writeText(t);
           document.getElementById("text").value = t;
