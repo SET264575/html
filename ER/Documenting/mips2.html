@@ -68,20 +68,20 @@
     <input type = "radio" id = "sinusitis1" name="sinusitis" onclick = "copytext()"><label for ="sinusitis1">The patient has sinusitis and antibiotics are not indicated/not prescribed at this time.</label><br>
     <input type = "radio" id = "sinusitis2" name="sinusitis" onclick = "copytext()"><label for ="sinusitis2">The patient has sinusitis with symptom onset greater than 10 days ago and the patient was prescribed antibiotics</label><br>
     <div class="sub">  <input type = "radio" id = "sinusitis3" name="sinusitis" onclick = "copytext()"><label for ="sinusitis3">The patient was prescribed an amoxicillin-based antibiotic</label><br>
-      <input type = "radio" id = "sinusitis4" name="sinusitis" onclick = "copytext()"><label for ="sinusitis4">The patient was prescribed a non amoxicillin-based antibiotic because_______________. (ex. allergy, intolerance, secondary infection like Acute Pharyngitis, Cellulitis, UTI)	</label><br>
-      <input type = "radio" id = "sinusitis5" name="sinusitis" onclick = "copytext()"><label for ="sinusitis5">The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
+      <input type = "radio" id = "sinusitis4" name="sinusitis1" onclick = "copytext()"><label for ="sinusitis4">The patient was prescribed a non amoxicillin-based antibiotic because_______________. (ex. allergy, intolerance, secondary infection like Acute Pharyngitis, Cellulitis, UTI)	</label><br>
+      <input type = "radio" id = "sinusitis5" name="sinusitis1" onclick = "copytext()"><label for ="sinusitis5">The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
       </div>
-      <input type = "radio" id = "sinusitis6" name="sinusitis" onclick = "copytext()"><label for ="sinusitis6">The patient has sinusitis and was prescribed antibiotics because ____________(ex patient's symptoms worsened after initial improvement, patient has secondary infection, patient is immunocompromised)</label><br>
+      <input type = "radio" id = "sinusitis6" name="sinusitis1" onclick = "copytext()"><label for ="sinusitis6">The patient has sinusitis and was prescribed antibiotics because ____________(ex patient's symptoms worsened after initial improvement, patient has secondary infection, patient is immunocompromised)</label><br>
      <div class= "sub">
-       <input type = "radio" id = "sinusitis7" name="sinusitis" onclick = "copytext()"><label for ="sinusitis7">The patient was prescribed an amoxicillin-based antibiotic</label><br>
-      <input type = "radio" id = "sinusitis8" name="sinusitis" onclick = "copytext()"><label for ="sinusitis8">The patient was prescribed a non amoxicillin-based antibiotic because_______________. (ex. allergy, intolerance, secondary infection like Acute Pharyngitis, Cellulitis, UTI)	</label><br>
-      <input type = "radio" id = "sinusitis9" name="sinusitis" onclick = "copytext()"><label for ="sinusitis9">The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
+       <input type = "radio" id = "sinusitis7" name="sinusitis2" onclick = "copytext()"><label for ="sinusitis7">The patient was prescribed an amoxicillin-based antibiotic</label><br>
+      <input type = "radio" id = "sinusitis8" name="sinusitis2" onclick = "copytext()"><label for ="sinusitis8">The patient was prescribed a non amoxicillin-based antibiotic because_______________. (ex. allergy, intolerance, secondary infection like Acute Pharyngitis, Cellulitis, UTI)	</label><br>
+      <input type = "radio" id = "sinusitis9" name="sinusitis2" onclick = "copytext()"><label for ="sinusitis9">The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
       </div>
        <input type = "radio" id = "sinusitis10" name="sinusitis" onclick = "copytext()"><label for ="sinusitis10">The patient has sinusitis with symptom onset less than or equal to 10 days ago and antibiotics WERE prescribed.</label><br>
     <div class="sub">
-      <input type = "radio" id = "sinusitis11" name="sinusitis" onclick = "copytext()"><label for ="sinusitis11">The patient was prescribed an amoxicillin-based antibiotic</label><br>
-      <input type = "radio" id = "sinusitis12" name="sinusitis" onclick = "copytext()"><label for ="sinusitis12">The patient was prescribed a non amoxicillin-based antibiotic because_______________. (ex. allergy, intolerance, secondary infection like Acute Pharyngitis, Cellulitis, UTI)	</label><br>
-      <input type = "radio" id = "sinusitis13" name="sinusitis" onclick = "copytext()"><label for ="sinusitis13">The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
+      <input type = "radio" id = "sinusitis11" name="sinusitis3" onclick = "copytext()"><label for ="sinusitis11">The patient was prescribed an amoxicillin-based antibiotic</label><br>
+      <input type = "radio" id = "sinusitis12" name="sinusitis3" onclick = "copytext()"><label for ="sinusitis12">The patient was prescribed a non amoxicillin-based antibiotic because_______________. (ex. allergy, intolerance, secondary infection like Acute Pharyngitis, Cellulitis, UTI)	</label><br>
+      <input type = "radio" id = "sinusitis13" name="sinusitis3" onclick = "copytext()"><label for ="sinusitis13">The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
       </div>
       </div><br><br>
     
@@ -193,7 +193,17 @@
           }
           if (sinusitis != -1) {
             t = t + "#331 & 332 - Antibiotic use with Sinusitis\n";
-            t = t + sinusitis+'\n\n';;
+            t = t + sinusitis+'\n\n';
+            if (isChecked('sinusitis2')){
+              t= t + getRadioButtonLabel('sinusitis2');
+            }
+            if  (isChecked('sinusitis7')){
+              t = t + getRadioButtonLabel('sinusitis7');
+            }
+            if (isChecked('sinusitis10')) {
+              t = t + getRadioButtonLabel('sinusitis10');
+            }
+            t = t + "\n\n";
           }
           if (abdpain != -1) {
             t = t + "#254 - Ultrasound for Patients with Abdominal Pain\n";
@@ -232,22 +242,12 @@
             for (let i = 0; i < z.length-1; i++) {
               t = t + z[i] + ", ";
             }
+            t = t + "and ";
           }
           t = t + z[z.length-1];
           return(t);
         }
                         
-            
-        
-        function getRadioButtonValue(name){
-          var ele = document.getElementsByName(name);
-          for (let i = 0; i < ele.length; i++){
-            if (ele[i].checked){
-              return(ele[i].value);
-            }
-          }
-          return(-1);
-        }
         
         function isChecked(name){
           return(document.getElementById(name).checked);
@@ -257,8 +257,6 @@
           var ele = document.getElementsByName(name);
           for (let i = 0; i < ele.length; i++){
             if (ele[i].checked){
-              console.log("in getLabel");
-              console.log(ele[i].labels[0].innerText);
               return(ele[i].labels[0].innerText);
             }
           }
