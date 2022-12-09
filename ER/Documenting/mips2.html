@@ -157,13 +157,27 @@
           var cva = getRadioButtonLabel("cva");
           
           var t = "";
-          t = t + uri;
-          t = t + om;
-          t = t + sinusitis;
-          t = t + abdpain;
-          t = t + ctadult;
-          t = t + ctped;
-          t = t + cva;
+          if (uri <> -1) {
+            t = t + uri;
+          }
+          if (om <> -1) {
+            t = t + om;
+          }
+          if (sinusitis <> -1) {
+            t = t + sinusitis;
+          }
+          if (abdpain <> -1) {
+            t = t + abdpain;
+          }
+          if (ctadult <> -1) {
+            t = t + ctadult;
+          }
+          if (ctped <> -1) {
+            t = t + ctped;
+          }
+          if (cva <> -1 ) {
+            t = t + cva;
+          }
           
           navigator.clipboard.writeText(t);
           document.getElementById("text").innerHTML = t;
