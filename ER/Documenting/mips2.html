@@ -23,7 +23,7 @@
     <input type = "radio" id = "uri2" name="uri" onclick = "copytext()"><label for ="uri2">The patient has competing comorbid conditions within the last 12 months.  The comorbid condition was_________ (e.g., neutropenia, cystic fibrosis, chronic bronchitis, pulmonary edema, respiratory failure, rheumatoid lung disease)</label><br>
     <input type = "radio" id = "uri3" name="uri" onclick = "copytext()"><label for ="uri3">The patient is already on antibiotics or has taken them within the last 30 days</label><br>
     <input type = "radio" id = "uri4" name="uri" onclick = "copytext()"><label for ="uri4">The patient had a competing diagnosis of _________ (e.g. acute otitis media, chronic sinusitis, cellulitis, UTI, etc)</label><br>
-    <input type = "radio" id = "uri5" name="uri" onclick = "copytext()"><label for ="uri5">The patient was diagnosed with an Upper Respiratory Infection and prescribed or dispensed an antiobitic</label><br>
+    <input type = "radio" id = "uri5" name="uri" onclick = "copytext()"><label for ="uri5">The patient was diagnosed with an Upper Respiratory Infection and prescribed or dispensed an antibiotic</label><br>
     </div><br><br>
     
     <button type="button" class="collapsible">#93 - Acute Otitis Externa (AOE): Systemic Antimicrobial Therapy</button>
@@ -176,34 +176,44 @@
           
           var t = "";
           if (uri != -1) {
-            t = t + uri;
+            t = t + "# 65 - Appropriate Treatment for Patients with URI\n"
+            t = t + uri+"\n\n";
           }
           if (om != -1) {
-            t = t + om;
+            t = t + "#93 - Acute Otitis Externa (AOE): Systemic Antimicrobial Therapy\n";
+            t = t + om+'\n\n';
           }
           if (bronchitis != -1){
+            t = t + "#116 - Avoidance of Antibiotic Treatment of Acute Bronchitis/Bronchiolitis\n";
             t = t + bronchitis;
             if (isChecked('bronchitis2')) {
               t = t + getReasons(['bronchitis3','bronchitis4','bronchitis5']);
             }
+            t =t + "\n\n";
           }
           if (sinusitis != -1) {
-            t = t + sinusitis;
+            t = t + "#331 & 332 - Antibiotic use with Sinusitis\n";
+            t = t + sinusitis+'\n\n';;
           }
           if (abdpain != -1) {
-            t = t + abdpain;
+            t = t + "#254 - Ultrasound for Patients with Abdominal Pain\n";
+            t = t + abdpain+'\n\n';
           }
           if (ctadult != -1) {
+            t = t + "#415 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Adult)\n";
             t = t + ctadult;
             if (isChecked('cva2')) {
               t = t + getReasons(['cva3','cva4','cva5']);
             }
+            t = t + "\n\n";
           }
           if (ctped != -1) {
-            t = t + ctped;
+            t = t + "#146 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Pediatrics)\n";
+            t = t + ctped+'\n\n';
           }
           if (cva != -1 ) {
-            t = t + cva;
+            t = t + "#187 - Stroke and Stroke Rehabilitation: Thrombolytic Therapy\n";
+            t = t + cva+'\n\n';
           }
           
           navigator.clipboard.writeText(t);
