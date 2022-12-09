@@ -134,9 +134,10 @@
      <script src = "../Code/collapsible.js"></script>
       <script>
         function copytext(){
-          var uri = getRadioButtonValue('uri');
+          var uri = getRadioButtonLabel('uri');
           
           var t = "";
+          t = t + uri;
           
           navigator.clipboard.writeText(t);
           document.getElementById("text").value = t;
@@ -147,6 +148,16 @@
           for (let i = 0; i < ele.length; i++){
             if (ele[i].checked){
               return(ele[i].value);
+            }
+          }
+          return(-1);
+        }
+        
+        function getRadioButtonLabel(name){
+          var ele = document.getElementsByName(name);
+          for (let i = 0; i < ele.length; i++){
+            if (ele[i].checked){
+              return(ele[i].labels[0].innerText);
             }
           }
           return(-1);
