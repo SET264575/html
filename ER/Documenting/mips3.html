@@ -90,7 +90,12 @@ clear button
     <div class="content">
     <input type = "radio" id = "om1" name="om" onclick = "copytext()"><label for ="om1">The patient has Acute Otitis Externa and was not prescribed oral/systemic antibiotics today.</label><br>
     <input type = "radio" id = "om2" name="om" onclick = "copytext()"><label for ="om2">The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics because__________ (ex. immunocompromised, secondary infection)</label><br>
-    <input type = "radio" id = "om3" name="om" onclick = "copytext()"><label for ="om3" class='red'>The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics today</label><br>
+    <div class="sub">
+      <input type="radio" id = "om21" name = "om2" onclick = "copytext()"><label for = "om21">immunocompromised.</label>
+       <input type="radio" id = "om22" name = "om2" onclick = "copytext()"><label for = "om22">secondary infection.</label>
+      <input type="radio" id = "om23" name = "om2" onclick = "copytext()"><label for = "om23">_____________.</label>
+      </div>
+      <input type = "radio" id = "om3" name="om" onclick = "copytext()"><label for ="om3" class='red'>The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics today</label><br>
 </div><br><br>
     
     <button type="button" class="collapsible">#116 - Avoidance of Antibiotic Treatment of Acute Bronchitis/Bronchiolitis</button>
@@ -262,8 +267,13 @@ clear button
           
           if (om != -1) {
             t = t + "#93 - Acute Otitis Externa (AOE): Systemic Antimicrobial Therapy\n";
-            t = t + om+'\n\n';
+            t = t + om;
+            if (isChecked('om2')) {
+              t = t + getRadioButtonLabel('om2');
+            }
+            t = t +'\n\n';
           }
+          
           if (bronchitis != -1){
             t = t + "#116 - Avoidance of Antibiotic Treatment of Acute Bronchitis/Bronchiolitis\n";
             t = t + bronchitis;
