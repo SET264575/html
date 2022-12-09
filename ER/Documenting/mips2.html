@@ -146,17 +146,19 @@
     <div class="content">
     <input type = "radio" id = "ped1" name="ct ped" onclick = "copytext()"><label for ="ped1">The patient is between 2-17 years, presenting with minor blunt head trauma. Head CT (including cosigned orders) was ordered by an emergency care clinican AND the one or more patient exclusions apply:</label><br>
      <div class = "sub">
-       <input type = "radio" id = "ped11" name="ct ped" onclick = "copytext()"><label for ="ped11">The patient has ventricular shunt</label><br>
-      <input type = "radio" id = "ped12" name="ct ped" onclick = "copytext()"><label for ="ped12">The patient has brain tumor</label><br>
-      <input type = "radio" id = "ped13" name="ct ped" onclick = "copytext()"><label for ="ped13">The patient is taking antiplatelet medication (excluding aspirin)</label><br>
-      <input type = "radio" id = "ped14" name="ct ped" onclick = "copytext()"><label for ="ped14">Head CT not ordered by emergency care clinician</label><br>
-      <input type = "radio" id = "ped15" name="ct ped" onclick = "copytext()"><label for ="ped15">Head CT ordered for reasons other than trauma</label><br>
+       <input type = "checkbox" id = "ped11" name="ct ped" onclick = "copytext()"><label for ="ped11">The patient has ventricular shunt</label><br>
+      <input type = "checkbox" id = "ped12" name="ct ped" onclick = "copytext()"><label for ="ped12">The patient has brain tumor</label><br>
+      <input type = "checkbox" id = "ped13" name="ct ped" onclick = "copytext()"><label for ="ped13">The patient is taking antiplatelet medication (excluding aspirin)</label><br>
+      <input type = "checkbox" id = "ped14" name="ct ped" onclick = "copytext()"><label for ="ped14">Head CT not ordered by emergency care clinician</label><br>
+      <input type = "checkbox" id = "ped15" name="ct ped" onclick = "copytext()"><label for ="ped15">Head CT ordered for reasons other than trauma</label><br>
       </div>
         <input type = "radio" id = "ped2" name="ct ped" onclick = "copytext()"><label for ="ped2">The patient is between 2-17 years, presenting with minor blunt head trauma. Head CT (including cosigned orders) was ordered by an emergency care clinician for trauma AND:</label><br>
-      <input type = "radio" id = "ped21" name="ct ped" onclick = "copytext()"><label for ="ped21">The patient patient IS NOT classified as low risk according to PECARN prediction rule</label><br>
-      <input type = "radio" id = "ped22" name="ct ped" onclick = "copytext()"><label for ="ped22">The patient patient IS classified as low risk according to PECARN prediction rule</label><br>
-      <input type = "radio" id = "ped23" name="ct ped" onclick = "copytext()"><label for ="ped23">The patient patient was not assessed using the PECARN prediction rule</label><br>
-          </div><br><br>
+      <div class = "sub">
+        <input type = "radio" id = "ped21" name="ct ped2" onclick = "copytext()"><label for ="ped21">The patient patient IS NOT classified as low risk according to PECARN prediction rule</label><br>
+        <input type = "radio" id = "ped22" name="ct ped2" onclick = "copytext()"><label for ="ped22">The patient patient IS classified as low risk according to PECARN prediction rule</label><br>
+        <input type = "radio" id = "ped23" name="ct ped2" onclick = "copytext()"><label for ="ped23">The patient patient was not assessed using the PECARN prediction rule</label><br>
+      </div>
+      </div><br><br>
       
       <div>
       <h4>The following text has been copied into the clipboard and is ready to be pasted into your document:</h4>
@@ -234,7 +236,14 @@
           }
           if (ctped != -1) {
             t = t + "#146 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Pediatrics)\n";
-            t = t + ctped+'\n\n';
+            t = t + ctped;
+            if (isChecked('ped1')) {
+              t = t + getReasons(['ped11','ped12','ped13','ped14','ped15']);
+            }
+            if (isChecked('ped2')) {
+              t = t + getRadioButtonLabel('ct ped2');
+            }
+            t = t + '\n\n';
           }
           if (cva != -1 ) {
             t = t + "#187 - Stroke and Stroke Rehabilitation: Thrombolytic Therapy\n";
