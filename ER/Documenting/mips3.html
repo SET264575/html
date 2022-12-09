@@ -64,7 +64,7 @@ clear button
     <button type="button" class="collapsible"># 65 - Appropriate Treatment for Patients with URI</button>
     <div class="content">
       <input type = "radio" id = "uri1" name="uri" onclick = "copytext()"><label for ="uri1">The patient was diagnosed with Upper Respiratory Infection and was not prescribed or dispensed an antibiotic</label><br>
-      <input type = "radio" id = "uri2" name="uri" onclick = "copytext()"><label for ="uri2">The patient has competing comorbid conditions within the last 12 months.  The comorbid condition was_________ (e.g., neutropenia, cystic fibrosis, chronic bronchitis, pulmonary edema, respiratory failure, rheumatoid lung disease)</label><br>
+      <input type = "radio" id = "uri2" name="uri" onclick = "copytext()"><label for ="uri2">The patient has competing comorbid conditions within the last 12 months.  The comorbid condition was </label><br>
       <div class="sub">
         <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">neutropenia.</label><br>
         <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">cystic fibrosis.</label><br>
@@ -262,7 +262,7 @@ clear button
             if (isChecked('uri4')) {
               t = t + getRadioButtonLabel('uri41');
             }
-            t = t + '/n/n';
+            t = t + '\n\n';
           }
           
           if (om != -1) {
