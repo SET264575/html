@@ -66,22 +66,22 @@ clear button
       <input type = "radio" id = "uri1" name="uri" onclick = "copytext()"; unchecked(['uri21','uri22','uri23','uri24','uri25','uri26','uri27'])><label for ="uri1">The patient was diagnosed with Upper Respiratory Infection and was not prescribed or dispensed an antibiotic</label><br>
       <input type = "radio" id = "uri2" name="uri" onclick = "copytext()"><label for ="uri2">The patient has competing comorbid conditions within the last 12 months.  The comorbid condition was </label><br>
       <div class="sub">
-        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext()"><label for = "uri21">neutropenia.</label><br>
-        <input type="radio" id = "uri22" name = "uri2" onclick = "copytext()"><label for = "uri22">cystic fibrosis.</label><br>
-        <input type="radio" id = "uri23" name = "uri2" onclick = "copytext()"><label for = "uri23">chronic bronchitis.</label><br>
-        <input type="radio" id = "uri24" name = "uri2" onclick = "copytext()"><label for = "uri24">pulmonary edema.</label><br>
-        <input type="radio" id = "uri25" name = "uri2" onclick = "copytext()"><label for = "uri25">respiratory failure.</label><br>
-        <input type="radio" id = "uri26" name = "uri2" onclick = "copytext()"><label for = "uri26">rheumatoid lung disease.</label><br>
-        <input type="radio" id = "uri27" name = "uri2" onclick = "copytext()"><label for = "uri27">____________.</label><br>
+        <input type="radio" id = "uri21" name = "uri2" onclick = "copytext(); check('uri2')"><label for = "uri21">neutropenia.</label><br>
+        <input type="radio" id = "uri22" name = "uri2" onclick = "copytext(); check('uri2')"><label for = "uri22">cystic fibrosis.</label><br>
+        <input type="radio" id = "uri23" name = "uri2" onclick = "copytext(); check('uri2')"><label for = "uri23">chronic bronchitis.</label><br>
+        <input type="radio" id = "uri24" name = "uri2" onclick = "copytext(); check('uri2')"><label for = "uri24">pulmonary edema.</label><br>
+        <input type="radio" id = "uri25" name = "uri2" onclick = "copytext(); check('uri2')"><label for = "uri25">respiratory failure.</label><br>
+        <input type="radio" id = "uri26" name = "uri2" onclick = "copytext(); check('uri2')"><label for = "uri26">rheumatoid lung disease.</label><br>
+        <input type="radio" id = "uri27" name = "uri2" onclick = "copytext(); check('uri2')"><label for = "uri27">____________.</label><br>
       </div>
       <input type = "radio" id = "uri3" name="uri" onclick = "copytext();  unchecked(['uri21','uri22','uri23','uri24','uri25','uri26','uri27'])"><label for ="uri3">The patient is already on antibiotics or has taken them within the last 30 days</label><br>
       <input type = "radio" id = "uri4" name="uri" onclick = "copytext()"><label for ="uri4">The patient had a competing diagnosis of </label><br>
       <div class="sub">
-        <input type = "radio" id = "uri41" name="uri41" onclick="copytext()"><label for = 'uri41'>acute otitis media</label><br>
-        <input type = "radio" id = "uri42" name="uri41" onclick="copytext()"><label for = 'uri42'>chronic sinusitis</label><br>
-        <input type = "radio" id = "uri43" name="uri41" onclick="copytext()"><label for = 'uri43'>cellulitis</label><br>
-        <input type = "radio" id = 'uri44' name="uri41" onclick='copytext()'><label for = 'uri44'>UTI</label><br>
-        <input type = "radio" id = 'uri45' name="uri41" onclick='copytext()'<label for = 'uri45'>_______</label><br>
+        <input type = "radio" id = "uri41" name="uri41" onclick="copytext(); check('uri4')"><label for = 'uri41'>acute otitis media</label><br>
+        <input type = "radio" id = "uri42" name="uri41" onclick="copytext(); check('uri4')""><label for = 'uri42'>chronic sinusitis</label><br>
+        <input type = "radio" id = "uri43" name="uri41" onclick="copytext(); check('uri4')""><label for = 'uri43'>cellulitis</label><br>
+        <input type = "radio" id = 'uri44' name="uri41" onclick='copytext(); check('uri4')"'><label for = 'uri44'>UTI</label><br>
+        <input type = "radio" id = 'uri45' name="uri41" onclick='copytext(); check('uri4')"'<label for =  'uri45'>_______</label><br>
       </div>
       <input type = "radio" id = "uri5" name="uri" onclick = "copytext(); unchecked(['uri21','uri22','uri23','uri24','uri25','uri26','uri27'])"><label for ="uri5" class='red'>The patient was diagnosed with an Upper Respiratory Infection and prescribed or dispensed an antibiotic</label><br>
     </div><br><br>
@@ -91,9 +91,9 @@ clear button
     <input type = "radio" id = "om1" name="om" onclick = "copytext(); unchecked(['om21','om22','om23'])"><label for ="om1">The patient has Acute Otitis Externa and was not prescribed oral/systemic antibiotics today.</label><br>
     <input type = "radio" id = "om2" name="om" onclick = "copytext()"><label for ="om2">The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics because__________ (ex. immunocompromised, secondary infection)</label><br>
     <div class="sub">
-      <input type="radio" id = "om21" name = "om2" onclick = "copytext()"><label for = "om21">immunocompromised.</label><br>
-       <input type="radio" id = "om22" name = "om2" onclick = "copytext()"><label for = "om22">secondary infection.</label><br>
-      <input type="radio" id = "om23" name = "om2" onclick = "copytext()"><label for = "om23">_____________.</label><br>
+      <input type="radio" id = "om21" name = "om2" onclick = "copytext(); check('om2')""><label for = "om21">immunocompromised.</label><br>
+       <input type="radio" id = "om22" name = "om2" onclick = "copytext(); check('om2')"><label for = "om22">secondary infection.</label><br>
+      <input type="radio" id = "om23" name = "om2" onclick = "copytext(); check('om2')"><label for = "om23">_____________.</label><br>
       </div>
       <input type = "radio" id = "om3" name="om" onclick = "copytext(); unchecked(['om21','om22','om23'])"><label for ="om3" class='red'>The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics today</label><br>
 </div><br><br>
@@ -103,9 +103,9 @@ clear button
       <input type = "radio" id = "bronchitis1" name="bronchitis" onclick = "copytext(); unchecked(['bronchitis3','bronchitis4','bronchitis5'])"><label for ="bronchitis1">The patient has acute bronchitis/bronchiolitis and antibiotics were not prescribed or dispensed today</label><br>
       <input type = "radio" id = "bronchitis2" name="bronchitis" onclick = "copytext()"><label for ="bronchitis2">The patient has acute bronchitis/bronchiolitis. Antibiotics were prescribed or dispensed because the patient meets one of the following:</label><br>
       <div class="sub">
-        <input type = "checkbox" id = "bronchitis3" name="bronchitis" onclick = "copytext()"><label for ="bronchitis3">The patient has a medical condition for prescribing or dispensing an antibiotic.  That reason is________ (ex. COPD, bacterial infection, acute sinusitis, etc)</label><br>
-        <input type = "checkbox" id = "bronchitis4" name="bronchitis" onclick = "copytext()"><label for ="bronchitis4">The patient is currently on antibiotics or has been in the last 30 days</label><br>
-        <input type = "checkbox" id = "bronchitis5" name="bronchitis" onclick = "copytext()"><label for ="bronchitis5">The patient's visit resulted in an inpatient admission</label><br>
+        <input type = "checkbox" id = "bronchitis3" name="bronchitis" onclick = "copytext(); check('bronchitis2')"><label for ="bronchitis3">The patient has a medical condition for prescribing or dispensing an antibiotic.  That reason is________ (ex. COPD, bacterial infection, acute sinusitis, etc)</label><br>
+        <input type = "checkbox" id = "bronchitis4" name="bronchitis" onclick = "copytext(); check('bronchitis2')"><label for ="bronchitis4">The patient is currently on antibiotics or has been in the last 30 days</label><br>
+        <input type = "checkbox" id = "bronchitis5" name="bronchitis" onclick = "copytext(); check('bronchitis2')"><label for ="bronchitis5">The patient's visit resulted in an inpatient admission</label><br>
       </div>
       <input type = "radio" id = "bronchitis6" name="bronchitis" onclick = "copytext(); unchecked(['bronchitis3','bronchitis4','bronchitis5'])"><label for ="bronchitis6" class='red'>The patient has acute bronchitis/bronchiolitis and antibiotics were prescribed and dispensed today.</label><br>
     </div><br><br>
@@ -118,21 +118,21 @@ clear button
       <input type = "checkbox" id = "cva3" name="cva" onclick = "copytext()"><label for ="cva3">The patient arrived more than 3.5 hours after last known well time, or the time last known well is unknown</label><br>
       <input type = "checkbox" id = "cva4" name="cva" onclick = "copytext()"><label for ="cva4">The patient has a medical contra-indication or reason for not administering____________________ (ex neurologist does not believe t-PA is appropriate, active internal bleeding, serious head trauma, acute current or history of intracranial hemorrhage, uncontrollable hypertension, seizure at onset of stroke, CVA in last 3 months, Intracranial or intraspinal surgery in last 3 months, bleeding disorder, thrombocytopenia < 100,000, early radiographic ischemic changes on head CT, INR > 1.7, intracranial neoplasm, AVM, or aneurysm, patient in stroke trial, patient admitted for elective carotid intervention)</label><br>
       <div class= "subsub">
-        <input type = "checkbox" id = "cva41" name="cva1" onclick = "copytext()"><label for ="cva41">neurologist does not believe t-PA is appropriate</label><br>
-        <input type = "checkbox" id = "cva42" name="cva1" onclick = "copytext()"><label for ="cva42">active internal bleeding</label><br>
-        <input type = "checkbox" id = "cva43" name="cva1" onclick = "copytext()"><label for ="cva43">serious head trauma</label><br>
-        <input type = "checkbox" id = "cva44" name="cva1" onclick = "copytext()"><label for ="cva44">acute current or history of intracranial hemorrhage</label><br>
-        <input type = "checkbox" id = "cva45" name="cva1" onclick = "copytext()"><label for ="cva45">uncontrollable hypertension</label><br>
-        <input type = "checkbox" id = "cva46" name="cva1" onclick = "copytext()"><label for ="cva46">seizure at onset of stroke</label><br></label><br>
-        <input type = "checkbox" id = "cva47" name="cva1" onclick = "copytext()"><label for ="cva47">CVA in last 3 months</label><br>
-        <input type = "checkbox" id = "cva48" name="cva1" onclick = "copytext()"><label for ="cva48">Intracranial or intraspinal surgery in last 3 months</label><br>
-        <input type = "checkbox" id = "cva49" name="cva1" onclick = "copytext()"><label for ="cva49">bleeding disorder</label><br>
-        <input type = "checkbox" id = "cva410" name="cva1" onclick = "copytext()"><label for ="cva410">thrombocytopenia < 100,000</label><br>
-        <input type = "checkbox" id = "cva411" name="cva1" onclick = "copytext()"><label for ="cva411">early radiographic ischemic changes on head CT</label><br>
-        <input type = "checkbox" id = "cva412" name="cva1" onclick = "copytext()"><label for ="cva412">INR > 1.7</label><br>
-        <input type = "checkbox" id = "cva413" name="cva1" onclick = "copytext()"><label for ="cva413">intracranial neoplasm, AVM, or aneurysm</label><br>
-        <input type = "checkbox" id = "cva414" name="cva1" onclick = "copytext()"><label for ="cva414">patient in stroke trial</label><br>
-        <input type = "checkbox" id = "cva415" name="cva1" onclick = "copytext()"><label for ="cva415">patient admitted for elective carotid intervention</label><br>
+        <input type = "checkbox" id = "cva41" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva41">neurologist does not believe t-PA is appropriate</label><br>
+        <input type = "checkbox" id = "cva42" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva42">active internal bleeding</label><br>
+        <input type = "checkbox" id = "cva43" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva43">serious head trauma</label><br>
+        <input type = "checkbox" id = "cva44" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva44">acute current or history of intracranial hemorrhage</label><br>
+        <input type = "checkbox" id = "cva45" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva45">uncontrollable hypertension</label><br>
+        <input type = "checkbox" id = "cva46" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva46">seizure at onset of stroke</label><br></label><br>
+        <input type = "checkbox" id = "cva47" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva47">CVA in last 3 months</label><br>
+        <input type = "checkbox" id = "cva48" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva48">Intracranial or intraspinal surgery in last 3 months</label><br>
+        <input type = "checkbox" id = "cva49" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva49">bleeding disorder</label><br>
+        <input type = "checkbox" id = "cva410" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva410">thrombocytopenia < 100,000</label><br>
+        <input type = "checkbox" id = "cva411" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva411">early radiographic ischemic changes on head CT</label><br>
+        <input type = "checkbox" id = "cva412" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva412">INR > 1.7</label><br>
+        <input type = "checkbox" id = "cva413" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva413">intracranial neoplasm, AVM, or aneurysm</label><br>
+        <input type = "checkbox" id = "cva414" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva414">patient in stroke trial</label><br>
+        <input type = "checkbox" id = "cva415" name="cva1" onclick = "copytext(); check('cva4')"><label for ="cva415">patient admitted for elective carotid intervention</label><br>
 
       </div>
       </div>
@@ -248,7 +248,7 @@ clear button
      <script src = "../Code/collapsible.js"></script>
       <script>
         
-        function checkRadio(id) {
+        function check(id) {
           document.getElementById(id).checked = true;
         }
         
