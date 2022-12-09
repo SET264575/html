@@ -2,7 +2,7 @@
 Things to fix:
 Fill in the blanks (9)
 Scroll top
-Remove (select)
+*Remove (select)
 uncapitalize words
 uncheck checkboxes
 clear button
@@ -47,7 +47,7 @@ clear button
     <div class="header">
     <h3 style='text-align: center'>MIPS</h3>
       <h4 style="text-align: center">The following text has been copied into the clipboard and is ready to be pasted into your document:</h4>
-        <pre id = "text"></pre>
+        <textarea id = "text"></textarea>
       </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     
@@ -286,7 +286,7 @@ clear button
           }
           
           navigator.clipboard.writeText(t);
-          document.getElementById("text").innerHTML = t;
+          document.getElementById("text").value = t;
         }
         
         function getReasons(list){
