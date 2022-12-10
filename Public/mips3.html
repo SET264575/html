@@ -494,20 +494,18 @@ Select a statement from each box:<br>
                   var z = y.substr(j,7);
                   console.log(z)
                   var x = document.getElementById(z).value;
-                  console.log(document.getElementById(z));
-                  console.log(x);
                   list.push(document.getElementById(z).value);
                 }
               list.push(document.getElementById(list[i]).labels[0].innerText);
             }
           }
-          if (z.length>1) {
-            for (let i = 0; i < z.length-1; i++) {
-              t = t + z[i] + ", ";
+          if (list.length>1) {
+            for (let i = 0; i < list.length-1; i++) {
+              t = t + list[i] + ", ";
             }
             t = t + "and ";
           }
-          t = t + z[z.length-1];
+          t = t + list[list.length-1];
           return(t);
         }
                         
