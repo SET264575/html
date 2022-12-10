@@ -377,7 +377,7 @@ clear button
             t = t + "#93 - Acute Otitis Externa (AOE): Systemic Antimicrobial Therapy\n";
             t = t + om;
             if (isChecked('om2')) {
-              t = t + getRadioButtonLabel('om2');
+              t = t +' '+ getRadioButtonLabel('om2');
             }
             t = t +'\n\n';
           }
@@ -386,7 +386,7 @@ clear button
             t = t + "#116 - Avoidance of Antibiotic Treatment of Acute Bronchitis/Bronchiolitis\n";
             t = t + bronchitis;
             if (isChecked('bronchitis2')) {
-              t = t +" "+ getReasons(['bronchitis3','bronchitis4','bronchitis5']);
+              t = t + getReasons(['bronchitis3','bronchitis4','bronchitis5']);
             }
             t =t + "\n\n";
           }
@@ -437,7 +437,7 @@ clear button
               t = t + getReasons(['ped11','ped12','ped13','ped14','ped15']);
             }
             if (isChecked('ped2')) {
-              t = t + getRadioButtonLabel('ct ped2');
+              t = t + ' '+ getRadioButtonLabel('ct ped2');
             }
             t = t + '\n\n';
           }
