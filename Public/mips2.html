@@ -502,12 +502,13 @@ clear button
           var ele = document.getElementsByName(name);
           for (let i = 0; i < ele.length; i++){
             if (ele[i].checked){
-              var y = ele[i].labels[0].innerHTML;
-             // console.log(y);
-              if (y.includes('input')) {
-                var j = y.search('id')+4;
-                var z = y.substr(j,7);
-                return(document.getElementById(z).value);
+              if (ele[i].labels[0].hasOwnProperty('innerHTML')){
+                var y = ele[i].labels[0].innerHTML;
+                if (y.includes('input')) {
+                  var j = y.search('id')+4;
+                  var z = y.substr(j,7);
+                  return(document.getElementById(z).value);
+                }
               }
               return(ele[i].labels[0].innerText);
             }
