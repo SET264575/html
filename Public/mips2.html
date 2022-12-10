@@ -158,7 +158,7 @@ clear button
         <input type = "checkbox" id = "cva45" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva45">uncontrollable hypertension</label><br>
         <input type = "checkbox" id = "cva46" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva46">seizure at onset of stroke</label><br>
         <input type = "checkbox" id = "cva47" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva47">CVA in last 3 months</label><br>
-        <input type = "checkbox" id = "cva48" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva48">Intracranial or intraspinal surgery in last 3 months</label><br>
+        <input type = "checkbox" id = "cva48" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva48">intracranial or intraspinal surgery in last 3 months</label><br>
         <input type = "checkbox" id = "cva49" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva49">bleeding disorder</label><br>
         <input type = "checkbox" id = "cva410" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva410">thrombocytopenia < 100,000</label><br>
         <input type = "checkbox" id = "cva411" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva411">early radiographic ischemic changes on head CT</label><br>
@@ -175,7 +175,13 @@ clear button
     <button type="button" class="collapsible">#254 - Ultrasound for Patients with Abdominal Pain</button>
     <div class="content">
     <input type = "radio" id = "abdpain1" name="abd pain" onclick = "copytext()"><label for ="abdpain1">The patient is pregnant and presents with abdominal pain or vaginal bleeding.  A trans-abdominal or trans-vaginal ultrasound was performed and the pregnancy location is documented</label><br>
-    <input type = "radio" id = "abdpain2" name="abd pain" onclick = "copytext()"><label for ="abdpain2">The patient is pregnant and presents with abdominal pain or vaginal bleeding.  A trans-abdominal or trans-vaginal ultrasound was not performed because______________(ex. patient has visited the ED multiple times in the last 72 hours, patient has documented intrauterine pregnancy)</label><br>
+    <input type = "radio" id = "abdpain2" name="abd pain" onclick = "copytext()"><label for ="abdpain2">The patient is pregnant and presents with abdominal pain or vaginal bleeding.  A trans-abdominal or trans-vaginal ultrasound was not performed because</label><br>
+      <div class="sub">
+        <input type = "radio" id = "abdpain21" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain21">the patient has visited the ED multiple times in the last 72 hours</label><br>
+        <input type = "radio" id = "abdpain22" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain22">the patient has documented intrauterine pregnancy</label><br>
+        <input type = "radio" id = "abdpain23" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain23"><input type = "text" id = "blank05"/></label><br>
+      </div>
+        
     <input type = "radio" id = "abdpain3" name="abd pain" onclick = "copytext()"><label for ="abdpain3" class='red'>The patient is pregnant and presents with abdominal pain or vaginal bleeding.  A trans-abdominal or trans-vaginal ultrasound was NOT performed, no reason documented.</label><br>
     </div><br><br>
     
