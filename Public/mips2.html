@@ -479,6 +479,12 @@ clear button
           var ele = document.getElementsByName(name);
           for (let i = 0; i < ele.length; i++){
             if (ele[i].checked){
+              var y = ele[i].labels[0].innerText;
+              if (y.contains('input')) {
+                var j = y.search('id')+5;
+                var z = y.substr(j,5);
+                console.log(z);
+              }
               return(ele[i].labels[0].innerText);
             }
           }
