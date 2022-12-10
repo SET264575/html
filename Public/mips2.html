@@ -511,6 +511,10 @@ clear button
                 if (y.includes('input')) {
                   var j = y.search('id')+4;
                   var z = y.substr(j,7);
+                  console.log(z)
+                  var x = document.getElementById(z).value;
+                  console.log(document.getElementById(z));
+                  console.log(x);
                   return(document.getElementById(z).value);
                 }
               }
