@@ -408,6 +408,9 @@ Select a statement from each box:<br>
             t = t + bronchitis;
             if (isChecked('bronchitis2')) {
               t = t + getReasons(['bronchitis3','bronchitis4','bronchitis5']);
+              if (isChecked('bronchitis3')) {
+                t = t + getReasons(['bronchitis31','bronchitis32','bronchitis33','bronchitis34']);
+              }
             }
             t =t + "\n\n";
           }
