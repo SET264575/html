@@ -497,8 +497,6 @@ clear button
               if (y.includes('input')) {
                 var j = y.search('id')+4;
                 var z = y.substr(j,7);
-                console.log(z);
-                console.log(document.getElementById(z).value);
                 return(document.getElementById(z).value);
               }
               return(ele[i].labels[0].innerText);
