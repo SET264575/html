@@ -191,7 +191,7 @@ clear button
     <input type = "radio" id = "sinusitis2" name="sinusitis" onclick = " uncheck(5); uncheck(6); copytext()"><label for ="sinusitis2">The patient has sinusitis with symptom onset greater than 10 days ago and the patient was prescribed antibiotics.  </label><br>
     <div class="sub"> 
       <input type = "radio" id = "sinusitis3" name="sinusitis1" onclick = " check('sinusitis2'); copytext()"><label for ="sinusitis3">The patient was prescribed an amoxicillin-based antibiotic.</label><br>
-      <input type = "radio" id = "sinusitis4" name="sinusitis1" onclick = " check('sinusitis2'); copytext()"><label for ="sinusitis4">The patient was prescribed a non amoxicillin-based antibiotic because</label><br>
+      <input type = "radio" id = "sinusitis4" name="sinusitis1" onclick = " check('sinusitis2'); copytext()"><label for ="sinusitis4">The patient was prescribed a non amoxicillin-based antibiotic because of</label><br>
       <div class="subsub">
         <input type = "radio" id = "sinusitis41" name = "sinusitis41" onclick = "check('sinusitis4'); check('sinusitis2'); copytext()"><label for = 'sinusitis41'>allergy.</label><br>
         <input type = "radio" id = "sinusitis42" name = "sinusitis41" onclick = "check('sinusitis4'); check('sinusitis2'); copytext()"><label for = 'sinusitis42'>intolerance.</label><br>
@@ -201,7 +201,13 @@ clear button
       </div>
       <input type = "radio" id = "sinusitis5" name="sinusitis1" onclick = " check('sinusitis2'); copytext()"><label for ="sinusitis5" class='red'>The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
     </div>
-    <input type = "radio" id = "sinusitis6" name="sinusitis" onclick = " uncheck(4); uncheck(6); copytext()"><label for ="sinusitis6">The patient has sinusitis and was prescribed antibiotics because ____________.(ex patient's symptoms worsened after initial improvement, patient has secondary infection, patient is immunocompromised)</label><br>
+    <input type = "radio" id = "sinusitis6" name="sinusitis" onclick = " uncheck(4); uncheck(6); copytext()"><label for ="sinusitis6">The patient has sinusitis and was prescribed antibiotics because</label><br>
+      <div class = "sub">
+        <input type = "radio" id = "sinusitis61" name = "sinusitis61" onclick = "check('sinusitis6'); copytext()"><label for = 'sinustitis61'>the patient's symptoms worsened after initial improvement.</label><br>
+        <input type = "radio" id = "sinusitis62" name = "sinusitis61" onclick = "check('sinusitis6'); copytext()"><label for = 'sinustitis62'>the patient has secondary infection.</label><br>
+        <input type = "radio" id = "sinusitis63" name = "sinusitis61" onclick = "check('sinusitis6'); copytext()"><label for = 'sinustitis63'>the patient is immunocompromised.</label><br>
+        
+      </div>
      <div class= "sub">
       <input type = "radio" id = "sinusitis7" name="sinusitis21" onclick = " check('sinusitis6'); copytext()"><label for ="sinusitis7">The patient was prescribed an amoxicillin-based antibiotic.</label><br>
       <input type = "radio" id = "sinusitis8" name="sinusitis21" onclick = " check('sinusitis6'); copytext()"><label for ="sinusitis8">The patient was prescribed a non amoxicillin-based antibiotic because</label><br>
