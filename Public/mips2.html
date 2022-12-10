@@ -485,7 +485,7 @@ clear button
           var ele = document.getElementsByName(name);
           for (let i = 0; i < ele.length; i++){
             if (ele[i].checked){
-              var y = ele[i].labels[0].innerText;
+              var y = ele[i].labels[0].innerHTML;
              // console.log(y);
               if (y.includes('input')) {
                 var j = y.search('id')+5;
