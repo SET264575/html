@@ -312,10 +312,8 @@ clear button
           list.push(['adult81','adult82','adult83','adult84','adult85','adult86']); //13
           list.push(['ped11','ped12','ped13','ped14','ped15']); //14
           list.push(['ped21','ped22','ped23']); //15
-                    
-          console.log(list);
-          for (j in list[i]) {
-            console.log(j);
+
+          for (j of list[i]) {
             document.getElementById(j).checked = false;
           }
         }
