@@ -371,7 +371,7 @@ clear button
             t = t + "#93 - Acute Otitis Externa (AOE): Systemic Antimicrobial Therapy\n";
             t = t + om;
             if (isChecked('om2')) {
-              t = t + " "+getRadioButtonLabel('om2');
+              t = t + getRadioButtonLabel('om2');
             }
             t = t +'\n\n';
           }
@@ -394,7 +394,7 @@ clear button
               t = t +" "+ getRadioButtonLabel('sinusitis21');
             }
             if (isChecked('sinusitis10')) {
-              t = t +" " getRadioButtonLabel('sinusitis31');
+              t = t +" " + getRadioButtonLabel('sinusitis31');
             }
             t = t + "\n\n";
           }
@@ -408,10 +408,10 @@ clear button
             t = t + "#415 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Adult)\n";
             t = t + ctadult;
             if (isChecked('adult1')) {
-              t = t + " "+getReasons(['adult12','adult13','adult14','adult15','adult16','adult17','adult18']);
+              t = t + getReasons(['adult12','adult13','adult14','adult15','adult16','adult17','adult18']);
             }
             if (isChecked('adult2')) {
-              t = t +" "+ getReasons(['adult21','adult22','adult23','adult24','adult25']);
+              t = t + getReasons(['adult21','adult22','adult23','adult24','adult25']);
             }
             if (isChecked('adult7')) {
               t = t + getReasons(['adult71','adult72','adult73','adult74','adult75','adult76']);
