@@ -1,0 +1,550 @@
+<!--
+Things to fix:
+Fill in the blanks (9)
+uncapitalize words
+uncheck checkboxes
+clear button
+-->
+
+<html>
+  <head>
+    <title>
+      MIPS
+    </title>
+    <style>
+      /* Style the button that is used to open and close the collapsible content */
+      .collapsible {
+        background-color: lightskyblue;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 1em;
+        font-family: Arial;
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .active, .collapsible:hover {
+        background-color: deepskyblue;
+      }
+
+      /* Style the collapsible content. Note: hidden by default */
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        margin: 20px;
+        background-color: white;
+      }
+
+      button {
+        background-color:  deepskyblue;
+        font-family: Arial;
+        font-size: 1em;
+      }
+      
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fafafa;
+        height: 280px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      .sub {
+        margin-left: 40px;
+      }
+      .subsub {
+        margin-left:80px;
+      }
+      .red {
+        color: red;
+      }
+      textarea {
+        white-space: pre-wrap;
+        padding: 10px;
+        border: 2px solid darkblue;
+        margin: 10px;
+        width: 90%;
+        height: 120px;
+      }
+      
+      .border {
+        border: 1px solid red;
+      }
+      .greenborder {
+     /*   border: 3px solid green;
+        border-radius: 5px;*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+    <h3 style='text-align: center'>MIPS</h3>
+      <h4 style="text-align: center">The following text has been copied into the clipboard and is ready to be pasted into your document:<br>
+      If you have edited the text, then use the "Copy Edited Text" button below.</h4>
+      <div style="width: 100%; display: flex; justify-content: center">
+      <button style="margin: auto; background-color: lightgray;" onclick="copyEditedText()">Copy Edited Text</button><br>
+      </div>
+            <div style="width: 100%; display: flex; justify-content: center">
+
+        <textarea id = "text"></textarea>
+      </div>
+   </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <button type="button" class="collapsible"># 65 - Appropriate Treatment for Patients with URI</button>
+    <div class="content" id = "div-uri1">
+      <input type = "radio" id = "uri1" name="uri" onclick = "greenborder('div-uri1'); uncheck(0); uncheck(1); copytext()"><label for ="uri1">The patient was diagnosed with Upper Respiratory Infection and was not prescribed or dispensed an antibiotic</label><br>
+      <input type = "radio" id = "uri2" name="uri" onclick = " uncheck(1); copytext()"><label for ="uri2">The patient has competing comorbid conditions within the last 12 months.  The comorbid condition was </label><br>
+      <div class="sub">
+        <input type="radio" id = "uri21" name = "uri2" onclick = "greenborder('div-uri1'); check('uri2'); copytext()"><label for = "uri21">neutropenia.</label><br>
+        <input type="radio" id = "uri22" name = "uri2" onclick = "greenborder('div-uri1'); check('uri2'); copytext()"><label for = "uri22">cystic fibrosis.</label><br>
+        <input type="radio" id = "uri23" name = "uri2" onclick = "greenborder('div-uri1'); check('uri2'); copytext()"><label for = "uri23">chronic bronchitis.</label><br>
+        <input type="radio" id = "uri24" name = "uri2" onclick = "greenborder('div-uri1'); check('uri2'); copytext()"><label for = "uri24">pulmonary edema.</label><br>
+        <input type="radio" id = "uri25" name = "uri2" onclick = "greenborder('div-uri1'); check('uri2'); copytext()"><label for = "uri25">respiratory failure.</label><br>
+        <input type="radio" id = "uri26" name = "uri2" onclick = "greenborder('div-uri1'); check('uri2'); copytext()"><label for = "uri26">rheumatoid lung disease.</label><br>
+        <input type="radio" id = "uri27" name = "uri2" onclick = "greenborder('div-uri1'); check('uri2'); copytext()"><label for = "uri27"><input type="text" id='blank01' onfocus = "check('uri27')" onkeyup="copytext()"/></label><br>
+      </div>
+      <input type = "radio" id = "uri3" name="uri" onclick = "greenborder('div-uri1');uncheck(0); uncheck(1); copytext()"><label for ="uri3">The patient is already on antibiotics or has taken them within the last 30 days</label><br>
+      <input type = "radio" id = "uri4" name="uri" onclick = " uncheck(0); copytext()"><label for ="uri4">The patient had a competing diagnosis of </label><br>
+      <div class="sub">
+        <input type = "radio" id = "uri41" name="uri41" onclick="greenborder('div-uri1'); check('uri4'); copytext()"><label for = 'uri41'>acute otitis media.</label><br>
+        <input type = "radio" id = "uri42" name="uri41" onclick="greenborder('div-uri1'); check('uri4'); copytext()"><label for = 'uri42'>chronic sinusitis.</label><br>
+        <input type = "radio" id = "uri43" name="uri41" onclick="greenborder('div-uri1'); check('uri4'); copytext()"><label for = 'uri43'>cellulitis.</label><br>
+        <input type = "radio" id = 'uri44' name="uri41" onclick="greenborder('div-uri1'); check('uri4'); copytext()"><label for = 'uri44'>UTI.</label><br>
+        <input type = "radio" id = 'uri45' name="uri41" onclick="greenborder('div-uri1'); check('uri4'); copytext()"><label for =  'uri45'><input type="text" id = "blank02" onfocus = "check('uri45')" onkeyup="copytext()"/></label><br>
+      </div>
+      <input type = "radio" id = "uri5" name="uri" onclick = "greenborder('div-uri1'); uncheck(0); uncheck(1); copytext()"><label for ="uri5" class='red'>The patient was diagnosed with an Upper Respiratory Infection and prescribed or dispensed an antibiotic</label><br>
+    </div><br><br>
+    
+    <button type="button" class="collapsible">#93 - Acute Otitis Externa (AOE): Systemic Antimicrobial Therapy</button>
+    <div class="content">
+    <input type = "radio" id = "om1" name="om" onclick = " uncheck(2); copytext()"><label for ="om1">The patient has Acute Otitis Externa and was not prescribed oral/systemic antibiotics today.</label><br>
+    <input type = "radio" id = "om2" name="om" onclick = "copytext()"><label for ="om2">The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics because </label><br>
+    <div class="sub">
+      <input type="radio" id = "om21" name = "om2" onclick = "check('om2'); copytext()"><label for = "om21">immunocompromised.</label><br>
+       <input type="radio" id = "om22" name = "om2" onclick = "check('om2'); copytext()"><label for = "om22">secondary infection.</label><br>
+      <input type="radio" id = "om23" name = "om2" onclick = "check('om2'); copytext()"><label for = "om23"><input type="text" id = "blank03" onfocus = "check('om23')" onkeyup="copytext()"/></label><br>
+      </div>
+      <input type = "radio" id = "om3" name="om" onclick = " uncheck(2); copytext()"><label for ="om3" class='red'>The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics today</label><br>
+</div><br><br>
+    
+    <button type="button" class="collapsible">#116 - Avoidance of Antibiotic Treatment of Acute Bronchitis/Bronchiolitis</button>
+    <div class="content">
+      <input type = "radio" id = "bronchitis1" name="bronchitis" onclick = " uncheck(3); copytext()"><label for ="bronchitis1">The patient has acute bronchitis/bronchiolitis and antibiotics were not prescribed or dispensed today</label><br>
+      <input type = "radio" id = "bronchitis2" name="bronchitis" onclick = "copytext()"><label for ="bronchitis2">The patient has acute bronchitis/bronchiolitis. Antibiotics were prescribed or dispensed because the patient meets one of the following:</label><br>
+      <div class="sub">
+        <input type = "checkbox" id = "bronchitis3" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis3">The patient has a medical condition for prescribing or dispensing an antibiotic.  That reason is</label><br>
+        <div class="subsub">
+          <input type = "checkbox" id = "bronchitis31" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis31">COPD.</label><br>
+          <input type = "checkbox" id = "bronchitis32" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis32">bacterial infection.</label><br>
+          <input type = "checkbox" id = "bronchitis33" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis33">acute sinusitis.</label><br>
+          <input type = "checkbox" id = "bronchitis34" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis34"><input type="text" id = "blank04" onfocus = "check('bronchitis34')" onkeyup="copytext()"/></label><br>      
+        </div>
+        <input type = "checkbox" id = "bronchitis4" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis4">The patient is currently on antibiotics or has been in the last 30 days</label><br>
+        <input type = "checkbox" id = "bronchitis5" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis5">The patient's visit resulted in an inpatient admission</label><br>
+      </div>
+      <input type = "radio" id = "bronchitis6" name="bronchitis" onclick = "uncheck(3); copytext()"><label for ="bronchitis6" class='red'>The patient has acute bronchitis/bronchiolitis and antibiotics were prescribed and dispensed today.</label><br>
+    </div><br><br>
+    
+    <button type="button" class="collapsible">#187 - Stroke and Stroke Rehabilitation: Thrombolytic Therapy</button>
+    <div class="content">
+    <input type = "radio" id = "cva1" name="cva" onclick = "uncheck(7); uncheck(8); uncheck(16); copytext()"><label for ="cva1">The patient, who arrived at the hospital within 3.5 hours of time last known well, was diagnosed with subacute or acute ischemic stroke.  IV t-PA WAS initiated with 4.5 hours of time last known well</label><br>
+    <input type = "radio" id = "cva2" name="cva" onclick = "copytext()"><label for ="cva2">The patient was diagnosed with subacute or acute ischemic stroke.  IV t-PA was NOT initiated within 4.5 hours of last known well due to </label>(select)<br>
+    <div class = "sub">
+      <input type = "checkbox" id = "cva3" name="cva" onclick = "check('cva2'); copytext()"><label for ="cva3">The patient arrived more than 3.5 hours after last known well time, or the time last known well is unknown</label><br>
+      <input type = "checkbox" id = "cva4" name="cva" onclick = " check('cva2'); copytext()"><label for ="cva4">The patient has a medical contra-indication or reason for not administering:</label><br>
+      <div class= "subsub">
+        <input type = "checkbox" id = "cva41" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva41">neurologist does not believe t-PA is appropriate</label><br>
+        <input type = "checkbox" id = "cva42" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva42">active internal bleeding</label><br>
+        <input type = "checkbox" id = "cva43" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva43">serious head trauma</label><br>
+        <input type = "checkbox" id = "cva44" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva44">acute current or history of intracranial hemorrhage</label><br>
+        <input type = "checkbox" id = "cva45" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva45">uncontrollable hypertension</label><br>
+        <input type = "checkbox" id = "cva46" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva46">seizure at onset of stroke</label><br>
+        <input type = "checkbox" id = "cva47" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva47">CVA in last 3 months</label><br>
+        <input type = "checkbox" id = "cva48" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva48">intracranial or intraspinal surgery in last 3 months</label><br>
+        <input type = "checkbox" id = "cva49" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva49">bleeding disorder</label><br>
+        <input type = "checkbox" id = "cva410" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva410">thrombocytopenia < 100,000</label><br>
+        <input type = "checkbox" id = "cva411" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva411">early radiographic ischemic changes on head CT</label><br>
+        <input type = "checkbox" id = "cva412" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva412">INR > 1.7</label><br>
+        <input type = "checkbox" id = "cva413" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva413">intracranial neoplasm, AVM, or aneurysm</label><br>
+        <input type = "checkbox" id = "cva414" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva414">patient in stroke trial</label><br>
+        <input type = "checkbox" id = "cva415" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva415">patient admitted for elective carotid intervention</label><br>
+
+      </div>
+      </div>
+      <input type = "radio" id = "cva5" name="cva" onclick = " uncheck(7); uncheck(8); uncheck(16); copytext()"><label for ="cva5" class='red'>The patient, who arrived at the hospital within 3.5 hours of time last known well, was diagnosed with subacute or acute ischemic stroke.  IV t-PA was not initiated with 4.5 hours of time last known well.</label><br>
+    </div><br><br>
+    
+    <button type="button" class="collapsible">#254 - Ultrasound for Patients with Abdominal Pain</button>
+    <div class="content">
+    <input type = "radio" id = "abdpain1" name="abd pain" onclick = "uncheck(17);copytext()"><label for ="abdpain1">The patient is pregnant and presents with abdominal pain or vaginal bleeding.  A trans-abdominal or trans-vaginal ultrasound was performed and the pregnancy location is documented</label><br>
+    <input type = "radio" id = "abdpain2" name="abd pain" onclick = "copytext()"><label for ="abdpain2">The patient is pregnant and presents with abdominal pain or vaginal bleeding.  A trans-abdominal or trans-vaginal ultrasound was not performed because</label><br>
+      <div class="sub">
+        <input type = "radio" id = "abdpain21" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain21">the patient has visited the ED multiple times in the last 72 hours</label><br>
+        <input type = "radio" id = "abdpain22" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain22">the patient has documented intrauterine pregnancy</label><br>
+        <input type = "radio" id = "abdpain23" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain23"><input type = "text" id = "blank05"  onfocus = "check('abdpain23')" onkeyup="copytext()"/></label><br>
+      </div>
+        
+    <input type = "radio" id = "abdpain3" name="abd pain" onclick = "uncheck(17);copytext()"><label for ="abdpain3" class='red'>The patient is pregnant and presents with abdominal pain or vaginal bleeding.  A trans-abdominal or trans-vaginal ultrasound was NOT performed, no reason documented.</label><br>
+    </div><br><br>
+    
+    <button type="button" class="collapsible">#331 & 332 - Antibiotic use with Sinusitis</button>
+    <div class="content">
+    <input type = "radio" id = "sinusitis1" name="sinusitis" onclick = " uncheck(18);uncheck(19);uncheck(20);uncheck(4); uncheck(5); uncheck(6); copytext()"><label for ="sinusitis1">The patient has sinusitis and antibiotics are not indicated/not prescribed at this time.</label><br>
+    <input type = "radio" id = "sinusitis2" name="sinusitis" onclick = "uncheck(19);uncheck(20); uncheck(5); uncheck(6); copytext()"><label for ="sinusitis2">The patient has sinusitis with symptom onset greater than 10 days ago and the patient was prescribed antibiotics.  </label><br>
+    <div class="sub"> 
+      <input type = "radio" id = "sinusitis3" name="sinusitis1" onclick = "uncheck(18); check('sinusitis2'); copytext()"><label for ="sinusitis3">The patient was prescribed an amoxicillin-based antibiotic.</label><br>
+      <input type = "radio" id = "sinusitis4" name="sinusitis1" onclick = " check('sinusitis2'); copytext()"><label for ="sinusitis4">The patient was prescribed a non amoxicillin-based antibiotic because of</label><br>
+      <div class="subsub">
+        <input type = "radio" id = "sinusitis41" name = "sinusitis41" onclick = "check('sinusitis4'); check('sinusitis2'); copytext()"><label for = 'sinusitis41'>allergy.</label><br>
+        <input type = "radio" id = "sinusitis42" name = "sinusitis41" onclick = "check('sinusitis4'); check('sinusitis2'); copytext()"><label for = 'sinusitis42'>intolerance.</label><br>
+        <input type = "radio" id = "sinusitis43" name = "sinusitis41" onclick = "check('sinusitis4'); check('sinusitis2'); copytext()"><label for = 'sinusitis43'>acute pharyngitis.</label><br>
+        <input type = "radio" id = "sinusitis44" name = "sinusitis41" onclick = "check('sinusitis4'); check('sinusitis2'); copytext()"><label for = 'sinusitis44'>cellulitis.</label><br>
+        <input type = "radio" id = "sinusitis45" name = "sinusitis41" onclick = "check('sinusitis4'); check('sinusitis2'); copytext()"><label for = 'sinusitis45'>UTI.</label><br>
+      </div>
+      <input type = "radio" id = "sinusitis5" name="sinusitis1" onclick = "uncheck(18);uncheck(21); check('sinusitis2'); copytext()"><label for ="sinusitis5" class='red'>The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
+    </div>
+    <input type = "radio" id = "sinusitis6" name="sinusitis" onclick = "uncheck(18);uncheck(20);uncheck(4); uncheck(6); copytext()"><label for ="sinusitis6">The patient has sinusitis and was prescribed antibiotics because </label>(select a statement from each box):<br>
+      <div class = "sub" style = "border: 1px solid black">
+        <input type = "radio" id = "sinusitis61" name = "sinusitis61" onclick = "check('sinusitis6'); copytext()"><label for = 'sinusitis61'>the patient's symptoms worsened after initial improvement.</label><br>
+        <input type = "radio" id = "sinusitis62" name = "sinusitis61" onclick = "check('sinusitis6'); copytext()"><label for = 'sinusitis62'>the patient has secondary infection.</label><br>
+        <input type = "radio" id = "sinusitis63" name = "sinusitis61" onclick = "check('sinusitis6'); copytext()"><label for = 'sinusitis63'>the patient is immunocompromised.</label><br>
+        
+      </div>
+      <br>
+     <div class= "sub" style = "border: 1px solid black">
+      <input type = "radio" id = "sinusitis7" name="sinusitis21" onclick = "uncheck(18);uncheck(19);uncheck(20);  check('sinusitis6'); copytext()"><label for ="sinusitis7">The patient was prescribed an amoxicillin-based antibiotic.</label><br>
+      <input type = "radio" id = "sinusitis8" name="sinusitis21" onclick = "uncheck(18);uncheck(20);  check('sinusitis6'); copytext()"><label for ="sinusitis8">The patient was prescribed a non amoxicillin-based antibiotic because</label><br>
+      <div class="subsub">
+        <input type = "radio" id = "sinusitis81" name = "sinusitis81" onclick = "check('sinusitis8'); check('sinusitis6'); copytext()"><label for = 'sinusitis81'>allergy.</label><br>
+        <input type = "radio" id = "sinusitis82" name = "sinusitis81" onclick = "check('sinusitis8'); check('sinusitis6'); copytext()"><label for = 'sinusitis82'>intolerance.</label><br>
+        <input type = "radio" id = "sinusitis83" name = "sinusitis81" onclick = "check('sinusitis8'); check('sinusitis6'); copytext()"><label for = 'sinusitis83'>acute pharyngitis.</label><br>
+        <input type = "radio" id = "sinusitis84" name = "sinusitis81" onclick = "check('sinusitis8'); check('sinusitis6'); copytext()"><label for = 'sinusitis84'>cellulitis.</label><br>
+        <input type = "radio" id = "sinusitis85" name = "sinusitis81" onclick = "check('sinusitis8'); check('sinusitis6'); copytext()"><label for = 'sinusitis85'>UTI.</label><br>
+      </div>
+      <input type = "radio" id = "sinusitis9" name="sinusitis21" onclick = "uncheck(18);uncheck(19);uncheck(20);  check('sinusitis6'); copytext()"><label for ="sinusitis9" class='red'>The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
+    </div>
+    <input type = "radio" id = "sinusitis10" name="sinusitis" onclick = " uncheck(4); uncheck(5); copytext()"><label for ="sinusitis10" class='red'>The patient has sinusitis with symptom onset less than or equal to 10 days ago and antibiotics WERE prescribed.</label><br>
+    <div class="sub">
+      <input type = "radio" id = "sinusitis11" name="sinusitis31" onclick = "uncheck(20); check('sinusitis10'); copytext()"><label for ="sinusitis11">The patient was prescribed an amoxicillin-based antibiotic.</label><br>
+      <input type = "radio" id = "sinusitis12" name="sinusitis31" onclick = "uncheck(18);uncheck(19);  check('sinusitis10'); copytext()"><label for ="sinusitis12">The patient was prescribed a non amoxicillin-based antibiotic because</label><br>
+      <div class = "subsub">
+        <input type = "radio" id = "sinusitis121" name = "sinusitis121" onclick = "check('sinusitis12'); check('sinusitis10'); copytext()"><label for = 'sinusitis121'>allergy.</label><br>
+        <input type = "radio" id = "sinusitis122" name = "sinusitis121" onclick = "check('sinusitis12'); check('sinusitis10'); copytext()"><label for = 'sinusitis122'>intolerance.</label><br>
+        <input type = "radio" id = "sinusitis123" name = "sinusitis121" onclick = "check('sinusitis12'); check('sinusitis10'); copytext()"><label for = 'sinusitis123'>acute pharyngitis.</label><br>
+        <input type = "radio" id = "sinusitis124" name = "sinusitis121" onclick = "check('sinusitis12'); check('sinusitis10'); copytext()"><label for = 'sinusitis124'>cellulitis.</label><br>
+        <input type = "radio" id = "sinusitis125" name = "sinusitis121" onclick = "check('sinusitis12'); check('sinusitis10'); copytext()"><label for = 'sinusitis125'>UTI.</label><br>
+      </div>
+      <input type = "radio" id = "sinusitis13" name="sinusitis31" onclick = "uncheck(18);uncheck(19);uncheck(20); check('sinusitis10'); copytext()"><label for ="sinusitis13" class='red'>The patient was prescribed a non amoxicillin-based antibiotic.</label><br>
+      </div>
+    </div><br><br>
+    
+    <button type="button" class="collapsible">#415 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Adult)</button>
+    <div class="content">
+    <input type = "radio" id = "adult1" name="ct adult" onclick = "uncheck(10); uncheck(22); uncheck(12); uncheck(13); copytext()"><label for ="adult1">The patient has one or more of the following conditions that are excluded from the measure: </label>(select all that apply)<br>
+      <div class = "sub">
+        <input type = "checkbox" id = "adult12" name="ct adult" onclick = " check('adult1'); copytext()"><label for ="adult12">The patient has ventricular shunt</label><br>
+        <input type = "checkbox" id = "adult13" name="ct adult" onclick = " check('adult1'); copytext()"><label for ="adult13">The patient has brain tumor</label><br>
+        <input type = "checkbox" id = "adult14" name="ct adult" onclick = " check('adult1'); copytext()"><label for ="adult14">The patient is pregnant</label><br>
+        <input type = "checkbox" id = "adult15" name="ct adult" onclick = " check('adult1'); copytext()"><label for ="adult15">The patient has multi-system trauma</label><br>
+        <input type = "checkbox" id = "adult16" name="ct adult" onclick = " check('adult1'); copytext()"><label for ="adult16">The patient taking an antiplatelet medication (excluding aspirin)</label><br>
+        <input type = "checkbox" id = "adult17" name="ct adult" onclick = " check('adult1'); copytext()"><label for ="adult17">Head CT not ordered by emergency care clinician</label><br>
+        <input type = "checkbox" id = "adult18" name="ct adult" onclick = " check('adult1'); copytext()"><label for ="adult18">Head CT ordered for reasons other than trauma</label><br>
+      </div>
+    <input type = "radio" id = "adult2" name="ct adult" onclick = "uncheck(9); uncheck(12); uncheck(13);copytext()"><label for ="adult2">The patient is 18 or older, presenting with minor blunt head trauma. Head CT (including cosigned orders) was ordered by an emergency care clinician for trauma because </label>(select one or more)<br>
+      Reasons:
+      <div class = "sub">
+      <input type = "checkbox" id = "adult21" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult21">The patient is 65 or older</label><br>
+      <input type = "checkbox" id = "adult22" name="ct adult" onclick = " check('adult2'); copytext()"><label for ="adult22">The patient's GCS < 15</label><br>
+      <input type = "checkbox" id = "adult23" name="ct adult" onclick = " check('adult2'); copytext()"><label for ="adult23">The patient has focal neurologic deficit</label><br>
+      <input type = "checkbox" id = "adult24" name="ct adult" onclick = " check('adult2'); copytext()"><label for ="adult24">The patient has severe headache</label><br>
+      <input type = "checkbox" id = "adult25" name="ct adult" onclick = " check('adult2'); copytext()"><label for ="adult25">The patient is vomiting</label><br>
+    <input type = "checkbox" id = "adult9" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult9">Severe/dangerous mechanism of injury was identified:</label> (select one or more)<br>
+      <div class = "subsub">
+      <input type = "checkbox" id = "adult91" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult91">MVA with: patient ejection, death of another passenger, rollover, speed > 40 mph, airbag deployment, driver or passenger on ATV or motorcycle</label><br>
+      <input type = "checkbox" id = "adult92" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult92">Pedestrian or bicyclist without helmet, struck by motorized vehicle, in bicycle crash</label><br>
+      <input type = "checkbox" id = "adult93" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult93">Fall > 3 feet or 5 stairs</label><br>
+      <input type = "checkbox" id = "adult94" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult94">Head struck by high-impact object (hammer, baseball, baseball bat, heavy object such as falling brick)</label><br>
+      <input type = "checkbox" id = "adult95" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult95"><input type="text" id = "blank10" onfocus = "check('adult95')" onkeyup="copytext()"/> (ie assault description)</label><br>
+      </div>
+      </div>
+    <input type = "radio" id = "adult3" name="ct adult" onclick = "uncheck(9); uncheck(10);uncheck(22); uncheck(12); uncheck(13);copytext()"><label for ="adult3">The patient has physical signs of basilar skull fracture present (including hemotympanum, "raccoon" eyes, CSF leakage from ear or nose, Battle's sign).</label><br>
+    <input type = "radio" id = "adult4" name="ct adult" onclick = "uncheck(9); uncheck(10);uncheck(22); uncheck(12); uncheck(13);copytext()"><label for ="adult4">The patient suspected of taking anticoagulant medication.</label><br>
+    <input type = "radio" id = "adult5" name="ct adult" onclick = "uncheck(9); uncheck(10);uncheck(22); uncheck(12); uncheck(13);copytext()"><label for ="adult5">The patient has thrombocytopenia.</label><br>
+    <input type = "radio" id = "adult6" name="ct adult" onclick = "uncheck(9); uncheck(10);uncheck(22); uncheck(12); uncheck(13);copytext()"><label for ="adult6">The patient has coagulopathy.</label><br>
+    <input type = "radio" id = "adult7" name="ct adult" onclick = "uncheck(9); uncheck(10);uncheck(22); uncheck(13);copytext()"><label for ="adult7">The patient has loss of consciousness AND </label>(must select one of the following)<br>
+      <div class = "sub">
+      <input type = "checkbox" id = "adult71" name="ct adult" onclick = " check('adult7'); copytext()"><label for ="adult71">headache</label><br>
+      <input type = "checkbox" id = "adult72" name="ct adult" onclick = " check('adult7'); copytext()"><label for ="adult72">short term memory deficit</label><br>
+      <input type = "checkbox" id = "adult73" name="ct adult" onclick = " check('adult7'); copytext()"><label for ="adult73">alcohol/drug intoxication</label><br>
+      <input type = "checkbox" id = "adult74" name="ct adult" onclick = " check('adult7'); copytext()"><label for ="adult74">evidence of trauma above the clavicles</label><br>
+      <input type = "checkbox" id = "adult75" name="ct adult" onclick = " check('adult7'); copytext()"><label for ="adult75">age 60 or older</label><br>
+      <input type = "checkbox" id = "adult76" name="ct adult" onclick = " check('adult7'); copytext()"><label for ="adult76">post-traumatic seizure</label><br>
+        </div>
+        
+    <input type = "radio" id = "adult8" name="ct adult" onclick = "uncheck(9); uncheck(10);uncheck(22); uncheck(12); uncheck(12);copytext()"><label for ="adult8">The patient has post-traumatic amnesia AND </label>: (must select one of the following)<br>
+     <div class = "sub">
+      <input type = "checkbox" id = "adult81" name="ct adult" onclick = " check('adult8'); copytext()"><label for ="adult81">Headache</label><br>
+      <input type = "checkbox" id = "adult82" name="ct adult" onclick = " check('adult8'); copytext()"><label for ="adult82">Short term memory deficit</label><br>
+      <input type = "checkbox" id = "adult83" name="ct adult" onclick = " check('adult8'); copytext()"><label for ="adult83">Alcohol/drug intoxication</label><br>
+      <input type = "checkbox" id = "adult84" name="ct adult" onclick = " check('adult8'); copytext()"><label for ="adult84">Evidence of trauma above the clavicles</label><br>
+      <input type = "checkbox" id = "adult85" name="ct adult" onclick = " check('adult8'); copytext()"><label for ="adult85">Age 60 or older</label><br>
+      <input type = "checkbox" id = "adult86" name="ct adult" onclick = " check('adult8'); copytext()"><label for ="adult86">Post-traumatic seizure</label><br>
+    </div>
+        
+    <input type = "radio" id = "adult10" name="ct adult" onclick = "uncheck(9); uncheck(10);uncheck(22); uncheck(12); uncheck(13);copytext()"><label for ="adult10" class='red'>If patient is 18 or older, presenting with minor blunt head trauma. Head CT (including cosigned orders) was ordered by an emergency care clinician for trauma, no indication specified.</label><br>
+    </div><br><br>
+    
+    <button type="button" class="collapsible">#146 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Pediatrics)</button>
+    <div class="content">
+    <input type = "radio" id = "ped1" name="ct ped" onclick = " uncheck(15); copytext()"><label for ="ped1">The patient is between 2-17 years, presenting with minor blunt head trauma. Head CT (including cosigned orders) was ordered by an emergency care clinican AND the one or more patient exclusions apply:</label><br>
+     <div class = "sub">
+       <input type = "checkbox" id = "ped11" name="ct ped" onclick = " check('ped1'); copytext()"><label for ="ped11">The patient has ventricular shunt</label><br>
+      <input type = "checkbox" id = "ped12" name="ct ped" onclick = " check('ped1'); copytext()"><label for ="ped12">The patient has brain tumor</label><br>
+      <input type = "checkbox" id = "ped13" name="ct ped" onclick = " check('ped1'); copytext()"><label for ="ped13">The patient is taking antiplatelet medication (excluding aspirin)</label><br>
+      <input type = "checkbox" id = "ped14" name="ct ped" onclick = " check('ped1'); copytext()"><label for ="ped14">Head CT not ordered by emergency care clinician</label><br>
+      <input type = "checkbox" id = "ped15" name="ct ped" onclick = " check('ped1'); copytext()"><label for ="ped15">Head CT ordered for reasons other than trauma</label><br>
+      </div>
+        <input type = "radio" id = "ped2" name="ct ped" onclick = " uncheck(14); copytext()"><label for ="ped2">The patient is between 2-17 years, presenting with minor blunt head trauma. Head CT (including cosigned orders) was ordered by an emergency care clinician for trauma AND: </label><br>
+      <div class = "sub">
+        <input type = "radio" id = "ped21" name="ct ped2" onclick = " check('ped2'); copytext()"><label for ="ped21">The patient IS NOT classified as low risk according to PECARN prediction rule</label><br>
+        <input type = "radio" id = "ped22" name="ct ped2" onclick = " check('ped2'); copytext()"><label for ="ped22" class='red'>The patient IS classified as low risk according to PECARN prediction rule</label><br>
+        <input type = "radio" id = "ped23" name="ct ped2" onclick = " check('ped2'); copytext()"><label for ="ped23" class='red'>The patient was not assessed using the PECARN prediction rule</label><br>
+      </div>
+      </div><br><br>
+      <div style="text-align: center">&copy Steve Scott, 2022</div>
+      
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }    
+      </script>
+      <script>
+        function greenborder(id) {
+          document.getElementById(id).classList.add('greenborder');
+        }
+        
+        function uncheck(i) {
+          var list = [];
+          list.push(['uri21','uri22','uri23','uri24','uri25','uri26','uri27']);  //0
+          list.push(['uri41','uri42','uri43','uri44','uri45']);  //1
+          list.push(['om21','om22','om23']); //2
+          list.push(['bronchitis3','bronchitis4','bronchitis5','bronchitis31','bronchitis32','bronchitis33','bronchitis34']);//3
+          list.push(['sinusitis3','sinusitis4','sinusitis5']); //4
+          list.push(['sinusitis7','sinusitis8','sinusitis9']); //5
+          list.push(['sinusitis11','sinusitis12','sinusitis13']); //6
+          list.push(['cva3','cva4']); //7
+          list.push(["cva41","cva42","cva43","cva44","cva45","cva46","cva47","cva48","cva49"]); //8
+          list.push(['adult12','adult13','adult14','adult15','adult16','adult17','adult18']); //9
+          list.push(['adult21','adult22','adult23','adult24','adult25','adult9']); //10
+          list.push(['adult91','adult92','adult93','adult94','adult95']); //11
+          list.push(['adult71','adult72','adult73','adult74','adult75','adult76']); //12
+          list.push(['adult81','adult82','adult83','adult84','adult85','adult86']); //13
+          list.push(['ped11','ped12','ped13','ped14','ped15']); //14
+          list.push(['ped21','ped22','ped23']); //15
+	  list.push(["cva410","cva411","cva412","cva413","cva414","cva415"]); //16
+	  list.push(['abdpain21','abdpain22','abdpain23']);//17
+	  list.push(['sinusitis41','sinusitis42','sinusitis43','sinusitis44','sinusitis45']);//18
+	  list.push(['sinusitis81','sinusitis82','sinusitis83','sinusitis84','sinusitis85','sinusitis61','sinusitis62','sinusitis63']);//19
+	  list.push(['sinusitis121','sinusitis122','sinusitis123','sinusitis124','sinusitis125']);//20
+	  list.push(['sinusitis61','sinusitis62','sinusitis63']); //21
+	  list.push(['adult91','adult92','adult93','adult94','adult95']); //22
+
+
+          for (let j of list[i]) {
+	    console.log(j);
+            document.getElementById(j).checked = false;
+          }
+        }
+        
+        function check(id) {
+          document.getElementById(id).click();
+          document.getElementById(id).checked = true;
+        }
+        
+        function copytext(){
+          var uri = getRadioButtonLabel('uri');
+          var om = getRadioButtonLabel('om');
+          var bronchitis = getRadioButtonLabel('bronchitis');
+          var sinusitis = getRadioButtonLabel("sinusitis");
+          var abdpain = getRadioButtonLabel("abd pain");
+          var ctadult = getRadioButtonLabel("ct adult");
+          var ctped = getRadioButtonLabel("ct ped");
+          var cva = getRadioButtonLabel("cva");
+          
+          var t = "";
+          if (uri != -1) {
+            t = t + "MIPS# 65 - Appropriate Treatment for Patients with URI\n"
+            t = t + uri;
+            if (isChecked('uri2')) {
+              t = t + " "+getRadioButtonLabel('uri2');
+            }
+            if (isChecked('uri4')) {
+              t = t + " "+getRadioButtonLabel('uri41');
+            }
+            t = t + '\n\n';
+          }
+          
+          if (om != -1) {
+            t = t + "MIPS #93 - Acute Otitis Externa (AOE): Systemic Antimicrobial Therapy\n";
+            t = t + om;
+            if (isChecked('om2')) {
+              t = t +' '+ getRadioButtonLabel('om2');
+            }
+            t = t +'\n\n';
+          }
+          
+          if (bronchitis != -1){
+            t = t + "MIPS #116 - Avoidance of Antibiotic Treatment of Acute Bronchitis/Bronchiolitis\n";
+            t = t + bronchitis;
+            if (isChecked('bronchitis2')) {
+              t = t + getReasons(['bronchitis3','bronchitis4','bronchitis5']);
+              if (isChecked('bronchitis3')) {
+                t = t + getReasons(['bronchitis31','bronchitis32','bronchitis33','bronchitis34']);
+              }
+            }
+            t =t + "\n\n";
+          }
+          if (sinusitis != -1) {
+            t = t + "MIPS #331 & 332 - Antibiotic use with Sinusitis\n";
+            t = t + sinusitis;
+            if (isChecked('sinusitis2')){
+              t= t +" "+ getRadioButtonLabel('sinusitis1');
+            }
+            if  (isChecked('sinusitis6')){
+              t = t + " " + getRadioButtonLabel('sinusitis61');
+              t = t +" "+ getRadioButtonLabel('sinusitis21');
+            }
+            if (isChecked('sinusitis10')) {
+              t = t +" " + getRadioButtonLabel('sinusitis31');
+            }
+            t = t + "\n\n";
+          }
+          
+          if (abdpain != -1) {
+            t = t + "MIPS #254 - Ultrasound for Patients with Abdominal Pain\n";
+            t = t + abdpain+'\n\n';
+          }
+          
+          if (ctadult != -1) {
+            t = t + "MIPS #415 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Adult)\n";
+            t = t + ctadult;
+            if (isChecked('adult1')) {
+              t = t + getReasons(['adult12','adult13','adult14','adult15','adult16','adult17','adult18']);
+            }
+            if (isChecked('adult2')) {
+              t = t + getReasons(['adult21','adult22','adult23','adult24','adult25']);
+            }
+            if (isChecked('adult7')) {
+              t = t + getReasons(['adult71','adult72','adult73','adult74','adult75','adult76']);
+            }
+            if (isChecked('adult8')) {
+              t = t + getReasons(['adult81','adult82','adult83','adult84','adult85','adult86']);
+            }
+            if (isChecked('adult9')) {
+              t = t + getReasons(['adult91','adult92','adult93','adult94','adult95']);
+            }
+            t = t + "\n\n";
+          }
+          if (ctped != -1) {
+            t = t + "MIPS #146 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Pediatrics)\n";
+            t = t + ctped;
+            if (isChecked('ped1')) {
+              t = t + getReasons(['ped11','ped12','ped13','ped14','ped15']);
+            }
+            if (isChecked('ped2')) {
+              t = t + ' '+ getRadioButtonLabel('ct ped2');
+            }
+            t = t + '\n\n';
+          }
+          if (cva != -1 ) {
+            t = t + "MIPS #187 - Stroke and Stroke Rehabilitation: Thrombolytic Therapy\n";
+            t = t + cva+'\n\n';
+            if (isChecked('cva2')) {
+              t = t + getReasons(['cva3','cva4','cva5']);
+            }
+            t = t + "\n\n";
+          }
+          
+          navigator.clipboard.writeText(t);
+          document.getElementById("text").value = t;
+        }
+        
+        function copyEditedText() {
+          navigator.clipboard.writeText(document.getElementById('text').value);
+        }
+        
+        function getReasons(list){
+          var list = [];
+          var t = " ";
+          for (let i = 0; i< list.length; i++) {
+            if (document.getElementById(list[i]).checked) {
+               var y = ele[i].labels[0].innerHTML;
+                if (y.includes('input')) {
+                  var j = y.search('id')+4;
+                  var z = y.substr(j,7);
+                  console.log(z)
+                  var x = document.getElementById(z).value;
+                  list.push(document.getElementById(z).value);
+                }
+              list.push(document.getElementById(list[i]).labels[0].innerText);
+            }
+          }
+          if (list.length>1) {
+            for (let i = 0; i < list.length-1; i++) {
+              t = t + list[i] + ", ";
+            }
+            t = t + "and ";
+          }
+          t = t + list[list.length-1];
+          return(t);
+        }
+                        
+        
+        function isChecked(name){
+          return(document.getElementById(name).checked);
+        }
+        
+        function getRadioButtonLabel(name){
+          var ele = document.getElementsByName(name);
+          for (let i = 0; i < ele.length; i++){
+            if (ele[i].checked){
+console.log(ele[i]);
+              if (true){
+                var y = ele[i].labels[0].innerHTML;
+                if (y.includes('input')) {
+                  var j = y.search('id')+4;
+                  var z = y.substr(j,7);
+                  console.log(z)
+                  var x = document.getElementById(z).value;
+                  console.log(document.getElementById(z));
+                  console.log(x);
+                  return(document.getElementById(z).value);
+                }
+              }
+              return(ele[i].labels[0].innerText);
+            }
+          }
+          return(-1);
+        }
+      </script>
+      </body>
+      </html>
+    
