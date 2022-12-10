@@ -480,9 +480,9 @@ clear button
           for (let i = 0; i < ele.length; i++){
             if (ele[i].checked){
               var y = ele[i].labels[0].innerText;
-              if (y.contains('input')) {
+              if (y.includes('input')) {
                 var j = y.search('id')+5;
-                var z = y.substr(j,5);
+                var z = y.substr(j,7);
                 console.log(z);
                 console.log(document.getElementById(z).value);
               }
