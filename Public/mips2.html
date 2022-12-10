@@ -99,7 +99,7 @@ clear button
         <input type="radio" id = "uri24" name = "uri2" onclick = " check('uri2'); copytext()"><label for = "uri24">pulmonary edema.</label><br>
         <input type="radio" id = "uri25" name = "uri2" onclick = " check('uri2'); copytext()"><label for = "uri25">respiratory failure.</label><br>
         <input type="radio" id = "uri26" name = "uri2" onclick = " check('uri2'); copytext()"><label for = "uri26">rheumatoid lung disease.</label><br>
-        <input type="radio" id = "uri27" name = "uri2" onclick = " check('uri2'); copytext()"><label for = "uri27"><input type="text" id='uri27t'/></label><br>
+        <input type="radio" id = "uri27" name = "uri2" onclick = " check('uri2'); copytext()"><label for = "uri27"><input type="text" id='blank01'/></label><br>
       </div>
       <input type = "radio" id = "uri3" name="uri" onclick = "uncheck(0); uncheck(1); copytext()"><label for ="uri3">The patient is already on antibiotics or has taken them within the last 30 days</label><br>
       <input type = "radio" id = "uri4" name="uri" onclick = " uncheck(0); copytext()"><label for ="uri4">The patient had a competing diagnosis of </label><br>
@@ -108,7 +108,7 @@ clear button
         <input type = "radio" id = "uri42" name="uri41" onclick=" check('uri4'); copytext()"><label for = 'uri42'>chronic sinusitis.</label><br>
         <input type = "radio" id = "uri43" name="uri41" onclick=" check('uri4'); copytext()"><label for = 'uri43'>cellulitis.</label><br>
         <input type = "radio" id = 'uri44' name="uri41" onclick=" check('uri4'); copytext()"><label for = 'uri44'>UTI.</label><br>
-        <input type = "radio" id = 'uri45' name="uri41" onclick=" check('uri4'); copytext()"<label for =  'uri45'><input type="text" id = "uri45t"/></label><br>
+        <input type = "radio" id = 'uri45' name="uri41" onclick=" check('uri4'); copytext()"<label for =  'uri45'><input type="text" id = "blank02"/></label><br>
       </div>
       <input type = "radio" id = "uri5" name="uri" onclick = " uncheck(0); uncheck(1); copytext()"><label for ="uri5" class='red'>The patient was diagnosed with an Upper Respiratory Infection and prescribed or dispensed an antibiotic</label><br>
     </div><br><br>
@@ -120,7 +120,7 @@ clear button
     <div class="sub">
       <input type="radio" id = "om21" name = "om2" onclick = "check('om2'); copytext()"><label for = "om21">immunocompromised.</label><br>
        <input type="radio" id = "om22" name = "om2" onclick = "check('om2'); copytext()"><label for = "om22">secondary infection.</label><br>
-      <input type="radio" id = "om23" name = "om2" onclick = "check('om2'); copytext()"><label for = "om23"><input type="text" id = "om23t"/></label><br>
+      <input type="radio" id = "om23" name = "om2" onclick = "check('om2'); copytext()"><label for = "om23"><input type="text" id = "blank03"/></label><br>
       </div>
       <input type = "radio" id = "om3" name="om" onclick = " uncheck(2); copytext()"><label for ="om3" class='red'>The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics today</label><br>
 </div><br><br>
@@ -130,12 +130,12 @@ clear button
       <input type = "radio" id = "bronchitis1" name="bronchitis" onclick = " uncheck(3); copytext()"><label for ="bronchitis1">The patient has acute bronchitis/bronchiolitis and antibiotics were not prescribed or dispensed today</label><br>
       <input type = "radio" id = "bronchitis2" name="bronchitis" onclick = "copytext()"><label for ="bronchitis2">The patient has acute bronchitis/bronchiolitis. Antibiotics were prescribed or dispensed because the patient meets one of the following:</label><br>
       <div class="sub">
-        <input type = "checkbox" id = "bronchitis3" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis3">The patient has a medical condition for prescribing or dispensing an antibiotic.  That reason is________ (ex. COPD, bacterial infection, acute sinusitis, etc)</label><br>
+        <input type = "checkbox" id = "bronchitis3" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis3">The patient has a medical condition for prescribing or dispensing an antibiotic.  That reason is</label><br>
         <div class="subsub">
           <input type = "checkbox" id = "bronchitis31" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis31">COPD.</label><br>
           <input type = "checkbox" id = "bronchitis32" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis32">bacterial infection.</label><br>
           <input type = "checkbox" id = "bronchitis33" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis33">acute sinusitis.</label><br>
-          <input type = "checkbox" id = "bronchitis34" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis34"><input type="text" id = "bronchitis34t"/></label><br>      
+          <input type = "checkbox" id = "bronchitis34" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis34"><input type="text" id = "blank04"/></label><br>      
         </div>
         <input type = "checkbox" id = "bronchitis4" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis4">The patient is currently on antibiotics or has been in the last 30 days</label><br>
         <input type = "checkbox" id = "bronchitis5" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis5">The patient's visit resulted in an inpatient admission</label><br>
@@ -149,7 +149,7 @@ clear button
     <input type = "radio" id = "cva2" name="cva" onclick = "copytext()"><label for ="cva2">The patient was diagnosed with subacute or acute ischemic stroke.  IV t-PA was NOT initiated within 4.5 hours of last known well due to </label>(select)<br>
     <div class = "sub">
       <input type = "checkbox" id = "cva3" name="cva" onclick = " uncheck(8); check('cva2'); copytext()"><label for ="cva3">The patient arrived more than 3.5 hours after last known well time, or the time last known well is unknown</label><br>
-      <input type = "checkbox" id = "cva4" name="cva" onclick = " check('cva2'); copytext()"><label for ="cva4">The patient has a medical contra-indication or reason for not administering____________________ (ex neurologist does not believe t-PA is appropriate, active internal bleeding, serious head trauma, acute current or history of intracranial hemorrhage, uncontrollable hypertension, seizure at onset of stroke, CVA in last 3 months, Intracranial or intraspinal surgery in last 3 months, bleeding disorder, thrombocytopenia < 100,000, early radiographic ischemic changes on head CT, INR > 1.7, intracranial neoplasm, AVM, or aneurysm, patient in stroke trial, patient admitted for elective carotid intervention)</label><br>
+      <input type = "checkbox" id = "cva4" name="cva" onclick = " check('cva2'); copytext()"><label for ="cva4">The patient has a medical contra-indication or reason for not administering:</label><br>
       <div class= "subsub">
         <input type = "checkbox" id = "cva41" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva41">neurologist does not believe t-PA is appropriate</label><br>
         <input type = "checkbox" id = "cva42" name="cva1" onclick = " check('cva4'); copytext()"><label for ="cva42">active internal bleeding</label><br>
@@ -249,7 +249,7 @@ clear button
       <input type = "checkbox" id = "adult92" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult92">Pedestrian or bicyclist without helmet, struck by motorized vehicle, in bicycle crash</label><br>
       <input type = "checkbox" id = "adult93" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult93">Fall > 3 feet or 5 stairs</label><br>
       <input type = "checkbox" id = "adult94" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult94">Head struck by high-impact object (hammer, baseball, baseball bat, heavy object such as falling brick)</label><br>
-      <input type = "checkbox" id = "adult95" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult95"><input type="text" id = "adult95t"/> (ie assault description)</label><br>
+      <input type = "checkbox" id = "adult95" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult95"><input type="text" id = "blank10"/> (ie assault description)</label><br>
       </div>
       </div>
     <input type = "radio" id = "adult3" name="ct adult" onclick = "copytext()"><label for ="adult3">The patient has physical signs of basilar skull fracture present (including hemotympanum, "raccoon" eyes, CSF leakage from ear or nose, Battle's sign).</label><br>
