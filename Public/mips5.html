@@ -139,16 +139,15 @@ clear button
       <input type = "radio" id = "bronchitis1" name="bronchitis" onclick = " uncheck(3); copytext()"><label for ="bronchitis1">The patient has acute bronchitis/bronchiolitis and antibiotics were not prescribed or dispensed today</label><br>
       <input type = "radio" id = "bronchitis2" name="bronchitis" onclick = "copytext()"><label for ="bronchitis2">The patient has acute bronchitis/bronchiolitis. Antibiotics were prescribed or dispensed because the patient meets one of the following:</label><br>
       <div class="sub">
+        <input type = "checkbox" id = "bronchitis4" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis4">The patient is currently on antibiotics or has been in the last 30 days</label><br>
+        <input type = "checkbox" id = "bronchitis5" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis5">The patient's visit resulted in an inpatient admission</label><br>
         <input type = "checkbox" id = "bronchitis3" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis3">The patient has a medical condition for prescribing or dispensing an antibiotic.  That reason is</label><br>
         <div class="subsub">
           <input type = "checkbox" id = "bronchitis31" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis31">COPD.</label><br>
           <input type = "checkbox" id = "bronchitis32" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis32">bacterial infection.</label><br>
           <input type = "checkbox" id = "bronchitis33" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis33">acute sinusitis.</label><br>
           <input type = "checkbox" id = "bronchitis34" name = "bronchitis31" onclick = "check('bronchitis3'); check('bronchitis2');copytext()"><label for = "bronchitis34"><input type="text" id = "blank04" onfocus = "check('bronchitis34')" onkeyup="copytext()"/></label><br>      
-        </div>
-        <input type = "checkbox" id = "bronchitis4" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis4">The patient is currently on antibiotics or has been in the last 30 days</label><br>
-        <input type = "checkbox" id = "bronchitis5" name="bronchitis" onclick = " check('bronchitis2'); copytext()"><label for ="bronchitis5">The patient's visit resulted in an inpatient admission</label><br>
-      </div>
+        </div>      </div>
       <input type = "radio" id = "bronchitis6" name="bronchitis" onclick = "uncheck(3); copytext()"><label for ="bronchitis6" class='red'>The patient has acute bronchitis/bronchiolitis and antibiotics were prescribed and dispensed today.</label><br>
     </div><br><br>
     
