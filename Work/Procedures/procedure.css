@@ -41,6 +41,7 @@ meetsStandard2::after {
   checkboxes work
   has reference (if applicable)
   has equipment list (if applicable)
+  return('___________') instead of return(-1)
   */
 }
 
