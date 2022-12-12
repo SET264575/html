@@ -463,6 +463,7 @@
               var phrases = {};
               var list = ['adult12','adult22','adult23','adult24','adult25','adult9','adult3','adult4','adult5','adult6','adult7','adult8'];
               for (j in list) {
+		      console.log(j);
                 if (document.getElementById(j).checked) {
                   phrases[j] = document.getElementById(j).labels[0].innerHTML;
                 }
