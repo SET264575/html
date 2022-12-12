@@ -9,7 +9,9 @@
     <h3>
     Priapism management
     </h3>
-
+    <a href = "https://coreem.net/core/priapism/">Link to description of procedure technique</a><br>
+    <a href = "..\Equipment\priapism.html">Equipment list</a><br>
+    
     <h4>Position</h4>
     <input type = "radio" name = "position" value = "left" id = "left" onchange = "copytext()">
     <label for = "left">2 o'clock (left)</label><br>
@@ -37,7 +39,7 @@
       <option value = "500">500 mcg</option>
     </select><br><br>
     
-    <input type = "checkbox" name = "multiple">
+    <input type = "checkbox" id = "multiple">
     <label for = "multiple">Multiple injections were required</label><br><br>
     <div class="textarea">
       <textarea id = "text"></textarea><br>
@@ -67,7 +69,7 @@
         var multiple = document.getElementById("multiple").checked;
         var dose = document.getElementById("dose").value
         var t = "Procedure Note: Priapism Management \n";
-        
+        t = t + "The procedure was indicated for prolonged erection greater than 4 hours. ";
         t = t + "The risks, benefits and alternatives were discussed with the patient who provided verbal consent. ";
         t = t + "The patient was placed on a cardiac monitor and frequent blood pressure checks were performed.  ";
         t = t + "The skin was prepped in the typical sterile fashion.  ";
@@ -110,7 +112,7 @@
             return(ele[i].value);
           }
         }
-        return(-1);
+        return('____________');
       }
     </script>
   </body>
