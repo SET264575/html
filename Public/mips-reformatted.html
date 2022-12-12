@@ -267,11 +267,11 @@
 	      <input type = "checkbox" id = "adult95" name="ct adult" onclick = " check('adult9'); copytext()"><label for ="adult95"><input type="text" id = "blank10" onfocus = "check('adult95')" onkeyup="copytext()"/> (ie assault description)</label><br>
 	      </div>
 
-	    <input type = "checkbox" id = "adult3" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult3">The patient has physical signs of basilar skull fracture present (including hemotympanum, "raccoon" eyes, CSF leakage from ear or nose, Battle's sign).</label><br>
-	    <input type = "checkbox" id = "adult4" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult4">The patient suspected of taking anticoagulant medication.</label><br>
-	    <input type = "checkbox" id = "adult5" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult5">The patient has thrombocytopenia.</label><br>
-	    <input type = "checkbox" id = "adult6" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult6">The patient has coagulopathy.</label><br>
-	    <input type = "checkbox" id = "adult7" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult7">The patient has loss of consciousness AND </label>(must select one of the following)<br>
+	    <input type = "checkbox" id = "adult3" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult3">the patient has physical signs of basilar skull fracture present (including hemotympanum, "raccoon" eyes, CSF leakage from ear or nose, Battle's sign).</label><br>
+	    <input type = "checkbox" id = "adult4" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult4">the patient suspected of taking anticoagulant medication.</label><br>
+	    <input type = "checkbox" id = "adult5" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult5">the patient has thrombocytopenia.</label><br>
+	    <input type = "checkbox" id = "adult6" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult6">the patient has coagulopathy.</label><br>
+	    <input type = "checkbox" id = "adult7" name="ct adult" onclick = "check('adult2'); copytext()"><label for ="adult7">the patient has loss of consciousness AND </label>(must select one of the following)<br>
 	      <div class = "sub">
 	      <input type = "checkbox" id = "adult71" name="ct adult" onclick = " check('adult7'); copytext()"><label for ="adult71">headache</label><br>
 	      <input type = "checkbox" id = "adult72" name="ct adult" onclick = " check('adult7'); copytext()"><label for ="adult72">short term memory deficit</label><br>
@@ -281,7 +281,7 @@
 	      <input type = "checkbox" id = "adult76" name="ct adult" onclick = " check('adult7'); copytext()"><label for ="adult76">post-traumatic seizure</label><br>
 		</div>
 
-	    <input type = "checkbox" id = "adult8" name="ct adult" onclick = "check('adult2');copytext()"><label for ="adult8">The patient has post-traumatic amnesia AND </label>: (must select one of the following)<br>
+	    <input type = "checkbox" id = "adult8" name="ct adult" onclick = "check('adult2');copytext()"><label for ="adult8">the patient has post-traumatic amnesia AND </label>: (must select one of the following)<br>
 	     <div class = "sub">
 	      <input type = "checkbox" id = "adult81" name="ct adult" onclick = " check('adult8'); copytext()"><label for ="adult81">headache</label><br>
 	      <input type = "checkbox" id = "adult82" name="ct adult" onclick = " check('adult8'); copytext()"><label for ="adult82">short term memory deficit</label><br>
@@ -471,9 +471,11 @@
               if (isChecked('adult9')) {
                 t = t + getReasons(['adult91','adult92','adult93','adult94','adult95']);*/
               var phrases = {};
-              var list = ['adult12','adult22','adult23','adult24','adult25','adult9','adult3','adult4','adult5','adult7','adult8'];
+              var list = ['adult12','adult22','adult23','adult24','adult25','adult9','adult3','adult4','adult5','adult6','adult7','adult8'];
               for (j in list) {
-                phrases[j] = document.getElementById(j).labels[0].innerHTML;
+		if (document.getElementById(j).checked) {
+                	phrases[j] = document.getElementById(j).labels[0].innerHTML;
+		}
               }
               console.log(phrases);
             if (isChecked('adult7')) {
@@ -485,9 +487,11 @@
             if (isChecked('adult9')) {
               phrases['adult9']  = phrases['adult9'] + getReasons(['adult91','adult92','adult93','adult94','adult95']);
             }
-            for (j in list) {
-              t = t + phrases[j] + ", ";
+            var phraseskeys = Object.keys(phrases);
+            for (let j = 0; j < phraseskeys.length-1; j++) {
+              t = t + phrases[phraseskeys[j]] + ", ";
 	          }
+	    t = t + phrases[phraseskeys[phraseskeys.length-1]]+"."
             t = t + "\n\n";
           }
           if (ctped != '__________') {
