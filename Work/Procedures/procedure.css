@@ -32,7 +32,7 @@ body {
 }
 
 meetsStandard2::after {
-  content: 'This webpage conforms to the standard as of 12/12/99';
+  content: 'This webpage conforms to the standard as of 12/11/22';
   /*
   displays when not all require fields are completed
   includes indication
