@@ -34,7 +34,6 @@ body {
 meetsStandard2::after {
   content: 'This webpage conforms to the standard as of 12/11/22';
   /*
-  displays when not all require fields are completed
   includes indication
   includes consent
   identified problems fixed
@@ -42,6 +41,14 @@ meetsStandard2::after {
   has reference (if applicable)
   has equipment list (if applicable)
   return('___________') instead of return(-1)
+  */
+}
+
+meetsStandard3::after {
+  content: "This webpage conforms to the standard as of 12/31/99";
+  /*
+  displays when not all required fields are completed
+  
   */
 }
 
