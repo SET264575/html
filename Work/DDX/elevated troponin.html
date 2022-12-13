@@ -1,94 +1,97 @@
 <html>
-<head>
-<link rel = 'stylesheet' href = 'style.css'>
-</head>
+	<head>
+		<title>elevated troponi</title>
+		<link rel = 'stylesheet' href = 'style.css'>
+	</head>
 	<body>
+		<button onclick = 'showAll()'>Show All</button>
 		<ul id = 'myUL'>
-<li><span class = 'caret'>elevated troponin</span>
-	<ul class = 'nested'>
-<li><span class = 'caret'>ACS related</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspAcute MI (STEMI & NSTEMI)</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspPost-PCI</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspOpen heart surgery</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspAny cardiac surgery</li>
-</ul>
-<li><span class = 'caret'>Other primary cardiac disease</span>
-	<ul class = 'nested'>
-<li><span class = 'caret'>Tachycardia</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspSVT</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspV-Tach</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspA-Fib with RVR</li>
-</ul>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspAtrial Fibrillation</li>
-<li><span class = 'caret'>Inflammation</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspPericarditis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspMyocarditis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspEndocarditis</li>
-</ul>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHigh-frequency ablation</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspCardioversion</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspDefibrillator shocks</li>
-<li><span class = 'caret'>Cardiac infiltrative disorders</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspAmyloidosis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspSarcoidosis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHemochromatosis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspScleroderma</li>
-</ul>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspLeft ventricular hypertrophy</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHeart transplant</li>
-<li><span class = 'caret'>Trauma</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspCardiac contusion after blunt chest wall trauma</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspDirect myocardial trauma</li>
-</ul>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspAcute Heart Failure</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspChronic Heart Failure</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspApical ballooning syndrome</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspStrenuous exercise</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspCardiotoxic chemotherapy</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspKawasaki disease</li>
-</ul>
-<li><span class = 'caret'>Other</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspMassive or submassive Pulmonary Embolism</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspSepsis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHypotension</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspCritical illness (Medical ICU patients)</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspViral illness</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHypertension</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspThrombotic thrombocytopenic purpura</li>
-<li><span class = 'caret'>CVA</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHemorrhagic stroke</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspIschemic stroke</li>
-</ul>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHead trauma</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspChronic kidney disease</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspAcute Aortic dissection	</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHypersensitivity drug reactions</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspARDS</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspCOPD exacerbation</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspSevere GI bleeding</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspRhabdomyolysis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspSevere skin burns</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspNeurofibromatosis</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspDuchenne muscular dystrophy</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspKlippel-Feil syndrome</li>
-<li><span class = 'caret'>Toxin exposure</span>
-	<ul class = 'nested'>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspCarbon monoxide</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHydrogen sulfide</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspEnvenomation</li>
-</ul>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspDiabetes</li>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspHypothyroidism</li>
-</ul>
-<li>&nbsp&nbsp&nbsp&nbsp&nbspFalse-positive troponin elevation</li>
-</ul>
-<script src = 'tree.js'></script>
+		<li><span class = 'caret'>elevated troponin</span>
+		<ul class = 'nested'>
+		<li><span class = 'caret'>ACS related</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAcute MI (STEMI & NSTEMI)</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspPost-PCI</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspOpen heart surgery</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAny cardiac surgery</li>
+		</ul>
+		<li><span class = 'caret'>Other primary cardiac disease</span>
+		<ul class = 'nested'>
+		<li><span class = 'caret'>Tachycardia</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSVT</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspV-Tach</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspA-Fib with RVR</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAtrial Fibrillation</li>
+		<li><span class = 'caret'>Inflammation</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspPericarditis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMyocarditis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspEndocarditis</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHigh-frequency ablation</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCardioversion</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspDefibrillator shocks</li>
+		<li><span class = 'caret'>Cardiac infiltrative disorders</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAmyloidosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSarcoidosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHemochromatosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspScleroderma</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspLeft ventricular hypertrophy</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHeart transplant</li>
+		<li><span class = 'caret'>Trauma</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCardiac contusion after blunt chest wall trauma</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspDirect myocardial trauma</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAcute Heart Failure</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspChronic Heart Failure</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspApical ballooning syndrome</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspStrenuous exercise</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCardiotoxic chemotherapy</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspKawasaki disease</li>
+		</ul>
+		<li><span class = 'caret'>Other</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspMassive or submassive Pulmonary Embolism</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSepsis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHypotension</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCritical illness (Medical ICU patients)</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspViral illness</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHypertension</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspThrombotic thrombocytopenic purpura</li>
+		<li><span class = 'caret'>CVA</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHemorrhagic stroke</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspIschemic stroke</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHead trauma</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspChronic kidney disease</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspAcute Aortic dissection	</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHypersensitivity drug reactions</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspARDS</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCOPD exacerbation</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSevere GI bleeding</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspRhabdomyolysis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspSevere skin burns</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspNeurofibromatosis</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspDuchenne muscular dystrophy</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspKlippel-Feil syndrome</li>
+		<li><span class = 'caret'>Toxin exposure</span>
+		<ul class = 'nested'>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspCarbon monoxide</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHydrogen sulfide</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspEnvenomation</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspDiabetes</li>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspHypothyroidism</li>
+		</ul>
+		<li>&nbsp&nbsp&nbsp&nbsp&nbspFalse-positive troponin elevation</li>
+		</ul>
+		</ul>
+		<script src = 'tree.js'></script>
 	</body>
 </html>
