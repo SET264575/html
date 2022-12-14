@@ -2,6 +2,14 @@
 
   <head>
     <style>
+      .title {
+        
+      }
+      
+      .criteria {
+        
+      }
+      
       .radiobutton {
   list-style-type: none;
   margin: 25px 0 0 0;
@@ -52,15 +60,49 @@
     </style>
   </head>
   <body>
-    <ul class="radiobutton">
-  <li>
-    <input type="radio" id="a25" name="amount" />
-    <label for="a25">Male</label>
-  </li>
-  <li>
-    <input type="radio" id="a50" name="amount" />
-    <label for="a50">Female</label>
-  </li>
-</ul>
+    <div class= 'criterion'>
+      <hr>
+      <table>
+        <td>
+          Sex
+        </td>
+        <td>
+          <ul class="radiobutton">
+            <li>
+              <input type="radio" id="a25" name="amount" />
+              <label for="a25">Male</label>
+            </li>
+            <li>
+              <input type="radio" id="a50" name="amount" />
+              <label for="a50">Female</label>
+            </li>
+          </ul>
+        </td>
+      </table>
+    </div>
+    <div class= 'criterion'>
+      <hr>
+      <table>
+        <td>
+          Age
+        </td>
+        <td>
+      <ul class="radiobutton">
+        <li>
+          <input type="radio" id="a25" name="age" />
+          <label for="a25"><60</label>
+        </li>
+        <li>
+          <input type="radio" id="a50" name="age" />
+          <label for="a50">60-65</label>
+        </li>
+        <li>
+          <input type="radio" id="a50" name="age" />
+          <label for="a50">over 65</label>
+        </li>
+      </ul>
+        </td>
+      </table>
+    </div>
   </body>
 </html>
