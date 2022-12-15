@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link rel = 'stylesheet' href='mdm.css'>
+  </head>
+  <body>
+    <div class= "centered">
+      <h3 id = "title"></h3><br>
+      <div class= 'criterion'>
+        <p id = "table"></p>
+      </div>
+      </div>
+    <br>
+    <br>
+
+    <div class='score'>
+      <span id = "score"></span><span class="smallscore" id = "smallscore"></span>
+    </div>
+    <h4>The text below is copied to the clipboard and ready to be pasted into your document.</h4>
+    <p id='text'></p>
+
+  </div>
+  <script>
+    const myJSON = '{\
+    "name":"test","title":"CHAD","count":3,"criteria":\
+    [\
+    {"text":"chf","answers":\
+      [\
+      {"text":"No","points":"0"},\
+      {"answer":"Yes","points":"1"}\
+      ]\
+    },{"text":"htn","answers":[{"text":"No","points":"0"},{"answer":"Yes","points":"1"}]}]}';
+    const myObj = JSON.parse(myJSON);
+    var t = "";
+    document.getElementById("title").innerHTML = myObj.title;
+    t = t + "<table>";
+    for (let i = 0; i<myObj.criteria.length; i++) {
+      t = t + "<tr>";
+      t = t + "<td class = 'td1'>";
+      t = t + +myObj.criteria[i].text;
+      t = t + "</td>";
+      t = t + "<td class = 'td2'>";
+      t = t + "<ul class = 'radiobutton'>";
+      for (let j = 0; j < myObj.criteria[i].answers.length; j++) {
+        t = t + "<li>";
+        t = t + "<input type = 'radio' id = 'criteria'+String(i)+"-"+String(j)+"' name = criteria"+String(i)+" value = '"+myObj.criteria[i].answers[j].points + "onclick = 'copytext()'/>";
+        t = t + "<label for = 'criteria" + String(i)+"-"+String(j)+">"+myObj.criteria[i].answers[j].text+"</label>";
+        t = t + "</li>";
+      }
+      t = t + "</ul>";
+      t = t + "</td>";
+      t = t + "</tr>";
+    }
+    t = t + "</table>";
+    document.getElementById("table").innerHTML = t;
+
+    function copytext() {
+      var values = [];
+      for (let i = 0; i < myObj.criteria.length; i++) {
+        values.push(parseInt(getRadioButtonValue('criteria'+String(i))));
+      }
+      var score = 0;
+      for (let i = 0; i < myObj.criteria.length; i++) {
+        score = score + values[i];
+      }
+      t = 'CHAD2VASC2 score = '+String(score);
+      document.getElementById('text').innerHTML = t;
+      document.getElementById('score').innerHTML = score;
+      if (score == 1) {
+        document.getElementById('smallscore').innerHTML = 'point';
+      }
+      else {
+        document.getElementById('smallscore').innerHTML = 'points';
+      }
+      navigator.clipboard.writeText(t);
+      }
+    }
+
+    function getRadioButtonValue(name) {
+      var ele = document.getElementsByName(name);
+      for (let i = 0; i < ele.length; i++){
+        if (ele[i].checked){
+          return(ele[i].value);
+        }
+      }
+      return(-1);
+    }
+    </script>
+  </body>
+</html>
