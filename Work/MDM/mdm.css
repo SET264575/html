@@ -13,6 +13,10 @@ body, centered {
 	background-color: lightblue;
 }
 
+.header button:hover {
+	background-color: lightgray;
+}
+
 .radiobutton {
 	list-style-type: none;
 	margin: 25px 0 0 0;
