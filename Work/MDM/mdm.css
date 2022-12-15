@@ -13,6 +13,10 @@ body, centered {
 	background-color: lightblue;
 }
 
+.head button {
+	width: 100px;
+}
+
 .header button:hover {
 	background-color: lightgray;
 }
