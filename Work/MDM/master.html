@@ -29,34 +29,36 @@
       ]\
     },{"text":"Hypertension","answers":[{"text":"No","points":"0"},{"text":"Yes","points":"1"}]}]}';*/
     const xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = function() {const myObj = JSON.parse(this.responseText);};
+    xmlhttp.onload = function() {const myObj = JSON.parse(this.responseText); displayHTML()};
     xmlhttp.open("GET","json/chadvasc.txt");
     xmlhttp.send();
  //   const myObj ="";
    // getObject();
     //const myObj = JSON.parse(myJSON);
-    var t = "";
-    document.getElementById("title").innerHTML = myObj.title;
-    t = t + "<table>";
-    for (let i = 0; i<myObj.criteria.length; i++) {
-      t = t + "<tr>";
-      t = t + "<td class = 'td1'>";
-      t = t + myObj.criteria[i].text;
-      t = t + "</td>";
-      t = t + "<td class = 'td2'>";
-      t = t + "<ul class = 'radiobutton'>";
-      for (let j = 0; j < myObj.criteria[i].answers.length; j++) {
-        t = t + "<li>";
-        t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = criteria"+String(i)+" "+myObj.criteria[i].answers[j].checked+"' value = '"+myObj.criteria[i].answers[j].points + "' onclick = 'copytext()'/>";
-        t = t + "<label for = 'criteria'" + String(i)+"-"+String(j)+">"+myObj.criteria[i].answers[j].text+"</label>";
-        t = t + "</li>";
+    function displayHTML() {
+      var t = "";
+      document.getElementById("title").innerHTML = myObj.title;
+      t = t + "<table>";
+      for (let i = 0; i<myObj.criteria.length; i++) {
+        t = t + "<tr>";
+        t = t + "<td class = 'td1'>";
+        t = t + myObj.criteria[i].text;
+        t = t + "</td>";
+        t = t + "<td class = 'td2'>";
+        t = t + "<ul class = 'radiobutton'>";
+        for (let j = 0; j < myObj.criteria[i].answers.length; j++) {
+          t = t + "<li>";
+          t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = criteria"+String(i)+" "+myObj.criteria[i].answers[j].checked+"' value = '"+myObj.criteria[i].answers[j].points + "' onclick = 'copytext()'/>";
+          t = t + "<label for = 'criteria'" + String(i)+"-"+String(j)+">"+myObj.criteria[i].answers[j].text+"</label>";
+          t = t + "</li>";
+        }
+        t = t + "</ul>";
+        t = t + "</td>";
+        t = t + "</tr>";
       }
-      t = t + "</ul>";
-      t = t + "</td>";
-      t = t + "</tr>";
+      t = t + "</table>";
+      document.getElementById("table").innerHTML = t;
     }
-    t = t + "</table>";
-    document.getElementById("table").innerHTML = t;
 
     function getObject() {
       const xmlhttp = new XMLHttpRequest();
