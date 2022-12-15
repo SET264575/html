@@ -15,6 +15,8 @@
 PECARN head trauma > 2
 PECARN head trauma < 2
 PERC
+gout rule
+acetaminophen overdose
 MELD
 NIH
 Pancreatitis
@@ -120,9 +122,10 @@ Sepsis
     }
     
     function getText(score) {
+      let t = "";
       for (let i = 0; i<myObj.range.length; i++) {
         if (score > myObj.range[i].low && score < myObj.range[i].high) {
-          t = t + myObj.range[i].pretext + String(score) + myObj.range[i].posttext;
+          t = myObj.range[i].pretext + String(score) + myObj.range[i].posttext;
         }
       }
       return(t);
