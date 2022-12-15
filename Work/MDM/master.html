@@ -3,6 +3,14 @@
     <link rel = 'stylesheet' href='mdm.css'>
   </head>
   <body>
+    <div class = "header">
+      <button id="1" onclick="getObject('json/chadvasc.txt')">CHAD2-VASC2</button>
+      <button id="2" onclick="getObject('json/curb65.txt')">CURB-65</button>
+      <button id="3" onclick="getObject('json/heart.txt')">HEART score</button>
+      <button id="4" onclick="getObject('json/wells dvt.txt')">Wells' score for DVT</button>
+      <button id="5" onclick="getObject('json/wells pe.txt')">Wells' score for PE</button>
+     
+    </div>
     <div class= "centered">
       <h3 id = "title"></h3><br>
       <div class= 'criterion'>
@@ -28,11 +36,13 @@
       {"text":"Yes","points":"1"}\
       ]\
     },{"text":"Hypertension","answers":[{"text":"No","points":"0"},{"text":"Yes","points":"1"}]}]}';*/
-    var myObj = {};
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj); displayHTML()};
-    xmlhttp.open("GET","json/heart.txt");
-    xmlhttp.send();
+    function getObject(website){
+      var myObj = {};
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj); displayHTML()};
+      xmlhttp.open("GET",website);
+      xmlhttp.send();
+    }
  //   const myObj ="";
    // getObject();
     //const myObj = JSON.parse(myJSON);
