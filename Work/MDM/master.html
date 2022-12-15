@@ -1,3 +1,9 @@
+<!--
+Improvements:
+subtext
+parts contributing to score
+
+-->
 <html>
   <head>
     <link rel = 'stylesheet' href='mdm.css'>
@@ -68,6 +74,9 @@ Sepsis
         t = t + "<tr>";
         t = t + "<td class = 'td1'>";
         t = t + myObj.criteria[i].text;
+        if (myObj.criteria[i].hasOwnProperty('subtext')) {
+          t = t + '<br>'+myObj.criteria[i].subtext;
+        }
         t = t + "</td>";
         t = t + "<td class = 'td2'>";
         t = t + "<ul class = 'radiobutton'>";
