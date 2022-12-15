@@ -22,16 +22,16 @@
 		},
 		{"text":"Risk factors","answers":[
 			{"text":"0","points":"0","checked":"checked"},
-			{"text":"1-2","points":"1","checked":""}
+			{"text":"1-2","points":"1","checked":""},
       			{"text":">=3","points":"2","checked":""}
 			]
 		},
 		{"text":"Troponin","answers":[
 			{"text":"Not elevated","points":"0","checked":"checked"},
-			{"text":"1-3x normal","points":"1","checked":""}
+			{"text":"1-3x normal","points":"1","checked":""},
       			{"text":">3x normal","points":"2","checked":""}
 			]
-		},
+		}
 	],
 	"range":
 	[
