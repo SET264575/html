@@ -61,32 +61,40 @@
       document.getElementById("table").innerHTML = t;
     }
 
-    function getObject() {
+  /*  function getObject() {
       const xmlhttp = new XMLHttpRequest();
       xmlhttp.onload = function() { myObj = JSON.parse(this.responseText);};
       xmlhttp.open("GET","json/chadvasc.txt");
       xmlhttp.send();
-    }
+    }*/
     
     function copytext() {
       var values = [];
+      var flag = true;
       for (let i = 0; i < myObj.criteria.length; i++) {
-        values.push(parseInt(getRadioButtonValue('criteria'+String(i))));
+        let result = parseInt(getRadioButtonValue('criteria'+String(i)));
+        values.push(result);
+        if (result == -1) {
+          flag = false;
+        }
       }
-      var score = 0;
-      for (let i = 0; i < myObj.criteria.length; i++) {
-        score = score + values[i];
+      
+      if (flag) {
+        var score = 0;
+        for (let i = 0; i < myObj.criteria.length; i++) {
+          score = score + values[i];
+        }
+        t = 'CHAD2VASC2 score = '+String(score);
+        document.getElementById('text').innerHTML = t;
+        document.getElementById('score').innerHTML = score;
+        if (score == 1) {
+          document.getElementById('smallscore').innerHTML = 'point';
+        }
+        else {
+          document.getElementById('smallscore').innerHTML = 'points';
+        }
+        navigator.clipboard.writeText(t);
       }
-      t = 'CHAD2VASC2 score = '+String(score);
-      document.getElementById('text').innerHTML = t;
-      document.getElementById('score').innerHTML = score;
-      if (score == 1) {
-        document.getElementById('smallscore').innerHTML = 'point';
-      }
-      else {
-        document.getElementById('smallscore').innerHTML = 'points';
-      }
-      navigator.clipboard.writeText(t);
     }
     
     function getText(score) {
