@@ -28,7 +28,7 @@
       {"text":"Yes","points":"1"}\
       ]\
     },{"text":"Hypertension","answers":[{"text":"No","points":"0"},{"text":"Yes","points":"1"}]}]}';*/
-    const myObj = {};
+    var myObj = {};
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj); displayHTML()};
     xmlhttp.open("GET","json/chadvasc.txt");
