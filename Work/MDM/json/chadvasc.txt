@@ -1,9 +1,42 @@
 {
-"name":"test","title":"CHAD","criteria":
-[
-{"text":"chf","answers":
+	"name":"test",
+	"title":"CHAD",
+	"criteria":
 	[
-	{"text":"No","points":"0"},
-	{"answer":"Yes","points":"1"}
-	]
-},{"text":"htn","answers":[{"text":"No","points":"0"},{"answer":"Yes","points":"1"}]}]}
+		{"text":"Age","answers":[
+			{"text":"No","points":"0"},
+			{"answer":"Yes","points":"1"}
+			]
+		},
+		{"text":"Sex","answers":[
+			{"text":"No","points":"0"},
+			{"answer":"Yes","points":"1"}
+			]
+		},
+		{"text":"CHF History","answers":[
+			{"text":"No","points":"0"},
+			{"answer":"Yes","points":"1"}
+			]
+		},
+		{"text":"Hypertension history","answers":[
+			{"text":"No","points":"0"},
+			{"answer":"Yes","points":"1"}
+			]
+		},
+		{"text":"Stroke/TIA/thromboembolism history","answers":[
+			{"text":"No","points":"0"},
+			{"answer":"Yes","points":"2"}
+			]
+		},
+		{"text":"Vascular disease history (prior MI, peripheral artery disease, or aortic plaque)","answers":[
+			{"text":"No","points":"0"},
+			{"answer":"Yes","points":"1"}
+			]
+		},
+		{"text":"Diabetes history","answers":[
+			{"text":"No","points":"0"},
+			{"answer":"Yes","points":"1"}
+			]
+		},
+	],
+}
