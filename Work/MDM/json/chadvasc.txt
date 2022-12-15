@@ -1,6 +1,5 @@
 {
-	"name":"test",
-	"title":"CHAD",
+	"title":"CHA₂DS₂-VASc Score for Atrial Fibrillation Stroke Risk",
 	"criteria":
 	[
 		{"text":"Age","answers":[
@@ -39,4 +38,9 @@
 			]
 		},
 	],
+	"range":
+	[
+		{"low":"0","high":"1","pretext":"CHAD2-VASC2 score = ","posttext":". The risk of stroke is considered low enough that anticoagulation is not recommended."},
+		{"low":"2","high":"10","pretext":"CHAD2-VASC2 score = ","posttext":". This risk of stroke is considered high enough that anticoagulation is recommended.")
+	]
 }
