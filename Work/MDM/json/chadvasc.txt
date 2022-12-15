@@ -28,7 +28,8 @@
 			{"text":"Yes","points":"2","checked":""}
 			]
 		},
-		{"text":"Vascular disease history (prior MI, peripheral artery disease, or aortic plaque)","answers":[
+		{"text":"Vascular disease history","subtext":"(prior MI, peripheral artery disease, or aortic plaque)","answers":[
+		
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
