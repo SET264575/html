@@ -3,13 +3,14 @@
 	"criteria":
 	[
 		{"text":"Age","answers":[
-			{"text":"No","points":"0","checked":""},
-			{"text":"Yes","points":"1","checked":""}
-			]
+			{"text":"<65","points":"0","checked":""},
+			{"text":"65-74","points":"1","checked":""},
+			{"text":">=75","points":"2","checked":""}
+						]
 		},
 		{"text":"Sex","answers":[
-			{"text":"No","points":"0","checked":""},
-			{"text":"Yes","points":"1","checked":""}
+			{"text":"Male","points":"0","checked":""},
+			{"text":"Female","points":"1","checked":""}
 			]
 		},
 		{"text":"CHF History","answers":[
