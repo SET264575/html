@@ -8,9 +8,18 @@
       <button id="2" onclick="getObject('json/curb65.txt')">CURB-65</button>
       <button id="6" onclick="getObject('json/hasbled.txt')">HAS-BLED</button>
       <button id="3" onclick="getObject('json/heart.txt')">HEART score</button>
+      <button id="7" onclick="getObject('json/psi.txt')">Pneumonia Severity Index</button>
       <button id="4" onclick="getObject('json/wells dvt.txt')">Wells' score for DVT</button>
       <button id="5" onclick="getObject('json/wells pe.txt')">Wells' score for PE</button>
-     
+     <!--Others
+PECARN head trauma > 2
+PECARN head trauma < 2
+PERC
+MELD
+Pancreatitis
+PSI
+Sepsis
+-->
     </div>
     <div class= "centered">
       <h3 id = "title"></h3><br>
@@ -88,6 +97,7 @@
         values.push(result);
         if (result == -1) {
           flag = false;
+          console.log(i,result);
         }
       }
       
