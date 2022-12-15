@@ -23,12 +23,12 @@
     const myJSON = '{\
     "name":"test","title":"CHAD","count":3,"criteria":\
     [\
-    {"text":"chf","answers":\
+    {"text":"CHF","answers":\
       [\
       {"text":"No","points":"0"},\
-      {"answer":"Yes","points":"1"}\
+      {"text":"Yes","points":"1"}\
       ]\
-    },{"text":"htn","answers":[{"text":"No","points":"0"},{"answer":"Yes","points":"1"}]}]}';
+    },{"text":"Hypertension","answers":[{"text":"No","points":"0"},{"text":"Yes","points":"1"}]}]}';
     const myObj = JSON.parse(myJSON);
     var t = "";
     document.getElementById("title").innerHTML = myObj.title;
