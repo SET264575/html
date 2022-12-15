@@ -42,7 +42,7 @@
       t = t + "<ul class = 'radiobutton'>";
       for (let j = 0; j < myObj.criteria[i].answers.length; j++) {
         t = t + "<li>";
-        t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = criteria"+String(i)+" value = '"+myObj.criteria[i].answers[j].points + "onclick = 'copytext()'/>";
+        t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = criteria"+String(i)+"' value = '"+myObj.criteria[i].answers[j].points + "' onclick = 'copytext()'/>";
         t = t + "<label for = 'criteria" + String(i)+"-"+String(j)+">"+myObj.criteria[i].answers[j].text+"</label>";
         t = t + "</li>";
       }
