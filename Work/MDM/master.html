@@ -80,6 +80,15 @@
       }
       navigator.clipboard.writeText(t);
     }
+    
+    function getText(score) {
+      for (let i = 0; i<myObj.range.length; i++) {
+        if (score > myObj.range[i].low && score < myObj.range[i].high) {
+          t = t + myObj.range[i].pretext + String(score) + myObj.range[i].posttext;
+        }
+      }
+      return(t);
+    }
 
     function getRadioButtonValue(name) {
       var ele = document.getElementsByName(name);
