@@ -4,52 +4,52 @@
 	[
 		{"text":"Active cancer: Treatment or palliation within 6 months","answers":[
 			{"text":"No","points":"0","checked":" checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
 		{"text":"Bedridden recently >3 days or major surgery within 12 weeks","answers":[
 			{"text":"No","points":"0","checked":" checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
 		{"text":"Calf swelling >3 cm compared to the other leg (measured 10 cm below tibial tuberosity)","answers":[
 			{"text":"No","points":"0","checked":" checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
 		{"text":"Collateral (nonvaricose) superficial veins present","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
 		{"text":"Entire leg swollen","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"2","checked":""}
+			{"text":"Yes","points":"2","checked":""}
 			]
 		},
 		{"text":"Localized tenderness along the deep venous system","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
 		{"text":"Pitting edema, confined to symptomatic leg","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
     {"text":"Paralysis, paresis, or recent plaster immobilization of the lower extremity","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
     {"text":"Previously documented DVT","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
     {"text":"Alternative diagnosis to DVT as likely or more likely","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"-2","checked":""}
+			{"text":"Yes","points":"-2","checked":""}
 			]
 		},
 	],
