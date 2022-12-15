@@ -1,0 +1,41 @@
+{
+	"title":"HEART score",
+	"criteria":
+	[
+		{"text":"History","answers":[
+			{"text":"Slightly suggestive","points":"0",checked:" checked"},
+			{"answer":"Moderately suggestive","points":"1",checked:""},
+      {"answer":"Highly suggestive","points":"2",checked:""}
+			]
+		},
+		{"text":"EKG","answers":[
+			{"text":"Normal","points":"0",checked:" checked"},
+			{"answer":"Nonspecific","points":"1",checked:""},
+      {"answer":"Significant ST elevation","points":"2",checked:""}
+			]
+		},
+		{"text":"Age","answers":[
+			{"text":"<65","points":"0","checked":" checked"},
+			{"answer":"65-70","points":"1","checked":""},
+      {"answer":">70","points":"2","checked":""}
+			]
+		},
+		{"text":"Risk factors","answers":[
+			{"text":"0","points":"0",checked:"checked"},
+			{"answer":"1-2","points":"1","checked":""}
+      {"answer":">=3","points":"2","checked":""}
+			]
+		},
+		{"text":"Troponin","answers":[
+			{"text":"Not elevated","points":"0",checked:"checked"},
+			{"answer":"1-3x normal","points":"1",checked:""}
+      {"answer":">3x normal","points":"2","checked":""}
+			]
+		},
+	],
+	"range":
+	[
+		{"low":"0","high":"4","pretext":"CHAD2-VASC2 score = ","posttext":". The risk of Major Acute Cardiac Event is low."},
+		{"low":"3","high":"10","pretext":"CHAD2-VASC2 score = ","posttext":". The risk of Major Acute Cardiac Event is high.")
+	]
+}
