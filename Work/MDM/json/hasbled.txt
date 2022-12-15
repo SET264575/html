@@ -1,0 +1,57 @@
+{
+	"title":"",
+	"criteria":
+	[
+		{"text":"Hypertension: Uncontrolled, >160 mmHg systolic","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Renal disease: Dialysis, transplant, Cr >2.26 mg/dL","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Liver disease: Cirrhosis or bilirubin >2x normal with AST/ALT/AP >3x normal","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Stroke history","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Prior major bleeding or predisposition to bleeding","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"2","checked":""}
+			]
+		},
+		{"text":"Labile INR: Unstable/high INRs, time in therapeutic range <60%","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Age >65","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+    {"text":"Medication usage predisposing to bleeding: Aspirin, clopidogrel, NSAIDs","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+    {"text":"Alcohol use: ≥8 drinks/week","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+	],
+	"range":
+	[
+		{"low":"-1","high":"2","pretext":"Has-Bled score = ","posttext":". The risk of bleeding is considered low."},
+		{"low":"1","high":"3","pretext":"Has-Bled score = ","posttext":". The risk of bleeding is considered moderate."},
+		{"low":"2","high":"100","pretext":"Has-Bled score = ","posttext":". The risk of bleeding is considered is high."},
+	]
+}
