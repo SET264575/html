@@ -1,0 +1,9 @@
+{
+"name":"test","title":"CHAD","criteria":
+[
+{"text":"chf","answers":
+	[
+	{"text":"No","points":"0"},
+	{"answer":"Yes","points":"1"}
+	]
+},{"text":"htn","answers":[{"text":"No","points":"0"},{"answer":"Yes","points":"1"}]}]}
