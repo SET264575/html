@@ -5,7 +5,7 @@
 		{"text":"History","answers":[
 			{"text":"Slightly suggestive","points":"0","checked":" checked"},
 			{"text":"Moderately suggestive","points":"1","checked":""},
-      			{"text":"Highly suggestive","points":"2",checked:""}
+      			{"text":"Highly suggestive","points":"2","checked":""}
 			]
 		},
 		{"text":"EKG","answers":[
