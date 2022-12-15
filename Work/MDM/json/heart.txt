@@ -4,32 +4,32 @@
 	[
 		{"text":"History","answers":[
 			{"text":"Slightly suggestive","points":"0","checked":" checked"},
-			{"answer":"Moderately suggestive","points":"1","checked":""},
-      {"answer":"Highly suggestive","points":"2",checked:""}
+			{"text":"Moderately suggestive","points":"1","checked":""},
+      			{"text":"Highly suggestive","points":"2",checked:""}
 			]
 		},
 		{"text":"EKG","answers":[
 			{"text":"Normal","points":"0","checked":" checked"},
-			{"answer":"Nonspecific","points":"1","checked":""},
-      {"answer":"Significant ST elevation","points":"2","checked":""}
+			{"text":"Nonspecific","points":"1","checked":""},
+      			{"text":"Significant ST elevation","points":"2","checked":""}
 			]
 		},
 		{"text":"Age","answers":[
 			{"text":"<65","points":"0","checked":" checked"},
-			{"answer":"65-70","points":"1","checked":""},
-      {"answer":">70","points":"2","checked":""}
+			{"text":"65-70","points":"1","checked":""},
+     			{"text":">70","points":"2","checked":""}
 			]
 		},
 		{"text":"Risk factors","answers":[
 			{"text":"0","points":"0","checked":"checked"},
-			{"answer":"1-2","points":"1","checked":""}
-      {"answer":">=3","points":"2","checked":""}
+			{"text":"1-2","points":"1","checked":""}
+      			{"text":">=3","points":"2","checked":""}
 			]
 		},
 		{"text":"Troponin","answers":[
 			{"text":"Not elevated","points":"0","checked":"checked"},
-			{"answer":"1-3x normal","points":"1","checked":""}
-      {"answer":">3x normal","points":"2","checked":""}
+			{"text":"1-3x normal","points":"1","checked":""}
+      			{"text":">3x normal","points":"2","checked":""}
 			]
 		},
 	],
