@@ -9,6 +9,8 @@ body, centered {
 	left: 0;
 	width: 100%;
 	height: 50px;
+	padding: 20px;
+	background-color: lightblue;
 }
 
 .radiobutton {
