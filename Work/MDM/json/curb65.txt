@@ -1,0 +1,38 @@
+{
+	"title":"CURB-65",
+	"criteria":
+	[
+		{"text":"Confusion","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"3","checked":""}
+			]
+		},
+		{"text":"BUN > 19 mg/dL","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"3","checked":""}
+			]
+		},
+		{"text":"Respiratory Rate ≥ 30","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1.5","checked":""}
+			]
+		},
+		{"text":"Systolic BP < 90 mmHg or Diastolic BP ≤ 60 mmHg","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1.5","checked":""}
+			]
+		},
+		{"text":"Age ≥ 65","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1.5","checked":""}
+			]
+		}
+	],
+	"range":
+	[
+		{"low":"-1","high":"2","pretext":"CURB-65 = ","posttext":", putting the patient in the lowest risk group."},
+		{"low":"1","high":"3","pretext":"Wells' score for PE = ","posttext":", putting the patient in the moderate risk group.."},
+		{"low":"2","high":"4","pretext":"Wells' score for PE = ","posttext":", putting the patient in the severe risk group."},
+    {"low":"3","high":"100","pretext":"Wells' score for PE = ","posttext":", putting the patient in the highest risk group."}
+	]
+}
