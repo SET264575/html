@@ -4,37 +4,37 @@
 	[
 		{"text":"Clinical signs and symptoms of DVT","answers":[
 			{"text":"No","points":"0","checked":" checked"},
-			{"answer":"Yes","points":"3","checked":""}
+			{"text":"Yes","points":"3","checked":""}
 			]
 		},
 		{"text":"PE is #1 diagnosis OR equally likely","answers":[
 			{"text":"No","points":"0","checked":" checked"},
-			{"answer":"Yes","points":"3","checked":""}
+			{"text":"Yes","points":"3","checked":""}
 			]
 		},
 		{"text":"Heart rate > 100","answers":[
 			{"text":"No","points":"0","checked":" checked"},
-			{"answer":"Yes","points":"1.5","checked":""}
+			{"text":"Yes","points":"1.5","checked":""}
 			]
 		},
 		{"text":"Immobilization at least 3 days OR surgery in the previous 4 weeks","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"1.5","checked":""}
+			{"text":"Yes","points":"1.5","checked":""}
 			]
 		},
 		{"text":"Previous, objectively diagnosed PE or DVT","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"1.5","checked":""}
+			{"text":"Yes","points":"1.5","checked":""}
 			]
 		},
 		{"text":"Hemoptysis","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
 		{"text":"Malignancy w/ treatment within 6 months or palliative","answers":[
 			{"text":"No","points":"0","checked":"checked"},
-			{"answer":"Yes","points":"1","checked":""}
+			{"text":"Yes","points":"1","checked":""}
 			]
 		},
 	],
