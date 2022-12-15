@@ -13,8 +13,8 @@
 			]
 		},
 		{"text":"CHF History","answers":[
-			{"text":"No","points":"0",""checked"":" checked"},
-			{"answer":"Yes","points":"1",""checked"":""}
+			{"text":"No","points":"0","checked":" checked"},
+			{"answer":"Yes","points":"1","checked":""}
 			]
 		},
 		{"text":"Hypertension history","answers":[
