@@ -53,6 +53,15 @@
     t = t + "</table>";
     document.getElementById("table").innerHTML = t;
 
+    function getObject() {
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function() { const myObj = JSON.parse(this.responseText);
+      document.getElementById("json").innerHTML = myObj.name;
+      };
+      xmlhttp.open("GET","chadvasc.txt");
+      xmlhttp.send();
+    }
+    
     function copytext() {
       var values = [];
       for (let i = 0; i < myObj.criteria.length; i++) {
