@@ -36,7 +36,7 @@
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
-		},
+		}
 	],
 	"range":
 	[
