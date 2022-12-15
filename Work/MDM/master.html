@@ -28,8 +28,12 @@
       {"text":"Yes","points":"1"}\
       ]\
     },{"text":"Hypertension","answers":[{"text":"No","points":"0"},{"text":"Yes","points":"1"}]}]}';*/
-    const myObj ="";
-    getObject();
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function() {const myObj = JSON.parse(this.responseText);};
+    xmlhttp.open("GET","json/chadvasc.txt");
+    xmlhttp.send();
+ //   const myObj ="";
+   // getObject();
     //const myObj = JSON.parse(myJSON);
     var t = "";
     document.getElementById("title").innerHTML = myObj.title;
