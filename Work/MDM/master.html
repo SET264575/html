@@ -56,7 +56,7 @@
     function getObject() {
       const xmlhttp = new XMLHttpRequest();
       xmlhttp.onload = function() { myObj = JSON.parse(this.responseText);};
-      xmlhttp.open("GET","chadvasc.txt");
+      xmlhttp.open("GET","json/chadvasc.txt");
       xmlhttp.send();
     }
     
