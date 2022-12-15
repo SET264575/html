@@ -106,7 +106,7 @@ Sepsis
         for (let i = 0; i < myObj.criteria.length; i++) {
           score = score + values[i];
         }
-        t = 'CHAD2VASC2 score = '+String(score);
+        t = getText(score);
         document.getElementById('text').innerHTML = t;
         document.getElementById('score').innerHTML = score;
         if (score == 1) {
