@@ -52,6 +52,6 @@
 	[
 		{"low":"-1","high":"2","pretext":"Has-Bled score = ","posttext":". The risk of bleeding is considered low."},
 		{"low":"1","high":"3","pretext":"Has-Bled score = ","posttext":". The risk of bleeding is considered moderate."},
-		{"low":"2","high":"100","pretext":"Has-Bled score = ","posttext":". The risk of bleeding is considered is high."},
+		{"low":"2","high":"100","pretext":"Has-Bled score = ","posttext":". Although the risk of stroke due to atrial fibrillation is high, the patient's risk of bleeding is also high.  I have advised the patient of this and recommended cardiology follow up to determine appropriate management."},
 	]
 }
