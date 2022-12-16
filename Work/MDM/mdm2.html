@@ -65,6 +65,10 @@
         margin-right: 30px;
       }
       
+      .show {
+        display: block;
+      }
+      
       h3 { 
         text-align: center;
       }
@@ -97,12 +101,12 @@
 
     <div class="main">
       <button type="button" class="collapsible headingbutton">Patient Presentation</button>
-      <div class="content" id = "div-ptpresentation">
+      <div class="content show" id = "div-ptpresentation">
         <input type = "checkbox">Data was reviewed from external sources as documented in the HPI.</input>    <br>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
-      <div class="content" id = "div-ddx">
+      <div class="content show" id = "div-ddx">
         <button class="sxbutton" onclick="showDDX('ddx-abdpain')">Abdominal pain</button>
         <button class="sxbutton"  onclick="showDDX('ddx-chestpain')">Chest pain</button>
         <button class="sxbutton" onclick="showDDX('ddx-dyspnea')">Dyspnea</button>
@@ -137,7 +141,14 @@
      </div><br><br>
 
       <button type="button" class="collapsible">Data Review</button>
-      <div class="content" id = "div-datareview">
+      <div class="content show" id = "div-datareview">
+        <h4>Tests ordered and reviewed:<h4>
+          <button class="choicebutton">Blood tests</button>
+          <button class="choicebutton">Urinalysis</button>
+          <button class="choicebutton">EKG</button>
+          <button class="choicebutton">Imaging</button>
+          <br>
+          
         <button class="choicebutton">Testing was performed to help rule out these serious or life-threatening problems.</button><br>
         <button class="choicebutton">Laboratory tests were unremarkable.</button><br>
         <button class="choicebutton">Testing was not supportive of any serious or life-threatening problems.</button><br>
@@ -177,7 +188,7 @@
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Independent Clinician</button>
-      <div class="content" id = "div-uri1">
+      <div class="content show" id = "div-uri1">
         <h3>Independent clinician</h3>
         <input type = "checkbox">My discussion with an independent clinician is documented in this note.</input>
       </div><br><br>
@@ -191,7 +202,7 @@
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Disposition</button>
-      <div class="content" id = "div-dispo">
+      <div class="content show" id = "div-dispo">
         <button type = "button" class="collapsible subheadingbutton">Shared-decision making</button>
         <div class="content">
           <input type = "checkbox">I discussed the options with the patient who agreed to admisison.</input><br>
