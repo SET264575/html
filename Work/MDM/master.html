@@ -42,18 +42,13 @@ Sepsis
         <span id = "score"></span><span class="smallscore" id = "smallscore"></span>
       </div>
       <h4>The text below is copied to the clipboard and ready to be pasted into your document.</h4>
-      <p id='text'></p>
+      <p class="score" id='text'></p>
   </div>
   <script>
-   /* const myJSON = '{\
-    "name":"test","title":"CHAD","count":3,"criteria":\
-    [\
-    {"text":"CHF","answers":\
-      [\
-      {"text":"No","points":"0"},\
-      {"text":"Yes","points":"1"}\
-      ]\
-    },{"text":"Hypertension","answers":[{"text":"No","points":"0"},{"text":"Yes","points":"1"}]}]}';*/
+    document.getElementById('score').innerHTML = "";
+    document.getElementById('smallscore').innerHTML = "";
+    document.getElementById('text').innerHTML = "";
+                             
     var myObj = {};
     
     function getObject(website){
