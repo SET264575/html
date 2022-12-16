@@ -1,6 +1,14 @@
 <html>
   <head>
     <style>
+      .header {
+        background-color: lightgray;
+        width: 100%;
+        height: 300px;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
       
       .collapsible {
         background-color: lightskyblue;
@@ -64,11 +72,12 @@
     </style>
   </head>
   <body>
-    <h3>The following text has been copied to the clipboard and is ready to be pasted into your document.</h3>
-    <textarea id="text"></textarea>
+    <div class="header">
+      <h3>The following text has been copied to the clipboard and is ready to be pasted into your document.</h3>
+      <textarea id="text"></textarea>
+    </div>
+
     
-<!-- Each <h3> 
--->
     <button type="button" class="collapsible headingbutton">Patient Presentation</button>
     <div class="content" id = "div-ptpresentation">
       <input type = "checkbox">Data was reviewed from external sources as documented in the HPI.</input>    <br>
@@ -77,9 +86,6 @@
     <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
     <div class="content" id = "div-ddx">
       <h3>Differential diagnosis and Data review</h3>
-  <!--
-Each <h4> would be a hidden until selected, multiple differential diagnoses could be selected
--->
   
     <h4>Chest pain</h4>
     <input type="checkbox">The differential diagnosis considered included life-threatening problems including ACS, pulmonary embolism and aortic dissection.</input><br>
