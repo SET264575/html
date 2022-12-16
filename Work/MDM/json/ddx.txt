@@ -1,4 +1,4 @@
-{[	{"dx":"Abdominal pain","ddx":["appendicitis","MI","pancreatitis","cholecystitis","SBO","diverticulitis"]},
+[	{"dx":"Abdominal pain","ddx":["appendicitis","MI","pancreatitis","cholecystitis","SBO","diverticulitis"]},
 	{"dx":"Arthralgias","ddx":["hypothyroidism","adrenal insufficiency","Lyme disease","bacterial endocarditis","malignancy","septic joint","compartment syndrome","Covid","influenza"]},
 	{"dx":"Back pain","ddx":["cauda equina syndrome","vertebral fracture","epidural abscess","diskitis"]},
 	{"dx":"Chest pain","ddx":["ACS","PE","aortic dissection","pneumothorax"]},
@@ -13,6 +13,6 @@
 	{"dx":"Sore thorat","ddx":["strep throat","mono","retropharyngeal abscess","peritonsillar abscess","acute HIV"]},
 	{"dx":"Urinary symptoms","ddx":["UTI","uncontrolled diabetes","STD","pyelonephritis","kidney stone","cancer"]},
 	{"dx":"Vaginal bleeding","ddx":["coagulopathy","ectopic pregnancy","threatened miscarriage","pregnancy complications"]}
-]}
+]
 
 	
