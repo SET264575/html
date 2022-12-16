@@ -100,7 +100,37 @@
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
       <div class="content" id = "div-ddx">
-
+        <button class="sxbutton" onclick="showDDX('ddx-abdpain')">Abdominal pain</button>
+        <button class="sxbutton"  onclick="showDDX('ddx-chestpain')">Chest pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-dyspnea')">Dyspnea</button>
+        <button class="sxbutton" onclick="showDDX('ddx-headache')">Headache</button>
+        <button class="sxbutton" onclick="showDDX()">Pelvic pain</button>
+        
+        <div class="content" name = "sx" id = "ddx-abdpain">
+          <button class="ddxbutton">Appendicitis</button>
+          <button class="ddxbutton">Cholecystitis</button>
+          <button class="ddxbutton">Diverticulitis</button>
+          <button class="ddxbutton">Pancreatitis</button>
+          <button class="ddxbutton">MI</button>
+        </div>
+        
+        <div class = "content" name = "sx"  id = "ddx-chestpain">
+          <button class="ddxbutton">ACS</button>
+          <button class="ddxbutton">PE</button>
+          <button class="ddxbutton">Aortic dissection</button>
+          <button class="ddxbutton">Pneumothorax</button>
+          <button class="ddxbutton">Pneumonia</button>
+        </div>
+          
+        <div class = "content" name = "sx"  id = "ddx-headache">
+          <button class="ddxbutton">Subarachnoid hemorrhage</button>
+          <button class="ddxbutton">Brain tumor</button>
+          <button class="ddxbutton">Migraine headache</button>
+          <button class="ddxbutton">Meningitis</button>
+          <button class="ddxbutton">Subdural bleed</button>
+        </div>
+        
+        
       <h4>Chest pain</h4>
       <input type="checkbox">The differential diagnosis considered included life-threatening problems including ACS, pulmonary embolism and aortic dissection.</input><br>
       <h4>Abdominal pain</h4>
@@ -122,7 +152,7 @@
       <div class="content" id = "div-independent">
         <button type = "button" class="collapsible subheadingbutton">My independent review of the EKG</button>
         <div class="content">
-              <input type = "radio" name = "EKG">is documented in this note.</input><br>
+              <input type= "radio" name = "EKG">is documented in this note.</input><br>
               <input type = "radio" name = "EKG">shows the EKG is normal.</input><br>
               <input type = "radio" name = "EKG">shows the EKG is nonspecific for ACS.</input><br>
               <input type = "radio" name = "EKG">shows the EKG is concerning for ACS.</input><br>
@@ -249,6 +279,16 @@
             }
           });
         }    
+        
+        function showDDX(id) {
+          var list = document.getElementsByName('sx');
+          
+          for (let i = 0; i<list.length; i++) {
+            list[i].style.display = 'none';
+          }
+          
+          document.getElementById(id).style.display = "block";
+         }
       </script>
 
   </body>
