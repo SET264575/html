@@ -42,6 +42,6 @@
 	[
 		{"low":"-1","high":"2","pretext":"Wells' score for PE = ","posttext":". The risk of PE is low."},
 		{"low":"1","high":"7","pretext":"Wells' score for PE = ","posttext":". The risk of PE is moderate."},
-		{"low":"6","high":"100","pretext":"Wells' score for PE = ","posttext":". The risk of PE is high."},
+		{"low":"6","high":"100","pretext":"Wells' score for PE = ","posttext":". The risk of PE is high."}
 	]
 }
