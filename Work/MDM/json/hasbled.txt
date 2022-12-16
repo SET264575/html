@@ -1,48 +1,49 @@
 {
-	"title":"",
+	"title":"HAS-BLED Score for Major Bleeding Risk",
+	"listContributions":true;
 	"criteria":
 	[
-		{"text":"Hypertension: Uncontrolled, >160 mmHg systolic","answers":[
+		{"text":"Hypertension: Uncontrolled, >160 mmHg systolic","contributionText":"uncontrolled hypertension","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Renal disease: Dialysis, transplant, Cr >2.26 mg/dL","answers":[
+		{"text":"Renal disease: Dialysis, transplant, Cr >2.26 mg/dL","contributionText":"renal disease","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Liver disease: Cirrhosis or bilirubin >2x normal with AST/ALT/AP >3x normal","answers":[
+		{"text":"Liver disease: Cirrhosis or bilirubin >2x normal with AST/ALT/AP >3x normal","contributionText":"liver disease","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Stroke history","answers":[
+		{"text":"Stroke history","contributionText":"history of stroke","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Prior major bleeding or predisposition to bleeding","answers":[
+		{"text":"Prior major bleeding or predisposition to bleeding","contributionText":"predisposition to bleeding","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"2","checked":""}
 			]
 		},
-		{"text":"Labile INR: Unstable/high INRs, time in therapeutic range <60%","answers":[
+		{"text":"Labile INR: Unstable/high INRs, time in therapeutic range <60%","contributionText":"labile INR","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Age >65","answers":[
+		{"text":"Age >65","contributionText":"age > 65","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-    		{"text":"Medication usage predisposing to bleeding: Aspirin, clopidogrel, NSAIDs","answers":[
+    		{"text":"Medication usage predisposing to bleeding: Aspirin, clopidogrel, NSAIDs","contributionText":"medication use predisposing to bleeding","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-    		{"text":"Alcohol use: ≥8 drinks/week","answers":[
+    		{"text":"Alcohol use: ≥8 drinks/week","contributionText":"significant alcohol use","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
