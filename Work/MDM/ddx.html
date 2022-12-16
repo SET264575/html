@@ -5,6 +5,7 @@
   <body>
     <div class = "header">
       <div id="ddx"></div>
+      <div id="ddx-list"></div>
 
     </div>
   
@@ -30,9 +31,15 @@
       xmlhttp.open("GET","json/ddx.txt");
       xmlhttp.send();
     }
- //   const myObj ="";
-   // getObject();
-    //const myObj = JSON.parse(myJSON);
+
+    function showDDX(i){
+      var t = "";
+      for (let j = 0; j<myObj[i].ddx.length; j++) {
+        t = t + "<button >"+myObj[i].ddx[j]+"</button>";
+      }
+      document.getElementById("ddx-list").innerHTML = t;
+    }
+    
     function displayHTML() {
       var t = "";
       document.getElementById("title").innerHTML = myObj.title;
