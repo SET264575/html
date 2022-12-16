@@ -38,7 +38,7 @@
 	],
 	"range":
 	[
-		{"low":"0","high":"4","pretext":"CHAD2-VASC2 score = ","posttext":", which suggests the risk of Major Acute Cardiac Event is low."},
-		{"low":"3","high":"10","pretext":"CHAD2-VASC2 score = ","posttext":", which suggests the risk of Major Acute Cardiac Event is high."}
+		{"low":"0","high":"4","pretext":"HEART score = ","posttext":", which suggests the risk of Major Acute Cardiac Event is low."},
+		{"low":"3","high":"10","pretext":"HEART score = ","posttext":", which suggests the risk of Major Acute Cardiac Event is high."}
 	]
 }
