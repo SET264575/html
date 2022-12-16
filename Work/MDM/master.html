@@ -81,6 +81,7 @@ Sepsis
           t = t + "<li>";
           t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = 'criteria"+String(i)+"' ";
           if (myObj.buttonWidth != undefined) {
+            console.log(myObj.buttonWidth, "in buttonWidth");
             t = t + "style = 'width:"+myObj.buttonWidth+"px' ";
           }
           t = t + myObj.criteria[i].answers[j].checked+" value = '"+myObj.criteria[i].answers[j].points + "' onclick = 'copytext()'/>";
