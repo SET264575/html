@@ -43,7 +43,8 @@
 	],
 	"range":
 	[
-		{"low":"-1","high":"3","pretext":"CHA2DS2-VASc score = ","posttext":", which suggests the risk of stroke is considered low enough that anticoagulation is not recommended."},
-		{"low":"2","high":"100","pretext":"CHA2DS2-VASc score = ","posttext":", which suggests the risk of stroke is considered high enough that anticoagulation is recommended."}
+		{"low":"-1","high":"1","pretext":"CHA2DS2-VASc score = ","posttext":", which suggests the risk of stroke is considered low enough that anticoagulation is not recommended."},
+		{"low":"0","high":"2","pretext":"CHA2DS2-VASc score = ","posttext":", which suggests the risk of stroke is considered intermediate and anticoagulation can be considered.  I have discussed this with the patient and recommended that they follow up with a cardiologist to determine whether they should be started on an anticoagulant."},
+		{"low":"1","high":"100","pretext":"CHA2DS2-VASc score = ","posttext":", which suggests the risk of stroke is considered high enough that anticoagulation is recommended."}
 	]
 }
