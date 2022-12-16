@@ -1,0 +1,18 @@
+{[	{"dx":"Abdominal pain","ddx":["appendicitis","MI","pancreatitis","cholecystitis","SBO","diverticulitis"]},
+	{"dx":"Arthralgias","ddx":["hypothyroidism","adrenal insufficiency","Lyme disease","bacterial endocarditis","malignancy","septic joint","compartment syndrome","Covid","influenza"]},
+	{"dx":"Back pain","ddx":["cauda equina syndrome","vertebral fracture","epidural abscess","diskitis"]},
+	{"dx":"Chest pain","ddx":["ACS","PE","aortic dissection","pneumothorax"]},
+	{"dx":"Dyspnea","ddx":["pneumonia","PE","pneumothorax","COPD exacerbation","asthma exacerbation"]},
+	{"dx":"Fever","ddx":["pneumonia","UTI","cellulitis","influenza","sepsis"]},
+	{"dx":"Headache","ddx":["subarachnoid hemorrhage","brain tumor","migraine headache"]},
+	{"dx":"Limb pain","ddx":["arterial occlusion","occult fracture","DVT"]},
+	{"dx":"Limb swelling","ddx":["DVT","CHF","cellulitis"]},
+	{"dx":"Pelvic pain","ddx":["ectopic pregnancy","ovarian torsion","PID","ruptured ovarian cyst"]},
+	{"dx":"Psychiatric problems","ddx":["suicidal ideation","acute psychosis","hypoglycemia","thyroid disorder","serotonin syndrome","drug use","drug overdose","PE","ACS","pheochromocytoma"]},
+	{"dx":"Rash","ddx":["RMSF","cellulitis","Stevens-Johnson","scarlet fever"]},
+	{"dx":"Sore thorat","ddx":["strep throat","mono","retropharyngeal abscess","peritonsillar abscess","acute HIV"]},
+	{"dx":"Urinary symptoms","ddx":["UTI","uncontrolled diabetes","STD","pyelonephritis","kidney stone","cancer"]},
+	{"dx":"Vaginal bleeding","ddx":["coagulopathy","ectopic pregnancy","threatened miscarriage","pregnancy complications"]}
+]}
+
+	
