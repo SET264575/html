@@ -78,12 +78,13 @@ Sepsis
         t = t + "<td class = 'td2'>";
         t = t + "<ul class = 'radiobutton'>";
         for (let j = 0; j < myObj.criteria[i].answers.length; j++) {
-          t = t + "<li>";
-          t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = 'criteria"+String(i)+"' ";
-          if (myObj.buttonWidth != undefined) {
+          t = t + "<li";
+                    if (myObj.buttonWidth != undefined) {
             console.log(myObj.buttonWidth, "in buttonWidth");
-            t = t + "style = 'width:"+myObj.buttonWidth+"px' ";
+            t = t + " style = 'width:"+myObj.buttonWidth+"px' ";
           }
+          t=t+">";
+          t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = 'criteria"+String(i)+"' ";
           t = t + myObj.criteria[i].answers[j].checked+" value = '"+myObj.criteria[i].answers[j].points + "' onclick = 'copytext()'/>";
           t = t + "<label for = 'criteria'" + String(i)+"-"+String(j)+">"+myObj.criteria[i].answers[j].text+'<br>+'+myObj.criteria[i].answers[j].points+"</label>";
           t = t + "</li>";
