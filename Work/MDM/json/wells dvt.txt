@@ -57,6 +57,6 @@
 	[
 		{"low":"-1","high":"1","pretext":"Wells' score for DVT = ","posttext":". The risk of DVT is low."},
 		{"low":"0","high":"3","pretext":"Wells' score for DVT = ","posttext":". The risk of DVT is moderate."},
-		{"low":"2","high":"100","pretext":"Wells' score for DVT = ","posttext":". The risk of DVT is high."},
+		{"low":"2","high":"100","pretext":"Wells' score for DVT = ","posttext":". The risk of DVT is high."}
 	]
 }
