@@ -82,9 +82,16 @@ Sepsis
         t = t + "<ul class = 'radiobutton'>";
         for (let j = 0; j < myObj.criteria[i].answers.length; j++) {
           t = t + "<li>";
-          t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = 'criteria"+String(i)+"' "+myObj.criteria[i].answers[j].checked+" value = '"+myObj.criteria[i].answers[j].points + "' onclick = 'copytext()'/>";
+          t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = 'criteria"+String(i)+"' ";
+          if (myObj.buttonWidth != undefined) {
+            t = t + "style = 'width:"+myObj.buttonWidth+"px' ";
+          }
+          t = t + myObj.criteria[i].answers[j].checked+" value = '"+myObj.criteria[i].answers[j].points + "' onclick = 'copytext()'/>";
           t = t + "<label for = 'criteria'" + String(i)+"-"+String(j)+">"+myObj.criteria[i].answers[j].text+'<br>+'+myObj.criteria[i].answers[j].points+"</label>";
           t = t + "</li>";
+          if (myObj.buttonLayout == "vertical") {
+            t = t + "<br>";
+          }
         }
         t = t + "</ul>";
         t = t + "</td>";
