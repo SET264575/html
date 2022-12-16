@@ -127,7 +127,22 @@ Sepsis
       let t = "";
       for (let i = 0; i<myObj.range.length; i++) {
         if (score > myObj.range[i].low && score < myObj.range[i].high) {
-          t = myObj.range[i].pretext + String(score) + myObj.range[i].posttext;
+          t = myObj.range[i].pretext + String(score);
+          if (myObj.listContributions) {
+                for (let i = 0; i < myObj.criteria.length; i++) {
+                  let result = parseInt(getRadioButtonValue('criteria'+String(i)));
+                  if (result > 0) {
+                    if (result == 1) {
+                      t = t + " 1 point for " + myObj.criteria[i].contributionText;
+                    }
+                    else {
+                      t = t + String(result) + "points for " + myObj.criteria[i].contributionText;
+                    }
+                  }
+                }
+         
+          }
+          t = t + myObj.range[i].posttext;
         }
       }
       return(t);
