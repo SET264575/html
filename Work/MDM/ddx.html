@@ -56,7 +56,7 @@ Sepsis
     function getObject(){
       reset();
       const xmlhttp = new XMLHttpRequest();
-      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj); displayHTML()};
+      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj)};
       xmlhttp.open("GET","json/ddx.txt");
       xmlhttp.send();
     }
