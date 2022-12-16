@@ -72,14 +72,14 @@
       }
       textarea {
         width: 600px;
-        height: 200px;
+        height: 150px;
       }
     </style>
   </head>
   <body>
     <div class="header">
       <h3>The following text has been copied to the clipboard and is ready to be pasted into your document.</h3>
-      <textarea id="text"></textarea>
+      <textarea style="margin: auto;" id="text"></textarea>
     </div>
 
     <div class="main">
@@ -90,7 +90,6 @@
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
       <div class="content" id = "div-ddx">
-        <h3>Differential diagnosis and Data review</h3>
 
       <h4>Chest pain</h4>
       <input type="checkbox">The differential diagnosis considered included life-threatening problems including ACS, pulmonary embolism and aortic dissection.</input><br>
@@ -104,15 +103,13 @@
 
       <button type="button" class="collapsible">Data Review</button>
       <div class="content" id = "div-datareview">
-        <h3>Data review</h3>
-        <input type = "checkbox">Testing was performed to help rule out these serious or life-threatening problems.</input><br>
-        <input type = "checkbox">Laboratory tests were unremarkable.</input><br>
-        <input type = "checkbox">Testing was not supportive of any serious or life-threatening problems.</input><br>
+        <button class="choicebutton">Testing was performed to help rule out these serious or life-threatening problems.</button><br>
+        <button class="choicebutton">Laboratory tests were unremarkable.</button><br>
+        <button class="choicebutton">Testing was not supportive of any serious or life-threatening problems.</button><br>
       </div><br>
 
       <button type="button" class="collapsible headingbutton">Independent Review of Studies</button>
       <div class="content" id = "div-independent">
-        <h3>Independent review of studies</h3>
         <button type = "button" class="collapsible subheadingbutton">My independent review of the EKG</button>
         <div class="content">
               <input type = "radio" name = "EKG">is documented in this note.</input><br>
@@ -162,17 +159,15 @@
       <div class="content" id = "div-dispo">
         <button type = "button" class="collapsible subheadingbutton">Shared-decision making</button>
         <div class="content">
-          <h4>Shared decision-making</h4>
           <input type = "checkbox">I discussed the options with the patient who agreed to admisison.</input><br>
           <input type = "checkbox">I have discussed the discharge plan as described below with the patient, who is in agreement with the plan.</input><br>
 
-          <h5>De-escalation of care</h5>
-          <input type = "checkbox">Due to the patient's poor prognosis, I have discussed de-escalation of care with the patient and/or their surrogates, who have decided</input><br>
+          <h4>De-escalation of care</h4>
           <button class="choicebutton">DNR</button>
           <button class="choicebutton">DNI</button>
           <button class="choicebutton">Hospice</button>
           <button class="choicebutton">Comfort care</button>
-          <button class="choicebutton">No more aggressive treatment than current being given</button>
+          <button class="choicebutton">No more aggressive treatment than currently being given</button>
 
 
 
@@ -203,19 +198,19 @@
           
         <input type = "checkbox">I have filled out a referral form</h4>
     <h5>Outpatient testing</h5>
-          <button class="choicebutton">Colonoscopy</button>
-          <button class="choicebutton">Upper Endoscopy</button>
-          <button class="choicebutton">Holter monitor</button>
-          <button class="choicebutton">Stress test</button>
-          <button class="choicebutton">EEG</button>
-          <button class="choicebutton">Gallbladder US</button>
-          <button class="choicebutton">Pelvic ultrasound</button>
-          <button class="choicebutton">CT chest</button>
-          <button class="choicebutton">CT abdomen & pelvis</button>
-          <button class="choicebutton">Duplex ultrasound RIGHT LEG</button>
-          <button class="choicebutton">Duplex ultrasound LEFT LEG</button>
-          <button class="choicebutton">Carotid duplex US</button>
-          <button class="choicebutton">Echo</button>
+          <button class="choicebutton">Colonoscopy</button><br>
+          <button class="choicebutton">Upper Endoscopy</button><br>
+          <button class="choicebutton">Holter monitor</button><br>
+          <button class="choicebutton">Stress test</button><br>
+          <button class="choicebutton">EEG</button><br>
+          <button class="choicebutton">Gallbladder US</button><br>
+          <button class="choicebutton">Pelvic ultrasound</button><br>
+          <button class="choicebutton">CT chest</button><br>
+          <button class="choicebutton">CT abdomen & pelvis</button><br>
+          <button class="choicebutton">Duplex ultrasound RIGHT LEG</button><br>
+          <button class="choicebutton">Duplex ultrasound LEFT LEG</button><br>
+          <button class="choicebutton">Carotid duplex US</button><br>
+          <button class="choicebutton">Echo</button><br>
     
   </div><br>
    <button type = "button" class="collapsible subheadingbutton">Admit</button>
@@ -225,7 +220,7 @@
   </div><br>
    <button type = "button" class="collapsible subheadingbutton">Transfer</button>
         <div class="content">
-        <h4>Transfer</h4>
+        <input type = "checkbox">The decision was made to transfer the patient due to the need for a higher level of care.  My discussion with the accepting physician is documented elsewhere in this note.</input>
   </div><br>
     </div><br>
 </div>
