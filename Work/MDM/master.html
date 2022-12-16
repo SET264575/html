@@ -45,13 +45,16 @@ Sepsis
       <p class="text" id='text'></p>
   </div>
   <script>
-    document.getElementById('score').innerHTML = "";
-    document.getElementById('smallscore').innerHTML = "";
-    document.getElementById('text').innerHTML = "";
+    function reset() {
+      document.getElementById('score').innerHTML = "";
+      document.getElementById('smallscore').innerHTML = "";
+      document.getElementById('text').innerHTML = "";
+    }
                              
     var myObj = {};
     
     function getObject(website){
+      reset();
       const xmlhttp = new XMLHttpRequest();
       xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj); displayHTML()};
       xmlhttp.open("GET",website);
