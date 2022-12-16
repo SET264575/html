@@ -74,7 +74,7 @@ Sepsis
         t = t + "<tr>";
         t = t + "<td class = 'td1'>";
         t = t + myObj.criteria[i].text;
-        if (myObj.criteria[i].hasOwnProperty('subtext')) {
+        if (myObj.criteria[i].subtext != undefined){
           t = t + '<br>'+myObj.criteria[i].subtext;
         }
         t = t + "</td>";
@@ -93,13 +93,6 @@ Sepsis
       t = t + "</table>";
       document.getElementById("table").innerHTML = t;
     }
-
-  /*  function getObject() {
-      const xmlhttp = new XMLHttpRequest();
-      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText);};
-      xmlhttp.open("GET","json/chadvasc.txt");
-      xmlhttp.send();
-    }*/
     
     function copytext() {
       var values = [];
