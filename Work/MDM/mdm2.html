@@ -105,21 +105,28 @@ Each <h4> would be a hidden until selected, multiple differential diagnoses coul
             <input type = "radio" name = "EKG">shows the EKG is nonspecific for ACS.</input><br>
             <input type = "radio" name = "EKG">shows the EKG is concerning for ACS.</input><br>
       </div>
-      <input type = "checkbox">My independent review of the chest x-ray</input><br>
-      <input type = "radio" name= "cxr">shows no acute pathology.</input><br>
-      <input type = "radio" name = "cxr">shows an infiltrate concerning for pneumonia.</input><br>
-      <input type = "radio" name = "cxr">shows a pneumothorax.</input><br>
-      <hr>
-      <input type = "checkbox">My independent review of the xrays</input><br>
-      <input type = "radio" name ="xray">shows no fracture or dislocation.</input><br>
-      <input type = "radio" name = "xray">shows a fracture.</input><br>
-      <input type = "radio" name = "xray">shows a dislocation.</input><br>
-      <hr>
-      <input type = "checkbox">My independent review of the CT</input><br>
-      <input type = "radio" name = "ct">shows no acute pathology.</input><br>
-      <input type = "radio" name = "ct">shows a kidney stone.</input><br>
-      <input type = "radio" name = "ct">shows diverticulitis.</input><br>
-      <input type = "radio" name = "ct">shows [ct result].</input><br>
+      <button type = "button" class="collapsible subheadingbutton">My independent review of the Chest X-ray</button>
+      <div class="content">
+        <input type = "checkbox">My independent review of the chest x-ray</input><br>
+        <input type = "radio" name= "cxr">shows no acute pathology.</input><br>
+        <input type = "radio" name = "cxr">shows an infiltrate concerning for pneumonia.</input><br>
+        <input type = "radio" name = "cxr">shows a pneumothorax.</input><br>
+      </div>
+      <button type = "button" class="collapsible subheadingbutton">My independent review of the xrays</button>
+        <div class="content">
+        <input type = "checkbox">My independent review of the xrays</input><br>
+        <input type = "radio" name ="xray">shows no fracture or dislocation.</input><br>
+        <input type = "radio" name = "xray">shows a fracture.</input><br>
+        <input type = "radio" name = "xray">shows a dislocation.</input><br>
+      </div>
+      <button type = "button" class="collapsible subheadingbutton">My independent review of the CT</button>
+      <div class="content">
+        <input type = "checkbox">My independent review of the CT</input><br>
+        <input type = "radio" name = "ct">shows no acute pathology.</input><br>
+        <input type = "radio" name = "ct">shows a kidney stone.</input><br>
+        <input type = "radio" name = "ct">shows diverticulitis.</input><br>
+        <input type = "radio" name = "ct">shows [ct result].</input><br>
+      </div>
     </div>
 
     <button type="button" class="collapsible headingbutton">Independent Clinician</button>
@@ -136,19 +143,28 @@ Each <h4> would be a hidden until selected, multiple differential diagnoses coul
     <button type="button" class="collapsible headingbutton">Disposition</button>
     <div class="content" id = "div-dispo">
       <h3>Disposition</h3>
-      <h4>Shared decision-making</h4>
+       <button type = "button" class="collapsible subheadingbutton">Shared-decision making</button>
+      <div class="content">
+        <h4>Shared decision-making</h4>
       <input type = "checkbox">I discussed the options with the patient who agreed to admisison.</input><br>
       <input type = "checkbox">I have discussed the discharge plan as described below with the patient, who is in agreement with the plan.</input><br>
-      <h5>De-escalation of care</h5>
+
+      <div class="content">
+        <h5>De-escalation of care</h5>
       <input type = "checkbox">Due to the patient's poor prognosis, I have discussed de-escalation of care with the patient and/or their surrogates, who have decided</input><br>
       <input type ="checkbox">the patient should be DNR</input><br>
       <input type = "checkbox">the patient should be hospice</input><br>
       <input type = "checkbox">the goal of treatment will be comfort care.</input><br>
       <input type = "checkbox">the patient should be DNI</input><br>
+ <button type = "button" class="collapsible subheadingbutton">Social determinants of health</button>
+      <div class="content">
       <h4>Social determinants of health</h4>
       <input type = "checkbox">There were social determinants of health which influenced my treatment plan, including</input><br>
       <input type = "checkbox">homelessness</input><br>
       <input type = "checkbox">lack of social support</input><br>
+</div>
+ <button type = "button" class="collapsible subheadingbutton">Discharge</button>
+      <div class="content">
       <h4>Follow up arrangement</h4>
   <h5>Referral</h5>
       <input type = "checkbox">I have referred the patient to </h4><br>
@@ -157,11 +173,16 @@ Each <h4> would be a hidden until selected, multiple differential diagnoses coul
       <input type = "checkbox">I have filled out a referral form</h4>
   <h5>Outpatient testing</h5>
   <input type = "checkbox">I have ordered an outpatient test.</input><br>
+</div>
+ <button type = "button" class="collapsible subheadingbutton">Admit</button>
+      <div class="content">
       <h4>Admit</h4>
       <input type = "checkbox">The decision was made to admit the patient.</input><br>
-      <h4>Discharge</h4>
-
+</div>
+ <button type = "button" class="collapsible subheadingbutton">Transfer</button>
+      <div class="content">
       <h4>Transfer</h4>
+</div>
     </div>
       <script>
         var coll = document.getElementsByClassName("collapsible");
