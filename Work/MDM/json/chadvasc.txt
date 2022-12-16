@@ -1,41 +1,41 @@
 {
 	"title":"CHA₂DS₂-VASc Score for Atrial Fibrillation Stroke Risk",
-	"listContributors":true,
+	"listContributions":true,
 	"criteria":
 	[
-		{"text":"Age","answers":[
+		{"text":"Age","contributionText":"age","answers":[
 			{"text":"<65","points":"0","checked":""},
 			{"text":"65-74","points":"1","checked":""},
 			{"text":">=75","points":"2","checked":""}
 						]
 		},
-		{"text":"Sex","answers":[
+		{"text":"Sex","contributionText":"sex","answers":[
 			{"text":"Male","points":"0","checked":""},
 			{"text":"Female","points":"1","checked":""}
 			]
 		},
-		{"text":"CHF History","answers":[
+		{"text":"CHF History","contributionText":"history of CHF","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Hypertension history","answers":[
+		{"text":"Hypertension history","history of hypertension","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Stroke/TIA/thromboembolism history","answers":[
+		{"text":"Stroke/TIA/thromboembolism history","contributionText":"history of thromboembolic event","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"2","checked":""}
 			]
 		},
-		{"text":"Vascular disease history","subtext":"(prior MI, peripheral artery disease, or aortic plaque)","answers":[
+		{"text":"Vascular disease history","subtext":"(prior MI, peripheral artery disease, or aortic plaque)","contributionText":"history of vascular disease","answers":[
 		
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Diabetes history","answers":[
+		{"text":"Diabetes history","contributionText":"history of diabetes","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
