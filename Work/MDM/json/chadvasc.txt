@@ -19,7 +19,7 @@
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Hypertension history","history of hypertension","answers":[
+		{"text":"Hypertension history","contributionText":"history of hypertension","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
