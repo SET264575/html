@@ -125,6 +125,7 @@ textarea {
 	padding-top: 25px;
 	padding-bottom: 15px;
 	white-space: normal;
+	text-align: left;
 }
 
 .smallscore {
