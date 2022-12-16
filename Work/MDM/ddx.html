@@ -10,25 +10,8 @@ parts contributing to score
   </head>
   <body>
     <div class = "header">
-      <button id="1" onclick="getObject('json/chadvasc.txt')">CHA₂DS₂-VASc</button><br>
-      <button id="2" onclick="getObject('json/curb65.txt')">CURB-65</button><br>
-      <button id="6" onclick="getObject('json/hasbled.txt')">HAS-BLED</button><br>
-      <button id="3" onclick="getObject('json/heart.txt')">HEART score</button><br>
-      <button id="7" onclick="getObject('json/psi.txt')">Pneumonia Severity Index</button><br>
-      <button id="4" onclick="getObject('json/wells dvt.txt')">Wells' score for DVT</button><br>
-      <button id="5" onclick="getObject('json/wells pe.txt')">Wells' score for PE</button><br>
-     <!--Others
-PECARN head trauma > 2
-PECARN head trauma < 2
-PERC
-gout rule
-acetaminophen overdose
-MELD
-NIH
-Pancreatitis
-PSI
-Sepsis
--->
+      <div id="ddx"></div>
+
     </div>
     <div class= "centered maincontent">
       <h3 id = "title"></h3><br>
@@ -52,6 +35,11 @@ Sepsis
     var myObj = {};
     getObject();
     console.log(myObj);
+    var t = "";
+    for (let i=0; i<myObj.length;i++) {
+      t = t + "<button onclick='showDDX("+String(i)+">"+myObj[i].dx+"</button">"; 
+    }
+    document.getElementById('ddx').innerHTML = t;
     
     function getObject(){
       reset();
