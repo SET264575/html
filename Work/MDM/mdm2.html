@@ -114,11 +114,11 @@
         <button class="sxbutton" onclick="showDDX()">Pelvic pain</button>
         
         <div class="content" name = "sx" id = "ddx-abdpain">
-          <button class="ddxbutton">Appendicitis</button>
-          <button class="ddxbutton">Cholecystitis</button>
-          <button class="ddxbutton">Diverticulitis</button>
-          <button class="ddxbutton">Pancreatitis</button>
-          <button class="ddxbutton">MI</button>
+          <button class="ddxbutton" onclick="check(this.id)">Appendicitis</button>
+          <button class="ddxbutton" onclick="check(this.id)">Cholecystitis</button>
+          <button class="ddxbutton" onclick="check(this.id)">Diverticulitis</button>
+          <button class="ddxbutton" onclick="check(this.id)">Pancreatitis</button>
+          <button class="ddxbutton" onclick="check(this.id)">MI</button>
         </div>
         
         <div class = "content" name = "sx"  id = "ddx-chestpain">
@@ -294,6 +294,16 @@
           
           document.getElementById(id).style.display = "block";
          }
+        
+        function check(id) {
+          document.getElementById(id).checked == !document.getElementById(id).checked;
+          if (document.getElementById(id).style.color == gray) {
+            document.getElementById(id).style.color = blue;
+          }
+          else {
+            document.getElementById(id).style.color = gray;
+          }
+        }
       </script>
 
   </body>
