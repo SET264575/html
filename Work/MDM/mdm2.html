@@ -2,12 +2,18 @@
   <head>
     <style>
       .header {
-        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        background-color: #f2f2f2;
         width: 100%;
         height: 300px;
         position: fixed;
         top: 0;
         left: 0;
+      }
+      
+      .main {
+        margin-top: 310px;
       }
       
       .collapsible {
@@ -37,7 +43,7 @@
         background-color: white;
       }
       .content:after {
-        content:"/A";
+        content:"\A";
       }
       
       .headingbutton {
@@ -77,123 +83,124 @@
       <textarea id="text"></textarea>
     </div>
 
-    
-    <button type="button" class="collapsible headingbutton">Patient Presentation</button>
-    <div class="content" id = "div-ptpresentation">
-      <input type = "checkbox">Data was reviewed from external sources as documented in the HPI.</input>    <br>
-    </div>
-      
-    <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
-    <div class="content" id = "div-ddx">
-      <h3>Differential diagnosis and Data review</h3>
-  
-    <h4>Chest pain</h4>
-    <input type="checkbox">The differential diagnosis considered included life-threatening problems including ACS, pulmonary embolism and aortic dissection.</input><br>
-    <h4>Abdominal pain</h4>
-    <input type = "checkbox">The differential diagnosis considered included life-threatening problems including pancreatitis, appendicitis, and diverticulitis.</input><br>
-    <h4>Pelvic pain</h4>
-    <h4>Headache</h4>
-    <h4>Back pain</h4>
-    <input type = "checkbox">The differential diagnosis considered included serious or life-threatening problems including cauda equina syndrome, epidural abscess, and vertebral fracture.</input><br>
-    </div>
-
-    <button type="button" class="collapsible">Data Review</button>
-    <div class="content" id = "div-datareview">
-      <h3>Data review</h3>
-      <input type = "checkbox">Testing was performed to help rule out these serious or life-threatening problems.</input><br>
-      <input type = "checkbox">Laboratory tests were unremarkable.</input><br>
-      <input type = "checkbox">Testing was not supportive of any serious or life-threatening problems.</input><br>
-    </div>
-
-    <button type="button" class="collapsible headingbutton">Independent Review of Studies</button>
-    <div class="content" id = "div-independent">
-      <h3>Independent review of studies</h3>
-      <button type = "button" class="collapsible subheadingbutton">My independent review of the EKG</button>
-      <div class="content">
-            <input type = "radio" name = "EKG">is documented in this note.</input><br>
-            <input type = "radio" name = "EKG">shows the EKG is normal.</input><br>
-            <input type = "radio" name = "EKG">shows the EKG is nonspecific for ACS.</input><br>
-            <input type = "radio" name = "EKG">shows the EKG is concerning for ACS.</input><br>
+    <div class="main">
+      <button type="button" class="collapsible headingbutton">Patient Presentation</button>
+      <div class="content" id = "div-ptpresentation">
+        <input type = "checkbox">Data was reviewed from external sources as documented in the HPI.</input>    <br>
       </div>
-      <button type = "button" class="collapsible subheadingbutton">My independent review of the Chest X-ray</button>
-      <div class="content">
-        <input type = "checkbox">My independent review of the chest x-ray</input><br>
-        <input type = "radio" name= "cxr">shows no acute pathology.</input><br>
-        <input type = "radio" name = "cxr">shows an infiltrate concerning for pneumonia.</input><br>
-        <input type = "radio" name = "cxr">shows a pneumothorax.</input><br>
+
+      <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
+      <div class="content" id = "div-ddx">
+        <h3>Differential diagnosis and Data review</h3>
+
+      <h4>Chest pain</h4>
+      <input type="checkbox">The differential diagnosis considered included life-threatening problems including ACS, pulmonary embolism and aortic dissection.</input><br>
+      <h4>Abdominal pain</h4>
+      <input type = "checkbox">The differential diagnosis considered included life-threatening problems including pancreatitis, appendicitis, and diverticulitis.</input><br>
+      <h4>Pelvic pain</h4>
+      <h4>Headache</h4>
+      <h4>Back pain</h4>
+      <input type = "checkbox">The differential diagnosis considered included serious or life-threatening problems including cauda equina syndrome, epidural abscess, and vertebral fracture.</input><br>
       </div>
-      <button type = "button" class="collapsible subheadingbutton">My independent review of the xrays</button>
+
+      <button type="button" class="collapsible">Data Review</button>
+      <div class="content" id = "div-datareview">
+        <h3>Data review</h3>
+        <input type = "checkbox">Testing was performed to help rule out these serious or life-threatening problems.</input><br>
+        <input type = "checkbox">Laboratory tests were unremarkable.</input><br>
+        <input type = "checkbox">Testing was not supportive of any serious or life-threatening problems.</input><br>
+      </div>
+
+      <button type="button" class="collapsible headingbutton">Independent Review of Studies</button>
+      <div class="content" id = "div-independent">
+        <h3>Independent review of studies</h3>
+        <button type = "button" class="collapsible subheadingbutton">My independent review of the EKG</button>
         <div class="content">
-        <input type = "checkbox">My independent review of the xrays</input><br>
-        <input type = "radio" name ="xray">shows no fracture or dislocation.</input><br>
-        <input type = "radio" name = "xray">shows a fracture.</input><br>
-        <input type = "radio" name = "xray">shows a dislocation.</input><br>
+              <input type = "radio" name = "EKG">is documented in this note.</input><br>
+              <input type = "radio" name = "EKG">shows the EKG is normal.</input><br>
+              <input type = "radio" name = "EKG">shows the EKG is nonspecific for ACS.</input><br>
+              <input type = "radio" name = "EKG">shows the EKG is concerning for ACS.</input><br>
+        </div>
+        <button type = "button" class="collapsible subheadingbutton">My independent review of the Chest X-ray</button>
+        <div class="content">
+          <input type = "checkbox">My independent review of the chest x-ray</input><br>
+          <input type = "radio" name= "cxr">shows no acute pathology.</input><br>
+          <input type = "radio" name = "cxr">shows an infiltrate concerning for pneumonia.</input><br>
+          <input type = "radio" name = "cxr">shows a pneumothorax.</input><br>
+        </div>
+        <button type = "button" class="collapsible subheadingbutton">My independent review of the xrays</button>
+          <div class="content">
+          <input type = "checkbox">My independent review of the xrays</input><br>
+          <input type = "radio" name ="xray">shows no fracture or dislocation.</input><br>
+          <input type = "radio" name = "xray">shows a fracture.</input><br>
+          <input type = "radio" name = "xray">shows a dislocation.</input><br>
+        </div>
+        <button type = "button" class="collapsible subheadingbutton">My independent review of the CT</button>
+        <div class="content">
+          <input type = "checkbox">My independent review of the CT</input><br>
+          <input type = "radio" name = "ct">shows no acute pathology.</input><br>
+          <input type = "radio" name = "ct">shows a kidney stone.</input><br>
+          <input type = "radio" name = "ct">shows diverticulitis.</input><br>
+          <input type = "radio" name = "ct">shows [ct result].</input><br>
+        </div>
       </div>
-      <button type = "button" class="collapsible subheadingbutton">My independent review of the CT</button>
-      <div class="content">
-        <input type = "checkbox">My independent review of the CT</input><br>
-        <input type = "radio" name = "ct">shows no acute pathology.</input><br>
-        <input type = "radio" name = "ct">shows a kidney stone.</input><br>
-        <input type = "radio" name = "ct">shows diverticulitis.</input><br>
-        <input type = "radio" name = "ct">shows [ct result].</input><br>
+
+      <button type="button" class="collapsible headingbutton">Independent Clinician</button>
+      <div class="content" id = "div-uri1">
+        <h3>Independent clinician</h3>
+        <input type = "checkbox">My discussion with an independent clinician is documented in this note.</input>
       </div>
-    </div>
 
-    <button type="button" class="collapsible headingbutton">Independent Clinician</button>
-    <div class="content" id = "div-uri1">
-      <h3>Independent clinician</h3>
-      <input type = "checkbox">My discussion with an independent clinician is documented in this note.</input>
-    </div>
+      <button type="button" class="collapsible headingbutton">Risk Stratification Tools</button>
+      <div class="content" id = "div-tools">
+        <h3>Risk stratification tools</h3>
+      </div>
 
-    <button type="button" class="collapsible headingbutton">Risk Stratification Tools</button>
-    <div class="content" id = "div-tools">
-      <h3>Risk stratification tools</h3>
-    </div>
+      <button type="button" class="collapsible headingbutton">Disposition</button>
+      <div class="content" id = "div-dispo">
+        <h3>Disposition</h3>
+        <button type = "button" class="collapsible subheadingbutton">Shared-decision making</button>
+        <div class="content">
+          <h4>Shared decision-making</h4>
+          <input type = "checkbox">I discussed the options with the patient who agreed to admisison.</input><br>
+          <input type = "checkbox">I have discussed the discharge plan as described below with the patient, who is in agreement with the plan.</input><br>
 
-    <button type="button" class="collapsible headingbutton">Disposition</button>
-    <div class="content" id = "div-dispo">
-      <h3>Disposition</h3>
-      <button type = "button" class="collapsible subheadingbutton">Shared-decision making</button>
-      <div class="content">
-        <h4>Shared decision-making</h4>
-        <input type = "checkbox">I discussed the options with the patient who agreed to admisison.</input><br>
-        <input type = "checkbox">I have discussed the discharge plan as described below with the patient, who is in agreement with the plan.</input><br>
-
-        <h5>De-escalation of care</h5>
-        <input type = "checkbox">Due to the patient's poor prognosis, I have discussed de-escalation of care with the patient and/or their surrogates, who have decided</input><br>
-        <input type ="checkbox">the patient should be DNR</input><br>
-        <input type = "checkbox">the patient should be hospice</input><br>
-        <input type = "checkbox">the goal of treatment will be comfort care.</input><br>
-        <input type = "checkbox">the patient should be DNI</input><br>
-</div>
- <button type = "button" class="collapsible subheadingbutton">Social determinants of health</button>
-      <div class="content">
-      <h4>Social determinants of health</h4>
-      <input type = "checkbox">There were social determinants of health which influenced my treatment plan, including</input><br>
-      <input type = "checkbox">homelessness</input><br>
-      <input type = "checkbox">lack of social support</input><br>
-</div>
- <button type = "button" class="collapsible subheadingbutton">Discharge</button>
-      <div class="content">
-      <h4>Follow up arrangement</h4>
-  <h5>Referral</h5>
-      <input type = "checkbox">I have referred the patient to </h4><br>
-      <input type = "checkbox">cardiology</input><br>
-      <input type = "checkbox">orthopedics</input><br>
-      <input type = "checkbox">I have filled out a referral form</h4>
-  <h5>Outpatient testing</h5>
-  <input type = "checkbox">I have ordered an outpatient test.</input><br>
-</div>
- <button type = "button" class="collapsible subheadingbutton">Admit</button>
-      <div class="content">
-      <h4>Admit</h4>
-      <input type = "checkbox">The decision was made to admit the patient.</input><br>
-</div>
- <button type = "button" class="collapsible subheadingbutton">Transfer</button>
-      <div class="content">
-      <h4>Transfer</h4>
-</div>
+          <h5>De-escalation of care</h5>
+          <input type = "checkbox">Due to the patient's poor prognosis, I have discussed de-escalation of care with the patient and/or their surrogates, who have decided</input><br>
+          <input type ="checkbox">the patient should be DNR</input><br>
+          <input type = "checkbox">the patient should be hospice</input><br>
+          <input type = "checkbox">the goal of treatment will be comfort care.</input><br>
+          <input type = "checkbox">the patient should be DNI</input><br>
+  </div>
+   <button type = "button" class="collapsible subheadingbutton">Social determinants of health</button>
+        <div class="content">
+        <h4>Social determinants of health</h4>
+        <input type = "checkbox">There were social determinants of health which influenced my treatment plan, including</input><br>
+        <input type = "checkbox">homelessness</input><br>
+        <input type = "checkbox">lack of social support</input><br>
+  </div>
+   <button type = "button" class="collapsible subheadingbutton">Discharge</button>
+        <div class="content">
+        <h4>Follow up arrangement</h4>
+    <h5>Referral</h5>
+        <input type = "checkbox">I have referred the patient to </h4><br>
+        <input type = "checkbox">cardiology</input><br>
+        <input type = "checkbox">orthopedics</input><br>
+        <input type = "checkbox">I have filled out a referral form</h4>
+    <h5>Outpatient testing</h5>
+    <input type = "checkbox">I have ordered an outpatient test.</input><br>
+  </div>
+   <button type = "button" class="collapsible subheadingbutton">Admit</button>
+        <div class="content">
+        <h4>Admit</h4>
+        <input type = "checkbox">The decision was made to admit the patient.</input><br>
+  </div>
+   <button type = "button" class="collapsible subheadingbutton">Transfer</button>
+        <div class="content">
+        <h4>Transfer</h4>
+  </div>
     </div>
+</div>
       <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
