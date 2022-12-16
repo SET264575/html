@@ -1,6 +1,6 @@
 {
 	"title":"HAS-BLED Score for Major Bleeding Risk",
-	"listContributions":true;
+	"listContributions":true,
 	"criteria":
 	[
 		{"text":"Hypertension: Uncontrolled, >160 mmHg systolic","contributionText":"uncontrolled hypertension","answers":[
