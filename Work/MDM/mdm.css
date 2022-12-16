@@ -26,6 +26,10 @@ body, centered {
 	color: gray;
 }
 
+.maincontent {
+	margin-left: 200px;
+}
+
 .radiobutton {
 	list-style-type: none;
 	margin: 25px 0 0 0;
