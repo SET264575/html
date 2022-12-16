@@ -1,6 +1,34 @@
 <html>
   <head>
     <style>
+      
+      .collapsible {
+        background-color: lightskyblue;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 1em;
+        font-family: Arial;
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .active, .collapsible:hover {
+        background-color: deepskyblue;
+      }
+
+      /* Style the collapsible content. Note: hidden by default */
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        margin: 20px;
+        background-color: white;
+      }
+      
       h4 {
         margin-left: 20px;
         color: blue;
@@ -19,14 +47,19 @@
     </style>
   </head>
   <body>
- <h3>The following text has been copied to the clipboard and is ready to be pasted into your document.</h3>
+    <h3>The following text has been copied to the clipboard and is ready to be pasted into your document.</h3>
     <textarea id="text"></textarea>
     
 <!-- Each <h3> 
 -->
-    <h3>Patient Presentation</h3>
-    <input type = "checkbox">Data was reviewed from external sources as documented in the HPI.</input>    <br>
-    <h3>Differential diagnosis and Data review</h3>
+    <button type="button" class="collapsible">Patient Presentation</button>
+    <div class="content" id = "div-ptpresentation">
+      <input type = "checkbox">Data was reviewed from external sources as documented in the HPI.</input>    <br>
+    </div>
+      
+    <button type="button" class="collapsible">Differential Diagnosis</button>
+    <div class="content" id = "div-ddx">
+      <h3>Differential diagnosis and Data review</h3>
   <!--
 Each <h4> would be a hidden until selected, multiple differential diagnoses could be selected
 -->
@@ -39,11 +72,17 @@ Each <h4> would be a hidden until selected, multiple differential diagnoses coul
     <h4>Headache</h4>
     <h4>Back pain</h4>
     <input type = "checkbox">The differential diagnosis considered included serious or life-threatening problems including cauda equina syndrome, epidural abscess, and vertebral fracture.</input><br>
+    </div>
 
+    <button type="button" class="collapsible">Data Review</button>
+    <div class="content" id = "div-datareview">
     <h3>Data review</h3>
     <input type = "checkbox">Testing was performed to help rule out these serious or life-threatening problems.</input><br>
     <input type = "checkbox">Laboratory tests were unremarkable.</input><br>
     <input type = "checkbox">Testing was not supportive of any serious or life-threatening problems.</input><br>
+</div<>
+    <button type="button" class="collapsible">Independent Review of Studies</button>
+    <div class="content" id = "div-independent">
     <h3>Independent review of studies</h3>
     <input type="checkbox">My independent review of the EKG</input><br>
     <input type = "radio" name = "EKG">is documented in this note.</input><br>
@@ -66,12 +105,19 @@ Each <h4> would be a hidden until selected, multiple differential diagnoses coul
     <input type = "radio" name = "ct">shows a kidney stone.</input><br>
     <input type = "radio" name = "ct">shows diverticulitis.</input><br>
     <input type = "radio" name = "ct">shows [ct result].</input><br>
-
+</div>
+    <button type="button" class="collapsible">Independent Clinician</button>
+    <div class="content" id = "div-uri1">
     <h3>Independent clinician</h3>
     <input type = "checkbox">My discussion with an independent clinician is documented in this note.</input>
-
+</div>
+    <button type="button" class="collapsible">Risk Stratification Tools</button>
+    <div class="content" id = "div-tools">
     <h3>Risk stratification tools</h3>
 
+</div>
+    <button type="button" class="collapsible">Disposition</button>
+    <div class="content" id = "div-dispo">
     <h3>Disposition</h3>
     <h4>Shared decision-making</h4>
     <input type = "checkbox">I discussed the options with the patient who agreed to admisison.</input><br>
@@ -99,8 +145,23 @@ Each <h4> would be a hidden until selected, multiple differential diagnoses coul
     <h4>Discharge</h4>
 
     <h4>Transfer</h4>
+</div>
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
 
-
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }    
+      </script>
 
   </body>
 </html>
