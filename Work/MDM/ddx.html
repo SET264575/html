@@ -1,0 +1,181 @@
+<!--
+Improvements:
+subtext
+parts contributing to score
+
+-->
+<html>
+  <head>
+    <link rel = 'stylesheet' href='mdm.css'>
+  </head>
+  <body>
+    <div class = "header">
+      <button id="1" onclick="getObject('json/chadvasc.txt')">CHA₂DS₂-VASc</button><br>
+      <button id="2" onclick="getObject('json/curb65.txt')">CURB-65</button><br>
+      <button id="6" onclick="getObject('json/hasbled.txt')">HAS-BLED</button><br>
+      <button id="3" onclick="getObject('json/heart.txt')">HEART score</button><br>
+      <button id="7" onclick="getObject('json/psi.txt')">Pneumonia Severity Index</button><br>
+      <button id="4" onclick="getObject('json/wells dvt.txt')">Wells' score for DVT</button><br>
+      <button id="5" onclick="getObject('json/wells pe.txt')">Wells' score for PE</button><br>
+     <!--Others
+PECARN head trauma > 2
+PECARN head trauma < 2
+PERC
+gout rule
+acetaminophen overdose
+MELD
+NIH
+Pancreatitis
+PSI
+Sepsis
+-->
+    </div>
+    <div class= "centered maincontent">
+      <h3 id = "title"></h3><br>
+      <div class= 'criterion'>
+        <p id = "table"></p>
+      </div>
+      <br>
+      <br>
+
+      <div class='score'>
+        <span id = "score"></span><span class="smallscore" id = "smallscore"></span>
+      </div>
+      <h4>The text below is copied to the clipboard and ready to be pasted into your document.</h4>
+      <p class="text" id='text'></p>
+  </div>
+  <script>
+    function reset() {
+
+    }
+                             
+    var myObj = {};
+    getObject();
+    console.log(myObj);
+    
+    function getObject(){
+      reset();
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj); displayHTML()};
+      xmlhttp.open("GET","json/ddx.txt");
+      xmlhttp.send();
+    }
+ //   const myObj ="";
+   // getObject();
+    //const myObj = JSON.parse(myJSON);
+    function displayHTML() {
+      var t = "";
+      document.getElementById("title").innerHTML = myObj.title;
+      t = t + "<table>";
+      for (let i = 0; i<myObj.criteria.length; i++) {
+        t = t + "<tr>";
+        t = t + "<td class = 'td1'>";
+        t = t + myObj.criteria[i].text;
+        if (myObj.criteria[i].subtext != undefined){
+          t = t + '<br><span class="subtext">'+myObj.criteria[i].subtext+'</span>';
+        }
+        t = t + "</td>";
+        t = t + "<td class = 'td2'>";
+        t = t + "<ul class = 'radiobutton'>";
+        for (let j = 0; j < myObj.criteria[i].answers.length; j++) {
+          t = t + "<li";
+                    if (myObj.buttonWidth != undefined) {
+            console.log(myObj.buttonWidth, "in buttonWidth");
+            t = t + " style = 'width:"+myObj.buttonWidth+"px' ";
+          }
+          t=t+">";
+          t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = 'criteria"+String(i)+"' ";
+          t = t + myObj.criteria[i].answers[j].checked+" value = '"+myObj.criteria[i].answers[j].points + "' onclick = 'copytext()'/>";
+          t = t + "<label for = 'criteria'" + String(i)+"-"+String(j)+">"+myObj.criteria[i].answers[j].text+'<br>+'+myObj.criteria[i].answers[j].points+"</label>";
+          t = t + "</li>";
+          if (myObj.buttonLayout == "vertical") {
+            t = t + "<br>";
+          }
+        }
+        t = t + "</ul>";
+        t = t + "</td>";
+        t = t + "</tr>";
+      }
+      t = t + "</table>";
+      document.getElementById("table").innerHTML = t;
+    }
+    
+    function copytext() {
+      var values = [];
+      var flag = true;
+      for (let i = 0; i < myObj.criteria.length; i++) {
+        let result = parseInt(getRadioButtonValue('criteria'+String(i)));
+        values.push(result);
+        if (result == -1) {
+          flag = false;
+        }
+      }
+      
+      if (flag) {
+        var score = 0;
+        for (let i = 0; i < myObj.criteria.length; i++) {
+          score = score + values[i];
+        }
+        t = getText(score);
+        document.getElementById('text').innerHTML = t;
+        document.getElementById('score').innerHTML = score;
+        if (score == 1) {
+          document.getElementById('smallscore').innerHTML = 'point';
+        }
+        else {
+          document.getElementById('smallscore').innerHTML = 'points';
+        }
+        navigator.clipboard.writeText(t);
+      }
+    }
+    
+    function getText(score) {
+      let t = "";
+      for (let i = 0; i<myObj.range.length; i++) {
+        if (score > parseInt(myObj.range[i].low) && score < parseInt(myObj.range[i].high)) {
+          t = myObj.range[i].pretext + String(score);
+          console.log(t);
+          var list = [];
+          if (myObj.listContributions) {
+                for (let j = 0; j < myObj.criteria.length; j++) {
+                  let result = parseInt(getRadioButtonValue('criteria'+String(j)));
+                  if (result > 0) {
+                    if (result == 1) {
+                      list.push(" 1 point for " + myObj.criteria[j].contributionText);
+                    }
+                    else {
+                      list.push(String(result) + " points for " + myObj.criteria[j].contributionText);
+                    }
+                  }
+                }
+                t = t + " with " + combineItems(list);
+          }
+          t = t + myObj.range[i].posttext;
+        }
+      }
+      return(t);
+    }
+    
+    function combineItems(list) {
+      var t = list[0];
+      for (let i = 1; i<list.length-1; i++) {
+        t = t + ", "+ list[i];
+      }
+      if (list.length>1) {
+        t = t + " and " + list[list.length-1];
+      }
+      return(t);
+    }
+
+    function getRadioButtonValue(name) {
+      var ele = document.getElementsByName(name);
+      for (let i = 0; i < ele.length; i++){
+        if (ele[i].checked){
+          return(ele[i].value);
+        }
+      }
+      return(-1);
+    }
+    </script>
+  </body>
+</html>
