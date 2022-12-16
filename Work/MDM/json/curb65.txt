@@ -1,6 +1,8 @@
 {
 	"title":"CURB-65",
-	"listContributions":true;
+	"listContributions":true,
+	"buttonWidth":100,
+	"buttonLayout":"horizontal",
 	"criteria":
 	[
 		{"text":"Confusion","contributionText":"confusion","answers":[
