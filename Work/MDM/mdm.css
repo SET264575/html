@@ -21,6 +21,11 @@ body, centered {
 	background-color: lightgray;
 }
 
+.subtext {
+	font-size: 12px;
+	color: gray;
+}
+
 .radiobutton {
 	list-style-type: none;
 	margin: 25px 0 0 0;
