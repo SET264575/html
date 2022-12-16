@@ -1,28 +1,29 @@
 {
 	"title":"CURB-65",
+	"listContributions":true;
 	"criteria":
 	[
-		{"text":"Confusion","answers":[
+		{"text":"Confusion","contributionText":"confusion","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"3","checked":""}
 			]
 		},
-		{"text":"BUN > 19 mg/dL","answers":[
+		{"text":"BUN > 19 mg/dL","contributionText":"elevated BUN","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"3","checked":""}
 			]
 		},
-		{"text":"Respiratory Rate ≥ 30","answers":[
+		{"text":"Respiratory Rate ≥ 30","contributionText":"tachypnea","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1.5","checked":""}
 			]
 		},
-		{"text":"Systolic BP < 90 mmHg or Diastolic BP ≤ 60 mmHg","answers":[
+		{"text":"Systolic BP < 90 mmHg or Diastolic BP ≤ 60 mmHg","contributionText":"hypotension","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1.5","checked":""}
 			]
 		},
-		{"text":"Age ≥ 65","answers":[
+		{"text":"Age ≥ 65","contributionText":"age ≥ 65","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1.5","checked":""}
 			]
