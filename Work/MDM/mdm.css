@@ -116,6 +116,17 @@ textarea {
 	vertical-align: center;
 }
 
+.text {
+	width: 480px;
+	height: 50px;
+	font-size: 16px;
+	margin-bottom: 30px;
+	margin-left: 20px;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	white-space: normal;
+}
+
 .smallscore {
   font-size: 16px;
   color: white;
