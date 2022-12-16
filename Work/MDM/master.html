@@ -126,7 +126,7 @@ Sepsis
     function getText(score) {
       let t = "";
       for (let i = 0; i<myObj.range.length; i++) {
-        if (score > myObj.range[i].low && score < myObj.range[i].high) {
+        if (score > parseInt(myObj.range[i].low) && score < parseInt(myObj.range[i].high)) {
           t = myObj.range[i].pretext + String(score);
           console.log(t);
           if (myObj.listContributions) {
@@ -141,7 +141,6 @@ Sepsis
                     }
                   }
                 }
-         
           }
           t = t + myObj.range[i].posttext;
         }
