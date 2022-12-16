@@ -32,8 +32,8 @@
 	"range":
 	[
 		{"low":"-1","high":"2","pretext":"CURB-65 = ","posttext":", putting the patient in the lowest risk group."},
-		{"low":"1","high":"3","pretext":"Wells' score for PE = ","posttext":", putting the patient in the moderate risk group.."},
-		{"low":"2","high":"4","pretext":"Wells' score for PE = ","posttext":", putting the patient in the severe risk group."},
-    {"low":"3","high":"100","pretext":"Wells' score for PE = ","posttext":", putting the patient in the highest risk group."}
+		{"low":"1","high":"3","pretext":"CURB-65 = ","posttext":", putting the patient in the moderate risk group.."},
+		{"low":"2","high":"4","pretext":"CURB-65 = ","posttext":", putting the patient in the severe risk group."},
+    		{"low":"3","high":"100","pretext":"CURB-65 = ","posttext":", putting the patient in the highest risk group."}
 	]
 }
