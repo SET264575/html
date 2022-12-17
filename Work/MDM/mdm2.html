@@ -151,11 +151,12 @@
     <div class="main">
       <button type="button" class="collapsible headingbutton">Patient Presentation</button>
       <div class="content show" id = "div-ptpresentation">
-        <input type = "radiobutton" onclick="copytext(this.id)">Data reviewed from external sources</input>    <br>
-        <input type = "radiobutton" onclick="copytext(this.id)">Additional historian required</input><br>
+        <input type = "radiobutton" onclick="check(this.id)">Data reviewed from external sources</input>    <br>
+        <input type = "radiobutton" onclick="check(this.id)">Additional historian required</input><br>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
+        
       <div class="content show" id = "div-ddx">
         <button class="sxbutton" onclick="showDDX('ddx-abdpain')">Abdominal pain</button>
         <button class="sxbutton"  onclick="showDDX('ddx-chestpain')">Chest pain</button>
@@ -164,6 +165,7 @@
         <button class="sxbutton" onclick="showDDX()">Pelvic pain</button>
         
         <div class="content" name = "sx" id = "ddx-abdpain">
+          <!--button class="ddxbutton" id="ddx-selectallabdpain" onclick="check('ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'>Select All</button-->
           <button class="ddxbutton" id="ddx-appendicitis" onclick="check(this.id)">Appendicitis</button>
           <button class="ddxbutton" id="ddx-cholecystitis" onclick="check(this.id)">Cholecystitis</button>
           <button class="ddxbutton" id="ddx-diverticulitis" onclick="check(this.id)">Diverticulitis</button>
@@ -193,25 +195,25 @@
       <button type="button" class="collapsible">Data Review</button>
       <div class="content show" id = "div-datareview">
         <h4>Tests ordered and reviewed:<h4>
-          <button class="choicebutton">Blood tests</button>
-          <button class="choicebutton">Urinalysis</button>
-          <button class="choicebutton">EKG</button>
-          <button class="choicebutton">Imaging</button>
+          <button class="choicebutton" name = "testsordered" value = "blood tests" onclick="check(this.id)">Blood tests</button>
+          <button class="choicebutton" name = "testsordered" value = "urine tests" onclick="check(this.id)">Urinalysis</button>
+          <button class="choicebutton" name = "testsordered" value = "EKG" onclick="check(this.id)">EKG</button>
+          <button class="choicebutton" name = "testsordered" value = "imaging" onclick="check(this.id)">Imaging</button>
           <br>
           
-        <button class="choicebutton">Testing was performed to help rule out these serious or life-threatening problems.</button><br>
-        <button class="choicebutton">Laboratory tests were unremarkable.</button><br>
-        <button class="choicebutton">Testing was not supportive of any serious or life-threatening problems.</button><br>
+        <button class="choicebutton" onclick="check(this.id)">Testing was performed to help rule out these serious or life-threatening problems.</button><br>
+        <button class="choicebutton" onclick="check(this.id)">Laboratory tests were unremarkable.</button><br>
+        <button class="choicebutton" onclick="check(this.id)">Testing was not supportive of any serious or life-threatening problems.</button><br>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Independent Review of Studies</button>
       <div class="content" id = "div-independent">
         <button type = "button" class="collapsible subheadingbutton">Independent review of the EKG</button>
         <div class="content">
-              <input type= "radio" name = "EKG">is documented in this note.</input><br>
-              <input type = "radio" name = "EKG">shows the EKG is normal.</input><br>
-              <input type = "radio" name = "EKG">shows the EKG is nonspecific for ACS.</input><br>
-              <input type = "radio" name = "EKG">shows the EKG is concerning for ACS.</input><br>
+              <input type= "radio" name = "EKG" onclick="check(this.id)">is documented in this note.</input><br>
+              <input type = "radio" name = "EKG" onclick="check(this.id)">shows the EKG is normal.</input><br>
+              <input type = "radio" name = "EKG" onclick="check(this.id)">shows the EKG is nonspecific for ACS.</input><br>
+              <input type = "radio" name = "EKG" onclick="check(this.id)">shows the EKG is concerning for ACS.</input><br>
         </div><br><br>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the Chest X-ray</button>
         <div class="content">
