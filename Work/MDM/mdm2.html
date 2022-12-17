@@ -176,11 +176,11 @@
         
         <div class="content" name = "sx" id = "ddx-abdpain">
           <!--button class="ddxbutton" id="ddx-selectallabdpain" onclick="check('ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'>Select All</button-->
-          <button class="ddxbutton" name = "ddxcondition" id="ddx-appendicitis" onclick="check(this.id)">Appendicitis</button>
-          <button class="ddxbutton" name = "ddxcondition" id="ddx-cholecystitis" onclick="check(this.id)">Cholecystitis</button>
-          <button class="ddxbutton" name = "ddxcondition" id="ddx-diverticulitis" onclick="check(this.id)">Diverticulitis</button>
-          <button class="ddxbutton" name = "ddxcondition" id="ddx-pancreatitis" onclick="check(this.id)">Pancreatitis</button>
-          <button class="ddxbutton" name = "ddxcondition" id="ddx-MI" onclick="check(this.id)">MI</button>
+          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-appendicitis" onclick="check(this.id)">Appendicitis</button>
+          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-cholecystitis" onclick="check(this.id)">Cholecystitis</button>
+          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-diverticulitis" onclick="check(this.id)">Diverticulitis</button>
+          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-pancreatitis" onclick="check(this.id)">Pancreatitis</button>
+          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-MI" onclick="check(this.id)">MI</button>
         </div>
         
         <div class = "content" name = "sx"  id = "ddx-chestpain">
@@ -350,28 +350,28 @@
         
         function showDDX(id) {
           var list = document.getElementsByName('sx');
-          
           for (let i = 0; i<list.length; i++) {
             list[i].style.display = 'none';
           }
           document.getElementById(id).style.display = "block";
           document.getElementById(id).checked = true;
-         }
-        
-        function check(list) {
-          var id = "";
-          for (let i = 0; i<list.length; i++) {
-            id = list[i];
-            console.log(id);
-            document.getElementById(id).checked == !document.getElementById(id).checked;
-            if (document.getElementById(id).style['background-color'] == 'lightgray') {
-              document.getElementById(id).style['background-color'] = 'lightblue';
-            }
-            else {
-              document.getElementById(id).style['background-color'] = 'lightgray';
-            }
-            var list = document.getElementsByTagName('checked');
+          var list2 = document.getElementsByName(id);
+          for (let i = 0; i<list2.length; i++) {
+            list2[i].checked = true;
           }
+        }
+        
+        function check(id) {
+          console.log(id);
+          document.getElementById(id).checked == !document.getElementById(id).checked;
+          if (document.getElementById(id).style['background-color'] == 'lightgray') {
+            document.getElementById(id).style['background-color'] = 'lightblue';
+          }
+          else {
+            document.getElementById(id).style['background-color'] = 'lightgray';
+          }
+          var list = document.getElementsByTagName('checked');
+
           
           var t = "";
           t = t + "[Patient Presentation]";
