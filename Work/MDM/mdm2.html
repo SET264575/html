@@ -92,6 +92,54 @@
         text-align: center;
         margin: auto;
       }
+      
+      .radiobutton {
+        list-style-type: none;
+        margin: 25px 0 0 0;
+        text-align: center;
+        padding: 0;
+      }
+
+      .radiobutton li {
+        float: left;
+        margin: 0 5px 0 0;
+        width: 100px;
+        height: 50px;
+        position: relative;
+      }
+
+      .radiobutton label,
+      .radiobutton input {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: lightgray;
+      }
+
+      .radiobutton input[type="radio"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+
+      .radiobutton input[type="radio"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
+
+      .radiobutton label {
+        padding: 5px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 90;
+      }
+
+      .radiobutton label:hover {
+        background-color:  gray;
+      }
     </style>
   </head>
   <body>
@@ -103,7 +151,7 @@
     <div class="main">
       <button type="button" class="collapsible headingbutton">Patient Presentation</button>
       <div class="content show" id = "div-ptpresentation">
-        <input type = "checkbox">Data was reviewed from external sources as documented in the HPI.</input>    <br>
+        <input type = "radiobutton" onclick="copytext()">Data reviewed from external sources</input>    <br>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
