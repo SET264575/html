@@ -419,11 +419,11 @@
         
         function combineItemsFromButtons(name) {
           var ele = document.getElementsByName(name);
+          console.log(ele);
           var list = [];
           for (let i = 0; i < ele.length; i++) {
             if (ele[i].checked) {
               list.push(ele[i].value);
-              console.log(ele[i].value);
             }
           }
           
