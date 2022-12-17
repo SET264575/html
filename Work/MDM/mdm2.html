@@ -154,11 +154,15 @@
       <textarea id="text"></textarea>
     </div>
 
-    <div class="main radiobutton">
+    <div class="main">
       <button type="button" class="collapsible headingbutton">Patient Presentation</button>
       <div class="content show" id = "div-ptpresentation">
-        <input type = "radio" class = "choicebutton" onclick="check(this.id)">Data reviewed from external sources</input>    <br>
-        <input type = "radio" class = "choicebutton" onclick="check(this.id)">Additional historian required</input><br>
+        <ul class="radiobutton">
+          <li>
+        <input type = "radio" class = "choicebutton" onclick="check(this.id)">Data reviewed from external sources</input>    <br></li>
+      <li>
+        <input type = "radio" class = "choicebutton" onclick="check(this.id)">Additional historian required</input><br></li>
+  </ul>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
