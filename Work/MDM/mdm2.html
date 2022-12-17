@@ -151,7 +151,8 @@
     <div class="main">
       <button type="button" class="collapsible headingbutton">Patient Presentation</button>
       <div class="content show" id = "div-ptpresentation">
-        <input type = "radiobutton" onclick="copytext()">Data reviewed from external sources</input>    <br>
+        <input type = "radiobutton" onclick="copytext(this.id)">Data reviewed from external sources</input>    <br>
+        <input type = "radiobutton" onclick="copytext(this.id)">Additional historian required</input><br>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
@@ -351,6 +352,50 @@
           else {
             document.getElementById(id).style.color = 'gray';
           }
+          var list = document.getElementsByTagName('checked');
+          var t = "";
+          t = t + "[Patient Presentation]";
+          t = t + "Data was reviewed from external sources as documented in the HPI. ";
+          t = t + "Additional historians were required as documented in the HPI. ";
+          t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
+          /* combine radiobuttons for differential diagnosis */
+          t = t + "\n\n";
+          t = t + "Data Review:\n";
+          t = t + "I ordered and reviewed tests, including ***, to help rule out these serious or life-threatening conditions. ";
+ 
+          
+          /* combine radiobuttons for tests */
+          t = t + "";
+          t =t + "The tests were unremarkable. ";
+          t = t + "The tests were not supportive of these conditions. ";
+          t = t + "\n\n";
+          t = t + "Independent review:";
+          t = t + "My independent review of the EKG is ***";
+          /* radiobutton result */
+          t = t + "My independent review of the chest x-ray ***";
+          /* radiobutton results */
+          t = t + "My independent review of the xrays ***";
+          /* */
+          t = t + "My independent review of the CT ***";
+          /* */
+          t = t + "My discussion was independent clinicians is documented in this note. ";
+          t = t + "\n\n";
+          t = t + "Risk Stratification: \n";
+          t = t + "HEART score = 4";
+          /* results of tools */
+          t = t + "\n\n";
+          t = t + "Disposition:\n ";
+          t = t + "I discussed the options with the patient who agreed with admission. ";
+          t = t + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided ***";
+          t = t + "My decision regarding treatment was affected by social determinants of health including ***";
+          t = t + "I referred the patient to [referral]. ";
+          t = t + "Outpatient tests I ordered include [tests] ";
+          t = t + "";
+          t = t + "";
+          
+          navigator.clipboard.writeText(t);
+          document.getElementById("text").innerHTML = t;
+          
         }
       </script>
 
