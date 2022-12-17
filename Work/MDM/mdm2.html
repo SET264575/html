@@ -43,12 +43,12 @@
       
       .choicebutton {
         height: 40px;
-        background-color: gray;
+        background-color: lightgray;
         border-radius: 5px;
         checked: false;
       }
       
-      .choicehutton:hover {
+      .choicebutton:hover {
         background-color: skyblue;
       }
       
@@ -272,11 +272,11 @@
   </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Social determinants of health</button>
         <div class="content">
-          <button class="choicebutton">Homelessness</button>
-          <button class="choicebutton">Lack of social support</button>
-          <button class="choicebutton">Food insecurity</button>
-          <button class="choicebutton">Lack of insurance</button>
-          <button class="choicebutton">Inability to obtain medications</button>
+          <button class="choicebutton" value = "homelessness" onclick="check(this.id)">Homelessness</button>
+          <button class="choicebutton" value = "lack of social support" onclick="check(this.id)">Lack of social support</button>
+          <button class="choicebutton" value = "food insecurity" onclick="check(this.id)">Food insecurity</button>
+          <button class="choicebutton" value = "lack of insurance" onclick="check(this.id)">Lack of insurance</button>
+          <button class="choicebutton" value = "inability to obtain medications" onclick="check(this.id)">Inability to obtain medications</button>
           
           
           
@@ -286,27 +286,28 @@
         <div class="content">
         <h4>Follow up arrangements</h4>
     <h5>Referral</h5>
-          <button class="choicebutton">Cardiology</button>
-          <button class="choicebutton">Orthopedics</button>
-          <button class="choicebutton">Gynecology</button>
-          <button class="choicebutton">a new PCP</button>
-          <button class="choicebutton">Endocrinology</button>
+          <button class="choicebutton" value = "cardiology" onclick="check(this.id)">Cardiology</button>
+          <button class="choicebutton" value = "orthopedics" onclick="check(this.id)">Orthopedics</button>
+          <button class="choicebutton" value = "gynecology" onclick="check(this.id)">Gynecology</button>
+          <button class="choicebutton"  value = "a new PCP" onclick="check(this.id)">a new PCP</button>
+          <button class="choicebutton" value = "endocrinology" onclick="check(this.id)">Endocrinology</button>
           
         <input type = "checkbox">I have filled out a referral form</h4>
     <h5>Outpatient testing</h5>
-          <button class="choicebutton">Colonoscopy</button><br>
-          <button class="choicebutton">Upper Endoscopy</button><br>
-          <button class="choicebutton">Holter monitor</button><br>
-          <button class="choicebutton">Stress test</button><br>
-          <button class="choicebutton">EEG</button><br>
-          <button class="choicebutton">Gallbladder US</button><br>
-          <button class="choicebutton">Pelvic ultrasound</button><br>
-          <button class="choicebutton">CT chest</button><br>
-          <button class="choicebutton">CT abdomen & pelvis</button><br>
-          <button class="choicebutton">Duplex ultrasound RIGHT LEG</button><br>
-          <button class="choicebutton">Duplex ultrasound LEFT LEG</button><br>
-          <button class="choicebutton">Carotid duplex US</button><br>
-          <button class="choicebutton">Echo</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "colonoscopy" onclick="check(this.id)">Colonoscopy</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "upper endoscopy" onclick="check(this.id)">Upper Endoscopy</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "Holter monitor" onclick="check(this.id)">Holter monitor</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "stress test" onclick="check(this.id)">Stress test</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "EEG" onclick="check(this.id)">EEG</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "gallbladder ultrasound" onclick="check(this.id)">Gallbladder US</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "pelvic ultrasound" onclick="check(this.id)">Pelvic ultrasound</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "CT chest" onclick="check(this.id)">CT chest</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "CT abdomen & pelvis" onclick="check(this.id)">CT abdomen & pelvis</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "duplex ultrasound of the right leg" onclick="check(this.id)">Duplex ultrasound RIGHT LEG</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "duplex ultrasound of the left leg" onclick="check(this.id)">Duplex ultrasound LEFT LEG</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "carotid duplex ultrasound" onclick="check(this.id)">Carotid duplex US</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "echocardiogram" onclick="check(this.id)">Echo</button><br>
+          <button class="choicebutton" name = "outpt testing" value = "[outpatient test]" onclick="check(this.id)">[    ]</button><br>
     
   </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Admit</button>
