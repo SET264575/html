@@ -366,10 +366,9 @@
           /* combine radiobuttons for differential diagnosis */
           t = t + "\n\n";
           t = t + "Data Review:\n";
-          t = t + "I ordered and reviewed tests, including ***, to help rule out these serious or life-threatening conditions. ";
- 
-          
-          /* combine radiobuttons for tests */
+          t = t + "I ordered and reviewed tests, including ";
+          t = t + combineItemsFromButtons('orderedtests');
+          t = t + ", to help rule out these serious or life-threatening conditions. 
           t = t + "";
           t =t + "The tests were unremarkable. ";
           t = t + "The tests were not supportive of these conditions. ";
@@ -401,6 +400,25 @@
           navigator.clipboard.writeText(t);
           document.getElementById("text").innerHTML = t;
           
+        }
+        
+        function combineItemsFromCheckedButtons(name) {
+          var ele = document.getElementsByName(name);
+          var list = [];
+          for (let i = 0; i < ele.length; i++) {
+            if (ele[i].checked) {
+              list.push(ele[i].value);
+            }
+          }
+          
+          var t = list[0];
+          for (let i = 1; i<list.length-1; i++) {
+            t = t + ", "+ list[i];
+          }
+          if (list.length>1) {
+            t = t + " and " + list[list.length-1];
+          }
+          return(t);
         }
       </script>
 
