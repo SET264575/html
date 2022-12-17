@@ -154,11 +154,11 @@
       <textarea id="text"></textarea>
     </div>
 
-    <div class="main">
+    <div class="main radiobutton">
       <button type="button" class="collapsible headingbutton">Patient Presentation</button>
       <div class="content show" id = "div-ptpresentation">
-        <input type = "radiobutton" onclick="check(this.id)">Data reviewed from external sources</input>    <br>
-        <input type = "radiobutton" onclick="check(this.id)">Additional historian required</input><br>
+        <input type = "radio" class = "choicebutton" onclick="check(this.id)">Data reviewed from external sources</input>    <br>
+        <input type = "radio" class = "choicebutton" onclick="check(this.id)">Additional historian required</input><br>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
@@ -216,30 +216,30 @@
       <div class="content" id = "div-independent">
         <button type = "button" class="collapsible subheadingbutton">Independent review of the EKG</button>
         <div class="content">
-              <input type= "radio" name = "EKG" onclick="check(this.id)">is documented in this note.</input><br>
-              <input type = "radio" name = "EKG" onclick="check(this.id)">shows the EKG is normal.</input><br>
-              <input type = "radio" name = "EKG" onclick="check(this.id)">shows the EKG is nonspecific for ACS.</input><br>
-              <input type = "radio" name = "EKG" onclick="check(this.id)">shows the EKG is concerning for ACS.</input><br>
+              <input type= "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">is documented in this note.</input><br>
+              <input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is normal.</input><br>
+              <input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is nonspecific for ACS.</input><br>
+              <input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is concerning for ACS.</input><br>
         </div><br><br>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the Chest X-ray</button>
         <div class="content">
-          <input type = "button" name= "cxr">no acute pathology.</input><br>
-          <input type = "button" name = "cxr">an infiltrate concerning for pneumonia.</input><br>
-          <input type = "button" name = "cxr">pneumothorax.</input><br>
-          <button name = "cxr">CHF</button><br>
+          <input type = "button"  class = "choicebutton" name= "cxr">no acute pathology.</input><br>
+          <input type = "button"  class = "choicebutton" name = "cxr">an infiltrate concerning for pneumonia.</input><br>
+          <input type = "button"  class = "choicebutton" name = "cxr">pneumothorax.</input><br>
+          <input type = "button"  class = "choicebutton" name = "cxr">CHF.</input><br>
         </div><br><br>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the xrays</button>
           <div class="content">
-          <input type = "radio" name ="xray">shows no fracture or dislocation.</input><br>
-          <input type = "radio" name = "xray">shows a fracture.</input><br>
-          <input type = "radio" name = "xray">shows a dislocation.</input><br>
+          <input type = "radio" class = "choicebutton" name ="xray">shows no fracture or dislocation.</input><br>
+          <input type = "radio" class = "choicebutton" name = "xray">shows a fracture.</input><br>
+          <input type = "radio" class = "choicebutton" name = "xray">shows a dislocation.</input><br>
         </div><br><br>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the CT</button>
         <div class="content">
-          <input type = "radio" name = "ct">shows no acute pathology.</input><br>
-          <input type = "radio" name = "ct">shows a kidney stone.</input><br>
-          <input type = "radio" name = "ct">shows diverticulitis.</input><br>
-          <input type = "radio" name = "ct">shows [ct result].</input><br>
+          <input type = "radio" class = "choicebutton" name = "ct">shows no acute pathology.</input><br>
+          <input type = "radio" class = "choicebutton" name = "ct">shows a kidney stone.</input><br>
+          <input type = "radio" class = "choicebutton" name = "ct">shows diverticulitis.</input><br>
+          <input type = "radio" class = "choicebutton" name = "ct">shows [ct result].</input><br>
         </div><br><br>
       </div><br><br>
 
