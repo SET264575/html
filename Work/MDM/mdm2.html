@@ -160,18 +160,18 @@
         
       <div class="content show" id = "div-ddx">
         <button class="sxbutton" onclick="showDDX('ddx-abdpain')">Abdominal pain</button>
-        <button class="sxbutton"  onclick="showDDX('ddx-chestpain')">Chest pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-chestpain')">Chest pain</button>
         <button class="sxbutton" onclick="showDDX('ddx-dyspnea')">Dyspnea</button>
         <button class="sxbutton" onclick="showDDX('ddx-headache')">Headache</button>
         <button class="sxbutton" onclick="showDDX()">Pelvic pain</button>
         
         <div class="content" name = "sx" id = "ddx-abdpain">
           <!--button class="ddxbutton" id="ddx-selectallabdpain" onclick="check('ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'>Select All</button-->
-          <button class="ddxbutton" id="ddx-appendicitis" onclick="check(this.id)">Appendicitis</button>
-          <button class="ddxbutton" id="ddx-cholecystitis" onclick="check(this.id)">Cholecystitis</button>
-          <button class="ddxbutton" id="ddx-diverticulitis" onclick="check(this.id)">Diverticulitis</button>
-          <button class="ddxbutton" id="ddx-pancreatitis" onclick="check(this.id)">Pancreatitis</button>
-          <button class="ddxbutton" id="ddx-MI" onclick="check(this.id)">MI</button>
+          <button class="ddxbutton" name = "ddxcondition" id="ddx-appendicitis" onclick="check(this.id)">Appendicitis</button>
+          <button class="ddxbutton" name = "ddxcondition" id="ddx-cholecystitis" onclick="check(this.id)">Cholecystitis</button>
+          <button class="ddxbutton" name = "ddxcondition" id="ddx-diverticulitis" onclick="check(this.id)">Diverticulitis</button>
+          <button class="ddxbutton" name = "ddxcondition" id="ddx-pancreatitis" onclick="check(this.id)">Pancreatitis</button>
+          <button class="ddxbutton" name = "ddxcondition" id="ddx-MI" onclick="check(this.id)">MI</button>
         </div>
         
         <div class = "content" name = "sx"  id = "ddx-chestpain">
@@ -343,7 +343,6 @@
           for (let i = 0; i<list.length; i++) {
             list[i].style.display = 'none';
           }
-          
           document.getElementById(id).style.display = "block";
           document.getElementById(id).checked = true;
          }
