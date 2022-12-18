@@ -154,6 +154,16 @@ social determinants of health buttons without name or id?
       .Checked+label {
         background: lightgreen;
       }
+      
+     .radiobutton input[type="checkbox"] {
+        opacity: 0.01;
+        ssdfadzz-index: 100;
+      }
+
+      .radiobutton input[type="checkbox"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
 
       .radiobutton label {
         padding: 5px;
@@ -179,9 +189,9 @@ social determinants of health buttons without name or id?
       <div class="content show" id = "div-ptpresentation">
         <ul class="radiobutton">
           <li>
-        <input type = "radio" id = "presentation1" class = "choicebutton" onclick="check(this.id)"><label for = "presentation1">Data reviewed from external sources</label>    <br></li>
+        <input type = "checkbox" id = "presentation1" class = "choicebutton" onclick="check(this.id)"><label for = "presentation1">Data reviewed from external sources</label>    <br></li>
       <li>
-        <input type = "radio" id = "presentation2" class = "choicebutton" onclick="check(this.id)"><label for = "presentation2">Additional historian required</label><br></li>
+        <input type = "checkbox" id = "presentation2" class = "choicebutton" onclick="check(this.id)"><label for = "presentation2">Additional historian required</label><br></li>
   </ul>
       </div><br><br>
 
@@ -196,11 +206,11 @@ social determinants of health buttons without name or id?
         
         <div class="content" name = "sx" id = "ddx-abdpain">
           <!--button class="ddxbutton" id="ddx-selectallabdpain" onclick="check('ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'>Select All</button-->
-          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-appendicitis" onclick="check(this.id)" value = "appendicitis">Appendicitis</button>
-          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-cholecystitis" onclick="check(this.id)" value = "cholecystitis">Cholecystitis</button>
-          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-diverticulitis" onclick="check(this.id)" value = "diverticulitis">Diverticulitis</button>
-          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-pancreatitis" onclick="check(this.id)" value = "pancreatitis">Pancreatitis</button>
-          <button class="ddxbutton" name = "ddx-abdpain" id="ddx-MI" onclick="check(this.id)" value = "MI">MI</button>
+          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-appendicitis" onclick="check(this.id)" value = "appendicitis"><label for="ddx-appendicitis">Appendicitis</label>
+          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-cholecystitis" onclick="check(this.id)" value = "cholecystitis"><label for = "ddx-cholecystitis">Cholecystitis</label>
+          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-diverticulitis" onclick="check(this.id)" value = "diverticulitis"><label for = "ddx-diverticulitis">Diverticulitis</label>
+          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-pancreatitis" onclick="check(this.id)" value = "pancreatitis"><label for = "ddx-pancreatitis">Pancreatitis</label>
+          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-MI" onclick="check(this.id)" value = "MI"><label for = "ddx-MI">MI</label>
         </div>
         
         <div class = "content" name = "sx"  id = "ddx-chestpain">
