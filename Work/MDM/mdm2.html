@@ -283,36 +283,38 @@ social determinants of health buttons without name or id?
         <button type = "button" class="collapsible subheadingbutton">Independent review of the Chest X-ray</button>
         <div class="content">
           <ul class = "radiobutton">
-            <li><input type = "radio"  class = "choicebutton" id = "cxr-1" name= "cxr" value = "no acute pathology."><label for = "cxr-1">No acute pathology</label><br></li>
-            <li><input type = "radio"  class = "choicebutton"  id = "cxr-2" name = "cxr" value = "pneumonia."><label for = "cxr-2">Pneumonia</label><br></li>
-            <li><input type = "radio"  class = "choicebutton"  id = "cxr-3" name = "cxr" value = "pneumothorax."><label for = "cxr-3">Pneumothorax</label><br></li>
-            <li><input type = "radio"  class = "choicebutton"  id = "cxr-4" name = "cxr" value = "CHF."><label for = "cxr-4">CHF</label><br></li>
+            <li><input type = "radio"  class = "choicebutton" id = "cxr-1" name= "cxr"  onclick="check(this.id)" value = "no acute pathology."><label for = "cxr-1">No acute pathology</label></li>
+            <li><input type = "radio"  class = "choicebutton"  id = "cxr-2" name = "cxr" onclick="check(this.id)"  value = "pneumonia."><label for = "cxr-2">Pneumonia</label></li>
+            <li><input type = "radio"  class = "choicebutton"  id = "cxr-3" name = "cxr"  onclick="check(this.id)"  value = "pneumothorax."><label for = "cxr-3">Pneumothorax</label></li>
+            <li><input type = "radio"  class = "choicebutton"  id = "cxr-4" name = "cxr" onclick="check(this.id)"  value = "CHF."><label for = "cxr-4">CHF</label></li>
           </ul>
         </div><br><br>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the xrays</button>
           <div class="content">
             <ul class="radiobutton">
-             <li> <input type = "radio" class = "choicebutton" id="xray-1" name ="xray" value = "shows no fracture or dislocation."><label for="xray-1">No fracture or dislocation</label></li><br>
-              <li><input type = "radio" class = "choicebutton" id="xray-2" name = "xray" value = "shows a fracture."><label for="xray-2">Fracture</label></li><br>
-              <li><input type = "radio" class = "choicebutton" id="xray-3" name = "xray" value = "shows a dislocation."><label for="xray-3">Dislocation</label></li><br>
-              <li><input type = "radio" class = "choicebutton" id="xray-4" name = "xray" value = "shows a foreign body in the soft tissues."><label for="xray-3">Foreign body</label></li><br>
+             <li> <input type = "radio" class = "choicebutton" id="xray-1" name ="xray"  onclick="check(this.id)" value = "shows no fracture or dislocation."><label for="xray-1">No fracture or dislocation</label></li><br>
+              <li><input type = "radio" class = "choicebutton" id="xray-2" name = "xray" onclick="check(this.id)" value = "shows a fracture."><label for="xray-2">Fracture</label></li><br>
+              <li><input type = "radio" class = "choicebutton" id="xray-3" name = "xray" onclick="check(this.id)" value = "shows a dislocation."><label for="xray-3">Dislocation</label></li><br>
+              <li><input type = "radio" class = "choicebutton" id="xray-4" name = "xray" onclick="check(this.id)" value = "shows a foreign body in the soft tissues."><label for="xray-3">Foreign body</label></li><br>
            
             </ul>
         </div><br><br>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the CT</button>
         <div class="content">
           <ul class="radiobutton">
-            <li><input type = "radio" class = "choicebutton" value = "shows no acute pathology." id = "ct-1" name = "ct"><label for = "ct-1">No acute pathology</label></li><br>
-            <li><input type = "radio" class = "choicebutton" value = "shows a ureteral stone." id = "ct-2" name = "ct"><label for = "ct-2">Ureteral stone</label></li><br>
-            <li><input type = "radio" class = "choicebutton" value = "shows diverticulitis." id = "ct-3" name = "ct"><label for = "ct-3">Diverticulitis.</label></li><br>
-           <li> <input type = "radio" class = "choicebutton" value = "shows [CT result]" id = "ct-4" name = "ct"><label for = "ct-4">[ct result].</label></li><br>
+            <li><input type = "radio" class = "choicebutton" id="ct-1" onclick="check(this.id)" value = "shows no acute pathology." id = "ct-1" name = "ct"><label for = "ct-1">No acute pathology</label></li><br>
+            <li><input type = "radio" class = "choicebutton" id="ct-2" onclick="check(this.id)" value = "shows a ureteral stone." id = "ct-2" name = "ct"><label for = "ct-2">Ureteral stone</label></li><br>
+            <li><input type = "radio" class = "choicebutton" id="ct-3" onclick="check(this.id)" value = "shows diverticulitis." id = "ct-3" name = "ct"><label for = "ct-3">Diverticulitis.</label></li><br>
+           <li> <input type = "radio" class = "choicebutton" id="ct-4" onclick="check(this.id)" value = "shows [CT result]" id = "ct-4" name = "ct"><label for = "ct-4">[ct result].</label></li><br>
           </ul>
         </div><br><br>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Independent Clinician</button>
       <div class="content show" id = "div-uri1">
-        <input type = "checkbox" id="clinician"><label>My discussion with an independent clinician is documented in this note.</label>
+        <ul class="radiobutton">
+        <li><input type = "checkbox" id="clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>
+        </ul>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Risk Stratification Tools</button>
