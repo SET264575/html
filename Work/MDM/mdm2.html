@@ -14,7 +14,6 @@ social determinants of health buttons without name or id?
 
 <html>
   <head>
-    <!--link rel="stylesheet" ahref="mdm.css"-->
     <style>
       .header {
         background-color: #f2f2f2;
@@ -147,7 +146,7 @@ social determinants of health buttons without name or id?
 
       .radiobutton input[type="radio"] {
         opacity: 0.01;
-        ssdfadzz-index: 100;
+        z-index: -1;
       }
 
       .radiobutton input[type="radio"]:checked+label,
@@ -157,7 +156,7 @@ social determinants of health buttons without name or id?
       
      .radiobutton input[type="checkbox"] {
         opacity: 0.01;
-        ssdfadzz-index: 100;
+        z-index: -1;
       }
 
       .radiobutton input[type="checkbox"]:checked+label,
@@ -170,7 +169,7 @@ social determinants of health buttons without name or id?
         border: 1px solid #CCC;
         border-radius: 5px;
         cursor: pointer;
-        hadskfhz-index: 90;
+        z-index: -1;
       }
 
       .radiobutton label:hover {
@@ -411,7 +410,6 @@ social determinants of health buttons without name or id?
           document.getElementById(id).style.display = "block";
           document.getElementById(id).checked = true;
           var list2 = document.getElementsByName(id);
-          console.log(list2);
           for (let i = 0; i<list2.length; i++) {
             list2[i].checked = true;
           }
@@ -439,7 +437,7 @@ social determinants of health buttons without name or id?
           }
           t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
           t = t + combineItemsFromButtons('ddx');
-          t = t + "\n\n";
+          t = t + ".\n\n";
           t = t + "Data Review:\n";
           t = t + "I ordered and reviewed tests, including ";
           t = t + combineItemsFromButtons('testsordered');
