@@ -363,15 +363,19 @@ Typos, grammar, punctuation
       <div class="content show" id = "div-uri1">
         <ul class="radiobutton">
         <li><input type = "checkbox" id="clinician1" name= "clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>       
+        </ul>
         <div>
           <hr>
         <h4>Admit</h4>
+          <ul class="radiobutton">
         <li><input type = "checkbox" id="petrie" name= "admitting" onclick="check(this.id)" value="Dr. Petrie"><label>Dr. Petrie</label></li>
         <li><input type = "checkbox" id="yuen" name= "admitting" onclick="check(this.id)" value="Dr. Yuen"><label>Dr. Yuen</label></li>
-          </div>
+          </ul>
+            </div>
           <hr>
           <div>
           <h4>Consult</h4>
+            <ul class="radiobutton">
           <h5>Cardiology</h5>
         <li><input type = "checkbox" id="baird" name= "consulting" onclick="check(this.id)" value="Dr. Baird"><label>Dr. Baird</label></li>
           
@@ -383,8 +387,8 @@ Typos, grammar, punctuation
           
           <h5>Ortho</h5>
         <li><input type = "checkbox" id="roberts" name= "consulting" onclick="check(this.id)" value="Dr. Roberts"><label>Dr. Roberts</label></li>
-          </div>
-        </ul>
+            </ul>
+        </div>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Risk Stratification Tools</button>
@@ -396,10 +400,7 @@ Typos, grammar, punctuation
       <div class="content show" id = "div-dispo">
         <button type = "button" class="collapsible subheadingbutton">Shared-decision making</button>
         <div class="content">
-          <ul class="radiobutton">
-          <li><input type = "checkbox" name= "agreeadmission" id = "agreeadmission" onclick="check(this.id)"><label for = "agreeadmission">I discussed the options with the patient who agreed to admisison.</label></li>
-          <li><input type = "checkbox" name= "agreedischarge" id = "agreedischarge" onclick ="check(this.id)"><label for = "agreedischarge">I have discussed the discharge plan as described below with the patient, who is in agreement with the plan.</label></li>
-        </ul>
+
           <div>
             <h4>De-escalation of care</h4>
             <ul class="radiobutton">
@@ -430,6 +431,11 @@ Typos, grammar, punctuation
   </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Discharge</button>
         <div class="content">
+          
+        <ul class="radiobutton">
+          <li><input type = "checkbox" name= "agreeadmission" id = "agreeadmission" onclick="check(this.id)"><label for = "agreeadmission">I discussed the options with the patient who agreed to admisison.</label></li>
+          <li><input type = "checkbox" name= "agreedischarge" id = "agreedischarge" onclick ="check(this.id)"><label for = "agreedischarge">I have discussed the discharge plan as described below with the patient, who is in agreement with the plan.</label></li>
+        </ul>
         <h4>Follow up arrangements</h4>
     <h5>Referral</h5>
           <ul class="radiobutton">
@@ -460,8 +466,9 @@ Typos, grammar, punctuation
         </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Admit</button>
         <div class="content">
-        <h4>Admit</h4>
-        <input type = "checkbox">The decision was made to admit the patient.</input><br>
+        <ul class="radiobutton">
+          <li><input type = "checkbox" name= "agreeadmission" id = "agreeadmission" onclick="check(this.id)"><label for = "agreeadmission">I discussed the options with the patient who agreed to admisison.</label></li>
+        </ul>
   </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Transfer</button>
         <div class="content">
