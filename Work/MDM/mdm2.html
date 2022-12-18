@@ -436,14 +436,13 @@ Typos, grammar, punctuation
    <button type = "button" class="collapsible subheadingbutton">Discharge</button>
         <div class="content">
           
-        <ul class="radiobutton">
-          <li><input type = "radio" name= "dischargedecisionmaking" id = "agreedischarge" onclick ="check(this.id)" value = "I discussed the discharge plan with the patient who expressed understanding and agreed with the plan. "><label for = "agreedischarge">Agreed discharge</label></li>
-          <li><input type = "radio" name= "dischargedecisionmaking" id = "wanteddischarge" onclick="check(this.id)"  value = "I offered admission, but the patient requested discharge.  "><label for = "wanteddischarge">Offered admission, pt wanted discharge</label></li>
-          <li><input type = "radio" name= "dischargedecisionmaking" id = "leftama" onclick="check(this.id)" value = "The patient left against medical advice.  If the patient returns to the ER, we will continue the evaluation. "><label for = "leftama">I discussed the options with the patient who agreed to admisison.</label></li>
+          <ul class="radiobutton">
+            <li><input type = "radio" name= "dischargedecisionmaking" id = "agreedischarge" onclick ="check(this.id)" value = "I discussed the discharge plan with the patient who expressed understanding and agreed with the plan. "><label for = "agreedischarge">Agreed discharge</label></li>
+            <li><input type = "radio" name= "dischargedecisionmaking" id = "wanteddischarge" onclick="check(this.id)"  value = "I offered admission, but the patient requested discharge.  "><label for = "wanteddischarge">Offered admission, pt wanted discharge</label></li>
+            <li><input type = "radio" name= "dischargedecisionmaking" id = "leftama" onclick="check(this.id)" value = "The patient left against medical advice.  If the patient returns to the ER, we will continue the evaluation. "><label for = "leftama">Left AMA</label></li>
 
-        </ul>
-        <h4>Follow up arrangements</h4>
-    <h5>Referral</h5>
+          </ul>
+          <h5>Referral</h5>
           <ul class="radiobutton">
             <li><input type = "checkbox" name = "referral" id = "referral-1"  class="choicebutton" value = "cardiology" onclick="check(this.id)"><label for = "referral-1">Cardiology</label></li>
             <li><input type = "checkbox" name = "referral" id = "referral-2"  class="choicebutton" value = "orthopedics" onclick="check(this.id)"><label for = "referral-2">Orthopedics</label></li>
@@ -452,7 +451,7 @@ Typos, grammar, punctuation
             <li><input type = "checkbox" name = "referral" id = "referral-5"  class="choicebutton" value = "endocrinology" onclick="check(this.id)"><label for = "referral-5">Endocrinology</label></li>
           </ul>
         
-    <h5>Outpatient testing</h5>
+          <h5>Outpatient testing</h5>
           <ul class="radiobutton">
             <li><input type = "checkbox" id="outpttest-blank"class="choicebutton" name = "outpt testing" value = "[outpatient test]" onclick="check(this.id)"><label for = "outpttest-blank">[    ]</label><br>
             <li><input type = "checkbox" id="outpttest-carotid"class="choicebutton" name = "outpt testing" value = "carotid duplex ultrasound" onclick="check(this.id)"><label for = "outpttest-carotid">Carotid duplex US</label><br>
