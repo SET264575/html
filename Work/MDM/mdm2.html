@@ -147,7 +147,7 @@ social determinants of health buttons without name or id?
 
       .radiobutton input[type="radio"] {
         opacity: 0.01;
-        zz-index: 100;
+        ssdfadzz-index: 100;
       }
 
       .radiobutton input[type="radio"]:checked+label,
@@ -249,10 +249,13 @@ social determinants of health buttons without name or id?
       <div class="content" id = "div-independent">
         <button type = "button" class="collapsible subheadingbutton">Independent review of the EKG</button>
         <div class="content">
-              <input type= "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">is documented in this note.</input><br>
-              <input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is normal.</input><br>
-              <input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is nonspecific for ACS.</input><br>
-              <input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is concerning for ACS.</input><br>
+          <ul class="radiobutton">
+              <li><input type= "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">is documented in this note.</input><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is normal.</input><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is nonspecific for ACS.</input><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is concerning for ACS.</input><br></li>
+         </ul>
+
         </div><br><br>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the Chest X-ray</button>
         <div class="content">
