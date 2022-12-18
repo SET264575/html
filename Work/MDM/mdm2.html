@@ -212,14 +212,14 @@ social determinants of health buttons without name or id?
         </div>
           
         <div class = "content" name = "sx"  id = "ddx-headache">
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia">>Subarachnoid hemorrhage</button>
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia">>Brain tumor</button>
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia">>Migraine headache</button>
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia">>Meningitis</button>
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia">>Subdural bleed</button>
+          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "subarachnoid hemorrhage">Subarachnoid hemorrhage</button>
+          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "brain tumor">Brain tumor</button>
+          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "migraine headache">Migraine headache</button>
+          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "meningitis">Meningitis</button>
+          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "subdural hematoma">Subdural hematoma</button>
         </div>
         
-        <div class = "content" name = "sx"  id = "ddx-headache">
+        <div class = "content" name = "sx"  id = "ddx-pelvicpain">
           <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-ectopic" onclick="check(this.id)" value = "ectopic pregnancy">ectopic pregnancy</button>
           <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-torsion" onclick="check(this.id)" value = "ovarian torsion">ovarian torsion</button>
           <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-ovariancyst" onclick="check(this.id)" value = "ovarian cyst">ovarian cyst/button>
@@ -232,11 +232,13 @@ social determinants of health buttons without name or id?
       <button type="button" class="collapsible">Data Review</button>
       <div class="content show" id = "div-datareview">
         <h4>Tests ordered and reviewed:<h4>
-          <input type = "radio" class="choicebutton" id = "datablood" name = "testsordered" value = "blood tests" onclick="check(this.id)"/><label>Blood tests</label>
-          <input type = "radio"  class="choicebutton" id = "dataua" name = "testsordered" value = "urine tests" onclick="check(this.id)"/><label>Urinalysis</label>
-          <input type = "radio"  class="choicebutton" id = "dataekg" name = "testsordered" value = "EKG" onclick="check(this.id)"/><label>EKG</label>
-          <input type = "radio"  class="choicebutton" id = "dataimaging" name = "testsordered" value = "imaging" onclick="check(this.id)"/><label>Imaging</label>
+          <ul class='radiobutton'>
+          <li><input type = "radio" class="choicebutton" id = "datablood" name = "testsordered" value = "blood tests" onclick="check(this.id)"/><label>Blood tests</label></li>
+          <li><input type = "radio"  class="choicebutton" id = "dataua" name = "testsordered" value = "urine tests" onclick="check(this.id)"/><label>Urinalysis</label></li>
+          <li><input type = "radio"  class="choicebutton" id = "dataekg" name = "testsordered" value = "EKG" onclick="check(this.id)"/><label>EKG</label></li>
+          <li><input type = "radio"  class="choicebutton" id = "dataimaging" name = "testsordered" value = "imaging" onclick="check(this.id)"/><label>Imaging</label></li>
           <br>
+          </ul>
           
         <input type = "radio"  class="choicebutton" onclick="check(this.id)"><label>Testing was performed to help rule out these serious or life-threatening problems.</label><br>
         <input type = "radio"  class="choicebutton" onclick="check(this.id)"><label>Laboratory tests were unremarkable.</label><br>
