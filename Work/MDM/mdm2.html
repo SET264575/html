@@ -387,12 +387,16 @@ ddx selected
 
           
           var t = "";
-          t = t + "[Patient Presentation]";
-          t = t + "Data was reviewed from external sources as documented in the HPI. ";
-          t = t + "Additional historians were required as documented in the HPI. ";
+          t = t + "[Patient Presentation]\n";
+          if (document.getElementById('presentation1').checked) {
+            t = t + " Data was reviewed from external sources as documented in the HPI. ";
+          }
+          if (document.getElementById('presentation2').checked) {
+            t = t + "Additional historians were required as documented in the HPI. ";
+          }
           t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
           t = t + combineItemsFromButtons('ddx-abdpain');
-          /* combine radiobuttons for differential diagnosis */
+          t = t + combineItemsFromButtons('ddx-chestpain');
           t = t + "\n\n";
           t = t + "Data Review:\n";
           t = t + "I ordered and reviewed tests, including ";
