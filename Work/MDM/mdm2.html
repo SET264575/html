@@ -314,23 +314,30 @@ Typos, grammar, punctuation
         <br><br>
         <button type="button" class="collapsible">Sepsis</button>
         <div class="content" id = "div-sepsis">
+          <div>
             <h4>SIRS criteria</h4>
           <ul class="radiobutton">
-              <li><input type = "radio"  class="choicebutton" id="sirs-fever" name = "sirs" onclick="check(this.id)" value = "fever"><label for = "sirs-fever">Fever</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sirs-tachycardia" name = "sirs" onclick="check(this.id)" value = "tachycardia"><label for = "sirs-tachycardia">Tachycardia</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sirs-tachypnea" name = "sirs" onclick="check(this.id)" value = "tachypnea"><label for = "sirs-tachypnea">Tachypnea</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-fever" name = "sirs" onclick="check(this.id)" value = "fever"><label for = "sirs-fever">Fever</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-tachycardia" name = "sirs" onclick="check(this.id)" value = "tachycardia"><label for = "sirs-tachycardia">Tachycardia</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-tachypnea" name = "sirs" onclick="check(this.id)" value = "tachypnea"><label for = "sirs-tachypnea">Tachypnea</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
           </ul>
+          </div>
           <br>
+          <div class="block">
           <h4>Lactate</h4>
           <ul class = "radiobutton">
               <li><input type = "radio"  class="choicebutton" id="lactate" name = "lactate" onclick="check(this.id)" value = "Lactate was elevated."><label for = "lactate">Lactate elevated</label></li>
           </ul>
+          </div>
+          <div class="block">
           <h4>Etiology</h4>
           <ul class = "radiobutton">
               <li><input type = "radio"  class="choicebutton" id="sepsis-pneumonia" name = "sepsis" onclick="check(this.id)" value = "pneumonia"><label for = "sepsis-pneumonia">pneumonia</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsis" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
           </ul>
+          </div>
+          <div class= "block">
           <h4>Treatment</h4>
           <ul class = "radiobutton">
               <li><input type = "radio"  class="choicebutton" id="sepsis-pneumonia" name = "sepsis" onclick="check(this.id)" value = "pneumonia"><label for = "sepsis-pneumonia">blood cultures</label></li>
@@ -339,6 +346,7 @@ Typos, grammar, punctuation
               <li><input type = "radio"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-UTI">[other abx]</label></li>
           
           </ul>
+        </div>
         </div>
             
          </div><br><br>
