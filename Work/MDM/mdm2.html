@@ -453,22 +453,32 @@ social determinants of health buttons without name or id?
           t =t + "The tests were unremarkable. ";
           t = t + "The tests were not supportive of these conditions. ";
           t = t + "\n\n";
-          t = t + "Independent review:";
-          t = t + "My independent review of the EKG is ***";
-          /* radiobutton result */
-          t = t + "My independent review of the chest x-ray ***";
-          /* radiobutton results */
-          t = t + "My independent review of the xrays ***";
-          /* */
-          t = t + "My independent review of the CT ***";
-          /* */
-          t = t + "My discussion was independent clinicians is documented in this note. ";
+          if (isAnyChecked("ekg") || isAnyChecked('cxr') || isAnyChecked("xray") || isAnyChecked("ct")) {
+            t = t + "Independent review:";
+          }
+          if (isAnyChecked('ekg')) {
+            t = t + "My independent review of the EKG is " + getRadioButtonValue('ekg');
+          }
+          if (isAnyChecked('cxr')) {
+            t = t + "My independent review of the chest x-ray " + getRadioButtonValue('cxr');
+          }
+          if (isAnyChecked('xray')) {
+            t = t + "My independent review of the xrays " + getRadioButtonValue('xray');
+          }
+          if (isAnyChecked('ct')) {
+            t = t + "My independent review of the CT " + getRadioButtonValue('ct');
+          }
+          if (isAnyChecked('clinician')) {
+            t = t + "My discussion was independent clinicians is documented in this note. ";
+          }
           t = t + "\n\n";
-          t = t + "Risk Stratification: \n";
           var iframe = document.getElementById("iframe");
           var test = iframe.contentWindow.document.getElementById('text').innerHTML;
-          t = t + test+"\n";
-          t = t + "\n\n";
+          if (text != undefined) {
+            t = t + "Risk Stratification: \n";
+            t = t + test+"\n";
+            t = t + "\n\n";
+          }
           t = t + "Disposition:\n ";
           t = t + "I discussed the options with the patient who agreed with admission. ";
           t = t + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided ***";
@@ -519,6 +529,16 @@ social determinants of health buttons without name or id?
           }
           return(t);
         }
+        
+              function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return('____________________');
+      }
       </script>
 
   </body>
