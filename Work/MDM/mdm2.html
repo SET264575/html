@@ -366,13 +366,14 @@ Typos, grammar
         <div class="content">
         <h4>Follow up arrangements</h4>
     <h5>Referral</h5>
-          <button class="choicebutton" value = "cardiology" onclick="check(this.id)">Cardiology</button>
-          <button class="choicebutton" value = "orthopedics" onclick="check(this.id)">Orthopedics</button>
-          <button class="choicebutton" value = "gynecology" onclick="check(this.id)">Gynecology</button>
-          <button class="choicebutton"  value = "a new PCP" onclick="check(this.id)">a new PCP</button>
-          <button class="choicebutton" value = "endocrinology" onclick="check(this.id)">Endocrinology</button>
-          
-        <input type = "checkbox">I have filled out a referral form</h4>
+          <ul class="radiobutton">
+            <li><input type = "checkbox" name = "referral" id = "referral-1"  class="choicebutton" value = "cardiology" onclick="check(this.id)"><label for = "referral-1">Cardiology</label></li>
+            <li><input type = "checkbox" name = "referral" id = "referral-2"  class="choicebutton" value = "orthopedics" onclick="check(this.id)"><label for = "referral-2">Orthopedics</label></li>
+            <li><input type = "checkbox" name = "referral" id = "referral-3"  class="choicebutton" value = "gynecology" onclick="check(this.id)"><label for = "referral-3">Gynecology</label></li>
+            <li><input type = "checkbox" name = "referral" id = "referral-4"  class="choicebutton"  value = "a new PCP" onclick="check(this.id)"><label for = "referral-4">a new PCP</label></li>
+            <li><input type = "checkbox" name = "referral" id = "referral-5"  class="choicebutton" value = "endocrinology" onclick="check(this.id)"><label for = "referral-5">Endocrinology</label></li>
+          </ul>
+        
     <h5>Outpatient testing</h5>
       <li><input type = "checkbox" id="outpttest-blank"class="choicebutton" name = "outpt testing" value = "[outpatient test]" onclick="check(this.id)"><label for = "outpttest-blank">[    ]</label><br>
       <li><input type = "checkbox" id="outpttest-carotid"class="choicebutton" name = "outpt testing" value = "carotid duplex ultrasound" onclick="check(this.id)"><label for = "outpttest-carotid">Carotid duplex US</label><br>
