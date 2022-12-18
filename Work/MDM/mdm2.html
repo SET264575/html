@@ -331,16 +331,18 @@ Typos, grammar
       <div class="content show" id = "div-dispo">
         <button type = "button" class="collapsible subheadingbutton">Shared-decision making</button>
         <div class="content">
-          <input type = "checkbox">I discussed the options with the patient who agreed to admisison.</input><br>
-          <input type = "checkbox">I have discussed the discharge plan as described below with the patient, who is in agreement with the plan.</input><br>
-
+          <ul class="radiobutton">
+          <li><input type = "checkbox" name= "agreeadmission" id = "agreeadmission" onclick="check(this.id)"><label for = "agreeadmission">I discussed the options with the patient who agreed to admisison.</label></li>
+          <li><input type = "checkbox" name= "agreedischarge" id = "agreedischarge" onclick ="check(this.id)"<label for = "agreedischarge">I have discussed the discharge plan as described below with the patient, who is in agreement with the plan.</label></li>
+        </ul>
+          
           <h4>De-escalation of care</h4>
           <ul class="radiobutton">
-          <button class="choicebutton">DNR</button>
-          <button class="choicebutton">DNI</button>
-          <button class="choicebutton">Hospice</button>
-          <button class="choicebutton">Comfort care</button>
-          <button class="choicebutton">No more aggressive treatment than currently being given</button>
+            <li><input type="checkbox" name = "deescalate-" id = "deescalate-dnr"  class="choicebutton" onclick="check(this.id)"><label for = "deescalate-dnr">DNR</label></li>
+            <li><input type="checkbox" name = "deescalate-" id = "deescalate-dni"  class="choicebutton" onclick="check(this.id)"><label for = "deescalate-dni">DNI</label></li>
+            <li><input type="checkbox" name = "deescalate-" id = "deescalate-hospice"  class="choicebutton" onclick="check(this.id)"><label for = "deescalate-hospice">Hospice</label></li>
+            <li><input type="checkbox" name = "deescalate-" id = "deescalate-comfort"  class="choicebutton" onclick="check(this.id)"><label for = "deescalate-comfort">Comfort care</label></li>
+            <li><input type="checkbox" name = "deescalate-" id = "deescalate-noaggressive"  class="choicebutton" onclick="check(this.id)"><label for = "deescalate-noaggressive">No more aggressive treatment than currently being given</label></li>
           </ul>
 
 
