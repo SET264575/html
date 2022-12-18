@@ -342,6 +342,24 @@ Typos, grammar, punctuation
       <div class="content show" id = "div-uri1">
         <ul class="radiobutton">
         <li><input type = "checkbox" id="clinician" name= "clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>
+        <hr>
+        <h4>Admit</h4>
+        <li><input type = "checkbox" id="petrie" name= "admitting" onclick="check(this.id)" value="Dr. Petrie"><label>Dr. Petrie/label></li>
+        <li><input type = "checkbox" id="yuen" name= "admitting" onclick="check(this.id)" value="Dr. Yuen"><label>Dr. Yuen</label></li>
+          <hr>
+          <h4>Consult</h4>
+          <h5>Cardiology</h5>
+        <li><input type = "checkbox" id="baird" name= "consulting" onclick="check(this.id)" value="Dr. Baird"><label>Dr. Baird/label></li>
+          
+          <h5>GI</h5>
+        <li><input type = "checkbox" id="llorens" name= "consulting" onclick="check(this.id)" value="Dr. Llorens"><label>Dr. Llorens/label></li>
+          
+          <h5>Neuro</h5>
+        <li><input type = "checkbox" id="malone" name= "consulting" onclick="check(this.id)" value="Dr. Malone"><label>Dr. Malone/label></li>
+          
+          <h5>Ortho</h5>
+        <li><input type = "checkbox" id="roberts" name= "consulting" onclick="check(this.id)" value="Dr. Roberts"><label>Dr. Roberts/label></li>
+
         </ul>
       </div><br><br>
 
@@ -504,6 +522,12 @@ Typos, grammar, punctuation
           }
           if (isAnyChecked('clinician')) {
             t = t + " My discussion with an independent clinician is documented in this note. ";
+          }
+          if (isAnyChecked('admitting')) {
+            t = t + " I discussed the case with " + combineItemsFromButton('admitting')+" who will admit the patient. ";
+          }
+          if (isAnyChecked('consulting')) {
+            t = t + " I discussed the case with " + combine ItemsFromButton('consulting') + " who will consult on the patient. ";
           }
           t = t + "\n\n";
           var iframe = document.getElementById("iframe");
