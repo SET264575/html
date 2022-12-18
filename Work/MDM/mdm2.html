@@ -447,13 +447,15 @@ Typos, grammar, punctuation
   </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Discharge</button>
         <div class="content">
-          
+          <div>
           <ul class="radiobutton">
             <li><input type = "radio" name= "dischargedecisionmaking" id = "agreedischarge" checked onclick ="check(this.id)" value = "I discussed the discharge plan with the patient who expressed understanding and agreed with the plan. "><label for = "agreedischarge">Agreed discharge</label></li>
             <li><input type = "radio" name= "dischargedecisionmaking" id = "wanteddischarge" onclick="check(this.id)"  value = "I offered admission, but the patient requested discharge.  "><label for = "wanteddischarge">Offered admission, pt wanted discharge</label></li>
             <li><input type = "radio" name= "dischargedecisionmaking" id = "leftama" onclick="check(this.id)" value = "The patient left against medical advice.  If the patient returns to the ER, we will continue the evaluation. "><label for = "leftama">Left AMA</label></li>
 
           </ul>
+          </div>
+          <div>
           <h5>Referral</h5>
           <ul class="radiobutton">
             <li><input type = "checkbox" name = "referral" id = "referral-1"  class="choicebutton" value = "cardiology" onclick="check(this.id)"><label for = "referral-1">Cardiology</label></li>
@@ -462,7 +464,8 @@ Typos, grammar, punctuation
             <li><input type = "checkbox" name = "referral" id = "referral-4"  class="choicebutton"  value = "a new PCP" onclick="check(this.id)"><label for = "referral-4">a new PCP</label></li>
             <li><input type = "checkbox" name = "referral" id = "referral-5"  class="choicebutton" value = "endocrinology" onclick="check(this.id)"><label for = "referral-5">Endocrinology</label></li>
           </ul>
-        
+          </div>
+          <div>
           <h5>Outpatient testing</h5>
           <ul class="radiobutton">
             <li><input type = "checkbox" id="outpttest-blank"class="choicebutton" name = "outpt testing" value = "[outpatient test]" onclick="check(this.id)"><label for = "outpttest-blank">[    ]</label></li>
@@ -480,6 +483,7 @@ Typos, grammar, punctuation
             <li><input type = "checkbox" id="outpttest-stress"class="choicebutton" name = "outpt testing" value = "stress test" onclick="check(this.id)"><label for = "outpttest-stress">Stress test</label></li>
             <li><input type = "checkbox" id="outpttest-egd"class="choicebutton" name = "outpt testing" value = "upper endoscopy" onclick="check(this.id)"><label for = "outpttest-egd">Upper Endoscopy</label></li>
           </ul>
+          </div>
         </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Admit</button>
         <div class="content">
