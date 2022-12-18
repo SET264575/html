@@ -8,6 +8,13 @@ shared decision making buttons
 de-escalation - buttons to text
 
 
+What do you want displayed/hidden?
+What do you want pre-checked?
+What additional selections do you want?
+Is there a different order of sections or choices?
+Is there a different layout?
+How is navigation, finding choices?
+Typos, grammar
 -->
 
 <html>
@@ -196,7 +203,7 @@ de-escalation - buttons to text
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
         
       <div class="content show" id = "div-ddx">
-        <button class="sxbutton" onclick="showDDX('ddx-abdpain')">Abdominal pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-abdpain',['ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'])">Abdominal pain</button>
         <button class="sxbutton" onclick="showDDX('ddx-chestpain')">Chest pain</button>
         <button class="sxbutton" onclick="showDDX('ddx-dyspnea')">Dyspnea</button>
         <button class="sxbutton" onclick="showDDX('ddx-headache')">Headache</button>
@@ -311,7 +318,7 @@ de-escalation - buttons to text
       <button type="button" class="collapsible headingbutton">Independent Clinician</button>
       <div class="content show" id = "div-uri1">
         <ul class="radiobutton">
-        <li><input type = "checkbox" id="clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>
+        <li><input type = "checkbox" id="clinician" name= "clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>
         </ul>
       </div><br><br>
 
@@ -406,14 +413,13 @@ de-escalation - buttons to text
           });
         }    
         
-        function showDDX(id) {
+        function showDDX(id,list2) {
           var list = document.getElementsByName('sx');
           for (let i = 0; i<list.length; i++) {
             list[i].style.display = 'none';
           }
           document.getElementById(id).style.display = "block";
           document.getElementById(id).checked = true;
-          var list2 = document.getElementsByName(id);
           for (let i = 0; i<list2.length; i++) {
             list2[i].checked = true;
           }
