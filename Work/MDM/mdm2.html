@@ -556,10 +556,10 @@ Typos, grammar, punctuation
             t = t + " My discussion with an independent clinician is documented in this note. ";
           }
           if (isAnyChecked('admitting')) {
-            t = t + " I discussed the case with " + combineItemsFromButton('admitting')+" who will admit the patient. ";
+            t = t + " I discussed the case with " + combineItemsFromButtons('admitting')+" who will admit the patient. ";
           }
           if (isAnyChecked('consulting')) {
-            t = t + " I discussed the case with " + combineItemsFromButton('consulting') + " who will consult on the patient. ";
+            t = t + " I discussed the case with " + combineItemsFromButtons('consulting') + " who will consult on the patient. ";
           }
           t = t + "\n\n";
           var iframe = document.getElementById("iframe");
