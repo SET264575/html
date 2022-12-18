@@ -356,6 +356,7 @@
           document.getElementById(id).style.display = "block";
           document.getElementById(id).checked = true;
           var list2 = document.getElementsByName(id);
+          console.log(list2);
           for (let i = 0; i<list2.length; i++) {
             list2[i].checked = true;
           }
