@@ -425,7 +425,7 @@ Typos, grammar
           document.getElementById(id).style.display = "block";
           document.getElementById(id).checked = true;
           for (let i = 0; i<list2.length; i++) {
-            list2[i].checked = true;
+            document.getElementById(list2[i]).checked = true;
             console.log(list2[i]);
           }
         }
