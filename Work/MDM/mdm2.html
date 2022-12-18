@@ -109,7 +109,7 @@
       .radiobutton li {
         float: left;
         margin: 0 5px 0 0;
-        width: 100px;
+        width: 300px;
         height: 50px;
         position: relative;
       }
@@ -161,7 +161,7 @@
           <li>
         <input type = "radio" id = "presentation1" class = "choicebutton" onclick="check(this.id)"><label for = "presentation1">Data reviewed from external sources</label>    <br></li>
       <li>
-        <input type = "radio" class = "choicebutton" onclick="check(this.id)">Additional historian required</input><br></li>
+        <input type = "radio" id = "presentation2" class = "choicebutton" onclick="check(this.id)"><label for = "presentation2">Additional historian required</label><br></li>
   </ul>
       </div><br><br>
 
@@ -379,6 +379,7 @@
           t = t + "Data was reviewed from external sources as documented in the HPI. ";
           t = t + "Additional historians were required as documented in the HPI. ";
           t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
+          t = t + combineItemsFromButtons('ddx-abdpain');
           /* combine radiobuttons for differential diagnosis */
           t = t + "\n\n";
           t = t + "Data Review:\n";
