@@ -26,7 +26,7 @@ social determinants of health buttons without name or id?
       }
       
       .main {
-        position: fixed;
+        position: fixed;  //test?
         margin-top: 310px;
       }
       
@@ -261,19 +261,24 @@ social determinants of health buttons without name or id?
         <button type = "button" class="collapsible subheadingbutton">Independent review of the EKG</button>
         <div class="content">
           <ul class="radiobutton">
-              <li><input type= "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">is documented in this note.</input><br></li>
-              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is normal.</input><br></li>
-              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is nonspecific for ACS.</input><br></li>
-              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)">shows the EKG is concerning for ACS.</input><br></li>
+              <li><input type= "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)" value="is documented in this note.">Documented</input><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)" value="shows the EKG is normal.">Normal.</input><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)" value = "shows the EKG is nonspecific for ACS.">Nonspecific for ACS.</input><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)" value = "shows the EKG is concerning for ACS.">Concerning for ACS.</input><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)" value = "shows STEMI.">STEMI</input><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = "EKG" onclick="check(this.id)" value = "shows atrial fibrillation with rapid ventricular rate.">A Fib with RVR</input><br></li>
+      
          </ul>
 
         </div><br><br>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the Chest X-ray</button>
         <div class="content">
-          <input type = "button"  class = "choicebutton" name= "cxr">no acute pathology.</input><br>
-          <input type = "button"  class = "choicebutton" name = "cxr">an infiltrate concerning for pneumonia.</input><br>
-          <input type = "button"  class = "choicebutton" name = "cxr">pneumothorax.</input><br>
-          <input type = "button"  class = "choicebutton" name = "cxr">CHF.</input><br>
+          <div class = "radiobutton">
+            <li><input type = "button"  class = "choicebutton" name= "cxr">no acute pathology.</input><br></li>
+            <li><input type = "button"  class = "choicebutton" name = "cxr">an infiltrate concerning for pneumonia.</input><br></li>
+            <li><input type = "button"  class = "choicebutton" name = "cxr">pneumothorax.</input><br></li>
+            <li><input type = "button"  class = "choicebutton" name = "cxr">CHF.</input><br></li>
+          </div>
         </div><br><br>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the xrays</button>
           <div class="content">
