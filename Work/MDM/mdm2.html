@@ -147,7 +147,7 @@ social determinants of health buttons without name or id?
 
       .radiobutton input[type="radio"] {
         opacity: 0.01;
-        z-index: 100;
+        zz-index: 100;
       }
 
       .radiobutton input[type="radio"]:checked+label,
@@ -232,15 +232,15 @@ social determinants of health buttons without name or id?
       <button type="button" class="collapsible">Data Review</button>
       <div class="content show" id = "div-datareview">
         <h4>Tests ordered and reviewed:<h4>
-          <button class="choicebutton" id = "datablood" name = "testsordered" value = "blood tests" onclick="check(this.id)">Blood tests</button>
-          <button class="choicebutton" id = "dataua" name = "testsordered" value = "urine tests" onclick="check(this.id)">Urinalysis</button>
-          <button class="choicebutton" id = "dataekg" name = "testsordered" value = "EKG" onclick="check(this.id)">EKG</button>
-          <button class="choicebutton" id = "dataimaging" name = "testsordered" value = "imaging" onclick="check(this.id)">Imaging</button>
+          <input type = "radio" class="choicebutton" id = "datablood" name = "testsordered" value = "blood tests" onclick="check(this.id)"/><label>Blood tests</label>
+          <input type = "radio"  class="choicebutton" id = "dataua" name = "testsordered" value = "urine tests" onclick="check(this.id)"/><label>Urinalysis</label>
+          <input type = "radio"  class="choicebutton" id = "dataekg" name = "testsordered" value = "EKG" onclick="check(this.id)"/><label>EKG</label>
+          <input type = "radio"  class="choicebutton" id = "dataimaging" name = "testsordered" value = "imaging" onclick="check(this.id)"/><label>Imaging</label>
           <br>
           
-        <button class="choicebutton" onclick="check(this.id)">Testing was performed to help rule out these serious or life-threatening problems.</button><br>
-        <button class="choicebutton" onclick="check(this.id)">Laboratory tests were unremarkable.</button><br>
-        <button class="choicebutton" onclick="check(this.id)">Testing was not supportive of any serious or life-threatening problems.</button><br>
+        <input type = "radio"  class="choicebutton" onclick="check(this.id)"><label>Testing was performed to help rule out these serious or life-threatening problems.</label><br>
+        <input type = "radio"  class="choicebutton" onclick="check(this.id)"><label>Laboratory tests were unremarkable.</label><br>
+        <input type = "radio"  class="choicebutton" onclick="check(this.id)"><label>Testing was not supportive of any serious or life-threatening problems.</label><br>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Independent Review of Studies</button>
