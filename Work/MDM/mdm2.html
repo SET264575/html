@@ -310,11 +310,11 @@ social determinants of health buttons without name or id?
   </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Social determinants of health</button>
         <div class="content">
-          <button class="choicebutton" value = "homelessness" onclick="check(this.id)">Homelessness</button>
-          <button class="choicebutton" value = "lack of social support" onclick="check(this.id)">Lack of social support</button>
-          <button class="choicebutton" value = "food insecurity" onclick="check(this.id)">Food insecurity</button>
-          <button class="choicebutton" value = "lack of insurance" onclick="check(this.id)">Lack of insurance</button>
-          <button class="choicebutton" value = "inability to obtain medications" onclick="check(this.id)">Inability to obtain medications</button>
+          <button class="choicebutton" name = "social" value = "homelessness" onclick="check(this.id)">Homelessness</button>
+          <button class="choicebutton" name = "social" value = "lack of social support" onclick="check(this.id)">Lack of social support</button>
+          <button class="choicebutton" name = "social" value = "food insecurity" onclick="check(this.id)">Food insecurity</button>
+          <button class="choicebutton" name = "social" value = "lack of insurance" onclick="check(this.id)">Lack of insurance</button>
+          <button class="choicebutton" name = "social" value = "inability to obtain medications" onclick="check(this.id)">Inability to obtain medications</button>
           
           
           
@@ -440,7 +440,9 @@ social determinants of health buttons without name or id?
           t = t + "Disposition:\n ";
           t = t + "I discussed the options with the patient who agreed with admission. ";
           t = t + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided ***";
-          t = t + "My decision regarding treatment was affected by social determinants of health including ***";
+          if (isAnyChecked('social')){
+            t = t + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social');
+          }
           if (isAnyChecked('referral')) {
             t = t + "I referred the patient to " + combineItemsFromButtons('referral') + '.';
           }
