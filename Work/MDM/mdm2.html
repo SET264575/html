@@ -497,14 +497,20 @@ Typos, grammar, punctuation
             t = t + combineItemsFromButtons('ddx') + ". ";
           }
           t = t + "\n\n";
-          t = t + "Data Review:\n";
-          t = t + "I ordered and reviewed tests, including ";
-          t = t + combineItemsFromButtons('testsordered');
-          t = t + ", to help rule out these serious or life-threatening conditions. ";
-          t = t + "";
-          t =t + "The tests were unremarkable. ";
-          t = t + "The tests were not supportive of these conditions. ";
-          t = t + "\n\n";
+          if (isAnyChecked('testsordered')) {
+              t = t + "Data Review:\n";
+              t = t + "I ordered and reviewed tests, including ";
+              t = t + combineItemsFromButtons('testsordered');
+              t = t + ", to help rule out these serious or life-threatening conditions. ";
+
+            if (isAnyChecked('unremarkable')) {
+              t =t + "The tests were unremarkable. ";
+            }
+            if (isAnyChecked("notsupportive")) {
+              t = t + "The tests were not supportive of these conditions. ";
+            }
+            t = t + "\n\n";
+          }
           if (isAnyChecked("ekg") || isAnyChecked('cxr') || isAnyChecked("xray") || isAnyChecked("ct")) {
             t = t + "Independent review:";
           }
