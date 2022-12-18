@@ -198,10 +198,24 @@ Typos, grammar
         
       <div class="content show" id = "div-ddx">
         <button class="sxbutton" onclick="showDDX('ddx-abdpain',['ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'])">Abdominal pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-arthralgias',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">***Arthralgias</button>
+        
+        <button class="sxbutton" onclick="showDDX('ddx-backpain',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">***Back pain</button>
+        
         <button class="sxbutton" onclick="showDDX('ddx-chestpain',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">Chest pain</button>
         <button class="sxbutton" onclick="showDDX('ddx-dyspnea',['ddx-pneumonia','ddx-pe','ddx-pneumothorax','ddx-copd','ddx-CHF'])">Dyspnea</button>
+        <button class="sxbutton" onclick="showDDX('ddx-fever',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">***Fever</button>
         <button class="sxbutton" onclick="showDDX('ddx-headache',['ddx-subarachnoidhemorrhage','ddx-braintumor','ddx-subduralhematoma','ddx-migraine','ddx-meningitis'])">Headache</button>
+        <button class="sxbutton" onclick="showDDX('ddx-limbpain',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">***Limb pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-limbswelling',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">***Limb swelling</button>
+        
+        
         <button class="sxbutton" onclick="showDDX('ddx-pelvicpain',['ddx-torsion','ddx-ectopic','ddx-ovariancyst','ddx-pid','ddx-appendicitis'])">Pelvic pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-psych',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">***Psychiatric problems</button>
+        <button class="sxbutton" onclick="showDDX('ddx-rash',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">***Rash</button>
+        <button class="sxbutton" onclick="showDDX('ddx-sorethroat',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">***Sore throat</button>
+        <button class="sxbutton" onclick="showDDX('ddx-vaginalbleeding',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia')">***Vaginal bleeding</button>
+        
         
         <ul class="radiobutton">
           <div class="content" name = "sx" id = "ddx-abdpain">
@@ -450,9 +464,11 @@ Typos, grammar
           if (document.getElementById('presentation2').checked) {
             t = t + "Additional historians were required as documented in the HPI. ";
           }
-          t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
-          t = t + combineItemsFromButtons('ddx');
-          t = t + ".\n\n";
+          if (isAnyChecked('ddx')) {
+            t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
+            t = t + combineItemsFromButtons('ddx') + ". ";
+          }
+          t = t + "\n\n";
           t = t + "Data Review:\n";
           t = t + "I ordered and reviewed tests, including ";
           t = t + combineItemsFromButtons('testsordered');
