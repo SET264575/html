@@ -195,6 +195,12 @@ Typos, grammar, punctuation
       .sxbutton {
         width: 200px;
       }
+      
+      .note {
+        background-color: lightyellow;
+        border: 1px solid red;
+        color: red;
+      }
     </style>
   </head>
   <body>
@@ -212,6 +218,10 @@ Typos, grammar, punctuation
       <li>
         <input type = "checkbox" id = "presentation2" class = "choicebutton" onclick="check(this.id)"><label for = "presentation2">Additional historian required</label><br></li>
   </ul>
+        <div class="note">
+          <pre>
+          A summary of the patient presentation itself will need to be dictated before everything else is pasted in.
+          </pre></div>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
@@ -287,7 +297,12 @@ Typos, grammar, punctuation
             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
           </ul>
           </div>
-        
+        <div class="note">
+          <pre>
+          Selecting a symptom will pull up a list of differential diagnoses.  Some may be preselected.  Symptoms with *** do not yet have a differential list.
+          Suggestions for other symptoms or diagnoses would be helpful.
+                    </pre>
+        </div>
      </div><br><br>
 
       <button type="button" class="collapsible">Data Review</button>
@@ -315,6 +330,11 @@ Typos, grammar, punctuation
             
             </ul>
           </div>
+        <div class= "note">
+          <pre>
+          Interpretation of tests needs some work.  Suggestions would be helpful.
+          </pre>
+        </div>
         <br><br>
         <button type="button" class="collapsible">Sepsis</button>
         <div class="content" id = "div-sepsis">
@@ -362,6 +382,7 @@ Typos, grammar, punctuation
               <li><input type = "radio"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-UTI">[other abx]</label></li>
             </ul>
         </div>
+          <div class="note"><pre>Sepsis is not yet functional.  Other specific diagnoses, such as stroke, might need its own section.</pre></div>
         </div>
             
          </div><br><br>
@@ -370,6 +391,7 @@ Typos, grammar, punctuation
       <div class="content" id = "div-independent">
         <button type = "button" class="collapsible subheadingbutton">Independent review of the EKG</button>
         <div class="content">
+          <div class="note"><pre>Other interpretations would be helpful.</pre></div>
           <ul class="radiobutton">
               <li><input type= "radio"  class = "choicebutton" name = 'ekg' id = "ekg-1" name = "EKG" onclick="check(this.id)" value="is documented in this note."><label for = "ekg-1">Documented</label><br></li>
               <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-2" name = "EKG" onclick="check(this.id)" value="shows the EKG is normal."><label for = "ekg-2">Normal.</label><br></li>
