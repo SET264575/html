@@ -1,7 +1,9 @@
 <!--
 add more ddx
+  subsections for abd quadrants
 add more consultants
 sepsis
+[]
 
 
 What do you want displayed/hidden?
@@ -236,6 +238,8 @@ Typos, grammar, punctuation
              <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-diverticulitis" onclick="check(this.id)" value = "diverticulitis"><label for = "ddx-diverticulitis">Diverticulitis</label></li>
              <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-pancreatitis" onclick="check(this.id)" value = "pancreatitis"><label for = "ddx-pancreatitis">Pancreatitis</label></li>
             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-MI" onclick="check(this.id)" value = "MI"><label for = "ddx-MI">MI</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
+            
           </div>
 
           <div class = "content" name = "sx"  id = "ddx-chestpain">
@@ -244,6 +248,7 @@ Typos, grammar, punctuation
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-aorticdissection" onclick="check(this.id)" value = "aortic dissection"><label for="ddx-aorticdissection">Aortic dissection</label></li>
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax"><label for="ddx-pneumothorax">Pneumothorax</label></li>
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia"><label for="ddx-pneumonia">Pneumonia</label></li>
+             <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
           </div>
           
           <div class="content" name = "sx" id = "ddx-dyspnea">
@@ -252,6 +257,7 @@ Typos, grammar, punctuation
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax"><label for="ddx-pneumothorax">Pneumothorax</label></li>
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-CHF" onclick="check(this.id)" value = "CHF"><label for="ddx-CHF">CHF</label></li>
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-copd" onclick="check(this.id)" value = "COPD"><label for="ddx-copd">COPD</label></li>
+             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
           </div>
           
           <div class = "content" name = "sx"  id = "ddx-headache">
@@ -260,6 +266,7 @@ Typos, grammar, punctuation
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx-headache" id="ddx-migraine" onclick="check(this.id)" value = "migraine headache"><label for="ddx-migraine">Migraine headache</label></li>
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx-headache" id="ddx-meningitis" onclick="check(this.id)" value = "meningitis"><label for="ddx-meningitis">Meningitis</label></li>
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx-headache" id="ddx-subdural hematoma" onclick="check(this.id)" value = "subdural hematoma"><label for="ddx-subduralhematoma">Subdural hematoma</label></li>
+             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
           </div>
 
           <div class = "content" name = "sx"  id = "ddx-pelvicpain">
@@ -268,6 +275,7 @@ Typos, grammar, punctuation
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx-pelvicpain" id="ddx-ovariancyst" onclick="check(this.id)" value = "ovarian cyst"><label for="ddx-ovariancyst">ovarian cyst</label></li>
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx-pelvicpain" id="ddx-pid" onclick="check(this.id)" value = "pelvic inflammatory disease"><label for="ddx-pid">PID</label></li>
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx-pelvicpain" id="ddx-appendicitis2" onclick="check(this.id)" value = "appendicitis"><label for="ddx-appendicitis2">appendicitis</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
           </ul>
           </div>
         
@@ -278,19 +286,21 @@ Typos, grammar, punctuation
         <div>
           <h4>Tests ordered and reviewed:</h4>
           <ul class='radiobutton'>
-            <li><input type = "checkbox" class="choicebutton" id = "datablood" name = "testsordered" value = "laboratory tests" onclick="check(this.id)"/><label>Laboratory tests</label></li>
+            <li><input type = "checkbox" class="choicebutton" id = "datablood" name = "testsordered" checked value = "laboratory tests" onclick="check(this.id)"/><label>Laboratory tests</label></li>
             <!--li><input type = "checkbox"  class="choicebutton" id = "dataua" name = "testsordered" value = "urine tests" onclick="check(this.id)"/><label>Urinalysis</label></li-->
-            <li><input type = "checkbox"  class="choicebutton" id = "dataekg" name = "testsordered" value = "EKG" onclick="check(this.id)"/><label>EKG</label></li>
-            <li><input type = "checkbox"  class="choicebutton" id = "dataimaging" name = "testsordered" value = "imaging" onclick="check(this.id)"/><label>Imaging</label></li>
+            <li><input type = "checkbox"  class="choicebutton" id = "dataekg" name = "testsordered" checkded value = "EKG" onclick="check(this.id)"/><label>EKG</label></li>
+            <li><input type = "checkbox"  class="choicebutton" id = "dataimaging" name = "testsordered" checked value = "imaging" onclick="check(this.id)"/><label>Imaging</label></li>
           </ul>
          </div>
         <br>
           <div>
             <h4>Interpretation of tests</h4>
             <ul class="radiobutton">
-              <li><input type = "radio"  class="choicebutton" id="testingdone" name = "testingdone" checked onclick="check(this.id)"><label for = "testingdone">Testing was performed to help rule out these serious or life-threatening problems.</label></li>
-              <li><input type = "radio"  class="choicebutton" id = "unremarkable" name = "unremarkable" onclick="check(this.id)"><label>Laboratory tests were unremarkable.</label></li>
-              <li><input type = "radio"  class="choicebutton" id = "notsupportive" name = "notsupportive" onclick="check(this.id)"><label>Testing was not supportive of any serious or life-threatening problems.</label></li>
+              <li><input type = "radio"  class="choicebutton" id="testingdone" name = "testingdone" checked onclick="check(this.id)"><label for = "testingdone">Testing performed to rule out these problems</label></li>
+              <li><input type = "radio"  class="choicebutton" id = "unremarkable" name = "unremarkable" onclick="check(this.id)"><label>Laboratory tests were unremarkable</label></li>
+              <li><input type = "radio"  class="choicebutton" id = "notsupportive" name = "notsupportive" onclick="check(this.id)"><label>Testing was not supportive of any serious or life-threatening problems</label></li>
+              <li><input type = "radio"  class="choicebutton" id = "suggestive" name = "notsupportive" onclick="check(this.id)"><label>Testing was supportive of []</label></li>
+            
             </ul>
           </div>
         <br>
