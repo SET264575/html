@@ -256,19 +256,24 @@ Typos, grammar
 
       <button type="button" class="collapsible">Data Review</button>
       <div class="content show" id = "div-datareview">
-        <h4>Tests ordered and reviewed:<h4>
-          <ul class='radiobutton'>
-          <li><input type = "checkbox" class="choicebutton" id = "datablood" name = "testsordered" value = "blood tests" onclick="check(this.id)"/><label>Blood tests</label></li>
-          <li><input type = "checkbox"  class="choicebutton" id = "dataua" name = "testsordered" value = "urine tests" onclick="check(this.id)"/><label>Urinalysis</label></li>
-          <li><input type = "checkbox"  class="choicebutton" id = "dataekg" name = "testsordered" value = "EKG" onclick="check(this.id)"/><label>EKG</label></li>
-          <li><input type = "checkbox"  class="choicebutton" id = "dataimaging" name = "testsordered" value = "imaging" onclick="check(this.id)"/><label>Imaging</label></li>
-          <br>
-          </ul>
-          <br>
-        <input type = "radio"  class="choicebutton" onclick="check(this.id)"><label>Testing was performed to help rule out these serious or life-threatening problems.</label><br>
-        <input type = "radio"  class="choicebutton" onclick="check(this.id)"><label>Laboratory tests were unremarkable.</label><br>
-        <input type = "radio"  class="choicebutton" onclick="check(this.id)"><label>Testing was not supportive of any serious or life-threatening problems.</label><br>
-      </div><br><br>
+        <div>
+            <h4>Tests ordered and reviewed:</h4>
+            <ul class='radiobutton'>
+              <li><input type = "checkbox" class="choicebutton" id = "datablood" name = "testsordered" value = "blood tests" onclick="check(this.id)"/><label>Blood tests</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id = "dataua" name = "testsordered" value = "urine tests" onclick="check(this.id)"/><label>Urinalysis</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id = "dataekg" name = "testsordered" value = "EKG" onclick="check(this.id)"/><label>EKG</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id = "dataimaging" name = "testsordered" value = "imaging" onclick="check(this.id)"/><label>Imaging</label></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Interpretation of tests</h4>
+            <ul class="radiobutton">
+              <li><input type = "radio"  class="choicebutton" id="testingdone" name = "testingdone" checked onclick="check(this.id)"><label for = "testingdone">Testing was performed to help rule out these serious or life-threatening problems.</label></li>
+              <li><input type = "radio"  class="choicebutton" id = "unremarkable" name = "unremarkable" onclick="check(this.id)"><label>Laboratory tests were unremarkable.</label></li>
+              <li><input type = "radio"  class="choicebutton" id = "notsupportive" name = "notsupportive" onclick="check(this.id)"><label>Testing was not supportive of any serious or life-threatening problems.</label></li>
+            </ul>
+          </div>
+          </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Independent Review of Studies</button>
       <div class="content" id = "div-independent">
