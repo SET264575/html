@@ -435,8 +435,10 @@ Typos, grammar, punctuation
         <div class="content">
           
         <ul class="radiobutton">
-          <li><input type = "checkbox" name= "agreeadmission" id = "agreeadmission" onclick="check(this.id)"><label for = "agreeadmission">I discussed the options with the patient who agreed to admisison.</label></li>
-          <li><input type = "checkbox" name= "agreedischarge" id = "agreedischarge" onclick ="check(this.id)"><label for = "agreedischarge">I have discussed the discharge plan as described below with the patient, who is in agreement with the plan.</label></li>
+          <li><input type = "radio" name= "dischargedecisionmaking" id = "agreedischarge" onclick ="check(this.id)" value = "I discussed the discharge plan with the patient who expressed understanding and agreed with the plan. "><label for = "agreedischarge">Agreed discharge</label></li>
+          <li><input type = "radio" name= "dischargedecisionmaking" id = "wanteddischarge" onclick="check(this.id)"  value = "I offered admission, but the patient requested discharge.  "><label for = "wanteddischarge">Offered admission, pt wanted discharge</label></li>
+          <li><input type = "radio" name= "dischargedecisionmaking" id = "leftama" onclick="check(this.id)" value = "The patient left against medical advice.  If the patient returns to the ER, we will continue the evaluation. "><label for = "leftama">I discussed the options with the patient who agreed to admisison.</label></li>
+
         </ul>
         <h4>Follow up arrangements</h4>
     <h5>Referral</h5>
@@ -579,7 +581,9 @@ Typos, grammar, punctuation
             t = t + "\n\n";
           }
           t = t + "Disposition:\n ";
-          t = t + "I discussed the options with the patient who agreed with admission. ";
+          if (isAnyChecked('dischargedecisionmaking')) {
+            t = t + getRadioButtonValue('dischargedecisionmaking');
+          }
           if (isAnyChecked('deescalate-')) {
             t = t + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided " + combineItemsFromButtons('deescalate-')+". ";
           }
