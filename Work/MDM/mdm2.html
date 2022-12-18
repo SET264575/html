@@ -337,12 +337,13 @@ social determinants of health buttons without name or id?
   </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Social determinants of health</button>
         <div class="content">
-          <button class="choicebutton" name = "social" value = "homelessness" onclick="check(this.id)">Homelessness</button>
-          <button class="choicebutton" name = "social" value = "lack of social support" onclick="check(this.id)">Lack of social support</button>
-          <button class="choicebutton" name = "social" value = "food insecurity" onclick="check(this.id)">Food insecurity</button>
-          <button class="choicebutton" name = "social" value = "lack of insurance" onclick="check(this.id)">Lack of insurance</button>
-          <button class="choicebutton" name = "social" value = "inability to obtain medications" onclick="check(this.id)">Inability to obtain medications</button>
-          
+          <ul class="radiobutton">
+          <li><input type = "checkbox" class="choicebutton" name = "social" value = "homelessness" id="social-1" onclick="check(this.id)"><label for = "social-1">Homelessness</label></li><br>
+          <li><input type = "checkbox"  class="choicebutton" name = "social" value = "lack of social support" id="social-2" onclick="check(this.id)"><label for = "social-2">Lack of social support</label></li><br>
+          <li><input type = "checkbox"  class="choicebutton" name = "social" value = "food insecurity" id="social-3" onclick="check(this.id)"><label for = "social-3">Food insecurity</label></li><br>
+          <li><input type = "checkbox"  class="choicebutton" name = "social" value = "lack of insurance" id="social-4" onclick="check(this.id)"><label for = "social-4">Lack of insurance</label></li><br>
+          <li><input type = "checkbox"  class="choicebutton" name = "social" value = "inability to obtain medications" id="social-5" onclick="check(this.id)"><label for = "social-5">Inability to obtain medications</label></li><br>
+          </ul>
           
           
         
