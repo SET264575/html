@@ -307,7 +307,7 @@ Typos, grammar, punctuation
             
             </ul>
           </div>
-        <br>
+        <br><br>
         <button type="button" class="collapsible">Sepsis</button>
         <div class="content" id = "div-sepsis">
             <h4>SIRS criteria</h4>
@@ -318,14 +318,23 @@ Typos, grammar, punctuation
               <li><input type = "radio"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
           </ul>
           <br>
+          <h4>Lactate</h4>
           <ul class = "radiobutton">
               <li><input type = "radio"  class="choicebutton" id="lactate" name = "lactate" onclick="check(this.id)" value = "Lactate was elevated."><label for = "lactate">Lactate elevated</label></li>
           </ul>
+          <h4>Etiology</h4>
           <ul class = "radiobutton">
               <li><input type = "radio"  class="choicebutton" id="sepsis-pneumonia" name = "sepsis" onclick="check(this.id)" value = "pneumonia"><label for = "sepsis-pneumonia">pneumonia</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsis" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
           </ul>
-            
+          <h4>Treatment</h4>
+          <ul class = "radiobutton">
+              <li><input type = "radio"  class="choicebutton" id="sepsis-pneumonia" name = "sepsis" onclick="check(this.id)" value = "pneumonia"><label for = "sepsis-pneumonia">blood cultures</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-abx1" name = "sepsis-abx" onclick="check(this.id)" value = "Zosyn & Vancomycin"><label for = "sepsis-UTI">Zosyn & Vancomycin</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "Rocephin & Zithromax"><label for = "sepsis-UTI">Rocephin & Zithromax</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-UTI">[other abx]</label></li>
+          
+          </ul>
         </div>
             
          </div><br><br>
@@ -358,9 +367,9 @@ Typos, grammar, punctuation
           <div class="content">
             <ul class="radiobutton">
              <li> <input type = "radio" class = "choicebutton" name='xray'  id="xray-1" name ="xray"  onclick="check(this.id)" value = "no fracture or dislocation."><label for="xray-1">No fracture or dislocation</label></li>
-              <li><input type = "radio" class = "choicebutton" name='xray' id="xray-2" name = "xray" onclick="check(this.id)" value = "a fracture."><label for="xray-2">Fracture</label></li>
-              <li><input type = "radio" class = "choicebutton" name='xray' id="xray-3" name = "xray" onclick="check(this.id)" value = "a dislocation."><label for="xray-3">Dislocation</label></li>
-              <li><input type = "radio" class = "choicebutton" name='xray' id="xray-4" name = "xray" onclick="check(this.id)" value = "a foreign body in the soft tissues."><label for="xray-3">Foreign body</label></li>
+             <li><input type = "radio" class = "choicebutton" name='xray' id="xray-2" name = "xray" onclick="check(this.id)" value = "a fracture."><label for="xray-2">Fracture</label></li>
+             <li><input type = "radio" class = "choicebutton" name='xray' id="xray-3" name = "xray" onclick="check(this.id)" value = "a dislocation."><label for="xray-3">Dislocation</label></li>
+             <li><input type = "radio" class = "choicebutton" name='xray' id="xray-4" name = "xray" onclick="check(this.id)" value = "a foreign body in the soft tissues."><label for="xray-3">Foreign body</label></li>
            
             </ul>
         </div><br><br>
