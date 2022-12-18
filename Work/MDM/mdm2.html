@@ -454,16 +454,16 @@ de-escalation - buttons to text
             t = t + "Independent review:";
           }
           if (isAnyChecked('ekg')) {
-            t = t + " My independent review of the EKG " + getRadioButtonValue('ekg');
+            t = t + " My independent interpretation of the EKG is" + getRadioButtonValue('ekg');
           }
           if (isAnyChecked('cxr')) {
-            t = t + " My independent review of the chest x-ray " + getRadioButtonValue('cxr');
+            t = t + " My independent interpretation of the chest x-ray is consistent with " + getRadioButtonValue('cxr');
           }
           if (isAnyChecked('xray')) {
-            t = t + " My independent review of the xrays " + getRadioButtonValue('xray');
+            t = t + " My independent interpretation of the xrays is consistent with " + getRadioButtonValue('xray');
           } 
           if (isAnyChecked('ct')) {
-            t = t + " My independent review of the CT " + getRadioButtonValue('ct');
+            t = t + " My independent interpretation of the CT is consistent with " + getRadioButtonValue('ct');
           }
           if (isAnyChecked('clinician')) {
             t = t + "My discussion with an independent clinician is documented in this note. ";
