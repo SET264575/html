@@ -483,7 +483,7 @@ Typos, grammar
             t = t + " My independent interpretation of the CT is consistent with " + getRadioButtonValue('ct');
           }
           if (isAnyChecked('clinician')) {
-            t = t + "My discussion with an independent clinician is documented in this note. ";
+            t = t + " My discussion with an independent clinician is documented in this note. ";
           }
           t = t + "\n\n";
           var iframe = document.getElementById("iframe");
@@ -495,7 +495,9 @@ Typos, grammar
           }
           t = t + "Disposition:\n ";
           t = t + "I discussed the options with the patient who agreed with admission. ";
-          t = t + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided ***";
+          if (isAnyChecked('deescalate-')) {
+            t = t + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided " + combineItemsFromButtons('deescalate-')+". ";
+          }
           if (isAnyChecked('social')){
             t = t + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social') + ". ";
           }
