@@ -205,38 +205,40 @@ social determinants of health buttons without name or id?
         <button class="sxbutton" onclick="showDDX('ddx-headache')">Headache</button>
         <button class="sxbutton" onclick="showDDX('ddx-pelvicpain')">Pelvic pain</button>
         
-        <div class="content" name = "sx" id = "ddx-abdpain">
-          <!--button class="ddxbutton" id="ddx-selectallabdpain" onclick="check('ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'>Select All</button-->
-          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-appendicitis" onclick="check(this.id)" value = "appendicitis"><label for="ddx-appendicitis">Appendicitis</label>
-          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-cholecystitis" onclick="check(this.id)" value = "cholecystitis"><label for = "ddx-cholecystitis">Cholecystitis</label>
-          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-diverticulitis" onclick="check(this.id)" value = "diverticulitis"><label for = "ddx-diverticulitis">Diverticulitis</label>
-          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-pancreatitis" onclick="check(this.id)" value = "pancreatitis"><label for = "ddx-pancreatitis">Pancreatitis</label>
-          <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-MI" onclick="check(this.id)" value = "MI"><label for = "ddx-MI">MI</label>
-        </div>
-        
-        <div class = "content" name = "sx"  id = "ddx-chestpain">
-          <button class="ddxbutton" name = "ddx-chestpain" id="ddx-acs" onclick="check(this.id)" value = "acute coronary syndrome">ACS</button>
-          <button class="ddxbutton" name = "ddx-chestpain" id="ddx-pe" onclick="check(this.id)" value = "pulmonary embolism">PE</button>
-          <button class="ddxbutton" name = "ddx-chestpain" id="ddx-aorticdissection" onclick="check(this.id)" value = "aortic dissection">Aortic dissection</button>
-          <button class="ddxbutton" name = "ddx-chestpain" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax">Pneumothorax</button>
-          <button class="ddxbutton" name = "ddx-chestpain" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia">Pneumonia</button>
-        </div>
-          
-        <div class = "content" name = "sx"  id = "ddx-headache">
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "subarachnoid hemorrhage">Subarachnoid hemorrhage</button>
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "brain tumor">Brain tumor</button>
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "migraine headache">Migraine headache</button>
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "meningitis">Meningitis</button>
-          <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "subdural hematoma">Subdural hematoma</button>
-        </div>
-        
-        <div class = "content" name = "sx"  id = "ddx-pelvicpain">
-          <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-ectopic" onclick="check(this.id)" value = "ectopic pregnancy">ectopic pregnancy</button>
-          <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-torsion" onclick="check(this.id)" value = "ovarian torsion">ovarian torsion</button>
-          <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-ovariancyst" onclick="check(this.id)" value = "ovarian cyst">ovarian cyst/button>
-          <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-pid" onclick="check(this.id)" value = "pelvic inflammatory disease">PID</button>
-          <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-appendicitis2" onclick="check(this.id)" value = "appendicitis">appendicitis</button>
-        </div>
+        <div class="radiobutton">
+          <div class="content" name = "sx" id = "ddx-abdpain">
+            <!--button class="ddxbutton" id="ddx-selectallabdpain" onclick="check('ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'>Select All</button-->
+            <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-appendicitis" onclick="check(this.id)" value = "appendicitis"><label for="ddx-appendicitis">Appendicitis</label>
+            <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-cholecystitis" onclick="check(this.id)" value = "cholecystitis"><label for = "ddx-cholecystitis">Cholecystitis</label>
+            <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-diverticulitis" onclick="check(this.id)" value = "diverticulitis"><label for = "ddx-diverticulitis">Diverticulitis</label>
+            <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-pancreatitis" onclick="check(this.id)" value = "pancreatitis"><label for = "ddx-pancreatitis">Pancreatitis</label>
+            <input type = "checkbox"  class="ddxbutton" name = "ddx-abdpain" id="ddx-MI" onclick="check(this.id)" value = "MI"><label for = "ddx-MI">MI</label>
+          </div>
+
+          <div class = "content" name = "sx"  id = "ddx-chestpain">
+            <button class="ddxbutton" name = "ddx-chestpain" id="ddx-acs" onclick="check(this.id)" value = "acute coronary syndrome">ACS</button>
+            <button class="ddxbutton" name = "ddx-chestpain" id="ddx-pe" onclick="check(this.id)" value = "pulmonary embolism">PE</button>
+            <button class="ddxbutton" name = "ddx-chestpain" id="ddx-aorticdissection" onclick="check(this.id)" value = "aortic dissection">Aortic dissection</button>
+            <button class="ddxbutton" name = "ddx-chestpain" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax">Pneumothorax</button>
+            <button class="ddxbutton" name = "ddx-chestpain" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia">Pneumonia</button>
+          </div>
+
+          <div class = "content" name = "sx"  id = "ddx-headache">
+            <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "subarachnoid hemorrhage">Subarachnoid hemorrhage</button>
+            <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "brain tumor">Brain tumor</button>
+            <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "migraine headache">Migraine headache</button>
+            <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "meningitis">Meningitis</button>
+            <button class="ddxbutton" name = "ddx-headache" id="ddx-pneumonia" onclick="check(this.id)" value = "subdural hematoma">Subdural hematoma</button>
+          </div>
+
+          <div class = "content" name = "sx"  id = "ddx-pelvicpain">
+            <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-ectopic" onclick="check(this.id)" value = "ectopic pregnancy">ectopic pregnancy</button>
+            <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-torsion" onclick="check(this.id)" value = "ovarian torsion">ovarian torsion</button>
+            <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-ovariancyst" onclick="check(this.id)" value = "ovarian cyst">ovarian cyst/button>
+            <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-pid" onclick="check(this.id)" value = "pelvic inflammatory disease">PID</button>
+            <button class="ddxbutton" name = "ddx-pelvicpain" id="ddx-appendicitis2" onclick="check(this.id)" value = "appendicitis">appendicitis</button>
+          </div>
+          </div>
         
      </div><br><br>
 
@@ -490,13 +492,15 @@ social determinants of health buttons without name or id?
         
         function combineItemsFromButtons(name) {
           var ele = document.getElementsByName(name);
+          console.log("in combineItemsFromButtons");
+          console.log("ele",ele);
           var list = [];
           for (let i = 0; i < ele.length; i++) {
             if (ele[i].checked) {
               list.push(ele[i].value);
             }
           }
-          
+          console.log("list",list);
           var t = list[0];
           for (let i = 1; i<list.length-1; i++) {
             t = t + ", "+ list[i];
