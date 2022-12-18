@@ -433,7 +433,8 @@ social determinants of health buttons without name or id?
           t = t + "My discussion was independent clinicians is documented in this note. ";
           t = t + "\n\n";
           t = t + "Risk Stratification: \n";
-          var test = document.getElementById("iframe#text").contentWindow.document.getelementById('text');
+          var iframe = document.getElementById("iframe");
+          var test = iframe.contentWindow.document.getelementById('text');
           console.log(test);
           t = t + test+"\n";
           t = t + "HEART score = 4";
