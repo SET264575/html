@@ -1,5 +1,7 @@
 <!--
-
+add more ddx
+add more consultants
+sepsis
 
 
 What do you want displayed/hidden?
@@ -291,6 +293,25 @@ Typos, grammar, punctuation
               <li><input type = "radio"  class="choicebutton" id = "notsupportive" name = "notsupportive" onclick="check(this.id)"><label>Testing was not supportive of any serious or life-threatening problems.</label></li>
             </ul>
           </div>
+        <div class="content show" id = "div-sepsis">
+            <h4>SIRS criteria</h4>
+          <ul class="radiobutton">
+              <li><input type = "radio"  class="choicebutton" id="sirs-fever" name = "sirs" onclick="check(this.id)" value = "fever"><label for = "sirs-fever">Fever</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sirs-tachycardia" name = "sirs" onclick="check(this.id)" value = "tachycardia"><label for = "sirs-tachycardia">Tachycardia</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sirs-tachypnea" name = "sirs" onclick="check(this.id)" value = "tachypnea"><label for = "sirs-tachypnea">Tachypnea</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
+          </ul>
+          <br>
+          <ul class = "radiobutton">
+              <li><input type = "radio"  class="choicebutton" id="lactate" name = "lactate" onclick="check(this.id)" value = "Lactate was elevated."><label for = "lactate">Lactate elevated</label></li>
+          </ul>
+          <ul class = "radiobutton">
+              <li><input type = "radio"  class="choicebutton" id="sepsis-pneumonia" name = "sepsis" onclick="check(this.id)" value = "pneumonia"><label for = "sepsis-pneumonia">pneumonia</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsis" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
+          </ul>
+            
+            
+            
          </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Independent Review of Studies</button>
