@@ -413,11 +413,10 @@ Typos, grammar, punctuation
 
       <button type="button" class="collapsible headingbutton">Disposition</button>
       <div class="content show" id = "div-dispo">
-        <button type = "button" class="collapsible subheadingbutton">Shared-decision making</button>
+        <button type = "button" class="collapsible subheadingbutton">De-escalation of care</button>
         <div class="content">
 
           <div>
-            <h4>De-escalation of care</h4>
             <ul class="radiobutton">
               <li><input type="checkbox" name = "deescalate-" id = "deescalate-dnr"  class="choicebutton" onclick="check(this.id)"><label for = "deescalate-dnr">DNR</label></li>
               <li><input type="checkbox" name = "deescalate-" id = "deescalate-dni"  class="choicebutton" onclick="check(this.id)"><label for = "deescalate-dni">DNI</label></li>
@@ -448,7 +447,7 @@ Typos, grammar, punctuation
         <div class="content">
           
           <ul class="radiobutton">
-            <li><input type = "radio" name= "dischargedecisionmaking" id = "agreedischarge" onclick ="check(this.id)" value = "I discussed the discharge plan with the patient who expressed understanding and agreed with the plan. "><label for = "agreedischarge">Agreed discharge</label></li>
+            <li><input type = "radio" name= "dischargedecisionmaking" id = "agreedischarge" checked onclick ="check(this.id)" value = "I discussed the discharge plan with the patient who expressed understanding and agreed with the plan. "><label for = "agreedischarge">Agreed discharge</label></li>
             <li><input type = "radio" name= "dischargedecisionmaking" id = "wanteddischarge" onclick="check(this.id)"  value = "I offered admission, but the patient requested discharge.  "><label for = "wanteddischarge">Offered admission, pt wanted discharge</label></li>
             <li><input type = "radio" name= "dischargedecisionmaking" id = "leftama" onclick="check(this.id)" value = "The patient left against medical advice.  If the patient returns to the ER, we will continue the evaluation. "><label for = "leftama">Left AMA</label></li>
 
