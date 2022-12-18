@@ -486,6 +486,40 @@ Typos, grammar, punctuation
         <ul class="radiobutton">
           <li><input type = "checkbox" name= "agreeadmission" id = "agreeadmission" onclick="check(this.id)"><label for = "agreeadmission">I discussed the options with the patient who agreed to admisison.</label></li>
         </ul>
+          
+        <div>
+        <ul class="radiobutton">
+          <li><input type = "checkbox" id="clinician1" name= "clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>       
+        </ul>
+        </div>
+        <hr>
+        <div>
+          <h4>Admit</h4>
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="petrie" name= "admitting" onclick="check(this.id)" value="Dr. Petrie"><label>Dr. Petrie</label></li>
+            <li><input type = "checkbox" id="yuen" name= "admitting" onclick="check(this.id)" value="Dr. Yuen"><label>Dr. Yuen</label></li>
+          </ul>
+        </div>
+        <hr>
+        <div>
+          <h4>Consult</h4>
+          <h5>Cardiology</h5>
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="baird" name= "consulting" onclick="check(this.id)" value="Dr. Baird"><label>Dr. Baird</label></li>
+          </ul>
+          <h5>GI</h5>
+          <ul class="radiobutton">
+        <li><input type = "checkbox" id="llorens" name= "consulting" onclick="check(this.id)" value="Dr. Llorens"><label>Dr. Llorens</label></li>
+          </ul>
+          <h5>Neuro</h5>
+          <ul class="radiobutton">
+        <li><input type = "checkbox" id="malone" name= "consulting" onclick="check(this.id)" value="Dr. Malone"><label>Dr. Malone</label></li>
+          </ul>
+          <h5>Ortho</h5>
+           <ul class="radiobutton">
+            <li><input type = "checkbox" id="roberts" name= "consulting" onclick="check(this.id)" value="Dr. Roberts"><label>Dr. Roberts</label></li>
+           </ul>
+        </div>
   </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Transfer</button>
         <div class="content">
