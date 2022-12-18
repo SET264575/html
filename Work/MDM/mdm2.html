@@ -285,7 +285,7 @@ social determinants of health buttons without name or id?
         <button class="choicebutton">HEART score</button>
         <button class="choicebutton">Wells' criteria for DVT</button-->
         
-        <iframe src="master.html"></iframe>
+        <iframe src="master.html" id = "iframe"></iframe>
         
       </div><br><br>
 
@@ -433,6 +433,7 @@ social determinants of health buttons without name or id?
           t = t + "My discussion was independent clinicians is documented in this note. ";
           t = t + "\n\n";
           t = t + "Risk Stratification: \n";
+          t = t + document.getElementById("iframe#text").value;
           t = t + "HEART score = 4";
           /* results of tools */
           t = t + "\n\n";
