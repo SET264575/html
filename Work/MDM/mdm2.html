@@ -671,7 +671,6 @@ Typos, grammar, punctuation
         }
         
         function check(id) {
-          console.log(id);
           document.getElementById(id).checked == !document.getElementById(id).checked;
           if (document.getElementById(id).style['background-color'] == 'lightgray') {
             document.getElementById(id).style['background-color'] = 'lightblue';
@@ -729,6 +728,7 @@ Typos, grammar, punctuation
           var iframe = document.getElementById("iframe");
           var test = iframe.contentWindow.document.getElementById('text').innerHTML;
           if (test != undefined) {
+            console.log(test);
             t = t + "Risk Stratification: \n";
             t = t + test+"\n";
             t = t + "\n\n";
