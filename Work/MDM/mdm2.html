@@ -730,10 +730,10 @@ Typos, grammar, punctuation
           }
           if (isAnyChecked('sepsisetiology')) {
             t = t + "The patient appears to be septic due to " + getRadioButtonValue('sepsisetiology') + ". ";
-          if (isAnyChecked('bcx')) {
+          if (isAnyChecked('sepsis1')) {
             t = t + "Blood cultures were obtained. ";
           }
-          if (isAnyChecked('sepsis-fluids')) {
+          if (isAnyChecked('sepsis-abx')) {
             t = t + "The patient was given "+ combineItemsFromButtons('sepsis-abx')+". ";
           }
           if (isAnyChecked("ekg") || isAnyChecked('cxr') || isAnyChecked("xray") || isAnyChecked("ct")) {
