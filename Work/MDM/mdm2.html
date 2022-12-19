@@ -382,12 +382,12 @@ Typos, grammar, punctuation
             <h4>Treatment</h4>
             <ul class = "radiobutton">
               <li><input type = "radio"  class="choicebutton" id="sepsis-culture" name = "sepsis1" onclick="check(this.id)" value = "blood cultures"><label for = "sepsis-culture">blood cultures</label></li><br>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-ivf" name = "sepsis2" onclick="check(this.id)" value = "1 L normal saline"><label for = "sepsis-1L">1 L NS</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-ivf30" name = "sepsis2" onclick="check(this.id)" value = "30 cc/kg of normal saline"><label for = "sepsis-30NS">30 cc/kg NS</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf" name = "sepsis-abx" onclick="check(this.id)" value = "1 L normal saline"><label for = "sepsis-1L">1 L NS</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf30" name = "sepsis-abx" onclick="check(this.id)" value = "30 cc/kg of normal saline"><label for = "sepsis-30NS">30 cc/kg NS</label></li>
 <br>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-abx1" name = "sepsis-abx" onclick="check(this.id)" value = "Zosyn & Vancomycin"><label for = "sepsis-UTI">Zosyn & Vancomycin</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "Rocephin & Zithromax"><label for = "sepsis-UTI">Rocephin & Zithromax</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-UTI">[other abx]</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx1" name = "sepsis-abx" onclick="check(this.id)" value = "Zosyn & Vancomycin"><label for = "sepsis-UTI">Zosyn & Vancomycin</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "Rocephin & Zithromax"><label for = "sepsis-UTI">Rocephin & Zithromax</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-UTI">[other abx]</label></li>
             </ul>
           </div>
         </div>
@@ -708,6 +708,20 @@ Typos, grammar, punctuation
               t = t + "The tests were not supportive of these conditions. ";
             }
             t = t + "\n\n";
+          }
+          if (isAnyChecked("sirs")) {
+            t = t + "The patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
+          }
+          if (isAnyChecked("lactate")) {
+            t = t + "Lactate was " + getRadioButtonValue('lactate')+". ";
+          }
+          if (isAnyChecked('sepsisetiology')) {
+            t = t + "The patient appears to be septic due to " + getRadioButtonValue('sepsisetiology') + ". ";
+          if (isAnyChecked('bcx')) {
+            t = t + "Blood cultures were obtained. ";
+          }
+          if (isAnyChecked('sepsis-fluids')) {
+            t = t + "The patient was given "+ combineItemsFromButtons('sepsis-abx')+". ";
           }
           if (isAnyChecked("ekg") || isAnyChecked('cxr') || isAnyChecked("xray") || isAnyChecked("ct")) {
             t = t + "Independent review:";
