@@ -200,8 +200,6 @@ Typos, grammar, punctuation
         background-color: lightyellow;
         border: 1px solid red;
         color: red;
-        position: fixed;
-        bottom: 5px;
       }
     </style>
   </head>
@@ -214,17 +212,24 @@ Typos, grammar, punctuation
     <div class="main">
       <button type="button" class="collapsible headingbutton">Patient Presentation</button>
       <div class="content show" id = "div-ptpresentation">
+               <div class="note"><pre>A summary of the patient presentation itself will need to be dictated before everything else is pasted in.</pre></div>
+ 
         <div>
         <ul class="radiobutton">
           <li><input type = "checkbox" id = "presentation1" class = "choicebutton" onclick="check(this.id)"><label for = "presentation1">Data reviewed from external sources</label>    <br></li>
           <li><input type = "checkbox" id = "presentation2" class = "choicebutton" onclick="check(this.id)"><label for = "presentation2">Additional historian required</label><br></li>
         </ul></div>
-        <div class="note"><pre>A summary of the patient presentation itself will need to be dictated before everything else is pasted in.</pre></div>
       </div><br><br>
 
       <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
         
       <div class="content show" id = "div-ddx">
+                <div class="note">
+          <pre>
+          Selecting a symptom will pull up a list of differential diagnoses.  Some may be preselected.  Symptoms with *** do not yet have a differential list.
+          Suggestions for other symptoms or diagnoses would be helpful.
+                    </pre>
+        </div>
         <div>
         <button class="sxbutton" onclick="showDDX('ddx-abdpain',['ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'])">Abdominal pain</button>
         <button class="sxbutton" onclick="showDDX('ddx-arthralgias',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia'])">***Arthralgias</button>
@@ -300,16 +305,16 @@ Typos, grammar, punctuation
             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
           </ul>
           </div></div>
-        <div class="note">
-          <pre>
-          Selecting a symptom will pull up a list of differential diagnoses.  Some may be preselected.  Symptoms with *** do not yet have a differential list.
-          Suggestions for other symptoms or diagnoses would be helpful.
-                    </pre>
-        </div>
+
      </div><br><br>
 
       <button type="button" class="collapsible">Data Review</button>
       <div class="content show" id = "div-datareview">
+                <div class= "note">
+          <pre>
+          Interpretation of tests needs some work.  Suggestions would be helpful.
+          </pre>
+        </div>
         <div>
           <h4>Tests ordered and reviewed:</h4>
           <ul class='radiobutton'>
@@ -333,13 +338,12 @@ Typos, grammar, punctuation
             
             </ul>
           </div>
-        <div class= "note">
-          <pre>
-          Interpretation of tests needs some work.  Suggestions would be helpful.
-          </pre>
+
+        <h4>&nbsp</h4>
+        <h4>&nbsp</h4>
+                </div>
+          <div class="note"><pre>Sepsis is not yet functional.  Other specific diagnoses, such as stroke, might need its own section.</pre></div>
         </div>
-        <h4>&nbsp</h4>
-        <h4>&nbsp</h4>
                 <button type="button" class="collapsible">Sepsis</button>
         <div class="content" id = "div-sepsis">
           <div>
@@ -387,9 +391,7 @@ Typos, grammar, punctuation
               <li><input type = "radio"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-UTI">[other abx]</label></li>
             </ul>
         </div>
-        </div>
-          <div class="note"><pre>Sepsis is not yet functional.  Other specific diagnoses, such as stroke, might need its own section.</pre></div>
-        </div>
+
             
          </div><br><br>
 
@@ -447,7 +449,7 @@ Typos, grammar, punctuation
 
       <button type="button" class="collapsible headingbutton">Independent Clinician</button>
       <div class="content" id = "div-uri1">
-        <div class = "note"><pre>Obviously need to add more clinicians if this is helpful.</pre></div>
+        <div class = "note"><pre>I am planning to move this section to the admit section and discharge section</pre></div>
         <div>
         <ul class="radiobutton">
           <li><input type = "checkbox" id="clinician1" name= "clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>       
