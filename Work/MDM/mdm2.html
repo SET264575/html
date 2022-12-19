@@ -635,7 +635,10 @@ Typos, grammar, punctuation
   </div><br><br>
    <button type = "button" class="collapsible subheadingbutton">Transfer</button>
         <div class="content">
-        <input type = "checkbox">The decision was made to transfer the patient due to the need for a higher level of care.  My discussion with the accepting physician is documented elsewhere in this note.</input>
+          <ul class="radiobutton">
+            <li><input type = "checkbox" name="transfer1" id = "transfer1" onclick="check(this.id)" value = "The decision was made to transfer the patient to a higher level of care.">The decision was made to transfer the patient to a higher level of care.</label></li>
+            <li><input type = "checkbox" name = "transfer2" id = "transfer2" onclick="check(this.id)" value = "I discussed the case with [accepting physician] at [hospital] who accepted the patient for transfer."><label for="transfer2"> I discussed the case with [accepting physician] at [hospital] who accepted the patient for transfer."</label></li>
+          </ul>
   </div><br><br>
     </div><br><br>
 </div>
@@ -755,6 +758,12 @@ Typos, grammar, punctuation
           }
           if (isAnyChecked('consulting')) {
             t = t + " I discussed the case with " + combineItemsFromButtons('consulting') + " who will consult on the patient. ";
+          }
+          if (isAnyChecked('transfer1')) {
+            t = t + combineItemsFromButtons('transfer1');
+          }
+          if (isAnyChecked('transfer2')) {
+            t = t + combineItemsFromButtons('transfer2');
           }
           t = t + "";
           t = t + "";
