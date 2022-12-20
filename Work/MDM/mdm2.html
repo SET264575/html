@@ -372,8 +372,8 @@ Typos, grammar, punctuation
           <ul class="radiobutton">
             <!--li><input type = "checkbox"  class="choicebutton" id="testingdone" name = "testingdone" checked onclick="check(this.id)"><label for = "testingdone">Testing performed to rule out these problems</label></li-->
             <li><input type = "checkbox"  class="choicebutton" id = "unremarkable" name = "unremarkable" onclick="check(this.id)"><label>Laboratory tests were unremarkable</label></li>
-            <li><input type = "checkbox"  class="choicebutton" id = "notsupportive" name = "notsupportive" onclick="check(this.id)"><label>Testing was not supportive of any serious or life-threatening problems</label></li>
-            <li><input type = "checkbox"  class="choicebutton" id = "suggestive" name = "notsupportive" onclick="check(this.id)"><label>Testing was supportive of []</label></li>
+            <li><input type = "checkbox"  class="choicebutton" id = "notsupportive" name = "notsupportive" onclick="check(this.id)" value = "Testing was not supportive of any serious or life-threatening problems"><label>Testing was not supportive of any serious or life-threatening problems</label></li>
+            <li><input type = "checkbox"  class="choicebutton" id = "suggestive" name = "notsupportive" onclick="check(this.id)" value = "Testing was supportive of []"><label>Testing was supportive of []</label></li>
 
           </ul>
         </div>
@@ -400,8 +400,8 @@ Typos, grammar, punctuation
                   <h4>&nbsp</h4>
             <h4>Lactate</h4>
             <ul class = "radiobutton">
-              <li><input type = "radio"  class="choicebutton" id="lactate1" name = "lactate" onclick="check(this.id)" value = "Lactate was elevated."><label for = "lactate1">Elevated</label></li>
-              <li><input type = "radio"  class="choicebutton" id="lactate2" name = "lactate" onclick="check(this.id)" value = "Lactate was not elevated."><label for = "lactate2">Not elevated</label></li>
+              <li><input type = "radio"  class="choicebutton" id="lactate1" name = "lactate" onclick="check(this.id)" value = "elevated"><label for = "lactate1">Elevated</label></li>
+              <li><input type = "radio"  class="choicebutton" id="lactate2" name = "lactate" onclick="check(this.id)" value = "not elevated"><label for = "lactate2">Not elevated</label></li>
             </ul>
           </div>
           <br><h4>&nbsp</h4>
@@ -498,9 +498,11 @@ Typos, grammar, punctuation
           <ul class="radiobutton">
             <li><input type = "radio" class = "choicebutton" name='ct' id="ct-1" onclick="check(this.id)" value = "no acute pathology." id = "ct-1" name = "ct"><label for = "ct-1">No acute pathology</label></li>
             <li><input type = "radio" class = "choicebutton" name='ct' id="ct-2" onclick="check(this.id)" value = "a ureteral stone." id = "ct-2" name = "ct"><label for = "ct-2">Ureteral stone</label></li>
-            <li><input type = "radio" class = "choicebutton" name='ct' id="ct-3" onclick="check(this.id)" value = "diverticulitis." id = "ct-3" name = "ct"><label for = "ct-3">Diverticulitis.</label></li>
-           <li> <input type = "radio" class = "choicebutton" name='ct' id="ct-4" onclick="check(this.id)" value = "[CT result]" id = "ct-4" name = "ct"><label for = "ct-4">[ct result].</label></li>
- 
+            <li><input type = "radio" class = "choicebutton" name='ct' id="ct-3" onclick="check(this.id)" value = "diverticulitis." id = "ct-3" name = "ct"><label for = "ct-3">Diverticulitis</label></li>
+            <li> <input type = "radio" class = "choicebutton" name='ct' id="ct-4" onclick="check(this.id)" value = "[CT result]" id = "ct-4" name = "ct"><label for = "ct-4">[ct result]</label></li>
+            <li><input type = "radio" class = "choicebutton" name='ct' id="ct-5" onclick="check(this.id)" value = "subarachnoid hemorrhage." id = "ct-5" name = "ct"><label for = "ct-5">Subarachnoid hemorrhage</label></li>
+            <li> <input type = "radio" class = "choicebutton" name='ct' id="ct-6" onclick="check(this.id)" value = "subdural hematoma." id = "ct-6" name = "ct"><label for = "ct-6">Subdural hematoma</label></li>
+
           </ul>
         </div><br><br>
       </div><br><br>
@@ -765,20 +767,20 @@ Typos, grammar, punctuation
         <div>
           <h4>Admit</h4>
           <ul class="radiobutton">
-            <li><input type = "checkbox" id="Dr. Bhagat" name= "consulting" onclick="check(this.id)" value="Dr. Bhagat"><label for = "Dr. Bhagat">Dr. Bhagat</label></li>
-            <li><input type = "checkbox" id="Dr. Cheddi" name= "consulting" onclick="check(this.id)" value="Dr. Cheddi"><label for = "Dr. Cheddi">Dr. Cheddi</label></li>
-            <li><input type = "checkbox" id="Dr. Hassan" name= "consulting" onclick="check(this.id)" value="Dr. Hassan"><label for = "Dr. Hassan">Dr. Hassan</label></li>
-            <li><input type = "checkbox" id="Dr. James" name= "consulting" onclick="check(this.id)" value="Dr. James"><label for = "Dr. James">Dr. James</label></li>
-            <li><input type = "checkbox" id="Dr. Makarian" name= "consulting" onclick="check(this.id)" value="Dr. Makarian"><label for = "Dr. Makarian">Dr. Makarian</label></li>
-            <li><input type = "checkbox" id="Dr. McGreevy" name= "consulting" onclick="check(this.id)" value="Dr. McGreevy"><label for = "Dr. McGreevy">Dr. McGreevy</label></li>
-            <li><input type = "checkbox" id="Dr. Nau" name= "consulting" onclick="check(this.id)" value="Dr. Nau"><label for = "Dr. Nau">Dr. Nau</label></li>
-            <li><input type = "checkbox" id="Dr. Petrie" name= "consulting" onclick="check(this.id)" value="Dr. Petrie"><label for = "Dr. Petrie">Dr. Petrie</label></li>
-            <li><input type = "checkbox" id="Dr. Renick" name= "consulting" onclick="check(this.id)" value="Dr. Renick"><label for = "Dr. Renick">Dr. Renick</label></li>
-            <li><input type = "checkbox" id="Dr. Schiavo" name= "consulting" onclick="check(this.id)" value="Dr. Schiavo"><label for = "Dr. Schiavo">Dr. Schiavo</label></li>
-            <li><input type = "checkbox" id="Dr. Sharma" name= "consulting" onclick="check(this.id)" value="Dr. Sharma"><label for = "Dr. Sharma">Dr. Sharma</label></li>
-            <li><input type = "checkbox" id="Dr. Welchmeyer" name= "consulting" onclick="check(this.id)" value="Dr. Welchmeyer"><label for = "Dr. Welchmeyer">Dr. Welchmeyer</label></li>
-            <li><input type = "checkbox" id="Dr. Yuen" name= "consulting" onclick="check(this.id)" value="Dr. Yuen"><label for = "Dr. Yuen">Dr. Yuen</label></li>
-            <li><input type = "checkbox" id="Dr. Zeglis" name= "consulting" onclick="check(this.id)" value="Dr. Zeglis"><label for = "Dr. Zeglis">Dr. Zeglis</label></li> 
+            <li><input type = "checkbox" id="Dr. Bhagat" name= "admitting" onclick="check(this.id)" value="Dr. Bhagat"><label for = "Dr. Bhagat">Dr. Bhagat</label></li>
+            <li><input type = "checkbox" id="Dr. Cheddi" name= "admitting" onclick="check(this.id)" value="Dr. Cheddi"><label for = "Dr. Cheddi">Dr. Cheddi</label></li>
+            <li><input type = "checkbox" id="Dr. Hassan" name= "admitting" onclick="check(this.id)" value="Dr. Hassan"><label for = "Dr. Hassan">Dr. Hassan</label></li>
+            <li><input type = "checkbox" id="Dr. James" name= "admitting" onclick="check(this.id)" value="Dr. James"><label for = "Dr. James">Dr. James</label></li>
+            <li><input type = "checkbox" id="Dr. Makarian" name= "admitting" onclick="check(this.id)" value="Dr. Makarian"><label for = "Dr. Makarian">Dr. Makarian</label></li>
+            <li><input type = "checkbox" id="Dr. McGreevy" name= "admitting" onclick="check(this.id)" value="Dr. McGreevy"><label for = "Dr. McGreevy">Dr. McGreevy</label></li>
+            <li><input type = "checkbox" id="Dr. Nau" name= "admitting" onclick="check(this.id)" value="Dr. Nau"><label for = "Dr. Nau">Dr. Nau</label></li>
+            <li><input type = "checkbox" id="Dr. Petrie" name= "admitting" onclick="check(this.id)" value="Dr. Petrie"><label for = "Dr. Petrie">Dr. Petrie</label></li>
+            <li><input type = "checkbox" id="Dr. Renick" name= "admitting" onclick="check(this.id)" value="Dr. Renick"><label for = "Dr. Renick">Dr. Renick</label></li>
+            <li><input type = "checkbox" id="Dr. Schiavo" name= "admitting" onclick="check(this.id)" value="Dr. Schiavo"><label for = "Dr. Schiavo">Dr. Schiavo</label></li>
+            <li><input type = "checkbox" id="Dr. Sharma" name= "admitting" onclick="check(this.id)" value="Dr. Sharma"><label for = "Dr. Sharma">Dr. Sharma</label></li>
+            <li><input type = "checkbox" id="Dr. Welchmeyer" name= "admitting" onclick="check(this.id)" value="Dr. Welchmeyer"><label for = "Dr. Welchmeyer">Dr. Welchmeyer</label></li>
+            <li><input type = "checkbox" id="Dr. Yuen" name= "admitting" onclick="check(this.id)" value="Dr. Yuen"><label for = "Dr. Yuen">Dr. Yuen</label></li>
+            <li><input type = "checkbox" id="Dr. Zeglis" name= "admitting" onclick="check(this.id)" value="Dr. Zeglis"><label for = "Dr. Zeglis">Dr. Zeglis</label></li> 
           </ul>
         </div>
                     <h4>&nbsp</h4>
@@ -869,7 +871,7 @@ Typos, grammar, punctuation
    <button type = "button" class="collapsible subheadingbutton">Transfer</button>
         <div class="content">
           <ul class="radiobutton">
-            <li><input type = "checkbox" name="transfer1" id = "transfer1" onclick="check(this.id)" value = "The decision was made to transfer the patient to a higher level of care."><label for="transfer1'>The decision was made to transfer the patient to a higher level of care.</label></li>
+            <li><input type = "checkbox" name="transfer1" id = "transfer1" onclick="check(this.id)" value = "The decision was made to transfer the patient to a higher level of care."><label for="transfer1">The decision was made to transfer the patient to a higher level of care.</label></li>
             <li><input type = "checkbox" name = "transfer2" id = "transfer2" onclick="check(this.id)" value = "I discussed the case with [accepting physician] at [hospital] who accepted the patient for transfer."><label for="transfer2">Discussed with [accepting physician] at [hospital] who accepted the transfer"</label></li>
           </ul>
   </div><br><br>
@@ -940,7 +942,7 @@ Typos, grammar, punctuation
             t = t + " Data was reviewed from external sources as documented in the HPI. ";
           }
           if (document.getElementById('presentation2').checked) {
-            t = t + "Additional historians were required as documented in the HPI. ";
+            t = t + "An additional historian was required as documented in the HPI. ";
           }
           if (isAnyChecked('ddx')) {
             t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
@@ -957,13 +959,12 @@ Typos, grammar, punctuation
               t =t + "The tests were unremarkable. ";
             }
             if (isAnyChecked("notsupportive")) {
-              t = t + "The tests were not supportive of these conditions. ";
+              t = t + getRadioButtonValue('notsupportive')+". ";
             }
-            t = t + "\n\n";
           }
           
           if (isAnyChecked("sirs")) {
-            t = t + "The patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
+            t = t + "\n\nThe patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
           }
           
           if (isAnyChecked("lactate")) {
@@ -981,7 +982,7 @@ Typos, grammar, punctuation
             
             
           if (isAnyChecked("ekg") || isAnyChecked('cxr') || isAnyChecked("xray") || isAnyChecked("ct")) {
-            t = t + "Independent review:";
+            t = t + "\n\nIndependent review:\n";
           }
           if (isAnyChecked('ekg')) {
             t = t + " My independent interpretation of the EKG " + getRadioButtonValue('ekg');
@@ -1016,19 +1017,19 @@ Typos, grammar, punctuation
             t = t + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social') + ". ";
           }
           if (isAnyChecked('referral')) {
-            t = t + "I referred the patient to " + combineItemsFromButtons('referral') + '.';
+            t = t + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
           }
           if (isAnyChecked('outpt testing')) {
-            t = t + "Outpatient tests I ordered include " + combineItemsFromButtons('outpt testing') +". ";
+            t = t + "I have ordered an outpatient " + combineItemsFromButtons('outpt testing') +". ";
           }
           if (isAnyChecked('clinician')) {
-            t = t + " My discussion with an independent clinician is documented in this note. ";
+            t = t + "My discussion with an independent clinician is documented in this note. ";
           }
           if (isAnyChecked('admitting')) {
-            t = t + " I discussed the case with " + combineItemsFromButtons('admitting')+" who will admit the patient. ";
+            t = t + "I discussed the case with " + combineItemsFromButtons('admitting')+" who will admit the patient. ";
           }
           if (isAnyChecked('consulting')) {
-            t = t + " I discussed the case with " + combineItemsFromButtons('consulting') + " who will consult on the patient. ";
+            t = t + "I discussed the case with " + combineItemsFromButtons('consulting') + " who will consult on the patient. ";
           }
           if (isAnyChecked('transfer1')) {
             t = t + combineItemsFromButtons('transfer1');
