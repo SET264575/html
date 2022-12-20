@@ -281,6 +281,7 @@ Typos, grammar, punctuation
         <button class="sxbutton" onclick="showDDX('ddx-headache',['ddx-subarachnoidhemorrhage','ddx-braintumor','ddx-subduralhematoma','ddx-migraine','ddx-meningitis'])">Headache</button>
         <button class="sxbutton" onclick="showDDX('ddx-limbpain',['ddx-DVT','ddx-vascular occlusion','ddx-occult fracture','ddx-septic arthritis','ddx-compartment syndrome','ddx-radiculopathy'])">Limb pain</button>
         <button class="sxbutton" onclick="showDDX('ddx-limbswelling',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia'])">***Limb swelling</button>
+        <button class="sxbutton" onclick="showDDX('ddx-neuro',['ddx-CVA','ddx-intracranial hemorrhage','ddx-seizure','ddx-hypoglycemia'])">Neuro symptoms</button>
         
         
         <button class="sxbutton" onclick="showDDX('ddx-pelvicpain',['ddx-torsion','ddx-ectopic','ddx-ovariancyst','ddx-pid','ddx-appendicitis'])">Pelvic pain</button>
@@ -340,6 +341,14 @@ Typos, grammar, punctuation
             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-radiculopathy" onclick="check(this.id)" value = "radiculopathy"><label for = "ddx-radiculopathy">radiculopathy</label></li>
           </div>
           
+          <div class = "content" name = "sx"  id = "ddx-neuro">
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-CVA" onclick="check(this.id)" value = "CVA"><label for = "ddx-CVA">CVA</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-intracranial hemorrhage" onclick="check(this.id)" value = "intracranial hemorrhage"><label for = "ddx-intracranial hemorrhage">intracranial hemorrhage</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-seizure" onclick="check(this.id)" value = "seizure"><label for = "ddx-seizure">seizure</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-hypoglycemia" onclick="check(this.id)" value = "hypoglycemia"><label for = "ddx-hypoglycemia">hypoglycemia</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-conversion disorder" onclick="check(this.id)" value = "conversion disorder"><label for = "ddx-conversion disorder">conversion disorder</label></li>
+		      </ul>
+		
           <div class = "content" name = "sx"  id = "ddx-pelvicpain">
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-ectopic" onclick="check(this.id)" value = "ectopic pregnancy"><label for="ddx-ectopic">ectopic pregnancy</label></li>
              <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-torsion" onclick="check(this.id)" value = "ovarian torsion"><label for="ddx-torsion">ovarian torsion</label></li>
