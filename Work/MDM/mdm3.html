@@ -229,8 +229,19 @@ Typos, grammar, punctuation
     <div class="main">
       <button type="button" class="collapsible headingbutton">Patient Presentation</button>
       <div class="content show" id = "div-ptpresentation">
-               <div class="note"><pre>A summary of the patient presentation itself will need to be dictated before everything else is pasted in.</pre></div>
- 
+        <div class="note"><pre>A summary of the patient presentation itself will need to be dictated before everything else is pasted in.</pre></div>
+        <div class = "block">
+          <ul class= "radiobutton">
+            <li><input type = "radio" id = "presentnumber1" class= "choicebutton" onclick="check(this.id)" value = "1"/><label for = "presentnumber1">1</label></li>
+            <li><input type = "radio" id = "presentnumber2" class= "choicebutton" onclick="check(this.id)" value = "1"/><label for = "presentnumber2">2 or more</label></li>
+            <li><input type = "radio" id = "presentnumber3" class= "choicebutton" onclick="check(this.id)" value = "1"/><label for = "presentnumber3">2 or more</label></li>
+            <li><input type = "radio" id = "presentnumber4" class= "choicebutton" onclick="check(this.id)" value = "1"/><label for = "presentnumber4">2 or more</label></li>
+            <li><input type = "radio" id = "presentnumber5" class= "choicebutton" onclick="check(this.id)" value = "1"/><label for = "presentnumber5">2 or more</label></li>
+            <li><input type = "radio" id = "presentnumber6" class= "choicebutton" onclick="check(this.id)" value = "1"/><label for = "presentnumber6">2 or more</label></li>
+          </ul>
+        </div>
+				
+				
         <div>
         <ul class="radiobutton">
           <li><input type = "checkbox" id = "presentation1" class = "choicebutton" onclick="check(this.id)"><label for = "presentation1">Data reviewed from external sources</label>    <br></li>
