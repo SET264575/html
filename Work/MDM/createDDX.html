@@ -3,7 +3,7 @@
 <p id = "test"><p>
 <script>
 var myObj = {};
-getObject();
+getObject('json/ddx.txt');
 function getObject(website){
       const xmlhttp = new XMLHttpRequest();
       xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); displayHTML();};
