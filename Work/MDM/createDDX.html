@@ -6,7 +6,7 @@ var myObj = {};
 getObject('json/ddx.txt');
 function getObject(website){
       const xmlhttp = new XMLHttpRequest();
-      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); displayHTML();};
+      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj);displayHTML();};
       xmlhttp.open("GET",website);
       xmlhttp.send();
     }
@@ -29,6 +29,8 @@ function displayHTML () {
 		t = t + "</div>";
 	}
 	t = t + "</ul>";
+	console.log(s);
+	console.log(t);
 	document.getElementById('test').innerHTML = s + t;
 }
 </script>
