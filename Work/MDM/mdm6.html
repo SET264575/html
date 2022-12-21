@@ -353,226 +353,7 @@ Typos, grammar, punctuation
 ]}
 
 	-->
-        <div>
-        <button class="sxbutton" onclick="showDDX('ddx-abdpain',['ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'])">Abdominal pain</button>
-        <button class="sxbutton" onclick="showDDX('ddx-arthralgias',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia'])">***Arthralgias</button>
-        
-        <button class="sxbutton" onclick="showDDX('ddx-backpain',['ddx-epidural abscess','ddx-cauda equina','ddx-diskitis','ddx-vertebral fracture'])">Back pain</button>
-        
-        <button class="sxbutton" onclick="showDDX('ddx-chestpain',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia'])">Chest pain</button>
-        <button class="sxbutton" onclick="showDDX('ddx-dyspnea',['ddx-pneumonia','ddx-pe','ddx-pneumothorax','ddx-copd','ddx-CHF'])">Dyspnea</button>
-        <button class="sxbutton" onclick="showDDX('ddx-eyesymptoms',['ddx-conjunctivitis','ddx-glaucoma'])">Eye symptoms</button>
-        
-          <button class="sxbutton" onclick="showDDX('ddx-fever',['ddx-pneumonia','ddx-UTI','ddx-sepsis'])">Fever</button>
-        <button class="sxbutton" onclick="showDDX('ddx-gyn',['ddx-Ectopic pregnancy','ddx-Ovarian torsion'])">Gynecologic symptoms</button>
-        
-        <button class="sxbutton" onclick="showDDX('ddx-headache',['ddx-subarachnoidhemorrhage','ddx-braintumor','ddx-subduralhematoma','ddx-migraine','ddx-meningitis'])">Headache</button>
-        <button class="sxbutton" onclick="showDDX('ddx-limbpain',['ddx-DVT','ddx-vascular occlusion','ddx-occult fracture','ddx-septic arthritis','ddx-compartment syndrome','ddx-radiculopathy'])">Limb pain</button>
-        <button class="sxbutton" onclick="showDDX('ddx-limbswelling',['ddx-CHF','ddx-DVT'])">Limb swelling</button>
-        <button class="sxbutton" onclick="showDDX('ddx-neuro',['ddx-CVA','ddx-intracranial hemorrhage','ddx-seizure','ddx-hypoglycemia'])">Neuro symptoms</button>
-        
-        
-        <button class="sxbutton" onclick="showDDX('ddx-pelvicpain',['ddx-torsion','ddx-ectopic','ddx-ovariancyst','ddx-pid','ddx-appendicitis'])">Pelvic pain</button>
-        <button class="sxbutton" onclick="showDDX('ddx-psych',['ddx-suicidal ideation'])">Psychiatric problems</button>
-        <button class="sxbutton" onclick="showDDX('ddx-rash',[])">Rash</button>
-        <button class="sxbutton" onclick="showDDX('ddx-sorethroat',['ddx-strep throat','ddx-peritonsillar abscess','ddx-retropharyngeal abscess'])">Sore throat</button>
-        <button class="sxbutton" onclick="showDDX('ddx-trauma',['ddx-intracranial hemorrhage','ddx-cervical fracture','ddx-internal organ injury','ddx-pneumothorax'])">Trauma</button>
-        
-          <button class="sxbutton" onclick="showDDX('ddx-uri',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia'])">URI</button>
-        
-        
-        <ul class="radiobutton">
-          <div class="content" name = "sx" id = "ddx-abdpain">
-            <!--button class="ddxbutton" id="ddx-selectallabdpain" onclick="check('ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'>Select All</button-->
-            <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-appendicitis" onclick="check(this.id)" value = "appendicitis"><label for="ddx-appendicitis">Appendicitis</label></li>
-             <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-cholecystitis" onclick="check(this.id)" value = "cholecystitis"><label for = "ddx-cholecystitis">Cholecystitis</label></li>
-             <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-diverticulitis" onclick="check(this.id)" value = "diverticulitis"><label for = "ddx-diverticulitis">Diverticulitis</label></li>
-             <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-pancreatitis" onclick="check(this.id)" value = "pancreatitis"><label for = "ddx-pancreatitis">Pancreatitis</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-MI" onclick="check(this.id)" value = "MI"><label for = "ddx-MI">MI</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
-            
-          </div>
-
-	<ul class="radiobutton">
-	<div class="content" name= "sx" id = "ddx-backpain">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-epidural abscess" onclick="check(this.id)" value = "epidural abscess"><label for = "ddx-epidural abscess">epidural abscess</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-diskitis" onclick="check(this.id)" value = "diskitis"><label for = "ddx-diskitis">diskitis</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-cauda equina" onclick="check(this.id)" value = "cauda equina"><label for = "ddx-cauda equina">cauda equina</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-vertebral fracture" onclick="check(this.id)" value = "vertebral fracture"><label for = "ddx-vertebral fracture">vertebral fracture</label></li>
-</ul>
-
-          <div class = "content" name = "sx"  id = "ddx-chestpain">
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-acs" onclick="check(this.id)" value = "acute coronary syndrome"><label for="ddx-acs">ACS</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pe" onclick="check(this.id)" value = "pulmonary embolism"><label for="ddx-pe">PE</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-aorticdissection" onclick="check(this.id)" value = "aortic dissection"><label for="ddx-aorticdissection">Aortic dissection</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax"><label for="ddx-pneumothorax">Pneumothorax</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia"><label for="ddx-pneumonia">Pneumonia</label></li>
-             <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
-          </div>
-          
-          <div class="content" name = "sx" id = "ddx-dyspnea">
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pe" onclick="check(this.id)" value = "pulmonary embolism"><label for="ddx-pe">PE</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia"><label for="ddx-pneumonia">Pneumonia</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax"><label for="ddx-pneumothorax">Pneumothorax</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-CHF" onclick="check(this.id)" value = "CHF"><label for="ddx-CHF">CHF</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-copd" onclick="check(this.id)" value = "COPD"><label for="ddx-copd">COPD</label></li>
-             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
-          </div>
-          
-<ul class="radiobutton">
-<div class="content" name = "sx" id = "ddx-eyesymptoms">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Glaucoma" onclick="check(this.id)" value = "glaucoma"><label for = "ddx-Glaucoma">Glaucoma</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Corneal abrasion" onclick="check(this.id)" value = "corneal abrasion"><label for = "ddx-Corneal abrasion">Corneal abrasion</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Corneal foreign body" onclick="check(this.id)" value = "corneal foreign body"><label for = "ddx-Corneal foreign body">Corneal foreign body</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Conjunctivitis" onclick="check(this.id)" value = "conjunctivitis"><label for = "ddx-Conjunctivitis">Conjunctivitis</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Global trauma" onclick="check(this.id)" value = "globe trauma"><label for = "ddx-Globe trauma">Global trauma</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Orbital cellulitis" onclick="check(this.id)" value = "orbital cellulitis"><label for = "ddx-Orbital cellulitis">Orbital cellulitis</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Hyphema" onclick="check(this.id)" value = "Hyphema"><label for = "ddx-hyphema">Hyphema</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-[other ddx]" onclick="check(this.id)" value = "[other ddx]"><label for = "ddx-[other ddx]">[other ddx]</label></li>
-</div></ul>
-
-<ul class="radiobutton">
-<div class="content" name = "sx" id = "ddx-fever">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Pneumonia" onclick="check(this.id)" value = "pneumonia"><label for = "ddx-Pneumonia">Pneumonia</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-UTI" onclick="check(this.id)" value = "UTI"><label for = "ddx-UTI">UTI</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-influenza" onclick="check(this.id)" value = "influenza"><label for = "ddx-influenza">influenza</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Covid" onclick="check(this.id)" value = "Covid"><label for = "ddx-Covid">Covid</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-URI" onclick="check(this.id)" value = "URI"><label for = "ddx-URI">URI</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Sepsis" onclick="check(this.id)" value = "sepsis"><label for = "ddx-Sepsis">Sepsis</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Otitis media" onclick="check(this.id)" value = "otitis media"><label for = "ddx-Otitis media">Otitis media</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Strep throat" onclick="check(this.id)" value = "strep throat"><label for = "ddx-Strep throat">Strep throat</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Mono" onclick="check(this.id)" value = "mono"><label for = "ddx-Mono">Mono</label></li>
-</div></ul>
-
-<ul class="radiobutton">
-<div class="content" name = "sx" id = "ddx-gyn">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Ectopic pregnancy" onclick="check(this.id)" value = "ectopic pregnancy"><label for = "ddx-Ectopic pregnancy">Ectopic pregnancy</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Ovarian torsion" onclick="check(this.id)" value = "ovarian torsion"><label for = "ddx-Ovarian torsion">Ovarian torsion</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Ruptured ovarian cyst" onclick="check(this.id)" value = "ruptured ovarian cyst"><label for = "ddx-Ruptured ovarian cyst">Ruptured ovarian cyst</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Hemorrhagic ovarian cyst" onclick="check(this.id)" value = "hemorrhagic ovarian cyst"><label for = "ddx-Hemorrhagic ovarian cyst">Hemorrhagic ovarian cyst</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-PID" onclick="check(this.id)" value = "PID"><label for = "ddx-PID">PID</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Dysfunctional uterine bleeding" onclick="check(this.id)" value = "dysfunctional uterine bleeding"><label for = "ddx-Dysfunctional uterine bleeding">Dysfunctional uterine bleeding</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Uterine cancer" onclick="check(this.id)" value = "cancer"><label for = "ddx-Uterine cancer">cancer</label></li>
-</div></ul>
-
-          <div class = "content" name = "sx"  id = "ddx-headache">
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-subarachnoidhemorrhage" onclick="check(this.id)" value = "subarachnoid hemorrhage"><label for="ddx-subarachnoidhemorrhage">Subarachnoid hemorrhage</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-braintumor" onclick="check(this.id)" value = "brain tumor"><label for="ddx-braintumor">Brain tumor</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-migraine" onclick="check(this.id)" value = "migraine headache"><label for="ddx-migraine">Migraine headache</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-meningitis" onclick="check(this.id)" value = "meningitis"><label for="ddx-meningitis">Meningitis</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-subdural hematoma" onclick="check(this.id)" value = "subdural hematoma"><label for="ddx-subduralhematoma">Subdural hematoma</label></li>
-             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
-          </div>
-
-          <div class= "content" name = "sxs" id = 'ddx-limbpain'>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-DVT" onclick="check(this.id)" value = "DVT"><label for = "ddx-DVT">DVT</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-vascular occlusion" onclick="check(this.id)" value = "vascular occlusion"><label for = "ddx-vascular occlusion">vascular occlusion</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-occult fracture" onclick="check(this.id)" value = "occult fracture"><label for = "ddx-occult fracture">occult fracture</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-septic arthritis" onclick="check(this.id)" value = "septic arthritis"><label for = "ddx-septic arthritis">septic arthritis</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-compartment syndrome" onclick="check(this.id)" value = "compartment syndrome"><label for = "ddx-compartment syndrome">compartment syndrome</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-radiculopathy" onclick="check(this.id)" value = "radiculopathy"><label for = "ddx-radiculopathy">radiculopathy</label></li>
-
-<ul class="radiobutton">
-<div class="content" name = "sx" id = "ddx-trauma">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-intracranial hemorrhage" onclick="check(this.id)" value = "intracranial hemorrhage"><label for = "ddx-intracranial hemorrhage">intracranial hemorrhage</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-cervical fracture" onclick="check(this.id)" value = "cervical fracture"><label for = "ddx-cervical fracture">cervical fracture</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-facial fracture" onclick="check(this.id)" value = "facial fracture"><label for = "ddx-facial fracture">facial fracture</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-rib fracture" onclick="check(this.id)" value = "rib fracture"><label for = "ddx-rib fracture">rib fracture</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-clavicle fracture" onclick="check(this.id)" value = "clavicle fracture"><label for = "ddx-clavicle fracture">clavicle fracture</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-arm fracture" onclick="check(this.id)" value = "arm fracture"><label for = "ddx-arm fracture">arm fracture</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-internal organ injury" onclick="check(this.id)" value = "internal organ injury"><label for = "ddx-internal organ injury">internal organ injury</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax"><label for = "ddx-pneumothorax">pneumothorax</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-hip fracture" onclick="check(this.id)" value = "hip fracture"><label for = "ddx-hip fracture">hip fracture</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-leg fracture" onclick="check(this.id)" value = "leg fracture"><label for = "ddx-leg fracture">leg fracture</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-ankle fracture" onclick="check(this.id)" value = "ankle fracture"><label for = "ddx-ankle fracture">ankle fracture</label></li>
-</div></ul>
-
-<ul class="radiobutton">
-<div class="content" name = "sx" id = "ddx-sorethroat">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-influenza" onclick="check(this.id)" value = "influenza"><label for = "ddx-influenza">influenza</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-RSV" onclick="check(this.id)" value = "RSV"><label for = "ddx-RSV">RSV</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Covid" onclick="check(this.id)" value = "Covid"><label for = "ddx-Covid">Covid</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-viral URI" onclick="check(this.id)" value = "viral URI"><label for = "ddx-viral URI">viral URI</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-acute bronchitis" onclick="check(this.id)" value = "acute bronchitis"><label for = "ddx-acute bronchitis">acute bronchitis</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-strep throat" onclick="check(this.id)" value = "strep throat"><label for = "ddx-strep throat">strep throat</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia"><label for = "ddx-pneumonia">pneumonia</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-sinusitis" onclick="check(this.id)" value = "sinusitis"><label for = "ddx-sinusitis">sinusitis</label></li>
-</div></ul>
-
-          </div>
-
-<ul class="radiobutton">
-<div class="content" name = "sx" id = "ddx-limbswelling">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-CHF" onclick="check(this.id)" value = "CHF"><label for = "ddx-CHF">CHF</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-DVT" onclick="check(this.id)" value = "DVT"><label for = "ddx-DVT">DVT</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Cellulitis" onclick="check(this.id)" value = "cellulitis"><label for = "ddx-Cellulitis">Cellulitis</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Drug side effect" onclick="check(this.id)" value = "drug side effect"><label for = "ddx-Drug side effect">Drug side effect</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Lymphedema" onclick="check(this.id)" value = "lymphedema"><label for = "ddx-Lymphedema">Lymphedema</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Myxedema" onclick="check(this.id)" value = "myxedema"><label for = "ddx-Myxedema">Myxedema</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Anasarca" onclick="check(this.id)" value = "anasarca"><label for = "ddx-Anasarca">Anasarca</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Iliac vein compression" onclick="check(this.id)" value = "iliac vein compression"><label for = "ddx-Iliac vein compression">Iliac vein compression</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Nephrotic syndrome" onclick="check(this.id)" value = "nephrotic syndrome"><label for = "ddx-Nephrotic syndrome">Nephrotic syndrome</label></li>
-</div></ul>
-
-          
-          <div class = "content" name = "sx"  id = "ddx-neuro">
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-CVA" onclick="check(this.id)" value = "CVA"><label for = "ddx-CVA">CVA</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-intracranial hemorrhage" onclick="check(this.id)" value = "intracranial hemorrhage"><label for = "ddx-intracranial hemorrhage">intracranial hemorrhage</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-seizure" onclick="check(this.id)" value = "seizure"><label for = "ddx-seizure">seizure</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-hypoglycemia" onclick="check(this.id)" value = "hypoglycemia"><label for = "ddx-hypoglycemia">hypoglycemia</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-conversion disorder" onclick="check(this.id)" value = "conversion disorder"><label for = "ddx-conversion disorder">conversion disorder</label></li>
-		      </ul>
-		
-          <div class = "content" name = "sx"  id = "ddx-pelvicpain">
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-ectopic" onclick="check(this.id)" value = "ectopic pregnancy"><label for="ddx-ectopic">ectopic pregnancy</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-torsion" onclick="check(this.id)" value = "ovarian torsion"><label for="ddx-torsion">ovarian torsion</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-ovariancyst" onclick="check(this.id)" value = "ovarian cyst"><label for="ddx-ovariancyst">ovarian cyst</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pid" onclick="check(this.id)" value = "pelvic inflammatory disease"><label for="ddx-pid">PID</label></li>
-             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-appendicitis2" onclick="check(this.id)" value = "appendicitis"><label for="ddx-appendicitis2">appendicitis</label></li>
-            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
-          </ul>
-
-<ul class="radiobutton">
-<div class="content" name = "sx" id = "ddx-psych">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-suicidal ideation" onclick="check(this.id)" value = "suicidal ideation"><label for = "ddx-suicidal ideation">suicidal ideation</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-thyroid disorder" onclick="check(this.id)" value = "thyroid disorder"><label for = "ddx-thyroid disorder">thyroid disorder</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-drug use" onclick="check(this.id)" value = "drug use"><label for = "ddx-drug use">drug use</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-PE" onclick="check(this.id)" value = "PE"><label for = "ddx-PE">PE</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-heart arrhythmia" onclick="check(this.id)" value = "heart arrhythmia"><label for = "ddx-heart arrhythmia">heart arrhythmia</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-infection" onclick="check(this.id)" value = "infection"><label for = "ddx-infection">infection</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-panic attack" onclick="check(this.id)" value = "panic attack"><label for = "ddx-panic attack">panic attack</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-anxiety" onclick="check(this.id)" value = "anxiety"><label for = "ddx-anxiety">anxiety</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-depression" onclick="check(this.id)" value = "depression"><label for = "ddx-depression">depression</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-bipolar disorder" onclick="check(this.id)" value = "bipolar disorder"><label for = "ddx-bipolar disorder">bipolar disorder</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-schizophrenia" onclick="check(this.id)" value = "schizophrenia"><label for = "ddx-schizophrenia">schizophrenia</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-psychosis" onclick="check(this.id)" value = "psychosis"><label for = "ddx-psychosis">psychosis</label></li>
-</div></ul>
-
-<ul class="radiobutton">
-<div class="content" name = "sx" id = "ddx-rash">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-cellulitis" onclick="check(this.id)" value = "cellulitis"><label for = "ddx-cellulitis">cellulitis</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-herpes zoster" onclick="check(this.id)" value = "herpes zoster"><label for = "ddx-herpes zoster">herpes zoster</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-stasis dermatitis" onclick="check(this.id)" value = "stasis dermatitis"><label for = "ddx-stasis dermatitis">stasis dermatitis</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-viral exanthem" onclick="check(this.id)" value = "viral exanthem"><label for = "ddx-viral exanthem">viral exanthem</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Stevens-Johnson" onclick="check(this.id)" value = "Stevens-Johnson"><label for = "ddx-Stevens-Johnson">Stevens-Johnson</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Kawasaki disease" onclick="check(this.id)" value = "Kawasaki disease"><label for = "ddx-Kawasaki disease">Kawasaki disease</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-scarlet fever" onclick="check(this.id)" value = "scarlet fever"><label for = "ddx-scarlet fever">scarlet fever</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-measles" onclick="check(this.id)" value = "measles"><label for = "ddx-measles">measles</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-monkey pox" onclick="check(this.id)" value = "monkey pox"><label for = "ddx-monkey pox">monkey pox</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-[other ddx]" onclick="check(this.id)" value = "[other ddx]"><label for = "ddx-[other ddx]">[other ddx]</label></li>
-</div></ul>
-
-<ul class="radiobutton">
-<div class="content" name = "sx" id = "ddx-sorethroat">
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-strep throat" onclick="check(this.id)" value = "strep throat"><label for = "ddx-strep throat">strep throat</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-mono" onclick="check(this.id)" value = "mono"><label for = "ddx-mono">mono</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-peritonsillar abscess" onclick="check(this.id)" value = "peritonsillar abscess"><label for = "ddx-peritonsillar abscess">peritonsillar abscess</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-retropharyngeal abscess" onclick="check(this.id)" value = "retropharyngeal abscess"><label for = "ddx-retropharyngeal abscess">retropharyngeal abscess</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-epiglottis" onclick="check(this.id)" value = "epiglottis"><label for = "ddx-epiglottis">epiglottis</label></li>
-<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-[other dx]" onclick="check(this.id)" value = "[other dx]"><label for = "ddx-[other dx]">[other dx]</label></li>
-</div></ul>
-
-          </div></div>
+	      <p id="ddxbuttons"></p>
         <p id = "ddxtable" class="center"></p>
 	      <div class="note"><pre>This table will eventually have all of the diagnoses marked as ruled out, so that only the definitive or presumptive diagnosis will\nneed to be changed.</pre></div>
      </div><br><br>
@@ -1136,6 +917,37 @@ Typos, grammar, punctuation
           });
         }    
         
+	var myObj = {};
+	getObject();
+	function getObject(website){
+	      const xmlhttp = new XMLHttpRequest();
+	      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); displayHTML();};
+	      xmlhttp.open("GET",website);
+	      xmlhttp.send();
+	    }
+
+	}
+
+	function displayHTML () {
+		var t = "";
+		var s = "<div>";
+		for (let i =0; i<myObj.length; i++) {
+			t = t + "<ul class='radiobutton'><div class='content' name = 'sx' id = 'ddx-'"+myObj[i].dx+">";
+			s = s + "<button class = 'sxbutton' type = 'button' onclick = 'showDDX('ddx-"+myObj[i]+"',[";
+			for (let j = 0; j < myObj[i].checked.length-1; j++) {
+				s = s + "'ddx-"+myObj[i].dx+"-"+myObj[i].checked[j]+"',";
+			}
+			s = s + "'ddx-"+myObj[i].dx+"-"+myObj[i].checked[j]+"']>"+myObj[i].dx+"</button>";
+			for (let j = 0; j < myObj[i].ddx.length; j++) {
+				t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj[i].dx+"-"+myObj[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj[i].ddx[j]+"'<label for = 'ddx-"+myObj[i].dx+"-"+myObj[i].ddx[j]+"'>"+myObj[i].ddx[j]+"</label>";
+			}
+			s = s + "</div>";
+			t = t + "</div>";
+		}
+		t = t + "</ul>"
+		document.getElementById('ddxbuttons').innerHTML = s + t;
+	}
+	      
         function makeDDXTable() {
           var list = document.getElementsByName('ddx');
           var list2 = [];
