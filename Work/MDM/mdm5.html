@@ -1,0 +1,1427 @@
+<!--
+add more ddx
+  subsections for abd quadrants
+  table of ddx ruled out, unlikely, supported
+add more consultants
+referrals
+outpt tests
+[]
+
+
+What do you want displayed/hidden?
+What do you want pre-checked?
+What additional selections do you want?
+Is there a different order of sections or choices?
+Is there a different layout?
+How is navigation, finding choices?
+Does wording agree with button?
+  clicking the "appendicitis" button adds the text "cholecystitis"
+Typos, grammar, punctuation
+  no space between sentences, no period at end of sentences
+-->
+
+<html>
+  <head>
+    <style>
+      .header {
+        background-color: #f2f2f2;
+        width: 100%;
+        height: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 200;
+      }
+      
+      .main {
+        margin-top: 310px;
+      }
+      
+      .collapsible {
+        background-color: lightskyblue;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 1em;
+        font-family: Arial;
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .active, .collapsible:hover {
+        background-color: deepskyblue;
+      }
+
+      /* Style the collapsible content. Note: hidden by default */
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        margin: 20px;
+        background-color: white;
+      }
+      
+      .choicebutton {
+        height: 40px;
+        background-color: lightgray;
+        border-radius: 5px;
+        checked: false;
+      }
+      
+      .choicebutton checked {
+        background-color: lightgreen;
+      }
+      
+      .choicebutton:hover {
+        background-color: lightgreen;
+      }
+      
+      .headingbutton {
+        background-color:  deepskyblue;
+        font-family: Arial;
+        font-size: 1em;
+      }
+      
+      .subheadingbutton {
+        background-color:  lightskyblue;;
+        font-family: Arial;
+        font-size: 1em;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+            
+      .subsubheadingbutton {
+        background-color:  lightskyblue;;
+        font-family: Arial;
+        font-size: 1em;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .show {
+        display: block;
+      }
+      
+      h3 { 
+        text-align: center;
+      }
+      
+      h4 {
+        /*margin-left: 20px;*/
+        color: blue;
+        text-align: left;
+      }
+      h5 {
+        text-align: left;
+       /* margin-left: 30px;*/
+        color: purple;
+      }
+      input {
+        margin-left: 40px;
+      }
+      
+      iframe {
+        width: 100%;
+        height: 700px;
+        border: none;
+      }
+      
+      textarea {
+        width: 95%;
+        height: 200px;
+        border: 1px solid black;
+        margin: auto;
+        display: block;
+      }
+      
+      .block {
+        display: block;
+        padding: 0 18px;
+        overflow: hidden;
+        margin: 20px;
+        background-color: white;
+      }
+      
+      .radiobutton {
+        list-style-type: none;
+        margin: 25px 0 0 0;
+        text-align: center;
+        padding: 0;
+      }
+
+      .radiobutton li {
+        float: left;
+        margin: 0 5px 5px 0;
+        width: 300px;
+        height: 50px;
+        position: relative;
+      }
+
+      .radiobutton label,
+      .radiobutton input {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: lightgray;
+      }
+
+      .radiobutton input[type="radio"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+
+      .radiobutton input[type="radio"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
+      
+     .radiobutton input[type="checkbox"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+
+      .radiobutton input[type="checkbox"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
+
+      .radiobutton label {
+        padding: 5px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 90;
+      }
+
+      .radiobutton label:hover {
+        background-color:  gray;
+      }
+      
+      .sxbutton {
+        width: 200px;
+      }
+      
+
+
+
+.radiobutton_small {
+        list-style-type: none;
+        margin: 25px 0 0 0;
+        text-align: center;
+        padding: 0;
+      }
+
+      .radiobutton_small li {
+        float: left;
+        margin: 0 5px 5px 0;
+        width: 100px;
+        height: 50px;
+        position: relative;
+      }
+
+      .radiobutton_small label,
+      .radiobutton input {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: lightgray;
+      }
+
+      .radiobutton_small input[type="radio"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+
+      .radiobutton_small input[type="radio"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
+      
+     .radiobutton_small input[type="checkbox"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+
+      .radiobutton_small input[type="checkbox"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
+
+      .radiobutton_small label {
+        padding: 5px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 90;
+      }
+
+      .radiobutton_small label:hover {
+        background-color:  gray;
+      }
+      
+      .sxbutton {
+        width: 200px;
+      }
+
+
+      .note {
+        background-color: lightyellow;
+        border: 1px solid red;
+        color: red;
+	      margin-left: 20px;
+	    }
+      
+      table {
+        border: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <!--h3>The following text has been copied to the clipboard and is ready to be pasted into your document.</h3-->
+      <textarea id="text"></textarea>
+    </div>
+
+    <div class="main">
+      <button type="button" class="collapsible headingbutton">Patient Presentation</button>
+      <div class="content show" id = "div-ptpresentation">
+        <!--div class="note"><pre>A summary of the patient presentation itself will need to be dictated before everything else is pasted in.</pre></div-->
+        <div class = "block">
+<h4>Moderate</h4>
+          <ul class= "radiobutton">
+            <li><input type = "radio" name = "present" id = "presentnumber1" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with an acute exacerbation of a chronic illness. "/><label for = "presentnumber1">Exacerbation of chronic illness</label></li>
+            <li><input type = "radio" name = "present" id = "presentnumber2" class= "choicebutton" onclick="check(this.id)" value = ""The patient presented with progression of a chronic illness. "/><label for = "presentnumber2">Progression of chronic illness</label></li>
+            <li><input type = "radio" name = "present" id = "presentnumber3" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with side effects of treatment of an illness. "/><label for = "presentnumber3">Side effects of treatment</label></li>
+            <li><input type = "radio" name = "present" id = "presentnumber4" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with 2 or more stable, chronic illnesses. "/><label for = "presentnumber4">2 or more chronic illnesses</label></li>
+            <li><input type = "radio" name = "present" id = "presentnumber5" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with an undiagnosed new problem with uncertain prognosis. "/><label for = "presentnumber5">Undiagnosed new problem with uncertain prognosis</label></li>
+            <li><input type = "radio" name = "present" id = "presentnumber6" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with an acute, complicated injury. "/><label for = "presentnumber6">Acute, complicated injury</label></li>
+          </ul>
+        </div>
+		
+	<div class="block"><h4>High</h4>
+<ul class="radiobutton">
+           <li><input type = "radio" name = "present" id = "presenthigh1" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with an acute severe exacerbation of a chronic illness. "/><label for = "presentnumber1">Severe exacerbation of chronic illness</label></li>
+            <li><input type = "radio" name = "present" id = "presenthigh2" class= "choicebutton" onclick="check(this.id)" value = ""The patient presented with severe progression of a chronic illness. "/><label for = "presentnumber2">Severe progression of chronic illness</label></li>
+            <li><input type = "radio" name = "present" id = "presenthigh3" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with severe side effects of treatment of an illness. "/><label for = "presentnumber3">Severe side effects of treatment</label></li>
+            <li><input type = "radio" name = "present" id = "presenthigh4" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with an acute or chronic illness or injury that poses a threat to life or bodily function. "/><label for = "presenthigh4">Threat to life or bodily function</label></li>
+            </ul></div>
+				
+        <div>
+        <ul class="radiobutton">
+          <li><input type = "checkbox" name = "present" id = "presentation1" class = "choicebutton" onclick="check(this.id)"><label for = "presentation1">Data reviewed from external sources</label>    <br></li>
+          <li><input type = "checkbox" name = "present" id = "presentation2" class = "choicebutton" onclick="check(this.id)"><label for = "presentation2">Additional historian required</label><br></li>
+        </ul></div>
+      </div><br><br>
+
+      <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
+        
+      <div class="content show" id = "div-ddx">
+                <div class="note">
+          <pre>
+          Selecting a symptom will pull up a list of differential diagnoses.  Some may be preselected.  Symptoms with *** do not yet have a differential list.
+          Suggestions for other symptoms or diagnoses would be helpful.
+                    </pre>
+        </div>
+        
+        <!--
+{[	{"dx":"Abdominal pain","ddx":["appendicitis","MI","pancreatitis","cholecystitis","SBO","diverticulitis"],"checked":['appendicitis']},
+	{"dx":"Arthralgias","ddx":["hypothyroidism","adrenal insufficiency","Lyme disease","bacterial endocarditis","malignancy","septic joint","compartment syndrome","Covid","influenza"],"checked":[]},
+	{"dx":"Back pain","ddx":["cauda equina syndrome","vertebral fracture","epidural abscess","diskitis"],"checked":["cauda equina","epidural abscess"]},
+	{"dx":"Chest pain","ddx":["ACS","PE","aortic dissection","pneumothorax"],"checked":["ACS","PE","aortic dissection","pneumothorax"]},
+	{"dx":"Dyspnea","ddx":["pneumonia","PE","pneumothorax","COPD exacerbation","asthma exacerbation"]},
+	{"dx":"Fever","ddx":["pneumonia","UTI","cellulitis","influenza","sepsis"]},
+	{"dx":"Headache","ddx":["subarachnoid hemorrhage","brain tumor","migraine headache"]},
+	{"dx":"Limb pain","ddx":["arterial occlusion","occult fracture","DVT"]},
+	{"dx":"Limb swelling","ddx":["DVT","CHF","cellulitis"]},
+	{"dx":"Pelvic pain","ddx":["ectopic pregnancy","ovarian torsion","PID","ruptured ovarian cyst"]},
+	{"dx":"Psychiatric problems","ddx":["suicidal ideation","acute psychosis","hypoglycemia","thyroid disorder","serotonin syndrome","drug use","drug overdose","PE","ACS","pheochromocytoma"]},
+	{"dx":"Rash","ddx":["RMSF","cellulitis","Stevens-Johnson","scarlet fever"]},
+	{"dx":"Sore thorat","ddx":["strep throat","mono","retropharyngeal abscess","peritonsillar abscess","acute HIV"]},
+	{"dx":"Urinary symptoms","ddx":["UTI","uncontrolled diabetes","STD","pyelonephritis","kidney stone","cancer"]},
+	{"dx":"Vaginal bleeding","ddx":["coagulopathy","ectopic pregnancy","threatened miscarriage","pregnancy complications"]}
+]}
+
+	-->
+        <div>
+        <button class="sxbutton" onclick="showDDX('ddx-abdpain',['ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'])">Abdominal pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-arthralgias',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia'])">***Arthralgias</button>
+        
+        <button class="sxbutton" onclick="showDDX('ddx-backpain',['ddx-epidural abscess','ddx-cauda equina','ddx-diskitis','ddx-vertebral fracture'])">Back pain</button>
+        
+        <button class="sxbutton" onclick="showDDX('ddx-chestpain',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia'])">Chest pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-dyspnea',['ddx-pneumonia','ddx-pe','ddx-pneumothorax','ddx-copd','ddx-CHF'])">Dyspnea</button>
+        <button class="sxbutton" onclick="showDDX('ddx-eyesymptoms',['ddx-conjunctivitis','ddx-glaucoma'])">Eye symptoms</button>
+        
+          <button class="sxbutton" onclick="showDDX('ddx-fever',['ddx-pneumonia','ddx-UTI','ddx-sepsis'])">Fever</button>
+        <button class="sxbutton" onclick="showDDX('ddx-gyn',['ddx-Ectopic pregnancy','ddx-Ovarian torsion'])">Gynecologic symptoms</button>
+        
+        <button class="sxbutton" onclick="showDDX('ddx-headache',['ddx-subarachnoidhemorrhage','ddx-braintumor','ddx-subduralhematoma','ddx-migraine','ddx-meningitis'])">Headache</button>
+        <button class="sxbutton" onclick="showDDX('ddx-limbpain',['ddx-DVT','ddx-vascular occlusion','ddx-occult fracture','ddx-septic arthritis','ddx-compartment syndrome','ddx-radiculopathy'])">Limb pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-limbswelling',['ddx-CHF','ddx-DVT'])">Limb swelling</button>
+        <button class="sxbutton" onclick="showDDX('ddx-neuro',['ddx-CVA','ddx-intracranial hemorrhage','ddx-seizure','ddx-hypoglycemia'])">Neuro symptoms</button>
+        
+        
+        <button class="sxbutton" onclick="showDDX('ddx-pelvicpain',['ddx-torsion','ddx-ectopic','ddx-ovariancyst','ddx-pid','ddx-appendicitis'])">Pelvic pain</button>
+        <button class="sxbutton" onclick="showDDX('ddx-psych',['ddx-suicidal ideation'])">Psychiatric problems</button>
+        <button class="sxbutton" onclick="showDDX('ddx-rash',[])">Rash</button>
+        <button class="sxbutton" onclick="showDDX('ddx-sorethroat',['ddx-strep throat','ddx-peritonsillar abscess','ddx-retropharyngeal abscess'])">Sore throat</button>
+        <button class="sxbutton" onclick="showDDX('ddx-trauma',['ddx-intracranial hemorrhage','ddx-cervical fracture','ddx-internal organ injury','ddx-pneumothorax'])">Trauma</button>
+        
+          <button class="sxbutton" onclick="showDDX('ddx-uri',['ddx-acs','ddx-pe','ddx-aorticdissection','ddx-pneumothorax','ddx-pneumonia'])">URI</button>
+        
+        
+        <ul class="radiobutton">
+          <div class="content" name = "sx" id = "ddx-abdpain">
+            <!--button class="ddxbutton" id="ddx-selectallabdpain" onclick="check('ddx-appendicitis','ddx-cholecystitis','ddx-diverticulitis','ddx-pancreatitis','ddx-MI'>Select All</button-->
+            <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-appendicitis" onclick="check(this.id)" value = "appendicitis"><label for="ddx-appendicitis">Appendicitis</label></li>
+             <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-cholecystitis" onclick="check(this.id)" value = "cholecystitis"><label for = "ddx-cholecystitis">Cholecystitis</label></li>
+             <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-diverticulitis" onclick="check(this.id)" value = "diverticulitis"><label for = "ddx-diverticulitis">Diverticulitis</label></li>
+             <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-pancreatitis" onclick="check(this.id)" value = "pancreatitis"><label for = "ddx-pancreatitis">Pancreatitis</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-MI" onclick="check(this.id)" value = "MI"><label for = "ddx-MI">MI</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
+            
+          </div>
+
+	<ul class="radiobutton">
+	<div class="content" name= "sx" id = "ddx-backpain">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-epidural abscess" onclick="check(this.id)" value = "epidural abscess"><label for = "ddx-epidural abscess">epidural abscess</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-diskitis" onclick="check(this.id)" value = "diskitis"><label for = "ddx-diskitis">diskitis</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-cauda equina" onclick="check(this.id)" value = "cauda equina"><label for = "ddx-cauda equina">cauda equina</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-vertebral fracture" onclick="check(this.id)" value = "vertebral fracture"><label for = "ddx-vertebral fracture">vertebral fracture</label></li>
+</ul>
+
+          <div class = "content" name = "sx"  id = "ddx-chestpain">
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-acs" onclick="check(this.id)" value = "acute coronary syndrome"><label for="ddx-acs">ACS</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pe" onclick="check(this.id)" value = "pulmonary embolism"><label for="ddx-pe">PE</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-aorticdissection" onclick="check(this.id)" value = "aortic dissection"><label for="ddx-aorticdissection">Aortic dissection</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax"><label for="ddx-pneumothorax">Pneumothorax</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia"><label for="ddx-pneumonia">Pneumonia</label></li>
+             <li><input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
+          </div>
+          
+          <div class="content" name = "sx" id = "ddx-dyspnea">
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pe" onclick="check(this.id)" value = "pulmonary embolism"><label for="ddx-pe">PE</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia"><label for="ddx-pneumonia">Pneumonia</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax"><label for="ddx-pneumothorax">Pneumothorax</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-CHF" onclick="check(this.id)" value = "CHF"><label for="ddx-CHF">CHF</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-copd" onclick="check(this.id)" value = "COPD"><label for="ddx-copd">COPD</label></li>
+             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
+          </div>
+          
+<ul class="radiobutton">
+<div class="content" name = "sx" id = "ddx-eyesymptoms">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Glaucoma" onclick="check(this.id)" value = "glaucoma"><label for = "ddx-Glaucoma">Glaucoma</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Corneal abrasion" onclick="check(this.id)" value = "corneal abrasion"><label for = "ddx-Corneal abrasion">Corneal abrasion</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Corneal foreign body" onclick="check(this.id)" value = "corneal foreign body"><label for = "ddx-Corneal foreign body">Corneal foreign body</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Conjunctivitis" onclick="check(this.id)" value = "conjunctivitis"><label for = "ddx-Conjunctivitis">Conjunctivitis</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Global trauma" onclick="check(this.id)" value = "globe trauma"><label for = "ddx-Globe trauma">Global trauma</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Orbital cellulitis" onclick="check(this.id)" value = "orbital cellulitis"><label for = "ddx-Orbital cellulitis">Orbital cellulitis</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Hyphema" onclick="check(this.id)" value = "Hyphema"><label for = "ddx-hyphema">Hyphema</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-[other ddx]" onclick="check(this.id)" value = "[other ddx]"><label for = "ddx-[other ddx]">[other ddx]</label></li>
+</div></ul>
+
+<ul class="radiobutton">
+<div class="content" name = "sx" id = "ddx-fever">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Pneumonia" onclick="check(this.id)" value = "pneumonia"><label for = "ddx-Pneumonia">Pneumonia</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-UTI" onclick="check(this.id)" value = "UTI"><label for = "ddx-UTI">UTI</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-influenza" onclick="check(this.id)" value = "influenza"><label for = "ddx-influenza">influenza</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Covid" onclick="check(this.id)" value = "Covid"><label for = "ddx-Covid">Covid</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-URI" onclick="check(this.id)" value = "URI"><label for = "ddx-URI">URI</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Sepsis" onclick="check(this.id)" value = "sepsis"><label for = "ddx-Sepsis">Sepsis</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Otitis media" onclick="check(this.id)" value = "otitis media"><label for = "ddx-Otitis media">Otitis media</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Strep throat" onclick="check(this.id)" value = "strep throat"><label for = "ddx-Strep throat">Strep throat</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Mono" onclick="check(this.id)" value = "mono"><label for = "ddx-Mono">Mono</label></li>
+</div></ul>
+
+<ul class="radiobutton">
+<div class="content" name = "sx" id = "ddx-gyn">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Ectopic pregnancy" onclick="check(this.id)" value = "ectopic pregnancy"><label for = "ddx-Ectopic pregnancy">Ectopic pregnancy</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Ovarian torsion" onclick="check(this.id)" value = "ovarian torsion"><label for = "ddx-Ovarian torsion">Ovarian torsion</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Ruptured ovarian cyst" onclick="check(this.id)" value = "ruptured ovarian cyst"><label for = "ddx-Ruptured ovarian cyst">Ruptured ovarian cyst</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Hemorrhagic ovarian cyst" onclick="check(this.id)" value = "hemorrhagic ovarian cyst"><label for = "ddx-Hemorrhagic ovarian cyst">Hemorrhagic ovarian cyst</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-PID" onclick="check(this.id)" value = "PID"><label for = "ddx-PID">PID</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Dysfunctional uterine bleeding" onclick="check(this.id)" value = "dysfunctional uterine bleeding"><label for = "ddx-Dysfunctional uterine bleeding">Dysfunctional uterine bleeding</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Uterine cancer" onclick="check(this.id)" value = "cancer"><label for = "ddx-Uterine cancer">cancer</label></li>
+</div></ul>
+
+          <div class = "content" name = "sx"  id = "ddx-headache">
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-subarachnoidhemorrhage" onclick="check(this.id)" value = "subarachnoid hemorrhage"><label for="ddx-subarachnoidhemorrhage">Subarachnoid hemorrhage</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-braintumor" onclick="check(this.id)" value = "brain tumor"><label for="ddx-braintumor">Brain tumor</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-migraine" onclick="check(this.id)" value = "migraine headache"><label for="ddx-migraine">Migraine headache</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-meningitis" onclick="check(this.id)" value = "meningitis"><label for="ddx-meningitis">Meningitis</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-subdural hematoma" onclick="check(this.id)" value = "subdural hematoma"><label for="ddx-subduralhematoma">Subdural hematoma</label></li>
+             <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
+          </div>
+
+          <div class= "content" name = "sxs" id = 'ddx-limbpain'>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-DVT" onclick="check(this.id)" value = "DVT"><label for = "ddx-DVT">DVT</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-vascular occlusion" onclick="check(this.id)" value = "vascular occlusion"><label for = "ddx-vascular occlusion">vascular occlusion</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-occult fracture" onclick="check(this.id)" value = "occult fracture"><label for = "ddx-occult fracture">occult fracture</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-septic arthritis" onclick="check(this.id)" value = "septic arthritis"><label for = "ddx-septic arthritis">septic arthritis</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-compartment syndrome" onclick="check(this.id)" value = "compartment syndrome"><label for = "ddx-compartment syndrome">compartment syndrome</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-radiculopathy" onclick="check(this.id)" value = "radiculopathy"><label for = "ddx-radiculopathy">radiculopathy</label></li>
+
+<ul class="radiobutton">
+<div class="content" name = "sx" id = "ddx-trauma">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-intracranial hemorrhage" onclick="check(this.id)" value = "intracranial hemorrhage"><label for = "ddx-intracranial hemorrhage">intracranial hemorrhage</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-cervical fracture" onclick="check(this.id)" value = "cervical fracture"><label for = "ddx-cervical fracture">cervical fracture</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-facial fracture" onclick="check(this.id)" value = "facial fracture"><label for = "ddx-facial fracture">facial fracture</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-rib fracture" onclick="check(this.id)" value = "rib fracture"><label for = "ddx-rib fracture">rib fracture</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-clavicle fracture" onclick="check(this.id)" value = "clavicle fracture"><label for = "ddx-clavicle fracture">clavicle fracture</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-arm fracture" onclick="check(this.id)" value = "arm fracture"><label for = "ddx-arm fracture">arm fracture</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-internal organ injury" onclick="check(this.id)" value = "internal organ injury"><label for = "ddx-internal organ injury">internal organ injury</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-pneumothorax" onclick="check(this.id)" value = "pneumothorax"><label for = "ddx-pneumothorax">pneumothorax</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-hip fracture" onclick="check(this.id)" value = "hip fracture"><label for = "ddx-hip fracture">hip fracture</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-leg fracture" onclick="check(this.id)" value = "leg fracture"><label for = "ddx-leg fracture">leg fracture</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-ankle fracture" onclick="check(this.id)" value = "ankle fracture"><label for = "ddx-ankle fracture">ankle fracture</label></li>
+</div></ul>
+
+<ul class="radiobutton">
+<div class="content" name = "sx" id = "ddx-sorethroat">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-influenza" onclick="check(this.id)" value = "influenza"><label for = "ddx-influenza">influenza</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-RSV" onclick="check(this.id)" value = "RSV"><label for = "ddx-RSV">RSV</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Covid" onclick="check(this.id)" value = "Covid"><label for = "ddx-Covid">Covid</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-viral URI" onclick="check(this.id)" value = "viral URI"><label for = "ddx-viral URI">viral URI</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-acute bronchitis" onclick="check(this.id)" value = "acute bronchitis"><label for = "ddx-acute bronchitis">acute bronchitis</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-strep throat" onclick="check(this.id)" value = "strep throat"><label for = "ddx-strep throat">strep throat</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-pneumonia" onclick="check(this.id)" value = "pneumonia"><label for = "ddx-pneumonia">pneumonia</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-sinusitis" onclick="check(this.id)" value = "sinusitis"><label for = "ddx-sinusitis">sinusitis</label></li>
+</div></ul>
+
+          </div>
+
+<ul class="radiobutton">
+<div class="content" name = "sx" id = "ddx-limbswelling">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-CHF" onclick="check(this.id)" value = "CHF"><label for = "ddx-CHF">CHF</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-DVT" onclick="check(this.id)" value = "DVT"><label for = "ddx-DVT">DVT</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Cellulitis" onclick="check(this.id)" value = "cellulitis"><label for = "ddx-Cellulitis">Cellulitis</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Drug side effect" onclick="check(this.id)" value = "drug side effect"><label for = "ddx-Drug side effect">Drug side effect</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Lymphedema" onclick="check(this.id)" value = "lymphedema"><label for = "ddx-Lymphedema">Lymphedema</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Myxedema" onclick="check(this.id)" value = "myxedema"><label for = "ddx-Myxedema">Myxedema</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Anasarca" onclick="check(this.id)" value = "anasarca"><label for = "ddx-Anasarca">Anasarca</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Iliac vein compression" onclick="check(this.id)" value = "iliac vein compression"><label for = "ddx-Iliac vein compression">Iliac vein compression</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Nephrotic syndrome" onclick="check(this.id)" value = "nephrotic syndrome"><label for = "ddx-Nephrotic syndrome">Nephrotic syndrome</label></li>
+</div></ul>
+
+          
+          <div class = "content" name = "sx"  id = "ddx-neuro">
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-CVA" onclick="check(this.id)" value = "CVA"><label for = "ddx-CVA">CVA</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-intracranial hemorrhage" onclick="check(this.id)" value = "intracranial hemorrhage"><label for = "ddx-intracranial hemorrhage">intracranial hemorrhage</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-seizure" onclick="check(this.id)" value = "seizure"><label for = "ddx-seizure">seizure</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-hypoglycemia" onclick="check(this.id)" value = "hypoglycemia"><label for = "ddx-hypoglycemia">hypoglycemia</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-conversion disorder" onclick="check(this.id)" value = "conversion disorder"><label for = "ddx-conversion disorder">conversion disorder</label></li>
+		      </ul>
+		
+          <div class = "content" name = "sx"  id = "ddx-pelvicpain">
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-ectopic" onclick="check(this.id)" value = "ectopic pregnancy"><label for="ddx-ectopic">ectopic pregnancy</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-torsion" onclick="check(this.id)" value = "ovarian torsion"><label for="ddx-torsion">ovarian torsion</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-ovariancyst" onclick="check(this.id)" value = "ovarian cyst"><label for="ddx-ovariancyst">ovarian cyst</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-pid" onclick="check(this.id)" value = "pelvic inflammatory disease"><label for="ddx-pid">PID</label></li>
+             <li><input type = "checkbox"   class="ddxbutton" name = "ddx" id="ddx-appendicitis2" onclick="check(this.id)" value = "appendicitis"><label for="ddx-appendicitis2">appendicitis</label></li>
+            <li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-blank" onclick="check(this.id)" value = "[ddx]"><label for = "ddx-blank">[other ddx]</label></li>
+          </ul>
+
+<ul class="radiobutton">
+<div class="content" name = "sx" id = "ddx-psych">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-suicidal ideation" onclick="check(this.id)" value = "suicidal ideation"><label for = "ddx-suicidal ideation">suicidal ideation</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-thyroid disorder" onclick="check(this.id)" value = "thyroid disorder"><label for = "ddx-thyroid disorder">thyroid disorder</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-drug use" onclick="check(this.id)" value = "drug use"><label for = "ddx-drug use">drug use</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-PE" onclick="check(this.id)" value = "PE"><label for = "ddx-PE">PE</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-heart arrhythmia" onclick="check(this.id)" value = "heart arrhythmia"><label for = "ddx-heart arrhythmia">heart arrhythmia</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-infection" onclick="check(this.id)" value = "infection"><label for = "ddx-infection">infection</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-panic attack" onclick="check(this.id)" value = "panic attack"><label for = "ddx-panic attack">panic attack</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-anxiety" onclick="check(this.id)" value = "anxiety"><label for = "ddx-anxiety">anxiety</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-depression" onclick="check(this.id)" value = "depression"><label for = "ddx-depression">depression</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-bipolar disorder" onclick="check(this.id)" value = "bipolar disorder"><label for = "ddx-bipolar disorder">bipolar disorder</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-schizophrenia" onclick="check(this.id)" value = "schizophrenia"><label for = "ddx-schizophrenia">schizophrenia</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-psychosis" onclick="check(this.id)" value = "psychosis"><label for = "ddx-psychosis">psychosis</label></li>
+</div></ul>
+
+<ul class="radiobutton">
+<div class="content" name = "sx" id = "ddx-rash">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-cellulitis" onclick="check(this.id)" value = "cellulitis"><label for = "ddx-cellulitis">cellulitis</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-herpes zoster" onclick="check(this.id)" value = "herpes zoster"><label for = "ddx-herpes zoster">herpes zoster</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-stasis dermatitis" onclick="check(this.id)" value = "stasis dermatitis"><label for = "ddx-stasis dermatitis">stasis dermatitis</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-viral exanthem" onclick="check(this.id)" value = "viral exanthem"><label for = "ddx-viral exanthem">viral exanthem</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Stevens-Johnson" onclick="check(this.id)" value = "Stevens-Johnson"><label for = "ddx-Stevens-Johnson">Stevens-Johnson</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-Kawasaki disease" onclick="check(this.id)" value = "Kawasaki disease"><label for = "ddx-Kawasaki disease">Kawasaki disease</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-scarlet fever" onclick="check(this.id)" value = "scarlet fever"><label for = "ddx-scarlet fever">scarlet fever</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-measles" onclick="check(this.id)" value = "measles"><label for = "ddx-measles">measles</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-monkey pox" onclick="check(this.id)" value = "monkey pox"><label for = "ddx-monkey pox">monkey pox</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-[other ddx]" onclick="check(this.id)" value = "[other ddx]"><label for = "ddx-[other ddx]">[other ddx]</label></li>
+</div></ul>
+
+<ul class="radiobutton">
+<div class="content" name = "sx" id = "ddx-sorethroat">
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-strep throat" onclick="check(this.id)" value = "strep throat"><label for = "ddx-strep throat">strep throat</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-mono" onclick="check(this.id)" value = "mono"><label for = "ddx-mono">mono</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-peritonsillar abscess" onclick="check(this.id)" value = "peritonsillar abscess"><label for = "ddx-peritonsillar abscess">peritonsillar abscess</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-retropharyngeal abscess" onclick="check(this.id)" value = "retropharyngeal abscess"><label for = "ddx-retropharyngeal abscess">retropharyngeal abscess</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-epiglottis" onclick="check(this.id)" value = "epiglottis"><label for = "ddx-epiglottis">epiglottis</label></li>
+<li> <input type = "checkbox"  class="ddxbutton" name = "ddx" id="ddx-[other dx]" onclick="check(this.id)" value = "[other dx]"><label for = "ddx-[other dx]">[other dx]</label></li>
+</div></ul>
+
+          </div></div>
+        <p id = "ddxtable" class="center"></p>
+	      <div class="note"><pre>This table will eventually have all of the diagnoses marked as ruled out, so that only the definitive or presumptive diagnosis will\nneed to be changed.</pre></div>
+     </div><br><br>
+
+      <button type="button" class="collapsible">Data Review</button>
+      <div class="content show" id = "div-datareview">
+        <div class= "note">
+          <pre>
+          Interpretation of tests needs some work.  Suggestions would be helpful.
+          </pre>
+        </div>
+        <div>
+          <h4>Tests ordered and reviewed:</h4>
+          <ul class='radiobutton'>
+            <li><input type = "checkbox" class="choicebutton" id = "datablood" name = "testsordered" checked value = "laboratory tests" onclick="check(this.id)"/><label>Laboratory tests</label></li>
+            <!--li><input type = "checkbox"  class="choicebutton" id = "dataua" name = "testsordered" value = "urine tests" onclick="check(this.id)"/><label>Urinalysis</label></li-->
+            <li><input type = "checkbox"  class="choicebutton" id = "dataekg" name = "testsordered" checkded value = "EKG" onclick="check(this.id)"/><label>EKG</label></li>
+            <li><input type = "checkbox"  class="choicebutton" id = "dataimaging" name = "testsordered" checked value = "imaging" onclick="check(this.id)"/><label>Imaging</label></li>
+          </ul>
+        </div>
+        <br>
+        <h4></h4>
+        <div>
+          <h4></h4>
+          <br>
+          <h4>Interpretation of tests</h4>
+          <ul class="radiobutton">
+            <!--li><input type = "checkbox"  class="choicebutton" id="testingdone" name = "testingdone" checked onclick="check(this.id)"><label for = "testingdone">Testing performed to rule out these problems</label></li-->
+            <li><input type = "checkbox"  class="choicebutton" id = "unremarkable" name = "unremarkable" onclick="check(this.id)"><label>Laboratory tests were unremarkable</label></li>
+            <li><input type = "checkbox"  class="choicebutton" id = "notsupportive" name = "notsupportive" onclick="check(this.id)" value = "Testing was not supportive of any serious or life-threatening problems"><label>Testing was not supportive of any serious or life-threatening problems</label></li>
+            <li><input type = "checkbox"  class="choicebutton" id = "suggestive" name = "notsupportive" onclick="check(this.id)" value = "Testing was supportive of []"><label>Testing was supportive of []</label></li>
+
+          </ul>
+        </div>
+
+        <h4>&nbsp</h4>
+        <h4>&nbsp</h4>
+                
+          <div class="note"><pre>  Other specific diagnoses, such as stroke, STEMI might need its own section.</pre></div>
+        
+        <button type="button" class="collapsible">Sepsis</button>
+        <div class="content" id = "div-sepsis">
+          <div>
+            <h4>SIRS criteria</h4>
+            <ul class="radiobutton">
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-fever" name = "sirs" onclick="check(this.id)" value = "fever"><label for = "sirs-fever">Fever</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-tachycardia" name = "sirs" onclick="check(this.id)" value = "tachycardia"><label for = "sirs-tachycardia">Tachycardia</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-tachypnea" name = "sirs" onclick="check(this.id)" value = "tachypnea"><label for = "sirs-tachypnea">Tachypnea</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
+            </ul>
+          </div>
+          <br>
+          <h4>&nbsp</h4>
+          <div class="block">
+                  <h4>&nbsp</h4>
+            <h4>Lactate</h4>
+            <ul class = "radiobutton">
+              <li><input type = "radio"  class="choicebutton" id="lactate1" name = "lactate" onclick="check(this.id)" value = "elevated"><label for = "lactate1">Elevated</label></li>
+              <li><input type = "radio"  class="choicebutton" id="lactate2" name = "lactate" onclick="check(this.id)" value = "not elevated"><label for = "lactate2">Not elevated</label></li>
+            </ul>
+          </div>
+          <br><h4>&nbsp</h4>
+          <div class="block">
+            <h4>&nbsp</h4>
+            <h4>Etiology</h4>
+            <ul class = "radiobutton">
+              <li><input type = "radio"  class="choicebutton" id="sepsis-abd" name = "sepsisetiology" onclick="check(this.id)" value = "an abdominal source"><label for = "sepsis-abd">Abdominal source</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-cellulitis" name = "sepsisetiology" onclick="check(this.id)" value = "cellulitis"><label for = "sepsis-cellulitis">Cellulitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-cdif" name = "sepsisetiology" onclick="check(this.id)" value = "C. dif colitis"><label for = "sepsis-cdif">C. dif</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-cholangitis" name = "sepsisetiology" onclick="check(this.id)" value = "cholangitis"><label for = "sepsis-cholangitis">Cholangitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-cholecystitis" name = "sepsisetiology" onclick="check(this.id)" value = "cholecystitis"><label for = "sepsis-cholecystitis">Cholecystitis</label></li>
+              
+              <li><input type = "radio"  class="choicebutton" id="sepsis-colitis" name = "sepsisetiology" onclick="check(this.id)" value = "colitis"><label for = "sepsis-colitis">Colitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-diarrhea" name = "sepsisetiology" onclick="check(this.id)" value = "a diarrheal illness"><label for = "sepsis-diarrhea">Diarrheal illness</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-flu" name = "sepsisetiology" onclick="check(this.id)" value = "influenza"><label for = "sepsis-flu">Flu</label></li>
+              
+              <li><input type = "radio"  class="choicebutton" id="sepsis-pneumonia" name = "sepsisetiology" onclick="check(this.id)" value = "pneumonia"><label for = "sepsis-pneumonia">Pneumonia</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsisetiology" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-undiscovered" name = "sepsisetiology" onclick="check(this.id)" value = "a, thus far, undiscovered source"><label for = "sepsis-undiscovered">Undiscovered source</label></li>
+             
+              <li><input type = "radio"  class="choicebutton" id="sepsis-blank" name = "sepsisetiology" onclick="check(this.id)" value = "[sepsis cause]"><label for = "sepsis-blank">[sepsis cause]</label></li>
+              
+            </ul>
+          </div>
+          <br><br><br><h4>&nbsp</h4>
+          <div class= "block">
+            <h4>.</h4>
+            <div class="block">
+            <h4>Treatment</h4>
+            </div>
+            <ul class = "radiobutton">
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-culture" name = "sepsis1" onclick="check(this.id)" value = "blood cultures"><label for = "sepsis-culture">blood cultures</label></li><br>
+            </ul>
+            <h4>&nbsp</h4><h4>&nbsp</h4>
+            <ul class = "radiobutton">
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf" name = "sepsis-abx" onclick="check(this.id)" value = "1 L normal saline"><label for = "sepsis-ivf">1 L NS</label></li>
+              
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf30" name = "sepsis-abx" onclick="check(this.id)" value = "30 cc/kg of normal saline"><label for = "sepsis-ivf30">30 cc/kg NS</label></li>
+            </ul>
+            <h4>&nbsp</h4><h4>&nbsp</h4>
+            <ul class = "radiobutton">
+            
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx1" name = "sepsis-abx" onclick="check(this.id)" value = "Zosyn & Vancomycin"><label for = "sepsis-abx1">Zosyn & Vancomycin</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "Rocephin & Zithromax"><label for = "sepsis-abx2">Rocephin & Zithromax</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-abx3">[other abx]</label></li>
+            </ul>
+          </div>
+        </div>
+      </div><br><br>
+
+      <button type="button" class="collapsible headingbutton">Independent Review of Studies</button>
+      <div class="content" id = "div-independent">
+        <button type = "button" class="collapsible subheadingbutton">Independent review of the EKG</button>
+        <div class="content">
+          <div class="note"><pre>Other interpretations would be helpful.</pre></div>
+          <ul class="radiobutton">
+              <li><input type= "radio"  class = "choicebutton" name = 'ekg' id = "ekg-1" name = "EKG" onclick="check(this.id)" value="is documented in this note."><label for = "ekg-1">Documented</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-2" name = "EKG" onclick="check(this.id)" value="shows the EKG is normal."><label for = "ekg-2">Normal.</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-3" name = "EKG" onclick="check(this.id)" value = "shows the EKG is nonspecific for ACS."><label for = "ekg-3">Nonspecific for ACS.</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-4" name = "EKG" onclick="check(this.id)" value = "shows the EKG is concerning for ACS."><label for = "ekg-4">Concerning for ACS.</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-5" name = "EKG" onclick="check(this.id)" value = "shows STEMI."><label for = "ekg-5">STEMI</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-6" name = "EKG" onclick="check(this.id)" value = "shows atrial fibrillation with rapid ventricular rate."><label for = "ekg-6">A Fib with RVR</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-100" name = "EKG" onclick="check(this.id)" value = "[Other EKG]"><label for = "ekg-100">[Other]</label><br></li>
+      
+         </ul>
+
+        </div><br><br>
+        <button type = "button" class="collapsible subheadingbutton">Independent review of the Chest X-ray</button>
+        <div class="content">
+          <ul class = "radiobutton">
+            <li><input type = "radio"  class = "choicebutton" name='cxr' id = "cxr-1" name= "cxr"  onclick="check(this.id)" value = "no acute pathology."><label for = "cxr-1">No acute pathology</label></li>
+            <li><input type = "radio"  class = "choicebutton" name='cxr'  id = "cxr-2" name = "cxr" onclick="check(this.id)"  value = "pneumonia."><label for = "cxr-2">Pneumonia</label></li>
+            <li><input type = "radio"  class = "choicebutton" name='cxr'  id = "cxr-3" name = "cxr"  onclick="check(this.id)"  value = "pneumothorax."><label for = "cxr-3">Pneumothorax</label></li>
+            <li><input type = "radio"  class = "choicebutton" name='cxr'  id = "cxr-4" name = "cxr" onclick="check(this.id)"  value = "CHF."><label for = "cxr-4">CHF</label></li>
+            <li><input type = "radio"  class = "choicebutton" name='cxr'  id = "cxr-6" name = "cxr" onclick="check(this.id)"  value = "pleural effusion."><label for = "cxr-6">Pleural effusion</label></li>
+            <li><input type = "radio"  class = "choicebutton" name='cxr'  id = "cxr-7" name = "cxr" onclick="check(this.id)"  value = "[other cxr]"><label for = "cxr-7">[Other]</label></li>
+         
+          </ul>
+        </div><br><br>
+        <button type = "button" class="collapsible subheadingbutton">Independent review of the xrays</button>
+          <div class="content">
+            <ul class="radiobutton">
+             <li> <input type = "radio" class = "choicebutton" name='xray'  id="xray-1" name ="xray"  onclick="check(this.id)" value = "no fracture or dislocation."><label for="xray-1">No fracture or dislocation</label></li>
+             <li><input type = "radio" class = "choicebutton" name='xray' id="xray-2" name = "xray" onclick="check(this.id)" value = "a fracture."><label for="xray-2">Fracture</label></li>
+             <li><input type = "radio" class = "choicebutton" name='xray' id="xray-3" name = "xray" onclick="check(this.id)" value = "a dislocation."><label for="xray-3">Dislocation</label></li>
+             <li><input type = "radio" class = "choicebutton" name='xray' id="xray-4" name = "xray" onclick="check(this.id)" value = "a foreign body in the soft tissues."><label for="xray-3">Foreign body</label></li>
+             <li><input type = "radio" class = "choicebutton" name='xray' id="xray-100" name = "xray" onclick="check(this.id)" value = "[Other xray]"><label for="xray-100">[Other]</label></li>
+           
+            </ul>
+        </div><br><br>
+        <button type = "button" class="collapsible subheadingbutton">Independent review of the CT</button>
+        <div class="content">
+          <ul class="radiobutton">
+            <li><input type = "radio" class = "choicebutton" name='ct' id="ct-1" onclick="check(this.id)" value = "no acute pathology." id = "ct-1" name = "ct"><label for = "ct-1">No acute pathology</label></li>
+            <li><input type = "radio" class = "choicebutton" name='ct' id="ct-2" onclick="check(this.id)" value = "a ureteral stone." id = "ct-2" name = "ct"><label for = "ct-2">Ureteral stone</label></li>
+            <li><input type = "radio" class = "choicebutton" name='ct' id="ct-3" onclick="check(this.id)" value = "diverticulitis." id = "ct-3" name = "ct"><label for = "ct-3">Diverticulitis</label></li>
+            <li> <input type = "radio" class = "choicebutton" name='ct' id="ct-4" onclick="check(this.id)" value = "[CT result]" id = "ct-4" name = "ct"><label for = "ct-4">[ct result]</label></li>
+            <li><input type = "radio" class = "choicebutton" name='ct' id="ct-5" onclick="check(this.id)" value = "subarachnoid hemorrhage." id = "ct-5" name = "ct"><label for = "ct-5">Subarachnoid hemorrhage</label></li>
+            <li> <input type = "radio" class = "choicebutton" name='ct' id="ct-6" onclick="check(this.id)" value = "subdural hematoma." id = "ct-6" name = "ct"><label for = "ct-6">Subdural hematoma</label></li>
+
+          </ul>
+        </div><br><br>
+      </div><br><br>
+
+      <!--button type="button" class="collapsible headingbutton">Independent Clinician</button>
+      <div class="content" id = "div-uri1">
+        <div class = "note"><pre>I am planning to move this section to the admit section and discharge section</pre></div>
+        <div><div>
+        <ul class="radiobutton">
+          <li><input type = "checkbox" id="clinician1" name= "clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>       
+        </ul>
+        </div>
+        <h4>&nbsp</h4>
+        <div>
+         
+          <h4>Admit</h4>
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="petrie" name= "admitting" onclick="check(this.id)" value="Dr. Petrie"><label>Dr. Petrie</label></li>
+            <li><input type = "checkbox" id="yuen" name= "admitting" onclick="check(this.id)" value="Dr. Yuen"><label>Dr. Yuen</label></li>
+          </ul>
+        </div>
+        <div>
+          <br>
+        <h4>&nbsp</h4>
+          
+          <h4>Consult</h4>
+          <h5>Cardiology</h5>
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="baird" name= "consulting" onclick="check(this.id)" value="Dr. Baird"><label>Dr. Baird</label></li>
+          </ul>
+        </div>
+         <div class='block'>
+           <br>
+           <h4>&nbsp</h4>
+          <h5>GI</h5>
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Anderson" name= "consulting" onclick="check(this.id)" value="Dr. Anderson"><label for = "Dr. Anderson">Dr. Anderson</label></li>
+            <li><input type = "checkbox" id="Dr. Cleavinger" name= "consulting" onclick="check(this.id)" value="Dr. Cleavinger"><label for = "Dr. Cleavinger">Dr. Cleavinger</label></li>
+            <li><input type = "checkbox" id="Dr. Diaz-Arias" name= "consulting" onclick="check(this.id)" value="Dr. Diaz-Arias"><label for = "Dr. Diaz-Arias">Dr. Diaz-Arias</label></li>
+            <li><input type = "checkbox" id="Dr. Gerhardt" name= "consulting" onclick="check(this.id)" value="Dr. Gerhardt"><label for = "Dr. Gerhardt">Dr. Gerhardt</label></li>
+            <li><input type = "checkbox" id="Dr. Halsey" name= "consulting" onclick="check(this.id)" value="Dr. Halsey"><label for = "Dr. Halsey">Dr. Halsey</label></li>
+            <li><input type = "checkbox" id="llorens" name= "consulting" onclick="check(this.id)" value="Dr. Llorens"><label for = "llorens">Dr. Llorens</label></li>
+            <li><input type = "checkbox" id="Dr. Welsh" name= "consulting" onclick="check(this.id)" value="Dr. Welsh"><label for = "Dr. Welsh">Dr. Welsh</label></li>
+            <li><input type = "checkbox" id="Dr. Williams" name= "consulting" onclick="check(this.id)" value="Dr. Williams"><label for = "Dr. Williams">Dr. Williams</label></li>
+          </ul>
+        </div>
+       <br>
+        <h4>&nbsp</h4>
+        
+        <div class="block">
+          <ul class="radiobutton">
+          <h5>Neuro</h5>
+            <li><input type = "checkbox" id="malone" name= "consulting" onclick="check(this.id)" value="Dr. Malone"><label>Dr. Malone</label></li>
+          </ul>
+          </div>
+        <br>
+        <h4>&nbsp</h4>
+        
+        <div>
+          <h5>Ortho</h5>
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Adams" name= "consulting" onclick="check(this.id)" value="Dr. Adams"><label for = "Dr. Adams">Dr. Adams</label></li>
+            <li><input type = "checkbox" id="Dr. Aleto" name= "consulting" onclick="check(this.id)" value="Dr. Aleto"><label for = "Dr. Aleto">Dr. Aleto</label></li>
+            <li><input type = "checkbox" id="Dr. Anz" name= "consulting" onclick="check(this.id)" value="Dr. Anz"><label for = "Dr. Anz">Dr. Anz</label></li>
+            <li><input type = "checkbox" id="Dr. Bormann" name= "consulting" onclick="check(this.id)" value="Dr. Bormann"><label for = "Dr. Bormann">Dr. Bormann</label></li>
+            <li><input type = "checkbox" id="Dr. Hamann" name= "consulting" onclick="check(this.id)" value="Dr. Hamann"><label for = "Dr. Hamann">Dr. Hamann</label></li>
+            <li><input type = "checkbox" id="Dr. Hockman" name= "consulting" onclick="check(this.id)" value="Dr. Hockman"><label for = "Dr. Hockman">Dr. Hockman</label></li>
+            <li><input type = "checkbox" id="Dr. Holt" name= "consulting" onclick="check(this.id)" value="Dr. Holt"><label for = "Dr. Holt">Dr. Holt</label></li>
+            <li><input type = "checkbox" id="Dr. Jenkins" name= "consulting" onclick="check(this.id)" value="Dr. Jenkins"><label for = "Dr. Jenkins">Dr. Jenkins</label></li>
+            <li><input type = "checkbox" id="Dr. Jones" name= "consulting" onclick="check(this.id)" value="Dr. Jones"><label for = "Dr. Jones">Dr. Jones</label></li>
+            <li><input type = "checkbox" id="Dr. Kleiber" name= "consulting" onclick="check(this.id)" value="Dr. Kleiber"><label for = "Dr. Kleiber">Dr. Kleiber</label></li>
+            <li><input type = "checkbox" id="Dr. Koreckij" name= "consulting" onclick="check(this.id)" value="Dr. Koreckij"><label for = "Dr. Koreckij">Dr. Koreckij</label></li>
+            <li><input type = "checkbox" id="Dr. Krautman" name= "consulting" onclick="check(this.id)" value="Dr. Krautman"><label for = "Dr. Krautman">Dr. Krautman</label></li>
+            <li><input type = "checkbox" id="Dr. Meyer" name= "consulting" onclick="check(this.id)" value="Dr. Meyer"><label for = "Dr. Meyer">Dr. Meyer</label></li>
+            <li><input type = "checkbox" id="Dr. Miles" name= "consulting" onclick="check(this.id)" value="Dr. Miles"><label for = "Dr. Miles">Dr. Miles</label></li>
+            <li><input type = "checkbox" id="Dr. Robertson" name= "consulting" onclick="check(this.id)" value="Dr. Robertson"><label for = "Dr. Robertson">Dr. Robertson</label></li>
+            <li><input type = "checkbox" id="Dr. Sahota" name= "consulting" onclick="check(this.id)" value="Dr. Sahota"><label for = "Dr. Sahota">Dr. Sahota</label></li>
+            <li><input type = "checkbox" id="Dr. Smith" name= "consulting" onclick="check(this.id)" value="Dr. Smith"><label for = "Dr. Smith">Dr. Smith</label></li>
+            <li><input type = "checkbox" id="Dr. Tarbox" name= "consulting" onclick="check(this.id)" value="Dr. Tarbox"><label for = "Dr. Tarbox">Dr. Tarbox</label></li>
+            <li><input type = "checkbox" id="Dr. Thompson" name= "consulting" onclick="check(this.id)" value="Dr. Thompson"><label for = "Dr. Thompson">Dr. Thompson</label></li>
+            <li><input type = "checkbox" id="Dr. Yehyawi" name= "consulting" onclick="check(this.id)" value="Dr. Yehyawi"><label for = "Dr. Yehyawi">Dr. Yehyawi</label></li>          </ul>
+        </div></div>
+      </div><br><br-->
+
+      <button type="button" class="collapsible headingbutton">Risk Stratification Tools</button>
+      <div class="content" id = "div-tools">
+        <iframe src="master.html" id = "iframe"></iframe>
+      </div><br><br>
+
+      <button type="button" class="collapsible headingbutton">Disposition</button>
+      <div class="content show" id = "div-dispo">
+        <button type = "button" class="collapsible subheadingbutton">De-escalation of care</button>
+        <div class="content">
+
+          <div>
+            <ul class="radiobutton">
+              <li><input type="checkbox" name = "deescalate-" id = "deescalate-dnr"  class="choicebutton" onclick="check(this.id)" value = "the patient wishes to be DNR"><label for = "deescalate-dnr">DNR</label></li>
+              <li><input type="checkbox" name = "deescalate-" id = "deescalate-dni"  class="choicebutton" onclick="check(this.id)" value = "the patient does not want to be intubated"><label for = "deescalate-dni">DNI</label></li>
+              <li><input type="checkbox" name = "deescalate-" id = "deescalate-hospice"  class="choicebutton" onclick="check(this.id)" value = "to initiate hospice"><label for = "deescalate-hospice">Hospice</label></li>
+              <li><input type="checkbox" name = "deescalate-" id = "deescalate-comfort"  class="choicebutton" onclick="check(this.id)" value = "the goal of treatment should be comfort care"><label for = "deescalate-comfort">Comfort care</label></li>
+              <li><input type="checkbox" name = "deescalate-" id = "deescalate-noaggressive"  class="choicebutton" onclick="check(this.id)" value = "the patient does not want any more aggressive treatment than is currently being given"><label for = "deescalate-noaggressive">No more aggressive treatment than currently being given</label></li>
+            </ul>
+          </div>
+
+
+
+
+  </div><br><br>
+   <button type = "button" class="collapsible subheadingbutton">Social determinants of health</button>
+        <div class="content">
+          <ul class="radiobutton">
+          <li><input type = "checkbox" class="choicebutton" name = "social" value = "homelessness" id="social-1" onclick="check(this.id)"><label for = "social-1">Homelessness</label></li>
+          <li><input type = "checkbox"  class="choicebutton" name = "social" value = "lack of social support" id="social-2" onclick="check(this.id)"><label for = "social-2">Lack of social support</label></li>
+          <li><input type = "checkbox"  class="choicebutton" name = "social" value = "food insecurity" id="social-3" onclick="check(this.id)"><label for = "social-3">Food insecurity</label></li>
+          <li><input type = "checkbox"  class="choicebutton" name = "social" value = "lack of insurance" id="social-4" onclick="check(this.id)"><label for = "social-4">Lack of insurance</label></li>
+          <li><input type = "checkbox"  class="choicebutton" name = "social" value = "inability to obtain medications" id="social-5" onclick="check(this.id)"><label for = "social-5">Inability to obtain medications</label></li>
+          </ul>
+          
+          
+        
+  </div><br><br>
+   <button type = "button" class="collapsible subheadingbutton">Discharge</button>
+        <div class="content">
+          <div class="block">
+          <ul class="radiobutton">
+            <li><input type = "radio" name= "dischargedecisionmaking" id = "agreedischarge" onclick ="check(this.id)" value = "I discussed the discharge plan with the patient who expressed understanding and agreed with the plan. "><label for = "agreedischarge">Agreed discharge</label></li>
+            <li><input type = "radio" name= "dischargedecisionmaking" id = "wanteddischarge" onclick="check(this.id)"  value = "I offered admission, but the patient requested discharge.  "><label for = "wanteddischarge">Offered admission, pt wanted discharge</label></li>
+            <li><input type = "radio" name= "dischargedecisionmaking" id = "leftama" onclick="check(this.id)" value = "The patient left against medical advice.  If the patient returns to the ER, we will continue the evaluation. "><label for = "leftama">Left AMA</label></li>
+
+          </ul>
+          </div>
+
+          
+          <div class="block">
+          <h4>Referral</h4>
+          <ul class="radiobutton">
+						<li><input type = "checkbox" name = "referral" id = "referral-Cardiology"  class="choicebutton" value = "Cardiology" onclick="check(this.id)"><label for = "referral-Cardiology">Cardiology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-CT Surgery"  class="choicebutton" value = "CT Surgery" onclick="check(this.id)"><label for = "referral-CT Surgery">CT Surgery</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Dermatology"  class="choicebutton" value = "Dermatology" onclick="check(this.id)"><label for = "referral-Dermatology">Dermatology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Endocrinology"  class="choicebutton" value = "Endocrinology" onclick="check(this.id)"><label for = "referral-Endocrinology">Endocrinology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-ENT"  class="choicebutton" value = "ENT" onclick="check(this.id)"><label for = "referral-ENT">ENT</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Gastroenterology"  class="choicebutton" value = "Gastroenterology" onclick="check(this.id)"><label for = "referral-Gastroenterology">Gastroenterology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-General Surgery"  class="choicebutton" value = "General Surgery" onclick="check(this.id)"><label for = "referral-General Surgery">General Surgery</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Gynecology"  class="choicebutton" value = "Gynecology" onclick="check(this.id)"><label for = "referral-Gynecology">Gynecology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Nephrology"  class="choicebutton" value = "Nephrology" onclick="check(this.id)"><label for = "referral-Nephrology">Nephrology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Neurology"  class="choicebutton" value = "Neurology" onclick="check(this.id)"><label for = "referral-Neurology">Neurology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Neurosurgery"  class="choicebutton" value = "Neurosurgery" onclick="check(this.id)"><label for = "referral-Neurosurgery">Neurosurgery</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Oncology"  class="choicebutton" value = "Oncology" onclick="check(this.id)"><label for = "referral-Oncology">Oncology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Ophthalmology"  class="choicebutton" value = "Ophthalmology" onclick="check(this.id)"><label for = "referral-Ophthalmology">Ophthalmology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Orthopedics"  class="choicebutton" value = "Orthopedics" onclick="check(this.id)"><label for = "referral-Orthopedics">Orthopedics</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Plastic Surgery"  class="choicebutton" value = "Plastic Surgery" onclick="check(this.id)"><label for = "referral-Plastic Surgery">Plastic Surgery</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Pulmonology"  class="choicebutton" value = "Pulmonology" onclick="check(this.id)"><label for = "referral-Pulmonology">Pulmonology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Rheumatology"  class="choicebutton" value = "Rheumatology" onclick="check(this.id)"><label for = "referral-Rheumatology">Rheumatology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Urology"  class="choicebutton" value = "Urology" onclick="check(this.id)"><label for = "referral-Urology">Urology</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Vascular Surgery"  class="choicebutton" value = "Vascular Surgery" onclick="check(this.id)"><label for = "referral-Vascular Surgery">Vascular Surgery</label></li>
+						<li><input type = "checkbox" name = "referral" id = "referral-Wound Clinic"  class="choicebutton" value = "Wound Clinic" onclick="check(this.id)"><label for = "referral-Wound Clinic">Wound Clinic</label></li>          </ul>
+          </div>
+
+<div class="block">
+          <h4>Outpatient testing</h4>
+		 
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="outpttest-blank"class="choicebutton" name = "outpt testing" value = "[outpatient test]" onclick="check(this.id)"><label for = "outpttest-blank">[    ]</label></li>
+            <li><input type = "checkbox" id="outpttest-carotid"class="choicebutton" name = "outpt testing" value = "carotid duplex ultrasound" onclick="check(this.id)"><label for = "outpttest-carotid">Carotid duplex US</label></li>
+            <li><input type = "checkbox" id="outpttest-colon"class="choicebutton" name = "outpt testing" value = "colonoscopy" onclick="check(this.id)"><label for = "outpttest-colon">Colonoscopy</label></li>
+            <li><input type = "checkbox" id="outpttest-ctap"class="choicebutton" name = "outpt testing" value = "CT abdomen & pelvis" onclick="check(this.id)"><label for = "outpttest-ctap">CT abdomen & pelvis</label></li>
+            <li><input type = "checkbox" id="outpttest-ctchest"class="choicebutton" name = "outpt testing" value = "CT chest" onclick="check(this.id)"><label for = "outpttest-ctchest">CT chest</label></li>
+            <li><input type = "checkbox" id="outpttest-duplexLLE"class="choicebutton" name = "outpt testing" value = "duplex ultrasound of the left leg" onclick="check(this.id)"><label for = "outpttest-duplexlle">Duplex ultrasound LEFT LEG</label></li>
+            <li><input type = "checkbox" id="outpttest-duplexRLE"class="choicebutton" name = "outpt testing" value = "duplex ultrasound of the right leg" onclick="check(this.id)"><label for = "outpttest-duplexrle">Duplex ultrasound RIGHT LEG</label></li>
+            <li><input type = "checkbox" id="outpttest-echo"class="choicebutton" name = "outpt testing" value = "echocardiogram" onclick="check(this.id)"><label for = "outpttest-echo">Echo</label></li>
+            <li><input type = "checkbox" id="outpttest-eeg"class="choicebutton" name = "outpt testing" value = "EEG" onclick="check(this.id)"><label for = "outpttest-eeg">EEG</label></li>
+            <li><input type = "checkbox" id="outpttest-gallbladder"class="choicebutton" name = "outpt testing" value = "gallbladder ultrasound" onclick="check(this.id)"><label for = "outpttest-gallbladder">Gallbladder US</label></li>
+            <li><input type = "checkbox" id="outpttest-holter"class="choicebutton" name = "outpt testing" value = "Holter monitor" onclick="check(this.id)"><label for = "outpttest-holter">Holter monitor</label></li>
+            <li><input type = "checkbox" id="outpttest-pelvic"class="choicebutton" name = "outpt testing" value = "pelvic ultrasound" onclick="check(this.id)"><label for = "outpttest-pelvic">Pelvic ultrasound</label></li>
+            <li><input type = "checkbox" id="outpttest-stress"class="choicebutton" name = "outpt testing" value = "stress test" onclick="check(this.id)"><label for = "outpttest-stress">Stress test</label></li>
+            <li><input type = "checkbox" id="outpttest-egd"class="choicebutton" name = "outpt testing" value = "upper endoscopy" onclick="check(this.id)"><label for = "outpttest-egd">Upper Endoscopy</label></li>
+          </ul>
+          </div>
+          <div class="block">
+                           <h4>Consult</h4>
+		</div>
+          <button class="collapsible subsubheadingbutton">Cardiology</button>
+          <div class = "content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Baird" name= "consulting" onclick="check(this.id)" value="Dr. Baird"><label for = "Dr. Baird">Dr. Baird</label></li>
+            <li><input type = "checkbox" id="Dr. Boyer" name= "consulting" onclick="check(this.id)" value="Dr. Boyer"><label for = "Dr. Boyer">Dr. Boyer</label></li>
+            <li><input type = "checkbox" id="Dr. Brown" name= "consulting" onclick="check(this.id)" value="Dr. Brown"><label for = "Dr. Brown">Dr. Brown</label></li>
+            <li><input type = "checkbox" id="Dr. Elliott" name= "consulting" onclick="check(this.id)" value="Dr. Elliott"><label for = "Dr. Elliott">Dr. Elliott</label></li>
+            <li><input type = "checkbox" id="Dr. Fairlamb" name= "consulting" onclick="check(this.id)" value="Dr. Fairlamb"><label for = "Dr. Fairlamb">Dr. Fairlamb</label></li>
+            <li><input type = "checkbox" id="Dr. Mackay" name= "consulting" onclick="check(this.id)" value="Dr. Mackay"><label for = "Dr. Mackay">Dr. Mackay</label></li>
+            <li><input type = "checkbox" id="Dr. Pierce" name= "consulting" onclick="check(this.id)" value="Dr. Pierce"><label for = "Dr. Pierce">Dr. Pierce</label></li>
+            <li><input type = "checkbox" id="Dr. Rytlewski" name= "consulting" onclick="check(this.id)" value="Dr. Rytlewski"><label for = "Dr. Rytlewski">Dr. Rytlewski</label></li>
+            <li><input type = "checkbox" id="Dr. Tillman" name= "consulting" onclick="check(this.id)" value="Dr. Tillman"><label for = "Dr. Tillman">Dr. Tillman</label></li>
+            <li><input type = "checkbox" id="Dr. Tran" name= "consulting" onclick="check(this.id)" value="Dr. Tran"><label for = "Dr. Tran">Dr. Tran</label></li>
+            <li><input type = "checkbox" id="Dr. Tyagi" name= "consulting" onclick="check(this.id)" value="Dr. Tyagi"><label for = "Dr. Tyagi">Dr. Tyagi</label></li>
+            <li><input type = "checkbox" id="Dr. Verbsky" name= "consulting" onclick="check(this.id)" value="Dr. Verbsky"><label for = "Dr. Verbsky">Dr. Verbsky</label></li>
+            <li><input type = "checkbox" id="Dr. Zuidema" name= "consulting" onclick="check(this.id)" value="Dr. Zuidema"><label for = "Dr. Zuidema">Dr. Zuidema</label></li>          </ul>
+        </div>
+	<br><br>
+          <button class="collapsible subsubheadingbutton">GI</button>
+          <div class = "content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Anderson" name= "consulting" onclick="check(this.id)" value="Dr. Anderson"><label for = "Dr. Anderson">Dr. Anderson</label></li>
+            <li><input type = "checkbox" id="Dr. Cleavinger" name= "consulting" onclick="check(this.id)" value="Dr. Cleavinger"><label for = "Dr. Cleavinger">Dr. Cleavinger</label></li>
+            <li><input type = "checkbox" id="Dr. Diaz-Arias" name= "consulting" onclick="check(this.id)" value="Dr. Diaz-Arias"><label for = "Dr. Diaz-Arias">Dr. Diaz-Arias</label></li>
+            <li><input type = "checkbox" id="Dr. Gerhardt" name= "consulting" onclick="check(this.id)" value="Dr. Gerhardt"><label for = "Dr. Gerhardt">Dr. Gerhardt</label></li>
+            <li><input type = "checkbox" id="Dr. Halsey" name= "consulting" onclick="check(this.id)" value="Dr. Halsey"><label for = "Dr. Halsey">Dr. Halsey</label></li>
+            <li><input type = "checkbox" id="llorens" name= "consulting" onclick="check(this.id)" value="Dr. Llorens"><label for = "llorens">Dr. Llorens</label></li>
+            <li><input type = "checkbox" id="Dr. Welsh" name= "consulting" onclick="check(this.id)" value="Dr. Welsh"><label for = "Dr. Welsh">Dr. Welsh</label></li>
+            <li><input type = "checkbox" id="Dr. Williams" name= "consulting" onclick="check(this.id)" value="Dr. Williams"><label for = "Dr. Williams">Dr. Williams</label></li>
+          </ul>
+          </div><br><br>
+      
+          <button class="collapsible subsubheadingbutton">Neurology</button>
+          <div class = "content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Goble" name= "consulting" onclick="check(this.id)" value="Dr. Goble"><label for = "Dr. Goble">Dr. Goble</label></li>
+            <li><input type = "checkbox" id="Dr. Koch" name= "consulting" onclick="check(this.id)" value="Dr. Koch"><label for = "Dr. Koch">Dr. Koch</label></li>
+            <li><input type = "checkbox" id="Dr. Malone" name= "consulting" onclick="check(this.id)" value="Dr. Malone"><label for = "Dr. Malone">Dr. Malone</label></li>
+            <li><input type = "checkbox" id="Dr. Jones" name= "consulting" onclick="check(this.id)" value="Dr. Jones"><label for = "Dr. Jones">Dr. Jones</label></li>
+          </ul>
+          </div><br><br>
+        
+          <button class="collapsible subsubheadingbutton">Oncology</button>
+          <div class = "content">
+            <ul class='radiobutton'>
+              <li><input type = "checkbox" id="Dr. Balakrishnan" name= "consulting" onclick="check(this.id)" value="Dr. Balakrishnan"><label for = "Dr. Balakrishnan">Dr. Balakrishnan</label></li>
+              <li><input type = "checkbox" id="Dr. Iliff" name= "consulting" onclick="check(this.id)" value="Dr. Iliff"><label for = "Dr. Iliff">Dr. Iliff</label></li>
+              <li><input type = "checkbox" id="Dr. Makarian" name= "consulting" onclick="check(this.id)" value="Dr. Makarian"><label for = "Dr. Makarian">Dr. Makarian</label></li>
+              <li><input type = "checkbox" id="Dr. Ramadoss" name= "consulting" onclick="check(this.id)" value="Dr. Ramadoss"><label for = "Dr. Ramadoss">Dr. Ramadoss</label></li>
+              <li><input type = "checkbox" id="Dr. Tungesvik" name= "consulting" onclick="check(this.id)" value="Dr. Tungesvik"><label for = "Dr. Tungesvik">Dr. Tungesvik</label></li>
+            </ul>
+            </div><br><br>
+          
+          <button class="collapsible subsubheadingbutton">Orthopedics</button>
+          <div class = "content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Adams" name= "consulting" onclick="check(this.id)" value="Dr. Adams"><label for = "Dr. Adams">Dr. Adams</label></li>
+            <li><input type = "checkbox" id="Dr. Aleto" name= "consulting" onclick="check(this.id)" value="Dr. Aleto"><label for = "Dr. Aleto">Dr. Aleto</label></li>
+            <li><input type = "checkbox" id="Dr. Anz" name= "consulting" onclick="check(this.id)" value="Dr. Anz"><label for = "Dr. Anz">Dr. Anz</label></li>
+            <li><input type = "checkbox" id="Dr. Bormann" name= "consulting" onclick="check(this.id)" value="Dr. Bormann"><label for = "Dr. Bormann">Dr. Bormann</label></li>
+            <li><input type = "checkbox" id="Dr. Hamann" name= "consulting" onclick="check(this.id)" value="Dr. Hamann"><label for = "Dr. Hamann">Dr. Hamann</label></li>
+            <li><input type = "checkbox" id="Dr. Hockman" name= "consulting" onclick="check(this.id)" value="Dr. Hockman"><label for = "Dr. Hockman">Dr. Hockman</label></li>
+            <li><input type = "checkbox" id="Dr. Holt" name= "consulting" onclick="check(this.id)" value="Dr. Holt"><label for = "Dr. Holt">Dr. Holt</label></li>
+            <li><input type = "checkbox" id="Dr. Jenkins" name= "consulting" onclick="check(this.id)" value="Dr. Jenkins"><label for = "Dr. Jenkins">Dr. Jenkins</label></li>
+            <li><input type = "checkbox" id="Dr. Jones" name= "consulting" onclick="check(this.id)" value="Dr. Jones"><label for = "Dr. Jones">Dr. Jones</label></li>
+            <li><input type = "checkbox" id="Dr. Kleiber" name= "consulting" onclick="check(this.id)" value="Dr. Kleiber"><label for = "Dr. Kleiber">Dr. Kleiber</label></li>
+            <li><input type = "checkbox" id="Dr. Koreckij" name= "consulting" onclick="check(this.id)" value="Dr. Koreckij"><label for = "Dr. Koreckij">Dr. Koreckij</label></li>
+            <li><input type = "checkbox" id="Dr. Krautman" name= "consulting" onclick="check(this.id)" value="Dr. Krautman"><label for = "Dr. Krautman">Dr. Krautman</label></li>
+            <li><input type = "checkbox" id="Dr. Meyer" name= "consulting" onclick="check(this.id)" value="Dr. Meyer"><label for = "Dr. Meyer">Dr. Meyer</label></li>
+            <li><input type = "checkbox" id="Dr. Miles" name= "consulting" onclick="check(this.id)" value="Dr. Miles"><label for = "Dr. Miles">Dr. Miles</label></li>
+            <li><input type = "checkbox" id="Dr. Robertson" name= "consulting" onclick="check(this.id)" value="Dr. Robertson"><label for = "Dr. Robertson">Dr. Robertson</label></li>
+            <li><input type = "checkbox" id="Dr. Sahota" name= "consulting" onclick="check(this.id)" value="Dr. Sahota"><label for = "Dr. Sahota">Dr. Sahota</label></li>
+            <li><input type = "checkbox" id="Dr. Smith" name= "consulting" onclick="check(this.id)" value="Dr. Smith"><label for = "Dr. Smith">Dr. Smith</label></li>
+            <li><input type = "checkbox" id="Dr. Tarbox" name= "consulting" onclick="check(this.id)" value="Dr. Tarbox"><label for = "Dr. Tarbox">Dr. Tarbox</label></li>
+            <li><input type = "checkbox" id="Dr. Thompson" name= "consulting" onclick="check(this.id)" value="Dr. Thompson"><label for = "Dr. Thompson">Dr. Thompson</label></li>
+            <li><input type = "checkbox" id="Dr. Yehyawi" name= "consulting" onclick="check(this.id)" value="Dr. Yehyawi"><label for = "Dr. Yehyawi">Dr. Yehyawi</label></li>          </ul>
+          </div><br><br>
+        </div><br><br>
+   <button type = "button" class="collapsible subheadingbutton">Admit</button>
+        <div class="content">
+        <ul class="radiobutton">
+          <li><input type = "checkbox" name= "admissiondecisionmaking" id = "agreeadmission" onclick="check(this.id)"><label for = "agreeadmission">I discussed the options with the patient who agreed to admisison.</label></li>
+        </ul>
+          
+        <div>
+        <ul class="radiobutton">
+          <li><input type = "checkbox" id="clinician1" name= "clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>       
+        </ul>
+        </div>
+          <h4>&nbsp</h4>
+          <h4>&nbsp</h4>
+          
+        <hr>
+        <div class="block">
+          <h4>Admit</h4>
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Bhagat" name= "admitting" onclick="check(this.id)" value="Dr. Bhagat"><label for = "Dr. Bhagat">Dr. Bhagat</label></li>
+            <li><input type = "checkbox" id="Dr. Cheddi" name= "admitting" onclick="check(this.id)" value="Dr. Cheddi"><label for = "Dr. Cheddi">Dr. Cheddi</label></li>
+            <li><input type = "checkbox" id="Dr. Hassan" name= "admitting" onclick="check(this.id)" value="Dr. Hassan"><label for = "Dr. Hassan">Dr. Hassan</label></li>
+            <li><input type = "checkbox" id="Dr. James" name= "admitting" onclick="check(this.id)" value="Dr. James"><label for = "Dr. James">Dr. James</label></li>
+            <li><input type = "checkbox" id="Dr. Makarian" name= "admitting" onclick="check(this.id)" value="Dr. Makarian"><label for = "Dr. Makarian">Dr. Makarian</label></li>
+            <li><input type = "checkbox" id="Dr. McGreevy" name= "admitting" onclick="check(this.id)" value="Dr. McGreevy"><label for = "Dr. McGreevy">Dr. McGreevy</label></li>
+            <li><input type = "checkbox" id="Dr. Nau" name= "admitting" onclick="check(this.id)" value="Dr. Nau"><label for = "Dr. Nau">Dr. Nau</label></li>
+            <li><input type = "checkbox" id="Dr. Petrie" name= "admitting" onclick="check(this.id)" value="Dr. Petrie"><label for = "Dr. Petrie">Dr. Petrie</label></li>
+            <li><input type = "checkbox" id="Dr. Renick" name= "admitting" onclick="check(this.id)" value="Dr. Renick"><label for = "Dr. Renick">Dr. Renick</label></li>
+            <li><input type = "checkbox" id="Dr. Schiavo" name= "admitting" onclick="check(this.id)" value="Dr. Schiavo"><label for = "Dr. Schiavo">Dr. Schiavo</label></li>
+            <li><input type = "checkbox" id="Dr. Sharma" name= "admitting" onclick="check(this.id)" value="Dr. Sharma"><label for = "Dr. Sharma">Dr. Sharma</label></li>
+            <li><input type = "checkbox" id="Dr. Welchmeyer" name= "admitting" onclick="check(this.id)" value="Dr. Welchmeyer"><label for = "Dr. Welchmeyer">Dr. Welchmeyer</label></li>
+            <li><input type = "checkbox" id="Dr. Yuen" name= "admitting" onclick="check(this.id)" value="Dr. Yuen"><label for = "Dr. Yuen">Dr. Yuen</label></li>
+            <li><input type = "checkbox" id="Dr. Zeglis" name= "admitting" onclick="check(this.id)" value="Dr. Zeglis"><label for = "Dr. Zeglis">Dr. Zeglis</label></li> 
+          </ul>
+        </div>
+                    <h4>&nbsp</h4>
+          <h4>&nbsp</h4>
+        <hr>
+        <div>
+          
+                  <h4>Consult</h4>
+          <button class="collapsible subsubheadingbutton">Cardiology</button>
+          <div class = "content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Baird" name= "consulting" onclick="check(this.id)" value="Dr. Baird"><label for = "Dr. Baird">Dr. Baird</label></li>
+            <li><input type = "checkbox" id="Dr. Boyer" name= "consulting" onclick="check(this.id)" value="Dr. Boyer"><label for = "Dr. Boyer">Dr. Boyer</label></li>
+            <li><input type = "checkbox" id="Dr. Brown" name= "consulting" onclick="check(this.id)" value="Dr. Brown"><label for = "Dr. Brown">Dr. Brown</label></li>
+            <li><input type = "checkbox" id="Dr. Elliott" name= "consulting" onclick="check(this.id)" value="Dr. Elliott"><label for = "Dr. Elliott">Dr. Elliott</label></li>
+            <li><input type = "checkbox" id="Dr. Fairlamb" name= "consulting" onclick="check(this.id)" value="Dr. Fairlamb"><label for = "Dr. Fairlamb">Dr. Fairlamb</label></li>
+            <li><input type = "checkbox" id="Dr. Mackay" name= "consulting" onclick="check(this.id)" value="Dr. Mackay"><label for = "Dr. Mackay">Dr. Mackay</label></li>
+            <li><input type = "checkbox" id="Dr. Pierce" name= "consulting" onclick="check(this.id)" value="Dr. Pierce"><label for = "Dr. Pierce">Dr. Pierce</label></li>
+            <li><input type = "checkbox" id="Dr. Rytlewski" name= "consulting" onclick="check(this.id)" value="Dr. Rytlewski"><label for = "Dr. Rytlewski">Dr. Rytlewski</label></li>
+            <li><input type = "checkbox" id="Dr. Tillman" name= "consulting" onclick="check(this.id)" value="Dr. Tillman"><label for = "Dr. Tillman">Dr. Tillman</label></li>
+            <li><input type = "checkbox" id="Dr. Tran" name= "consulting" onclick="check(this.id)" value="Dr. Tran"><label for = "Dr. Tran">Dr. Tran</label></li>
+            <li><input type = "checkbox" id="Dr. Tyagi" name= "consulting" onclick="check(this.id)" value="Dr. Tyagi"><label for = "Dr. Tyagi">Dr. Tyagi</label></li>
+            <li><input type = "checkbox" id="Dr. Verbsky" name= "consulting" onclick="check(this.id)" value="Dr. Verbsky"><label for = "Dr. Verbsky">Dr. Verbsky</label></li>
+            <li><input type = "checkbox" id="Dr. Zuidema" name= "consulting" onclick="check(this.id)" value="Dr. Zuidema"><label for = "Dr. Zuidema">Dr. Zuidema</label></li>          </ul>
+        </div>
+        <br><br>
+          <button class="collapsible subsubheadingbutton">GI</button>
+          <div class = "content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Anderson" name= "consulting" onclick="check(this.id)" value="Dr. Anderson"><label for = "Dr. Anderson">Dr. Anderson</label></li>
+            <li><input type = "checkbox" id="Dr. Cleavinger" name= "consulting" onclick="check(this.id)" value="Dr. Cleavinger"><label for = "Dr. Cleavinger">Dr. Cleavinger</label></li>
+            <li><input type = "checkbox" id="Dr. Diaz-Arias" name= "consulting" onclick="check(this.id)" value="Dr. Diaz-Arias"><label for = "Dr. Diaz-Arias">Dr. Diaz-Arias</label></li>
+            <li><input type = "checkbox" id="Dr. Gerhardt" name= "consulting" onclick="check(this.id)" value="Dr. Gerhardt"><label for = "Dr. Gerhardt">Dr. Gerhardt</label></li>
+            <li><input type = "checkbox" id="Dr. Halsey" name= "consulting" onclick="check(this.id)" value="Dr. Halsey"><label for = "Dr. Halsey">Dr. Halsey</label></li>
+            <li><input type = "checkbox" id="llorens" name= "consulting" onclick="check(this.id)" value="Dr. Llorens"><label for = "llorens">Dr. Llorens</label></li>
+            <li><input type = "checkbox" id="Dr. Welsh" name= "consulting" onclick="check(this.id)" value="Dr. Welsh"><label for = "Dr. Welsh">Dr. Welsh</label></li>
+            <li><input type = "checkbox" id="Dr. Williams" name= "consulting" onclick="check(this.id)" value="Dr. Williams"><label for = "Dr. Williams">Dr. Williams</label></li>
+          </ul>
+          </div><br><br>
+      
+          <button class="collapsible subsubheadingbutton">Neurology</button>
+          <div class = "content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Goble" name= "consulting" onclick="check(this.id)" value="Dr. Goble"><label for = "Dr. Goble">Dr. Goble</label></li>
+            <li><input type = "checkbox" id="Dr. Koch" name= "consulting" onclick="check(this.id)" value="Dr. Koch"><label for = "Dr. Koch">Dr. Koch</label></li>
+            <li><input type = "checkbox" id="Dr. Malone" name= "consulting" onclick="check(this.id)" value="Dr. Malone"><label for = "Dr. Malone">Dr. Malone</label></li>
+            <li><input type = "checkbox" id="Dr. Jones" name= "consulting" onclick="check(this.id)" value="Dr. Jones"><label for = "Dr. Jones">Dr. Jones</label></li>
+          </ul>
+          </div><br><br>
+        
+          <button class="collapsible subsubheadingbutton">Oncology</button>
+          <div class = "content">
+            <ul class='radiobutton'>
+              <li><input type = "checkbox" id="Dr. Balakrishnan" name= "consulting" onclick="check(this.id)" value="Dr. Balakrishnan"><label for = "Dr. Balakrishnan">Dr. Balakrishnan</label></li>
+              <li><input type = "checkbox" id="Dr. Iliff" name= "consulting" onclick="check(this.id)" value="Dr. Iliff"><label for = "Dr. Iliff">Dr. Iliff</label></li>
+              <li><input type = "checkbox" id="Dr. Makarian" name= "consulting" onclick="check(this.id)" value="Dr. Makarian"><label for = "Dr. Makarian">Dr. Makarian</label></li>
+              <li><input type = "checkbox" id="Dr. Ramadoss" name= "consulting" onclick="check(this.id)" value="Dr. Ramadoss"><label for = "Dr. Ramadoss">Dr. Ramadoss</label></li>
+              <li><input type = "checkbox" id="Dr. Tungesvik" name= "consulting" onclick="check(this.id)" value="Dr. Tungesvik"><label for = "Dr. Tungesvik">Dr. Tungesvik</label></li>
+            </ul>
+            </div><br><br>
+          
+          <button class="collapsible subsubheadingbutton">Orthopedics</button>
+          <div class = "content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" id="Dr. Adams" name= "consulting" onclick="check(this.id)" value="Dr. Adams"><label for = "Dr. Adams">Dr. Adams</label></li>
+            <li><input type = "checkbox" id="Dr. Aleto" name= "consulting" onclick="check(this.id)" value="Dr. Aleto"><label for = "Dr. Aleto">Dr. Aleto</label></li>
+            <li><input type = "checkbox" id="Dr. Anz" name= "consulting" onclick="check(this.id)" value="Dr. Anz"><label for = "Dr. Anz">Dr. Anz</label></li>
+            <li><input type = "checkbox" id="Dr. Bormann" name= "consulting" onclick="check(this.id)" value="Dr. Bormann"><label for = "Dr. Bormann">Dr. Bormann</label></li>
+            <li><input type = "checkbox" id="Dr. Hamann" name= "consulting" onclick="check(this.id)" value="Dr. Hamann"><label for = "Dr. Hamann">Dr. Hamann</label></li>
+            <li><input type = "checkbox" id="Dr. Hockman" name= "consulting" onclick="check(this.id)" value="Dr. Hockman"><label for = "Dr. Hockman">Dr. Hockman</label></li>
+            <li><input type = "checkbox" id="Dr. Holt" name= "consulting" onclick="check(this.id)" value="Dr. Holt"><label for = "Dr. Holt">Dr. Holt</label></li>
+            <li><input type = "checkbox" id="Dr. Jenkins" name= "consulting" onclick="check(this.id)" value="Dr. Jenkins"><label for = "Dr. Jenkins">Dr. Jenkins</label></li>
+            <li><input type = "checkbox" id="Dr. Jones" name= "consulting" onclick="check(this.id)" value="Dr. Jones"><label for = "Dr. Jones">Dr. Jones</label></li>
+            <li><input type = "checkbox" id="Dr. Kleiber" name= "consulting" onclick="check(this.id)" value="Dr. Kleiber"><label for = "Dr. Kleiber">Dr. Kleiber</label></li>
+            <li><input type = "checkbox" id="Dr. Koreckij" name= "consulting" onclick="check(this.id)" value="Dr. Koreckij"><label for = "Dr. Koreckij">Dr. Koreckij</label></li>
+            <li><input type = "checkbox" id="Dr. Krautman" name= "consulting" onclick="check(this.id)" value="Dr. Krautman"><label for = "Dr. Krautman">Dr. Krautman</label></li>
+            <li><input type = "checkbox" id="Dr. Meyer" name= "consulting" onclick="check(this.id)" value="Dr. Meyer"><label for = "Dr. Meyer">Dr. Meyer</label></li>
+            <li><input type = "checkbox" id="Dr. Miles" name= "consulting" onclick="check(this.id)" value="Dr. Miles"><label for = "Dr. Miles">Dr. Miles</label></li>
+            <li><input type = "checkbox" id="Dr. Robertson" name= "consulting" onclick="check(this.id)" value="Dr. Robertson"><label for = "Dr. Robertson">Dr. Robertson</label></li>
+            <li><input type = "checkbox" id="Dr. Sahota" name= "consulting" onclick="check(this.id)" value="Dr. Sahota"><label for = "Dr. Sahota">Dr. Sahota</label></li>
+            <li><input type = "checkbox" id="Dr. Smith" name= "consulting" onclick="check(this.id)" value="Dr. Smith"><label for = "Dr. Smith">Dr. Smith</label></li>
+            <li><input type = "checkbox" id="Dr. Tarbox" name= "consulting" onclick="check(this.id)" value="Dr. Tarbox"><label for = "Dr. Tarbox">Dr. Tarbox</label></li>
+            <li><input type = "checkbox" id="Dr. Thompson" name= "consulting" onclick="check(this.id)" value="Dr. Thompson"><label for = "Dr. Thompson">Dr. Thompson</label></li>
+            <li><input type = "checkbox" id="Dr. Yehyawi" name= "consulting" onclick="check(this.id)" value="Dr. Yehyawi"><label for = "Dr. Yehyawi">Dr. Yehyawi</label></li>          </ul>
+          </div>
+          </div>
+  </div><br><br>
+   <button type = "button" class="collapsible subheadingbutton">Transfer</button>
+        <div class="content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" name="transfer1" id = "transfer1" onclick="check(this.id)" value = "The decision was made to transfer the patient to a higher level of care. "><label for="transfer1">The decision was made to transfer the patient to a higher level of care.</label></li>
+            <li><input type = "checkbox" name = "transfer2" id = "transfer2" onclick="check(this.id)" value = "I discussed the case with [accepting physician] at [hospital] who accepted the patient for transfer. "><label for="transfer2">Discussed with [accepting physician] at [hospital] who accepted the transfer"</label></li>
+          </ul>
+  </div><br><br>
+    </div><br><br>
+</div>
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }    
+        
+        function makeDDXTable() {
+          var list = document.getElementsByName('ddx');
+          var list2 = [];
+          for (let i = 0; i<list.length; i++) {
+            if (list[i].checked) {
+              list2.push(list[i].value);
+            }
+          }
+          var t = "<div class='block'><ul class = 'radiobutton_small'><table>";
+          for (let i = 0; i<list2.length; i++) {
+            t = t + "<tr><td>"+list2[i]+"</td>";
+	t = t + "<td><li><input type='checkbox' id = 'row1col"+String(i) +"' name = 'ruled out' checked onclick='unselect("+i+",1);check(this.id)' value = '"+list2[i]+"'><label for = 'row1col"+String(i)+"'>Ruled out</label></li></td>";
+t = t + "<td><li><input type='checkbox' id = 'row2col"+String(i) +"' name = 'unlikely' onclick='unselect("+i+",2);check(this.id)' value = '"+list2[i]+"'><label for = 'row2col"+String(i)+"'>Unlikely</label></li></td>";
+t = t + "<td><li><input type='checkbox' id = 'row3col"+String(i) +"'name = 'presumptive' onclick='unselect("+i+",3);check(this.id)' value = '"+list2[i]+"'><label for = 'row3col"+String(i)+"'>Presumptive</label></li></td>";
+t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'definitive' onclick='unselect("+i+",4);check(this.id)'  unselect("+i+",4)' value = '"+list2[i]+"'><label for = 'row4col"+String(i)+"'>Definitive</label></li></td></tr>";
+          }
+          t = t + "</table></ul></div>";
+          document.getElementById("ddxtable").innerHTML = t;
+        }
+
+	function unselect(row,btn) {
+		list = [];
+		var x  ="";
+		for (let i = 1; i<5; i++) {
+			if (i != btn) {
+			x = 'row'+String(i)+'col'+String(row);
+			list.push(x);
+			}
+		}
+		for (let i = 0; i<list.length; i++) {
+			document.getElementById(list[i]).checked = false;
+		}
+	}
+        
+        function showDDX(id,list2) {
+          var list = document.getElementsByName('sx');
+          for (let i = 0; i<list.length; i++) {
+            list[i].style.display = 'none';
+          }
+          document.getElementById(id).style.display = "block";
+          document.getElementById(id).checked = true;
+          for (let i = 0; i<list2.length; i++) {
+            document.getElementById(list2[i]).checked = true;
+            console.log(list2[i]);
+          }
+        }
+        
+        function check(id) {
+	console.log(id);
+          if (document.getElementById(id).name == "ddx") {
+            makeDDXTable();
+          }
+          document.getElementById(id).checked == !document.getElementById(id).checked;
+          if (document.getElementById(id).style['background-color'] == 'lightgray') {
+            document.getElementById(id).style['background-color'] = 'lightblue';
+          }
+          else {
+            document.getElementById(id).style['background-color'] = 'lightgray';
+          }
+          var list = document.getElementsByTagName('checked');
+
+          
+          var t = "";
+         // t = t + "[Patient Presentation]\n";
+	  if (isAnyChecked('present')) {
+t = t + getRadioButtonValue('present');
+}
+          if (document.getElementById('presentation1').checked) {
+            t = t + " Data was reviewed from external sources as documented in the HPI. ";
+          }
+          if (document.getElementById('presentation2').checked) {
+            t = t + "An additional historian was required as documented in the HPI. ";
+          }
+          if (isAnyChecked('ddx')) {
+            t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
+            t = t + combineItemsFromButtons('ddx') + ". ";
+          }
+	  if (isAnyChecked('ruled out')|| isAnyChecked('presumptive') || isAnyChecked('unlikely') || isAnyChecked('definitive')) {
+		t = t + "Given the patient's history, physical exam and test results, ";
+	 }
+	 var rolist = [];
+	var t1 = "";
+	 if (isAnyChecked('ruled out')) {
+	
+		t1 = combineItemsFromButtons('ruled out');
+		if (isPlural('ruled out') ) {
+			t1 = t1 + ' were ruled out';
+		}
+		else {
+			t1 = t1 + ' was ruled out';
+		}
+		rolist.push(t1);
+	}
+	if (isAnyChecked('unlikely')) {
+		t1 = combineItemsFromButtons('unlikely');
+		if (isPlural('unlikely') ) {
+			t1 = t1 + ' are considered unlikely';
+		}
+		else {
+			t1 = t1 + ' is considered unlikely';
+		}
+		rolist.push(t1);
+	}
+	if (isAnyChecked('presumptive')) {
+		t1 = combineItemsFromButtons('presumptive');
+		if (isPlural('presumptive') ) {
+			t1 = t1 + ' are considered presumptive diagnoses';
+		}
+		else {
+			t1 = t1 + ' is considered a presumptive diagnosis';
+		}
+		rolist.push(t1);
+	}
+	if (isAnyChecked('definitive')) {
+		t1 = combineItemsFromButtons('definitive');
+		if (isPlural('definitive') ) {
+			t1 = t1 + ' are considered definitive diagnoses';
+		}
+		else {
+			t1 = t1 + ' is considered a definitive diagnosis';
+		}
+		rolist.push(t1);
+	}
+		
+			
+          t = t+'\n\n'+ combineItemsFromList(rolist) + ".\n\n";
+
+          if (isAnyChecked('testsordered')) {
+              t = t + "Data Review:\n";
+              t = t + "I ordered and reviewed tests, including ";
+              t = t + combineItemsFromButtons('testsordered');
+              t = t + ", to help rule out these serious or life-threatening conditions. ";
+
+            if (isAnyChecked('unremarkable')) {
+              t =t + "The tests were unremarkable. ";
+            }
+            if (isAnyChecked("notsupportive")) {
+              t = t + getRadioButtonValue('notsupportive')+". ";
+            }
+          }
+          
+          if (isAnyChecked("sirs")) {
+            t = t + "\n\nThe patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
+          }
+          
+          if (isAnyChecked("lactate")) {
+            t = t + "Lactate was " + getRadioButtonValue('lactate')+". ";
+          }
+          if (isAnyChecked('sepsisetiology')) {
+            t = t + "The patient appears to be septic due to " + getRadioButtonValue('sepsisetiology') + ". ";
+          }
+          if (isAnyChecked('sepsis1')) {
+            t = t + "Blood cultures were obtained. ";
+          }
+          if (isAnyChecked('sepsis-abx')) {
+            t = t + "The patient was given "+ combineItemsFromButtons('sepsis-abx')+". ";
+          }
+            
+            
+          if (isAnyChecked("ekg") || isAnyChecked('cxr') || isAnyChecked("xray") || isAnyChecked("ct")) {
+            t = t + "\n\nIndependent review:\n";
+          }
+          if (isAnyChecked('ekg')) {
+            t = t + " My independent interpretation of the EKG " + getRadioButtonValue('ekg');
+          }
+          if (isAnyChecked('cxr')) {
+            t = t + " My independent interpretation of the chest x-ray is consistent with " + getRadioButtonValue('cxr');
+          }
+          if (isAnyChecked('xray')) {
+            t = t + " My independent interpretation of the xrays is consistent with " + getRadioButtonValue('xray');
+          } 
+          if (isAnyChecked('ct')) {
+            t = t + " My independent interpretation of the CT is consistent with " + getRadioButtonValue('ct');
+          }
+
+          t = t + "\n\n";
+         /* var iframe = document.getElementById("iframe");
+          var test = iframe.contentWindow.document.getElementById('text').innerHTML;
+          if (test != "") {
+            t = t + "Risk Stratification: \n";
+            t = t + test+"\n";
+            t = t + "\n\n";
+          }*/
+          t = t + "Disposition:\n ";
+          if (isAnyChecked('dischargedecisionmaking')) {
+            t = t + getRadioButtonValue('dischargedecisionmaking');
+          }
+          if (isAnyChecked('deescalate-')) {
+            t = t + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided " + combineItemsFromButtons('deescalate-')+". ";
+          }
+          if (isAnyChecked('social')){
+            t = t + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social') + ". ";
+          }
+          if (isAnyChecked('referral')) {
+            t = t + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
+          }
+          if (isAnyChecked('outpt testing')) {
+            t = t + "I have ordered an outpatient " + combineItemsFromButtons('outpt testing') +". ";
+          }
+          if (isAnyChecked('clinician')) {
+            t = t + "My discussion with an independent clinician is documented in this note. ";
+          }
+          if (isAnyChecked('admitting')) {
+            t = t + "I discussed the case with " + combineItemsFromButtons('admitting')+" who will admit the patient. ";
+          }
+          if (isAnyChecked('consulting')) {
+            t = t + "I discussed the case with " + combineItemsFromButtons('consulting') + " who will consult on the patient. ";
+          }
+          if (isAnyChecked('transfer1')) {
+            t = t + combineItemsFromButtons('transfer1');
+          }
+          if (isAnyChecked('transfer2')) {
+            t = t + combineItemsFromButtons('transfer2');
+          }
+          t = t + "";
+          t = t + "";
+          
+          navigator.clipboard.writeText(t);
+          document.getElementById("text").innerHTML = t;
+          
+        }
+        
+        function isAnyChecked(name) {
+          var ele = document.getElementsByName(name);
+          for (let i = 0; i < ele.length; i++) {
+            if (ele[i].checked) {
+              return(true);
+            }
+          }
+          return(false);
+        }
+
+	function isPlural(name) {
+	  var ele = document.getElementsByName(name);
+	var count = 0;
+          for (let i = 0; i < ele.length; i++) {
+            if (ele[i].checked) {
+              count++;
+            }
+          }
+	  if (count > 1) {
+		return(true);
+}
+else {
+          return(false);	
+}
+	}
+        
+        function combineItemsFromButtons(name) {
+          var ele = document.getElementsByName(name);
+          var list = [];
+          for (let i = 0; i < ele.length; i++) {
+            if (ele[i].checked) {
+		console.log('combine',ele[i].id,ele[i].value);
+              list.push(ele[i].value);
+            }
+          }
+          var t = list[0];
+          for (let i = 1; i<list.length-1; i++) {
+            t = t + ", "+ list[i];
+          }
+          if (list.length>1) {
+            t = t + " and " + list[list.length-1];
+          }
+          return(t);
+        }
+
+        function combineItemsFromList(list) {
+          var t = list[0];
+          for (let i = 1; i<list.length-1; i++) {
+            t = t + ", "+ list[i];
+          }
+          if (list.length>1) {
+            t = t + " and " + list[list.length-1];
+          }
+          return(t);
+        }
+        
+        function getRadioButtonValue(name){
+          var ele = document.getElementsByName(name);
+          for (let i = 0; i < ele.length; i++){
+            if (ele[i].checked){
+              return(ele[i].value);
+            }
+          }
+          return('____________________');
+        }
+      </script>
+  </body>
+</html>
