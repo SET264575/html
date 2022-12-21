@@ -15,6 +15,9 @@ function getObject(website){
 function displayHTML () {
 	var t = "";
 	var s = "<div>";
+	console.log(myObj);
+	console.log(myObj.length);
+	console.log(myObj[1].ddx);
 	for (let i =0; i<myObj.length; i++) {
 		t = t + "<ul class='radiobutton'><div class='content' name = 'sx' id = 'ddx-'"+myObj[i].dx+">";
 		s = s + "<button class = 'sxbutton' type = 'button' onclick = 'showDDX('ddx-"+myObj[i]+"',[";
@@ -25,11 +28,11 @@ function displayHTML () {
 		for (let j = 0; j < myObj[i].ddx.length; j++) {
 			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj[i].dx+"-"+myObj[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj[i].ddx[j]+"'<label for = 'ddx-"+myObj[i].dx+"-"+myObj[i].ddx[j]+"'>"+myObj[i].ddx[j]+"</label>";
 		}
+		console.log(t);
 		s = s + "</div>";
 		t = t + "</div>";
 	}
 	t = t + "</ul>";
-	console.log(s);
 	console.log(t);
 	document.getElementById('test').innerHTML = s + t;
 }
