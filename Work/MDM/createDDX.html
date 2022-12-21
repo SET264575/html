@@ -15,18 +15,15 @@ function getObject(website){
 function displayHTML () {
 	var t = "";
 	var s = "<div>";
-	console.log(myObj);
-	console.log(myObj.length);
-	console.log(myObj[1].ddx);
-	for (let i =0; i<myObj.length; i++) {
-		t = t + "<ul class='radiobutton'><div class='content' name = 'sx' id = 'ddx-'"+myObj[i].dx+">";
-		s = s + "<button class = 'sxbutton' type = 'button' onclick = 'showDDX('ddx-"+myObj[i]+"',[";
-		for (let j = 0; j < myObj[i].checked.length-1; j++) {
-			s = s + "'ddx-"+myObj[i].dx+"-"+myObj[i].checked[j]+"',";
+	for (let i =0; i<myObj.list.length; i++) {
+		t = t + "<ul class='radiobutton'><div class='content' name = 'sx' id = 'ddx-'"+myObj.list[i].dx+">";
+		s = s + "<button class = 'sxbutton' type = 'button' onclick = 'showDDX('ddx-"+myObj.list[i]+"',[";
+		for (let j = 0; j < myObj.list[i].checked.length-1; j++) {
+			s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[j]+"',";
 		}
-		s = s + "'ddx-"+myObj[i].dx+"-"+myObj[i].checked[j]+"']>"+myObj[i].dx+"</button>";
+		s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[j]+"']>"+myObj.list[i].dx+"</button>";
 		for (let j = 0; j < myObj[i].ddx.length; j++) {
-			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj[i].dx+"-"+myObj[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj[i].ddx[j]+"'<label for = 'ddx-"+myObj[i].dx+"-"+myObj[i].ddx[j]+"'>"+myObj[i].ddx[j]+"</label>";
+			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj.list[i].ddx[j]+"'<label for = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"'>"+myObj.list[i].ddx[j]+"</label>";
 		}
 		console.log(t);
 		s = s + "</div>";
