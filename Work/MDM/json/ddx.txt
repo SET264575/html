@@ -1,4 +1,5 @@
-[	{"dx":"Abdominal pain","ddx":["appendicitis","MI","pancreatitis","cholecystitis","SBO","diverticulitis"],"checked":['appendicitis']},
+{"list":[	
+	{"dx":"Abdominal pain","ddx":["appendicitis","MI","pancreatitis","cholecystitis","SBO","diverticulitis"],"checked":['appendicitis']},
 	{"dx":"Arthralgias","ddx":["hypothyroidism","adrenal insufficiency","gout","Lyme disease","bacterial endocarditis","malignancy","septic joint","compartment syndrome","Covid","influenza"],"checked":[]},
 	{"dx":"Back pain","ddx":["cauda equina syndrome","vertebral fracture","epidural abscess","diskitis"],"checked":["cauda equina","epidural abscess"]},
 	{"dx":"Chest pain","ddx":["ACS","PE","aortic dissection","pneumothorax"],"checked":["ACS","PE","aortic dissection","pneumothorax"]},
@@ -13,4 +14,4 @@
 	{"dx":"Sore thorat","ddx":["strep throat","mono","retropharyngeal abscess","peritonsillar abscess","acute HIV"], "checked":["strep throat","peritonsillar abscess"]},
 	{"dx":"Urinary symptoms","ddx":["UTI","uncontrolled diabetes","STD","pyelonephritis","kidney stone","cancer"], "checked":["UTI"]},
 	{"dx":"Vaginal bleeding","ddx":["coagulopathy","ectopic pregnancy","threatened miscarriage","pregnancy complications"], "checked":["ectopic pregnancy"]}
-]
+]}
