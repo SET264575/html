@@ -679,9 +679,9 @@ function displayHTML () {
 		for (let j = 0; j < myObj.list[i].ddx.length; j++) {
 			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj.list[i].ddx[j]+"'><label for = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"'>"+myObj.list[i].ddx[j]+"</label></li>\n";
 		}
-		s = s + "</div>\n";
 		t = t + "</div>\n";
 	}
+	s = s + "</div>\n";
 	t = t + "</ul>";
 	console.log(s+t);
 	document.getElementById('ddxbuttons').innerHTML = s + t;
