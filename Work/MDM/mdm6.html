@@ -669,7 +669,7 @@ function displayHTML () {
 	var t = "";
 	var s = "<div>";
 	for (let i =0; i<myObj.list.length; i++) {
-		t = t + "<ul class='radiobutton'><div class='content' name = 'sx' id = 'ddx-'"+myObj.list[i].dx+">";
+		t = t + "<ul class='radiobutton'><div class='content' name = 'sx' id = 'ddx-"+myObj.list[i].dx+"'>";
 		s = s + "<button class = 'sxbutton' type = 'button' onclick = 'showDDX('ddx-"+myObj.list[i]+"',[";
 		for (let j = 0; j < myObj.list[i].checked.length-1; j++) {
 			s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[j]+"',";
@@ -677,7 +677,7 @@ function displayHTML () {
 		s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[myObj.list[i].checked.length-1]+"']>"+myObj.list[i].dx+"</button>";
 		
 		for (let j = 0; j < myObj.list[i].ddx.length; j++) {
-			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj.list[i].ddx[j]+"'<label for = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"'>"+myObj.list[i].ddx[j]+"</label>";
+			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj.list[i].ddx[j]+"'><label for = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"'>"+myObj.list[i].ddx[j]+"</label>";
 		}
 		console.log(t);
 		s = s + "</div>";
