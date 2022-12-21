@@ -1,0 +1,37 @@
+<html>
+<body>
+<p id = "test"><p>
+<script>
+var myObj = {};
+getObject();
+function getObject(website){
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); displayHTML();};
+      xmlhttp.open("GET",website);
+      xmlhttp.send();
+    }
+
+}
+
+function displayHTML () {
+	var t = "";
+	var s = "<div>";
+	for (let i =0; i<myObj.length; i++) {
+		t = t + "<ul class='radiobutton'><div class='content' name = 'sx' id = 'ddx-'"+myObj[i].dx+">";
+		s = s + "<button class = 'sxbutton' type = 'button' onclick = 'showDDX('ddx-"+myObj[i]+"',[";
+		for (let j = 0; j < myObj[i].checked.length-1; j++) {
+			s = s + "'ddx-"+myObj[i].dx+"-"+myObj[i].checked[j]+"',";
+		}
+		s = s + "'ddx-"+myObj[i].dx+"-"+myObj[i].checked[j]+"']>"+myObj[i].dx+"</button>";
+		for (let j = 0; j < myObj[i].ddx.length; j++) {
+			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj[i].dx+"-"+myObj[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj[i].ddx[j]+"'<label for = 'ddx-"+myObj[i].dx+"-"+myObj[i].ddx[j]+"'>"+myObj[i].ddx[j]+"</label>";
+		}
+		s = s + "</div>";
+		t = t + "</div>";
+	}
+	t = t + "</ul>"
+	document.getElementById('test').innerHTML = s + t;
+}
+</script>
+</body>
+</html>
