@@ -1,8 +1,8 @@
 var physObj = {};
-getObject('json/physician.txt');
+getObject('json/physicians.txt');
 function getObject(website){
   const xmlhttp = new XMLHttpRequest();
-  xmlhttp.onload = function() { physObj = JSON.parse(this.responseText); displayHTML();};
+  xmlhttp.onload = function() { physObj = JSON.parse(this.responseText); displayPhysicians();};
   xmlhttp.open("GET",website);
   xmlhttp.send();
 }
