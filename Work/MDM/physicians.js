@@ -22,6 +22,7 @@ function displayAdmitting() {
 	}
 	t = t + "</ul>";
 	document.getElementById('admittingbuttons').innerHTML =  t;
+	console.log(t);
 }
 
 function displayConsulting() {
@@ -39,4 +40,5 @@ function displayConsulting() {
 	}
 	t = t + "</ul>";
 	document.getElementById('consultingbuttons').innerHTML =  t;
+	console.log(t)
 }
