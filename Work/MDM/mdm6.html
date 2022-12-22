@@ -723,6 +723,8 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
 	}
         
         function showDDX(id,list2) {
+		console.log(id);
+		console.log('list2',list2);
           var list = document.getElementsByName('sx');
           for (let i = 0; i<list.length; i++) {
             list[i].style.display = 'none';
