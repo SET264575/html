@@ -22,5 +22,5 @@ function displayPhysicians() {
 		t = t + "</ul></div><br><br>\n";
 	}
 	t = t + "</ul>";
-	document.getElementById('ddxbuttons').innerHTML =  t;
+	document.getElementById('physbuttons').innerHTML =  t;
 }
