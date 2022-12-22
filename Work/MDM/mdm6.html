@@ -674,7 +674,7 @@ function displayHTML () {
 	var s = "<div>\n";
 	for (let i =0; i<myObj.list.length; i++) {
 		t = t + "<div class='content' name = 'sx' id = 'ddx-"+myObj.list[i].dx+"'>\n";
-		s = s + "<button class = 'sxbutton' type = 'button' onclick = 'showDDX(\"ddx-"+myObj.list[i].dx+"',[";
+		s = s + "<button class = 'sxbutton' id = 'sx'"+String(i)+"' type = 'button' onclick = 'showDDX(\"ddx-"+myObj.list[i].dx+"',[";
 		for (let j = 0; j < myObj.list[i].checked.length-1; j++) {
 			s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[j]+"',";
 		}
