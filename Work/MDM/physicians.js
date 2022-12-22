@@ -11,7 +11,7 @@ function displayPhysicians() {
 	
 	var t = "";
 	for (let i =0; i<physObj.specialty.length; i++) {
-    t = t + '<button class="collapsible subsubheadingbutton">Orthopedics</button>';
+    t = t + '<button class="collapsible subsubheadingbutton">'+physObj.specialty[i]+'</button>';
     t = t +'      <div class = "content">';
     t = t + '      <ul class="radiobutton">';
 
