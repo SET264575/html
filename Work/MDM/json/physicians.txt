@@ -1,19 +1,18 @@
-
-	{"specialty":"cardiology","physician":['Baird','Boyer','Brown','Elliott','Fairlamb','Makay','Pierce','Rytlewski','Tillman','Tran','Tyagi','Verbsky','Zuidema']},
-	{"specialty":"CT surgery","physician":['Fernandez','Mellitt']},
-	{"specialty":"Dermatology","physician":['Perry','Schiavo']},
-	{"specialty":"ENT","physician":['Hanock','Scheidt']},
-	{"specialty":"General surgery","physician":['Gerber','Peterson','Rollison','Vaden']},
-	{"specialty":"GI","physician":['Anderson','Cleavinger','Diaz-Arias','Halsey','Llorens','Welsh','Williams']},
-	{"specialty":"Hem/Onc","physician":['Balakrishnan','Iliff','Makarian','Ramadoss','Tungesvik']},
-	{"specialty":"Hospitalist","physician":['Bhagat','Cheddi','Hassan','James','Makarian','McGreevy','Nau','Petrie','Renick','Schiavo','Sharma','Welchmeyer','Yuen','Zeglis',]},
-	{"specialty":"Neurology","physician":['Goble','Jones','Koch','Malone']},
-	{"specialty":"Neurosurgery","physician":['Bondurant','Ryan']},
-	{"specialty":"Ob/Gyn","physician":['Berck','Bernard','Borgmeyer','Jones','Morse','Nicholas','Puckett','Smith','Stiefel','Wilson']},
-	{"specialty":"Orthopedics","physician":['Adams','Aleto','Anz','Bormann','Hamann','Hockman','Holt','Jenkins','Jones','Kleiber','Koreckij','Krautman','Meyer','Miles','Robertson','Sahota','Smith','Tarbox','Thompson','Yehyawi']},
-	{"specialty":"Urology","physician":['Cupp','Dresner','Harmon','Mechlin']},
-	{"specialty":"Vascular surgery","physician":['Adams','Salinas','Sanford','Severance']},
-	{"specialty":"Wound clinic","physician":['Jamison']}
+{"specialty":"cardiology","physician":['Baird','Boyer','Brown','Elliott','Fairlamb','Makay','Pierce','Rytlewski','Tillman','Tran','Tyagi','Verbsky','Zuidema']},
+{"specialty":"CT surgery","physician":['Fernandez','Mellitt']},
+{"specialty":"Dermatology","physician":['Perry','Schiavo']},
+{"specialty":"ENT","physician":['Hanock','Scheidt']},
+{"specialty":"General surgery","physician":['Gerber','Peterson','Rollison','Vaden']},
+{"specialty":"GI","physician":['Anderson','Cleavinger','Diaz-Arias','Halsey','Llorens','Welsh','Williams']},
+{"specialty":"Hem/Onc","physician":['Balakrishnan','Iliff','Makarian','Ramadoss','Tungesvik']},
+{"specialty":"Hospitalist","physician":['Bhagat','Cheddi','Hassan','James','Makarian','McGreevy','Nau','Petrie','Renick','Schiavo','Sharma','Welchmeyer','Yuen','Zeglis',]},
+{"specialty":"Neurology","physician":['Goble','Jones','Koch','Malone']},
+{"specialty":"Neurosurgery","physician":['Bondurant','Ryan']},
+{"specialty":"Ob/Gyn","physician":['Berck','Bernard','Borgmeyer','Jones','Morse','Nicholas','Puckett','Smith','Stiefel','Wilson']},
+{"specialty":"Orthopedics","physician":['Adams','Aleto','Anz','Bormann','Hamann','Hockman','Holt','Jenkins','Jones','Kleiber','Koreckij','Krautman','Meyer','Miles','Robertson','Sahota','Smith','Tarbox','Thompson','Yehyawi']},
+{"specialty":"Urology","physician":['Cupp','Dresner','Harmon','Mechlin']},
+{"specialty":"Vascular surgery","physician":['Adams','Salinas','Sanford','Severance']},
+{"specialty":"Wound clinic","physician":['Jamison']}
 
 
 
