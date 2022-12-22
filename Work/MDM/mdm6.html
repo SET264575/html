@@ -7,6 +7,9 @@ referrals
 outpt tests
 []
 
+discussion with independent clinician:  relabel button and move
+recommendations of consultant
+dispo to GI lab, OR, cath lab
 
 What do you want displayed/hidden?
 What do you want pre-checked?
@@ -519,7 +522,7 @@ Typos, grammar, punctuation
           
         <div>
         <ul class="radiobutton">
-          <li><input type = "checkbox" id="clinician1" name= "clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion documented</label></li>       
+          <li><input type = "checkbox" id="clinician1" name= "clinician" onclick="check(this.id)" value="My discussion with an independent clinican is documented in this note."><label>Discussion with cliniciain documented in note</label></li>       
         </ul>
         </div>
           <h4>&nbsp</h4>
@@ -671,11 +674,11 @@ function displayHTML () {
 	var s = "<div>\n";
 	for (let i =0; i<myObj.list.length; i++) {
 		t = t + "<div class='content' name = 'sx' id = 'ddx-"+myObj.list[i].dx+"'>\n";
-		s = s + "<button class = 'sxbutton' type = 'button' onclick = 'showDDX(\"ddx-"+myObj.list[i].dx+"\")',[";
+		s = s + "<button class = 'sxbutton' type = 'button' onclick = 'showDDX(\"ddx-"+myObj.list[i].dx+"',[";
 		for (let j = 0; j < myObj.list[i].checked.length-1; j++) {
 			s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[j]+"',";
 		}
-		s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[myObj.list[i].checked.length-1]+"']>"+myObj.list[i].dx+"</button>\n";
+		s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[myObj.list[i].checked.length-1]+"'])>"+myObj.list[i].dx+"</button>\n";
 		
 		for (let j = 0; j < myObj.list[i].ddx.length; j++) {
 			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj.list[i].ddx[j]+"'><label for = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"'>"+myObj.list[i].ddx[j]+"</label></li>\n";
