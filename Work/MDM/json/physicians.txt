@@ -1,4 +1,4 @@
-{[
+
 	{"specialty":"cardiology","physician":['Baird','Boyer','Brown','Elliott','Fairlamb','Makay','Pierce','Rytlewski','Tillman','Tran','Tyagi','Verbsky','Zuidema']},
 	{"specialty":"CT surgery","physician":['Fernandez','Mellitt']},
 	{"specialty":"Dermatology","physician":['Perry','Schiavo']},
@@ -14,7 +14,7 @@
 	{"specialty":"Urology","physician":['Cupp','Dresner','Harmon','Mechlin']},
 	{"specialty":"Vascular surgery","physician":['Adams','Salinas','Sanford','Severance']},
 	{"specialty":"Wound clinic","physician":['Jamison']}
-]}
+
 
 
 
