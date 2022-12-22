@@ -10,9 +10,9 @@
     {"specialty":"Orthopedics","physician":['Adams','Aleto','Anz','Bormann','Hamann','Hockman','Holt','Jenkins','Jones','Kleiber','Koreckij','Krautman','Meyer','Miles','Robertson','Sahota','Smith','Tarbox','Thompson','Yehyawi']},
     {"specialty":"Urology","physician":['Cupp','Dresner','Harmon','Mechlin']},
     {"specialty":"Vascular surgery","physician":['Adams','Salinas','Sanford','Severance']}
-]}    
+],
     
-{"consulting":[
+"consulting":[
     {"specialty":"cardiology","physician":['Baird','Boyer','Brown','Elliott','Fairlamb','Makay','Pierce','Rytlewski','Tillman','Tran','Tyagi','Verbsky','Zuidema']},
     {"specialty":"CT surgery","physician":['Fernandez','Mellitt']},
     {"specialty":"Dermatology","physician":['Perry','Schiavo']},
