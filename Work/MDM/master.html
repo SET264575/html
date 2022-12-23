@@ -133,7 +133,9 @@ Sepsis
         else {
           document.getElementById('smallscore').innerHTML = 'points';
         }
-        navigator.clipboard.writeText(t);
+        if (myObj.showPoints) {
+          navigator.clipboard.writeText(t);
+        }
       }
     }
     
