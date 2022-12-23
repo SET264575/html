@@ -1,7 +1,6 @@
 var physObj = {};
 getObject('json/physicians.txt');
 function getObject(website){
-	console.log('in getObject');
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function() { physObj = JSON.parse(this.responseText); displayAdmitting(); displayConsulting()};
   xmlhttp.open("GET",website);
@@ -26,7 +25,6 @@ function displayAdmitting() {
 
 function displayConsulting() {
 	var t = "";
-	console.log('in displayConsulting');
 	for (let i =0; i<physObj.consulting.length; i++) {
     t = t + '<button class="collapsible subsubsubheadingbutton">'+physObj.consulting[i].specialty+'</button>\n';
     t = t +'      <div class = "content">\n';
