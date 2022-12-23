@@ -139,6 +139,15 @@ Sepsis
         if (score > parseInt(myObj.range[i].low) && score < parseInt(myObj.range[i].high)) {
           if (myObj.format == 'text') {
             t = myObj.range[i].text;
+            if (myObj.listContributions) {
+              for (let j = 0; j < myObj.criteria.length; j++) {
+                let result = parseInt(getRadioButtonValue('criteria'+String(j)));
+                if (result > 0) {
+                  list.push(myObj.criteria[j].contributionText);
+                }
+              }
+              t = t + " due to the presence of " + combineItems(list);
+            }
           }
           else {
             t = myObj.range[i].pretext + String(score);
