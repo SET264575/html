@@ -9,13 +9,13 @@ function getObject(website){
 
 function displayAdmitting() {
 	var t = "";
-	for (let i =0; i<physObj.admitting.specialty.length; i++) {
-    t = t + '<button class="collapsible subsubheadingbutton">'+physObj.admitting.specialty[i]+'</button>';
+	for (let i =0; i<physObj.admitting[i].length; i++) {
+    t = t + '<button class="collapsible subsubheadingbutton">'+physObj.admitting[i].specialty+'</button>';
     t = t +'      <div class = "content">';
     t = t + '      <ul class="radiobutton">';
 
-    for (let j = 0; j < physObj.list[i].admitting.physician.length; j++) {
-      let phys = physObj.list[i].admitting.physician[j];
+    for (let j = 0; j < physObj.admitting[i].physician.length; j++) {
+      let phys = physObj.admitting[i].physician[j];
       t = t +  ' <li><input type = "checkbox" id="Dr. '+ phys + '" name= "admitting" onclick="check(this.id)" value="Dr. '+phys + '"><label for = "Dr. '+phys+'">Dr. '+phys+'</label></li>'
     }
 	  t = t + "</ul></div><br><br>\n";
@@ -27,13 +27,13 @@ function displayAdmitting() {
 
 function displayConsulting() {
 	var t = "";
-	for (let i =0; i<physObj.consulting.specialty.length; i++) {
-    t = t + '<button class="collapsible subsubheadingbutton">'+physObj.consulting.specialty[i]+'</button>';
+	for (let i =0; i<physObj.consulting[i].length; i++) {
+    t = t + '<button class="collapsible subsubheadingbutton">'+physObj.consulting[i].specialty+'</button>';
     t = t +'      <div class = "content">';
     t = t + '      <ul class="radiobutton">';
 
-    for (let j = 0; j < physObj.list[i].consulting.physician.length; j++) {
-      let phys = physObj.list[i].consulting.physician[j];
+    for (let j = 0; j < physObj.consulting[i].physician.length; j++) {
+      let phys = physObj.consulting[i].physician[j];
       t = t +  ' <li><input type = "checkbox" id="consultingDr. '+ phys + '" name= "consulting" onclick="check(this.id)" value="Dr. '+phys + '"><label for = "consultingDr. '+phys+'">Dr. '+phys+'</label></li>'
     }
 	  t = t + "</ul></div><br><br>\n";
