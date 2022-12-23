@@ -1,5 +1,7 @@
 {
 	"title":"Wells' Criteria for DVT",
+	"format":"pretext",
+	"showPoints":true,
 	"criteria":
 	[
 		{"text":"Active cancer: Treatment or palliation within 6 months","answers":[
