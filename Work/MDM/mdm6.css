@@ -75,6 +75,16 @@
         margin-left: 40px;
         margin-right: 40px;
       }
+
+      .subsubsubheadingbutton {
+        background-color:  lightskyblue;;
+        font-family: Arial;
+        font-size: 1em;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+
       .show {
         display: block;
       }
