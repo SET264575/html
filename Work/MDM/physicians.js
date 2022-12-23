@@ -41,5 +41,4 @@ function displayConsulting() {
 	document.getElementById('consultingbuttons').innerHTML =  t;
 	document.getElementById('consultingbuttons2').innerHTML =  t;
 	//console.log(t);
-	setListener();
 }
