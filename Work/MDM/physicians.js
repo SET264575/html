@@ -1,6 +1,7 @@
 var physObj = {};
 getObject('json/physicians.txt');
 function getObject(website){
+	console.log('in getObject');
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function() { physObj = JSON.parse(this.responseText); displayAdmitting(); displayConsulting()};
   xmlhttp.open("GET",website);
@@ -8,6 +9,7 @@ function getObject(website){
 }
 
 function displayAdmitting() {
+	console.log('in displayAdmitting');
 	var t = "";
 	for (let i =0; i<physObj.admitting.length; i++) {
     t = t + '<button class="collapsible subsubsubheadingbutton">'+physObj.admitting[i].specialty+'</button>\n';
@@ -25,6 +27,7 @@ function displayAdmitting() {
 }
 
 function displayConsulting() {
+	console.log('in displayConsulting');
 	var t = "";
 	console.log('in displayConsulting');
 	for (let i =0; i<physObj.consulting.length; i++) {
