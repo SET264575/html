@@ -1,6 +1,8 @@
 {
 	"title":"CHA₂DS₂-VASc Score for Atrial Fibrillation Stroke Risk",
 	"listContributions":true,
+	"showPoints":true,
+	"format":"pretext",
 	"criteria":
 	[
 		{"text":"Age","contributionText":"age","answers":[
