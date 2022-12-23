@@ -284,7 +284,7 @@ Typos, grammar, punctuation
               <li><input type = "radio" name= "dischargedecisionmaking" id = "leftama" onclick="check(this.id)" value = "The patient left against medical advice.  If the patient returns to the ER, we will continue the evaluation. "><label for = "leftama">Left AMA</label></li>
               <li><input type = "radio" name= "dischargedecisionmaking" id = "otherdischarge" onclick="check(this.id)" value = "[Other discharge]"><label for = "otherdischarge">[Other discharge]</label></li>
             </ul>
-          </div>
+          </div> <!--block -->
           
           <div class="block">
           <h4>Referral</h4>
@@ -311,7 +311,7 @@ Typos, grammar, punctuation
             <li><input type = "checkbox" name = "referral" id = "referral-Wound Clinic"  class="choicebutton" value = "Wound Clinic" onclick="check(this.id)"><label for = "referral-Wound Clinic">Wound Clinic</label></li>
             <li><input type = "checkbox" name = "referral" id = "referral-blank"  class="choicebutton" value = "[Other Referral]" onclick="check(this.id)"><label for = "referral-blank">[Other Referral]</label></li> 
 	        </ul>
-        </div>
+        </div> <!-- block -->
 
         <div class="block">
           <h4>Outpatient testing</h4>
@@ -331,12 +331,12 @@ Typos, grammar, punctuation
             <li><input type = "checkbox" id="outpttest-stress"class="choicebutton" name = "outpt testing" value = "stress test" onclick="check(this.id)"><label for = "outpttest-stress">Stress test</label></li>
             <li><input type = "checkbox" id="outpttest-egd"class="choicebutton" name = "outpt testing" value = "upper endoscopy" onclick="check(this.id)"><label for = "outpttest-egd">Upper Endoscopy</label></li>
           </ul>
-        </div>
+        </div> <!-- block-->
 		
         <div class="block">
           <h4>Consult</h4>
           <div id="consultingbuttons"></div>
-	</div>
+	</div> <!--block -->
 		
 		<div class="block">
           <button class="collapsible subsubheadingbutton">Cardiology</button>
@@ -418,7 +418,8 @@ Typos, grammar, punctuation
             <li><input type = "checkbox" id="Dr. Thompson" name= "consulting" onclick="check(this.id)" value="Dr. Thompson"><label for = "Dr. Thompson">Dr. Thompson</label></li>
             <li><input type = "checkbox" id="Dr. Yehyawi" name= "consulting" onclick="check(this.id)" value="Dr. Yehyawi"><label for = "Dr. Yehyawi">Dr. Yehyawi</label></li>          </ul>
           </div><br><br-->
-        </div><br><br>
+        </div><br><br> <!--content -->
+	      
    <button type = "button" class="collapsible subheadingbutton">Admit</button>
         <div class="content">
         <ul class="radiobutton">
