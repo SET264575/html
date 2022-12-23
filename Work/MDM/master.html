@@ -17,7 +17,7 @@ parts contributing to score
       <button id="8" onclick="getObject('json/nexus.txt')">NEXUS criteria</button><br>
       <button id="9" onclick="getObject('json/Ottawa ankle.txt')">Ottawa ankle rule***</button><br>
       <button id="10" onclick="getObject('json/Ottawa knee.txt')">Ottawa knee rule***</button><br> 
-      <button id="11" onclick="getObject('json/PERC.txt')">PERC***</button><br>
+      <button id="11" onclick="getObject('json/perc.txt')">PERC***</button><br>
       <button id="7" onclick="getObject('json/psi.txt')">Pneumonia Severity Index</button><br>
       <button id="4" onclick="getObject('json/wells dvt.txt')">Wells' score for DVT</button><br>
       <button id="5" onclick="getObject('json/wells pe.txt')">Wells' score for PE</button><br>
@@ -147,7 +147,7 @@ Sepsis
                   list.push(myObj.criteria[j].contributionText);
                 }
               }
-              t = t + " due to the presence of " + combineItems(list);
+              t = t + " due to the presence of " + combineItems(list)+". ";
             }
           }
           else {
