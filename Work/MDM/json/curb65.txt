@@ -3,6 +3,8 @@
 	"listContributions":true,
 	"buttonWidth":100,
 	"buttonLayout":"horizontal",
+	"format":"pretext",
+	"showPoints":true,
 	"criteria":
 	[
 		{"text":"Confusion","contributionText":"confusion","answers":[
