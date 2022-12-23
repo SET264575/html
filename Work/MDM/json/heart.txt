@@ -3,6 +3,8 @@
 	"listContributions":true,
 	"buttonWidth":200,
 	"buttonLayout":"vertical",
+	"format":"pretext",
+	"showPoints":true,
 	"criteria":
 	[
 		{"text":"History","contributionText":"history","answers":[
