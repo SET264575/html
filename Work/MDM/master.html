@@ -64,9 +64,7 @@ Sepsis
       xmlhttp.open("GET",website);
       xmlhttp.send();
     }
- //   const myObj ="";
-   // getObject();
-    //const myObj = JSON.parse(myJSON);
+
     function displayHTML() {
       var t = "";
       document.getElementById("title").innerHTML = myObj.title;
@@ -115,7 +113,7 @@ Sepsis
         let result = parseInt(getRadioButtonValue('criteria'+String(i)));
         values.push(result);
         if (result == -1) {
-          flag = false;
+          flag = true;  //changed from false.  Not sure what this is for.
         }
       }
       
@@ -142,6 +140,7 @@ Sepsis
     }
     
     function getText(score) {
+      console.log('in getText');
       let t = "";
       for (let i = 0; i<myObj.range.length; i++) {
         if (score > parseInt(myObj.range[i].low) && score < parseInt(myObj.range[i].high)) {
@@ -151,7 +150,7 @@ Sepsis
             if (myObj.listContributions) {
               for (let j = 0; j < myObj.criteria.length; j++) {
                 let result = parseInt(getRadioButtonValue('criteria'+String(j)));
-                if (result > 0) {
+                if (result != 0) {
                   list.push(myObj.criteria[j].contributionText);
                 }
               }
