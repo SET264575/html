@@ -3,29 +3,30 @@
 	"listContributions":true,
 	"buttonWidth":100,
 	"buttonLayout":"horizontal",
+	"format":"text",
 	"criteria":
 	[
-		{"text":"Focal neurologic deficit present","contributionText":"focal neurologic deficit present","answers":[
+		{"text":"Focal neurologic deficit present","contributionText":"focal neurologic deficit","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Midline spinal tenderness present","contributionText":"midline spinal tenderness present","answers":[
+		{"text":"Midline spinal tenderness present","contributionText":"midline spinal tenderness","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Altered level of consciousness present","contributionText":"Altered level of consciousness present","answers":[
+		{"text":"Altered level of consciousness present","contributionText":"altered level of consciousness","answers":[
 			{"text":"No","points":"0","checked":" checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Intoxication present","contributionText":"Intoxication present","answers":[
+		{"text":"Intoxication present","contributionText":"intoxication","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
 		},
-		{"text":"Distracting injury present","contributionText":"age ≥ 65","answers":[
+		{"text":"Distracting injury present","contributionText":"distracting injury","answers":[
 			{"text":"No","points":"0","checked":"checked"},
 			{"text":"Yes","points":"1","checked":""}
 			]
