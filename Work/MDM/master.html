@@ -124,6 +124,7 @@ Sepsis
         for (let i = 0; i < myObj.criteria.length; i++) {
           score = score + values[i];
         }
+        console.log('score',score);
         t = getText(score);
         document.getElementById('text').innerHTML = t;
         if (myObj.showPoints) {
