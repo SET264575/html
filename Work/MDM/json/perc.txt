@@ -1,0 +1,56 @@
+{
+	"title":"PERC Rule for Pulmonary Embolism",
+	"listContributions":true,
+	"buttonWidth":100,
+	"buttonLayout":"horizontal",
+	"format":"text",
+	"criteria":
+	[
+		{"text":"Age ≥50","contributionText":"age ≥50","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"HR ≥100","contributionText":"heart rate ≥100","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"O₂ sat on room air <95%","contributionText":"O₂ sat on room air <95%","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Unilateral leg swelling","contributionText":"unilateral leg swelling","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Hemoptysis","contributionText":"hemoptysis","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+    {"text":"Recent surgery or trauma","subtext":"surgery or trauma ≤4 weeks ago requiring treatment with general anesthesia","contributionText":"history of recent surgery or trauma","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+    {"text":"Prior PE or DVT","contributionText":"a history of PE or DVT","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+    {"text":"Hormone use","subtext":"Oral contraceptives, hormone replacement or estrogenic hormones use in males or female patients","contributionText":"hormone use","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		}
+	],
+	"range":
+	[
+		{"low":"-1","high":"1","text":"PE was ruled out due to the absence of any PERC criteria. "},
+		{"low":"0","high":"10","text":"PE could not be excluded by the PERC criteria due to the presence of "}
+		
+	]
+}
