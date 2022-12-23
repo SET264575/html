@@ -3,7 +3,8 @@
 	"listContributions":true,
 	"buttonWidth":100,
 	"buttonLayout":"horizontal",
-  "format":"text",
+	"showPoints":false,
+  	"format":"text",
 	"criteria":
 	[
 		{"text":"Location of pain","contributionText":"","answers":[
