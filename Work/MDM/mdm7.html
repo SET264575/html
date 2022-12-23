@@ -375,19 +375,11 @@ Typos, grammar, punctuation
   </div><br><br>
     </div><br><br>
 </div>
-	    <!--script src = "physicians.js"></script-->
+	    <script src = "physicians.js"></script>
       <script>
-	      console.log('before setListener');
-	    // setTimeout( 'setListener',2000);
-	      setTimeout('showTest',500);
-        	console.log('after setListener');
-	      
-	      function showTest() {
-		      console.log('in showTest');
-	      }
+	     setTimeout( setListener,2000);
 	      
         function setListener() {
-		console.log('in Listener');
           var coll = document.getElementsByClassName("collapsible");
           var i;
 
