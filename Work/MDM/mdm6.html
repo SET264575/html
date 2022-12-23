@@ -117,11 +117,12 @@ Typos, grammar, punctuation
             <li><input type = "checkbox"  class="choicebutton" id = "dataimaging" name = "testsordered" checked value = "imaging" onclick="check(this.id)"/><label>Imaging</label></li>
           </ul>
         </div>
-        <br>
+        <!--br>
         <h4></h4>
         <div>
           <h4></h4>
-          <br>
+          <br-->
+	<div class="block">
           <h4>Interpretation of tests</h4>
           <ul class="radiobutton">
             <!--li><input type = "checkbox"  class="choicebutton" id="testingdone" name = "testingdone" checked onclick="check(this.id)"><label for = "testingdone">Testing performed to rule out these problems</label></li-->
@@ -132,11 +133,11 @@ Typos, grammar, punctuation
           </ul>
         </div>
 
-        <h4>&nbsp</h4>
-        <h4>&nbsp</h4>
+        <!--h4>&nbsp</h4>
+        <h4>&nbsp</h4-->
                 
           <div class="note"><pre>  Other specific diagnoses, such as stroke, STEMI might need its own section.</pre></div>
-        
+        <div class="block">
         <button type="button" class="collapsible">Sepsis</button>
         <div class="content" id = "div-sepsis">
           <div>
@@ -148,19 +149,21 @@ Typos, grammar, punctuation
               <li><input type = "checkbox"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
             </ul>
           </div>
-          <br>
+		</div>
+          <!--br>
           <h4>&nbsp</h4>
           <div class="block">
-                  <h4>&nbsp</h4>
+                  <h4>&nbsp</h4-->
+		<div class="block">
             <h4>Lactate</h4>
             <ul class = "radiobutton">
               <li><input type = "radio"  class="choicebutton" id="lactate1" name = "lactate" onclick="check(this.id)" value = "elevated"><label for = "lactate1">Elevated</label></li>
               <li><input type = "radio"  class="choicebutton" id="lactate2" name = "lactate" onclick="check(this.id)" value = "not elevated"><label for = "lactate2">Not elevated</label></li>
             </ul>
           </div>
-          <br><h4>&nbsp</h4>
+	      </div>
+          <!--br><h4>&nbsp</h4-->
           <div class="block">
-            <h4>&nbsp</h4>
             <h4>Etiology</h4>
             <ul class = "radiobutton">
               <li><input type = "radio"  class="choicebutton" id="sepsis-abd" name = "sepsisetiology" onclick="check(this.id)" value = "an abdominal source"><label for = "sepsis-abd">Abdominal source</label></li>
@@ -181,12 +184,12 @@ Typos, grammar, punctuation
               
             </ul>
           </div>
-          <br><br><br><h4>&nbsp</h4>
+          <!--br><br><br><h4>&nbsp</h4>
           <div class= "block">
-            <h4>.</h4>
+            <h4>.</h4-->
             <div class="block">
             <h4>Treatment</h4>
-            </div>
+           
             <ul class = "radiobutton">
               <li><input type = "checkbox"  class="choicebutton" id="sepsis-culture" name = "sepsis1" onclick="check(this.id)" value = "blood cultures"><label for = "sepsis-culture">blood cultures</label></li><br>
             </ul>
@@ -196,6 +199,7 @@ Typos, grammar, punctuation
               
               <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf30" name = "sepsis-abx" onclick="check(this.id)" value = "30 cc/kg of normal saline"><label for = "sepsis-ivf30">30 cc/kg NS</label></li>
             </ul>
+	     
             <h4>&nbsp</h4><h4>&nbsp</h4>
             <ul class = "radiobutton">
             
@@ -203,7 +207,7 @@ Typos, grammar, punctuation
               <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "Rocephin & Zithromax"><label for = "sepsis-abx2">Rocephin & Zithromax</label></li>
               <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-abx3">[other abx]</label></li>
             </ul>
-          </div>
+          <!--/div-->
         </div>
       </div><br><br>
 
