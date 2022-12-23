@@ -1,0 +1,40 @@
+{
+	"title":"NEXUS Criteria for C-Spine Imaging",
+	"listContributions":true,
+	"buttonWidth":100,
+	"buttonLayout":"horizontal",
+	"criteria":
+	[
+		{"text":"Focal neurologic deficit present","contributionText":"focal neurologic deficit present","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Midline spinal tenderness present","contributionText":"midline spinal tenderness present","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Altered level of consciousness present","contributionText":"Altered level of consciousness present","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Intoxication present","contributionText":"Intoxication present","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Distracting injury present","contributionText":"age ≥ 65","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		}
+	],
+	"range":
+	[
+		{"low":"-1","high":"1","text":"The cervical spine was cleared by the NEXUS criteria since no focal neurologi deficit, midline spinal tenderness, altered level of consciousness, intoxication, or distracting injury were present. Therefore, imaging of the cervical spine was not needed. "},
+		{"low":"0","high":"10","text":"The cervical spine could not be cleared clinically by NEXUS criteria."}
+		
+	]
+}
