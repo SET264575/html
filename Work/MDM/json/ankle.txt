@@ -3,7 +3,7 @@
 	"listContributions":true,
 	"buttonWidth":100,
 	"buttonLayout":"horizontal",
-	"showPoints":false,
+	"showPoints":true,
   	"format":"text",
 	"criteria":
 	[
