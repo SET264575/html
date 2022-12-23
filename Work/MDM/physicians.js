@@ -26,6 +26,7 @@ function displayAdmitting() {
 
 function displayConsulting() {
 	var t = "";
+	console.log('in displayConsulting');
 	for (let i =0; i<physObj.consulting.length; i++) {
     t = t + '<button class="collapsible subsubsubheadingbutton">'+physObj.consulting[i].specialty+'</button>\n';
     t = t +'      <div class = "content">\n';
@@ -41,4 +42,5 @@ function displayConsulting() {
 	document.getElementById('consultingbuttons').innerHTML =  t;
 	document.getElementById('consultingbuttons2').innerHTML =  t;
 	//console.log(t);
+	console.log('exiting displayConsulting');
 }
