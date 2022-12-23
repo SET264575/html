@@ -1,5 +1,7 @@
 {
 	"title":"Wells' Criteria for Pulmonary Embolism",
+	"format":"pretext",
+	"showPoints":true,
 	"criteria":
 	[
 		{"text":"Clinical signs and symptoms of DVT","answers":[
