@@ -5,6 +5,7 @@
 	"buttonLayout":"horizontal",
 	"showPoints":true,
   	"format":"text",
+	"normalScore":[-10,10],
 	"criteria":
 	[
 		{"text":"Location of pain","contributionText":"","answers":[
