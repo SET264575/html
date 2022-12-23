@@ -535,20 +535,24 @@ Typos, grammar, punctuation
 </div>
 	    <script src = "physicians.js"></script>
       <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
+	      setListener();
+        
+        function setListener() {
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
 
-        for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
-            }
-          });
-        }    
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }    
+        }
         
         var myObj = {};
 getObject('json/ddx.txt');
@@ -619,8 +623,6 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
 	}
         
         function showDDX(id,list2) {
-		console.log(id);
-		console.log('list2',list2);
           var list = document.getElementsByName('sx');
           for (let i = 0; i<list.length; i++) {
             list[i].style.display = 'none';
