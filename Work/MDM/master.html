@@ -147,7 +147,9 @@ Sepsis
                   list.push(myObj.criteria[j].contributionText);
                 }
               }
-              t = t + " due to " + combineItems(list)+". ";
+              if (result != 0) {
+                t = t + " due to " + combineItems(list)+". ";
+              }
             }
           }
           else {
