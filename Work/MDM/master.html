@@ -126,16 +126,17 @@ Sepsis
         }
         t = getText(score);
         document.getElementById('text').innerHTML = t;
-        document.getElementById('score').innerHTML = score;
-        if (score == 1) {
-          document.getElementById('smallscore').innerHTML = 'point';
-        }
-        else {
-          document.getElementById('smallscore').innerHTML = 'points';
-        }
         if (myObj.showPoints) {
-          navigator.clipboard.writeText(t);
+          document.getElementById('score').innerHTML = score;
+          if (score == 1) {
+            document.getElementById('smallscore').innerHTML = 'point';
+          }
+          else {
+            document.getElementById('smallscore').innerHTML = 'points';
+          }
         }
+       
+        navigator.clipboard.writeText(t);
       }
     }
     
