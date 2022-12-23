@@ -151,7 +151,9 @@ Sepsis
               for (let j = 0; j < myObj.criteria.length; j++) {
                 let result = parseInt(getRadioButtonValue('criteria'+String(j)));
                 if (result != 0) {
-                  list.push(myObj.criteria[j].contributionText);
+                  if (myObj.criteria[j].contributionText != "") {
+                    list.push(myObj.criteria[j].contributionText);
+                  }
                 }
               }
               if (score != 0) {
