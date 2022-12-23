@@ -766,13 +766,14 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           }
 
           t = t + "\n\n";
-         /* var iframe = document.getElementById("iframe");
+          var iframe = document.getElementById("iframe");
           var test = iframe.contentWindow.document.getElementById('text').innerHTML;
+		console.log("test",test);
           if (test != "") {
             t = t + "Risk Stratification: \n";
             t = t + test+"\n";
             t = t + "\n\n";
-          }*/
+          }
           t = t + "Disposition:\n ";
           if (isAnyChecked('dischargedecisionmaking')) {
             t = t + getRadioButtonValue('dischargedecisionmaking');
