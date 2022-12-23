@@ -43,8 +43,8 @@
 		{"low":"-13","high":"-10","text":"Ankle fracture could not be ruled out by Ottawa ankle rules"},
 		{"low":"-11","high":"-9","text":"Clinically significant ankle fracture was ruled out by Ottawa ankle rules"},
 		{"low":"87","high":"91","text":"Ankle fracture could not be ruled out by Ottawa ankle rules"},
-    		{"low":"10","high":"13","pretext":"Midfoot fracture could not be ruled out by Ottawa ankle rules"},
+    		{"low":"10","high":"13","text":"Midfoot fracture could not be ruled out by Ottawa ankle rules"},
 		{"low":"9","high":"11","text":"Midfoot fracture was ruled out by Ottawa ankle rules"},
-    		{"low":"109","high":"113","pretext":"Midfoot fracture could not be ruled out by Ottawa ankle rules"}
+    		{"low":"109","high":"113","text":"Midfoot fracture could not be ruled out by Ottawa ankle rules"}
 	]
 }
