@@ -768,7 +768,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           t = t + "\n\n";
           var iframe = document.getElementById("iframe");
           var test = iframe.contentWindow.document.getElementById('text').innerHTML;
-		console.log("test",test);
+		console.log("test",test,test.length);
           if (test != "") {
             t = t + "Risk Stratification: \n";
             t = t + test+"\n";
