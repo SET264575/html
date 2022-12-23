@@ -20,7 +20,7 @@
     {"specialty":"General surgery","physician":["Gerber","Peterson","Rollison","Vaden"]},
     {"specialty":"GI","physician":["Anderson","Cleavinger","Diaz-Arias","Halsey","Llorens","Welsh","Williams"]},
     {"specialty":"Hem/Onc","physician":["Balakrishnan","Iliff","Makarian","Ramadoss","Tungesvik"]},
-    {"specialty":"Hospitalist","physician":["Bhagat","Cheddi","Hassan","James","Makarian","McGreevy","Nau","Petrie","Renick","Schiavo","Sharma","Welchmeyer","Yuen","Zeglis",]},
+    {"specialty":"Hospitalist","physician":["Bhagat","Cheddi","Hassan","James","Makarian","McGreevy","Nau","Petrie","Renick","Schiavo","Sharma","Welchmeyer","Yuen","Zeglis"]},
     {"specialty":"Neurology","physician":["Goble","Jones","Koch","Malone"]},
     {"specialty":"Neurosurgery","physician":["Bondurant","Ryan"]},
     {"specialty":"Ob/Gyn","physician":["Berck","Bernard","Borgmeyer","Jones","Morse","Nicholas","Puckett","Smith","Stiefel","Wilson"]},
