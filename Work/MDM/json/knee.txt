@@ -1,0 +1,41 @@
+{
+	"title":"Ottawa Knee Rule",
+	"listContributions":true,
+	"buttonWidth":100,
+	"buttonLayout":"horizontal",
+	"format":"text",
+	"criteria":
+	[
+		{"text":"Age ≥55","contributionText":"age ≥55","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Isolated tenderness of the patella","subtext":"(no other bony tenderness)","contributionText":"isolated patellar tenderness","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Tenderness at the fibular head","contributionText":"fibular head tenderness","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Unable to flex knee to 90°","contributionText":"inability to flex knee to 90°","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Unable to bear weight both immediately and in ED","subtext":"(4 steps, limping is okay)","contributionText":"inability to bear weight","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		}
+	],
+	"range":
+	[
+		{"low":"-1","high":"1","text":"Fracture of the knee was ruled out using the Ottawa knee rule"},
+		{"low":"0","high":"10","text":"Fracture of the knee could not be ruled out using the Ottawa knee rule"}
+		
+	]
+}
