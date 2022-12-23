@@ -13,7 +13,7 @@
 ],
     
 "consulting":[
-    {"specialty":"cardiology","physician":["Baird","Boyer","Brown","Elliott","Fairlamb","Makay","Pierce","Rytlewski","Tillman","Tran","Tyagi","Verbsky","Zuidema"]},
+    {"specialty":"Cardiology","physician":["Baird","Boyer","Brown","Elliott","Fairlamb","Makay","Pierce","Rytlewski","Tillman","Tran","Tyagi","Verbsky","Zuidema"]},
     {"specialty":"CT surgery","physician":["Fernandez","Mellitt"]},
     {"specialty":"Dermatology","physician":["Perry","Schiavo"]},
     {"specialty":"ENT","physician":["Hanock","Scheidt"]},
