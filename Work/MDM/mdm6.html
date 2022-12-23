@@ -596,7 +596,7 @@ function displayHTML () {
 			}
 			s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[myObj.list[i].checked.length-1];
 		}
-		s = s + "])\">"+myObj.list[i].dx+"</button>\n";
+		s = s + "])\">"+myObj.list[i].dx+"</button>\n\n";
 		for (let j = 0; j < myObj.list[i].ddx.length; j++) {
 			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj.list[i].ddx[j]+"'><label for = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"'>"+myObj.list[i].ddx[j]+"</label></li>\n";
 		}
