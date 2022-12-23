@@ -90,7 +90,11 @@ Sepsis
           t=t+">";
           t = t + "<input type = 'radio' id = 'criteria"+String(i)+"-"+String(j)+"' name = 'criteria"+String(i)+"' ";
           t = t + myObj.criteria[i].answers[j].checked+" value = '"+myObj.criteria[i].answers[j].points + "' onclick = 'copytext()'/>";
-          t = t + "<label for = 'criteria'" + String(i)+"-"+String(j)+">"+myObj.criteria[i].answers[j].text+'<br>+'+myObj.criteria[i].answers[j].points+"</label>";
+          t = t + "<label for = 'criteria'" + String(i)+"-"+String(j)+">"+myObj.criteria[i].answers[j].text;
+          if (myObj.showPoints) {
+            t = t +'<br>+'+myObj.criteria[i].answers[j].points;
+          }
+          t = t +"</label>";
           t = t + "</li>";
           if (myObj.buttonLayout == "vertical") {
             t = t + "<br>";
