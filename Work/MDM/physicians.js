@@ -9,7 +9,6 @@ function getObject(website){
 }
 
 function displayAdmitting() {
-	console.log('in displayAdmitting');
 	var t = "";
 	for (let i =0; i<physObj.admitting.length; i++) {
     t = t + '<button class="collapsible subsubsubheadingbutton">'+physObj.admitting[i].specialty+'</button>\n';
@@ -22,12 +21,10 @@ function displayAdmitting() {
     }
 	  t = t + "</ul></div><br><br>\n";
 	}
-	//t = t + "</ul>\n";
 	document.getElementById('admittingbuttons').innerHTML =  t;
 }
 
 function displayConsulting() {
-	console.log('in displayConsulting');
 	var t = "";
 	console.log('in displayConsulting');
 	for (let i =0; i<physObj.consulting.length; i++) {
@@ -41,9 +38,6 @@ function displayConsulting() {
     }
 	  t = t + "</ul></div><br><br>\n";
 	}
-	//t = t + "</ul>";
 	document.getElementById('consultingbuttons').innerHTML =  t;
 	document.getElementById('consultingbuttons2').innerHTML =  t;
-	//console.log(t);
-	console.log('exiting displayConsulting');
 }
