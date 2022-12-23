@@ -4,12 +4,29 @@
   </head>
   <body>
     <div id="admittingbuttons" onchange="displayHTML"></div>
-    <button onclick="displayHTML()">test</button>
+    <button onclick="displayHTML(); setListener()">test</button>
     
     <textarea id="text" width="1000" height = "1000"></textarea>
     
     <script src="physicians.js"></script>
     <script>
+      function setListener() {
+      var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }   
+      }
+      
       function displayHTML() {
       document.getElementById("text").value = document.getElementById("admittingbuttons").innerHTML;}
     </script>
