@@ -4,6 +4,7 @@
 	"buttonWidth":100,
 	"buttonLayout":"horizontal",
 	"format":"text",
+	"showPoints":false,
 	"criteria":
 	[
 		{"text":"Age ≥55","contributionText":"age ≥55","answers":[
