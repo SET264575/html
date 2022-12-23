@@ -40,4 +40,5 @@ function displayConsulting() {
 	//t = t + "</ul>";
 	document.getElementById('consultingbuttons').innerHTML =  t;
 	document.getElementById('consultingbuttons2').innerHTML =  t;
+	console.log(s+t);
 }
