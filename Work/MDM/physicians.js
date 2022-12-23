@@ -9,7 +9,7 @@ function getObject(website){
 
 function displayAdmitting() {
 	var t = "";
-	for (let i =0; i<physObj.admitting[i].length; i++) {
+	for (let i =0; i<physObj.admitting.length; i++) {
     t = t + '<button class="collapsible subsubheadingbutton">'+physObj.admitting[i].specialty+'</button>';
     t = t +'      <div class = "content">';
     t = t + '      <ul class="radiobutton">';
@@ -27,7 +27,7 @@ function displayAdmitting() {
 
 function displayConsulting() {
 	var t = "";
-	for (let i =0; i<physObj.consulting[i].length; i++) {
+	for (let i =0; i<physObj.consulting.length; i++) {
     t = t + '<button class="collapsible subsubheadingbutton">'+physObj.consulting[i].specialty+'</button>';
     t = t +'      <div class = "content">';
     t = t + '      <ul class="radiobutton">';
