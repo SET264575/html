@@ -40,9 +40,11 @@
 	],
 	"range":
 	[
-		{"low":"-1","high":"2","pretext":"CURB-65 = ","posttext":", putting the patient in the lowest risk group of pneumonia severity."},
-		{"low":"1","high":"3","pretext":"CURB-65 = ","posttext":", putting the patient in the moderate risk group of pneumonia severity."},
-		{"low":"2","high":"4","pretext":"CURB-65 = ","posttext":", putting the patient in the severe risk group of pneumonia severity."},
-    		{"low":"3","high":"100","pretext":"CURB-65 = ","posttext":", putting the patient in the highest risk group of pneumonia severity."}
+		{"low":"-13","high":"-10","text":"Ankle fracture could not be ruled out by Ottawa ankle rules"},
+		{"low":"-11","high":"-9","text":"Clinically significant ankle fracture was ruled out by Ottawa ankle rules"},
+		{"low":"87","high":"91","text":"Ankle fracture could not be ruled out by Ottawa ankle rules"},
+    		{"low":"10","high":"13","pretext":"Midfoot fracture could not be ruled out by Ottawa ankle rules"},
+		{"low":"9","high":"11","text":"Midfoot fracture was ruled out by Ottawa ankle rules"},
+    		{"low":"109","high":"113","pretext":"Midfoot fracture could not be ruled out by Ottawa ankle rules"}
 	]
 }
