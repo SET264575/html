@@ -3,8 +3,13 @@
     <link rel="stylesheet" href="mdm6.css">
   </head>
   <body>
-    <div id="admittingbuttons"></div>
+    <div id="admittingbuttons" onchange="displayHTML"></div>
+    
+    <textarea id="text"></textarea>
     
     <script src="physicians.js"></script>
+    <script>
+      document.getElementById("text").value = document.getElementById("admittingbuttons").innerHTML;
+    </script>
   </body>
 </html>
