@@ -3,6 +3,9 @@ in mdm7:
 fix risk stratification
 remove commented out parts
 
+in mdm8:
+add collapsible to consults and admitting
+
 add more ddx
   subsections for abd quadrants
 
@@ -80,9 +83,9 @@ Typos, grammar, punctuation
      
 	      <p id="ddxbuttons"></p>
         <p id = "ddxtable" class="center"></p>
-	      <!--div class="note"><pre>This table will eventually have all of the diagnoses marked as ruled out, so that only the definitive or presumptive diagnosis will\nneed to be changed.</pre></div>
-     </div--><br><br>
-<div class="block">
+	      <!--div class="note"><pre>This table will eventually have all of the diagnoses marked as ruled out, so that only the definitive or presumptive diagnosis will\nneed to be changed.</pre></div-->
+     </div><br><br>
+
       <button type="button" class="collapsible">Data Review</button>
       <div class="content show" id = "div-datareview">
         <div class= "note">
@@ -90,7 +93,7 @@ Typos, grammar, punctuation
           Interpretation of tests needs some work.  Suggestions would be helpful.
           </pre>
         </div>
-        <!--div class="block"-->
+        <div class="block">
           <h4>Tests ordered and reviewed:</h4>
           <ul class='radiobutton'>
             <li><input type = "checkbox" class="choicebutton" id = "datablood" name = "testsordered" checked value = "laboratory tests" onclick="check(this.id)"/><label>Laboratory tests</label></li>
@@ -107,9 +110,7 @@ Typos, grammar, punctuation
             <li><input type = "checkbox"  class="choicebutton" id = "unremarkable" name = "unremarkable" onclick="check(this.id)"><label>Laboratory tests were unremarkable</label></li>
             <li><input type = "checkbox"  class="choicebutton" id = "notsupportive" name = "notsupportive" onclick="check(this.id)" value = "Testing was not supportive of any serious or life-threatening problems"><label>Testing was not supportive of any serious or life-threatening problems</label></li>
             <li><input type = "checkbox"  class="choicebutton" id = "suggestive" name = "notsupportive" onclick="check(this.id)" value = "Testing was supportive of []"><label>Testing was supportive of []</label></li>
-
           </ul>
-                
           <div class="note"><pre>  Other specific diagnoses, such as stroke, STEMI might need its own section.</pre></div>
         
         <button type="button" class="collapsible">Sepsis</button>
@@ -124,10 +125,6 @@ Typos, grammar, punctuation
             </ul>
           </div>
 	     
-          <!--br>
-          <h4>&nbsp</h4>
-          <div class="block">
-                  <h4>&nbsp</h4-->
 	        <div class="block">
             <h4>Lactate</h4>
             <ul class = "radiobutton">
@@ -155,41 +152,42 @@ Typos, grammar, punctuation
               
               <li><input type = "radio"  class="choicebutton" id="sepsis-pyelonephritis" name = "sepsisetiology" onclick="check(this.id)" value = "pyelonephritis"><label for = "sepsis-pyelonephritis">pyelonephritis</label></li>
             
-	            <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsisetiology" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
+	      <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsisetiology" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-tick" name = "sepsisetiology" onclick="check(this.id)" value = "a tick-borne illness"><label for = "sepsis-tick">a tick-borne illness</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-undiscovered" name = "sepsisetiology" onclick="check(this.id)" value = "a, thus far, undiscovered source"><label for = "sepsis-undiscovered">Undiscovered source</label></li>
              
               <li><input type = "radio"  class="choicebutton" id="sepsis-blank" name = "sepsisetiology" onclick="check(this.id)" value = "[sepsis cause]"><label for = "sepsis-blank">[sepsis cause]</label></li>
-              
             </ul>
           </div>
 		
 
             <div class="block">
-            <h4>Treatment</h4>
-           
-            <ul class = "radiobutton">
-              <li><input type = "checkbox"  class="choicebutton" id="sepsis-culture" name = "sepsis1" onclick="check(this.id)" value = "blood cultures"><label for = "sepsis-culture">blood cultures</label></li><br>
-            </ul>
-            <h4>&nbsp</h4><h4>&nbsp</h4>
-            <ul class = "radiobutton">
-              <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf" name = "sepsis-abx" onclick="check(this.id)" value = "1 L normal saline IV"><label for = "sepsis-ivf">1 L NS</label></li>
-              
-              <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf30" name = "sepsis-abx" onclick="check(this.id)" value = "30 cc/kg of normal saline IV"><label for = "sepsis-ivf30">30 cc/kg NS</label></li>
-            </ul>
-	     
-            <h4>&nbsp</h4><h4>&nbsp</h4>
-            <ul class = "radiobutton">
-            
-              <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx1" name = "sepsis-abx" onclick="check(this.id)" value = "IV Zosyn & Vancomycin"><label for = "sepsis-abx1">Zosyn & Vancomycin</label></li>
-              <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "IV Rocephin & Zithromax"><label for = "sepsis-abx2">Rocephin & Zithromax</label></li>
-              <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-abx3">[other abx]</label></li>
-            </ul>
+              <h4>Treatment</h4>
+              <div class="block">
+                <ul class = "radiobutton">
+                  <li><input type = "checkbox"  class="choicebutton" id="sepsis-culture" name = "sepsis1" onclick="check(this.id)" value = "blood cultures"><label for = "sepsis-culture">blood cultures</label></li><br>
+                </ul>
+              </div>
+              <div class="block">
+                <ul class = "radiobutton">
+                  <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf" name = "sepsis-abx" onclick="check(this.id)" value = "1 L normal saline IV"><label for = "sepsis-ivf">1 L NS</label></li>
+
+                  <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf30" name = "sepsis-abx" onclick="check(this.id)" value = "30 cc/kg of normal saline IV"><label for = "sepsis-ivf30">30 cc/kg NS</label></li>
+                </ul>
+              </div>
+              <h4>&nbsp</h4><h4>&nbsp</h4>
+              <ul class = "radiobutton">
+
+                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx1" name = "sepsis-abx" onclick="check(this.id)" value = "IV Zosyn & Vancomycin"><label for = "sepsis-abx1">Zosyn & Vancomycin</label></li>
+                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "IV Rocephin & Zithromax"><label for = "sepsis-abx2">Rocephin & Zithromax</label></li>
+                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-abx3">[other abx]</label></li>
+              </ul>
           </div>
         </div>
+	      </div>
       </div><br><br>
 
-      <button type="button" class="collapsible headingbutton">Independent Review of Studies</button>
+      <button type="button" class="collapsible">Independent Review of Studies</button>
       <div class="content" id = "div-independent">
         <button type = "button" class="collapsible subheadingbutton">Independent review of the EKG</button>
         <div class="content">
@@ -244,12 +242,12 @@ Typos, grammar, punctuation
       </div><br><br>
 
 
-      <button type="button" class="collapsible headingbutton">Risk Stratification Tools</button>
+      <button type="button" class="collapsible">Risk Stratification Tools</button>
       <div class="content" id = "div-tools">
         <iframe src="master.html" id = "iframe"></iframe>
       </div><br><br>
 
-      <button type="button" class="collapsible headingbutton">Disposition</button>
+      <button type="button" class="collapsible">Disposition</button>
       <div class="content show" id = "div-dispo">
         <button type = "button" class="collapsible subheadingbutton">De-escalation of care</button>
         <div class="content">
@@ -333,13 +331,13 @@ Typos, grammar, punctuation
           </ul>
         </div> <!-- block-->
 		
-          <button type="button" class="collapsible subsubheadingbutton" >Consults</button>
-          <div class="content">
         <div class="block">
-          <h4>Consult</h4>
-          <div id="consultingbuttons"></div>
+		<button type="button" class="collapsible">Consults</button>
+		<div class="content">
+		  <h4>Consult</h4>
+		  <div id="consultingbuttons"></div>
+		</div>
 	</div> <!--block -->
-          </div>
 		
 		
 	<br><br>
@@ -362,14 +360,20 @@ Typos, grammar, punctuation
           
         <hr>
         <div class="block">
-          <h4>Admit</h4>
-          <div id="admittingbuttons"></div>
+		<button type = "button" class="collapsible">Admitting physician</button>
+		<div class="content">
+		  <h4>Admit</h4>
+		  <div id="admittingbuttons"></div>
+		</div>
         </div><br><br>
 
         <hr>
-        <div>
-          <h4>Consult</h4>
-          <div id="consultingbuttons2"></div>
+        <div class="block">
+		<button type = "button" class= "collapsible">Consults</button>
+		<div class="content">
+		  <h4>Consult</h4>
+		  <div id="consultingbuttons2"></div>
+		</div>
         </div><br><br>
           
 		</div><br><br>
@@ -385,12 +389,12 @@ Typos, grammar, punctuation
 </div>
 	    <script src = "physicians.js"></script>
       <script>
-	     setTimeout( setListener,1000);
-        
+	     setTimeout( setListener,2000);
+	      
         function setListener() {
           var coll = document.getElementsByClassName("collapsible");
           var i;
-console.log('in Listener');
+
           for (i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
               this.classList.toggle("active");
