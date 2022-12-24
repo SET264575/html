@@ -1,5 +1,5 @@
 {"list":[	
-	{"dx":"Abdominal pain","ddx":["appendicitis","MI","pancreatitis","cholecystitis","SBO","diverticulitis"],"checked":["appendicitis"]},
+	{"dx":"Abdominal pain","ddx":["appendicitis","AAA dissection","cholecystitis","colitis","diverticulitis","ischemic colitis","MI","pancreatitis","SBO"],"checked":["appendicitis"]},
 	{"dx":"Arthralgias","ddx":["hypothyroidism","adrenal insufficiency","gout","pseudogout","rheumatoid arthritis","psoriatic arthritis","Lyme disease","bacterial endocarditis","malignancy","septic joint","compartment syndrome","Covid","influenza"],"checked":[]},
 	{"dx":"Back pain","ddx":["cauda equina syndrome","vertebral fracture","epidural abscess","diskitis"],"checked":["cauda equina","epidural abscess"]},
 	{"dx":"Chest pain","ddx":["ACS","PE","aortic dissection","pneumothorax"],"checked":["ACS","PE","aortic dissection","pneumothorax"]},
