@@ -41,9 +41,9 @@ Typos, grammar, punctuation
     </div>
 
     <div class="main">
-      <button type="button" class="collapsible headingbutton">Patient Presentation</button>
+      <button type="button" class="collapsible">Patient Presentation</button>
       <div class="content" id = "div-ptpresentation">
-        <!--div class="note"><pre>A summary of the patient presentation itself will need to be dictated before everything else is pasted in.</pre></div-->
+        <div class="note"><pre>A summary of the patient presentation itself will need to be dictated before everything else is pasted in.</pre></div>
         <div class = "block">
 <h4>Moderate</h4>
           <ul class= "radiobutton">
@@ -72,7 +72,7 @@ Typos, grammar, punctuation
         </ul></div>
       </div><br><br>
 
-      <button type="button" class="collapsible headingbutton">Differential Diagnosis</button>
+      <button type="button" class="collapsible">Differential Diagnosis</button>
         
       <div class="content" id = "div-ddx">
                 <div class="note">
@@ -84,7 +84,6 @@ Typos, grammar, punctuation
      
 	      <p id="ddxbuttons"></p>
         <p id = "ddxtable" class="center"></p>
-	      <!--div class="note"><pre>This table will eventually have all of the diagnoses marked as ruled out, so that only the definitive or presumptive diagnosis will\nneed to be changed.</pre></div-->
      </div><br><br>
 
       <button type="button" class="collapsible">Data Review</button>
@@ -109,7 +108,6 @@ Typos, grammar, punctuation
           <h4>Interpretation of tests</h4>
 		<div class="block">
           <ul class="radiobutton">
-            <!--li><input type = "checkbox"  class="choicebutton" id="testingdone" name = "testingdone" checked onclick="check(this.id)"><label for = "testingdone">Testing performed to rule out these problems</label></li-->
             <li><input type = "checkbox"  class="choicebutton" id = "unremarkable" name = "unremarkable" onclick="check(this.id)"><label>Laboratory tests were unremarkable</label></li>
             <li><input type = "checkbox"  class="choicebutton" id = "notsupportive" name = "notsupportive" onclick="check(this.id)" value = "Testing was not supportive of any serious or life-threatening problems"><label>Testing was not supportive of any serious or life-threatening problems</label></li>
             <li><input type = "checkbox"  class="choicebutton" id = "suggestive" name = "notsupportive" onclick="check(this.id)" value = "Testing was supportive of []"><label>Testing was supportive of []</label></li>
