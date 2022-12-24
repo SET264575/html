@@ -5,6 +5,7 @@
 	"buttonLayout":"horizontal",
 	"format":"text",
 	"showPoints":false,
+	"normalScore":[0],
 	"criteria":
 	[
 		{"text":"Focal neurologic deficit present","contributionText":"focal neurologic deficit","answers":[
