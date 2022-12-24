@@ -4,6 +4,7 @@
 	"buttonWidth":100,
 	"buttonLayout":"horizontal",
 	"format":"text",
+	"normalScore":[0],
 	"showPoints":false,
 	"criteria":
 	[
