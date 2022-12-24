@@ -431,7 +431,7 @@ function displayHTML () {
 		for (let j = 0; j < myObj.list[i].ddx.length; j++) {
 			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj.list[i].ddx[j]+"'><label for = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"'>"+myObj.list[i].ddx[j]+"</label></li>\n";
 		}
-    t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-[other diagnosis]' onclick = 'check(this.id)' value = '" + myObj.list[i].ddx[j]+"'><label for = 'ddx-"+myObj.list[i].dx+"-[other diagnosis]'>[other diagnosis]</label></li>\n";
+    t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-[other diagnosis]' onclick = 'check(this.id)' value = '[other diagnosis]'><label for = 'ddx-"+myObj.list[i].dx+"-[other diagnosis]'>[other diagnosis]</label></li>\n";
 		t = t + "</div>\n";
 	}
 	s = s + "</div>\n";
