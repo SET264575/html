@@ -156,7 +156,7 @@ Sepsis
                   }
                 }
               }
-              if (!(score in myObj.normalScore)) {
+              if (!(myObj.normalScore.includes(score))) {
                 t = t + " due to " + combineItems(list)+". ";
               }
             }
