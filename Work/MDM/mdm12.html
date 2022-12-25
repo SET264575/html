@@ -756,20 +756,27 @@ else {
     
 	  <script>
 		  function analyze() {
-        var copa = 0;
-        var data = 0;
-        var risk = 0;
+        var copa = "";
+        var data = "";
+        var risk = "";
         
         var cat1 = false
         var cat2 = false;
         var cat3 = false;
 			  
 	      var cat1count = 0;
+        var overall = "";
+			  
+        var t = "";
         
         document.getElementById('level').innerHTML = "";
         
+        if (isChecked('present1') || isChecked('present2') || isChecked('present3') || isChecked('present4') || isChecked('present5')) {
+          copa = "Moderate";
+        }
+        
         if (isChecked('presenthigh1') || isChecked('presenthigh2') || isChecked('presenthigh3') || isChecked('presenthigh4')) {
-          copa = true;
+          copa = "High";
         }
         
         if (isChecked('presentation1')) {
@@ -788,36 +795,43 @@ else {
         
         if (cat1count > 3) {
 		      cat1 = true;
+          data = "Moderate";
+          
         }
         
         if (isAnyChecked("ekg") || isAnyChecked("cxr") || isAnyChecked("xray") || isAnyChecked("ct") ) {
           cat2 = true;
+          data = "Moderate";
+          
         }
         
         if (isAnyChecked("consulting") || isAnyChecked("admitting")) {
           cat3 = true;
+          data = "Moderate";
         }
         
         if ((cat1 && cat2) || (cat1 && cat3) || (cat2 && cat3)) {
-          data = true;
+          data = "High";
         }
         
         if (isAnyChecked("admissiondecisionmaking")) {
-		      risk = true;
+		      risk = "High";
 	      }
 			  
 	if (isAnyChecked("deescalate-")) {
-		risk = true;
+		risk = "High";
 	}
 			  
         if (isAnyChecked("tx1")) {
-          risk = true;
+          risk = "High";
         }
        
-        if ((copa && data) || (copa && risk) || (data && risk)) {
-          document.getElementById('level').innerHTML = "High";
+        if ((copa  == 'High' && data == 'High') || (copa == 'High' && risk == 'High') || (data == 'High' && risk == 'High')) {
+          overall = "High";
         }
 			  
+        t = "Overall: <b>"+overall+"</b><br>COPA: <b>"+copa+"</b><br>DATA: <b>"+data+"</b><br>RISK: <b>"+risk+"</b>";
+        document.getElementById('level').innerHTML = t;
 		  }
         
         function isChecked(id) {
