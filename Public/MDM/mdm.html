@@ -1,3 +1,15 @@
+<!--
+Known bugs/quirks:
+1.  When you click on a symptom in the differential diagnosis, pre-selected conditions are added to the list.  If you are hunting around and click on other symptoms, additional conditions will be added to the list.  None of the previous conditions will be automatically de-selected.  This can lead to an accumulation of unwanted diagnoses.  This bug can be avoided by only selecting the appropriate symptoms.  However, I will work on a fix for this.
+2.  When using Risk Stratification scores, the results that the score calculator produces is not added to the MDM text until you click on other options outside of the Risk Stratification section.  I may or may not ever fix this.
+3.  The Ottawa ankle rules calculator can produce incorrect results if you give it unexpected data, like saying there is midfoot pain and lateral malleolus tenderness.  I might try to fix this someday.
+4.  Not everything that contributes to the coding level is noted or is used in the calculation to indicate what the level is.  (Your documentation may be at a higher level than indicated.)
+5.  There is no way to add more than one Risk Stratification score.  For instance, it would be helpful to combine CHADS-VASc and HAS-BLED.
+6.  Pneuomina Severity Index calculator doesn't work.
+7.  Pre-selected conditions in the differential diagnosis do not automatically generate text.  These are included in the text when you select additional diagnoses or any other option on the page.
+8.  Differential diagnosis is not alphabetized
+-->
+
 <html>
   <head>
     <title>MDM Documentation</title>
