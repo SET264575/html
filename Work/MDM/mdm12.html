@@ -744,6 +744,7 @@ else {
           return('____________________');
         }
       </script>
+    
 	  <script>
 		  function analyze() {
         var copa = 0;
@@ -755,6 +756,8 @@ else {
         var cat3 = false;
 			  
 	      var cat1count = 0;
+        
+        document.getElementById('level').innerHTML = "";
         
         if (isChecked('presenthigh1') || isChecked('presenthigh2') || isChecked('presenthigh3') || isChecked('presenthigh4')) {
           copa = true;
