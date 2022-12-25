@@ -650,6 +650,10 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           if (isAnyChecked('social')){
             t = t + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social') + ". ";
           }
+		
+	  if (isAnyChecked('tx')) {
+		  t = t + combineItemsFromButtons('tx');
+	  }
           if (isAnyChecked('referral')) {
             t = t + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
           }
