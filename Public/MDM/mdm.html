@@ -524,7 +524,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
 		
            if (isAnyChecked('ruled out')|| isAnyChecked('presumptive') || isAnyChecked('unlikely') || isAnyChecked('definitive')) {
             t = t + "Given the patient's history, physical exam and test results, ";
-           }
+           //}
            var rolist = [];
            var t1 = "";
            if (isAnyChecked('ruled out')) {
@@ -571,6 +571,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
 		
 			
           t = t+ combineItemsFromList(rolist) + ".\n\n";
+	   }
           
           if (isAnyChecked("sirs")) {
             t = t + "\n\nThe patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
