@@ -37,7 +37,7 @@ Typos, grammar, punctuation
     <div class="header">
       <!--h3>The following text has been copied to the clipboard and is ready to be pasted into your document.</h3-->
 	    <table style="width: 100%"><td style = "padding: 10px">
-      High
+        <p id = "level">High</p>
 		    </td><td style = "width: 90%; padding: 10px">
       <textarea id="text"></textarea>
 		    </td>
@@ -279,6 +279,14 @@ Typos, grammar, punctuation
           </ul>
          </div><br><br>
         
+        <button type = "button" class="collapsible subheadingbutton">Treatment</button>
+        <div class="content">
+          <ul class="radiobutton">
+            <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "A parenteral controlled substance was administered." id="tx1" onclick="check(this.id)"><label for = "tx1">Parenteral controlled substance</label></li>
+            <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "[Other treatment]" id = "tx2" onclick = "check(this.id)"><label for="tx2">[Other treatment]</label></li>
+          </ul>
+        </div><br><br>
+        
         <button type = "button" class="collapsible subheadingbutton">Discharge</button>
         <div class="content">
           <div class="block">
@@ -486,10 +494,12 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             document.getElementById(list2[i]).checked = true;
             console.log(list2[i]);
           }
-		makeDDXTable();
+		      makeDDXTable();
         }
         
         function check(id) {
+          analyze();
+          
           if (document.getElementById(id).name == "ddx") {
             makeDDXTable();
           }
@@ -743,12 +753,24 @@ else {
 			  
 	      var cat1count = 0;
         
+        if (isChecked('presenthigh1') || isChecked('presenthigh2') || isChecked('presenthigh3') || isChecked('presenthigh4')( {
+          copa = true;
+        }
+        
         if (isChecked('presentation1')) {
           cat1count++;
         }
         if (isChecked('presentation2')) {
           cat1count++;
         }
+        
+        var list = document.getElementsByName('testsordered')
+        for (let i = 0; i< list.length; i++) {
+          if (list[i].checked) {
+            cat1count = cat1count + 2;
+          }
+        }
+        
         if (cat1count > 3) {
 		      cat1 = true;
         }
@@ -766,10 +788,16 @@ else {
         }
         
         if (isAnyChecked("admissiondecisionmaking")) {
-		      risk = 1;
+		      risk = true;
 	      }
 			  
+        if (isAnyChecked("")) {
+          risk = true;
+        }
        
+        if ((copa && data) || (copa && risk) || (data && risk)) {
+          document.getElementById('level').innerHTML = "High";
+        }
 			  
 		  }
         
