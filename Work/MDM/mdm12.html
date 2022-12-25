@@ -47,7 +47,7 @@ Typos, grammar, punctuation
     <div class="main">
       <button type="button" class="collapsible">Patient Presentation</button>
       <div class="content" id = "div-ptpresentation">
-        <div class="note"><pre>These help with documentation needed for the Number and Complexity of Problems Addressed (COPA)</pre></div>
+        <div class="note"><pre>These contribute to documentation needed for the Number and Complexity of Problems Addressed (COPA)</pre></div>
         <div class = "block">
 <h4>Moderate</h4>
           <ul class= "radiobutton">
@@ -70,7 +70,7 @@ Typos, grammar, punctuation
 				
         <div>
 		<hr>
-		<div class = "note"><pre>Documenting review of external records and additional historians helps with category 1 of DATA</pre></div>
+		<div class = "note"><pre>Documenting review of external records and additional historians contributes to category 1 of DATA</pre></div>
         <ul class="radiobutton">
           <li><input type = "checkbox" name = "present" id = "presentation1" class = "choicebutton" onclick="check(this.id)"><label for = "presentation1">Data reviewed from external sources</label>    <br></li>
           <li><input type = "checkbox" name = "present" id = "presentation2" class = "choicebutton" onclick="check(this.id)"><label for = "presentation2">Additional historian required</label><br></li>
@@ -82,7 +82,7 @@ Typos, grammar, punctuation
       <div class="content" id = "div-ddx">
                 <div class="note">
           <pre>
-          Addressing serious conditions in the differential helps to document the complexity 
+          Addressing serious conditions in the differential contributess to documenting the complexity 
                     </pre>
         </div>
      
@@ -94,7 +94,7 @@ Typos, grammar, punctuation
       <div class="content" id = "div-datareview">
         <div class= "note">
           <pre>
-          Documenting tests ordered and reviewed helps with Category 1 of the DATA.
+          Documenting tests ordered and reviewed contributes to Category 1 of the DATA.
           </pre>
         </div>
         <div class="block">
@@ -195,7 +195,7 @@ Typos, grammar, punctuation
 
       <button type="button" class="collapsible">Independent Review of Studies</button>
       <div class="content" id = "div-independent">
-	      <div class="note">Documenting your independent interpretation of these studies helps with category 2 of DATA</pre></div>
+	      <div class="note">Documenting your independent interpretation of these studies contributes to Category 2 of DATA</pre></div>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the EKG</button>
         <div class="content">
           <div class="note"><pre>Other interpretations would be helpful.</pre></div>
@@ -270,7 +270,7 @@ Typos, grammar, punctuation
         
         <button type = "button" class="collapsible subheadingbutton">Social determinants of health</button>
         <div class="content">
-		<div class="note"><pre>Documenting social determinants of health helps with RISK (at the moderate level only)</pre></div>
+		<div class="note"><pre>Documenting social determinants of health contributes to RISK (at the moderate level only)</pre></div>
           <ul class="radiobutton">
             <li><input type = "checkbox" class="choicebutton" name = "social" value = "homelessness" id="social-1" onclick="check(this.id)"><label for = "social-1">Homelessness</label></li>
             <li><input type = "checkbox"  class="choicebutton" name = "social" value = "lack of social support" id="social-2" onclick="check(this.id)"><label for = "social-2">Lack of social support</label></li>
@@ -283,7 +283,7 @@ Typos, grammar, punctuation
         
         <button type = "button" class="collapsible subheadingbutton">Treatment</button>
         <div class="content">
-		<div class="note"><pre>Documenting administration of parenteral controlled substances helps with RISK</pre></div>
+		<div class="note"><pre>Documenting administration of parenteral controlled substances contributes to RISK</pre></div>
           <ul class="radiobutton">
             <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "A parenteral controlled substance was administered." id="tx1" onclick="check(this.id)"><label for = "tx1">Parenteral controlled substance</label></li>
 		        <!--li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV fluids" id = "tx2" onclick = "check(this.id)"><label for="tx2">IV fluids</label></li>
@@ -809,6 +809,10 @@ else {
           cat3 = true;
           data = "Moderate";
         }
+			  
+        if (isAnyChecked("tx1")) {
+          risk = "Moderate";
+        }
         
         if ((cat1 && cat2) || (cat1 && cat3) || (cat2 && cat3)) {
           data = "High";
@@ -818,14 +822,10 @@ else {
 		      risk = "High";
 	      }
 			  
-	if (isAnyChecked("deescalate-")) {
-		risk = "High";
-	}
-			  
-        if (isAnyChecked("tx1")) {
+        if (isAnyChecked("deescalate-")) {
           risk = "High";
         }
-       
+			  
         if ((copa  == 'High' && data == 'High') || (copa == 'High' && risk == 'High') || (data == 'High' && risk == 'High')) {
           overall = "High";
         }
@@ -834,9 +834,9 @@ else {
         document.getElementById('level').innerHTML = t;
 		  }
         
-        function isChecked(id) {
-          return(document.getElementById(id).checked);
-        }
+      function isChecked(id) {
+        return(document.getElementById(id).checked);
+      }
 	  </script>
   </body>
 </html>
