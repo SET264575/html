@@ -47,7 +47,7 @@ Typos, grammar, punctuation
     <div class="main">
       <button type="button" class="collapsible">Patient Presentation</button>
       <div class="content" id = "div-ptpresentation">
-        <div class="note"><pre>A summary of the patient presentation itself will need to be dictated before everything else is pasted in.</pre></div>
+        <div class="note"><pre>These help with documentation needed for the Number and Complexity of Problems Addressed (COPA)</pre></div>
         <div class = "block">
 <h4>Moderate</h4>
           <ul class= "radiobutton">
@@ -70,6 +70,7 @@ Typos, grammar, punctuation
 				
         <div>
 		<hr>
+		<div class = "note"><pre>Documenting review of external records and additional historians helps with category 1 of DATA</pre></div>
         <ul class="radiobutton">
           <li><input type = "checkbox" name = "present" id = "presentation1" class = "choicebutton" onclick="check(this.id)"><label for = "presentation1">Data reviewed from external sources</label>    <br></li>
           <li><input type = "checkbox" name = "present" id = "presentation2" class = "choicebutton" onclick="check(this.id)"><label for = "presentation2">Additional historian required</label><br></li>
@@ -81,8 +82,7 @@ Typos, grammar, punctuation
       <div class="content" id = "div-ddx">
                 <div class="note">
           <pre>
-          Selecting a symptom will pull up a list of differential diagnoses.  Some may be preselected.
-          Suggestions for other symptoms or diagnoses, or ones that should be preselected would be helpful.
+          Addressing serious conditions in the differential helps to document the complexity 
                     </pre>
         </div>
      
@@ -94,7 +94,7 @@ Typos, grammar, punctuation
       <div class="content" id = "div-datareview">
         <div class= "note">
           <pre>
-          Interpretation of tests needs some work.  Suggestions would be helpful.
+          Documenting tests ordered and reviewed helps with Category 1 of the DATA.
           </pre>
         </div>
         <div class="block">
@@ -195,6 +195,7 @@ Typos, grammar, punctuation
 
       <button type="button" class="collapsible">Independent Review of Studies</button>
       <div class="content" id = "div-independent">
+	      <div class="note">Documenting your independent interpretation of these studies helps with category 2 of DATA</pre></div>
         <button type = "button" class="collapsible subheadingbutton">Independent review of the EKG</button>
         <div class="content">
           <div class="note"><pre>Other interpretations would be helpful.</pre></div>
@@ -269,6 +270,7 @@ Typos, grammar, punctuation
         
         <button type = "button" class="collapsible subheadingbutton">Social determinants of health</button>
         <div class="content">
+		<div class="note"><pre>Documenting social determinants of health helps with RISK (at the moderate level only)</pre></div>
           <ul class="radiobutton">
             <li><input type = "checkbox" class="choicebutton" name = "social" value = "homelessness" id="social-1" onclick="check(this.id)"><label for = "social-1">Homelessness</label></li>
             <li><input type = "checkbox"  class="choicebutton" name = "social" value = "lack of social support" id="social-2" onclick="check(this.id)"><label for = "social-2">Lack of social support</label></li>
@@ -281,6 +283,7 @@ Typos, grammar, punctuation
         
         <button type = "button" class="collapsible subheadingbutton">Treatment</button>
         <div class="content">
+		<div class="note"><pre>Documenting administration of parenteral controlled substances helps with RISK</pre></div>
           <ul class="radiobutton">
             <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "A parenteral controlled substance was administered." id="tx1" onclick="check(this.id)"><label for = "tx1">Parenteral controlled substance</label></li>
 		        <!--li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV fluids" id = "tx2" onclick = "check(this.id)"><label for="tx2">IV fluids</label></li>
@@ -349,8 +352,10 @@ Typos, grammar, punctuation
         </div> <!-- block-->
 		
         <div class="block">
+	
 		<button type="button" class="collapsible">Consults</button>
 		<div class="content">
+			<div class="note"><pre>Documenting discussion with independent clinicians satisfies category 3 for DATA</pre></div>
 		  <div id="consultingbuttons"></div>
 		</div>
 	</div> <!--block -->
