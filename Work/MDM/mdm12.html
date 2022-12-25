@@ -740,14 +740,17 @@ else {
         var cat1 = false
         var cat2 = false;
         var cat3 = false;
+			  
+	      var cat1count = 0;
         
         if (isChecked('presentation1')) {
-          cat1++;
+          cat1count++;
         }
         if (isChecked('presentation2')) {
-          cat1++;
+          cat1count++;
         }
-        if () {
+        if (cat1count > 3) {
+		      cat1 = true;
         }
         
         if (isAnyChecked("ekg") || isAnyChecked("cxr") || isAnyChecked("xray") || isAnyChecked("ct") ) {
@@ -758,7 +761,14 @@ else {
           cat3 = true;
         }
         
+        if ((cat1 && cat2) || (cat1 && cat3) || (cat2 && cat3)) {
+          data = true;
+        }
         
+        if (isAnyChecked("admissiondecisionmaking")) {
+		      risk = 1;
+	      }
+			  
        
 			  
 		  }
