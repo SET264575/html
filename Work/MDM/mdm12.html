@@ -437,7 +437,7 @@ function displayHTML () {
 	var t = "<ul class='radiobutton'>\n";
 	var s = "<div>\n";
 	for (let i =0; i<myObj.list.length; i++) {
-		t = t + "<div class='content show' name = 'sx' id = 'ddx-"+myObj.list[i].dx+"'>\n";
+		t = t + "<div class='content' name = 'sx' id = 'ddx-"+myObj.list[i].dx+"'>\n";
 		s = s + "<button class = 'sxbutton' id = 'sx"+String(i)+"' type = 'button' onclick = \"showDDX('ddx-"+myObj.list[i].dx+"',[";
 		if (myObj.list[i].checked != undefined) {
 			for (let j = 0; j < myObj.list[i].checked.length-1; j++) {
