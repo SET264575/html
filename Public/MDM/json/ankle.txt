@@ -1,0 +1,51 @@
+{
+	"title":"Ottawa Ankle Rules",
+	"listContributions":true,
+	"buttonWidth":100,
+	"buttonLayout":"horizontal",
+	"showPoints":true,
+  	"format":"text",
+	"normalScore":[-10,10],
+	"criteria":
+	[
+		{"text":"Location of pain","contributionText":"","answers":[
+			{"text":"Malleolar","points":"-10","checked":""},
+			{"text":"Midfoot","points":"10","checked":""}
+			]
+		},
+		{"text":"Tenderness at the posterior edge or tip of lateral malleolus","contributionText":"lateral malleolus tenderness","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"-1","checked":""}
+			]
+		},
+		{"text":"Tenderness at the posterior edge or tip of medial malleolus","contributionText":"medial malleolus tenderness","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"-1","checked":""}
+			]
+		},
+		{"text":"Tenderness at the base of 5th metatarsal","contributionText":"5th metatarsal tenderness","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Navicular tenderness","contributionText":"navicular tenderness","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+    {"text":"Inability to bear weight both immediately after injury AND in ED","subtext":"Patient unable to take four steps","contributionText":"inability to bear weight","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"100","checked":""}
+			]
+		}
+	],
+	"range":
+	[
+		{"low":"-13","high":"-10","text":"Ankle fracture could not be ruled out by Ottawa ankle rules"},
+		{"low":"-11","high":"-9","text":"Clinically significant ankle fracture was ruled out by Ottawa ankle rules"},
+		{"low":"87","high":"91","text":"Ankle fracture could not be ruled out by Ottawa ankle rules"},
+    		{"low":"10","high":"13","text":"Midfoot fracture could not be ruled out by Ottawa ankle rules"},
+		{"low":"9","high":"11","text":"Midfoot fracture was ruled out by Ottawa ankle rules"},
+    		{"low":"109","high":"113","text":"Midfoot fracture could not be ruled out by Ottawa ankle rules"}
+	]
+}

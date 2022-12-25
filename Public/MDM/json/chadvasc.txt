@@ -1,0 +1,52 @@
+{
+	"title":"CHA₂DS₂-VASc Score for Atrial Fibrillation Stroke Risk",
+	"listContributions":true,
+	"showPoints":true,
+	"format":"pretext",
+	"criteria":
+	[
+		{"text":"Age","contributionText":"age","answers":[
+			{"text":"<65","points":"0","checked":""},
+			{"text":"65-74","points":"1","checked":""},
+			{"text":">=75","points":"2","checked":""}
+						]
+		},
+		{"text":"Sex","contributionText":"sex","answers":[
+			{"text":"Male","points":"0","checked":""},
+			{"text":"Female","points":"1","checked":""}
+			]
+		},
+		{"text":"CHF History","contributionText":"history of CHF","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Hypertension history","contributionText":"history of hypertension","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Stroke/TIA/thromboembolism history","contributionText":"history of thromboembolic event","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"2","checked":""}
+			]
+		},
+		{"text":"Vascular disease history","subtext":"(prior MI, peripheral artery disease, or aortic plaque)","contributionText":"history of vascular disease","answers":[
+		
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"Diabetes history","contributionText":"history of diabetes","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		}
+	],
+	"range":
+	[
+		{"low":"-1","high":"1","pretext":"CHA2DS2-VASc score = ","posttext":", which suggests the risk of stroke is considered low enough that anticoagulation is not recommended."},
+		{"low":"0","high":"2","pretext":"CHA2DS2-VASc score = ","posttext":", which suggests the risk of stroke is considered intermediate and anticoagulation can be considered.  I have discussed this with the patient and recommended that they follow up with a cardiologist to determine whether they should be started on an anticoagulant."},
+		{"low":"1","high":"100","pretext":"CHA2DS2-VASc score = ","posttext":", which suggests the risk of stroke is considered high enough that anticoagulation is recommended."}
+	]
+}
