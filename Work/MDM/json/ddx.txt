@@ -1,7 +1,7 @@
 {"list":[	
 	{"dx":"Abdominal pain","ddx":["appendicitis","AAA dissection","cholecystitis","colitis","diverticulitis","ischemic colitis","MI","pancreatitis","SBO"],"checked":["appendicitis"]},
 	{"dx":"Arthralgias","ddx":["hypothyroidism","adrenal insufficiency","gout","pseudogout","rheumatoid arthritis","psoriatic arthritis","Lyme disease","bacterial endocarditis","malignancy","septic joint","compartment syndrome","Covid","influenza"],"checked":["septic joint"]},
-	{"dx":"Back pain","ddx":["cauda equina syndrome","vertebral fracture","epidural abscess","diskitis"],"checked":["cauda equina","epidural abscess"]},
+	{"dx":"Back pain","ddx":["cauda equina syndrome","vertebral fracture","epidural abscess","diskitis"],"checked":["cauda equina syndrome","epidural abscess","vertebral fracture"]},
 	{"dx":"Chest pain","ddx":["ACS","PE","aortic dissection","pneumothorax"],"checked":["ACS","PE","aortic dissection","pneumothorax"]},
 	{"dx":"Dyspnea","ddx":["ACS","anxiety","asthma exacerbation","CHF","COPD exacerbation","Covid","influenza","pneumonia","pneumothorax","PE"], "checked":["pneumonia","CHF","PE"]},
 	{"dx":"Fever","ddx":["pneumonia","UTI","cellulitis","influenza","sepsis"], "checked":["sepsis","UTI","pneumonia"]},
