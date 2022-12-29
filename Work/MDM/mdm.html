@@ -687,7 +687,11 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             t = t + "I discussed the case with " + combineItemsFromButtons('admitting')+" who will admit the patient. ";
           }
           if (isAnyChecked('consulting')) {
-            t = t + "I discussed the case with " + combineItemsFromButtons('consulting') + " who will consult on the patient. ";
+            t = t + "I discussed the case with " + combineItemsFromButtons('consulting');
+		        if (isAnyChecked('inrecommendations')) {
+              t = t " who " + combineItemsFromButtons('inrecommendations');
+            }
+            t = t + ". ";
           }
           if (isAnyChecked('transfer1')) {
             t = t + combineItemsFromButtons('transfer1');
