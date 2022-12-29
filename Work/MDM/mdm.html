@@ -14,18 +14,7 @@ add more ddx
 discussion with independent clinician:  relabel button and move
 recommendations of consultant
 	admission, discharge, will arrange follow up, [], outpt test, adding medication, the discharge plan, 
-dispo to GI lab, OR, cath lab
 
-What do you want displayed/hidden?
-What do you want pre-checked?
-What additional selections do you want?
-Is there a different order of sections or choices?
-Is there a different layout?
-How is navigation, finding choices?
-Does wording agree with button?
-  clicking the "appendicitis" button adds the text "cholecystitis"
-Typos, grammar, punctuation
-  no space between sentences, no period at end of sentences
 -->
 
 <html>
@@ -183,10 +172,12 @@ Typos, grammar, punctuation
               </div>
               <h4>&nbsp</h4><h4>&nbsp</h4>
               <ul class = "radiobutton">
-
                 <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx1" name = "sepsis-abx" onclick="check(this.id)" value = "IV Zosyn & Vancomycin"><label for = "sepsis-abx1">Zosyn & Vancomycin</label></li>
                 <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "IV Rocephin & Zithromax"><label for = "sepsis-abx2">Rocephin & Zithromax</label></li>
-                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-abx3">[other abx]</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "IV Rocephin"><label for = "sepsis-abx3">Rocephin</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx4" name = "sepsis-abx" onclick="check(this.id)" value = "IV Cipro & Flagyl"><label for = "sepsis-abx4">Cipro & Flagyl</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx5" name = "sepsis-abx" onclick="check(this.id)" value = "IV Invanz"><label for = "sepsis-abx5">Invanz</label></li>
+                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx30" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-abx30">[other abx]</label></li>
               </ul>
           </div>
         </div>
@@ -353,11 +344,16 @@ Typos, grammar, punctuation
 		
         <div class="block">
 	
-		<button type="button" class="collapsible">Consults</button>
-		<div class="content">
-			<div class="note"><pre>Documenting discussion with independent clinicians satisfies category 3 for DATA</pre></div>
-		  <div id="consultingbuttons"></div>
-		</div>
+          <button type="button" class="collapsible">Consults</button>
+          <div class="content">
+            <div class="note"><pre>Documenting discussion with independent clinicians satisfies category 3 for DATA</pre></div>
+            <div id="consultingbuttons"></div>
+            <h4>Recommendations of consultant</h4>
+            <ul>
+              <li><input type = "checkbox" id = "recommendation1" class = "choicebutton" name = "recommendations" value = "will contact the patient to arrange follow-up" onclick="check(this.id)"><label for = "recommendation1">Will arrange follow up</label></li>
+            </ul>
+          </div>
+		
 	</div> <!--block -->
          
         </div><br><br> <!--content -->
@@ -664,6 +660,13 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           }
           if (isAnyChecked('outpt testing')) {
             t = t + "I have ordered an outpatient " + combineItemsFromButtons('outpt testing') +". ";
+          }
+          if (isAnyChecked('outconsulting')) {
+            t = t + "I discussed the case with " + combineItemsFromButtons('outconsulting');
+            if (isAnyChecked('recommendations')) {
+              t = t + " who " + combineItemsFromButtons('recommendations'));
+            }
+            t = t + ". ";
           }
           if (isAnyChecked('clinician')) {
             t = t + "My discussion with an independent clinician is documented in this note. ";
