@@ -200,7 +200,10 @@ recommendations of consultant
               <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-3" name = "EKG" onclick="check(this.id)" value = "shows the EKG is nonspecific for ACS."><label for = "ekg-3">Nonspecific for ACS.</label><br></li>
               <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-4" name = "EKG" onclick="check(this.id)" value = "shows the EKG is concerning for ACS."><label for = "ekg-4">Concerning for ACS.</label><br></li>
               <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-5" name = "EKG" onclick="check(this.id)" value = "shows STEMI."><label for = "ekg-5">STEMI</label><br></li>
-              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-6" name = "EKG" onclick="check(this.id)" value = "shows atrial fibrillation with rapid ventricular rate."><label for = "ekg-6">A Fib with RVR</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-6" name = "EKG" onclick="check(this.id)" value = "shows atrial fibrillation."><label for = "ekg-6">atrial fibrillation</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-7" name = "EKG" onclick="check(this.id)" value = "shows atrial flutter."><label for = "ekg-7">atrial flutter</label><br></li>
+		  
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-8" name = "EKG" onclick="check(this.id)" value = "shows atrial fibrillation with rapid ventricular rate."><label for = "ekg-8">A Fib with RVR</label><br></li>
               <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-100" name = "EKG" onclick="check(this.id)" value = "[Other EKG]"><label for = "ekg-100">[Other]</label><br></li>
       
          </ul>
@@ -238,12 +241,12 @@ recommendations of consultant
             <li><input type = "radio" class = "choicebutton" name='ct' id="ct-5" onclick="check(this.id)" value = "subarachnoid hemorrhage." id = "ct-5" name = "ct"><label for = "ct-5">Subarachnoid hemorrhage</label></li>
             <li> <input type = "radio" class = "choicebutton" name='ct' id="ct-6" onclick="check(this.id)" value = "subdural hematoma." id = "ct-6" name = "ct"><label for = "ct-6">Subdural hematoma</label></li>
             <li> <input type = "radio" class = "choicebutton" name='ct' id="ct-4" onclick="check(this.id)" value = "[CT result]" id = "ct-4" name = "ct"><label for = "ct-4">[ct result]</label></li>
-
           </ul>
         </div><br><br>
 	    
 	      <button type = "button" class="collapsible subheadingbutton">Independent review of the ABG</button>
         <div class="content">
+          <div class="block">
           <ul class="radiobutton">
             <li><input type = "radio" class = "choicebutton" name='abg' id="abg-1" onclick="check(this.id)" value = "normal oxygenation, normal pH, and normal CO2 level." id = "abg-1" name = "abg"><label for = "abg-1">Normal</label></li>
             <li><input type = "radio" class = "choicebutton" name='abg' id="abg-2" onclick="check(this.id)" value = "respiratory acidosis" id = "abg-2" name = "abg"><label for = "abg-2">Respiratory acidosis/label></li>
@@ -253,11 +256,13 @@ recommendations of consultant
             <li> <input type = "radio" class = "choicebutton" name='abg' id="abg-4" onclick="check(this.id)" value = "[ABG result]" id = "abg-4" name = "ct"><label for = "abg-4">[ABG result]</label></li>
 
           </ul>
-		<br>
+          </div>
+	      <div class = "block">
           <ul class="radiobutton">
             <li><input type = "radio" class = "choicebutton" name='o2' id="o2-1" onclick="check(this.id)" value = "normal oxygenation" id = "o2-1" name = "o2"><label for = "o2-1">Normal oxygenation</label></li>
             <li><input type = "radio" class = "choicebutton" name='o2' id="o2-2" onclick="check(this.id)" value = "hypoxemia" id = "o2-2" name = "o2"><label for = "o2-2">Hypoxemia</label></li>
           </ul>
+          </div>
         </div><br><br>
       </div><br><br>
 
