@@ -570,53 +570,51 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
 		
            if (isAnyChecked('ruled out')|| isAnyChecked('presumptive') || isAnyChecked('unlikely') || isAnyChecked('definitive')) {
             t = t + "Given the patient's history, physical exam and test results, ";
-           }
-           var rolist = [];
-           var t1 = "";
-           if (isAnyChecked('ruled out')) {
-
-            t1 = combineItemsFromButtons('ruled out');
-            if (isPlural('ruled out') ) {
-              t1 = t1 + ' were ruled out';
+           
+             var rolist = [];
+             var t1 = "";
+             if (isAnyChecked('ruled out')) {
+              t1 = combineItemsFromButtons('ruled out');
+              if (isPlural('ruled out') ) {
+                t1 = t1 + ' were ruled out';
+              }
+              else {
+                t1 = t1 + ' was ruled out';
+              }
+              rolist.push(t1);
             }
-            else {
-              t1 = t1 + ' was ruled out';
+            if (isAnyChecked('unlikely')) {
+              t1 = combineItemsFromButtons('unlikely');
+              if (isPlural('unlikely') ) {
+                t1 = t1 + ' are considered unlikely';
+              }
+              else {
+                t1 = t1 + ' is considered unlikely';
+              }
+              rolist.push(t1);
             }
-            rolist.push(t1);
+            if (isAnyChecked('presumptive')) {
+              t1 = combineItemsFromButtons('presumptive');
+              if (isPlural('presumptive') ) {
+                t1 = t1 + ' are considered presumptive diagnoses';
+              }
+              else {
+                t1 = t1 + ' is considered a presumptive diagnosis';
+              }
+              rolist.push(t1);
+            }
+            if (isAnyChecked('definitive')) {
+              t1 = combineItemsFromButtons('definitive');
+              if (isPlural('definitive') ) {
+                t1 = t1 + ' are considered definitive diagnoses';
+              }
+              else {
+                t1 = t1 + ' is considered a definitive diagnosis';
+              }
+              rolist.push(t1);
+            }
+            t = t+ combineItemsFromList(rolist) + ".\n\n";
           }
-          if (isAnyChecked('unlikely')) {
-            t1 = combineItemsFromButtons('unlikely');
-            if (isPlural('unlikely') ) {
-              t1 = t1 + ' are considered unlikely';
-            }
-            else {
-              t1 = t1 + ' is considered unlikely';
-            }
-            rolist.push(t1);
-          }
-          if (isAnyChecked('presumptive')) {
-            t1 = combineItemsFromButtons('presumptive');
-            if (isPlural('presumptive') ) {
-              t1 = t1 + ' are considered presumptive diagnoses';
-            }
-            else {
-              t1 = t1 + ' is considered a presumptive diagnosis';
-            }
-            rolist.push(t1);
-          }
-          if (isAnyChecked('definitive')) {
-            t1 = combineItemsFromButtons('definitive');
-            if (isPlural('definitive') ) {
-              t1 = t1 + ' are considered definitive diagnoses';
-            }
-            else {
-              t1 = t1 + ' is considered a definitive diagnosis';
-            }
-            rolist.push(t1);
-          }
-		
-			
-          t = t+ combineItemsFromList(rolist) + ".\n\n";
           
           if (isAnyChecked("sirs")) {
             t = t + "\n\nThe patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
