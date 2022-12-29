@@ -2,7 +2,7 @@ var physObj = {};
 getObject('json/physicians.txt');
 function getObject(website){
   const xmlhttp = new XMLHttpRequest();
-  xmlhttp.onload = function() { physObj = JSON.parse(this.responseText); displayAdmitting(); displayConsulting()};
+  xmlhttp.onload = function() { physObj = JSON.parse(this.responseText); displayAdmitting(); displayConsulting(); displayOutconsulting()};
   xmlhttp.open("GET",website);
   xmlhttp.send();
 }
@@ -36,6 +36,21 @@ function displayConsulting() {
     }
 	  t = t + "</ul></div><br><br>\n";
 	}
-	document.getElementById('consultingbuttons').innerHTML =  t;
 	document.getElementById('consultingbuttons2').innerHTML =  t;
+}
+
+function displayOutconsulting() {
+	var t = "";
+	for (let i =0; i<physObj.consulting.length; i++) {
+    t = t + '<button class="collapsible subsubsubheadingbutton">'+physObj.consulting[i].specialty+'</button>\n';
+    t = t +'      <div class = "content">\n';
+    t = t + '      <ul class="radiobutton">\n';
+
+    for (let j = 0; j < physObj.consulting[i].physician.length; j++) {
+      let phys = physObj.consulting[i].physician[j];
+      t = t +  ' <li><input type = "checkbox" id="outconsultingDr. '+ phys + '" name= "outconsulting" onclick="check(this.id)" value="Dr. '+phys + '"><label for = "outconsultingDr. '+phys+'">Dr. '+phys+'</label></li>\n'
+    }
+	  t = t + "</ul></div><br><br>\n";
+	}
+	document.getElementById('consultingbuttons').innerHTML =  t;
 }
