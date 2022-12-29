@@ -654,20 +654,19 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             t = t + "\n\nIndependent review:\n";
           }
           if (isAnyChecked('ekg')) {
-            t = t + " My independent interpretation of the EKG " + getRadioButtonValue('ekg');
+            t = t + "My independent interpretation of the EKG " + getRadioButtonValue('ekg') + ". ";
           }
           if (isAnyChecked('cxr')) {
-            t = t + " My independent interpretation of the chest x-ray is consistent with " + getRadioButtonValue('cxr');
+            t = t + "My independent interpretation of the chest x-ray is consistent with " + getRadioButtonValue('cxr') + ". ";
           }
           if (isAnyChecked('xray')) {
-            t = t + " My independent interpretation of the xrays is consistent with " + getRadioButtonValue('xray');
+            t = t + "My independent interpretation of the xrays is consistent with " + getRadioButtonValue('xray') + ". ";
           } 
           if (isAnyChecked('ct')) {
-            t = t + " My independent interpretation of the CT is consistent with " + getRadioButtonValue('ct');
+            t = t + "My independent interpretation of the CT is consistent with " + getRadioButtonValue('ct')+". ";
           }
-          
           if (isAnyChecked('abg')) {
-            t = t + "My independent interpretation of the ABG is consistent with " + getRadioButtonValue('abg');
+            t = t + "My independent interpretation of the ABG is consistent with " + getRadioButtonValue('abg') + ". ";
             if (isAnyChecked('o2')) {
               t = t + "with " + getRadioButtonValue('o2');
             }
@@ -694,7 +693,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           }
 		
 	  if (isAnyChecked('tx')) {
-		  t = t + "Treatment administered in the ER included " + combineItemsFromButtons('tx');
+		  t = t + "Treatment administered in the ER included " + combineItemsFromButtons('tx') + ". ";
 	  }
           if (isAnyChecked('referral')) {
             t = t + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
