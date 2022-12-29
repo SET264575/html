@@ -493,21 +493,25 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           document.getElementById("ddxtable").innerHTML = t;
         }
 
-	function unselect(row,btn) {
-		list = [];
-		var x  ="";
-		for (let i = 1; i<5; i++) {
-			if (i != btn) {
-			x = 'row'+String(i)+'col'+String(row);
-			list.push(x);
-			}
-		}
-		for (let i = 0; i<list.length; i++) {
-			document.getElementById(list[i]).checked = false;
-		}
-	}
+        function unselect(row,btn) {
+          list = [];
+          var x  ="";
+          for (let i = 1; i<5; i++) {
+            if (i != btn) {
+            x = 'row'+String(i)+'col'+String(row);
+            list.push(x);
+            }
+          }
+          for (let i = 0; i<list.length; i++) {
+            document.getElementById(list[i]).checked = false;
+          }
+        }
         
         function showDDX(id,list2) {
+				  var x = document.getElementsByName('ddx');
+	        for (let i = 0; i<x.length; i++){
+            x[i].checked = false;
+          }
           var list = document.getElementsByName('sx');
           for (let i = 0; i<list.length; i++) {
             list[i].style.display = 'none';
