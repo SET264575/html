@@ -280,10 +280,10 @@ recommendations of consultant
         <div class="content">
 		<div class="note"><pre>Documenting administration of parenteral controlled substances contributes to RISK</pre></div>
           <ul class="radiobutton">
-            <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "A parenteral controlled substance was administered." id="tx1" onclick="check(this.id)"><label for = "tx1">Parenteral controlled substance</label></li>
-		        <!--li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV fluids" id = "tx2" onclick = "check(this.id)"><label for="tx2">IV fluids</label></li>
+            <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "a parenteral controlled substance" id="tx1" onclick="check(this.id)"><label for = "tx1">Parenteral controlled substance</label></li>
+		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV fluids" id = "tx2" onclick = "check(this.id)"><label for="tx2">IV fluids</label></li>
 		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV antibiotics" id = "tx3" onclick = "check(this.id)"><label for="tx3">IV antibiotics</label></li>
-		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "parenteral antiemetic" id = "tx3" onclick = "check(this.id)"><label for="tx4">IV antibiotics</label></li--> 
+		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV Zofran" id = "tx3" onclick = "check(this.id)"><label for="tx4">IV Zofran</label></li> 
 		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "[Other treatment]" id = "tx10" onclick = "check(this.id)"><label for="tx10">[Other treatment]</label></li>
           </ul>
         </div><br><br>
@@ -675,7 +675,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           }
 		
 	  if (isAnyChecked('tx')) {
-		  t = t + combineItemsFromButtons('tx');
+		  t = t + "Treatment administered in the ER included " + combineItemsFromButtons('tx');
 	  }
           if (isAnyChecked('referral')) {
             t = t + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
