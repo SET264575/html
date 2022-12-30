@@ -49,9 +49,10 @@ text from buttons
       }
     </script>
     <script>
-      getObj("neuro2.json");
+      var myObj = {};
+      myObj = getObj("neuro2.json");
       console.log("main",myObj);
-      document.getElementById('neuro').innerHTML = showHTML();
+      document.getElementById('neuro').innerHTML = showHTML(myObj);
      
     </script>
   </body>
