@@ -1,8 +1,9 @@
 var myObj = {};
-getObject('json/ddx.txt');
+getObject('neuro.json');
+console.log('test");
 function getObject(website){
       const xmlhttp = new XMLHttpRequest();
-      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj)};
+      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log("test");console.log(myObj)};
       xmlhttp.open("GET",website);
       xmlhttp.send();
     }
