@@ -1,6 +1,6 @@
 {"system":"neuro","group":[{"label":"alert","type":"radio","checked":true},
                            {"label":"lethargic","type":"radio"},
-                           {"label":"obtunded"},"type":"radio"],
+                           {"label":"obtunded"},"type":"radio"}],
                   "group":[{"label":"person","type":"checkbox","checked":true},
                            {"label":"place","type":"checkbox","checked":true},
                            {"label":"time","type":"checkbox","checked":true}]
