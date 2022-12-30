@@ -33,8 +33,16 @@ text from buttons
       });
     </script-->
     <script src = "getObj.js"></script>
+    <script src = "generateText.js"></script>
     <script>
       function check(id){
+        var ele = document.getElementById(id);
+        if (ele.checked) {
+          ele.checked = false;}
+        else {
+          ele.checked = true;
+        }
+        document.getElementById('text').value = generateText();
       }
     </script>
     <script>
