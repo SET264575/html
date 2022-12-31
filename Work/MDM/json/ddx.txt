@@ -14,5 +14,6 @@
 	{"dx":"Rash","ddx":["RMSF","cellulitis","Stevens-Johnson","scarlet fever"], "checked":["cellulitis"]},
 	{"dx":"Sore throat","ddx":["strep throat","mono","retropharyngeal abscess","peritonsillar abscess","acute HIV"], "checked":["strep throat","peritonsillar abscess"]},
 	{"dx":"Urinary symptoms","ddx":["UTI","uncontrolled diabetes","STD","pyelonephritis","kidney stone","cancer"], "checked":["UTI"]},
-	{"dx":"Vaginal bleeding","ddx":["coagulopathy","ectopic pregnancy","threatened miscarriage","pregnancy complications"], "checked":["ectopic pregnancy"]}
+	{"dx":"Vaginal bleeding","ddx":["coagulopathy","ectopic pregnancy","threatened miscarriage","pregnancy complications"], "checked":["ectopic pregnancy"]},
+	{"dx":"weakness","ddx":["acute kidney injury","anemia","CHF","cirrhosis","dehydration","electrolyte imbalance","hypothyroidism","pneumonia","stroke","UTI","viral illness"]}
 ]}
