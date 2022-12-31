@@ -1,14 +1,17 @@
 {"list":[	
 	{"dx":"Abdominal pain","ddx":["appendicitis","AAA dissection","cholecystitis","colitis","diverticulitis","ischemic colitis","MI","pancreatitis","SBO"],"checked":["appendicitis"]},
+	{"dx":"Altered mental status","ddx":["ACS","dementia","drug use","electrolyte imbalance","hepatic encephalopathy","hypoglycemia","hyponatremia","intracranial hemorrhage","metabolic encephalopathy","PE","pneumonia","renal failure","respiratory failure","seizure","stroke","thyroid disorder","UTI"],"checked":[]},
 	{"dx":"Arthralgias","ddx":["hypothyroidism","adrenal insufficiency","gout","pseudogout","rheumatoid arthritis","psoriatic arthritis","Lyme disease","bacterial endocarditis","malignancy","septic joint","compartment syndrome","Covid","influenza"],"checked":["septic joint"]},
 	{"dx":"Back pain","ddx":["cauda equina syndrome","vertebral fracture","epidural abscess","diskitis"],"checked":["cauda equina syndrome","epidural abscess","vertebral fracture"]},
 	{"dx":"Chest pain","ddx":["ACS","PE","aortic dissection","pneumothorax"],"checked":["ACS","PE","aortic dissection","pneumothorax"]},
 	{"dx":"Dyspnea","ddx":["ACS","anxiety","asthma exacerbation","CHF","COPD exacerbation","Covid","influenza","pneumonia","pneumothorax","PE"], "checked":["pneumonia","CHF","PE"]},
 	{"dx":"Fever","ddx":["pneumonia","UTI","cellulitis","influenza","sepsis"], "checked":["sepsis","UTI","pneumonia"]},
-	{"dx":"Headache","ddx":["subarachnoid hemorrhage","brain tumor","migraine headache","meningitis"], "checked":["meningitis"]},
+	{"dx":"Headache","ddx":["acute closed-angle glaucoma","brain tumor","carotid dissection","cluster headache","intracranial hemorrhage","meningitis","migraine","post-traumatic headache","sinusitis","temporal arteritis","tension headache","trigeminal neuralgia"
+], "checked":[]},
 	{"dx":"Heart arrhythmia","ddx":["atrial fibrillation","atrial flutter","SVT","ventricular tachycardia","PVCs","hyperthyroidism","sepsis","anxiety"],"checked":["atrial fibrillation"]},
 	{"dx":"Limb pain","ddx":["arterial occlusion","occult fracture","DVT"], "checked":["DVT","arterial occlusion"]},
 	{"dx":"Limb swelling","ddx":["DVT","CHF","cellulitis","lymphedema","myxedema","iliac vein compression","nephrotic syndrome","drug side effect"], "checked":["DVT","CHF","cellulitis"]},
+	{"dx":"Neuro symptoms","ddx":["ACS","aortic dissection","Bell palsy","brain tumor","carotid dissection","conversion disorder","drug use","encephalopathy","Guillain-Barre syndrome","hypertensive emergency","hypoglycemia","infection","intracranial hemorrhage","meningitis","migraine","multiple sclerosis","pseudoseizure","radial nerve palsy","radiculopathy","seizure","stroke","TIA","transverse myelitis"],"checked":["ACS","stroke","infection","hypoglycemia"]},
 	{"dx":"Pelvic pain","ddx":["ectopic pregnancy","ovarian torsion","PID","ruptured ovarian cyst"], "checked":["ectopic pregnancy"]},
 	{"dx":"Psychiatric problems","ddx":["suicidal ideation","acute psychosis","hypoglycemia","thyroid disorder","serotonin syndrome","drug use","drug overdose","PE","ACS","pheochromocytoma"], "checked":["suicidal ideation","acute psychosis","drug use"]},
 	{"dx":"Rash","ddx":["RMSF","cellulitis","Stevens-Johnson","scarlet fever"], "checked":["cellulitis"]},
