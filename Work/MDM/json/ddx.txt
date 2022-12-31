@@ -5,7 +5,8 @@
 	{"dx":"Chest pain","ddx":["ACS","PE","aortic dissection","pneumothorax"],"checked":["ACS","PE","aortic dissection","pneumothorax"]},
 	{"dx":"Dyspnea","ddx":["ACS","anxiety","asthma exacerbation","CHF","COPD exacerbation","Covid","influenza","pneumonia","pneumothorax","PE"], "checked":["pneumonia","CHF","PE"]},
 	{"dx":"Fever","ddx":["pneumonia","UTI","cellulitis","influenza","sepsis"], "checked":["sepsis","UTI","pneumonia"]},
-	{"dx":"Headache","ddx":["subarachnoid hemorrhage","brain tumor","migraine headache","meningitis"], "checked":["meningitis"]},
+	{"dx":"Headache","ddx":["acute closed-angle glaucoma","brain tumor","carotid dissection","cluster headache","intracranial hemorrhage","meningitis","migraine","post-traumatic headache","sinusitis","temporal arteritis","tension headache","trigeminal neuralgia"
+], "checked":[]},
 	{"dx":"Heart arrhythmia","ddx":["atrial fibrillation","atrial flutter","SVT","ventricular tachycardia","PVCs","hyperthyroidism","sepsis","anxiety"],"checked":["atrial fibrillation"]},
 	{"dx":"Limb pain","ddx":["arterial occlusion","occult fracture","DVT"], "checked":["DVT","arterial occlusion"]},
 	{"dx":"Limb swelling","ddx":["DVT","CHF","cellulitis","lymphedema","myxedema","iliac vein compression","nephrotic syndrome","drug side effect"], "checked":["DVT","CHF","cellulitis"]},
