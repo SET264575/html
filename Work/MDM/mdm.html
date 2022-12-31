@@ -589,6 +589,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           if (document.getElementById('presentation2').checked) {
             t = t + "An additional historian was required as documented in the HPI. ";
           }
+		
           if (isAnyChecked('ddx')) {
             t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
             t = t + combineItemsFromButtons('ddx') + ". ";
@@ -611,7 +612,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             if (isAnyChecked("notsupportive")) {
               t = t + getRadioButtonValue('notsupportive')+". ";
             }
-          }
+          //}
 		
            if (isAnyChecked('ruled out')|| isAnyChecked('presumptive') || isAnyChecked('unlikely') || isAnyChecked('definitive')) {
             t = t + "Given the patient's history, physical exam and test results, ";
