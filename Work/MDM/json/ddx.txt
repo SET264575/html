@@ -1,5 +1,6 @@
 {"list":[	
 	{"dx":"Abdominal pain","ddx":["appendicitis","AAA dissection","cholecystitis","colitis","diverticulitis","ischemic colitis","MI","pancreatitis","SBO"],"checked":["appendicitis"]},
+	{"dx":"Altered mental status","ddx":["ACS","dementia","drug use","electrolyte imbalance","hepatic encephalopathy","hypoglycemia","hyponatremia","intracranial hemorrhage","metabolic encephalopathy","PE","pneumonia","renal failure","respiratory failure","seizure","stroke","thyroid disorder","UTI"],"checked":[]},
 	{"dx":"Arthralgias","ddx":["hypothyroidism","adrenal insufficiency","gout","pseudogout","rheumatoid arthritis","psoriatic arthritis","Lyme disease","bacterial endocarditis","malignancy","septic joint","compartment syndrome","Covid","influenza"],"checked":["septic joint"]},
 	{"dx":"Back pain","ddx":["cauda equina syndrome","vertebral fracture","epidural abscess","diskitis"],"checked":["cauda equina syndrome","epidural abscess","vertebral fracture"]},
 	{"dx":"Chest pain","ddx":["ACS","PE","aortic dissection","pneumothorax"],"checked":["ACS","PE","aortic dissection","pneumothorax"]},
