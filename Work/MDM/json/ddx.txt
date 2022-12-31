@@ -15,5 +15,5 @@
 	{"dx":"Sore throat","ddx":["strep throat","mono","retropharyngeal abscess","peritonsillar abscess","acute HIV"], "checked":["strep throat","peritonsillar abscess"]},
 	{"dx":"Urinary symptoms","ddx":["UTI","uncontrolled diabetes","STD","pyelonephritis","kidney stone","cancer"], "checked":["UTI"]},
 	{"dx":"Vaginal bleeding","ddx":["coagulopathy","ectopic pregnancy","threatened miscarriage","pregnancy complications"], "checked":["ectopic pregnancy"]},
-	{"dx":"weakness","ddx":["acute kidney injury","anemia","CHF","cirrhosis","dehydration","electrolyte imbalance","hypothyroidism","pneumonia","stroke","UTI","viral illness"]}
+	{"dx":"weakness","ddx":["ACS","acute kidney injury","anemia","CHF","cirrhosis","dehydration","electrolyte imbalance","hypothyroidism","pneumonia","stroke","UTI","viral illness"],"checked":["UTI","electrolyte imbalance","anemia"]}
 ]}
