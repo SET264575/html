@@ -152,6 +152,9 @@ awaiting.push(new Awaiting("review tests",10));
 toDo.push(new Awaiting("See Patient",-1));
 toDo.push(new Awaiting("Order Labs",-1));
 toDo.push(new Awaiting("Order Meds",-1));
+toDo.push(new Awaiting("Review Labs",30));
+toDo.push(new Awaiting("Review CT",60));
+toDo.push(new Awaiting("Reassess Patient",30));
 toDo.push(new Awaiting("Procedure",-1));
 toDo.push(new Awaiting("Consult",-1));
 toDo.push(new Awaiting("Admit",-1));
@@ -160,9 +163,9 @@ toDo.push(new Awaiting("Prescriptions",-1));
 toDo.push(new Awaiting("Work Note",-1));
 toDo.push(new Awaiting("Referral",-1));
 toDo.push(new Awaiting("Outpt Order",-1));
-toDo.push(new Awaiting("Document Critical Care",-1));
-toDo.push(new Awaiting("Document Procedure",-1));
-toDo.push(new Awaiting("Finish Note",-1));
+//toDo.push(new Awaiting("Document Critical Care",-1));
+//toDo.push(new Awaiting("Document Procedure",-1));
+//toDo.push(new Awaiting("Finish Note",-1));
 //toDo.push(new Awaiting("Procedure",-1));
 
 
