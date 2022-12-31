@@ -711,54 +711,57 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             t = t + test+"\n";
             t = t + "\n\n";
           }
-          t = t + "Disposition:\n";
+
+          var t2 = "";
           if (isAnyChecked('dischargedecisionmaking')) {
-            t = t + getRadioButtonValue('dischargedecisionmaking');
+            t2 = t2 + getRadioButtonValue('dischargedecisionmaking');
           }
           if (isAnyChecked('deescalate-')) {
-            t = t + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided " + combineItemsFromButtons('deescalate-')+". ";
+            t2 = t2 + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided " + combineItemsFromButtons('deescalate-')+". ";
           }
           if (isAnyChecked('social')){
-            t = t + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social') + ". ";
+            t2 = t2 + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social') + ". ";
           }
 		
 	  if (isAnyChecked('tx')) {
-		  t = t + "Treatment administered in the ER included " + combineItemsFromButtons('tx') + ". ";
+		  t2 = t2 + "Treatment administered in the ER included " + combineItemsFromButtons('tx') + ". ";
 	  }
           if (isAnyChecked('referral')) {
-            t = t + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
+            t2 = t2 + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
           }
           if (isAnyChecked('outpt testing')) {
-            t = t + "I have ordered an outpatient " + combineItemsFromButtons('outpt testing') +". ";
+            t2 = t2 + "I have ordered an outpatient " + combineItemsFromButtons('outpt testing') +". ";
           }
           if (isAnyChecked('outconsulting')) {
-            t = t + "I discussed the case with " + combineItemsFromButtons('outconsulting');
+            t2 = t2 + "I discussed the case with " + combineItemsFromButtons('outconsulting');
             if (isAnyChecked('recommendations')) {
-              t = t + " who " + combineItemsFromButtons('recommendations');
+              t2 = t2 + " who " + combineItemsFromButtons('recommendations');
             }
-            t = t + ". ";
+            t2 = t2 + ". ";
           }
           if (isAnyChecked('clinician')) {
-            t = t + "My discussion with an independent clinician is documented in this note. ";
+            t2 = t2 + "My discussion with an independent clinician is documented in this note. ";
           }
           if (isAnyChecked('admitting')) {
-            t = t + "I discussed the case with " + combineItemsFromButtons('admitting')+" who will admit the patient. ";
+            t2 = t2 + "I discussed the case with " + combineItemsFromButtons('admitting')+" who will admit the patient. ";
           }
           if (isAnyChecked('consulting')) {
-            t = t + "I discussed the case with " + combineItemsFromButtons('consulting');
+            t2 = t2 + "I discussed the case with " + combineItemsFromButtons('consulting');
 		        if (isAnyChecked('inrecommendations')) {
-              t = t + " who " + combineItemsFromButtons('inrecommendations');
+              t2 = t2 + " who " + combineItemsFromButtons('inrecommendations');
             }
-            t = t + ". ";
+            t2 = t2 + ". ";
           }
           if (isAnyChecked('transfer1')) {
-            t = t + combineItemsFromButtons('transfer1');
+            t2 = t2 + combineItemsFromButtons('transfer1');
           }
           if (isAnyChecked('transfer2')) {
-            t = t + combineItemsFromButtons('transfer2');
+            t2 = t2 + combineItemsFromButtons('transfer2');
           }
-          t = t + "";
-          t = t + "";
+          if (t2 != "") {
+            t = t + "Disposition:\n";
+            t = t + t2;
+          }
           
           navigator.clipboard.writeText(t);
           document.getElementById("text").innerHTML = t;
