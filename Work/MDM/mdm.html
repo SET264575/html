@@ -163,15 +163,15 @@ EKG
               <li><input type = "radio"  class="choicebutton" id="sepsis-colitis" name = "sepsisetiology" onclick="check(this.id)" value = "colitis"><label for = "sepsis-colitis">Colitis</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-diarrhea" name = "sepsisetiology" onclick="check(this.id)" value = "a diarrheal illness"><label for = "sepsis-diarrhea">Diarrheal illness</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-flu" name = "sepsisetiology" onclick="check(this.id)" value = "influenza"><label for = "sepsis-flu">Flu</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-meningitis" name = "sepsisetiology" onclick="check(this.id)" value = "meningitis"><label for = "sepsis-meningitis">meningitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-meningitis" name = "sepsisetiology" onclick="check(this.id)" value = "meningitis"><label for = "sepsis-meningitis">Meningitis</label></li>
               
               <li><input type = "radio"  class="choicebutton" id="sepsis-pneumonia" name = "sepsisetiology" onclick="check(this.id)" value = "pneumonia"><label for = "sepsis-pneumonia">Pneumonia</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-peritonitis" name = "sepsisetiology" onclick="check(this.id)" value = "peritonitis"><label for = "sepsis-peritonitis">peritonitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-peritonitis" name = "sepsisetiology" onclick="check(this.id)" value = "peritonitis"><label for = "sepsis-peritonitis">Peritonitis</label></li>
               
-              <li><input type = "radio"  class="choicebutton" id="sepsis-pyelonephritis" name = "sepsisetiology" onclick="check(this.id)" value = "pyelonephritis"><label for = "sepsis-pyelonephritis">pyelonephritis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-pyelonephritis" name = "sepsisetiology" onclick="check(this.id)" value = "pyelonephritis"><label for = "sepsis-pyelonephritis">Pyelonephritis</label></li>
             
 	      <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsisetiology" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-tick" name = "sepsisetiology" onclick="check(this.id)" value = "a tick-borne illness"><label for = "sepsis-tick">a tick-borne illness</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-tick" name = "sepsisetiology" onclick="check(this.id)" value = "a tick-borne illness"><label for = "sepsis-tick">Tick-borne illness</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-undiscovered" name = "sepsisetiology" onclick="check(this.id)" value = "a, thus far, undiscovered source"><label for = "sepsis-undiscovered">Undiscovered source</label></li>
              
               <li><input type = "radio"  class="choicebutton" id="sepsis-blank" name = "sepsisetiology" onclick="check(this.id)" value = "[sepsis cause]"><label for = "sepsis-blank">[sepsis cause]</label></li>
@@ -584,7 +584,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             t = t + getRadioButtonValue('present');
           }
           if (document.getElementById('presentation1').checked) {
-            t = t + " Data was reviewed from external sources as documented in the HPI. ";
+            t = t + "Data was reviewed from external sources as documented in the HPI. ";
           }
           if (document.getElementById('presentation2').checked) {
             t = t + "An additional historian was required as documented in the HPI. ";
@@ -663,7 +663,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           }
           
           if (isAnyChecked("sirs")) {
-            t = t + "\n\nThe patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
+            t = t + "The patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
           }
           
           if (isAnyChecked("lactate")) {
