@@ -1,3 +1,9 @@
+<!--
+Betadine option
+cleaned/irrigated
+
+-->
+
 <html>
   <head>
     <title>Laceration Repair</title>
@@ -39,6 +45,19 @@
     <label for = "location">Location</label>
     <input type = "text" id = "location">
     
+    <h4>Preparation</h4>
+    <input type = "radio" id = "cleaned" name = "clean" onchange="copytext" value = "cleaned">
+    <label for = "cleaned">Cleaned</label><br>
+    <input type = "radio" id = "irrigated" name = "clean" checked onchange="copytext" value = "irrigated">
+    <label for = "irrigated">Irrigated</label><br><br>
+    
+    <h4>Betadine used</h4>
+     <input type = "radio" id = "nobetadine" name = "betadine" onchange="copytext" value = "not used">
+    <label for = "nobetadine">No</label><br>
+    <input type = "radio" id = "betadine" name = "betadine" checked onchange="copytext" value = "used">
+    <label for = "betadine">Yes</label><br><br>
+    
+    
     <h4>Exploration</h4>
     <input type = "checkbox" id = "bpcuff" onchange = "copytext()">
     <label for = "bpcuff">A blood pressure cuff was used to help control bleeding.</label><br>
@@ -46,8 +65,12 @@
     <label for = "tournicot">A tournicot was used to control bleeding.</label><br>
     <input type = "checkbox" id = "skinhooks" onchange = "copytext()">
     <label for = "skinhooks">Skin hooks were used.</label><br>
-    <input type = "checkbox" id = "contamination" checked = "true" onchange = "copytext()">
-    <label for = "contamination">There was no contamination.</label><br>
+    
+    <h4>Contamination</h4>
+    <input type = "radio" id = "contamination1" name = "contamination" checked = "true" onchange = "copytext()" value = "There was no contamination or foreign body in the wound. ">
+    <label for = "contamination1">There was no contamination.</label><br>
+    <input type = "radio" id = "contamination2" name = "contamination" onchange = "copytext()" value = "There was a small amount of contamination in the wound that was easily cleaned out. ">
+    <label for = "contamination2">There was a small amount of contamination in the wound that was easily cleaned out.</label><br>
 
     <br>
     <input type = "radio" name = "tendon" id = "tendon1" onchange = "copytext()" >
@@ -135,8 +158,8 @@
     </div>
     
     <footer>
-      <div class="dateChanged">12/6/22</div>
-      <div class="tested">Contamination needs to be radio button</div>
+      <div class="dateChanged">1/1/23</div>
+      <div class="tested">Not tested</div>
       <div class="meetsStandard1"></div>
      </footer>
                                                
@@ -163,13 +186,19 @@
         var bpcuff = document.getElementById("bpcuff").checked;
         var tournicot = document.getElementById("tournicot").checked;
         var skinhooks = document.getElementById("skinhooks").checked;
-        var contamination = document.getElementById("contamination").checked;
+        var contamination = getRadioButtonValue('contamination');
         var tendon = getRadioButtonValue("tendon");
+        var betadine = getRadioButtonValue("betadine");
+        var clean = getRadioButtonValue('clean');
         var t = "";
         t = "Procedure Note:  Laceration repair on the "+location+"\n";
-        t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was prepped with Betadine and draped sterilely and then ";
+        t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was ";
+        if (betadine == "Yes") {  
+          t = t + "prepped with Betadine and ";
+        }
+        t = t + "draped sterilely and then ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
-        t = t + "The wound was irrigated thoroughly with normal saline. ";
+        t = t + "The wound was " + clean + " thoroughly with normal saline. ";
         if (bpcuff) {
           t = t + "A blood pressure cuff was used to help control bleeding. ";
         }
@@ -180,10 +209,8 @@
         if (skinhooks) {
           t = t + "using skinhooks ";
         }
-        t = t + "in a bloodless field and ";
-        if (contamination) {
-          t  = t + "no foreign body or contamination was found.  ";
-        }
+        t = t + "in a bloodless field. ";
+        t  = t + contamination;
         switch(tendon) {
           case 0:
             t = t + " Careful exploration to the bottom of the wound found no tendon or other deep structures. ";
