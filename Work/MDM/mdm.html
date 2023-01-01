@@ -726,9 +726,9 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             t2 = t2 + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social') + ". ";
           }
 		
-	  if (isAnyChecked('tx')) {
-		  t2 = t2 + "Treatment administered in the ER included " + combineItemsFromButtons('tx') + ". ";
-	  }
+          if (isAnyChecked('tx')) {
+            t2 = t2 + "Treatment administered in the ER included " + combineItemsFromButtons('tx') + ". ";
+          }
           if (isAnyChecked('referral')) {
             t2 = t2 + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
           }
@@ -741,6 +741,9 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
               t2 = t2 + " who " + combineItemsFromButtons('recommendations');
             }
             t2 = t2 + ". ";
+          }
+		      if (isAnyChecked('admissiondecisionmaking')) {
+              t2 = t2 + "I discussed the options with the patient who agreed to admission. ";
           }
           if (isAnyChecked('clinician')) {
             t2 = t2 + "My discussion with an independent clinician is documented in this note. ";
