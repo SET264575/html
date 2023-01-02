@@ -29,11 +29,15 @@
     <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent for the procedure.</label><br>
 <br>
 
+    <h4>Side</h4>
+    <input type = "radio" id = "side1" onchange = "copytext()" name = "side" value = "right" ><label for = "side1">Right</label>
+    <input type = "radio" id = "side2" onchange = "copytext()" name = "side" value = "left" ><label for = "side2">Left</label>
+ 
     <h4>Locations</h4>
-    <input type = "checkbox" id = "compartment1" onchange = "copytext()"><label for = "compartment1"></label>
-    <input type = "checkbox" id = "compartment" onchange = "copytext()"><label for = "compartment2"></label>
-    <input type = "checkbox" id = "compartment3" onchange = "copytext()"><label for = "compartment3"></label>
-    <input type = "checkbox" id = "compartment4" onchange = "copytext()"><label for = "compartment4"></label>
+    <input type = "checkbox" id = "compartment1" onchange = "copytext()"><label for = "compartment1">Anterior</label>
+    <input type = "checkbox" id = "compartment" onchange = "copytext()"><label for = "compartment2">Lateral</label>
+    <input type = "checkbox" id = "compartment3" onchange = "copytext()"><label for = "compartment3">Posterior superficial</label>
+    <input type = "checkbox" id = "compartment4" onchange = "copytext()"><label for = "compartment4">Posterior deep</label>
    
 
     <div class="textarea">
@@ -64,6 +68,12 @@
         var consent = getRadioButtonValue("consent");
        // var sedation = getRadioButtonValue("sedation");
         var anesthesia = document.getElementById("anesthesia").value;
+        var side = getRadioButtonValue('side');
+        var location1 = document.getElementById("compartment1").checked;
+        var location2 = document.getElementById("compartment2").checked;
+        var location3 = document.getElementById("compartment3").checked;
+        var location4 = document.getElementById("compartment4").checked;
+        
         
 
         var t = "Procedure Note: Measurement of compartment pressures \n";
@@ -82,10 +92,22 @@
             break;
         }
         
-        t = t + "The skin was prepped with chlorhexidine. ";
+        t = t + "The skin of the " + side + "lower leg was prepped with chlorhexidine. ";
         t = t + "The puncture sites were anesthetized with 1% lidocaine. ";
         t = t + "Compartment pressues were measured with the Stryker. ";
-        t = t + "Findings include [compartment pressures] ";
+        t = t + "Findings: \n";
+        if (location1) {
+          t = t + "Anterior compartment: [pressure] cmH2O\n";
+        }
+        if (location2) {
+          t = t + "Lateral compartment: [pressure] cmH2O\n";
+        }
+        if (location3) {
+          t = t + "Posterior superficial compartment: [pressure] cmH2O\n";
+        }
+        if (location4) {
+          t = t + "Posterior deep compartment: [pressure] cmH2O\n";
+        }
         t = t + "The puncture sites were covered with Band-Aids. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
