@@ -66,8 +66,6 @@
       function copytext(){
         var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
-       // var sedation = getRadioButtonValue("sedation");
-        var anesthesia = document.getElementById("anesthesia").value;
         var side = getRadioButtonValue('side');
         var location1 = document.getElementById("compartment1").checked;
         var location2 = document.getElementById("compartment2").checked;
@@ -92,21 +90,21 @@
             break;
         }
         
-        t = t + "The skin of the " + side + "lower leg was prepped with chlorhexidine. ";
+        t = t + "The skin of the " + side + " lower leg was prepped with chlorhexidine. ";
         t = t + "The puncture sites were anesthetized with 1% lidocaine. ";
         t = t + "Compartment pressues were measured with the Stryker. ";
         t = t + "Findings: \n";
         if (location1) {
-          t = t + "Anterior compartment: [pressure] cmH2O\n";
+          t = t + "Anterior compartment: [pressure] cm H2O\n";
         }
         if (location2) {
-          t = t + "Lateral compartment: [pressure] cmH2O\n";
+          t = t + "Lateral compartment: [pressure] cm H2O\n";
         }
         if (location3) {
-          t = t + "Posterior superficial compartment: [pressure] cmH2O\n";
+          t = t + "Posterior superficial compartment: [pressure] cm H2O\n";
         }
         if (location4) {
-          t = t + "Posterior deep compartment: [pressure] cmH2O\n";
+          t = t + "Posterior deep compartment: [pressure] cm H2O\n";
         }
         t = t + "The puncture sites were covered with Band-Aids. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
