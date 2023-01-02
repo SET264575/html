@@ -10,7 +10,8 @@
     Paraphimosis reduction
     </h3>
 
-
+    <input type = "checkbox" id = "gel" onchange = "copytext()">Lidocaine jelly was used</input>
+  
     <div class="textarea">
     <textarea id = "text"></textarea><br>
     <br>
@@ -37,9 +38,11 @@
       copytext();
       
       function copytext(){
-
+        var gel = document.getElementById("gel").checked;
         var t = "Procedure Note: paraphimosis reduction\n";
-        t = t + "2% lidocaine jelly was applied to the glans and foreskin to achieve adequate anesthesia. ";
+        if (gel) {
+          t = t + "2% lidocaine jelly was applied to the glans and foreskin to achieve adequate anesthesia. ";
+        }
         t = t + "Gentle manual pressure was applied to reduce the edema in the glans. ";
         t = t + "The glans was then pushed through the phimotic ring to achieve reduction of the foreskin. "
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
