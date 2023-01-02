@@ -16,27 +16,25 @@
     </div>
     
     <h4>Indication</h4>
-    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+    <input type = "radio" name = "indication" value = "0" checked id = "indication" onchange = "copytext()">
     <label for = "0">rule out compartment syndrome</label><br>
 <br>
 
     <h4>Consent</h4>
     <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
     <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
-    <input type = "radio" name = "consent" value = "1" id = "consent" onchange = "copytext()">
+    <input type = "radio" name = "consent" value = "1"  checked id = "consent" onchange = "copytext()">
     <label for = "1">The risks, benefits and alternatives were discussed with the patient who provided verbal consent for the procedure.</label><br>
     <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
     <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent for the procedure.</label><br>
 <br>
 
-    <h4>Anesthesia</h4>
-    <input type = "radio" name = "anesthesia" value = "0" id = "anesthesia1" onchange = "copytext()">
-    <label for = "0"></label><br>
-    <input type = "radio" name = "anesthesia" value = "1" id = "anesthesia2" onchange = "copytext()">
-    <label for = "1">The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.</label><br>
-    <input type = "radio" name = "anesthesia" value = "2" id = "anesthesia3" onchange = "copytext()">
-    <label for = "2">The patient did not require sedation or paralysis.</label><br>
-<br>
+    <h4>Locations</h4>
+    <input type = "checkbox" id = "compartment1" onchange = "copytext()"><label for = "compartment1"></label>
+    <input type = "checkbox" id = "compartment" onchange = "copytext()"><label for = "compartment2"></label>
+    <input type = "checkbox" id = "compartment3" onchange = "copytext()"><label for = "compartment3"></label>
+    <input type = "checkbox" id = "compartment4" onchange = "copytext()"><label for = "compartment4"></label>
+   
 
     <div class="textarea">
     <textarea id = "text"></textarea><br>
@@ -70,15 +68,7 @@
 
         var t = "Procedure Note: Measurement of compartment pressures \n";
         
-        t = t + "The procedure was indicated ";
-        switch(indication){
-          case "0":
-            t = t + "to rule out compartment syndrome. ";
-            break;
-          case "1":
-            t = t + " ";
-            break;
-        }
+        t = t + "The procedure was indicated to rule out compartment syndrome. ";
 
         switch(consent){
           case "0":
@@ -92,10 +82,10 @@
             break;
         }
         
-        t = t + "The skin was chlorhexidine. ";
+        t = t + "The skin was prepped with chlorhexidine. ";
         t = t + "The puncture sites were anesthetized with 1% lidocaine. ";
         t = t + "Compartment pressues were measured with the Stryker. ";
-        t = t + "Findings include ***";
+        t = t + "Findings include [compartment pressures] ";
         t = t + "The puncture sites were covered with Band-Aids. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
