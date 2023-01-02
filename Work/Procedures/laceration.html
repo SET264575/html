@@ -43,18 +43,18 @@ cleaned/irrigated
     </select><br><br>
     
     <label for = "location">Location</label>
-    <input type = "text" id = "location">
+    <input type = "text" id = "location" onchange="copytext()">
     
     <h4>Preparation</h4>
-    <input type = "radio" id = "cleaned" name = "clean" onchange="copytext" value = "cleaned">
+    <input type = "radio" id = "cleaned" name = "clean" onchange="copytext()" value = "cleaned">
     <label for = "cleaned">Cleaned</label><br>
-    <input type = "radio" id = "irrigated" name = "clean" checked onchange="copytext" value = "irrigated">
+    <input type = "radio" id = "irrigated" name = "clean" checked onchange="copytext()" value = "irrigated">
     <label for = "irrigated">Irrigated</label><br><br>
     
     <h4>Betadine used</h4>
-     <input type = "radio" id = "nobetadine" name = "betadine" onchange="copytext" value = "not used">
+     <input type = "radio" id = "nobetadine" name = "betadine" onchange="copytext()" value = "not used">
     <label for = "nobetadine">No</label><br>
-    <input type = "radio" id = "betadine" name = "betadine" checked onchange="copytext" value = "used">
+    <input type = "radio" id = "betadine" name = "betadine" checked onchange="copytext()" value = "used">
     <label for = "betadine">Yes</label><br><br>
     
     
