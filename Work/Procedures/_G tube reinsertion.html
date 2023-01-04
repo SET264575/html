@@ -1,13 +1,13 @@
 <html>
   <head>
     <title>
-        ***
+        G tube reinsertion
     </title>
     <link rel="stylesheet" href="procedure.css">
   </head>
   <body>
     <h3>
-    ***
+    G tube reinsertion
     </h3>
     <div class=".reference">
     Reference:
@@ -16,30 +16,30 @@
     
     <h4>Indication</h4>
     <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
-    <label for = "0">respiratory failure</label><br>
+    <label for = "0">dislodged G tube</label><br>
     <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
-    <label for = "1">airway protection</label><br>
+    <label for = "1">clogged G tube</label><br>
 <br>
 
     <h4>Consent</h4>
     <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
     <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
-    <input type = "radio" name = "consent" value = "1" id = "consent" onchange = "copytext()">
+    <input type = "radio" name = "consent" checked value = "1" id = "consent" onchange = "copytext()">
     <label for = "1">The patient provided verbal consent for the procedure.</label><br>
     <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
     <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
 <br>
 
-    <h4>Sedation</h4>
+    <!--h4>Sedation</h4>
     <input type = "radio" name = "sedation" value = "0" id = "sedation" onchange = "copytext()">
     <label for = "0">The patient was sedated with 20 mg of Etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
     <input type = "radio" name = "sedation" value = "1" id = "sedation" onchange = "copytext()">
     <label for = "1">The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.</label><br>
     <input type = "radio" name = "sedation" value = "2" id = "sedation" onchange = "copytext()">
     <label for = "2">The patient did not require sedation or paralysis.</label><br>
-<br>
+<br-->
 
-    <h4>Location</h4>
+    <!--h4>Location</h4>
     
     <h4>Side</h4>
     <input type = "radio" value = "left" name = "side" id = "radio1" onchange = "copytext()">
@@ -54,11 +54,10 @@
       <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
       <option value = "2% lidocaine">2% lidocaine</option>
       <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
-    </select><br><br>
+    </select><br><br-->
     
-    <h4>Technique</h4>
     
-    <h4>Fluid color</h4>
+    <h4>Size</h4>
     <input type = "radio" name = "color" value = "clear" id = "color1" onchange = "copytext()">
     <label for = "color1">clear</label><br>
     <input type = "radio" name = "color" value = "cloudy" id = "color2" onchange = "copytext()">
@@ -92,24 +91,23 @@
   
     <script>
       function copytext(){
-        var indication = getRadioButtonValue("indication");
+       // var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
-        var sedation = getRadioButtonValue("sedation");
+      /  var sedation = getRadioButtonValue("sedation");
         var anesthesia = document.getElementById("anesthesia").value;
         var technique = document.getElementById("technique").value;
-        var location = document.getElementById("location").value;
-        var side = getRadioButtonValue("side");
-        var color = getRadioButtonValue("color");
+        var location = document.getElementById("location").value; */
+        var size = getRadioButtonValue("size");
         
-        var t = "Procedure Note: *** \n";
+        var t = "Procedure Note: G tube reinsertion \n";
         
         t = t + "The procedure was indicated for ";
         switch(indication){
           case "0":
-            t = t + "respiratory failure. ";
+            t = t + "dislodged G tube. ";
             break;
           case "1":
-            t = t + "airway protection. ";
+            t = t + "clogged G tube. ";
             break;
         }
 
@@ -125,7 +123,7 @@
             break;
         }
 
-        switch(sedation){
+       /* switch(sedation){
           case "0":
             t = t + "The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.";
             break;
@@ -135,8 +133,8 @@
           case "2":
             t = t + "The patient did not require sedation or paralysis.";
             break;
-        }
- 
+        } */
+        t = t + "A " + size + "Fr G tube was lubricated and gently inserted into the stoma.  The balloon was inserted with ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
         navigator.clipboard.writeText(t);
