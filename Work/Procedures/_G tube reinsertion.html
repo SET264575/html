@@ -134,7 +134,8 @@
             t = t + "The patient did not require sedation or paralysis.";
             break;
         } */
-        t = t + "A " + size + "Fr G tube was lubricated and gently inserted into the stoma.  The balloon was inserted with ";
+        t = t + "A " + size + "Fr G tube was lubricated and gently inserted into the stoma.  The balloon was inflated with [volume] cc of [water/saline]. ";
+        t = t + "Placement was confirmed by [xray/aspiration]. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
         navigator.clipboard.writeText(t);
