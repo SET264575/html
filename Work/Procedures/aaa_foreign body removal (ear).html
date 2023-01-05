@@ -54,19 +54,19 @@
       <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
       <option value = "2% lidocaine">2% lidocaine</option>
       <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
-    </select><br><br>
+    </select><br><br-->
     
     <h4>Technique</h4>
-    
-    <h4>Fluid color</h4>
-    <input type = "radio" name = "color" value = "clear" id = "color1" onchange = "copytext()">
-    <label for = "color1">clear</label><br>
-    <input type = "radio" name = "color" value = "cloudy" id = "color2" onchange = "copytext()">
-    <label for = "color2">cloudy</label><br>
-    <input type = "radio" name = "color" value = "purulent" id = "color3" onchange = "copytext()">
-    <label for = "color3">purulent</label><br><br>
-    <input type = "radio" name = "color" value = "bloody" id = "color4" onchange = "copytext()">
-    <label for = "color4">bloody</label><br><br-->
+    <input type = "radio" name = "technique" value = "ear curette" id = "technique1" onchange = "copytext()">
+    <label for = "technique1">ear curette</label><br>
+    <input type = "radio" name = "technique" value = "irrigation" id = "technique2" onchange = "copytext()">
+    <label for = "technique2">irrigation</label><br>
+    <input type = "radio" name = "technique" value = "alligator forceps" id = "technique3" onchange = "copytext()">
+    <label for = "technique3">alligator forceps</label><br><br>
+    <input type = "radio" name = "technique" value = "suction" id = "technique4" onchange = "copytext()">
+    <label for = "technique4">suction</label><br><br>
+    <input type = "radio" name = "technique" value = "superglue on the wooden end of a Q tip" id = "technique4" onchange = "copytext()">
+    <label for = "technique4">superglue</label><br><br>
 
     <div class="textarea">
     <textarea id = "text"></textarea><br>
@@ -77,7 +77,7 @@
     </div>
     
     <footer>
-      <div class="dateChanged">12/7/22</div>
+      <div class="dateChanged">1/5/23</div>
       <div class="nottested"></div>
       <div class="zmeetsStandard1"></div>
      </footer>
@@ -95,9 +95,9 @@
         /*var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
         var sedation = getRadioButtonValue("sedation");
-        var anesthesia = document.getElementById("anesthesia").value;
+        var anesthesia = document.getElementById("anesthesia").value;*/
         var technique = document.getElementById("technique").value;
-        var location = document.getElementById("location").value;*/
+      ?8  var location = document.getElementById("location").value;*/
         var side = getRadioButtonValue("side");
        /* var color = getRadioButtonValue("color");*/
         
@@ -136,7 +136,7 @@
             t = t + "The patient did not require sedation or paralysis.";
             break;
         } */
-        t = t + "The foreign body was removed with [irrigation/curette/alligator forceps/superglue]. ";
+        t = t + "The foreign body was removed with "+technique + ". ";
         t = t + "Re-inspection of the ear canal revealed no trauma and no additional foreign body. ";
  
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
