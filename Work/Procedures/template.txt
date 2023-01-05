@@ -9,12 +9,12 @@
     <h3>
     ***
     </h3>
-    <div class=".reference">
+    <!--div class=".reference">
     Reference:
     <a hhref = "">Procedure Video</a>
-    </div>
+    </div-->
     
-    <h4>Indication</h4>
+    <!--h4>Indication</h4>
     <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
     <label for = "0">respiratory failure</label><br>
     <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
@@ -66,7 +66,7 @@
     <input type = "radio" name = "color" value = "purulent" id = "color3" onchange = "copytext()">
     <label for = "color3">purulent</label><br><br>
     <input type = "radio" name = "color" value = "bloody" id = "color4" onchange = "copytext()">
-    <label for = "color4">bloody</label><br><br>
+    <label for = "color4">bloody</label><br><br-->
 
     <div class="textarea">
     <textarea id = "text"></textarea><br>
@@ -92,18 +92,18 @@
   
     <script>
       function copytext(){
-        var indication = getRadioButtonValue("indication");
+     ?8   var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
         var sedation = getRadioButtonValue("sedation");
         var anesthesia = document.getElementById("anesthesia").value;
         var technique = document.getElementById("technique").value;
         var location = document.getElementById("location").value;
         var side = getRadioButtonValue("side");
-        var color = getRadioButtonValue("color");
+        var color = getRadioButtonValue("color"); */
         
         var t = "Procedure Note: *** \n";
         
-        t = t + "The procedure was indicated for ";
+   /*     t = t + "The procedure was indicated for ";
         switch(indication){
           case "0":
             t = t + "respiratory failure. ";
@@ -135,7 +135,7 @@
           case "2":
             t = t + "The patient did not require sedation or paralysis.";
             break;
-        }
+        } */
  
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
