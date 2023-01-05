@@ -1,24 +1,26 @@
 <html>
   <head>
     <title>
-        ***
+        Suprapubic catheter reinsertion
     </title>
     <link rel="stylesheet" href="procedure.css">
   </head>
   <body>
     <h3>
-    ***
+    Suprapubic catheter reinsertion
     </h3>
-    <div class=".reference">
+    <!--div class=".reference">
     Reference:
     <a hhref = "">Procedure Video</a>
-    </div>
+    </div-->
     
     <h4>Indication</h4>
     <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
-    <label for = "0">respiratory failure</label><br>
+    <label for = "0">dislodged suprapubic catheter</label><br>
     <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
-    <label for = "1">airway protection</label><br>
+    <label for = "1">clogged suprapubic catheter</label><br>
+    <input type = "radio" name = "indication" value = "2" id = "indication" onchange = "copytext()">
+    <label for = "2">damaged suprapubic catheter</label><br>
 <br>
 
     <h4>Consent</h4>
@@ -30,7 +32,7 @@
     <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
 <br>
 
-    <h4>Sedation</h4>
+    <!--h4>Sedation</h4>
     <input type = "radio" name = "sedation" value = "0" id = "sedation" onchange = "copytext()">
     <label for = "0">The patient was sedated with 20 mg of Etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
     <input type = "radio" name = "sedation" value = "1" id = "sedation" onchange = "copytext()">
@@ -66,7 +68,7 @@
     <input type = "radio" name = "color" value = "purulent" id = "color3" onchange = "copytext()">
     <label for = "color3">purulent</label><br><br>
     <input type = "radio" name = "color" value = "bloody" id = "color4" onchange = "copytext()">
-    <label for = "color4">bloody</label><br><br>
+    <label for = "color4">bloody</label><br><br-->
 
     <div class="textarea">
     <textarea id = "text"></textarea><br>
@@ -94,22 +96,25 @@
       function copytext(){
         var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
-        var sedation = getRadioButtonValue("sedation");
+       /* var sedation = getRadioButtonValue("sedation");
         var anesthesia = document.getElementById("anesthesia").value;
         var technique = document.getElementById("technique").value;
         var location = document.getElementById("location").value;
         var side = getRadioButtonValue("side");
-        var color = getRadioButtonValue("color");
+        var color = getRadioButtonValue("color");*/
         
-        var t = "Procedure Note: *** \n";
+        var t = "Procedure Note: Reinsertion of suprapubic catheter \n";
         
         t = t + "The procedure was indicated for ";
         switch(indication){
           case "0":
-            t = t + "respiratory failure. ";
+            t = t + "dislodged suprapubic catheter. ";
             break;
           case "1":
-            t = t + "airway protection. ";
+            t = t + "clogged suprapubic catheter. ";
+            break;
+          case "2":
+            t = t + "damaged suprapubic catheter. ";
             break;
         }
 
@@ -125,7 +130,7 @@
             break;
         }
 
-        switch(sedation){
+       /* switch(sedation){
           case "0":
             t = t + "The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.";
             break;
@@ -135,7 +140,11 @@
           case "2":
             t = t + "The patient did not require sedation or paralysis.";
             break;
-        }
+        } */
+        
+        t = t + "The area surrounding the stoma was prepped with Betadine.  Using sterile conditions, a [size] Fr Foley catheter was ";
+        t = t + "lubricated and then gently inserted into the stoma.  The balloon was inflated with [water/saline]. ";
+        t = t + "Location was confirmed by [return of urine/xray]. ";
  
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
