@@ -92,50 +92,19 @@
   
     <script>
       function copytext(){
-        var indication = getRadioButtonValue("indication");
+      /*  var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
         var sedation = getRadioButtonValue("sedation");
         var anesthesia = document.getElementById("anesthesia").value;
-        var technique = document.getElementById("technique").value;
+        var technique = document.getElementById("technique").value;*/
         var location = document.getElementById("location").value;
-        var side = getRadioButtonValue("side");
-        var color = getRadioButtonValue("color");
+    /*    var side = getRadioButtonValue("side");
+        var color = getRadioButtonValue("color");*/
         
-        var t = "Procedure Note: *** \n";
+        var t = "Procedure Note: Fishhook removal from [location]\n";
         
-        t = t + "The procedure was indicated for ";
-        switch(indication){
-          case "0":
-            t = t + "respiratory failure. ";
-            break;
-          case "1":
-            t = t + "airway protection. ";
-            break;
-        }
+        t = t + "The fishhook was removed by [pushing the barb through/string/covering barb/incision]. ";
 
-        switch(consent){
-          case "0":
-            t = t + "Due to the patient's critical condition, consent could not be obtained. ";
-            break;
-          case "1":
-            t = t + "The risks, benefits and alternatives were discussed with the patient who provided verbal consent for the procedure. ";
-            break;
-          case "2":
-            t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent. ";
-            break;
-        }
-
-        switch(sedation){
-          case "0":
-            t = t + "The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.";
-            break;
-          case "1":
-            t = t + "The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.";
-            break;
-          case "2":
-            t = t + "The patient did not require sedation or paralysis.";
-            break;
-        }
  
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
