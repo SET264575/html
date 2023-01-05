@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <title>
+        FAST exam
+    </title>
+    <link rel="stylesheet" href="procedure.css">
+  </head>
+  <body>
+    <h3>
+    FAST exam
+    </h3>
+    <!--div class=".reference">
+    Reference:
+    <a hhref = "">Procedure Video</a>
+    </div-->
+    
+    <!--h4>Indication</h4>
+    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+    <label for = "0">respiratory failure</label><br>
+    <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+    <label for = "1">airway protection</label><br>
+<br>
+
+    <h4>Consent</h4>
+    <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
+    <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
+    <input type = "radio" name = "consent" value = "1" id = "consent" onchange = "copytext()">
+    <label for = "1">The patient provided verbal consent for the procedure.</label><br>
+    <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
+    <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
+<br>
+
+    <h4>Sedation</h4>
+    <input type = "radio" name = "sedation" value = "0" id = "sedation" onchange = "copytext()">
+    <label for = "0">The patient was sedated with 20 mg of Etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
+    <input type = "radio" name = "sedation" value = "1" id = "sedation" onchange = "copytext()">
+    <label for = "1">The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.</label><br>
+    <input type = "radio" name = "sedation" value = "2" id = "sedation" onchange = "copytext()">
+    <label for = "2">The patient did not require sedation or paralysis.</label><br>
+<br>
+
+    <h4>Location</h4>
+    
+    <h4>Side</h4>
+    <input type = "radio" value = "left" name = "side" id = "radio1" onchange = "copytext()">
+    <label id = "radio1">Left</label><br>
+    <input type = "radio" value = "right" name = "side" id = "radio2" onchange = "copytext()">
+    <label id = "radio2">Right</label><br>
+    <h4>Anesthetic</h4>
+    
+    <label for = "anesthetic">Anesthetic</label>
+    <select id = "anesthetic" onchange = "copytext()">
+      <option value = "1% lidocaine">1% lidocaine</option>
+      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
+      <option value = "2% lidocaine">2% lidocaine</option>
+      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
+    </select><br><br>
+    
+    <h4>Technique</h4>
+    
+    <h4>Fluid color</h4>
+    <input type = "radio" name = "color" value = "clear" id = "color1" onchange = "copytext()">
+    <label for = "color1">clear</label><br>
+    <input type = "radio" name = "color" value = "cloudy" id = "color2" onchange = "copytext()">
+    <label for = "color2">cloudy</label><br>
+    <input type = "radio" name = "color" value = "purulent" id = "color3" onchange = "copytext()">
+    <label for = "color3">purulent</label><br><br>
+    <input type = "radio" name = "color" value = "bloody" id = "color4" onchange = "copytext()">
+    <label for = "color4">bloody</label><br><br-->
+
+    <div class="textarea">
+    <textarea id = "text"></textarea><br>
+    <br>
+    <div class="hasBeenCopied"></div>
+    
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+     /*  var indication = getRadioButtonValue("indication");
+        var consent = getRadioButtonValue("consent");
+        var sedation = getRadioButtonValue("sedation");
+        var anesthesia = document.getElementById("anesthesia").value;
+        var technique = document.getElementById("technique").value;
+        var location = document.getElementById("location").value;
+        var side = getRadioButtonValue("side");
+        var color = getRadioButtonValue("color"); */
+        
+        var t = "Procedure Note: FAST exam \n";
+        
+        t = t + "A bedside FAST ultrasound was conducted to assess for free fluid with clinical indication of trauma. ";
+        t = t + "Cardiac, RUQ, pelvic, and LUQ views were adequately obtained. There was no free fluid identified. ";
+        
+   /*     t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "respiratory failure. ";
+            break;
+          case "1":
+            t = t + "airway protection. ";
+            break;
+        }
+
+        switch(consent){
+          case "0":
+            t = t + "Due to the patient's critical condition, consent could not be obtained. ";
+            break;
+          case "1":
+            t = t + "The risks, benefits and alternatives were discussed with the patient who provided verbal consent for the procedure. ";
+            break;
+          case "2":
+            t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent. ";
+            break;
+        }
+
+        switch(sedation){
+          case "0":
+            t = t + "The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.";
+            break;
+          case "1":
+            t = t + "The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.";
+            break;
+          case "2":
+            t = t + "The patient did not require sedation or paralysis.";
+            break;
+        } */
+ 
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return('____________________');
+      }
+    </script>
+  </body>
+</html>
