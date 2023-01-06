@@ -13,7 +13,11 @@
     Reference:
     <a hhref = "https://www.msdmanuals.com/professional/cardiovascular-disorders/myocarditis-and-pericarditis/pericarditis#v939996">Procedure Video</a>
     </div>
-    
+    <h4>Side</h4>
+    <input type = "radio" id = "side1" name = "side" value = "right" onchanged = "copytext()">
+    <label for = "side1">Right</label><br>
+    <input type = "radio" id = "side2" name = "side" value = "left" onchanged = "copytext()">
+    <label for = "side2">Left</label><br>
 
     <div class="textarea">
     <textarea id = "text"></textarea><br>
@@ -26,7 +30,7 @@
     <footer>
       <div class="dateChanged">12/7/22</div>
       <div class="nontested"></div>
-      <div class="dmeetsStandard1"></div>
+      <div class="meetsStandard1"></div>
      </footer>
                                                
                             
@@ -40,8 +44,8 @@
     <script>
       copytext();
       function copytext(){
-
-        var t = "Procedure Note: Reduction of nursemaid's elbow \n";
+        var side = getRadioButtonValue('side');
+        var t = "Procedure Note: Reduction of "+ side + " nursemaid's elbow \n";
         
         t = t + "The procedure was explained to the child's parent who gave verbal consent. ";
         t = t + "The radial head was reduced with supination and flexion of the forearm while applying pressure to the radial head. ";
@@ -59,7 +63,7 @@
             return(ele[i].value);
           }
         }
-        return(-1);
+        return('_____________');
       }
     </script>
   </body>
