@@ -46,27 +46,23 @@
     <label id = "radio1">Left</label><br>
     <input type = "radio" value = "right" name = "side" id = "radio2" onchange = "copytext()">
     <label id = "radio2">Right</label><br>
-    <h4>Anesthetic</h4>
     
+  
     <!--label for = "anesthetic">Anesthetic</label>
     <select id = "anesthetic" onchange = "copytext()">
       <option value = "1% lidocaine">1% lidocaine</option>
       <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
       <option value = "2% lidocaine">2% lidocaine</option>
       <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
-    </select><br><br>
+    </select><br><br-->
     
     <h4>Technique</h4>
-    
-    <h4>Fluid color</h4>
-    <input type = "radio" name = "color" value = "clear" id = "color1" onchange = "copytext()">
-    <label for = "color1">clear</label><br>
-    <input type = "radio" name = "color" value = "cloudy" id = "color2" onchange = "copytext()">
-    <label for = "color2">cloudy</label><br>
-    <input type = "radio" name = "color" value = "purulent" id = "color3" onchange = "copytext()">
-    <label for = "color3">purulent</label><br><br>
-    <input type = "radio" name = "color" value = "bloody" id = "color4" onchange = "copytext()">
-    <label for = "color4">bloody</label><br><br-->
+    <input type = "radio" name = "technique" value = "using a ear curette" id = "technique1" onchange = "copytext()">
+    <label for = "technique1">ear curette</label><br>
+    <input type = "radio" name = "technique" value = "using alligator forceps" id = "technique2" onchange = "copytext()">
+    <label for = "technique2">alligator forceps</label><br>
+    <input type = "radio" name = "technique" value = "by having a parent blow through the child's mouth while obstructing the other nostril" id = "technique3" onchange = "copytext()">
+    <label for = "technique3">parent blowing through mouth</label><br><br>
 
     <div class="textarea">
     <textarea id = "text"></textarea><br>
@@ -95,9 +91,9 @@
         /*var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
         var sedation = getRadioButtonValue("sedation");
-        var anesthesia = document.getElementById("anesthesia").value;
+        var anesthesia = document.getElementById("anesthesia").value; */
         var technique = document.getElementById("technique").value;
-        var location = document.getElementById("location").value;*/
+    //    var location = document.getElementById("location").value;*/
         var side = getRadioButtonValue("side");
        /* var color = getRadioButtonValue("color");*/
         
@@ -136,7 +132,7 @@
             t = t + "The patient did not require sedation or paralysis.";
             break;
         } */
-        t = t + "The foreign body was removed from the " = side + "nasal passage with [curette/alligator forceps/having parent blow through mouth]. ";
+        t = t + "The foreign body was removed from the " = side + "nasal passage " + technique + ". ";
         t = t + "Re-inspection of the nasal passage revealed no trauma and no additional foreign body. ";
  
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
