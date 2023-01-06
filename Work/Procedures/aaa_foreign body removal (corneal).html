@@ -9,10 +9,10 @@
     <h3>
     Corneal foreign body removal
     </h3>
-    <div class=".reference">
+    <!--div class=".reference">
     Reference:
     <a hhref = "">Procedure Video</a>
-    </div>
+    </div-->
     
     <!--h4>Indication</h4>
     <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
@@ -54,20 +54,24 @@
       <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
       <option value = "2% lidocaine">2% lidocaine</option>
       <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
-    </select><br><br>
+    </select><br><br-->
     
     <h4>Technique</h4>
-    
-    <h4>Fluid color</h4>
-    <input type = "radio" name = "color" value = "clear" id = "color1" onchange = "copytext()">
-    <label for = "color1">clear</label><br>
-    <input type = "radio" name = "color" value = "cloudy" id = "color2" onchange = "copytext()">
-    <label for = "color2">cloudy</label><br>
-    <input type = "radio" name = "color" value = "purulent" id = "color3" onchange = "copytext()">
-    <label for = "color3">purulent</label><br><br>
-    <input type = "radio" name = "color" value = "bloody" id = "color4" onchange = "copytext()">
-    <label for = "color4">bloody</label><br><br-->
+    <input type = "radio" name = "instrument" value = "eye spud" id = "instrument1" onchange = "copytext()">
+    <label for = "instrument1">eye spud</label><br>
+    <input type = "radio" name = "instrument" value = "needle" id = "instrument2" onchange = "copytext()">
+    <label for = "instrument2">needle</label><br>
+    <input type = "radio" name = "instrument" value = "grinder" id = "instrument3" onchange = "copytext()">
+    <label for = "instrument3">grinder</label><br><br>
 
+    <h4>Removal</h4>
+    <input type = "radio" name = "removal" value = "a Q tip" id = "removal1" onchange = "copytext()">
+    <label for = "removal1">Q tip</label><br>
+    <input type = "radio" name = "removal" value = "a Q tip" id = "removal2" onchange = "copytext()">
+    <label for = "removal2">irrigation</label><br><br>
+    
+    <input type ="checkbox" id = "ring" onchanged="copytext()">There was a residual rust ring.</input>
+  
     <div class="textarea">
     <textarea id = "text"></textarea><br>
     <br>
@@ -95,13 +99,13 @@
       /*  var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
         var sedation = getRadioButtonValue("sedation");
-        var anesthesia = document.getElementById("anesthesia").value;
-        var technique = document.getElementById("technique").value;
-        var location = document.getElementById("location").value; */
+        var anesthesia = document.getElementById("anesthesia").value; */
+        var instrument = document.getElementById("instrument").value;
+        var removal = document.getElementById("removal").value; 
         var side = getRadioButtonValue("side");
-       /* var color = getRadioButtonValue("color"); */
+        var ring = document.getElementById('ring').checked;
         
-        var t = "Procedure Note: Foreign body removal from " + side + " cornea \n";
+        var t = "Procedure Note: Corneal Foreign body removal \n";
         
     /*    t = t + "The procedure was indicated for ";
         switch(indication){
@@ -137,10 +141,15 @@
             break;
         } */
         
+        t = t + "The procedure was indicated for a foreign body in the " + side + " cornea. ";
+        t = t + "The risks, benefits, and alternatives were discussed with the patient who provided verbal consent. ";
+        
         t = t + "A drop of tetracaine was used to achieve adequate anesthesia. Using a slit lamp to visualize the foreign body throughout the procedure, the ";
-        t = t + "foreign body was dislodged with [an eye spud/needle/grinder] and then removed from the eye with [irrigation/a Q tip]. ";
-        t =t + "[There was a residual rust ring.] ";
-        t = t + "[Re-inspection of the eye revealed no remaining foreign body. ] ";
+        t = t + "foreign body was dislodged with " + instrument + " and then removed from the eye with " + removal ". ";
+        if (ring) {
+         t =t + "There was a residual rust ring. ";
+        }
+        t = t + "Re-inspection of the eye revealed no remaining foreign body.  ";
  
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
