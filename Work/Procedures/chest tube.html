@@ -33,7 +33,7 @@ Tolerated
     <input type = "radio" id = "intercostal space0" name = "intercostal space" value = "0" onchange = "copytext()">
     <label for = "intercostal space0">5th</label><br>
     <h4>size of tube</h4>
-    <input type = "radio" id = "size of tube0" name = "size of tube" value = "0" onchange = "copytext()">
+    <input type = "radio" id = "size of tube0" name = "size of tube" value = "20" onchange = "copytext()">
     <label for = "size of tube0">20 Fr</label><br>
     <h4>Anesthetic</h4>
     <input type = "radio" id = "Anesthetic0" name = "Anesthetic" value = "0" onchange = "copytext()">
@@ -102,13 +102,13 @@ Tolerated
         t = t + "Procedure Note: Chest tube placement\n";
         t = t + "Chest tube was indicated for ";
         switch(Indication){
-          case "tension pneumothorax":
+          case "0":
             t = t + "tension pneumothorax";
             break;
-          case "pneumothorax":
+          case "1":
             t = t + "pneumothorax";
             break;
-          case "hemothorax":
+          case "2":
             t = t + "hemothorax";
             break;
         }
@@ -116,16 +116,16 @@ Tolerated
         t = t + "The insertion site, at the ";
 
         switch(Location){
-          case "right":
+          case "0":
             t = t + "right";
             break;
-          case "left":
+          case "1":
             t = t + "left";
             break;
         }
   
         switch(intercostal){
-          case "5th":
+          case "0":
             t = t + "5th";
             break;
         }
@@ -133,23 +133,23 @@ Tolerated
         t = t + " intercostal space in the mid-axillary line, was prepped with Betadine and sterile drapes, and then infiltrated with " + Volume + " of ";
 
         switch(Anesthetic){
-          case "1% lidocaine":
+          case "0":
             t = t + "1% lidocaine";
             break;
-          case "1% lidocaine with epinephrine":
+          case "1":
             t = t + "1% lidocaine with epinephrine";
             break;
-          case "2% lidocaine":
+          case "2":
             t = t + "2% lidocaine";
             break;
-          case "2% lidocaine with epinephrine":
+          case "3":
             t = t + "2% lidocaine with epinephrine";
             break;
         }
 
         t = t + ".  An skin incision was then made with a #15 blade and the tissues were bluntly dissected to the pleural space.  A ";
         switch(size){
-          case "20 Fr":
+          case "20":
             t = t + "20 Fr";
             break;
         }
