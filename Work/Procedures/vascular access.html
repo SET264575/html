@@ -43,7 +43,7 @@
     <input type = "radio" name = "side" value = "right" id = "side1" onchange = "copytext()">
     <label for = "side1">right</label><br>
     <input type = "radio" name = "side" value = "left" id = "side2" onchange = "copytext()">
-    <label for = "side2">Tleft</label><br>
+    <label for = "side2">left</label><br>
     
     <h4>Location</h4>
     <input type = "radio" name = "location" value = "internal jugular vein" id = "location1" onchange = "copytext()">
@@ -75,7 +75,7 @@
     <footer>
       <div class="dateChanged">12/7/22</div>
       <div class="nottested"></div>
-      <div class="zmeetsStandard1"></div>
+      <div class="meetsStandard1"></div>
      </footer>
                                                
                             
@@ -95,7 +95,7 @@
         var side = getRadioButtonValue("side");
         var location = getRadioButtonValue("location");
 
-        var t = "Procedure Note: Central line placement in the "+ side + " "+location \n";
+        var t = "Procedure Note: Central line placement in the "+ side + " "+location +"\n";
         
         t = t + "The procedure was indicated for ";
         switch(indication){
