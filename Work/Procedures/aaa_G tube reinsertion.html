@@ -1,3 +1,7 @@
+<!--
+G tube sizes
+
+-->
 <html>
   <head>
     <title>
@@ -58,14 +62,18 @@
     
     
     <h4>Size</h4>
-    <input type = "radio" name = "color" value = "clear" id = "color1" onchange = "copytext()">
-    <label for = "color1">clear</label><br>
-    <input type = "radio" name = "color" value = "cloudy" id = "color2" onchange = "copytext()">
-    <label for = "color2">cloudy</label><br>
-    <input type = "radio" name = "color" value = "purulent" id = "color3" onchange = "copytext()">
-    <label for = "color3">purulent</label><br><br>
-    <input type = "radio" name = "color" value = "bloody" id = "color4" onchange = "copytext()">
-    <label for = "color4">bloody</label><br><br>
+    <input type = "radio" name = "size" value = "14f" id = "size1" onchange = "copytext()">
+    <label for = "size1">14 Fr</label><br>
+    <input type = "radio" name = "size" value = "16f" id = "size2" onchange = "copytext()">
+    <label for = "size2">16 Fr</label><br>
+    <input type = "radio" name = "size" value = "18f" id = "size3" onchange = "copytext()">
+    <label for = "size3">18 Fr</label><br><br>
+    <input type = "radio" name = "size" value = "20f" id = "size4" onchange = "copytext()">
+    <label for = "size4">20 Fr</label><br><br>
+    <input type = "radio" name = "size" value = "22f" id = "size3" onchange = "copytext()">
+    <label for = "size3">22 Fr</label><br><br>
+    <input type = "radio" name = "size" value = "24f" id = "size4" onchange = "copytext()">
+    <label for = "size4">24 Fr</label><br><br>
 
     <div class="textarea">
     <textarea id = "text"></textarea><br>
@@ -134,7 +142,7 @@
             t = t + "The patient did not require sedation or paralysis.";
             break;
         } */
-        t = t + "A " + size + "Fr G tube was lubricated and gently inserted into the stoma.  The balloon was inflated with [volume] cc of [water/saline]. ";
+        t = t + "A " + size + " G tube was lubricated and gently inserted into the stoma.  The balloon was inflated with [volume] cc of [water/saline]. ";
         t = t + "Placement was confirmed by [xray/aspiration]. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
