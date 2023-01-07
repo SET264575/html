@@ -25,7 +25,7 @@ function getValue(id) {
       result = document.getElementById(id).value;
       console.log('treating ' + id + " as a textbox with result = " + result);
     }
-    if (type ==select-one") {
+    if (type == "select-one") {
       result = document.getElementById(id).value;
       console.log('treating ' + id + " as a select with result = " + result);
     }
