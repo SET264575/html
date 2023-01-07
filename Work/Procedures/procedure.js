@@ -2,7 +2,15 @@ function getRadioButtonValue(name){
   var ele = document.getElementsByName(name);
   for (let i = 0; i < ele.length; i++){
     if (ele[i].checked){
-      return(ele[i].value);
+      if (ele[i].value == 'on'){
+        console.log('treating ' + id + " as a radio button without value with result = " + ele[i].labels[0].innnerHTML);
+        return(ele[i].labels[0].innerHTML);
+      }
+      else
+      {
+        console.log('treating ' + id + " as a radio button with value = " + ele[i].value);
+        return(ele[i].value);
+      }
     }
   }
   return(false);
@@ -13,7 +21,6 @@ function getValue(id) {
   var result = false;
   if (x == null) {
     result = getRadioButtonValue(id);
-    console.log('treating ' + id + " as a radio button with result = " + result);
   }
   else {
     var type = x.type;
