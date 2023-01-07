@@ -169,7 +169,7 @@
         t = t + "A " + size + " G tube was lubricated and gently inserted into the stoma.  The balloon was inflated with " + volume + " cc of "+fluid + ". ";
         t = t + "Placement was confirmed by "+confirm + ". ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
-        if (!indication && !consent && !size && !volume && !confirm) {
+        if (indication && consent && size && volume && confirm) {
           navigator.clipboard.writeText(t);
           document.getElementById("text").value = t;
         }
