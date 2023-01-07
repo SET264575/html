@@ -6,12 +6,25 @@
         height: 3000px;
         border: none;
       }
+      textarea {
+        width: 80%;
+        height: 200px;
+        position: fixed;
+        top: 10px;
+        left: 200px;
+      }
+      centered {
+        display: flex;
+        justify-content: center;
+      }
     </style>
   </head>
   <body>
-    <textarea width="300" height = "200"></textarea><br>
-    copied text<br>
-    <button>Copy</button><br>
+    <div class="centered">
+      <textarea width="300" height = "200"></textarea><br>
+      The text is the box to the right has been copied to the clipboard and is ready to be pasted into your document.<br>
+      <button>Copy</button><br>
+    </div>
     <iframe id = "content" src = "digital block.html"></iframe>
   </body>
 </html>
