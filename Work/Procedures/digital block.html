@@ -91,12 +91,12 @@
   
     <script>
       function copytext(){
-        var indication = getRadioButton('indication');
+        var indication = getRadioButtonValue('indication');
         var anesthetic = document.getElementById("anesthetic").value;
         var dose = document.getElementById("dose").value;
         var side = document.getElementById("side").value;
-        var digitcount = getRadioButton("digitcount");
-        var digit = getRadioButton("digit");
+        var digitcount = getRadioButtonValue("digitcount");
+        var digit = getRadioButtonValue("digit");
         var location = side + " " + digitcount + " " + digit;
         var aspiration = document.getElementById("aspiration").value;
         var t = "Procedure Note: "+location+" Digital Block\n";
