@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>Digital block</title>
+    <link rel="stylesheet" href="procedure.css">
+  </head>
+  <body>
+    <h3>Nerve block</h3>
+
+    <label for = "indication">Indication</label>
+    
+    <input type = "radio" id = "indication1" name = "indication" value = "fracture reduction" onchange="copytext()">
+    <label for = "indication1">Fracture reduction</label><br>    
+    <input type = "radio" id = "indication1" name = "indication" value = "reduction of joint dislocation" onchange="copytext()">
+    <label for = "indication1">Reduction of dislocation</label><br>    
+    <input type = "radio" id = "indication1" name = "indication" value = "laceration repair" onchange="copytext()">
+    <label for = "indication1">Laceration repair</label><br>    
+    <input type = "radio" id = "indication1" name = "indication" value = "nail removal" onchange="copytext()">
+    <label for = "indication1">Nail removal</label><br>    
+    <input type = "radio" id = "indication1" name = "indication" value = "foreign body removal" onchange="copytext()">
+    <label for = "indication1">Foreign body removal</label><br>    
+    <input type = "radio" id = "indication1" name = "indication" value = "abscess I&D" onchange="copytext()">
+    <label for = "indication1">Abscess I&D</label><br>    
+    <input type = "radio" id = "indication1" name = "indication" value = "nail trephination" onchange="copytext()">
+    <label for = "indication1">Nail trephination</label><br>
+    
+    
+
+    <label for="anesthetic">Anesthetic</label>
+    <select id = "anesthetic" onchange="copytext()">
+      <option>1% lidocaine</option>
+      <option>1% lidocaine with epinephrine</option>
+      <option>2% lidocaine</option>
+      <option>2% lidocaine with epinephrine</option>
+    </select><br>
+
+    <label for="dose">Dose</label>
+    <select id = "dose" onchange="copytext()">
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select><br>
+
+    <label for = "site">Site of injection</label>
+    <input type = "text" id = "site" onchange="copytext()"><br>
+    <input type = "checkbox" name = "aspiration" id = "aspiration"  onchange="copytext()">
+    <label for = "aspiration">To avoid injecting into a blood vessel, aspiration was performed prior to injection.</label><br><br>
+
+    <br>
+ <div class="textarea">
+    <textarea id = "text"></textarea><br>
+            <br>
+    <div class="hasBeenCopied"></div>
+    
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Aspiration checkbox not functional</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = document.getElementById("indication").value;
+        var location = document.getElementById("location").value;
+        var anesthetic = document.getElementById("anesthetic").value;
+        var dose = document.getElementById("dose").value;
+        var site = document.getElementById("site").value;
+        var aspiration = document.getElementById("aspiration").value;
+        var t = "Procedure Note: "+location+" Digital Block\n";
+        t = t + "The risks, benefits, and alternatives were discussed with the patient who gave verbal consent. ";
+        t = t +"The block was indicated for "+ indication+". ";
+        t = t + "A total of " + dose + " cc of ";
+        t = t + anesthetic;
+        t = t + " was injected at the base of the digit. "
+        t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection. ";
+        t = t + "The patient tolerated the procedure well.  Adequate anesthesia was obtained. There were no complications. ";
+        navigator.clipboard.writeText(t);
+        document.getElementById("text").value = t;
+      }
+      function getRadioButtonValue(name){
+        var ele = document.getElementsByName(name);
+        for (let i = 0; i < ele.length; i++){
+          if (ele[i].checked){
+            return(ele[i].value);
+          }
+        }
+        return(-1);
+      }
+    </script>
+  </body>
+</html>
