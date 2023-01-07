@@ -7,13 +7,11 @@
   <body>
     <h3>Joint Aspiration</h3>
     
-    <h4>Description</h4>
-    
-    <label for = "side">Side</label>
-    <select id = "side" onchange = "copytext()">
-      <option value = "Right">Right</option>
-      <option value = "Left">Left</option>
-    </select><br><br>
+    <h4>Side</h4>
+    <input type = "radio" id = "side1" value = "Right" name = "side" onchanged = "copytext()">
+    <label for="side1">Right</label>
+    <input type = "radio" id = "side2" value = "Left" name = "side" onchanged = "copytext()">
+    <label for="side2">Left</label>  
             
     <label for="joint">Joint</label>
     <select id = "joint" onchange = "copytext()">
