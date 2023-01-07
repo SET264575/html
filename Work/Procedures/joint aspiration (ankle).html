@@ -1,20 +1,19 @@
 <html>
   <head>
-    <title>Joint Aspiration</title>
+    <title>Ankle Joint Aspiration</title>
     <link rel="stylesheet" href="procedure.css">
   </head>
   
   <body>
     <h3>Ankle Joint Aspiration</h3>
     
-    <h4>Description</h4>
+    <h4>Side</h4>
+    <input type = "radio" id = "side1" value = "Right" name = "side" onchanged = "copytext()">
+    <label for="side1">Right</label>
+    <input type = "radio" id = "side2" value = "Left" name = "side" onchanged = "copytext()">
+    <label for="side2">Left</label>  
+            
     
-    <label for = "side">Side</label>
-    <select id = "side" onchange = "copytext()">
-      <option value = "Right">Right</option>
-      <option value = "Left">Left</option>
-    </select><br><br>
-                
     <h4>Anesthetic</h4>
     
     <label for = "anesthetic">Anesthetic</label>
@@ -39,13 +38,7 @@
       <option value = "9">9 cc</option>
       <option value = "10">10 cc</option>
     </select>
-    <h4> Technique</h4>
-        <label for = "approach">Approach</label>
-    <select id = "side" onchange = "copytext()">
-      <option value = "medial">medial</option>
-      <option value = "lateral">lateral</option>
-    </select>
-    
+   
     <h4>Results</h4>
     
     <label for = "description">Fluid description</label>
@@ -72,11 +65,11 @@
       <option value = "12">12</option>
     </select><br><br>
     
-    <input type="checkbox" id= "injected">Injected with Kenalog and lidocaine</input><br><br>
+    <!--input type="checkbox" id= "injected" onchanged="copytext()">Injected with Kenalog and lidocaine</input><br><br-->
       
      <div class="textarea">
     <textarea id = "text"></textarea><br>
-        <br>
+          <br>
     <div class="hasBeenCopied"></div>
     
     <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
@@ -95,24 +88,25 @@
       }
     </script>
   
+    
     <script>
       function copytext(){
         var side = document.getElementById("side").value;
+        var joint = document.getElementById("joint").value;
         var anesthetic = document.getElementById("anesthetic").value;
         var volume = document.getElementById("volume").value;
-        var approach = document.getElementById("approach").value;
         var volume2 = document.getElementById("volume2").value;
         var description = document.getElementById("description").value;
-        var injected = document.getElementById("injected").value;
+       // var injected = document.getElementById("injected").checked;
         var t = "";
-        t = "Procedure Note: "+side +" Ankle Joint Aspiration\n";
+        t = "Procedure Note: "+side + " Ankle Joint Aspiration\n";
         t = t + "The indications, risks, benefits and alternatives were discussed with the patient and written consent was obtained. ";
-        t = t + "A wide area around the " +side.toLowerCase() + " ankle was prepped with Betadine and the site was draped with sterile towels.  The puncture site was ";
+        t = t + "A wide area on the " +side.toLowerCase() + " ankle was prepped with Betadine and draped with sterile towels.  The puncture site was ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
-        t = t + "An 18 gauge needle was inserted into the joint using a " + approach + " approach and " + volume2 + " cc of " + description + " synovial fluid was aspirated and sent for testing. ";
-        if (injected == true){
-                t = t + "The joint was then injected with 20 mg of Kenalog and 10 cc of 1% lidocaine. ";
-        }
+        t = t + "An 18 gauge needle was inserted into the joint and " + volume2 + " cc of " + description + " synovial fluid was aspirated and sent for testing. ";
+     /*   if (injected == true){
+                t = t + "The joint was then injected with 40 mg of Kenalog and 10 cc of 1% lidocaine. ";
+        } */
         t = t + "The needle was withdrawn and the puncture site was dressed with a Band-Aid.  Betadine was cleaned off the surrounding skin. ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
         document.getElementById("text").value = t;
@@ -121,3 +115,4 @@
     </script>
   </body>
 </html>
+  
