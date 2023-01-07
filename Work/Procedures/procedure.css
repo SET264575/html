@@ -16,6 +16,11 @@ body {
   font-weight: bold;
 }
 
+star::after {
+  content: '*';
+  color: 'red';
+}
+
 .dateChanged::before {
   content: 'The generated text was last changed on ';
 }
