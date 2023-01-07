@@ -39,3 +39,24 @@ function getValue(id) {
   }
   return(result);
 }
+
+function isCompleted(list) {
+  var x;
+  var id;
+  var result = true;
+  for (let i = 0; i < list.length; i++) {
+    id = list[i];
+    x = getValue(id);
+    if (x == false) {
+      result = false;
+    }
+    else {
+      if (document.getElementById(id).type == 'text') {
+        if (x == '') {
+          result = false;
+        }
+      }
+    }
+    return(result);
+  }
+}
