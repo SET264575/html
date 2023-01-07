@@ -9,9 +9,9 @@
     
     <h4>Side</h4>
     <input type = "radio" id = "side1" value = "Right" name = "side" onchanged = "copytext()">
-    <label for="side1">Right</label>
+    <label for="side1">Right</label><br>
     <input type = "radio" id = "side2" value = "Left" name = "side" onchanged = "copytext()">
-    <label for="side2">Left</label>  
+    <label for="side2">Left</label>  <br>
             
     
     <h4>Anesthetic</h4>
@@ -91,8 +91,8 @@
     
     <script>
       function copytext(){
-        var side = document.getElementById("side").value;
-        var joint = document.getElementById("joint").value;
+        var side = getRadioButtonValue('side');
+        //var joint = document.getElementById("joint").value;
         var anesthetic = document.getElementById("anesthetic").value;
         var volume = document.getElementById("volume").value;
         var volume2 = document.getElementById("volume2").value;
