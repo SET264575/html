@@ -13,7 +13,7 @@
         top: 10px;
         left: 200px;
       }
-      centered {
+      .centered {
         display: flex;
         justify-content: center;
       }
@@ -22,11 +22,20 @@
         top: 250px;
         left: 0;
       }
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fafafa;
+        height: 300px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
       
     </style>
   </head>
   <body>
-    <div class="centered">
+    <div class="centered header">
       <textarea width="300" height = "200"></textarea><br>
       The text is the box to the right has been copied to the clipboard and is ready to be pasted into your document.<br>
       <button>Copy</button><br>
