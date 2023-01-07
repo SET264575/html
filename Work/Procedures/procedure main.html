@@ -33,7 +33,8 @@
     </div>
     <iframe id = "content" src = "digital block.html"></iframe>
     <script>
-      document.getElementById('content#text').display = 'hidden';
+      var iframe = document.getElementById('content');
+      iframe.contentWindow.document.getElementById('text').display = "hidden";
     </script>
   </body>
 </html>
