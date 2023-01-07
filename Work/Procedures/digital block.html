@@ -23,6 +23,26 @@
     <input type = "radio" id = "indication1" name = "indication" value = "nail trephination" onchange="copytext()">
     <label for = "indication1">Nail trephination</label><br>
     
+    <h4>Side</h4>
+    <input type = "radio" value = "left" name = "side" id = "radio1" onchange = "copytext()">
+    <label id = "radio1">Left</label><br>
+    <input type = "radio" value = "right" name = "side" id = "radio2" onchange = "copytext()">
+    <label id = "radio2">Right</label><br>
+    
+     <h4>Digit Number</h4>
+    <select id = "digitcount">
+      <option value = "1st">1st</option>
+      <option value = "2nd">2nd</option>
+      <option value = "3rd">3rd</option>
+      <option value = "4th">4th</option>
+      <option value = "5th">5th</option>
+    </select><br>
+    
+    <h4>Type of Digit</h4>
+    <input type = "radio" value = "finger" id = "finger" name = "digit" onchange = "copytext()">
+    <label for = "finger">Finger</label><br> 
+    <input type = "radio" value = "toe" id = "toe" name = "digit" onchange = "copytext()">
+    <label for = "toe">Toe</label><br>
     
 
     <label for="anesthetic">Anesthetic</label>
@@ -73,10 +93,12 @@
     <script>
       function copytext(){
         var indication = document.getElementById("indication").value;
-        var location = document.getElementById("location").value;
         var anesthetic = document.getElementById("anesthetic").value;
         var dose = document.getElementById("dose").value;
-        var site = document.getElementById("site").value;
+        var side = document.getElementById("side").value;
+        var digitcount = getRadioButton("digitcount");
+        var digit = getRadioButton("digit");
+        var location = side + " " + digitcount + " " + digit;
         var aspiration = document.getElementById("aspiration").value;
         var t = "Procedure Note: "+location+" Digital Block\n";
         t = t + "The risks, benefits, and alternatives were discussed with the patient who gave verbal consent. ";
