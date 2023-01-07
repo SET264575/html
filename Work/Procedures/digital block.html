@@ -4,9 +4,9 @@
     <link rel="stylesheet" href="procedure.css">
   </head>
   <body>
-    <h3>Nerve block</h3>
+    <h3>Digital block</h3>
 
-    <label for = "indication">Indication</label>
+    <h4>Indication</h4>
     
     <input type = "radio" id = "indication1" name = "indication" value = "fracture reduction" onchange="copytext()">
     <label for = "indication1">Fracture reduction</label><br>    
@@ -42,7 +42,7 @@
     <input type = "radio" value = "finger" id = "finger" name = "digit" onchange = "copytext()">
     <label for = "finger">Finger</label><br> 
     <input type = "radio" value = "toe" id = "toe" name = "digit" onchange = "copytext()">
-    <label for = "toe">Toe</label><br>
+    <label for = "toe">Toe</label><br><br>
     
 
     <label for="anesthetic">Anesthetic</label>
@@ -51,7 +51,7 @@
       <option>1% lidocaine with epinephrine</option>
       <option>2% lidocaine</option>
       <option>2% lidocaine with epinephrine</option>
-    </select><br>
+    </select><br><br>
 
     <label for="dose">Dose</label>
     <select id = "dose" onchange="copytext()">
@@ -63,8 +63,7 @@
       <option>10</option>
     </select><br>
 
-    <label for = "site">Site of injection</label>
-    <input type = "text" id = "site" onchange="copytext()"><br>
+<br>
     <input type = "checkbox" name = "aspiration" id = "aspiration"  onchange="copytext()">
     <label for = "aspiration">To avoid injecting into a blood vessel, aspiration was performed prior to injection.</label><br><br>
 
