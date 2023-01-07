@@ -16,10 +16,12 @@
     </div>
     
     <h4>Indication</h4>
-    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
-    <label for = "0">dislodged G tube</label><br>
-    <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
-    <label for = "1">clogged G tube</label><br>
+    <input type = "radio" name = "indication" value = "0" id = "indication0" onchange = "copytext()">
+    <label for = "indication0">dislodged G tube</label><br>
+    <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+    <label for = "indication1">clogged G tube</label><br>
+    <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
+    <label for = "indication2">broken G tube</label><br>
 <br>
 
     <h4>Consent</h4>
@@ -64,14 +66,33 @@
     <input type = "radio" name = "size" value = "16f" id = "size2" onchange = "copytext()">
     <label for = "size2">16 Fr</label><br>
     <input type = "radio" name = "size" value = "18f" id = "size3" onchange = "copytext()">
-    <label for = "size3">18 Fr</label><br><br>
+    <label for = "size3">18 Fr</label><br>
     <input type = "radio" name = "size" value = "20f" id = "size4" onchange = "copytext()">
-    <label for = "size4">20 Fr</label><br><br>
+    <label for = "size4">20 Fr</label><br>
     <input type = "radio" name = "size" value = "22f" id = "size3" onchange = "copytext()">
-    <label for = "size3">22 Fr</label><br><br>
+    <label for = "size3">22 Fr</label><br>
     <input type = "radio" name = "size" value = "24f" id = "size4" onchange = "copytext()">
     <label for = "size4">24 Fr</label><br><br>
+    
+    <h4>Volume</h4>
+    <input type = "radio" name = "volume" value = "10 cc" id = "volume3" onchange = "copytext()">
+    <label for = "volumen3">10 cc</label><br>
+    <input type = "radio" name = "size" value = "[volume]" id = "volume4" onchange = "copytext()">
+    <label for = "volume4">[volume]</label><br><br>
 
+    <h4>Fluid type</h4>
+    <input type = "radio" name = "fluid" value = "water" id = "fluid3" onchange = "copytext()">
+    <label for = "fluidn3">water</label><br>
+    <input type = "radio" name = "size" value = "normal saline" id = "fluid4" onchange = "copytext()">
+    <label for = "fluid4">normal saline</label><br><br>
+    
+    
+    <h4>Confirmation</h4>
+    <input type = "radio" name = "confirm" value = "aspiration of stomach contents" id = "confirm3" onchange = "copytext()">
+    <label for = "confirmn3">aspiration</label><br>
+    <input type = "radio" name = "size" value = "KUB with Gastrograffin" id = "confirm4" onchange = "copytext()">
+    <label for = "confirm4">imaging</label><br><br>
+    
     <div class="textarea">
     <textarea id = "text"></textarea><br>
     <br>
@@ -103,6 +124,9 @@
         var technique = document.getElementById("technique").value;
         var location = document.getElementById("location").value; */
         var size = getRadioButtonValue("size");
+        var fluid = getRadioButtonValue("fluid");
+        var volume = getRadioButtonValue("volume");
+        var confirm = getRadioButtonValue("confirm");
         
         var t = "Procedure Note: G tube reinsertion \n";
         
@@ -114,6 +138,9 @@
           case "1":
             t = t + "clogged G tube. ";
             break;
+          case "2":
+            t = t + "broken G tube. ";
+            break;
         }
 
         switch(consent){
@@ -124,7 +151,7 @@
             t = t + "The risks, benefits and alternatives were discussed with the patient who provided verbal consent for the procedure. ";
             break;
           case "2":
-            t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent. ";
+            t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent for the procedure. ";
             break;
         }
 
@@ -139,8 +166,8 @@
             t = t + "The patient did not require sedation or paralysis.";
             break;
         } */
-        t = t + "A " + size + " G tube was lubricated and gently inserted into the stoma.  The balloon was inflated with [volume] cc of [water/saline]. ";
-        t = t + "Placement was confirmed by [xray/aspiration]. ";
+        t = t + "A " + size + " G tube was lubricated and gently inserted into the stoma.  The balloon was inflated with " + volume + " cc of "+fluid + ". ";
+        t = t + "Placement was confirmed by "+confirm + ". ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
         navigator.clipboard.writeText(t);
