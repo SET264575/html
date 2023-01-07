@@ -21,6 +21,12 @@ star::after {
   color: red;
 }
 
+.dateChanged {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
 .dateChanged::before {
   content: 'The generated text was last changed on ';
 }
@@ -60,7 +66,7 @@ meetsStandard3::after {
 .hasBennCopied {
   position: fixed;
   top: 0;
-  left: 30px;
+  left: 100px;
 }
 
 .hasBeenCopied::after {
@@ -73,8 +79,8 @@ meetsStandard3::after {
   margin-top: 40px;
   margin-bottom: 80px;
   position: fixed;
-  top: 40px;
-  left: 30px;
+  top: 150px;
+  left: 100px;
 }
 
 .copyBtn::after {
@@ -101,10 +107,10 @@ label::after {
 
 #text {
   position: fixed;
-  left: 50px;
+  left: 200px;
   top: 10px;
-  width: 500px;
-  height: 300px;
+  width: 1000px;
+  height: 200px;
   margin-bottom: 20px;
   font: 16px Arial;
 }
