@@ -10,12 +10,12 @@
     <h3>
     G tube reinsertion
     </h3>
-    <div class=".reference">
+    <!--div class=".reference">
     Reference:
     <a hhref = "">Procedure Video</a>
-    </div>
+    </div-->
     
-    <h4>Indication</h4>
+    <h4>Indication<star></h4>
     <input type = "radio" name = "indication" value = "0" id = "indication0" onchange = "copytext()">
     <label for = "indication0">dislodged G tube</label><br>
     <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
@@ -102,9 +102,9 @@
     </div>
     
     <footer>
-      <div class="dateChanged">12/7/22</div>
+      <div class="dateChanged">1/6/23</div>
       <div class="nottested"></div>
-      <div class="zmeetsStandard1"></div>
+      <div class="meetsStandard1"></div>
      </footer>
                                                
                             
@@ -117,9 +117,9 @@
   
     <script>
       function copytext(){
-       // var indication = getRadioButtonValue("indication");
+        var indication = getRadioButtonValue("indication");
         var consent = getRadioButtonValue("consent");
-      /  var sedation = getRadioButtonValue("sedation");
+      /*  var sedation = getRadioButtonValue("sedation");
         var anesthesia = document.getElementById("anesthesia").value;
         var technique = document.getElementById("technique").value;
         var location = document.getElementById("location").value; */
@@ -169,9 +169,10 @@
         t = t + "A " + size + " G tube was lubricated and gently inserted into the stoma.  The balloon was inflated with " + volume + " cc of "+fluid + ". ";
         t = t + "Placement was confirmed by "+confirm + ". ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
-
-        navigator.clipboard.writeText(t);
-        document.getElementById("text").value = t;
+        if (!indication && !consent && !size && !volume && !confirm) {
+          navigator.clipboard.writeText(t);
+          document.getElementById("text").value = t;
+        }
       }
       function getRadioButtonValue(name){
         var ele = document.getElementsByName(name);
@@ -180,7 +181,7 @@
             return(ele[i].value);
           }
         }
-        return('____________________');
+        return(false);
       }
     </script>
   </body>
