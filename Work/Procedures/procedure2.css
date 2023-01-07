@@ -1,0 +1,124 @@
+body {
+  height: 3000px;
+}
+
+.tested::before {
+  content: 'Status:';
+}
+
+.nottested::before {
+  content: 'Status: '
+}
+
+.nottested {
+  content: 'Not tested';
+  color: red;
+  font-weight: bold;
+}
+
+star::after {
+  content: '*';
+  color: red;
+}
+
+.dateChanged::before {
+  content: 'The generated text was last changed on ';
+}
+
+.meetsStandard1::after {
+  content: 'This webpage conforms to the standard as of 12/6/22';
+  /*
+  has title
+  has css
+  text correct
+  has footer
+  has copy button
+  */
+}
+
+meetsStandard2::after {
+  content: 'This webpage conforms to the standard as of 12/11/22';
+  /*
+  includes indication
+  includes consent
+  identified problems fixed
+  checkboxes work
+  has reference (if applicable)
+  has equipment list (if applicable)
+  return('___________') instead of return(-1)
+  */
+}
+
+meetsStandard3::after {
+  content: "This webpage conforms to the standard as of 12/31/99";
+  /*
+  displays when not all required fields are completed
+  
+  */
+}
+
+.hasBennCopied {
+  position: fixed;
+  top: 0;
+  left: 30px;
+}
+
+.hasBeenCopied::after {
+  content: 'This text has been copied to the clipboard and is ready to be pasted in your document.\AIf you have edited the text, you can copy it to the clipboard with the button below.';
+  font-weight: bold;
+  white-space: pre;
+}
+
+.copyBtn {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  position: fixed;
+  top: 40px;
+  left: 30px;
+}
+
+.copyBtn::after {
+  content: 'Copy Edited Text';
+}
+
+h3 {
+  text-align: center;
+}
+
+label::before {
+  content: '\A';
+}
+
+label::after {
+  content: '\A';
+}
+
+.ztextarea {
+  position: fixed;
+  right: 20px;
+  top: 50px;
+}
+
+#text {
+  position: fixed;
+  left: 50px;
+  top: 10px;
+  width: 500px;
+  height: 300px;
+  margin-bottom: 20px;
+  font: 16px Arial;
+}
+
+zsmalltextarea {
+  width: 40px;
+  height: 20px;
+}
+
+footer {
+  background-color: lightblue;
+  position: fixed;
+  top; 10px;
+  left: 0;
+  width: 50px;
+  text-align: center;
+}
