@@ -18,7 +18,7 @@ body {
 
 star::after {
   content: '*';
-  color: 'red';
+  color: red;
 }
 
 .dateChanged::before {
