@@ -88,8 +88,8 @@
   
     <script>
       function copytext(){
-        /*var indication = getRadioButtonValue("indication");
-        var consent = getRadioButtonValue("consent");
+        var indication = getRadioButtonValue("indication");
+        /*var consent = getRadioButtonValue("consent");
         var sedation = getRadioButtonValue("sedation");
         var anesthesia = document.getElementById("anesthesia").value; */
         var technique = document.getElementById("technique").value;
@@ -132,6 +132,7 @@
             t = t + "The patient did not require sedation or paralysis.";
             break;
         } */
+        t = t + "The procedure was indicated for a " + indication + " in the " + side + " nasal passage. ";
         t = t + "The foreign body was removed from the " = side + "nasal passage " + technique + ". ";
         t = t + "Re-inspection of the nasal passage revealed no trauma and no additional foreign body. ";
  
