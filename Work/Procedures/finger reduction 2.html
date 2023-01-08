@@ -31,14 +31,7 @@
     
       <div id = "div_side"></div>
     
-    <h4>Finger</h4>
-    <select id = "finger">
-      <option value = "1st">1st</option>
-      <option value = "2nd">2nd</option>
-      <option value = "3rd">3rd</option>
-      <option value = "4th">4th</option>
-      <option value = "5th">5th</option>
-    </select><br>
+      <div id = "div_finger"></div>
     
     <!--h4>Anesthetic</h4-->
     
@@ -75,6 +68,7 @@
       header();
       consent();
       side();
+      finger();
     </script>
     <script>
       function copyEdited() {
@@ -84,15 +78,10 @@
   
     <script>
       function copytext(){
-      var indication = getRadioButtonValue("indication");
+        var indication = getRadioButtonValue("indication");
         var consent = getValue("consent");
-      /*  var sedation = getRadioButtonValue("sedation"); */
-     //   var anesthesia = document.getElementById("anesthesia").value;
-  /*      var technique = document.getElementById("technique").value;
-        var location = document.getElementById("location").value; */
         var side = getRadioButtonValue("side");
-        var finger = document.getElementById('finger').value;
-   /*     var color = getRadioButtonValue("color"); */
+        var finger = getValue('finger');
         
         var t = "Procedure Note: "+side+" " + finger + " finger reduction \n";
         
