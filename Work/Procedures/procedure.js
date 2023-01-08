@@ -3,12 +3,12 @@ function getRadioButtonValue(name){
   for (let i = 0; i < ele.length; i++){
     if (ele[i].checked){
       if (ele[i].value == 'on'){
-        console.log('treating ' + id + " as a radio button without value with result = " + ele[i].labels[0].innnerHTML);
+        console.log('treating ' + name + " as a radio button without value with result = " + ele[i].labels[0].innnerHTML);
         return(ele[i].labels[0].innerHTML);
       }
       else
       {
-        console.log('treating ' + id + " as a radio button with value = " + ele[i].value);
+        console.log('treating ' + name + " as a radio button with value = " + ele[i].value);
         return(ele[i].value);
       }
     }
