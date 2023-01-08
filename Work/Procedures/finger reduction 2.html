@@ -115,23 +115,16 @@
             t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent. ";
             break;
         }
+        
+        t = t + consent;
 
        t = t + "Adequate anesthesia was obtained with a digital block.  The finger was reduced with traction. ";
  
         t = t + "The patient tolerated the procedure well.  There were no complications. Adequate reduction was confirmed with xray.";
+        
+        displayText(t);
+      }
 
-        navigator.clipboard.writeText(t);
-        document.getElementById("text").value = t;
-      }
-      function getRadioButtonValue(name){
-        var ele = document.getElementsByName(name);
-        for (let i = 0; i < ele.length; i++){
-          if (ele[i].checked){
-            return(ele[i].value);
-          }
-        }
-        return('____________________');
-      }
     </script>
   </body>
 </html>
