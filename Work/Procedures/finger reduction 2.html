@@ -60,8 +60,12 @@
         var consent = getValue("consent");
         var side = getRadioButtonValue("side");
         var finger = getValue('finger');
+        var anestheticTechnique = getValue('anestheticTechnique');
+        var t = "";
         
-        var t = "Procedure Note: "+side+" " + finger + " finger reduction \n";
+        t = digitalBlockText();
+        
+        t = t + "Procedure Note: "+side+" " + finger + " finger reduction \n";
         
         t = t + "The procedure was indicated for ";
         switch(indication){
