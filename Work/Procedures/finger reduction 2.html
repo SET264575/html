@@ -4,6 +4,7 @@
        Finger reduction
     </title>
     <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="main">
@@ -25,25 +26,7 @@
     <label for = "1">dislocation</label><br>
 <br>
 
-    <h4>Consent</h4>
-    <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
-    <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
-    <input type = "radio" name = "consent" checked value = "1" id = "consent" onchange = "copytext()">
-    <label for = "1">The patient provided verbal consent for the procedure.</label><br>
-    <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
-    <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
-<br>
-
-    <!--h4>Sedation</h4>
-    <input type = "radio" name = "sedation" value = "0" id = "sedation" onchange = "copytext()">
-    <label for = "0">The patient was sedated with 20 mg of Etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
-    <input type = "radio" name = "sedation" value = "1" id = "sedation" onchange = "copytext()">
-    <label for = "1">The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.</label><br>
-    <input type = "radio" name = "sedation" value = "2" id = "sedation" onchange = "copytext()">
-    <label for = "2">The patient did not require sedation or paralysis.</label><br>
-<br-->
-
-    <h4>Location</h4>
+      <div id="consent"></div>
     
     <h4>Side</h4>
     <input type = "radio" value = "left" name = "side" id = "radio1" onchange = "copytext()">
@@ -89,7 +72,17 @@
      </footer>
                                                
                             
-    
+    <script src="procedure.js"></script>
+    <script>
+      function consent() {
+        $(document).ready(function(){
+          $('#consent').load("Fragments/consent.html");
+        });
+      }
+    </script>
+    <script>
+      consent();
+    </script>
     <script>
       function copyEdited() {
         navigator.clipboard.writeText(document.getElementById("text").value); 
