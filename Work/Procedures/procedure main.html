@@ -55,6 +55,7 @@
         iframe.contentWindow.document.getElementById('text').style.display = "none";
         iframe.contentWindow.document.getElementById('copyBtn').style.display = "none";
         var x = iframe.contentWindow.document.getElementByClassName('hasBeenCopied');
+        console.log(x);
         x[0].style.display = "none";
         document.getElementById('text2').value = "test";
       }
