@@ -41,7 +41,7 @@
   </head>
   <body>
     <div class="centered header">
-      <textarea width="300" height = "200"></textarea><br>
+      <textarea width="300" height = "200" id = "text2"></textarea><br>
       <div class = "left of text">
         The text is the box to the right has been copied to the clipboard and is ready to be pasted into your document.<br>
         <button>Copy</button><br>
@@ -53,6 +53,7 @@
       function hideTextarea() {
         var iframe = document.getElementById('content');
         //iframe.contentWindow.document.getElementById('text').display = "hidden";
+        document.getElementById('text2').value = "test";
       }
     </script>
   </body>
