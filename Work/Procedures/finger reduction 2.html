@@ -28,11 +28,7 @@
 
       <div id="consent"></div>
     
-    <h4>Side</h4>
-    <input type = "radio" value = "left" name = "side" id = "radio1" onchange = "copytext()">
-    <label id = "radio1">Left</label><br>
-    <input type = "radio" value = "right" name = "side" id = "radio2" onchange = "copytext()">
-    <label id = "radio2">Right</label><br>
+      <div id = "side"></div>
     
     <h4>Finger</h4>
     <select id = "finger">
@@ -92,7 +88,7 @@
     <script>
       function copytext(){
       var indication = getRadioButtonValue("indication");
-        var consent = getRadioButtonValue("consent");
+        var consent = getVar("consent");
       /*  var sedation = getRadioButtonValue("sedation"); */
      //   var anesthesia = document.getElementById("anesthesia").value;
   /*      var technique = document.getElementById("technique").value;
