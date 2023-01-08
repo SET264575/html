@@ -63,13 +63,17 @@ function isCompleted(list) {
   }
 }
 
+function displayText(t) {
+  navigator.clipboard.writeText(t);
+  document.getElementById("text").value = t;
+}
 
 
 //load fragments
 function load(tag) {
-          $(document).ready(function(){
-          $('#div_'+tag).load("Fragments/"+tag+".html");
-        });
+  $(document).ready(function(){
+    $('#div_'+tag).load("Fragments/"+tag+".html");
+  });
 }
 
 function consent(){ load('consent') }
