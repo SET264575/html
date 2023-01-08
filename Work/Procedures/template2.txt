@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>
+        ***
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h3>
+    ***
+    </h3>
+    <div class = "div_header" id="div_header"></div>
+
+    
+    <!--h4>Indication</h4>
+    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+    <label for = "0">respiratory failure</label><br>
+    <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+    <label for = "1">airway protection</label><br>
+<br>
+
+    <div id = "div_consent"></div>
+
+    <div id = "div_sedation"></div>
+
+    
+    <div id = "div_side"></div>
+    
+    <div id = "div_anesthetic"></div>
+    
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      consent();
+      sedation();
+      side();
+      anesthetic();
+    </script>
+      
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+     /*  var indication = getValue("indication");
+        var consent = getValue("consent");
+        var sedation = getValue("sedation");
+        var anesthesia = getValue("anesthestic");
+        var dose = getValue('dose');
+        var side = getValue("side"); */
+        var t = "";
+        
+        // t = t + digitalblock(); 
+        var t = t + "Procedure Note: *** \n";
+        
+   /*     t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "respiratory failure. ";
+            break;
+          case "1":
+            t = t + "airway protection. ";
+            break;
+        }
+
+        t = t + consent;
+
+        t = t + sedation;
+ 
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>
