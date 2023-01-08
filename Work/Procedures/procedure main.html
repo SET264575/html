@@ -13,6 +13,11 @@
         top: 10px;
         left: 200px;
       }
+      .left of text {
+        position: fixed;
+        left: 0;
+        top: 0;
+      }
       .centered {
         display: flex;
         justify-content: center;
@@ -37,8 +42,10 @@
   <body>
     <div class="centered header">
       <textarea width="300" height = "200"></textarea><br>
-      The text is the box to the right has been copied to the clipboard and is ready to be pasted into your document.<br>
-      <button>Copy</button><br>
+      <div class = "left of text">
+        The text is the box to the right has been copied to the clipboard and is ready to be pasted into your document.<br>
+        <button>Copy</button><br>
+      </div>
     </div>
     <iframe id = "content" src = "intubation.html"></iframe>
     <script>
