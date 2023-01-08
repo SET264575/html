@@ -59,23 +59,27 @@ meetsStandard3::after {
   content: "This webpage conforms to the standard as of 12/31/99";
   /*
   displays when not all required fields are completed
+  no unnecessary drop downs
+  consistent consent, side, anesthetic, 
   
   */
 }
 
-.hasBennCopied {
+.hasBeenCopied {
   position: fixed;
   top: 0;
   left: 100px;
 }
 
-.hasBeenCopied::after {
+.hasBeenCopied::after 
+  display: none;
   content: 'This text has been copied to the clipboard and is ready to be pasted in your document.\AIf you have edited the text, you can copy it to the clipboard with the button below.';
   font-weight: bold;
   white-space: pre;
 }
 
 .copyBtn {
+  display: none;
   margin-top: 40px;
   margin-bottom: 80px;
   position: fixed;
@@ -127,4 +131,10 @@ footer {
   left: 0;
   width: 50px;
   text-align: center;
+}
+
+main {
+  position: fixed;
+  top: 250px;
+  left: 0;
 }
