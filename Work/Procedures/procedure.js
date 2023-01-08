@@ -68,7 +68,7 @@ function isCompleted(list) {
 //load fragments
 function load(tag) {
           $(document).ready(function(){
-          $('#'+tag).load("Fragments/"+tag+".html");
+          $('#div_'+tag).load("Fragments/"+tag+".html");
         });
 }
 
