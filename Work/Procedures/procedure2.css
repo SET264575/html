@@ -120,6 +120,7 @@ label::after {
 }
 
 .textarea {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -135,6 +136,7 @@ zsmalltextarea {
 }
 
 footer {
+  display: none;
   background-color: lightblue;
   position: fixed;
   top; 10px;
