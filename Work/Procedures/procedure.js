@@ -78,6 +78,10 @@ function load(tag) {
 
 function consent(){ load('consent') }
 function side() {load('side') }
+function header() {load('header') }
+function finger() {load('finger') }
+function digit() {load('digit') }
+
 
 
 
