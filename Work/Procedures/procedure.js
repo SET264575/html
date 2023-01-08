@@ -37,6 +37,8 @@ function getValue(id) {
       console.log('treating ' + id + " as a select with result = " + result);
     }
   }
+  if (result == false) {result = "__________");}
+  
   return(result);
 }
 
