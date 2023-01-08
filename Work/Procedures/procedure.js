@@ -78,6 +78,7 @@ function load(tag) {
 
 function anesthetic() {load('anesthetic')}
 function consent(){load('consent') }
+function digitalblock() {load('digital block')}
 function side() {load('side') }
 function header() {load('header') }
 function finger() {load('finger') }
