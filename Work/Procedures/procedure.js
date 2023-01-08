@@ -103,7 +103,7 @@ function load(tag) {
 
 function anesthetic() {load('anesthetic')}
 function consent(){load('consent') }
-function digitalblock() {load('digital block'); console.log('in digital block');}
+function digitalblock() {load('digitalblock'); console.log('in digital block');}
 function side() {load('side') }
 function header() {load('header'); console.log('in header'); }
 function finger() {load('finger') }
