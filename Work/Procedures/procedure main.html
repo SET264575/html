@@ -52,7 +52,10 @@
       setTimeout(hideTextarea,5000);
       function hideTextarea() {
         var iframe = document.getElementById('content');
-        //iframe.contentWindow.document.getElementById('text').display = "hidden";
+        iframe.contentWindow.document.getElementById('text').style.display = "none";
+        iframe.contentWindow.document.getElementById('copyBtn').style.display = "none";
+        var x = iframe.contentWindow.document.getElementByClassName('hasBeenCopied');
+        x[0].style.display = "none";
         document.getElementById('text2').value = "test";
       }
     </script>
