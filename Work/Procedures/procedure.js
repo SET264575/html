@@ -37,7 +37,7 @@ function getValue(id) {
       console.log('treating ' + id + " as a select with result = " + result);
     }
   }
-  if (result == false) {result = "__________");}
+  if (result == false) {result = "__________";}
   
   return(result);
 }
@@ -62,3 +62,18 @@ function isCompleted(list) {
     return(result);
   }
 }
+
+
+
+//load fragments
+function load(tag) {
+          $(document).ready(function(){
+          $('#'+tag).load("Fragments/"+tag+".html");
+        });
+}
+
+function consent(){ load('consent') }
+function side() {load('side') }
+
+
+
