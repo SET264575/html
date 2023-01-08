@@ -86,6 +86,7 @@ function digitalBlockText() {
     }
     t = t + "The patient tolerated the procedure well.  Adequate anesthesia was obtained. There were no complications. \n\n";
   } 
+  return(t);
 }
 
 function displayText(t) {
