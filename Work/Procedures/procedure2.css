@@ -103,7 +103,7 @@ label::after {
   content: '\A';
 }
 
-#text {
+#ztext {
   position: fixed;
   left: 200px;
   top: 10px;
