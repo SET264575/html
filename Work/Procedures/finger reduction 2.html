@@ -77,21 +77,14 @@
             break;
         }
 
-        switch(consent){
-          case "0":
-            t = t + "Due to the patient's critical condition, consent could not be obtained. ";
-            break;
-          case "1":
-            t = t + "The risks, benefits and alternatives were discussed with the patient who provided verbal consent for the procedure. ";
-            break;
-          case "2":
-            t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent. ";
-            break;
-        }
         
         t = t + consent;
+        switch (anestheticTechnique) {
+          t = t + "Adequate anesthesia was obtained with a digital block.  ";
+        }
 
-       t = t + "Adequate anesthesia was obtained with a digital block.  The finger was reduced with traction. ";
+        
+        t = t + "The finger was reduced with traction. ";
  
         t = t + "The patient tolerated the procedure well.  There were no complications. Adequate reduction was confirmed with xray.";
         
