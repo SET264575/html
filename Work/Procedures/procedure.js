@@ -63,6 +63,23 @@ function isCompleted(list) {
   }
 }
 
+//text functions
+
+function digitalBlockText() {
+  if (anestheticTechnique == "1") {
+    t = "Procedure Note: Digital block of " + side + " " finger + "finger\n";
+    t = t + "The risks, benefits, and alternatives were discussed with the patient who gave verbal consent. ";
+    t = t +"The block was indicated for "+ indication+". ";
+    t = t + "A total of " + dose + " cc of ";
+    t = t + anesthetic;
+    t = t + " was injected at the base of the digit. ";
+    if (aspiration) {
+      t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection. ";
+    }
+    t = t + "The patient tolerated the procedure well.  Adequate anesthesia was obtained. There were no complications. \n\n";
+  } 
+}
+
 function displayText(t) {
   navigator.clipboard.writeText(t);
   document.getElementById("text").value = t;
