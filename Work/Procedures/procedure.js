@@ -67,7 +67,7 @@ function isCompleted(list) {
 
 function digitalBlockText() {
   if (anestheticTechnique == "1") {
-    t = "Procedure Note: Digital block of " + side + " " finger + "finger\n";
+    t = "Procedure Note: Digital block of " + side + " " + finger + "finger\n";
     t = t + "The risks, benefits, and alternatives were discussed with the patient who gave verbal consent. ";
     t = t +"The block was indicated for "+ indication+". ";
     t = t + "A total of " + dose + " cc of ";
