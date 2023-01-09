@@ -123,6 +123,16 @@ label::after {
   width: 100%;
 }
 
+.div_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fafafa;
+  height: 210px;
+  margin-bottom: 20px;
+  width: 100%;
+} 
+
 footer {
   display: none;
   background-color: lightblue;
