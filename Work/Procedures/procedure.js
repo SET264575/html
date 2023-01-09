@@ -76,7 +76,7 @@ function digitalBlockText() {
   let anestheticTechnique = getValue('anestheticTechnique');
   
   if (anestheticTechnique) {
-    t = "Procedure Note: Digital Block of " + side.toUpperCase() + " " + finger + "Finger\n";
+    t = "Procedure Note: Digital Block of " + side.toUpperCase() + " " + finger + " Finger\n";
     t = t +"The digital block was indicated for "+ indication+". ";
     t = t + consent;
     t = t + "A total of " + dose + " cc of ";
