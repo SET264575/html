@@ -103,7 +103,7 @@ function mentalBlockText() {
   t = t + side +" side. ";
   t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection. ";
   t = t + "Adequate anesthesia was achieved. ";
-  t = t + "The patient tolerated the procedure well.  There were no complications. ";
+  t = t + "The patient tolerated the procedure well.  There were no complications. \n\n";
   return(t);
 }
 
