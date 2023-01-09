@@ -128,6 +128,8 @@ function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
 function sutures() {load('sutures')}
+function wounddescription() {load('wounddescription')}
+
 
 
 
