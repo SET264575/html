@@ -1,0 +1,200 @@
+<!--
+Betadine option
+cleaned/irrigated
+
+-->
+
+<html>
+  <head>
+    <title>Lip Laceration Repair</title>
+    <link rel="stylesheet" href="procedure.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header"></div>
+    <div class="main">
+      <h3>Lip Laceration Repair</h3>
+
+      <div class="div_consent"></div>
+      
+      <h4>Wound Description</h4>
+
+      <label for="length">Size</label><br>
+      <select id = "length" onchange = "copytext()">
+        <option value = "0.5">0.5 cm</option>
+        <option value = "1">1 cm</option>
+        <option value = "1.5">1.5 cm</option>
+        <option value = "2">2 cm</option>
+        <option value = "2.5">2.5 cm</option>
+        <option value = "3">3 cm</option>
+        <option value = "3.5">3.5 cm</option>
+        <option value = "4">4 cm</option>
+        <option value = "4.5">4.5 cm</option>
+        <option value = "5">5 cm</option>
+        <option value = "5.5">5.5 cm</option>
+        <option value = "6">6 cm</option>
+        <option value = "6.5">6.5 cm</option>
+        <option value = "7">7 cm</option>
+      </select><br><br>
+
+      <label for="description">Description</label>
+      <select id = "description" onchange = "copytext()">
+        <option value = "linear">Linear</option>
+        <option value = "curvilinear">Curvilinear</option>
+        <option value = "irregular">Irregular</option>
+        <option value = "stellate">Stellate</option>
+        <option value = "flap">Flap</option>
+      </select><br><br>
+
+      <label for = "location">Location</label>
+      <input type = "radio" id = "location1" name = "location" value = "upper" onchange="copytext()">
+      <label for = "location1">Upper lip</label>
+      <input type = "radio" id = "location2" name = "location" value = "lower" onchange="copytext()">
+      <label for = "location2">Lower lip</label>
+
+      <h4>Preparation</h4>
+      <input type = "radio" id = "cleaned" name = "clean" checked onchange="copytext()" value = "cleaned">
+      <label for = "cleaned">Cleaned</label><br>
+      <input type = "radio" id = "irrigated" name = "clean" onchange="copytext()" value = "irrigated">
+      <label for = "irrigated">Irrigated</label><br><br>
+
+      <h4>Betadine used</h4>
+       <input type = "radio" id = "nobetadine" name = "betadine" checked onchange="copytext()" value = "not used">
+      <label for = "nobetadine">No</label><br>
+      <input type = "radio" id = "betadine" name = "betadine" onchange="copytext()" value = "used">
+      <label for = "betadine">Yes</label><br><br>
+
+      <h4>Contamination</h4>
+      <input type = "radio" id = "contamination1" name = "contamination" checked = "true" onchange = "copytext()" value = "There was no contamination or foreign body in the wound. ">
+      <label for = "contamination1">There was no contamination.</label><br>
+      <input type = "radio" id = "contamination2" name = "contamination" onchange = "copytext()" value = "There was a small amount of contamination in the wound that was easily cleaned out. ">
+      <label for = "contamination2">There was a small amount of contamination in the wound that was easily cleaned out.</label><br>      <br>
+
+      <h4>Anesthetic</h4>
+
+      <input type = "checkbox" id = "mental" onchanged="copytext()">A mental block was used.</input>
+
+    <div class="div_anesthetic"></div>
+
+      <h4>Suture</h4>
+
+      <label for = "suture_type">Type of Suture</label>
+      <select id = "suture_type" onchange = "copytext()">
+        <option value = "nylon">Nylon</option>
+        <option value = "Prolene">Prolene</option>
+        <option value = "Vicryl">Vicryl</option>
+      </select><br><br>
+
+      <label for = "suture_size">Suture Size</label>
+      <select id = "suture_size" onchange = "copytext()">
+        <option value = "6-0">4-0</option>
+        <option value = "5-0">5-0</option>
+        <option value = "6-0">6-0</option>
+      </select><br><br>
+
+      <label for = "suture_count">Number of Sutures</label>
+      <select id = "suture_count" onchange = "copytext()">
+        <option value = "1">1</option>
+        <option value = "2">2</option>
+        <option value = "3">3</option>
+        <option value = "4">4</option>
+        <option value = "5">5</option>
+        <option value = "6">6</option>
+        <option value = "7">7</option>
+        <option value = "8">8</option>
+        <option value = "9">9</option>
+        <option value = "10">10</option>
+        <option value = "11">11</option>
+        <option value = "12">12</option>
+      </select><br><br>
+
+      <label for = "suture_style">Technique</label>
+      <select id = "suture_style" onchange = "copytext()">
+        <option value = "interrupted">interrupted</option>
+        <option value = "running">running</option>
+        <option value = "interrupted and running">interrupted and running</option>
+      </select><br><br>
+
+    <input type = "checkbox" id = "verm" onchange = "copytext()">
+    <label for = "verm">Vermillion border aligned</label>
+    </div>
+
+  <div class="note"></div>
+    
+    <footer>
+      <div class="dateChanged">1/1/23</div>
+      <div class="tested">Not tested</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+  <script src = "procedure.js"></script>
+  <script>
+    consent();
+    anesthetic();
+  </script>
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+ 
+    
+    <script>
+      function copytext(){
+        var consent = getValue('consent');
+        var wound_length = getValue("length");
+        var description = getValue("description");
+        var location = getValue('location');
+        var anesthetic = getValue("anesthetic");
+        var suture_size = getValue("suture_size");
+        var suture_type = getValue("suture_type");
+        var volume = getValue("volume");
+        var suture_count = getValue("suture_count");
+        var suture_style = getValue("suture_style");
+        var contamination = getValue('contamination');
+        var betadine = getValue("betadine");
+        var clean = getValue('clean');
+        var mental =  getValue("mental");
+        var verm = getValue("verm");
+        var t = "";
+        
+        if (mental) {
+          t = t + mentalblock();
+        }
+        
+        t = "Procedure Note:  Laceration repair on the "+location+" Lip\n";
+        t = t + consent;
+        if (mental) {
+          t = t + "A mental block was used to achieve adequate anesthesia. ";
+        }
+        t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" lip  was ";
+        if (betadine == "Yes") {  
+          t = t + "prepped with Betadine and ";
+        }
+        t = t + "draped sterilely";
+        if (!mental) {
+          t = t + "and then ";
+          t = t + "infiltrated with "+volume +" cc of "+ anesthetic;
+        }
+        t = t + ". ";
+        t = t + "The wound was " + clean + " thoroughly with normal saline. ";
+      
+        t = t + "The wound was explored ";
+        t = t + "in a bloodless field. ";
+        t  = t + contamination;
+        
+        
+        t = t + "The wound was closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
+        if (verm){
+          t = t + "Careful attention was given to aligning the vermillion border. ";
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        displayText(t);
+        
+      }
+
+    </script>
+  </body>
+</html>
