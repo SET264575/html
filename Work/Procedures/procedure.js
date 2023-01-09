@@ -122,6 +122,7 @@ function load(tag) {
 
 function anesthetic() {load('anesthetic')}
 function consent(){load('consent') }
+function contamination() {load('contamination'}}
 function digitalblock() {load('digitalblock');}
 function side() {load('side') }
 function header() {load('header'); }
@@ -129,6 +130,7 @@ function finger() {load('finger') }
 function digit() {load('digit') }
 function sutures() {load('sutures')}
 function wounddescription() {load('wounddescription')}
+function woundpreparation() {load('woundpreparation')}
 
 
 
