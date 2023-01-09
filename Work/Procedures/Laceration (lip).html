@@ -41,11 +41,11 @@
         <option value = "flap">Flap</option>
       </select><br><br>
 
-      <label for = "location">Location</label>
+      <h4>Location</h4>
       <input type = "radio" id = "location1" name = "location" value = "upper" onchange="copytext()">
-      <label for = "location1">Upper lip</label>
+      <label for = "location1">Upper lip</label><br>
       <input type = "radio" id = "location2" name = "location" value = "lower" onchange="copytext()">
-      <label for = "location2">Lower lip</label>
+      <label for = "location2">Lower lip</label><br>
 
       <h4>Preparation</h4>
       <input type = "radio" id = "cleaned" name = "clean" checked onchange="copytext()" value = "cleaned">
@@ -124,6 +124,7 @@
                                                
   <script src = "procedure.js"></script>
   <script>
+    header();
     consent();
     anesthetic();
   </script>
