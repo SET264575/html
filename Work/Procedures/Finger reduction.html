@@ -56,14 +56,16 @@
   
     <script>
       function copytext(){
-        var indication = getRadioButtonValue("indication");
+        var indication = getValue("indication");
         var consent = getValue("consent");
-        var side = getRadioButtonValue("side");
+        var side = getValue("side");
         var finger = getValue('finger');
         var anestheticTechnique = getValue('anestheticTechnique');
         var t = "";
         
-        t = digitalBlockText();
+        if (anestheticTechnique) {
+          t = digitalBlockText();
+        }
         
         t = t + "Procedure Note: "+side +" " + finger + " Finger Reduction \n";
         
