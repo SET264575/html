@@ -90,6 +90,23 @@ function digitalBlockText() {
   return(t);
 }
 
+function mentalBlockText() {
+  var indication = getValue('indication');
+  var dose = getValue('dose');
+  var anesthetic = getValue('anesthetic');
+  var side = getValue('side');
+  var t = "Procedure Note: Mental Block\n";
+  t = t +"The block was indicated for "+ indication+". ";
+  t = t + dose + " cc of ";
+  t = t + anesthetic;
+  t = t + " was injected on the ";
+  t = t + side +" side. ";
+  t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection. ";
+  t = t + "Adequate anesthesia was achieved. ";
+  t = t + "The patient tolerated the procedure well.  There were no complications. ";
+  return(t);
+}
+
 function displayText(t) {
   navigator.clipboard.writeText(t);
   document.getElementById("text").value = t;
