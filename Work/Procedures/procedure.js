@@ -67,6 +67,7 @@ function isCompleted(list) {
 
 function digitalBlockText() {
   let side = getValue('side');
+  let consent = getValue('consent');
   let finger = getValue('finger');
   let indication = getValue('indication');
   let dose = getValue('dose');
@@ -75,9 +76,9 @@ function digitalBlockText() {
   let anestheticTechnique = getValue('anestheticTechnique');
   
   if (anestheticTechnique) {
-    t = "Procedure Note: Digital block of " + side + " " + finger + "finger\n";
-    t = t + "The risks, benefits, and alternatives were discussed with the patient who gave verbal consent. ";
-    t = t +"The block was indicated for "+ indication+". ";
+    t = "Procedure Note: Digital Block of " + side.toUpperCase() + " " + finger + "Finger\n";
+    t = t +"The digital block was indicated for "+ indication+". ";
+    t = t + consent;
     t = t + "A total of " + dose + " cc of ";
     t = t + anesthetic;
     t = t + " was injected at the base of the digit. ";
