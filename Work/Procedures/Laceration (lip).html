@@ -71,44 +71,7 @@
 
       <div class="div_anesthetic"></div>
 
-      <h4>Suture</h4>
-
-      <label for = "suture_type">Type of Suture</label>
-      <select id = "suture_type" onchange = "copytext()">
-        <option value = "nylon">Nylon</option>
-        <option value = "Prolene">Prolene</option>
-        <option value = "Vicryl">Vicryl</option>
-      </select><br><br>
-
-      <label for = "suture_size">Suture Size</label>
-      <select id = "suture_size" onchange = "copytext()">
-        <option value = "6-0">4-0</option>
-        <option value = "5-0">5-0</option>
-        <option value = "6-0">6-0</option>
-      </select><br><br>
-
-      <label for = "suture_count">Number of Sutures</label>
-      <select id = "suture_count" onchange = "copytext()">
-        <option value = "1">1</option>
-        <option value = "2">2</option>
-        <option value = "3">3</option>
-        <option value = "4">4</option>
-        <option value = "5">5</option>
-        <option value = "6">6</option>
-        <option value = "7">7</option>
-        <option value = "8">8</option>
-        <option value = "9">9</option>
-        <option value = "10">10</option>
-        <option value = "11">11</option>
-        <option value = "12">12</option>
-      </select><br><br>
-
-      <label for = "suture_style">Technique</label>
-      <select id = "suture_style" onchange = "copytext()">
-        <option value = "interrupted">interrupted</option>
-        <option value = "running">running</option>
-        <option value = "interrupted and running">interrupted and running</option>
-      </select><br><br>
+      <div class= "div_sutures"></div>
 
       <input type = "checkbox" id = "verm" onchange = "copytext()">
       <label for = "verm">Vermillion border aligned</label>
@@ -127,6 +90,7 @@
     header();
     consent();
     anesthetic();
+    sutures();
   </script>
     
     <script>
