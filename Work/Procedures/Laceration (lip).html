@@ -6,40 +6,13 @@
   </head>
   
   <body>
-    <div class="div_header"></div>
+    <div class="div_header"  id="div_header"></div>
     <div class="main">
       <h3>Lip Laceration Repair</h3>
 
-      <div class="div_consent"></div>
+      <div id="div_consent"></div>
       
-      <h4>Wound Description</h4>
-
-      <label for="length">Size</label><br>
-      <select id = "length" onchange = "copytext()">
-        <option value = "0.5">0.5 cm</option>
-        <option value = "1">1 cm</option>
-        <option value = "1.5">1.5 cm</option>
-        <option value = "2">2 cm</option>
-        <option value = "2.5">2.5 cm</option>
-        <option value = "3">3 cm</option>
-        <option value = "3.5">3.5 cm</option>
-        <option value = "4">4 cm</option>
-        <option value = "4.5">4.5 cm</option>
-        <option value = "5">5 cm</option>
-        <option value = "5.5">5.5 cm</option>
-        <option value = "6">6 cm</option>
-        <option value = "6.5">6.5 cm</option>
-        <option value = "7">7 cm</option>
-      </select><br><br>
-
-      <label for="description">Description</label>
-      <select id = "description" onchange = "copytext()">
-        <option value = "linear">Linear</option>
-        <option value = "curvilinear">Curvilinear</option>
-        <option value = "irregular">Irregular</option>
-        <option value = "stellate">Stellate</option>
-        <option value = "flap">Flap</option>
-      </select><br><br>
+      <div id = "div_wounddescription"></div>
 
       <h4>Location</h4>
       <input type = "radio" id = "location1" name = "location" value = "upper" onchange="copytext()">
@@ -69,9 +42,9 @@
 
       <input type = "checkbox" id = "mental" onchanged="copytext()">A mental block was used.</input>
 
-      <div class="div_anesthetic"></div>
+      <div id="div_anesthetic"></div>
 
-      <div class= "div_sutures"></div>
+      <div id= "div_sutures"></div>
 
       <input type = "checkbox" id = "verm" onchange = "copytext()">
       <label for = "verm">Vermillion border aligned</label>
@@ -89,6 +62,7 @@
   <script>
     header();
     consent();
+    wounddescription();
     anesthetic();
     sutures();
   </script>
