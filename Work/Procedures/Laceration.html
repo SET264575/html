@@ -1,9 +1,3 @@
-<!--
-Betadine option
-cleaned/irrigated
-
--->
-
 <html>
   <head>
     <title>Laceration Repair</title>
@@ -110,7 +104,7 @@ cleaned/irrigated
         t  = t + contamination;
         switch(tendon) {
           case 0:
-            t = t + " Careful exploration to the bottom of the wound found no tendon or other deep structures. ";
+            t = t + " Careful exploration to the bottom of the wound in a bloodless field found no exposed tendon. ";
             break;
           case 1:
             t = t + " Exposed tendons were visualized through a full range of motion in a bloodless field and no injury was found.  ";
@@ -122,8 +116,7 @@ cleaned/irrigated
         
         t = t + "The wound was closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
-        document.getElementById("text").value = t;
-        navigator.clipboard.writeText(t);
+        displayText(t);
       }
 
     </script>
