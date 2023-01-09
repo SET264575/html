@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Lip Laceration Repair</title>
-    <link rel="stylesheet" href="procedure.css">
+    <link rel="stylesheet" href="procedure2.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   
@@ -87,7 +87,7 @@
         
         t = "Procedure Note:  Laceration repair on the "+location+" Lip\n";
         t = t + consent;
-        if (mental) {
+        if (mental != '__________') {
           t = t + "A mental block was used to achieve adequate anesthesia. ";
         }
         t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" lip  was ";
@@ -95,7 +95,7 @@
           t = t + "prepped with Betadine and ";
         }
         t = t + "draped sterilely";
-        if (!mental) {
+        if (mental == '__________') {
           t = t + "and then ";
           t = t + "infiltrated with "+volume +" cc of "+ anesthetic;
         }
