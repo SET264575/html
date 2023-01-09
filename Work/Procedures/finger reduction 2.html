@@ -14,10 +14,10 @@
       </h3>
 
       <h4>Indication</h4>
-      <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
-      <label for = "0">fracture</label><br>
-      <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
-      <label for = "1">dislocation</label><br>
+      <input type = "radio" name = "indication" id = "indication0" onchange = "copytext()">
+      <label for = "indication0">fracture</label><br>
+      <input type = "radio" name = "indication" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">dislocation</label><br>
        <br>
 
       <div id="div_consent"></div>
@@ -65,7 +65,7 @@
         
         t = digitalBlockText();
         
-        t = t + "Procedure Note: "+side+" " + finger + " finger reduction \n";
+        t = t + "Procedure Note: "+side.toUpperCase() +" " + finger + " Finger Reduction \n";
         
         t = t + "The procedure was indicated for ";
         switch(indication){
