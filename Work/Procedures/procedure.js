@@ -122,7 +122,7 @@ function load(tag) {
 
 function anesthetic() {load('anesthetic')}
 function consent(){load('consent') }
-function contamination() {load('contamination'}}
+function contamination() {load('contamination')}
 function digitalblock() {load('digitalblock');}
 function side() {load('side') }
 function header() {load('header'); }
