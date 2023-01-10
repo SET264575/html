@@ -186,7 +186,8 @@ function sutures(index) {
        break;
   } 
 }
-
+function smallvolumefluid() {load('smallvolumefluid')}
+function largevolumefluid() {load('largevolumefluid')}
 function wounddescription() {load('wounddescription')}
 function woundpreparation() {load('woundpreparation')}
 
