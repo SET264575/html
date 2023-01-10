@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>
+        Hernia reduction
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Hernia reduction</h3>
+      <div id="div_consent"></div>
+      <div id = "div_side"></div>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+      side();
+    </script>
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+        var consent = getValue("consent");
+        var side = getValue("side");
+        
+        var t = "Procedure Note: Reduction of " + side + " Inguinal Hernia \n";
+        t = t + 'The procedure was indicated for ';
+        t = t + consent;
+        t = t + "The patient was placed in Trendelenberg.  The hernia was reduced with gentle, persistent pressure. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        displayText(t);
+      }
+
+    </script>
+  </body>
+</html>
