@@ -65,6 +65,10 @@ function isCompleted(list) {
   }
 }
 
+      
+function copyEdited() {
+  navigator.clipboard.writeText(document.getElementById("text").value); 
+}
 //text functions
 
 function digitalBlockText() {
