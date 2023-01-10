@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>
+       Toe reduction
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class = "div_header" id="div_header"></div>
+    <div class="main">
+      <h3>
+      Toe reduction
+      </h3>
+
+      <h4>Indication</h4>
+      <input type = "radio" name = "indication" id = "indication0" onchange = "copytext()">
+      <label for = "indication0">fracture</label><br>
+      <input type = "radio" name = "indication" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">dislocation</label><br>
+       <br>
+
+      <div id="div_consent"></div>
+
+      <div id = "div_side"></div>
+
+      <div id = "div_finger"></div>
+
+      <div id = "div_digitalblock"></div>
+      
+      <div id = "note"></div>
+    </div>
+    
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+    </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+
+    <script>
+      header();
+      consent('verbal');
+      side();
+      finger();
+      digitalblock();
+    </script>
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue("consent");
+        var side = getValue("side");
+        var finger = getValue('finger');
+        var anestheticTechnique = getValue('anestheticTechnique');
+        var t = "";
+        
+        if (anestheticTechnique != noAnswer) {
+          t = digitalBlockText();
+        }
+        
+        t = t + "Procedure Note: "+side +" " + finger + " Toe Reduction \n";
+        
+        t = t + "The procedure was indicated for " + indication + ". ";
+    
+        t = t + consent+" ";
+        if (anestheticTechnique != noAnswer) {
+          t = t + "Adequate anesthesia was obtained with a digital block.  ";
+        }
+
+        t = t + "The toe was reduced with traction. ";
+ 
+        t = t + "The patient tolerated the procedure well.  There were no complications. Adequate reduction was confirmed with x-ray.";
+        
+        displayText(t);
+      }
+
+    </script>
+  </body>
+</html>
