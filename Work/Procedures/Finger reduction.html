@@ -69,15 +69,7 @@
         
         t = t + "Procedure Note: "+side +" " + finger + " Finger Reduction \n";
         
-        t = t + "The procedure was indicated for ";
-        switch(indication){
-          case "0":
-            t = t + "displaced fracture. ";
-            break;
-          case "1":
-            t = t + "dislocation. ";
-            break;
-        }
+        t = t + "The procedure was indicated for " + indication + ". ";
     
         t = t + consent+" ";
         if (anestheticTechnique) {
