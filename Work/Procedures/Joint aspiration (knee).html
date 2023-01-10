@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Knee Joint Aspiration</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Knee Joint Aspiration</h3>
+      <div id = "div_aspirationIndication"></div>
+      <div id = "div_consent"></div>
+      <div id="div_side"></div>
+         
+      <div id="div_anesthetic"></div>
+   
+      <div id = "div_largevolumefluid"></div>
+    
+      input type="checkbox" id= "injected" onchanged="copytext()">Injected with Kenalog and lidocaine</input><br><br>
+      
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      side();
+      consent('written');
+      anesthetic();
+      largevolumefluid();
+    </script>
+   
+    <script>
+      function copytext(){
+        var indication = getValue('indication');
+        var consent = getValue('consent');
+        var side = getValue("side");
+        var anesthetic = getValue("anesthetic");
+        var volume = getValue("volume");
+        var volume2 = getValue("volume2");
+        var description = getValue("description");
+        var injected = getValue("injected");
+        var t = "";
+        t = "Procedure Note: "+side + " Knee Joint Aspiration\n";
+        t = t + consent;
+        t = t + "A wide area on the " +side.toLowerCase() + " knee was prepped with Betadine and draped with sterile towels.  The puncture site was ";
+        t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
+        t = t + "An 18 gauge needle was inserted into the joint and " + volume2 + " cc of " + description + " synovial fluid was aspirated and sent for testing. ";
+        if (injected == true){
+                t = t + "The joint was then injected with 40 mg of Kenalog and 10 cc of 1% lidocaine. ";
+        } 
+        t = t + "The needle was withdrawn and the puncture site was dressed with a Band-Aid.  Betadine was cleaned off the surrounding skin. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
+  
