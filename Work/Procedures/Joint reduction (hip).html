@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Hip Reduction</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="div_header" id="div_header"></div>
+    <div class="main">
+      <h3>Hip Joint Reduction</h3>
+      <div id="div_consent"></div>
+      <div id="div_sedation"></div>
+    
+      <div id="div_side"></div>
+    
+    </div>
+    <footer>
+      <div class="dateChanged">12/29/22</div>
+      <div class="tested">Not tested</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      side();
+      consent();
+      sedation();
+    </script>
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+        var side = getValue("side");
+        var consent = getValue('consent');
+        
+        var t = "";
+        t = t + sedationText();
+        t = t + "Procedure Note: Joint Reduction of the ";
+        t = t + side + " Hip\n";
+        t = t + consent;
+        t = t + "Conscious sedation was used for this procedure. ";
+        t = t +" The hip joint was reduced with traction while an assistant stabilized the pelvis. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        t = t + "Findings from repeat neurovascular exam were unchanged. ";
+        t = t + "Post-reduction x-ray showed good anatomic alignment. ";
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
