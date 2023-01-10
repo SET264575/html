@@ -107,6 +107,23 @@ function mentalBlockText() {
   return(t);
 }
 
+function sedation() {
+  var indication = document.getElementById("indication").value;
+  var npo_time = document.getElementById("npo_time").value;
+  var dose = document.getElementById("dose").value;
+  var t = "";
+  t = "Procedure Note:  Conscious sedation\n";
+  t = t + "Conscious sedation was indicated for "+indication+". ";
+  t = t + "The risks, benefits and alternatives were discussed with the patient and written consent was obtained. ";
+  t = t + "The patient had been NPO for over "+npo_time+" hours. ";
+  t = t + "Standard preparations were made according to the ER sedation policy, including capnography, cardiac monitoring, pulse oximetry and provision of supplemental oxygen. ";
+  t = t + "Airway management equipment and suctioning were readily available. "
+  t = t + "Adequate sedation for achieved with the administration of " + dose + " mg of etomidate. ";
+  t = t + "The patient was continuously monitored until they were alert. ";
+  t = t + "The patient tolerated the procedure well.  There were no complications."
+  return(t);
+}
+
 function displayText(t) {
   navigator.clipboard.writeText(t);
   document.getElementById("text").value = t;
