@@ -129,7 +129,7 @@ label::after {
   left: 0;
   background-color: #fafafa;
   height: 210px;
-  margin-bottom: 20px;
+  margin: 20px;
   width: 100%;
 } 
 
