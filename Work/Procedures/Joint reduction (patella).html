@@ -8,27 +8,12 @@
   <body>
     <div class="div_header" id= "div_header"></div>
     <div class="main">
-    <h3>Patella Reduction</h3>
-    <label for = "location">Location</label>
-    <input type = "text" id = "location" onchange="copytext()"><br>
-    
-    <input type = "checkbox" name = "sedation" id = "sedation"onchange="copytext()">
-    <label for = "sedation">Conscious sedation was used for this procedure.</label><br><br>
-
-    <label for="technique">Technique used</label>
-    <select id = "technique" onchange="copytext()">
-      <option>Traction/countertraction</option>
-      <option>Traction</option>
-      <option>Hennipenn maneuver</option>
-    </select><br><br>
-    
-    <label for = "splint" onchange="copytext()"></label>
-    <select id = "splint" onchange="copytext()">
-      <option>An OCL splint was applied by staff and myself.</option>
-      <option>An OCL splint was applied by staff under my supervision.</option>
-      <option>A knee brace was applied.</option>
-      <option>An arm sling was applied.</option>
-    </select><br><br>
+      <h3>Patella Reduction</h3>
+      <input type="text" value = "patellar dislocation" id= "indication" hidden>
+      <div id="div_side"></div>
+      <div id = "div_consent"></div>
+      <div id="div_sedation"></div>
+    </div>
 
     
     <footer>
@@ -57,11 +42,11 @@
  
     <script>
       function copytext(){
-        var location = document.getElementById("location").value;
+     //   var location = document.getElementById("location").value;
         var consent = getValue('consent');
-        var sedation = document.getElementById("sedation").value;
-        var technique = document.getElementById("technique").value;
-        var splint = document.getElementById("splint").value;
+        var sedation = getValue("sedation");
+    //    var technique = document.getElementById("technique").value;
+    //    var splint = document.getElementById("splint").value;
         var t = "Procedure Note: Reduction of Patellar Dislocation\n ";
         t = t + consent;
         if (sedation) {
