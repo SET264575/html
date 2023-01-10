@@ -29,11 +29,11 @@
       <label for = "anticoagulated">The patient had been consistently taking an oral anticoagulant for at least 3 weeks.</label><br><br>
 
       <h4>Sedation</h4>
-      <input type = "radio" name = "sedation" checked id = "sedation1" onchange = "displaySedation(); copytext()">
+      <input type = "radio" name = "sedation" checked id = "sedation1" onchange = "toggleSedation(true); copytext()">
       <label for="sedation1">Conscious sedation was used for the procedure.</label><br>
-      <input type = "radio" name = "sedation" id = "2" onchange = "displaySedation(); copytext()">
+      <input type = "radio" name = "sedation" id = "2" onchange = "toggleSedation(false); copytext()">
       <label for = "sedation2">Conscious sedation was not used for the procedure due to the instability of the patient.</label><br>
-      <input type = "radio" name = "sedation" id = "3" onchange = "displaySedation(); copytext()">
+      <input type = "radio" name = "sedation" id = "3" onchange = "toggleSedation(true); copytext()">
       <label for = "sedation3">Conscious sedation was not used for the procedure due to patient preference.</label><br><br>
 
       <div id="div_sedation"></div>
