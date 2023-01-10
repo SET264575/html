@@ -1,0 +1,437 @@
+<!--
+Unfinished procedures:
+hernia reduction - prelim
+paraphimosis - prelim
+pericardiocentesis - prelim
+vascular - prelim
+toe reduction
+finger reduction
+finger lac
+foreign body from eye, ear, skin - prelim
+cerumen disimpaction - prelim
+paracentesis
+thoracentesis - prelim
+compartment pressure
+suprapubic catheter - prelim
+G tube - prelim
+FAST exam
+nursemaid's elbow - prelim
+fishhook removal - prelim
+toenail removal
+
+vaginal foreign body
+cricothyrotomy
+ABG draw
+burn debridement
+splinting
+paronychia
+varicose vein bleeding
+sebaceous cyst drainage
+felon
+ingrown nail
+ring removal
+tick removal
+occipital nerve block
+intercostal nerve block
+auricular hematoma
+lateral canthotomy
+TMJ reduction
+suprapubic aspiration
+Bartholin cyst drainage
+anoscopy
+
+
+
+-->
+<html>
+  <head>
+    <title>
+      Procedures
+    </title>
+    <style>
+      .hidden {
+        background-color: white;
+        color: black;
+        font: 16px Arial;
+        display: none;
+        position: fixed;
+        left: 710px;
+        top: 0;
+      }
+      
+      .active {
+        display: block;
+      }
+      .sedation {
+        position: absolute;
+        top: 30px;
+        left: 120px;
+        width: 100px;
+        height: 40px;
+      }
+      .scalp {
+        position: absolute;
+        top: 30px;
+        left: 350px;
+        width: 100px;
+        height: 40px;
+      }
+      .eye1 {
+        position: absolute;
+        top: 100px;
+        left: 300px;
+        width: 50px;
+        height: 50px;
+      }
+      .eye2 {
+        position: absolute;
+        top: 100px;
+        left: 450px;
+        width: 50px;
+        height: 50px;
+      }
+      .ear1 {
+        position: absolute;
+        top: 120px;
+        left: 220px;
+        width: 50px;
+        height: 50px;
+      }
+      .ear2 {
+        position: absolute;
+        top: 120px;
+        left: 540px;
+        width: 50px;
+        height: 50px;
+      }
+      .nose {
+        position: absolute;
+        top: 120px;
+        left: 380px;
+        width: 50px;
+        height: 60px;
+      }
+      .mouth {
+        position: absolute;
+        top: 200px;
+        left: 350px;
+        width: 100px;
+        height: 50px;
+      }
+      .vasc {
+        position: absolute;
+        top: 250px;
+        left: 450px;
+        width: 100px;
+        height: 50px;
+      }
+      .heart {
+        position: absolute;
+        top: 340px;
+        left: 420px;
+        width: 50px;
+        height: 50px;
+      }
+      .resp {
+        position: absolute;
+        top: 340px;
+        left: 300px;
+        width: 80px;
+        height: 50px;
+      }
+      .skin {
+        position: absolute;
+        top: 440px;
+        left: 500px;
+        width: 50px;
+        height: 50px;
+      }
+      .lp {
+        position: absolute;
+        top: 440px;
+        left: 600px;
+        width: 50px;
+        height: 50px;
+      }
+      .abd {
+        position: absolute;
+        top: 450px;
+        left: 380px;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .gu {
+         position: absolute;
+        top: 520px;
+        left: 380px;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .knee {
+        position: absolute;
+        top: 550px;
+        left: 260px;
+        width: 50px;
+        height: 50px;
+      }
+      .compartment {
+        position: absolute;
+        top: 550px;
+        left: 500px;
+        width: 100px;
+        height: 50px;
+      }
+      .hip {
+        position: absolute;
+        top: 500px;
+        left: 285px;
+        width: 50px;
+        height: 50px;
+      }
+      
+     .hip1 {
+        position: absolute;
+        top: 500px;
+        left: 500px;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .shoulder {
+        position: absolute;
+        top: 270px;
+        left: 280px;
+        width: 80px;
+        height: 50px;
+      }
+      
+     .elbow {
+        position: absolute;
+        top: 290px;
+        left: 220px;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .ankle {
+        position: absolute;
+        top: 600px;
+        left: 220px;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .foot {
+         position: absolute;
+        top: 620px;
+        left: 160px;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .hand {
+        position: absolute;
+        top: 360px;
+        left: 120px;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .wrist {
+        position: absolute;
+        top: 315px;
+        left: 170px;
+        width: 50px;
+        height: 50px;
+      }
+         
+      .hand1 {
+         position: absolute;
+        top: 380px;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .wrist1 {
+         position: absolute;
+        top: 360px;
+        left: 570px;
+        width: 50px;
+        height: 50px;
+      }   
+
+      
+        
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="Man.jpeg" id='theImg' style="margin-left:  100px; width: 600px" donclick="pos()">
+      <button class="sedation" onclick="showProcedures('sedation')">sedation</button>
+      <button class="scalp" onclick="showProcedures('scalp')">scalp</button>
+      <button class="eye1" onclick="showProcedures('eye')">eye</button>
+      <button class="eye2" onclick="showProcedures('eye')">eye</button>
+      <button class="ear1" onclick="showProcedures('ear')">ear</button>
+      <button class="ear2" onclick="showProcedures('ear')">ear</button>
+      <button class="nose" onclick="showProcedures('nose')">nose</button>
+      <button class="mouth" onclick="showProcedures('mouth')">mouth</button>
+      <button class="vasc" onclick="showProcedures('vasc')">vascular</button>
+      <button class="shoulder" onclick="showProcedures('shoulder')">shoulder</button>
+      <button class="heart" onclick="showProcedures('heart')">heart</button>
+      <button class="resp" onclick="showProcedures('resp')">respiratory</button>
+      <button class="skin" onclick="showProcedures('skin')">skin</button>
+      <button class="abd" onclick="showProcedures('abd')">abd</button>
+      <button class="gu" onclick="showProcedures('gu')">gu</button>
+      <button class="foot" onclick="showProcedures('foot')">foot</button>
+      <button class="hip" onclick="showProcedures('hip')">hip</button>
+      <button class="knee" onclick="showProcedures('knee')">knee</button>
+      <button class="compartment" onclick="showProcedures('compartment')">compartments</button>
+      <button class="ankle" onclick="showProcedures('ankle')">ankle</button>
+      <button class="hand" onclick="showProcedures('hand')">hand</button>
+      <button class="wrist" onclick="showProcedures('wrist')">wrist</button>
+      <button class="elbow" onclick="showProcedures('elbow')">elbow</button>
+      <button class="lp" onclick="showProcedures('lp')">LP</button>
+    </div>
+    <div class="hidden" id = "sedation">
+      <h4>sedation</h4>
+      <a href="sedation.html">conscious sedation</a>
+    </div>
+    <div class="hidden" id = "scalp">
+      <h4>scalp</h4>
+      <a href="laceration_scalp.html">scalp laceration</a>
+    </div>
+    <div class="hidden" id = "ear">
+      <h4>ear</h4>
+      <a href="cerumen disimpaction.html">cerumen disimpaction</a><br>
+      <a href="aaa_foreign body removal (ear)">ear canal foreign body removal</a><br>
+      
+    </div>
+    <div class="hidden" id = "eye">
+      <h4>eye</h4>
+      <a href="aaa_foreign body removal (corneal).html">corneal foreign body removal</a><br>
+    </div>
+    <div class="hidden" id = "mouth">
+      <h4>mouth</h4>
+      <a href="Laceration (lip).html">lip laceration repair</a><br>
+      <a href ="mandibular block.html">mandibular block</a><br>
+      <a href="mental block.html">mental block</a><br>
+    </div>
+    <div class="hidden" id = "vasc">
+      <h4>vascular access</h4>
+      <a href="vascular access.html">central line placement</a><br>
+    </div>
+    <div class="hidden" id = "heart">
+      <h4>heart</h4>
+      <a href="Cardioversion.html">cardioversion</a><br>
+      <a href = "FAST exam.html">FAST exam</a><br>
+      <a hhref="pericardiocentesis.html">pericardiocentesis</a>
+    </div>
+    <div class="hidden" id = "resp">
+      <h4>respiratory</h4>
+      <a href="chest tube.html">chest tube</a><br>
+      <a href="intubation.html">intubation</a><br>
+      <a href="thoracentesis.html">thoracentesis</a>
+    </div>
+    <div class="hidden" id = "shoulder">
+      <h4>shoulder</h4>
+      <a href="joint aspiration.html">shoulder aspiration (generic)</a><br>
+      <a href="joint reduction (shoulder).html">shoulder reduction</a><br>
+    </div>
+    <div class="hidden" id = "skin">
+      <h4>skin</h4>
+      <a href="i&d.html">abscess I&D</a><br>
+      <a href = "aaa_fishhook removal.html">fishhook removal</a><br>
+      <a href="Laceration.html">laceration repair</a><br>
+
+    </div>
+    <div class="hidden" id = "lp">
+      <h4>neuro</h4>
+      <a href="lp.html">lumbar puncture</a><br>
+    </div>
+    <div class="hidden" id = "compartment">
+      <h4>compartments</h4>
+      <a href="compartment pressures.html">compartment pressure</a><br>
+    </div>
+    <div class="hidden" id = "abd">
+      <h4>abdomen</h4>
+      <a href = "FAST exam.html">FAST exam</a><br>
+      <a href="G tube reinsertion.html">G tube reinsertion</a><br>
+      <a href="paracentesis.html">paracentesis</a><br>
+      <a href="aaa_suprapubic catheter reinsertion.html">suprapubic catheter reinsertion</a><br>
+      </pre>
+    </div>
+    <div class="hidden" id = "gu">
+      <h4>GU</h4>
+      <a hhref="">Bartholin gland abscess I&D</a><br>
+      <a href="paraphimosis.html">paraphimosis reduction</a><br>
+      <a href="priapism.html">priapism</a><br>
+      <a href="aaa_suprapubic catheter reinsertion.html">suprapubic cathether reinsertion</a><br>
+      <a hhref="">vaginal foreign body removal</a><br>
+    </div>
+    <div class="hidden" id = "wrist">
+      <h4>wrist</h4>
+      <a href="joint aspiration (wrist).html">wrist joint aspiration</a><br>
+    </div>
+    <div class="hidden" id = "nose">
+      <h4>nose</h4>
+      <a href="epistaxis.html">epistaxis</a><br>
+      <a href="aaa_foreign body removal (nose).html">foreign body removal</a><br>
+    </div>
+    <div class="hidden" id = "elbow">
+      <h4>elbow</h4>
+      <a href="joint aspiration (elbow).html">elbow aspiration</a><br>
+      <a href="joint reduction (elbow).html">elbow reduction</a><br>
+      <a href="nursemaids elbow.html">nursemaid's elbow</a><br>
+      <a href="bursa aspiration (olecranon).html">olecranon bursa aspiration</a><br>
+    </div>
+    <div class="hidden" id = "hand">
+      <h4>hand</h4>
+      <a href="digital block.html">digital block</a><br>
+      <a href="finger reduction.html">finger reduction</a><br>
+      <a href="Laceration repair.html">finger laceration</a><br>
+      <a href="aaa_fishhook removal.html">fishhook removal</a><br>
+      <a href="nail trephination.html">nail trephination</a><br>
+    </div>
+    <div class="hidden" id = "hip">
+      <h4>hip</h4>
+      <a href="Joint reduction (hip).html">hip reduction</a><br>
+    </div>
+    <div class="hidden" id = "knee">
+      <h4>knee</h4>
+      <a href="joint aspiration (knee).html">knee aspiration</a><br>
+      <a href="Joint reduction (patella).html">patellar reduction</a><br>
+      <a href="bursa aspiration (prepatellar).html">prepatellar bursa aspiration</a><br>
+    </div>
+    <div class="hidden" id = "ankle">
+      <h4>ankle</h4>
+      <a href="joint aspiration (ankle).html">ankle aspiration</a><br>
+      <a href="Joint reduction (ankle).html">ankle reduction</a><br>
+    </div>
+    <div class="hidden" id = "foot">
+      <h4>foot</h4>
+      <a href="nail trephination.html">nail trephination</a><br>
+      <a href="aaa_toe reduction.html">toe reduction</a><br>
+      <a hhef="">toenail removal</a><br>
+    </div>
+
+    <script>
+      document.getElementById('theImg').addEventListener('click',pos,false);
+      
+      function pos(e) {
+        console.log(e.x,e.y);
+      }
+      
+      
+      function showProcedures(t) {
+        var hiddendiv = document.getElementsByClassName('active');
+        for (let i =0; i<hiddendiv.length; i++) {
+          hiddendiv[0].classList.remove('active');
+        }
+        document.getElementById(t).classList.add('active');
+      }
+    </script>
+  </body>
+</html>
