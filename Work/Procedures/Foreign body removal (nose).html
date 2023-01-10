@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>
+        Nasal foreign body removal
+    </title>
+    <link rel="stylesheet" href="procedure.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Nasal foreign body removal</h3>
+
+      <h4>Indication</h4>
+      <input type = "radio" name = "indication" checked value = "0" id = "indication0" onchange = "copytext()">
+      <label for = "indication0">foreign body</label><br>
+      <input type = "radio" name = "indication" value = "bead" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">bead</label><br>
+      <input type = "radio" name = "indication" value = "crayon" id = "indication2" onchange = "copytext()">
+      <label for = "indication2">crayon</label><br>
+      <input type = "radio" name = "indication" value = "battery" id = "indication3" onchange = "copytext()">
+      <label for = "indication3">battery</label><br>
+      <input type = "radio" name = "indication" value = "popcorn kernel" id = "indication4" onchange = "copytext()">
+      <label for = "indication4">popcorn kernel</label><br>
+      <input type = "radio" name = "indication" value = "raisin" id = "indication5" onchange = "copytext()">
+      <label for = "indication5">raisin</label><br><br>
+
+      <div id="div_consent"></div>
+      <div id="div_side"></div>
+
+      <h4>Technique</h4>
+      <input type = "radio" name = "technique" value = "using a ear curette" id = "technique1" onchange = "copytext()">
+      <label for = "technique1">ear curette</label><br>
+      <input type = "radio" name = "technique" value = "using alligator forceps" id = "technique2" onchange = "copytext()">
+      <label for = "technique2">alligator forceps</label><br>
+      <input type = "radio" name = "technique" value = "by having a parent blow through the child's mouth while obstructing the other nostril" id = "technique3" onchange = "copytext()">
+      <label for = "technique3">parent blowing through mouth</label><br><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                 
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+      side();
+    </script>
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var technique = getValue("technique");
+        var side = getValue("side");
+        
+        var t = "Procedure Note: Nasal foreign body removal \n";
+        
+        t = t + "The procedure was indicated for a " + indication + " in the " + side + " nasal passage. ";
+        t = t + consent;
+        t = t + "The foreign body was removed from the " = side + "nasal passage " + technique + ". ";
+        t = t + "Re-inspection of the nasal passage revealed no trauma and no additional foreign body. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+
+    </script>
+  </body>
+</html>
