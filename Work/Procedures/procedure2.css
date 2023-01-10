@@ -148,4 +148,5 @@ footer {
   top: 250px;
   left: 0;
   margin-left: 20px;
+  zindex: -1;
 }
