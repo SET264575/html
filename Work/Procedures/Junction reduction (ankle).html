@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Joint Reduction</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="div_header" id="div_header"></div>
+    <div class="main">
+      <h3>Ankle Joint Reduction</h3>
+      <div id="div_side"></div>
+
+      <div id="div_consent"></div>
+      
+      <h4>Sedation</h4>
+      <input type = "radio" name = "sedation" id = "sedation1" onchange="toggleSedation(true); copytext()">
+      <label for = "sedation1">Conscious sedation was used for this procedure.</label><br>
+      <input type = "radio" name = "sedation" id = "sedation2" onchange = "toggleSedation(false); copytext()">
+      <label for = "sedation2">Parenteral analgesia provided adequate pain relief and relaxation for the procedure.</label><br><br>
+
+      <div id="div_sedation"></div>
+      
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      side();
+      consent();
+      sedation();
+    </script>
+    
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+ 
+    <script>
+      function copytext(){
+        var side = getValue("side");
+        var consent = getValue('consent');
+        var sedation = getValue("sedation");
+        
+        var t = "";
+        if (document.getElementById('sedation1').checked) {
+          t = t + sedationText();
+        }
+        
+        t = t + "Procedure Note: Joint Reduction of the ";
+        t = t + side + " Ankle\n";
+        t = t + consent;
+        t = t + sedation;
+        t = t + "Traction was used to reduce the joint. ";
+        t = t + "An OCL 3 way splint was applied by staff and myself. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        t = t + "Findings from repeat neurovascular exam were unchanged. ";
+        t = t + "Post-reduction x-ray showed good anatomic alignment. ";
+        displayText(t);
+      }
+      
+    </script>
+  </body>
+</html>
