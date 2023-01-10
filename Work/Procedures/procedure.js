@@ -149,6 +149,7 @@ function side() {load('side') }
 function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
+function sedation() {load('sedation') }
 function sutures() {load('sutures')}
 function wounddescription() {load('wounddescription')}
 function woundpreparation() {load('woundpreparation')}
