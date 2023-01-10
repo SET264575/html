@@ -143,15 +143,46 @@ function load(tag) {
 }
 
 function anesthetic() {load('anesthetic')}
-function consent(){load('consent') }
+
+function consent(index){
+      load('consent');
+      switch(index):
+        case 'verbal':
+          document.getElementById('consent2').checked = true;
+          break;
+        case "written":
+          document.getElementById('consent3').checked = true;
+          break;
+      }
+}
+
 function contamination() {load('contamination')}
 function digitalblock() {load('digitalblock');}
 function side() {load('side') }
 function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
-function sedation() {load('sedation') }
-function sutures() {load('sutures')}
+
+function sedation(flag) {
+  load('sedation');
+  toggleSedation(flag);
+}
+
+function sutures(index) {
+  load('sutures');
+  switch (index):
+    case 4:
+      document.getElementById('suture_size3').checked = true;
+       break;
+    case 5:
+      document.getElementById('suture_size4').checked = true;
+       break;
+    case 6:
+      document.getElementById('suture_size5').checked = true;
+       break;
+  } 
+}
+
 function wounddescription() {load('wounddescription')}
 function woundpreparation() {load('woundpreparation')}
 
