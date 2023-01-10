@@ -146,7 +146,7 @@ function anesthetic() {load('anesthetic')}
 
 function consent(index){
       load('consent');
-      switch(index):
+      switch(index) {
         case 'verbal':
           document.getElementById('consent2').checked = true;
           break;
@@ -170,7 +170,7 @@ function sedation(flag) {
 
 function sutures(index) {
   load('sutures');
-  switch (index):
+  switch (index) {
     case 4:
       document.getElementById('suture_size3').checked = true;
        break;
