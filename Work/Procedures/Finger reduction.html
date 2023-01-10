@@ -63,7 +63,7 @@
         var anestheticTechnique = getValue('anestheticTechnique');
         var t = "";
         
-        if (anestheticTechnique) {
+        if (anestheticTechnique != '__________') {
           t = digitalBlockText();
         }
         
@@ -72,7 +72,7 @@
         t = t + "The procedure was indicated for " + indication + ". ";
     
         t = t + consent+" ";
-        if (anestheticTechnique) {
+        if (anestheticTechnique != '__________') {
           t = t + "Adequate anesthesia was obtained with a digital block.  ";
         }
 
