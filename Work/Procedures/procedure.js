@@ -113,12 +113,13 @@ function mentalBlockText() {
 
 function sedationText() {
   var indication = getValue("indication");
+  var consent = getValue('consent');
   var npo_time = getValue("npo_time");
   var dose = getValue("dose");
   var t = "";
   t = "Procedure Note:  Conscious sedation\n";
   t = t + "Conscious sedation was indicated for "+indication+". ";
-  t = t + "The risks, benefits and alternatives were discussed with the patient and written consent was obtained. ";
+  t = t + consent;
   t = t + "The patient had been NPO for over "+npo_time+" hours. ";
   t = t + "Standard preparations were made according to the ER sedation policy, including capnography, cardiac monitoring, pulse oximetry and provision of supplemental oxygen. ";
   t = t + "Airway management equipment and suctioning were readily available. "
