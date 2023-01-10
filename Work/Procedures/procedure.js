@@ -101,7 +101,7 @@ function mentalBlockText() {
   var side = getValue('side');
   var t = "Procedure Note: Mental Block\n";
   t = t +"The block was indicated for "+ indication+". ";
-  t = t + dose + " cc of ";
+  t = t + volume + " cc of ";
   t = t + anesthetic;
   t = t + " was injected on the ";
   t = t + side +" side. ";
@@ -112,9 +112,9 @@ function mentalBlockText() {
 }
 
 function sedationText() {
-  var indication = document.getElementById("indication").value;
-  var npo_time = document.getElementById("npo_time").value;
-  var dose = document.getElementById("dose").value;
+  var indication = getValue("indication");
+  var npo_time = getValue("npo_time");
+  var dose = getValue("dose");
   var t = "";
   t = "Procedure Note:  Conscious sedation\n";
   t = t + "Conscious sedation was indicated for "+indication+". ";
