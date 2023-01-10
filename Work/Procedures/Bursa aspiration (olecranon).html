@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Bursa Aspiration</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+    <h3>Olecranon Bursa Aspiration</h3>
+    
+    <h4>Description</h4>
+      <div id="div_consent"></div>
+      <div id="div_side"></div>
+          
+    
+      <div id="div_anesthetic"></div>
+      <div id="div_smallvolumefluid"></div>
+   
+   
+  </div>
+    <footer>
+      <div class="dateChanged">1/1/23</div>
+      <div class="tested">Not tested</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+      side();
+      anesthetic();
+    </script>
+    
+    <script>
+      function copytext(){
+        var consent = getValue('consent');
+        var side = getValue("side");
+        var anesthetic = getValue("anesthetic");
+        var volume = getValue("volume");
+        var volume2 = getValue("volume2");
+        var description = getValue("description");
+
+        var t = "";
+        t = "Procedure Note: "+side + " Olecranon Bursa Aspiration\n";
+        t = t + "The procedure was indicated to rule out infection. ";
+        t = t + consent;
+        t = t + "A wide area around the " +side.toLowerCase() + " olecranon bursa was prepped with Betadine and the site was draped with sterile towels.  The puncture site was ";
+        t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
+        t = t + "An 18 gauge needle was inserted into the bursa and " + volume2 + " cc of " + description + " fluid was aspirated and sent for testing. ";
+        t = t + "The needle was withdrawn and the puncture site was dressed with a Band-Aid.  Betadine was cleaned off the surrounding skin. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
+  
