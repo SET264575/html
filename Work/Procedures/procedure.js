@@ -160,6 +160,14 @@ function consent(index){
       }
 }
 
+function getParameter(p) {
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+// Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+return( params[p)];
+}
+
 function contamination() {load('contamination')}
 function digitalblock() {load('digitalblock');}
 function side() {load('side') }
