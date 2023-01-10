@@ -115,8 +115,8 @@ label::after {
 
 .textarea {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: 20px;
   background-color: #fafafa;
   height: 210px;
   margin: 20px;
