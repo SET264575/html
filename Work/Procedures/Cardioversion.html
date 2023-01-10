@@ -11,15 +11,16 @@
       <h3>Cardioversion</h3>
       
       <h4>Indication</h4>
-
-      <label for="indication">Indication</label>
-      <select id = "indication" onchange = "copytext()">
-        <option value = "atrial fibrillation with rapid ventricular response, uncontrolled with medication">atrial fibrillation with rapid ventricular response, uncontrolled with medication</option>
-        <option value = "patient preference for management of atrial fibrillation">patient preference for management of atrial fibrillation</option>
-        <option value = "unstable atrial fibrillation with rapid ventricular response">unstable atrial fibrillation with rapid ventricular response</option>
-        <option value = "unstable ventricular tachycardia">unstable ventricular tachycardia</option>
-        <option value = "ventricular fibrillation">ventricular fibrillation</option>
-      </select><br><br>
+      <input type = "radio" id = "indication1" name = "indication" onchanged="copytext()">
+      <label for = "indication1">atrial fibrillation with rapid ventricular response, uncontrolled with medication</label><br>
+      <input type = "radio" id = "indication2" name = "indication" onchanged="copytext()">
+      <label for = "indication2">patient preference for management of atrial fibrillation</label><br>
+      <input type = "radio" id = "indication3" name = "indication" onchanged="copytext()">
+      <label for = "indication3">unstable atrial fibrillation with rapid ventricular response</label><br>
+      <input type = "radio" id = "indication4" name = "indication" onchanged="copytext()">
+      <label for = "indication4">unstable ventricular tachycardia</label><br>
+      <input type = "radio" id = "indication5" name = "indication" onchanged="copytext()">
+      <label for = "indication5">ventricular fibrillation</label><br><br>
 
       <div id="div_consent"></div>
       
@@ -64,20 +65,39 @@
         var consent = getValue('consent');
         var anticoagulated = getValue("anticoagulated");
         var sedation = getValue("sedation");
+        var technique = "cardioversion ";
+        if (document.getElementById('indication5').checked) {
+          technique = "defibrillation ";
+        }
+        
         var t = "";
         
         if (document.getElementById("sedation1").checked) {
           t = t + sedationText();
         }
-        t = "Procedure Note:  Electrical Cardioversion\n";
-        t = t + "Electrical cardioversion was indicated due to "+indication+". ";
-        t = t + consent;
-        if (anticoagulated == true){
-            t = t + "The patient had been consistently taking anticoagulation for at least 3 weeks. ";
+        if (technique == 'defibrillation') {
+          t = t + "Procedure Note:  Defibrillation\n";
+          t = t + "The procedure was indicated due to "+indication+". ";
+          t = t + consent;
+          if (anticoagulated == true){
+              t = t + "The patient had been consistently taking anticoagulation for at least 3 weeks. ";
+          }
+          t = t + sedation;
+          t = t + "An unsynchronized shock of 200 J was administered with conversion to a normal sinus rhythm.  ";
+          t = t + "The patient tolerated the procedure well.  There were no complications."
         }
-        t = t + sedation;
-        t = t + "A shock of 200 J was administered with resulting cardioversion to a normal sinus rhythm.  ";
-        t = t + "The patient tolerated the procedure well.  There were no complications."
+        else {
+          t = t + "Procedure Note:  Electrical Cardioversion\n";
+          t = t + "Electrical cardioversion was indicated due to "+indication+". ";
+          t = t + consent;
+          if (anticoagulated == true){
+              t = t + "The patient had been consistently taking anticoagulation for at least 3 weeks. ";
+          }
+          t = t + sedation;
+          t = t + "A synchronized shock of 200 J was administered with resulting cardioversion to a normal sinus rhythm.  ";
+          t = t + "The patient tolerated the procedure well.  There were no complications."
+        }
+       
         
         displayText(t);
       }
