@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>
+        Suprapubic catheter reinsertion
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>
+      Suprapubic catheter reinsertion
+      </h3>
+
+      <h4>Indication</h4>
+      <input type = "radio" name = "indication" value = "0" id = "indication1" onchange = "copytext()">
+      <label for = "indication0">dislodged suprapubic catheter</label><br>
+      <input type = "radio" name = "indication" value = "1" id = "indication2" onchange = "copytext()">
+      <label for = "indication1">clogged suprapubic catheter</label><br>
+      <input type = "radio" name = "indication" value = "2" id = "indication3" onchange = "copytext()">
+      <label for = "indication2">damaged suprapubic catheter</label><br><br>
+
+      <div id="div_consent"></div>
+
+
+
+      <h4>Size</h4>
+      <input type = "radio" name = "size" value = "14" id = "size1" onchange = "copytext()">
+      <label for = "size1">14</label><br>
+      <input type = "radio" name = "size" value = "16" id = "size2" onchange = "copytext()">
+      <label for = "size2">16</label><br>
+      <input type = "radio" name = "size" value = "18" id = "size3" onchange = "copytext()">
+      <label for = "size3">18</label><br>
+      <input type = "radio" name = "size" value = "20" id = "size4" onchange = "copytext()">
+      <label for = "size4">20</label><br>
+      <input type = "radio" name = "size" value = "22" id = "size5" onchange = "copytext()">
+      <label for = "size5">22</label><br><br>
+
+      <h4>Volume</h4>
+      <input type = "radio" name = "volume" value = "8" id = "volume1" onchange = "copytext()">
+      <label for = "volume1">8</label><br>
+      <input type = "radio" name = "volume" checked value = "10" id = "volume2" onchange = "copytext()">
+      <label for = "volume2">10</label><br>
+      <input type = "radio" name = "volume" value = "30" id = "volume3" onchange = "copytext()">
+      <label for = "volume3">30</label><br><br>
+
+      <h4>Fluid</h4>
+      <input type = "radio" name = "fluid" value = "sterile water" id = "fluid1" onchange = "copytext()">
+      <label for = "fluid1">sterile water</label><br>
+      <input type = "radio" name = "fluid" checked value = "normal saline" id = "fluid2" onchange = "copytext()">
+      <label for = "fluid2">normal saline</label><br><br>
+
+      <!--h4>Confirmation</h4>
+      <input type = "radio" name = "confirm" value = "return of urine" id = "confirm1" onchange = "copytext()">
+      <label for = "confirm1">return of urine</label><br>
+      <input type = "radio" name = "confirm" checked value = "" id = "confirm2" onchange = "copytext()">
+      <label for = "confirm2">normal saline</label><br><br-->
+
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+              
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+    </script>
+       
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue("consent");
+        var size = getValue("size");
+        var volume = getValue('volume');
+        var fluid = getValue('fluid');
+        
+        var t = "Procedure Note: Reinsertion of Suprapubic Catheter \n";
+        
+        t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "dislodged suprapubic catheter. ";
+            break;
+          case "1":
+            t = t + "clogged suprapubic catheter. ";
+            break;
+          case "2":
+            t = t + "damaged suprapubic catheter. ";
+            break;
+        }
+
+        t = t + consent;
+        
+        t = t + "The area surrounding the stoma was prepped with Betadine.  Using sterile conditions, a new " + size + " Fr Foley catheter was ";
+        t = t + "lubricated and then gently inserted into the stoma.  The balloon was inflated with " + volume + " cc of " + fluid + ". ";
+        t = t + "Location was confirmed by [return of urine/xray]. ";
+ 
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
