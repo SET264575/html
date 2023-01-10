@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>
+        Corneal foreign body removal
+    </title>
+    <link rel="stylesheet" href="procedure.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Corneal foreign body removal</h3>
+      <div id="div_consent"></div>
+
+      <div id="div_side"></div>
+      
+    
+      <h4>Technique</h4>
+      <input type = "radio" name = "instrument" value = "eye spud" id = "instrument1" onchange = "copytext()">
+      <label for = "instrument1">eye spud</label><br>
+      <input type = "radio" name = "instrument" value = "needle" id = "instrument2" onchange = "copytext()">
+      <label for = "instrument2">needle</label><br>
+      <input type = "radio" name = "instrument" value = "grinder" id = "instrument3" onchange = "copytext()">
+      <label for = "instrument3">grinder</label><br><br>
+
+      <h4>Removal</h4>
+      <input type = "radio" name = "removal" value = "a Q tip" id = "removal1" onchange = "copytext()">
+      <label for = "removal1">Q tip</label><br>
+      <input type = "radio" name = "removal" value = "a Q tip" id = "removal2" onchange = "copytext()">
+      <label for = "removal2">irrigation</label><br><br>
+
+      <input type ="checkbox" id = "ring" onchange ="copytext()">There was a residual rust ring.</input>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+  <script src="procedure.js"></script>
+  <script>
+    header();
+    consent('verbal');
+    side();
+  </script>
+  
+    <script>
+      function copyEdited() {
+        navigator.clipboard.writeText(document.getElementById("text").value); 
+      }
+    </script>
+  
+    <script>
+      function copytext(){
+
+        var instrument = getValue("instrument");
+        var removal = getValue("removal"); 
+        var side = getValue("side");
+        var ring = getValue('ring');
+        
+        var t = "Procedure Note: Corneal Foreign Body Removal \n";
+               
+        t = t + "The procedure was indicated for a foreign body in the " + side + " cornea. ";
+        t = t + consent;
+        
+        t = t + "A drop of tetracaine was used to achieve adequate anesthesia. Using a slit lamp to visualize the foreign body throughout the procedure, the ";
+        t = t + "foreign body was dislodged with " + instrument + " and then removed from the eye with " + removal + ". ";
+        if (ring) {
+         t =t + "There was a residual rust ring. ";
+        }
+        t = t + "Re-inspection of the eye revealed no remaining foreign body.  ";
+ 
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+
+    </script>
+  </body>
+</html>
