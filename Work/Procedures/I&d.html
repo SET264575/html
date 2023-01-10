@@ -1,10 +1,13 @@
 <html>
   <head>
-      <title>I&D</title>
-      <link rel="stylesheet" href="procedure.css">
+    <title>I&D</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   
   <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
     <h3>Abscess I&D</h3>
    
       <h4>Description</h4>
@@ -31,30 +34,7 @@
     <label for = "location">Location</label>
     <textarea id = "location"  class="smalltextarea" onchange = "copytext()"></textarea>
     
-    <h4>Anesthetic</h4>
-    
-    <label for = "anesthetic">Anesthetic</label>
-    <select id = "anesthetic" onchange = "copytext()">
-      <option value = "1% lidocaine">1% lidocaine</option>
-      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
-      <option value = "2% lidocaine">2% lidocaine</option>
-      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
-    </select><br><br>
-    
-    <label for = "volume">Volume</label>
-    <select id = "volume" onchange = "copytext()">
-      <option value = "5">5 cc</option>
-      <option value = "1">1 cc</option>
-      <option value = "2">2 cc</option>
-      <option value = "3">3 cc</option>
-      <option value = "4">4 cc</option>
-      <option value = "5">5 cc</option>
-      <option value = "6">6 cc</option>
-      <option value = "7">7 cc</option>
-      <option value = "8">8 cc</option>
-      <option value = "9">9 cc</option>
-      <option value = "10">10 cc</option>
-    </select><br>
+      <div id="div_anesthetic"></div>
    
       <h4>Technique</h4>
     <label for = "incision_size">Length of incision</label>
@@ -74,14 +54,7 @@
       </select><br><br>
 
       <input type = "checkbox" id = "gauze" onchange = "copytext()">The cavity was packed with 1/4" iodoform gauze.</input><br><br>
-    
-     <div class="textarea">
-      <textarea id = "text"></textarea><br>
 
-          <br>
-      <div class="hasBeenCopied"></div>
-
-      <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
     </div>
     <footer>
       <div class="dateChanged">12/6/22</div>
@@ -89,12 +62,10 @@
       <div class="meetsStandard1"></div>
      </footer>
                                                
-                            
-    
+  <script src="procedure.js"></script>
     <script>
-      function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
-      }
+      header();
+      anesthetic();
     </script>
     
     <script>
@@ -114,8 +85,7 @@
             t = t + 'The cavity was packed with 1/4" iodoform gauze. ';
         }
         t = t + "The patient tolerated the procedure well.  There were no complications."
-        document.getElementById("text").value = t;
-        navigator.clipboard.writeText(t);
+        displayText(t);
       }
     </script>
   </body>
