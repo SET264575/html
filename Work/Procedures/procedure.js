@@ -70,7 +70,7 @@ function digitalBlockText() {
   let consent = getValue('consent');
   let finger = getValue('finger');
   let indication = getValue('indication');
-  let dose = getValue('dose');
+  let volume = getValue('volume');
   let anesthetic = getValue('anesthetic');
   let aspiration = getValue('aspiration');
   let anestheticTechnique = getValue('anestheticTechnique');
@@ -79,7 +79,7 @@ function digitalBlockText() {
     t = "Procedure Note: Digital Block of " + side + " " + finger + " Finger\n";
     t = t +"The digital block was indicated for "+ indication+". ";
     t = t + consent;
-    t = t + "A total of " + dose + " cc of ";
+    t = t + "A total of " + volume + " cc of ";
     t = t + anesthetic;
     t = t + " was injected at the base of the digit. ";
     if (aspiration != '__________') {
@@ -92,7 +92,7 @@ function digitalBlockText() {
 
 function mentalBlockText() {
   var indication = getValue('indication');
-  var dose = getValue('dose');
+  var volume = getValue('volume');
   var anesthetic = getValue('anesthetic');
   var side = getValue('side');
   var t = "Procedure Note: Mental Block\n";
