@@ -107,7 +107,7 @@ function mentalBlockText() {
   return(t);
 }
 
-function sedation() {
+function sedationText() {
   var indication = document.getElementById("indication").value;
   var npo_time = document.getElementById("npo_time").value;
   var dose = document.getElementById("dose").value;
@@ -120,7 +120,7 @@ function sedation() {
   t = t + "Airway management equipment and suctioning were readily available. "
   t = t + "Adequate sedation for achieved with the administration of " + dose + " mg of etomidate. ";
   t = t + "The patient was continuously monitored until they were alert. ";
-  t = t + "The patient tolerated the procedure well.  There were no complications."
+  t = t + "The patient tolerated the procedure well.  There were no complications.\n\n"
   return(t);
 }
 
