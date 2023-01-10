@@ -1,3 +1,4 @@
+<div id = "div_sedation1">
     <label for = "npo_time"><b>Hours that patient had been NPO</b></label><br>
     <select id = "npo_time" onchange = "copytext()">
       <option value = "1">1</option>
@@ -27,3 +28,15 @@
       <option value = "9">9 cc</option>
       <option value = "10">10 cc</option>
     </select><br><br>
+</div>
+
+<script>
+function toggleSedation(flag){
+    if (flag) {
+      document.getElementById('div_sedation1').style.display = "block";
+    }
+    else {
+      document.getElementById('div_sedation1').style.display = "none";
+    }
+}
+</script>
