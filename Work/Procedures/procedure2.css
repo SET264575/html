@@ -144,7 +144,7 @@ footer {
 }
 
 .main {
-  position: fixed;
+  position: relative;
   top: 250px;
   left: 0;
 }
