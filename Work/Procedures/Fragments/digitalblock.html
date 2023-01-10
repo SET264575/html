@@ -1,5 +1,5 @@
 <h4>Anesthetic technique</h4>
-<input type = "checkbox" id = "anestheticTechnique" onchange = "toggleDigitalBlock(); copytext()">
+<input type = "checkbox" id = "anestheticTechnique" onchange = "toggleDigitalBlock(this.checked); copytext()">
 <label for = "anestheticTechnique">A digital block was performed.</label><br>
 <br>
 <div id = "div_digitalblock1" style="display: none">
@@ -10,8 +10,8 @@
 </div>
 <script>
   anesthetic();
-  function toggleDigitalBlock(){
-    if (getValue('anestheticTechnique')) {
+  function toggleDigitalBlock(flag){
+    if (flag) {
       document.getElementById('div_digitalblock1').style.display = "block";
       console.log('show');
     }
