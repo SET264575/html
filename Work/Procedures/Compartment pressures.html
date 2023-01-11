@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>
+        Compartment pressures
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Compartment pressures</h3>
+      <div id = "div_consent"></div>
+      <div id="div_side"></div>
+      <div id="div_anesthetic"></div>
+      
+      <h4>Locations</h4>
+      <input type = "checkbox" id = "compartment1" onchange = "copytext()"><label for = "compartment1">Anterior</label><br>
+      <input type = "checkbox" id = "compartment2" onchange = "copytext()"><label for = "compartment2">Lateral</label><br>
+      <input type = "checkbox" id = "compartment3" onchange = "copytext()"><label for = "compartment3">Posterior superficial</label><br>
+      <input type = "checkbox" id = "compartment4" onchange = "copytext()"><label for = "compartment4">Posterior deep</label><br>
+
+      <div class="note">
+        <img src="leg compartments.png" width="600" />
+      </div>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+      side();
+      anesthetic();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue("consent");
+        var side = getValue('side');
+        var anesthetic = getValue('anesthetic');
+        var volume = getValue('volume');
+        var location1 = getValue("compartment1");
+        var location2 = getValue("compartment2");
+        var location3 = getValue("compartment3");
+        var location4 = getValue("compartment4");
+        
+        var t = "Procedure Note: Measurement of compartment pressures of the " + side + " lower leg\n";
+        
+        t = t + "The procedure was indicated to rule out compartment syndrome. ";
+
+        t = t + consent;
+        
+        t = t + "The skin of the " + side + " lower leg was prepped with chlorhexidine. ";
+        t = t + "The puncture sites were anesthetized with a total of " + volume + " cc of " + anesthetic +". ";
+        t = t + "Compartment pressues were measured with the Stryker. \n\n";
+        t = t + "Findings: \n";
+        if (location1) {
+          t = t + "Anterior compartment: [pressure] cm H2O\n";
+        }
+        if (location2) {
+          t = t + "Lateral compartment: [pressure] cm H2O\n";
+        }
+        if (location3) {
+          t = t + "Posterior superficial compartment: [pressure] cm H2O\n";
+        }
+        if (location4) {
+          t = t + "Posterior deep compartment: [pressure] cm H2O\n";
+        }
+        t = t + "\nThe puncture sites were covered with Band-Aids. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
