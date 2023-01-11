@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Digital block</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Digital block</h3>
+
+      <h4>Indication</h4>
+
+      <input type = "radio" id = "indication1" name = "indication" value = "fracture reduction" onchange="copytext()">
+      <label for = "indication1">Fracture reduction</label><br>    
+      <input type = "radio" id = "indication1" name = "indication" value = "reduction of joint dislocation" onchange="copytext()">
+      <label for = "indication1">Reduction of dislocation</label><br>    
+      <input type = "radio" id = "indication1" name = "indication" value = "laceration repair" onchange="copytext()">
+      <label for = "indication1">Laceration repair</label><br>    
+      <input type = "radio" id = "indication1" name = "indication" value = "nail removal" onchange="copytext()">
+      <label for = "indication1">Nail removal</label><br>    
+      <input type = "radio" id = "indication1" name = "indication" value = "foreign body removal" onchange="copytext()">
+      <label for = "indication1">Foreign body removal</label><br>    
+      <input type = "radio" id = "indication1" name = "indication" value = "abscess I&D" onchange="copytext()">
+      <label for = "indication1">Abscess I&D</label><br>    
+      <input type = "radio" id = "indication1" name = "indication" value = "nail trephination" onchange="copytext()">
+      <label for = "indication1">Nail trephination</label><br>
+
+
+      <div id= "div_consent"></div>
+      
+      <div id = "div_side"></div>
+
+      <h4>Digit Number</h4>
+      <select id = "digitcount">
+        <option value = "1st">1st</option>
+        <option value = "2nd">2nd</option>
+        <option value = "3rd">3rd</option>
+        <option value = "4th">4th</option>
+        <option value = "5th">5th</option>
+      </select><br>
+
+      <h4>Type of Digit</h4>
+      <input type = "radio" value = "finger" id = "finger" name = "digit" onchange = "copytext()">
+      <label for = "finger">Finger</label><br> 
+      <input type = "radio" value = "toe" id = "toe" name = "digit" onchange = "copytext()">
+      <label for = "toe">Toe</label><br><br>
+
+
+
+      <div id = "div_anesthetic"></div>
+
+      <input type = "checkbox" name = "aspiration" id = "aspiration"  onchange="copytext()">
+      <label for = "aspiration">To avoid injecting into a blood vessel, aspiration was performed prior to injection.</label><br><br>
+
+      <br>
+
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Aspiration checkbox not functional</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+      side();
+      anesthetic();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue('indication');
+        var consent = getValue('consent');
+        var anesthetic = getValue("anesthetic");
+        var dose = getValue("dose");
+        var side = getValue("side");
+        var digitcount = getValue("digitcount");
+        var digit = getValue("digit");
+        var location = side + " " + digitcount + " " + digit;
+        var aspiration = getValue("aspiration");
+        var t = "Procedure Note: "+location+" Digital Block\n";
+        t = t +"The block was indicated for "+ indication+". ";
+        t = t + consent;
+        t = t + "A total of " + dose + " cc of " + anesthetic;
+        t = t + " was injected at the base of the digit. ";
+        if (aspiration) {
+          t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection. ";
+        }
+        t = t + "The patient tolerated the procedure well.  Adequate anesthesia was obtained. There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
