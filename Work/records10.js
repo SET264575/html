@@ -51,6 +51,7 @@ var activeElement = 'none';
 var all_dx = "";
 var all_plans = "";
 var pt_count = 0;
+const roomCount = 24;
 
 function Room() {
   this.mine = false;
@@ -121,7 +122,7 @@ const toDo = [];
 const awaitingList = [];
 const toDoList = [];
 
-for (let i = 0; i < 17; i++){
+for (let i = 0; i < roomCount; i++){
 	toDoList[i] = [];
 }
 
@@ -174,7 +175,7 @@ toDo.push(new Awaiting("Outpt Order",-1));
 const room = [];
 const default_room = new Room;
 
-for (let i = 1; i < 17; i++){
+for (let i = 1; i < roomCount; i++){
   room[i] = new Room;
 }
 
@@ -184,7 +185,7 @@ function displayRecords(){
   createAwaitList();
 	
   let j = 0;
-  for (let i = 1; i < 17; i++) {
+  for (let i = 1; i < roomCount; i++) {
     if (room[i].mine == true){
       j = j + 1;
       createRecord(i,j);
@@ -214,7 +215,12 @@ function createAwaitList(){
 function createRecord(i,j){
   var tree2 = document.createDocumentFragment();
   var x = document.createElement("button");
-  x.innerHTML = "Room "+String(i);
+	if (i < 23) {
+  		x.innerHTML = "Room "+String(i);
+  }
+  else {
+    x.innerHTML = "Hallway";
+  }
   x.setAttribute("class","button2");
   x.setAttribute("name",i);
  // x.setAttribute("width","70");
