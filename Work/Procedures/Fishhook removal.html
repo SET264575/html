@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>
+        Fishhook removal
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>
+      Fishhook removal
+      </h3>
+
+      <div class = "link">
+        <a href = "digital block.html">Digital block</a>    
+      </div>
+      
+      <div id = "div_consent"></div>
+
+      <div class = "questions">
+      <input type = "checkbox" id = "anesthetic" onchange="copytext()">Lidocaine was used<br>
+
+      <h4>Location</h4>
+      <input type = "text" id = "location" onchange="copytext()"><br>
+
+      <h4>Technique</h4>
+      <input type = "radio" name = "technique" value = "0" id = "technique1" onchange = "copytext()">
+      <label for = "technique1">pushing the hook through and cutting off the barb</label><br>
+      <input type = "radio" name = "technique" value = "1" id = "technique2" onchange = "copytext()">
+      <label for = "technique2">jerking the hook out with a string</label><br>
+      <input type = "radio" name = "technique" value = "2" id = "technique3" onchange = "copytext()">
+      <label for = "technique3">covering the barb with a needle</label><br>
+      <input type = "radio" name = "technique" value = "3" id = "technique4" onchange = "copytext()">
+      <label for = "technique4">incision</label><br><br>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+    </script>
+  
+    <script>
+      function copytext(){
+        var consent = getValue("consent");
+        var location = getValue("location");
+        var anesthesia = getValue("anesthesia");
+        var technique = getValue("technique");
+        var location = getValue("location");
+        
+        var t = "Procedure Note: Fishhook removal\n";
+        t = t + "The procedure was indicated for a fishhook embedded in the " + location + ". ";
+        t = t +  consent;
+        t = t + "The hook and the skin surrounding it was prepped with Betadine. ";
+        if (anesthetic) {
+          t = t + "The skin was infiltrated with 1 cc of 1% lidocaine. ";
+        }
+        t = t + "The fishhook was removed by ";
+        select (technique) {
+          case "0":
+            t = t + "pushing the barb through the skin, cutting the barb off and then pulling the hook back through the skin. ";
+            break;
+          case "1":
+            t = t + "disengaging the barb and jerking the hook out with a string. ";
+            break;          
+          case "2":
+            t = t + "covering the barb with an 18 gauge needle and then withdrawing the hook. ";
+            break;          
+          case "3":
+            t = t + "making a small incision with an #11 blade. ";
+            break;
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
