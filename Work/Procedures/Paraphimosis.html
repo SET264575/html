@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>
+        Paraphimosis reduction
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>
+      Paraphimosis reduction
+      </h3>
+
+      <div id = "div_consent"></div>
+      <input type = "checkbox" id = "gel" onchange = "copytext()">Lidocaine jelly was used</input>
+
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+  <script src="procedure.js"></script>
+  <script>
+    header();
+    consent('verbal');
+  </script>
+  
+    <script>
+      copytext();
+      
+      function copytext(){
+        var gel = getValue("gel");
+        var consent = getValue('consent');
+        var t = "Procedure Note: Paraphimosis Reduction\n";
+        t = t + consent;
+        if (gel) {
+          t = t + "2% lidocaine jelly was applied to the glans and foreskin to achieve adequate anesthesia. ";
+        }
+        t = t + "Gentle manual pressure was applied to reduce the edema in the glans. ";
+        t = t + "The glans was then pushed through the phimotic ring to achieve reduction of the foreskin. "
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
+<!--
+Procedure Note: paraphimosis reduction
+2% lidocaine jelly was applied to the glans and foreskin to achieve adequate anesthesia. Gentle manual pressure was applied to reduce the edema in the glans. 
+ The glans was then pushed through the phimotic ring to achieve reduction of the foreskin.
