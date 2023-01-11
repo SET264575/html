@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>
+        Paracentesis
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Paracentesis</h3>
+
+      <h4>Indication</h4>
+      <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+      <label for = "0">diagnostic testing</label><br>
+      <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+      <label for = "1">therapeutic drainage</label><br><br>
+
+      <div id="div_consent"></div>
+
+      <div id = "div_side"></div>
+
+      <div id = "div_anesthetic"></div>
+
+      <h4>Results</h4>
+
+      <div id="div_largevolumefluid"></div>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                
+    <script src="procedure.js"></script>
+    
+    <script>
+
+      header();
+      consent('written');
+      side();
+      anesthetic();
+      largefluidvolume();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue("consent");
+        var anesthesia = getValue("anesthetic");
+        var side = getValue("side");
+        var color = getValue("clr");
+        var volume = getValue("volume");
+        
+        var t = "Procedure Note: Paracentesis \n";
+        
+        t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "diagnostic testing of the ascitic fluid.  ";
+            break;
+          case "1":
+            t = t + "therapeutic drainage of the ascitic fluid. ";
+            break;
+        }
+
+
+        t =t  + consent;
+        t = t + "Bedside ultrasound was used to mark the location. ";
+        t = t + "A wide area around the puncture site was prepped with Betadine. ";
+        t = t + "The puncture site was infiltrated with "+ volume " cc of " + anesthesia + ". ";
+        t = t + "The catheter-over-needle was inserted on the " + side + " side. ";
+        t = t + "The catheter was advanced and the needle was removed.  The catheter was connected to vacuutainer bottles and approximately " + volume + "liters ";
+        t = t + "of " + color + " fluid was obtained.  Ascitic fluid was sent to lab for studies. ";
+        t = t + "The catheter was then removed. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
