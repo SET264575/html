@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Inferior Alveolar Nerve Block</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Inferior Alveolar Nerve Block</h3>
+
+      <label for = "indication"><b>Indication</b></label><br>
+      <select id = "indication" onchange="copytext()">
+        <option>dental pain</option>
+        <option>***</option>
+        <option>***</option>
+      </select><br>
+
+      <div id = "div_consent"></div>
+
+      <div id = "div_anesthetic"></div>
+      <div id="div_side"></div>
+
+      <br>
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src= "procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+      anesthetic();
+      side();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue('consent');
+        var anesthetic = getValue("anesthetic");
+        var dose = getValue("dose");
+        var side = getValue("side");
+        var t = "Procedure Note: Inferior Alveolar Nerve Block\n";
+        t = t +"The block was indicated for "+ indication+". ";
+        t = t + "Using the Halsted approach, "+dose + " cc of ";
+        t = t + anesthetic;
+        t = t + " was injected on the ";
+        t = t + side.toLowerCase() + " side. ";
+        t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection. ";
+        t = t + "Adequate anesthesia was achieved. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
