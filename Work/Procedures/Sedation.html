@@ -1,0 +1,122 @@
+<!--
+
+Performed by: [Provider Name]
+
+Indications: [     ]
+
+Universal Protocol: a time out was performed and the correct patient and site were verified
+
+Consent: The risks and benefits of monitored anesthesia care, including the risk of aspiration, deep sedation requiring airway management including possible intubation, nausea/vomiting and the risks of not performing the procedure, including severe pain and inability to complete the procedure, were all discussed with the [patient]. The alternatives of performing the procedure, including local anesthesia and IV analgesia, also discussed. The patient has a ride home available.
+
+ASA Class: [I-healthy / II-mild systemic disease / III-severe systemic disease / IV-incapacitating systemic disease]
+
+Pre-anesthesia evaluation, including history, exam, and informed consent is documented in the ED note above.
+
+Monitoring: Continuous monitoring of heart rate, respiratory rate, pulse oximetry and ETCO2. Supplemental oxygen prior to and during procedure via nasal cannula. Resuscitation equipment available at the bedside during sedation.
+
+Intra-service start time: [00:00]
+
+Intra-service stop time: [00:00]
+
+The patient received [     ] and dosages were recorded on the sedation form. The patient was recovered from the sedation without complication or incident. Patient returned to pre-sedation level of awareness. The monitoring was discontinued at this time.
+
+Post-anesthesia evaluation:
+
+Respiratory function, cardiovascular function, temperature, and mental status [did/did not] return to pre-anesthetic state.
+
+Pain [was/was not] controlled.
+
+The patient [did/did not] tolerate p.o.
+
+-->
+
+
+<html>
+  <head>
+    <title>Conscious Sedation</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Conscious Sedation</h3>
+
+      <label for="indication"><b>Indication</b></label><br>
+      <select id = "indication" onchange = "copytext()">
+        <option value = "joint reduction">joint reduction</option>
+        <option value = "fracture reduction">fracture reduction</option>
+        <option value = "electrical cardioversion">electrical cardioversion</option>
+      </select><br><br>
+
+
+      <div id="div_consent"></div>
+
+      <label for = "npo_time"><b>Hours that patient had been NPO</b></label><br>
+      <select id = "npo_time" onchange = "copytext()">
+        <option value = "1">1</option>
+        <option value = "2">2</option>
+        <option value = "3">3</option>
+        <option value = "4">4</option>
+        <option value = "5">5</option>
+        <option value = "6">6</option>
+        <option value = "7">7</option>
+        <option value = "8">8</option>
+        <option value = "9">9</option>
+        <option value = "10">10</option>
+        <option value = "11">11</option>
+        <option value = "12">12</option>
+      </select><br><br>
+
+      <label for = "dose"><b>Dose of Etomidate</b></label><br>
+      <select id = "dose" onchange = "copytext()">
+        <option value = "1">1 cc</option>
+        <option value = "2">2 cc</option>
+        <option value = "3">3 cc</option>
+        <option value = "4">4 cc</option>
+        <option value = "5">5 cc</option>
+        <option value = "6">6 cc</option>
+        <option value = "7">7 cc</option>
+        <option value = "8">8 cc</option>
+        <option value = "9">9 cc</option>
+        <option value = "10">10 cc</option>
+      </select><br><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+      header();
+      consent('written');
+    </script>
+  
+    
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue('consent');
+        var npo_time = getValue"npo_time");
+        var dose = getValue("dose");
+        var t = "";
+        t = "Procedure Note:  Conscious sedation\n";
+        t = t + "Conscious sedation was indicated for "+indication+". ";
+        t = t + consent;
+        t = t + "The patient had been NPO for over "+npo_time+" hours. ";
+        t = t + "Standard preparations were made according to the ER sedation policy, including capnography, cardiac monitoring, pulse oximetry and provision of supplemental oxygen. ";
+        t = t + "Airway management equipment and suctioning were readily available. "
+        t = t + "Adequate sedation for achieved with the administration of " + dose + " mg of etomidate. ";
+        t = t + "The patient was continuously monitored until they were alert. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
