@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>
+        Nursemaid's elbow
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+    <h3>
+    Nursemaid's elbow reduction
+    </h3>
+    <div class=".reference">
+    Reference:
+    <a hhref = "https://www.msdmanuals.com/professional/cardiovascular-disorders/myocarditis-and-pericarditis/pericarditis#v939996">Procedure Video</a>
+    </div>
+
+      <div id="div_consent"></div>
+      <div id="div_side"></div>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">1/6/23</div>
+      <div class="nontested"></div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+
+      header();
+      consent('parenteral verbal');
+      side();
+    </script>
+  
+    <script>
+      copytext();
+      function copytext(){
+        var consent = getValue('consent');
+        var side = getValue('side');
+        var t = "Procedure Note: Reduction of "+ side + " nursemaid's elbow \n";
+        
+        t = t + consent;
+        t = t + "The radial head was reduced with supination and flexion of the forearm while applying pressure to the radial head. ";
+        t = t + "A palpable click was noted on successful reduction. ";
+        t = t + "Reduction was confirmed by significantly improved voluntary flexion of the elbow. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
