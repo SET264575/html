@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>
+        Priapism management
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>
+      Priapism management
+      </h3>
+
+      <div id="div_consent"></div>
+      
+      <div id="div_anesthetic"></div>
+      
+      <h4>Position</h4>
+      <input type = "radio" name = "position" value = "left" id = "left" onchange = "copytext()">
+      <label for = "left">2 o'clock (left)</label><br>
+      <input type = "radio" name = "position" value = "right" id = "right" onchange = "copytext()">
+      <label for = "right">10 o'clock (right)</label><br>
+      <!--input type = "radio" name = "position" value = "right and left" onchange = "copytext()">
+      <label for = "right and left">2 o'clock & 10 o'clock</label><br--><br>
+
+          <h4>Result</h4>
+      <input type = "radio" name = "result" value = "arterial" id = "result1" onchange = "copytext()">
+      <label for = "result1">arterial blood returned </label><br>
+      <input type = "radio" name = "result" value = "detumescence" id = "result2" onchange = "copytext()">
+      <label for = "result2">detumescence was achieved</label><br>
+  <br>
+
+      <h4>Phenylephrine</h4>
+      <label for="dose">Amount used</label><br>
+      <select id = "dose" onchange='copytext()'>
+        <option value = "0">None</option>
+        <option value = "100">100 mcg</option>
+        <option value = "200">200 mcg</option>
+        <option value = "300">300 mcg</option>
+        <option value = "400">400 mcg</option>
+        <option value = "500">500 mcg</option>
+      </select><br><br>
+
+      <input type = "checkbox" id = "multiple" onchange="copytext()">
+      <label for = "multiple">Multiple injections were required</label><br><br><br>
+      
+      <div class="note">
+        <a href = "https://coreem.net/core/priapism/">Link to description of procedure technique</a><br>
+        <a href = "..\Equipment\priapism.html">Equipment list</a><br>
+      </div>
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard2"></div>
+     </footer>
+                                               
+                            
+    
+    <script>
+    
+      header();
+      consent('written');
+      anesthetic();
+    </script>
+  
+    <script>
+      function copytext(){
+        var position = getValue("position");
+        var consent = getValue('consent');
+        var result = getValue("result");
+        var anesthetic = getValue('anesthetic');
+        var volume = getValue('volume');
+        var multiple = getValue("multiple");
+        var dose = getValue("dose")
+        var t = "Procedure Note: Priapism Management \n";
+        t = t + "The procedure was indicated for prolonged erection greater than 4 hours. ";
+        t = t + consent;
+        t = t + "The patient was placed on a cardiac monitor and frequent blood pressure checks were performed.  ";
+        t = t + "The skin was prepped in the typical sterile fashion.  ";
+        t = t + "The puncture site was infiltrated with " + volume + " cc of " + anesthetic + ". ";
+        t = t + "A butterfly needle was inserted into the corpus cavernosa at the ";
+        switch(position) {
+          case "right":
+            t = t + "10 o'clock position. ";
+            break;
+          case "left":
+            t = t + "2 o'clock position. ";
+            break;
+       //   case "right & left":
+       //     t = t= + "2 o'clock and 10 o'clock positions. ";
+       //     break;
+        }
+        t = t + " Blood was aspirated until ";
+        switch(result) {
+          case "arterial":
+            t =t + "arterial blood was returned. "
+            break;
+          case "detumescence":
+            t = t + "detumescence was achieved. ";
+            break;
+        }
+        if (multiple) {
+          t = t + "Multiple injections of phenylephrine were required for a total of " + String(dose) + "mcg. ";
+        }
+        else {
+          t = t + String(dose) + " mcg of phenylephrine were injected. ";
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
