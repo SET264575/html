@@ -21,6 +21,8 @@
 <br>
 
     <div id = "div_consent"></div>
+    
+    <div id = "div_risks"></div>
 
     <div id = "div_sedation"></div>
 
@@ -41,15 +43,10 @@
     <script>
       header();
       consent();
+      risks();
       sedation();
       side();
       anesthetic();
-    </script>
-      
-    <script>
-      function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
-      }
     </script>
   
     <script>
