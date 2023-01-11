@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>
+        Thoracentesis
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+    <h3>
+    Thoracentesis
+    </h3>
+    
+    <h4>Indication</h4>
+    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+    <label for = "0">diagnostic testing of pleural effusion</label><br>
+    <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+    <label for = "1">therapeutic drainage of pleural effusion</label><br>
+<br>
+
+
+      
+      <div id="div_consent"></div>   
+      <div id="div_side"></div>  
+      <div id = "div_anesthetic"></div>
+                                         
+    
+    <h4>Results</h4>
+
+      <div id="div_largevolumefluid"></div>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+   
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('written');
+      anesthetic();
+      side();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue("consent");
+        var anesthetic = getValue("anesthetic");
+        var volume = getValue('volume');
+        var side = getValue("side");
+        var color = getValue("clr");
+        var volume2 = getValue("volume2");
+        
+        var t = "Procedure Note: Thoracentesis \n";
+        
+        t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "diagnostic testing of the pleural effusion.  ";
+            break;
+          case "1":
+            t = t + "therapeutic drainage of the pleural effusion. ";
+            break;
+        }
+
+        t = t + consent;
+        
+        t = t + "Bedside ultrasound was used to mark the location of maximam pleural effusion thickness. ";
+        t = t + "A wide area around the puncture site was prepped with Betadine. ";
+        t = t + "The puncture site was infiltrated with " + volume + " cc of " + anesthetic + ". ";
+        t = t + "The catheter-over-needle was inserted through the intercostal space on the " + side + " side, ";
+        t = t + "passing just over the rib to avoid the neurovascular bundle, and into the pleural space. ";
+        t = t + "The catheter was advanced and the needle was removed.  The catheter was connected to vacuutainer bottles and approximately " + volume2 + "liters ";
+        t = t + "of " + color + " fluid was obtained.  Pleural fluid was sent to lab for studies. ";
+        t = t + "The catheter was then removed.  A post-procedure x-ray revealed decrease in the pleural effusion and no pneumothorax. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
