@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Nail trephination</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Nail trephination</h3>
+
+      <div id="div_consent"></div>
+      <div id = "div_side"></div>
+
+      <label for="digit"><b>Digit</b></label><br>
+      <select id = "digit" onchange = "copytext()">
+        <option>first</option>
+        <option>second</option>
+        <option>third</option>
+        <option>fourth</option>
+        <option>fifth</option>
+      </select><br>
+      <br>
+      <input type = "radio" name = "finger" id="finger" value = "finger" onchange = "copytext()">
+      <label for = "finger">finger</label><br>
+      <input type = "radio" name = "finger" id = "toe" value = "toe" onchange = "copytext()">
+      <label for = "toe">toe</label><br>
+      <br>
+
+
+      <input type = "checkbox" name = "block" id = "block" onchange = "copytext()">
+      <label for = "block">A digital block was performed.</label><br><br>
+
+      <label for="holes">Hole count</label><br>
+      <select id = "holes" onchange = "copytext()">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select><br>
+
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Digital block doesn't work</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+      side();
+    </script>
+      
+    <script>
+      function copytext(){
+        var side = getValue("side");
+        var consent = getValue('consent');
+        var digit = getValue("digit");
+        var finger = getValue("finger");
+        var block = getValue("block");
+        var holes = getValue("holes");
+        var t = "";
+
+        var location = side + " " + digit + " " + finger+'nail';
+        
+        var t = "Procedure Note: Trephination of the "+location+"\n";
+        t = t + "The procedure was indicated for a painful subungal hematoma. ";
+        t = t + consent;
+        if (block == true){
+          t = t + "A digital block was performed. ";
+        }
+        t = t + "The nail and surrounding skin was prepped with Betadine.  A high-temperature cauterizer was used to burn ";
+        if (holes == 1) {
+          t = t + "a hole through the nail.  Blood was expressed through the hole. ";
+        }
+        else {
+          t = t + holes + " holes through the nail.  Blood was expressed through the holes. ";
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
