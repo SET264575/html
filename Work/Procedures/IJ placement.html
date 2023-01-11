@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>
+        Vascular access
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>
+      Internal Jugular Central line placement
+      </h3>
+
+      <h4>Indication</h4>
+      <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+      <label for = "0">vascular access</label><br>
+      <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+      <label for = "1">administration of IV fluids</label><br><br>
+
+      <div id="div_consent"></div>
+
+      <div id="div_side"></div>
+
+    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+
+      header();
+      consent('written');
+      side();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var procedure = "Internal Jugular Vein";
+        var consent = getValue("consent");
+        //var sedation = getRadioButtonValue("sedation");
+        var side = getValue("side");
+        var location = "internal jugular vein";
+
+        var t = "Procedure Note: Central line placement in the "+ side + " "+location +"\n";
+        
+        t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "vascular access. ";
+            break;
+          case "1":
+            t = t + "IV fluid administration. ";
+            break;
+        }
+
+        t = t + consent;
+        t = t + "The patient was prepped and draped in the usual sterile fashion. ";
+        t = t + "Ultrasound guidance was used to visualize the " + side + " " + location + " and surrounding structures.  ";
+        t = t + "The IV catheter was placed using the Seldinger technique and secured to the skin with 2-0 silk suture. ";
+        t = t + "Proper location was confirmed with x-ray. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
