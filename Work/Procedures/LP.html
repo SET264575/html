@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>Lumbar puncture</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Lumbar Puncture</h3>
+      <a href="https://coreem.net/core/ultrasound-guided-lumbar-puncture/">Finding landmarks with ultrasound guidance</a><br>
+      <a href = "../../ER\Equipment/lp.html">Equipment list</a><br>
+
+      <h4>Indication</h4>
+      <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+      <label for = "0">meningitis</label><br>
+      <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+      <label for = "1">subarachnoid hemorrhage</label><br><br>
+
+
+
+      <div id="div_consent"></div>
+
+      <input type = "checkbox" id = "lidocaine" onchange= "copytext()">
+      <label for="lidocaine">Lidocaine was used</option><br>
+
+      <h4>Needle Size</h4>
+      <input type = "radio" name = "needle" value = "0" id = "needle" onchange = "copytext()">
+      <label for = "0">20 gauge</label><br>
+      <input type = "radio" name = "needle" value = "1" id = "needle" onchange = "copytext()">
+      <label for = "1">22 gauge</label><br>
+      <input type = "radio" name = "needle" value = "2" id = "needle" onchange = "copytext()">
+      <label for = "2">24 gauge</label><br><br>
+
+      <h4>Interspace</h4>
+      <input type = "radio" name = "interspace" value = "0" id = "interspace" onchange = "copytext()">
+      <label for = "0">L3-L4</label><br>
+      <input type = "radio" name = "interspace" value = "1" id = "interspace" onchange = "copytext()">
+      <label for = "1">L4-L5</label><br><br>
+
+      <h4>Fluid color</h4>
+      <input type = "radio" name = "color" value = "0" id = "color" onchange = "copytext()">
+      <label for = "0">clear</label><br>
+      <input type = "radio" name = "color" value = "1" id = "color" onchange = "copytext()">
+      <label for = "1">cloudy</label><br>
+      <input type = "radio" name = "color" value = "2" id = "color" onchange = "copytext()">
+      <label for = "2">bloody</label><br><br>
+
+      <label for = "pressure">Opening pressure</label>
+      <textarea class="smalltextarea" id = "pressure" onchange = "copytext()"></textarea><br><br><br><br><br>
+
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class = "meetsStandard2"></div>
+     </footer>
+
+
+    <script src= "procedure.js"></script>
+    
+    <script>
+
+      header();
+      consent('written');
+    </script>
+     
+    <script>
+      function copytext(){
+        var needle = getValue("needle");
+        var indication = getValue("indication");
+        var interspace = getValue("interspace");
+        var color = getValue("color");
+        var pressure = getValue("pressure");
+        var lidocaine = getValue("lidocaine");
+        var consent = getValue("consent");
+
+
+        var t = "Procedure Note:  Lumbar puncture\n";
+        t = t + "The procedure was indicated to rule out ";
+        switch(indication){
+            case "0":
+                t = t + "meningitis. ";
+                break;
+            case "1":
+                t = t + "subarachnoid hemorrhage. ";
+            break;
+        }
+        t = t + consent;
+                
+        t = t + "The patient was placed in a right lateral decubitus position. ";
+        t = t + "The procedure was performed under sterile conditions.  A wide area around the puncture site was prepped and draped sterilely using Betadine. ";
+        if (lidocaine) {
+            t = t + "The puncture site was anesthetized with 1% lidocaine. ";
+        }
+        
+        t = t + "A ";
+        switch(needle){
+            case "0":
+                t = t + "20 gauge";
+                break;
+            case "1":
+                t = t + "22 gauge";
+                break;
+            case "2":
+                t = t + "24 gauge";
+                break;
+        }
+        t = t + " needle was inserted into the ";
+    
+        switch(interspace){
+             case "0":
+                t = t + "L3-L4";
+                break;
+              case "1":
+                t = t + "L4-L5";
+                break;
+        }
+        t = t + " interspace and approximately 4 cc of ";  
+        switch(color){
+            case "0":
+                t = t + "clear";
+                break;
+            case "1":
+                t = t + "cloudy";
+                break;
+            case "2":
+                t = t + "bloody";
+                break;
+        }
+        t = t + " fluid was obtained and sent for studies. ";
+        if (pressure != '') {t = t + "Opening pressure was " + pressure + " cm water. ";}
+        t = t + "The needle was withdrawn, the puncture site was covered with a Band-Aid and the patient was placed prone. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications.";
+        displayText(t);
+    }
+   </script>    
+ </body>
+</html>
+    
+
+
