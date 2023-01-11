@@ -1,0 +1,126 @@
+<!--
+Location:  right, mid axillary line, fifth interspace
+Size of tube:  20 Fr
+Prep: betadine and sterile drapes
+Anesthetic:  1%
+Amount:
+Incision made with #15
+tube drainage
+CXR
+Tolerated
+
+-->
+<html>
+  <head>
+    <title>Chest tube</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Chest tube</h3>
+      <h4>Indication</h4>
+      <input type = "radio" id = "Indication2" name = "Indication" value = "0" onchange = "copytext()">
+      <label for = "Indication2">tension pneumothorax</label><br>
+      <input type = "radio" id = "Indication0" name = "Indication" value = "0" onchange = "copytext()">
+      <label for = "Indication0">pneumothorax</label><br>
+      <input type = "radio" id = "Indication1" name = "Indication" value = "1" onchange = "copytext()">
+      <label for = "Indication1">hemothorax</label><br>
+
+      <div id="div_side"></div>
+      
+      <h4>Intercostal space</h4>
+      <input type = "radio" id = "intercostal space0" name = "intercostal space" value = "0" onchange = "copytext()">
+      <label for = "intercostal space0">5th</label><br>
+      <h4>size of tube</h4>
+      <input type = "radio" id = "size of tube0" name = "size of tube" value = "20" onchange = "copytext()">
+      <label for = "size of tube0">20 Fr</label><br>
+
+      <div id="div_anesthetic"></div>
+
+      <h4>Tube drainage</h4>
+      <select id = "Tube drainage"  onchange = "copytext()">
+         <option>none</option>
+         <option>small amount of air</option>
+         <option>large amount of air</option>
+         <option>clear fluid</option>
+         <option>bloody fluid</option>
+      </select><br><br>
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested"><b>Not yet working</b></div>
+      <!--div class="meetsStandard1"></div-->
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent();
+      side();
+    </script>
+    
+    <script>
+      function copytext(){
+        var t = '';
+        var Indication = getValue("Indication");
+        var consent = getValue('consent');
+        var side = getValue("side");
+        var intercostal = getValue("intercostal space");
+        var size = getValue("size of tube");
+        var anesthetic = getValue("anesthetic");
+        var volume = getValue("volume");
+        var drainage = getValue("Tube drainage");
+
+        t = t + "Procedure Note: Chest tube placement\n";
+        t = t + "Chest tube was indicated for ";
+        switch(Indication){
+          case "0":
+            t = t + "tension pneumothorax";
+            break;
+          case "1":
+            t = t + "pneumothorax";
+            break;
+          case "2":
+            t = t + "hemothorax";
+            break;
+        }
+        t = t + consent;
+        
+        t = t + "The insertion site, at the " + side.toLowerCase();
+  
+        switch(intercostal){
+          case "0":
+            t = t + "5th";
+            break;
+        }
+        
+        t = t + " intercostal space in the mid-axillary line, was prepped with Betadine and sterile drapes, and then infiltrated with " + volume + " cc of " + anesthetic;
+        t = t + ".  An skin incision was then made with a #15 blade and the tissues were bluntly dissected to the pleural space.  A ";
+        switch(size){
+          case "20":
+            t = t + "20 Fr";
+            break;
+        }
+        
+        t = t + "chest tube was placed and connected to suction with return of " + drainage + ". ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. "  
+        displayText(t);
+      }
+
+    function getRadioButtonValue(id) {
+     var ele = document.getElementsByName(id);
+      var value = "";
+        for(i = 0; i < ele.length; i++) {
+          if(ele[i].checked){
+            value = ele[i].value;
+          }
+       }
+       return(value);
+      }
+    </script>
+  </body>
+</html>
