@@ -151,11 +151,17 @@ function anesthetic() {load('anesthetic')}
 function consent(index){
       load('consent');
       switch(index) {
+        case "implied":
+          document.getElementById('consent1').checked = true;
+          break;
         case 'verbal':
           document.getElementById('consent2').checked = true;
           break;
         case "written":
           document.getElementById('consent3').checked = true;
+          break;
+        case "none":
+          document.getElementById('consent4').checked = true;
           break;
       }
 }
