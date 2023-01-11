@@ -1,0 +1,153 @@
+
+
+<html>
+  <head>
+    <title>Intubation</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Intubation</h3>
+
+      <input type = "checkbox" id = "student" onchange="copytext()">
+      <label for = "student">The procedure was performed by [student name] under my direct supervision.  I was present throughout the entire procedure.</label>
+      <h4>Indication</h4>
+      <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+      <label for = "0">respiratory failure</label><br>
+      <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+      <label for = "1">airway protection</label><br><br>
+
+      <div id="div_consent"></div>
+
+      <h4>Sedation</h4>
+      <input type = "radio" name = "sedation" value = "3" id = "sedation3" onchange = "copytext()">
+      <label for = "3">The patient was sedated with 20 mg of etomidate and paralyzed with 100 mg of succinylcholine.</label><br>
+      <input type = "radio" name = "sedation" value = "0" id = "sedation0" onchange = "copytext()">
+      <label for = "0">The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
+      <input type = "radio" name = "sedation" value = "1" id = "sedation1" onchange = "copytext()">
+      <label for = "1">The patient did not require sedation due to their mental status and was paralyzed with 150 mg of succinylcholine.</label><br>
+      <input type = "radio" name = "sedation" value = "2" id = "sedation2" onchange = "copytext()">
+      <label for = "2">The patient did not require sedation or paralysis.</label><br><br>
+
+      <label for="tube_size"><b>Tube size</b></label><br>
+      <select id = "tube_size" onchange = "copytext()">
+        <option>8.0</option>
+        <option>7.5</option>
+        <option>7.0</option>
+        <option>6.5</option>
+      </select><br>
+
+      <label for="depth"><b>Depth</b></label><br>
+      <select id = "depth" onchange = "copytext()">
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+      </select><br>
+
+      <h4>Secured location</h4>
+      <input type = "radio" name = "secured_location" value = "0" id = "secured_location" onchange = "copytext()">
+      <label for = "0">teeth</label><br>
+      <input type = "radio" name = "secured_location" value = "1" id = "secured_location" onchange = "copytext()">
+      <label for = "1">lip</label><br>
+      <input type = "radio" name = "secured_location" value = "2" id = "secured_location" onchange = "copytext()">
+      <label for = "2">gum</label><br><br>
+
+      <h4>Oxygen saturation</h4>
+      <input type = "radio" name = "oxygen_saturation" value = "0" id = "oxygen_saturation" onchange = "copytext()">
+      <label for = "0">improved</label><br>
+      <input type = "radio" name = "oxygen_saturation" value = "1" id = "oxygen_saturation" onchange = "copytext()">
+      <label for = "1">remained stable</label><br>  <br>
+
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('implied');
+    </script>
+    
+    <script>
+      function copytext(){
+        var student = getValue("student");
+        var indication = getValue("indication");
+        var consent = getValue("consent");
+        var sedation = getValue("sedation");
+        var tube_size = getValue("tube_size");
+        var depth = getValue("depth");
+        var secured_location = getValue("secured_location");
+        var oxygen_saturation = getValue("oxygen_saturation");
+        var t = "Procedure Note: Intubation\n";
+        
+        if (student){
+          t = t + "The procedure was performed by [student] under my direct supervision.  I was present throughout the entire procedure. ";
+        }
+        
+        t = t + "Intubation was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "respiratory failure. ";
+            break;
+          case "1":
+            t = t + "airway protection. ";
+            break;
+        }
+
+        t =t + consent;
+
+        switch(sedation){
+          case "0":
+            t = t + "The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.";
+            break;
+          case "1":
+            t = t + "The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.";
+            break;
+          case "2":
+            t = t + "The patient did not require sedation or paralysis.";
+            break;
+        }
+        t = t + " A " + tube_size + " cuffed ETT was placed through the vocal cords and secured at ";
+        t = t + depth + " cm at the ";
+
+        switch(secured_location){
+          case "0":
+            t = t + "teeth";
+            break;
+          case "1":
+            t = t + "lip";
+            break;
+          case "2":
+            t = t + "gum";
+            break;
+        }
+        t = t + ". Tube placement was confirmed by visualizing the tube passing through the vocal cords, auscultation of the lungs ";
+        t = t + "and epigastrium, fog in the tube, and capnography.  The patient's oxygen saturation ";
+        
+        switch(oxygen_saturation){
+          case "0":
+            t = t + "improved";
+            break;
+          case "1":
+            t = t + "remained stable";
+            break;
+        }
+        t = t + " after tube placement. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        t = t + "Post-intubation x-ray showed the tube in proper location with the tip of the tube above the carina.";
+  
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
