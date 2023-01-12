@@ -338,7 +338,10 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           }
 		      makeDDXTable();
         } */
-
+      function setFlag(id,flag) {
+        document.getElementById(id+'flag').innerHTML = id + ": " + flag;
+        document.getelementById(id+'flag').value = flag;
+      }
 
           setFlag('sepsis',false);
           setFlag('sirs',false);
@@ -532,10 +535,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             }
           }
       
-      function setFlag(id,flag) {
-        document.getElementById(id+'flag').innerHTML = id + ": " + flag;
-        document.getelementById(id+'flag').value = flag;
-      }
+
 	  </script>
   </body>
 </html>
