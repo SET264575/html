@@ -249,10 +249,21 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             console.log(list2[i]);
           }
 		      makeDDXTable();
-        }
+        } */
         
         function check(id) {
-        
+          var sepsis = false;
+          var sirs = false;
+          var bacterial = false;
+          var viral = false;
+          var noninfectious = false;
+          var organdysfunction = false;
+          var exclusions = false;
+          var organdysfunctionexclusion = false;
+          var severesepsis = false;
+          var persistenthypotension = false;
+          var shock = false;
+		
           document.getElementById(id).checked == !document.getElementById(id).checked;
           if (document.getElementById(id).style['background-color'] == 'lightgray') {
             document.getElementById(id).style['background-color'] = 'lightblue';
@@ -268,14 +279,16 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           
           if (isAnyChecked("sirs")) {
             t = t + "The patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
-          }
-          
-          if (isAnyChecked("lactate")) {
-            t = t + "Lactate was " + getRadioButtonValue('lactate')+". ";
+            sirs = true;
           }
           if (isAnyChecked('sepsisetiology')) {
             t = t + "The patient appears to be septic due to " + getRadioButtonValue('sepsisetiology') + ". ";
+            bacterial = true; //******************//
           }
+          if (isAnyChecked("lactate")) {
+            t = t + "Lactate was " + getRadioButtonValue('lactate')+". ";
+          }
+
           if (isAnyChecked('sepsis-organ')) {
             t = t + "There is evidence of organ damage including " + combineItemsFromButtons('sepsis-organ')+". ";
           }
@@ -360,11 +373,11 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             }
           }
           return('____________________');
-        } */
+        } 
       </script>
     
 	  <script>
-      /*  
+       
       function isChecked(id) {
         return(document.getElementById(id).checked);
       }
@@ -376,7 +389,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             else {
               document.getElementById(id).style.display = "none";
             }
-          }*/
+          }
 	  </script>
   </body>
 </html>
