@@ -15,17 +15,17 @@
     </div>
 
     <div class="main">
-          <div class="block">
-            <h4>SIRS criteria</h4>
-            <ul class="radiobutton">
-              <li><input type = "checkbox"  class="choicebutton" id="sirs-fever" name = "sirs" onclick="show('div_fever');check(this.id)" value = "fever"><label for = "sirs-fever">Fever</label></li>
-              <li><input type = "checkbox"  class="choicebutton" id="sirs-tachycardia" name = "sirs" onclick="show('div_tachycardia');check(this.id)" value = "tachycardia"><label for = "sirs-tachycardia">Tachycardia</label></li>
-              <li><input type = "checkbox"  class="choicebutton" id="sirs-tachypnea" name = "sirs" onclick="show('div_tachypnea);check(this.id)" value = "tachypnea"><label for = "sirs-tachypnea">Tachypnea</label></li>
-              <li><input type = "checkbox"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="show('div_leukocytosis');check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
-            </ul>
-          </div>
-          <h4>SIRS criteria due to other causes than sepsis</h4>
-  
+      <div class="block">
+        <h4>SIRS criteria</h4>
+        <ul class="radiobutton">
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-fever" name = "sirs" onclick="show('div_fever');check(this.id)" value = "fever"><label for = "sirs-fever">Fever</label></li>
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-tachycardia" name = "sirs" onclick="show('div_tachycardia');check(this.id)" value = "tachycardia"><label for = "sirs-tachycardia">Tachycardia</label></li> 
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-tachypnea" name = "sirs" onclick="show('div_tachypnea);check(this.id)" value = "tachypnea"><label for = "sirs-tachypnea">Tachypnea</label></li>   
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="show('div_leukocytosis');check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
+        </ul>     
+      </div>        
+      <div class="block">
+        <h4>SIRS criteria due to other causes than sepsis</h4>
           <div class="block hidden" id = "div_tachycardia">
             <h4>Tachycardia</h4>
             <ul class = "radiobutton">
@@ -34,7 +34,6 @@
               <li><input type = "radio" class = "choicebutton" id="tachy3" name = "tachycardia" onclick = "check(this.id)" value = "atrial fibrillation with RVR"><label for="tachy3">A. fib with RVR</label></li>
             </ul>
           </div>
-            
           <div class="block hidden" id = "div_tachypnea">
             <h4>Tachypnea</h4>
             <ul class = "radiobutton">
@@ -72,14 +71,12 @@
             </ul>
           </div>
       
-	     
 	        <div class="block">
             <h4>Lactate</h4>
             <ul class = "radiobutton">
               <li><input type = "radio"  class="choicebutton" id="lactate1" name = "lactate" onclick="check(this.id)" value = "<= 2.0"><label for = "lactate1"><= 2.0</label></li>
               <li><input type = "radio"  class="choicebutton" id="lactate2" name = "lactate" onclick="check(this.id)" value = "between 2.0 and 4.0"><label for = "lactate2">between 2.0 and 4.0</label></li>
               <li><input type = "radio"  class="choicebutton" id="lactate3" name = "lactate" onclick="check(this.id)" value = ">= 4.0"><label for = "lactate2">>= 4.0</label></li>
-              
             </ul>
           </div>
 	      
@@ -101,11 +98,9 @@
               <li><input type = "radio"  class="choicebutton" id="sepsis-peritonitis" name = "sepsisetiology" onclick="check(this.id)" value = "peritonitis"><label for = "sepsis-peritonitis">Peritonitis</label></li>
               
               <li><input type = "radio"  class="choicebutton" id="sepsis-pyelonephritis" name = "sepsisetiology" onclick="check(this.id)" value = "pyelonephritis"><label for = "sepsis-pyelonephritis">Pyelonephritis</label></li>
-            
-	      <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsisetiology" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsisetiology" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-tick" name = "sepsisetiology" onclick="check(this.id)" value = "a tick-borne illness"><label for = "sepsis-tick">Tick-borne illness</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-undiscovered" name = "sepsisetiology" onclick="check(this.id)" value = "a, thus far, undiscovered source"><label for = "sepsis-undiscovered">Undiscovered source</label></li>
-             
               <li><input type = "radio"  class="choicebutton" id="sepsis-blank" name = "sepsisetiology" onclick="check(this.id)" value = "[sepsis cause]"><label for = "sepsis-blank">[sepsis cause]</label></li>
             </ul>
           </div><br><br>
@@ -124,18 +119,16 @@
           <li><input type = "checkbox" class="choicebutton" id="sepsis-organ9" name = "sepsisorgan" onclick="check(this.id)" value = "greater than 40 mm Hg decrease in SBP due to infection"><label for="sepsis-organ9">greater than 40 mm Hg decrease in SBP due to infection</label></li>
           <li><input type = "checkbox" class="choicebutton" id="sepsis-organ10" name = "sepsisorgan" onclick="check(this.id)" value = "acute respiratory failure requiring invasive ventilation"><label for="sepsis-organ10">acute respiratory failure requiring invasive ventilation</label></li>
           <li><input type = "checkbox" class="choicebutton" id="sepsis-organ11" name = "sepsisorgan" onclick="check(this.id)" value = "acute respiratory failure requiring non-invasive ventilation"><label for="sepsis-organ11">acute respiratory failure requiring non-invasive ventilation</label></li>
-          
         </ul>
       </div><br><br>
             
       <p id = "othercauses"></p>
       
       <div class = "block" id = "response">
-      <h4>Response after 30 mL/kg</h4>
+        <h4>Response after 30 mL/kg</h4>
         <ul class = "radiobutton">
           <li><input type = "radio" class="choicebutton" id="response" name = "response" onclick="check(this.id)" value = "test"><label for="response">Persistent hypotension</label></li>
         </ul>
-        </h4>
     </div>
           
       
