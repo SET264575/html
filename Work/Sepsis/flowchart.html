@@ -30,10 +30,10 @@
           
     <div class="header" id = "header">
       <!--h3>The following text has been copied to the clipboard and is ready to be pasted into your document.</h3-->
-	    <table style="width: 100%">
+      <table style="width: 100%">
         <td style = "padding: 10px"></td>
         <td style = "width: 85%; padding: 10px"><textarea id="text"></textarea></td>
-	    </table>
+      </table>
     </div>
     <div class = "main" id = "flowchart">
         <!--tr><td>SIRS?</td><td>-No&rarr</td><td><button id= "notsepsis1" onclick="go(this.id)">Not Sepsis</button></td></tr>
@@ -44,9 +44,6 @@
         <tr><td>|<br>|<br></td><td></td><td></td></tr-->
       
 	    <p id='table'></p>
-      <p>&8594 &8595 &darr &rightarrow</p>
-	    
-	   
     </div>
       <script>
         var list = [];
@@ -59,8 +56,8 @@
         list.push(['Lactate > 4?','Yes','Septic Shock']);
         list.push(['Persistent hypotension?','Yes','Septic Shock']);
         for (let i = 0; i<list.length;i++){
-          t = t + '<tr><td class="td1">'+list[i][0]+'</td><td class="td2">'+list[i][1]+'<br>------>ux02192</td><td class="td3"><button id = "sepsis'+String(i)+'" onclick="go(this.id)">'+list[i][2]+'</button></td></tr>';
-          t = t + '<tr><td>ux02193';
+          t = t + '<tr><td class="td1">'+list[i][0]+'</td><td class="td2">'+list[i][1]+'<br>------>\x02192</td><td class="td3"><button id = "sepsis'+String(i)+'" onclick="go(this.id)">'+list[i][2]+'</button></td></tr>';
+          t = t + '<tr><td>\x02193';
 	        if (list[i][2] == "No") {
             t = t + "Yes";
           }
