@@ -164,12 +164,19 @@
           var value = document.getElementById(id).value;
           t = "At "+ currentTime()+", ";
           switch(id) {
-            case "sirs-tachycardia","sirs-tachypnea","sirs-fever","sirs-hypothermia","sirs-leukocytosis":
+            case "sirs-tachycardia":
+            case "sirs-tachypnea":
+            case "sirs-fever":
+            case "sirs-hypothermia": 
+            case "sirs-leukocytosis":
               t = t + "SIRS criteria is not met with only "+value+" currenty present. ";
               break;
-           case "othersirs-tachycardia-cause1","othersirs-tachycardia-cause2","othersirs-tachycardia-cause3","othersirs-tachycardia-cause4","othersirs-tachycardia-cause5":
+            case "othersirs-tachycardia-cause1":
+            case "othersirs-tachycardia-cause2":
+            case "othersirs-tachycardia-cause3":
+            case "othersirs-tachycardia-cause4":
+            case "othersirs-tachycardia-cause5":
               t = t + "SIRS criteria are technically met, however, tachycardia is due to "+ value + " rather than infection. ";
-
               break;
           }
           document.getElementById('text').value = t;
