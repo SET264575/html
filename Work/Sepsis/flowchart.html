@@ -16,13 +16,34 @@
     </div>
     <div id = "main">
       <table>
-        <tr><td>SIRS?</td><td>-No&rarr</td><td><button id= "notsepsis1" onclick="go(this.id)">Not Sepsis</button></td></tr>
+        <!--tr><td>SIRS?</td><td>-No&rarr</td><td><button id= "notsepsis1" onclick="go(this.id)">Not Sepsis</button></td></tr>
         <tr><td>|<br>Yes<br>&darr</td><td></td><td></td></tr>
         <tr><td>Other causes of SIRS?</td><td>----Yes----&gt</td><td><button id= "notsepsis2" onclick="go(this.id)">Not Sepsis</button></td></tr>
         <tr><td>|<br>|<br>V<br></td><td></td><td></td></tr>
         <tr><td>bacterial infection</td><td>----No----&gt</td><td><button id= "notsepsis3" onclick="go(this.id)">Not Sepsis</button></td></tr>
-        <tr><td>|<br>|<br></td><td></td><td></td></tr>
+        <tr><td>|<br>|<br></td><td></td><td></td></tr-->
+        <p id='table'></p>
       </table>
+      <script>
+        var list = [];
+        var t = "";
+        list.push(['SIRS?','No','Not Sepsis']);
+        list.push(['Other causes of sepsis?','Yes','Not Sepsis']);
+        list.push(['Bacterial infection?','No','Not Sepsis']);
+        list.push(['Organ dysfunction?','No','Sepsis']);
+        list.push(['Other causes of organ dysfunction?','Yes','Sepsis']);
+        list.push(['Lactate > 4?','Yes','Septic Shock']);
+        list.push(['Persistent hypotension?','Yes','Septic Shock']);
+        list.push(['Severe sepsis','','']);
+        for (let i = 0; i<list.length-1;i++){
+          t = t + '<tr><td class="td1">'+list[i][0]+'</td><td class="td2">--'+list[i][1]+'&gt</td><td class="td3"><button id = "sepsis'+String(i)+'" onclick="go(this.id)">'+list[i][2]+'</button></td></tr>';
+          t = t + '<tr><td>|<br>|<br>|<br>V<br></td><td></td><td></td>';
+        }
+        document.getElementById('table').innerHTML = t;
+        
+      </script>
+      
+        
     </div>
   </body>
 </html>
