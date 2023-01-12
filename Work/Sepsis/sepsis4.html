@@ -383,6 +383,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
       }
           
           function show(thisid,id) {
+		  console.log(id);
             if (document.getElementById(thisid).checked) {
             document.getElementById(id).style.display = "block";
             }
