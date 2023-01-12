@@ -77,6 +77,16 @@
               <li><input type="checkbox" id = "othersirs-tachycardia-cause5" onclick="copytext(this.id)" value = "atrial fibrillation with RVR"><label for="othersirs-tachycardia-cause5">atrial fibrillation with RVR</label></li>
             </ul>
           </div>
+          <div class="block">
+            <ul class="radiobutton">
+              <h5>Tachypnea is due to:</h5>
+              <li><input type="checkbox" id = "othersirs-tachypnea-cause1" onclick="copytext(this.id)" value = "COPD exacerbation"><label for="othersirs-tachypnea-cause1">COPD exacerbation</label></li>
+              <li><input type="checkbox" id = "othersirs-tachypnea-cause2" onclick="copytext(this.id)" value = "anxiety"><label for="othersirs-tachypnea-cause2">anxiety</label></li>
+              <li><input type="checkbox" id = "othersirs-tachypnea-cause3" onclick="copytext(this.id)" value = "pain"><label for="othersirs-tachypnea-cause3">pain</label></li>
+              <li><input type="checkbox" id = "othersirs-tachypnea-cause4" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-tachypnea-cause4">PE</label></li>
+              <li><input type="checkbox" id = "othersirs-tachypnea-cause5" onclick="copytext(this.id)" value = "CHF"><label for="othersirs-tachycardia-cause5">CHF</label></li>
+            </ul>
+          </div>
         </div>
 
         <div class="hidden" id="div_sepsis2">
@@ -191,6 +201,13 @@
             case "othersirs-tachycardia-cause4":
             case "othersirs-tachycardia-cause5":
               t = t + "SIRS criteria are technically met, however, tachycardia is due to "+ value + " rather than infection. ";
+              break;
+            case "othersirs-tachypnea-cause1":
+            case "othersirs-tachypnea-cause2":
+            case "othersirs-tachypnea-cause3":
+            case "othersirs-tachypnea-cause4":
+            case "othersirs-tachypnea-cause5":
+              t = t + "SIRS criteria are technically met, however, tachypnea is due to "+ value + " rather than infection. ";
               break;
             case "othersirs-cause1":
             case "othersirs-cause2":
