@@ -14,6 +14,10 @@
 
       .hidden {
         display: none;
+	padding: 0 18px;
+        overflow: hidden;
+        margin: 20px;
+        background-color: white;
       }
       
       .collapsible {
