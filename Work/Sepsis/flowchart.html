@@ -145,9 +145,11 @@
           var value = document.getElementById(id).value;
           t = "At "+ currentTime()+", ";
           switch(id) {
-            case "button_sepsis0":
+            case "sirs-tachycardia","sirs-tachypnea","sirs-fever","sirs-hypothermia","sirs-leukocytosis":
               t = t + "SIRS criteria is not met with only "+value+" currenty present. ";
               document.getElementById('text').value = t;
+              break;
+			  
           }
         }
           
