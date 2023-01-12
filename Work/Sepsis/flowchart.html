@@ -41,8 +41,8 @@
         list.push(['Lactate > 4?','Yes','Septic Shock']);
         list.push(['Persistent hypotension?','Yes','Septic Shock']);
         for (let i = 0; i<list.length-1;i++){
-          t = t + '<tr><td class="td1">'+list[i][0]+'</td><td class="td2">--'+list[i][1]+'--&gt&rarr</td><td class="td3"><button id = "sepsis'+String(i)+'" onclick="go(this.id)">'+list[i][2]+'</button></td></tr>';
-          t = t + '<tr><td>&darr</td><td></td><td></td>';
+          t = t + '<tr><td class="td1">'+list[i][0]+'</td><td class="td2">--'+list[i][1]+'--&rightarrow</td><td class="td3"><button id = "sepsis'+String(i)+'" onclick="go(this.id)">'+list[i][2]+'</button></td></tr>';
+          t = t + '<tr><td>&downarrow</td><td></td><td></td>';
         }
         t = t + '<tr><td class="td1"><button id="sepsis7" onclick="go(this.id)">Severe Sepsis</button></td></tr>';
         document.getElementById('table').innerHTML = t;
