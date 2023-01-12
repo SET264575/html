@@ -41,10 +41,13 @@
     
     <div class="hidden" id="div_sepsis0">
       <h4>Not Sepsis Due to SIRS not meet</h4>
+      <button id="button_sepsis0" onclick="copytext()">Test</button>
+      
     </div>
         
     <div class="hidden" id="div_sepsis1">
-      <h4>Not Sepsis Due to Other Causes of SIRS</h4>
+	    <h4>Not Sepsis Due to Other Causes of SIRS</h4>
+      <button id="button_sepsis1" onclick="copytext()">Test</button>
     </div>
         
     <div class="hidden" id="div_sepsis2">
@@ -127,10 +130,14 @@
           }*/
         }
         
-        function copytext() {
+        function copytext(id) {
           var t = "";
           t = currentTime();
-          document.getElementById('text').value = t;
+          switch(id) {
+            case "button_sepsis0":
+              t = t + "SIRS criteria not met.";
+              document.getElementById('text').value = t;
+          }
         }
           
         function currentTime(){
