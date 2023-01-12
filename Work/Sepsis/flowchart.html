@@ -26,7 +26,7 @@
   <body>
     <div id="top">
     </div>
-    <div id = "main">
+    <div id = "flowchart">
       <table>
         <!--tr><td>SIRS?</td><td>-No&rarr</td><td><button id= "notsepsis1" onclick="go(this.id)">Not Sepsis</button></td></tr>
         <tr><td>|<br>Yes<br>&darr</td><td></td><td></td></tr>
@@ -53,9 +53,27 @@
         t = t + '<tr><td class="td1"><button id="sepsis7" onclick="go(this.id)">Severe Sepsis</button></td></tr>';
         document.getElementById('table').innerHTML = t;
         
+        function go(id) {
+          switch (id) {
+            case "sepsis0":
+              break;
+            case "sepsis1":
+              break;
+            case "sepsis2":
+              break;
+            case "sepsis3":
+              break;
+            case "sepsis4":
+              break;
+            case "sepsis5":
+              break;
+            case "sepsis6":
+              break;
+            case "sepsis7":
+              break;
+          }
+        }
       </script>
-      
-        
     </div>
   </body>
 </html>
