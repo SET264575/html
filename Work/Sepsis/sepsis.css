@@ -11,6 +11,10 @@
       .main {
         margin-top: 310px;
       }
+
+      .hidden {
+        display: none;
+      }
       
       .collapsible {
         background-color: lightskyblue;
