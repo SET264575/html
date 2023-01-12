@@ -379,7 +379,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           
           if (isAnyChecked("sirs")) {
             t = t + "The patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
-            var sirscount++;
+            var sirscount = 0;
             if (document.getElementById('sirs-fever').checked || document.getElementById('sirs-hypothermia').checked) {
               sirscount++;
             }
