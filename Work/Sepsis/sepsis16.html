@@ -41,7 +41,7 @@
       </div>        
       <div class="block">
         <h4>SIRS criteria due to other causes than sepsis</h4>
-          <div class="block hidden" id = "div_tachycardia">
+          <div class="hidden" id = "div_tachycardia">
             <h4>Tachycardia</h4>
             <ul class = "radiobutton">
               <li><input type = "radio" class = "choicebutton" id="tachy1" name = "tachycardia" onclick = "check(this.id)" value = "anxiety"><label for="tachy1">Anxiety</label></li>
@@ -49,7 +49,7 @@
               <li><input type = "radio" class = "choicebutton" id="tachy3" name = "tachycardia" onclick = "check(this.id)" value = "atrial fibrillation with RVR"><label for="tachy3">A. fib with RVR</label></li>
             </ul>
           </div>
-          <div class=" hidden" id = "div_tachypnea">
+          <div class="hidden" id = "div_tachypnea">
             <h4>Tachypnea</h4>
             <ul class = "radiobutton">
               <li><input type = "radio" class = "choicebutton" id="tachyp1" name = "tachypnea" onclick = "check(this.id)" value = "anxiety"><label for="tachyp1">Anxiety</label></li>
@@ -58,7 +58,7 @@
             </ul>
           </div>
       
-          <div class=" hidden" id = "div_fever">
+          <div class="hidden" id = "div_fever">
             <h4>Fever</h4>
             <ul class = "radiobutton">
               <li><input type = "radio" class = "choicebutton" id="fever1" name = "fever" onclick = "check(this.id)" value = "drug side effect"><label for="fever1">Drug side effect</label></li>
@@ -67,7 +67,7 @@
             </ul>
           </div>
             
-          <div class=" hidden" id = "div_hypothermia">
+          <div class="hidden" id = "div_hypothermia">
             <h4>Hypothermia</h4>
             <ul class = "radiobutton">
               <li><input type = "radio" class = "choicebutton" id="hypothermia1" name = "hypothermia" onclick = "check(this.id)" value = "cold exposure"><label for="hypothermia1">Cold exposure</label></li>
@@ -76,7 +76,7 @@
             </ul>
           </div>
       
-          <div class=" hidden" id = "div_leukocytosis">
+          <div class="hidden" id = "div_leukocytosis">
             <h4>Leukocytosis</h4>
             <ul class = "radiobutton">
               <li><input type = "radio" class = "choicebutton" id="leukocytosis1" name = "leukocytosis" onclick = "check(this.id)" value = "steroid use"><label for="leukocytosis1">Steroid use</label></li>
@@ -225,7 +225,7 @@
         
         <div class= "block">
           <h4>Exclusions</h4>
-          <ul>
+          <ul class="radiobutton">
             <li><input type = "radio" class="choicebutton" id="exclusion1" name = "exclusion" onclick="setFlag('exclusions',true); check(this.id)"><label for="exclusion1">The patient expired or was placed on comfort care/palliative care.</label></li>
             <li><input type = "radio" class="choicebutton" id="exclusion2" name = "exclusion" onclick="setFlag('exclusions',true); check(this.id)"><label for="exclusion2">The patient or their surrogate refused testing or treatment.</label></li>
             <li><input type = "radio" class="choicebutton" id="exclusion3" name = "exclusion" onclick="setFlag('exclusions',true); check(this.id)"><label for="exclusion3">The patient was transferred from another hospital.</label></li>
