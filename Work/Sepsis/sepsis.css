@@ -9,12 +9,24 @@
       }
       
       .main {
-        margin-top: 310px;
+        margin-top: 260px;
       }
+
+#div_left {
+  position: relative;
+  left: 0;
+  margin: 20px;
+}
+
+#div_right {
+  position: relative;
+  right: 0;
+  margin: 20px;
+}
 
       .hidden {
         display: none;
-	padding: 0 18px;
+        padding: 0 18px;
         overflow: hidden;
         margin: 20px;
         background-color: white;
