@@ -60,39 +60,39 @@
           <h4>Not Sepsis Due to Other Causes of SIRS</h4>
           <div class="block">
             <ul class="radiobutton">
-              <li><input type="checkbox" id = "othersirs-tachycardia" onclick="show(this.id)" value = "tachycardia"><label for="othersirs-tachycardia">Tachycardia</label></li>
-              <li><input type="checkbox" id = "othersirs-tachypnea" onclick="show(this.id)" value = "tachypnea"><label for="othersirs-tachypnea">Tachypnea</label></li>
-              <li><input type="checkbox" id = "othersirs-fever" onclick="show(this.id)" value = "fever"><label for="othersirs-tachycardia">Fever</label></li>
-              <li><input type="checkbox" id = "othersirs-hypothermia" onclick="show(this.id)" value = "hypothermia"><label for="othersirs-hypothermia">Hypothermia</label></li>
-              <li><input type="checkbox" id = "othersirs-leukocytosis" onclick="show(this.id)" value = "leukocytosis"><label for="othersirs-leukocytosis">Leukocytosis</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-tachycardia" onclick="show(this.id)" value = "tachycardia"><label for="othersirs-tachycardia">Tachycardia</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-tachypnea" onclick="show(this.id)" value = "tachypnea"><label for="othersirs-tachypnea">Tachypnea</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-fever" onclick="show(this.id)" value = "fever"><label for="othersirs-tachycardia">Fever</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-hypothermia" onclick="show(this.id)" value = "hypothermia"><label for="othersirs-hypothermia">Hypothermia</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-leukocytosis" onclick="show(this.id)" value = "leukocytosis"><label for="othersirs-leukocytosis">Leukocytosis</label></li>
             </ul>
           </div>
           <div class="block">
             <ul class="radiobutton">
               <h5>Tachycardia is due to:</h5>
-              <li><input type="checkbox" id = "othersirs-tachycardia-cause1" onclick="copytext(this.id)" value = "drugs"><label for="othersirs-tachycardia-cause1">drugs</label></li>
-              <li><input type="checkbox" id = "othersirs-tachycardia-cause2" onclick="copytext(this.id)" value = "anxiety"><label for="othersirs-tachycardia-cause2">anxiety</label></li>
-              <li><input type="checkbox" id = "othersirs-tachycardia-cause3" onclick="copytext(this.id)" value = "pain"><label for="othersirs-tachycardia-cause3">pain</label></li>
-              <li><input type="checkbox" id = "othersirs-tachycardia-cause4" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-tachycardia-cause4">PE</label></li>
-              <li><input type="checkbox" id = "othersirs-tachycardia-cause5" onclick="copytext(this.id)" value = "atrial fibrillation with RVR"><label for="othersirs-tachycardia-cause5">atrial fibrillation with RVR</label></li>
+              <li><input type="radio" name = "fasthr" id = "othersirs-tachycardia-cause1" onclick="copytext(this.id)" value = "drugs"><label for="othersirs-tachycardia-cause1">drugs</label></li>
+              <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause2" onclick="copytext(this.id)" value = "anxiety"><label for="othersirs-tachycardia-cause2">anxiety</label></li>
+              <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause3" onclick="copytext(this.id)" value = "pain"><label for="othersirs-tachycardia-cause3">pain</label></li>
+              <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause4" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-tachycardia-cause4">PE</label></li>
+              <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause5" onclick="copytext(this.id)" value = "atrial fibrillation with RVR"><label for="othersirs-tachycardia-cause5">atrial fibrillation with RVR</label></li>
             </ul>
           </div>
           <div class="block">
             <ul class="radiobutton">
               <h5>Tachypnea is due to:</h5>
-              <li><input type="checkbox" id = "othersirs-tachypnea-cause1" onclick="copytext(this.id)" value = "COPD exacerbation"><label for="othersirs-tachypnea-cause1">COPD exacerbation</label></li>
-              <li><input type="checkbox" id = "othersirs-tachypnea-cause2" onclick="copytext(this.id)" value = "anxiety"><label for="othersirs-tachypnea-cause2">anxiety</label></li>
-              <li><input type="checkbox" id = "othersirs-tachypnea-cause3" onclick="copytext(this.id)" value = "pain"><label for="othersirs-tachypnea-cause3">pain</label></li>
-              <li><input type="checkbox" id = "othersirs-tachypnea-cause4" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-tachypnea-cause4">PE</label></li>
-              <li><input type="checkbox" id = "othersirs-tachypnea-cause5" onclick="copytext(this.id)" value = "CHF"><label for="othersirs-tachycardia-cause5">CHF</label></li>
+              <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause1" onclick="copytext(this.id)" value = "COPD exacerbation"><label for="othersirs-tachypnea-cause1">COPD exacerbation</label></li>
+              <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause2" onclick="copytext(this.id)" value = "anxiety"><label for="othersirs-tachypnea-cause2">anxiety</label></li>
+              <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause3" onclick="copytext(this.id)" value = "pain"><label for="othersirs-tachypnea-cause3">pain</label></li>
+              <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause4" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-tachypnea-cause4">PE</label></li>
+              <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause5" onclick="copytext(this.id)" value = "CHF"><label for="othersirs-tachycardia-cause5">CHF</label></li>
             </ul>
           </div>
           <div class="block">
             <ul class="radiobutton">
-              <h5>Tachypnea is due to:</h5>
-              <li><input type="checkbox" id = "othersirs-fever-cause1" onclick="copytext(this.id)" value = "drug reaction"><label for="othersirs-fever-cause1">drug reaction</label></li>
-              <li><input type="checkbox" id = "othersirs-fever-cause2" onclick="copytext(this.id)" value = "heat exposure"><label for="othersirs-fever-cause2">heat exposure</label></li>
-              <li><input type="checkbox" id = "othersirs-fever-cause3" onclick="copytext(this.id)" value = "overexertion"><label for="othersirs-fever-cause3">overexertion</label></li>
+              <h5>Fever is due to:</h5>
+              <li><input type="radio" name="fever" id = "othersirs-fever-cause1" onclick="copytext(this.id)" value = "drug reaction"><label for="othersirs-fever-cause1">drug reaction</label></li>
+              <li><input type="radio" name="fever" id = "othersirs-fever-cause2" onclick="copytext(this.id)" value = "heat exposure"><label for="othersirs-fever-cause2">heat exposure</label></li>
+              <li><input type="radio" name="fever" id = "othersirs-fever-cause3" onclick="copytext(this.id)" value = "overexertion"><label for="othersirs-fever-cause3">overexertion</label></li>
             </ul>
           </div>
         </div>
@@ -101,9 +101,9 @@
           <h4>Not Sepsis Due to No Infection</h4>
           <ul class="radiobutton">
           <h5>SIRS is due to:</h5>
-              <li><input type="radio" id = "othersirs-cause1" onclick="copytext(this.id)" value = "pancreatitis"><label for="othersirs-cause1">pancreatitis</label></li>
-              <li><input type="radio" id = "othersirs-cause2" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-cause2">pulmonary embolism</label></li>
-              <li><input type="radio" id = "othersirs-cause3" onclick="copytext(this.id)" value = "[noninfectious cause of SIRS]"><label for="othersirs-cause3">[other cause of SIRS]</label></li>
+              <li><input type="radio" name="othercause" id = "othersirs-cause1" onclick="copytext(this.id)" value = "pancreatitis"><label for="othersirs-cause1">pancreatitis</label></li>
+              <li><input type="radio" name="othercause"  id = "othersirs-cause2" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-cause2">pulmonary embolism</label></li>
+              <li><input type="radio" name="othercause"  id = "othersirs-cause3" onclick="copytext(this.id)" value = "[noninfectious cause of SIRS]"><label for="othersirs-cause3">[other cause of SIRS]</label></li>
           </ul>
         </div>
 
@@ -111,16 +111,19 @@
           <h4>Not Sepsis Due to Viral Infection</h4>
           <ul class="radiobutton">
           <h5>SIRS is due to:</h5>
-              <li><input type="radio" id = "viral-cause2" onclick="copytext(this.id)" value = "Covid-19"><label for="viral-cause2">Covid-19</label></li>
-              <li><input type="radio" id = "viral-cause5" onclick="copytext(this.id)" value = "human metapneumovirus"><label for="viral-cause5">human metapneumovirus</label></li>
-              <li><input type="radio" id = "viral-cause1" onclick="copytext(this.id)" value = "influenza"><label for="viral-cause1">influenza</label></li>
-              <li><input type="radio" id = "viral-cause4" onclick="copytext(this.id)" value = "RSV"><label for="viral-cause4">RSV</label></li>
-              <li><input type="radio" id = "viral-cause3" onclick="copytext(this.id)" value = "[noninfectious cause of SIRS]"><label for="viral-cause3">[other cause of SIRS]</label></li>
+              <li><input type="radio" name="viral-cause" id = "viral-cause2" onclick="copytext(this.id)" value = "Covid-19"><label for="viral-cause2">Covid-19</label></li>
+              <li><input type="radio" name="viral-cause" id = "viral-cause5" onclick="copytext(this.id)" value = "human metapneumovirus"><label for="viral-cause5">human metapneumovirus</label></li>
+              <li><input type="radio" name="viral-cause" id = "viral-cause1" onclick="copytext(this.id)" value = "influenza"><label for="viral-cause1">influenza</label></li>
+              <li><input type="radio" name="viral-cause" id = "viral-cause4" onclick="copytext(this.id)" value = "RSV"><label for="viral-cause4">RSV</label></li>
+              <li><input type="radio" name="viral-cause" id = "viral-cause3" onclick="copytext(this.id)" value = "[noninfectious cause of SIRS]"><label for="viral-cause3">[other cause of SIRS]</label></li>
           </ul>
         </div>
 
         <div class="hidden" id="div_sepsis4">
           <h4>Sepsis, but No Organ Dysfunction</h4>
+          <ul class="radiobutton">
+            <li><input type="radio" id = "sepsisregular" onclick="copytext(this.id)" value = ""><label for="sepsisregular">No Organ Dysfunction Present</label></li>
+          </ul>
         </div>
 
         <div class="hidden" id="div_sepsis5">
@@ -236,6 +239,9 @@
             case "viral-cause5":
               t = t + "SIRS criteria is met, however, they are due to " + value + ", a viral infection for which antibiotics are not indicated. ";
               break;
+            case "sepsisregular":
+              t = t + "The patient meets SIRS criteria due to a bacterial infection, but there is no evidence of acute organ dysfunction, so severe sepsis is not present. ";
+              
 
           }
           document.getElementById('text').value = t;
