@@ -18,10 +18,13 @@
       <div class="block">
         <h4>SIRS criteria</h4>
         <ul class="radiobutton">
-          <li><input type = "checkbox"  class="choicebutton" id="sirs-fever" name = "sirs" onclick="show('div_fever');check(this.id)" value = "fever"><label for = "sirs-fever">Fever</label></li>
-          <li><input type = "checkbox"  class="choicebutton" id="sirs-tachycardia" name = "sirs" onclick="show('div_tachycardia');check(this.id)" value = "tachycardia"><label for = "sirs-tachycardia">Tachycardia</label></li> 
-          <li><input type = "checkbox"  class="choicebutton" id="sirs-tachypnea" name = "sirs" onclick="show('div_tachypnea);check(this.id)" value = "tachypnea"><label for = "sirs-tachypnea">Tachypnea</label></li>   
-          <li><input type = "checkbox"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="show('div_leukocytosis');check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-fever" name = "sirs" onclick="show('div_fever');check(this.id)" value = "temperature > 100.9"><label for = "sirs-fever">Temperature greater than 100.9</label></li>
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-hypothermia" name = "sirs" onclick="show('div_hypothermia');check(this.id)" value = "temperature < 36"><label for = "sirs-hypothermia">Temperature less than 36</label></li>
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-tachycardia" name = "sirs" onclick="show('div_tachycardia');check(this.id)" value = "heart rate > 90"><label for = "sirs-tachycardia">Tachycardia</label></li> 
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-tachypnea" name = "sirs" onclick="show('div_tachypnea);check(this.id)" value = "respiratory rate > 20"><label for = "sirs-tachypnea">Tachypnea</label></li>   
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="show('div_leukocytosis');check(this.id)" value = "WBC > 12"><label for = "sirs-fever">Leukocytosis</label></li>
+          <li><input type = "checkbox"  class="choicebutton" id="sirs-bandemia" name = "sirs" onclick="show('div_leukocytosis');check(this.id)" value = "bands > 10%"><label for = "sirs-fever">Bandemia</label></li>
+          
         </ul>     
       </div>        
       <div class="block">
@@ -169,7 +172,7 @@
        
 
 
-	      function displayHTML () {
+	 /*     function displayHTML () {
 	
 	
 		      var t = "<ul class='radiobutton'>\n";
@@ -259,7 +262,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           }
           var list = document.getElementsByTagName('checked');
 
-          
+          var  condition = "";
           var t = "";
        
           
@@ -272,6 +275,12 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           }
           if (isAnyChecked('sepsisetiology')) {
             t = t + "The patient appears to be septic due to " + getRadioButtonValue('sepsisetiology') + ". ";
+          }
+          if (isAnyChecked('sepsis-organ')) {
+            t = t + "There is evidence of organ damage including " + combineItemsFromButtons('sepsis-organ')+". ";
+          }
+          if (isAnyChecked('')) {
+            t = t + ""; //reasons why organ damage not 
           }
           if (isAnyChecked('sepsis1')) {
             t = t + "Blood cultures were obtained. ";
@@ -351,11 +360,11 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             }
           }
           return('____________________');
-        }
+        } */
       </script>
     
 	  <script>
-        
+      /*  
       function isChecked(id) {
         return(document.getElementById(id).checked);
       }
@@ -367,7 +376,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             else {
               document.getElementById(id).style.display = "none";
             }
-          }
+          }*/
 	  </script>
   </body>
 </html>
