@@ -45,11 +45,40 @@
       
 	    <p id='table'></p>
     </div>
+    
+    <div class="hidden" id="div_sepsis0">
+      <h4>Not Sepsis Due to SIRS not meet</h4>
+    </div>
+        
+    <div class="hidden" id="div_sepsis1">
+      <h4>Not Sepsis Due to Not Infection</h4>
+      
+    </div>
+        
+    <div class="hidden" id="div_sepsis2">
+    </div>
+        
+    <div class="hidden" id="div_sepsis3">
+    </div>
+        
+    <div class="hidden" id="div_sepsis4">
+    </div>
+        
+    <div class="hidden" id="div_sepsis5">
+    </div>
+        
+    <div class="hidden" id="div_sepsis6">
+    </div>
+        
+    <div class="hidden" id="div_sepsis7">
+    </div>
+	  
       <script>
         var list = [];
         var t = "<table>";
         list.push(['SIRS?','No','Not Sepsis']);
-        list.push(['Other causes of sepsis?','Yes','Not Sepsis']);
+        list.push(['No infection?','Yes','Not Sepsis']);
+        list.push(['Viral infection?','Yes','No Antibiotics Required']);
         list.push(['Bacterial infection?','No','Not Sepsis']);
         list.push(['Organ dysfunction?','No','Sepsis']);
         list.push(['Other causes of organ dysfunction?','Yes','Sepsis']);
@@ -66,12 +95,14 @@
           }
           t = t + '</td><td></td><td></td></tr>';
         }
-        t = t + '<tr><td class="td1"><button id="sepsis7" onclick="go(this.id)">Severe Sepsis</button></td></tr></table>';
+        t = t + '<tr><td class="td1"><button id="sepsis8" onclick="go(this.id)">Severe Sepsis</button></td></tr></table>';
         document.getElementById('table').innerHTML = t;
         
         function go(id) {
-          switch (id) {
+          document.getElementById('div_'+id).style.display = "block";
+         /* switch (id) {
             case "sepsis0":
+              show('div_sepsis0');
               break;
             case "sepsis1":
               break;
@@ -87,7 +118,9 @@
               break;
             case "sepsis7":
               break;
-          }
+            case "sepsis8":
+              break;
+          }*/
         }
       </script>
     </div>
