@@ -36,56 +36,58 @@
       </table>
     </div>
     <div class = "main">
-	    <div id = "flowchart">      
-        <p id='table'></p>
-      </div>
-    
-      <div class="hidden" id="div_sepsis0">
-        <h4>Not Sepsis Due to SIRS not meet</h4>
-        <button id="button_sepsis0" onclick="copytext(this.id)">Test</button>
-        <div class="block">
-          <ul class="radiobutton">
-            <li><input type="checkbox" id = "sirs-tachycardia" onclick="copytext(this.id)" value = "tachycardia"><label for="sirs-tachycardia">Tachycardia</label></li>
-            <li><input type="checkbox" id = "sirs-tachypnea" onclick="copytext(this.id)" value = "tachypnea"><label for="sirs-tachypnea">Tachypnea</label></li>
-            <li><input type="checkbox" id = "sirs-fever" onclick="copytext(this.id)" value = "fever"><label for="sirs-tachycardia">Fever</label></li>
-            <li><input type="checkbox" id = "sirs-hypothermia" onclick="copytext(this.id)" value = "tachycardia"><label for="sirs-tachycardia">Hypothermia</label></li>
-            <li><input type="checkbox" id = "sirs-leukocytosis" onclick="copytext(this.id)" value = "tachycardia"><label for="sirs-tachycardia">Leukocytosis</label></li>
-          </ul>
+      <div id = "div_left">
+        <div id = "flowchart">      
+          <p id='table'></p>
         </div>
       </div>
+    
+      <div id="div_right">
+        <div class="hidden" id="div_sepsis0">
+          <h4>Not Sepsis Due to SIRS not meet</h4>
+          <button id="button_sepsis0" onclick="copytext(this.id)">Test</button>
+          <div class="block">
+            <ul class="radiobutton">
+              <li><input type="checkbox" id = "sirs-tachycardia" onclick="copytext(this.id)" value = "tachycardia"><label for="sirs-tachycardia">Tachycardia</label></li>
+              <li><input type="checkbox" id = "sirs-tachypnea" onclick="copytext(this.id)" value = "tachypnea"><label for="sirs-tachypnea">Tachypnea</label></li>
+              <li><input type="checkbox" id = "sirs-fever" onclick="copytext(this.id)" value = "fever"><label for="sirs-tachycardia">Fever</label></li>
+              <li><input type="checkbox" id = "sirs-hypothermia" onclick="copytext(this.id)" value = "tachycardia"><label for="sirs-tachycardia">Hypothermia</label></li>
+              <li><input type="checkbox" id = "sirs-leukocytosis" onclick="copytext(this.id)" value = "tachycardia"><label for="sirs-tachycardia">Leukocytosis</label></li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="hidden" id="div_sepsis1">
-        <h4>Not Sepsis Due to Other Causes of SIRS</h4>
-        <button id="button_sepsis1" onclick="copytext(this.id)">Test</button>
-      </div>
+        <div class="hidden" id="div_sepsis1">
+          <h4>Not Sepsis Due to Other Causes of SIRS</h4>
+          <button id="button_sepsis1" onclick="copytext(this.id)">Test</button>
+        </div>
 
-      <div class="hidden" id="div_sepsis2">
-        <h4>Not Sepsis Due to No Infection</h4>
-      </div>
+        <div class="hidden" id="div_sepsis2">
+          <h4>Not Sepsis Due to No Infection</h4>
+        </div>
 
-      <div class="hidden" id="div_sepsis3">
-        <h4>Not Sepsis Due to Viral Infection</h4>
-      </div>
+        <div class="hidden" id="div_sepsis3">
+          <h4>Not Sepsis Due to Viral Infection</h4>
+        </div>
 
-      <div class="hidden" id="div_sepsis4">
-        <h4>Sepsis, but No Organ Dysfunction</h4>
-      </div>
+        <div class="hidden" id="div_sepsis4">
+          <h4>Sepsis, but No Organ Dysfunction</h4>
+        </div>
 
-      <div class="hidden" id="div_sepsis5">
-        <h4>Sepsis, Not Severe Because Organ Dysfunction Not Due To Infection</h4>
-      </div>
+        <div class="hidden" id="div_sepsis5">
+          <h4>Sepsis, Not Severe Because Organ Dysfunction Not Due To Infection</h4>
+        </div>
 
-      <div class="hidden" id="div_sepsis6">
-        <h4>Septic Shock Due to Lactate</h4>
-      </div>
+        <div class="hidden" id="div_sepsis6">
+          <h4>Septic Shock Due to Lactate</h4>
+        </div>
 
-      <div class="hidden" id="div_sepsis7">
-        <h4>Septic Shock Due to Persistent Hypotension</h4>
-      </div>
-
-
-      <div class="hidden" id="div_sepsis8">
-        <h4>Severe Sepsis, No Shock</h4>
+        <div class="hidden" id="div_sepsis7">
+          <h4>Septic Shock Due to Persistent Hypotension</h4>
+        </div>
+        <div class="hidden" id="div_sepsis8">
+          <h4>Severe Sepsis, No Shock</h4>
+        </div>
       </div>
     </div>
 	  
