@@ -349,11 +349,27 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           }
 		      makeDDXTable();
         } */
+	    
+	      var flag6 = false;
       function setFlag(id,flag) {
         document.getElementById(id+'flag').innerHTML = id + ": " + flag;
         document.getElementById(id+'flag').value = flag;
+	      if (flag6) {
+	  var sepsis = document.getElementById("sepsisflag").value;
+          var sirs = document.getElementById("sirsflag").value;
+          var sirsexclusion = document.getElementById('sirsexclusionflag').value;
+          var bacterial = document.getElementById("bacterialflag").value;
+          var viral = document.getElementById("viralflag").value;
+          var noninfectious = document.getElementById("noninfectiousflag").value;
+          var organdysfunction = document.getElementById("organdysfunctionflag").value;
+          var exclusion = document.getElementById("exclusionsflag").value;
+          var organdysfunctionexclusion = document.getElementById("organdysfunctionexclusionflag").value;
+          var severesepsis = document.getElementById("severesepsisflag").value;
+          var persistenthypotension = document.getElementById("persistenthypotensionflag").value;
+          var shock = document.getElementById("shockflag").value;
+	      }
       }
-
+	  flag6 = true;
           setFlag('sepsis',false);
           setFlag('sirs',false);
           setFlag('sirsexclusion',false);
@@ -375,7 +391,7 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           var viral = document.getElementById("viralflag").value;
           var noninfectious = document.getElementById("noninfectiousflag").value;
           var organdysfunction = document.getElementById("organdysfunctionflag").value;
-          var exclusion = document.getElementById("exclusionsflag").value;
+          var exclusions = document.getElementById("exclusionsflag").value;
           var organdysfunctionexclusion = document.getElementById("organdysfunctionexclusionflag").value;
           var severesepsis = document.getElementById("severesepsisflag").value;
           var persistenthypotension = document.getElementById("persistenthypotensionflag").value;
