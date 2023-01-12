@@ -47,11 +47,11 @@
           <h4>Not Sepsis Due to SIRS not meet</h4>
           <div class="block">
             <ul class="radiobutton">
-              <li><input type="checkbox" id = "sirs-tachycardia" onclick="copytext(this.id)" value = "tachycardia"><label for="sirs-tachycardia">Tachycardia</label></li>
-              <li><input type="checkbox" id = "sirs-tachypnea" onclick="copytext(this.id)" value = "tachypnea"><label for="sirs-tachypnea">Tachypnea</label></li>
-              <li><input type="checkbox" id = "sirs-fever" onclick="copytext(this.id)" value = "fever"><label for="sirs-tachycardia">Fever</label></li>
-              <li><input type="checkbox" id = "sirs-hypothermia" onclick="copytext(this.id)" value = "hypothermia"><label for="sirs-hypothermia">Hypothermia</label></li>
-              <li><input type="checkbox" id = "sirs-leukocytosis" onclick="copytext(this.id)" value = "leukocytosis"><label for="sirs-leukocytosis">Leukocytosis</label></li>
+              <li><input type="radio" id = "sirs-tachycardia" onclick="copytext(this.id)" value = "tachycardia"><label for="sirs-tachycardia">Tachycardia</label></li>
+              <li><input type="radio" id = "sirs-tachypnea" onclick="copytext(this.id)" value = "tachypnea"><label for="sirs-tachypnea">Tachypnea</label></li>
+              <li><input type="radio" id = "sirs-fever" onclick="copytext(this.id)" value = "fever"><label for="sirs-tachycardia">Fever</label></li>
+              <li><input type="radio" id = "sirs-hypothermia" onclick="copytext(this.id)" value = "hypothermia"><label for="sirs-hypothermia">Hypothermia</label></li>
+              <li><input type="radio" id = "sirs-leukocytosis" onclick="copytext(this.id)" value = "leukocytosis"><label for="sirs-leukocytosis">Leukocytosis</label></li>
             </ul>
           </div>
         </div>
@@ -134,7 +134,7 @@
         document.getElementById('table').innerHTML = t;
         
         function go(id) {
-          document.getElementById('flowchart').style.display = "none";
+         // document.getElementById('flowchart').style.display = "none";
           document.getElementById('div_'+id).style.display = "block";
          /* switch (id) {
             case "sepsis0":
