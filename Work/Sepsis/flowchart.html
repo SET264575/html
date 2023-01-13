@@ -157,7 +157,7 @@
         for (let i = 0; i<list.length;i++){
           t = t + '<tr><td class="td1">'+list[i][0]+'</td><td class="td2">'+list[i][1]+'<br>\u2192</td><td class="td3"><button id = "sepsis'+String(i)+'" onclick="go(this.id)">'+list[i][2]+'</button></td></tr>';
           t = t + '<tr><td>\u2193';
-          if (list[i][2] == "No") {
+          if (list[i][1] == "No") {
             t = t + "Yes";
           }
           else {
