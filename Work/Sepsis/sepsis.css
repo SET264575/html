@@ -21,6 +21,46 @@
   content: 'Select the one criterion that is present. \A\A If there is more than one, then you should not use this.  The patient is either septic, or SIRS criteria are met for a different reason.  Use a different selection.';
 
 }
+
+.notes #sepsis1_note::after {
+  content: 'Select only those SIRS criteria that have alternate explanations.  If two or more SIRS do not have explanations, you should not use this.'
+}
+
+
+.notes #sepsis2_note::after {
+  content: 
+}
+
+
+.notes #sepsis3_note::after {
+  content: 
+}
+
+
+.notes #sepsis4_note::after {
+  content: 
+}
+
+
+.notes #sepsis5_note::after {
+  content: 
+}
+
+
+.notes #sepsis6_note::after {
+  content: 
+}
+
+
+.notes #sepsis7_note::after {
+  content: 
+}
+
+
+.notes #sepsis8_note::after {
+  content: 
+}
+
 .tdleft {
 	width: 30%;
 	vertical-align: top;
