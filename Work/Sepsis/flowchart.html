@@ -67,7 +67,7 @@
               <li><input type="checkbox" name="othersirs" id = "othersirs-leukocytosis" onclick="show(this.id)" value = "leukocytosis"><label for="othersirs-leukocytosis">Leukocytosis</label></li>
             </ul>
           </div>
-          <div class="block">
+          <div class="hidden" id = "div_tachycardia1">
             <ul class="radiobutton">
               <h5>Tachycardia is due to:</h5>
               <li><input type="radio" name = "fasthr" id = "othersirs-tachycardia-cause1" onclick="copytext(this.id)" value = "drugs"><label for="othersirs-tachycardia-cause1">drugs</label></li>
@@ -77,7 +77,7 @@
               <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause5" onclick="copytext(this.id)" value = "atrial fibrillation with RVR"><label for="othersirs-tachycardia-cause5">atrial fibrillation with RVR</label></li>
             </ul>
           </div>
-          <div class="block">
+          <div class="hidden" id = "div_tachypnea1">
             <ul class="radiobutton">
               <h5>Tachypnea is due to:</h5>
               <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause1" onclick="copytext(this.id)" value = "COPD exacerbation"><label for="othersirs-tachypnea-cause1">COPD exacerbation</label></li>
@@ -87,7 +87,7 @@
               <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause5" onclick="copytext(this.id)" value = "CHF"><label for="othersirs-tachycardia-cause5">CHF</label></li>
             </ul>
           </div>
-          <div class="block">
+          <div class="hidden" id = "div_fever1">
             <ul class="radiobutton">
               <h5>Fever is due to:</h5>
               <li><input type="radio" name="fever" id = "othersirs-fever-cause1" onclick="copytext(this.id)" value = "drug reaction"><label for="othersirs-fever-cause1">drug reaction</label></li>
@@ -95,7 +95,14 @@
               <li><input type="radio" name="fever" id = "othersirs-fever-cause3" onclick="copytext(this.id)" value = "overexertion"><label for="othersirs-fever-cause3">overexertion</label></li>
             </ul>
           </div>
-          <div class="block">
+          <div class="hidden" id = "div_hypothermia1">
+            <ul class="radiobutton">
+              <h5>Hypothermia is due to:</h5>
+              <li><input type="radio" name="hypothermia" id = "othersirs-hypothermia-cause2" onclick="copytext(this.id)" value = "cold exposure"><label for="othersirs-hypothermia-cause2">cold exposure</label></li>
+              <li><input type="radio" name="hypothermia" id = "othersirs-hypothermia-cause3" onclick="copytext(this.id)" value = "decreased metabolism"><label for="othersirs-hypothermia-cause3">decreased metabolism</label></li>
+            </ul>
+          </div>
+          <div class="hidden" = "div_leukocytosis1">
             <ul class="radiobutton">
               <h5>Leukocytosis is due to:</h5>
               <li><input type="radio" name="leukocytosis" id = "othersirs-leukocytosis-cause1" onclick="copytext(this.id)" value = "steroid use"><label for="othersirs-leukocytosis-cause1">steroid use</label></li>
@@ -215,6 +222,10 @@
             case "othersirs-fever-cause3":
               t = t + "SIRS criteria are technically met, however, fever is due to "+ value + " rather than infection. ";
               break;
+            case "othersirs-hypothermia-cause2":
+            case "othersirs-hypothermia-cause3":
+              t = t + "SIRS criteria are technically met, however, hypothermia is due to "+ value + " rather than infection. ";
+              break;
 	          case "othersirs-leukocytosis-cause1":
             case "othersirs-leukocytosis-cause2":
             case "othersirs-leukocytosis-cause3":
@@ -240,7 +251,23 @@
           }
           document.getElementById('text').value = t;
         }
-          
+         
+        function show(id) {
+          var list = {};
+          list['othersirs-tachycardia'] = 'div_tachycardia1';
+          list['othersirs-tachypnea'] = 'div_tachypnea1';
+          list['othersirs-fever'] = 'div_fever1';
+          list['othersirs-hypothermia'] = 'div_hypothermia1';
+          list['othersirs-leukocytosis'] = 'div_leukocytosis1';
+              
+          if (document.getElementById(id).checked) {
+            document.getElementById(list[id]).style.display = 'block';
+          }
+          else {
+            document.getElementById(list[id]).style.display = 'none';
+          }
+        }
+              
         function currentTime(){
           var x = Date().toLocaleString();
           return(x.slice(16,21));
