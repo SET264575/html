@@ -325,7 +325,50 @@
               break;
             case "sepsisregular":
               t = t + "The patient meets SIRS criteria due to a bacterial infection, but there is no evidence of acute organ dysfunction, so severe sepsis is not present. ";
-              
+              break;
+            case "organ-hypotension-cause1":
+            case "organ-hypotension-cause2":
+            case "organ-hypotension-cause3":
+            case "organ-hypotension-cause4":
+              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's hypotension is due to " + value + "rather than infection and therefore the patient does not meet criteria for severe sepsis.";
+              break;
+            case "organ-creatinine-cause1":
+            case "organ-creatinine-cause2":
+            case "organ-creatinine-cause3":
+            case "organ-creatinine-cause4":
+              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's elevated creatinine is due to " + value + "rather than infection and therefore the patient does not meet criteria for severe sepsis.";
+              break;
+            case "organ-lactate-cause1":
+            case "organ-lactate-cause2":
+            case "organ-lactate-cause3":
+            case "organ-lactate-cause4":
+              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's elevated lactate is due to " + value + "rather than infection and therefore the patient does not meet criteria for severe sepsis.";
+              break;
+            case "organ-coag-cause1":
+            case "organ-coag-cause2":
+            case "organ-coag-cause3":
+            case "organ-coag-cause4":
+              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's coagulopathy is due to " + value + "rather than infection and therefore the patient does not meet criteria for severe sepsis.";
+              break;
+            case "organ-plt-cause1":
+            case "organ-plt-cause2":
+            case "organ-plt-cause3":
+            case "organ-plt-cause4":
+              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's thrombocytopenia is due to " + value + "rather than infection and therefore the patient does not meet criteria for severe sepsis.";
+              break;
+            case "organ-resp-cause1":
+            case "organ-resp-cause2":
+            case "organ-resp-cause3":
+            case "organ-resp-cause4":
+              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's respiratory failure is due to " + value + "rather than infection and therefore the patient does not meet criteria for severe sepsis.";
+              break;
+            case "organ-bili-cause1":
+            case "organ-bili-cause2":
+            case "organ-bili-cause3":
+            case "organ-bili-cause4":
+              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's elevated bilirubin is due to " + value + "rather than infection and therefore the patient does not meet criteria for severe sepsis.";
+              break;
+
 
           }
           document.getElementById('text').value = t;
