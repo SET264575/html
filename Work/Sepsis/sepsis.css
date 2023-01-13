@@ -288,19 +288,9 @@ tdright {
         background-color:  gray;
       }
       
-      .sxbutton {
-        width: 200px;
-      }
 
-
-      .note {
-        background-color: lightyellow;
-        border: 1px solid red;
-        color: red;
-	      margin-left: 20px;
-	    }
       
-      table {
+      ztable {
         border: none;
         margin-left: auto;
         margin-right: auto;
