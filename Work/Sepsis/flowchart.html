@@ -95,8 +95,16 @@
               <li><input type="radio" name="fever" id = "othersirs-fever-cause3" onclick="copytext(this.id)" value = "overexertion"><label for="othersirs-fever-cause3">overexertion</label></li>
             </ul>
           </div>
+          <div class="block">
+            <ul class="radiobutton">
+              <h5>Leukocytosis is due to:</h5>
+              <li><input type="radio" name="leukocytosis" id = "othersirs-leukocytosis-cause1" onclick="copytext(this.id)" value = "steroid use"><label for="othersirs-leukocytosis-cause1">steroid use</label></li>
+              <li><input type="radio" name="leukocytosis" id = "othersirs-leukocytosis-cause2" onclick="copytext(this.id)" value = "leukemia"><label for="othersirs-leukocytosis-cause2">leukemia</label></li>
+              <li><input type="radio" name="leukocytosis" id = "othersirs-leukocytosis-cause3" onclick="copytext(this.id)" value = "stress-induced demargination"><label for="othersirs-leukocytosis-cause3">stress-induced demargination</label></li>
+            </ul>
+          </div>
         </div>
-
+	      
         <div class="hidden" id="div_sepsis2">
           <h4>Not Sepsis Due to No Infection</h4>
           <ul class="radiobutton">
@@ -225,6 +233,11 @@
             case "othersirs-fever-cause2":
             case "othersirs-fever-cause3":
               t = t + "SIRS criteria are technically met, however, fever is due to "+ value + " rather than infection. ";
+              break;
+	          case "othersirs-leukocytosis-cause1":
+            case "othersirs-leukocytosis-cause2":
+            case "othersirs-leukocytosis-cause3":
+              t = t + "SIRS criteria are technically met, however, leukocytosis is due to "+ value + " rather than infection. ";
               break;
             case "othersirs-cause1":
             case "othersirs-cause2":
