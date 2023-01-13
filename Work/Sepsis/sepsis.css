@@ -11,11 +11,13 @@
       .main {
         margin-top: 160px;
       }
-.note {
+.notes {
   border: 1px solid green;
+	width: 600px;
+  padding: 20px;
 }
 
-.note #sepsis0_note::after {
+.notes #sepsis0_note::after {
   content: 'Select the one criterion that is present. \A\A If there is more than one, then you should not use this.  The patient is either septic, or SIRS criteria are met for a different reason.  Use a different selection.';
 
 }
