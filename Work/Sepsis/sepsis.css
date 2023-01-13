@@ -15,8 +15,8 @@
 #div_left {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 360px; /* Set the width of the sidebar */
-  zposition: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  zz-index: 1; /* Stay on top */
+  zzposition: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  zzz-index: 1; /* Stay on top */
   top: 160; /* Stay at the top */
   left: 0;
   background-color: white; /* Black */
@@ -26,8 +26,9 @@
 
 /* Style page content */
 #div_right {
+  position: relative;
   margin-left: 360px; /* Same as the width of the sidebar */
-	top: 160px;
+  top: 160px;
   padding: 0px 10px;
 }
 
