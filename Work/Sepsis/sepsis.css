@@ -12,10 +12,10 @@
         margin-top: 160px;
       }
 
-tdleft {
+.tdleft {
 	width: 30%;
 }
-tdright {
+.tdright {
 	width: 79%;
 }
 #zdiv_left {
