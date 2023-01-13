@@ -13,19 +13,25 @@
       }
 
 #div_left {
-  position: relative;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 360px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 260; /* Stay at the top */
   left: 0;
-  margin: 20px;
-  width: 600px;
-	
+  background-color: white; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
 }
 
+/* Style page content */
 #div_right {
-  position: relative;
+  margin-left: 360px; /* Same as the width of the sidebar */
 	top: 260px;
-  right: 0;
-  margin: 20px;
+  padding: 0px 10px;
 }
+
+
 
       .hidden {
         display: none;
