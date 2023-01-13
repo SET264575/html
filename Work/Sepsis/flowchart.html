@@ -177,29 +177,10 @@
         document.getElementById('table').innerHTML = t;
         
         function go(id) {
-         // document.getElementById('flowchart').style.display = "none";
+		      for (let i = 0; i< 9; i++) {
+            document.getElementById('div_sepsis'+String(i)).style.display = 'none';
+          }
           document.getElementById('div_'+id).style.display = "block";
-         /* switch (id) {
-            case "sepsis0":
-              show('div_sepsis0');
-              break;
-            case "sepsis1":
-              break;
-            case "sepsis2":
-              break;
-            case "sepsis3":
-              break;
-            case "sepsis4":
-              break;
-            case "sepsis5":
-              break;
-            case "sepsis6":
-              break;
-            case "sepsis7":
-              break;
-            case "sepsis8":
-              break;
-          }*/
         }
         
         function copytext(id) {
