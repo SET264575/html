@@ -14,9 +14,11 @@
 
 .tdleft {
 	width: 30%;
+	vertical-align: top;
 }
 .tdright {
 	width: 79%;
+	vertical-align: top;
 }
 #zdiv_left {
   height: 2000px; /* Full-height: remove this if you want "auto" height */
