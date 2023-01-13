@@ -73,6 +73,12 @@
 	width: 79%;
 	vertical-align: top;
 }
+
+.timezero_class {
+	width: 80px;
+	height: 50px;
+}
+
 #zdiv_left {
   height: 2000px; /* Full-height: remove this if you want "auto" height */
   width: 360px; /* Set the width of the sidebar */
