@@ -254,7 +254,7 @@
 		
         </div>
         <div class="hidden" id="div_sepsis8">
-          <div class = "notes" id="sepsis8_note">Enter the time that </div>
+          <div class = "notes" id="sepsis8_note">Enter the time that evidence of organ dysfunction became available.</div>
           <label for="time zero8">Time Zero for Severe Sepsis is:</label><br>
           <input class="timezero_class" id="timezero8"/>
           <h4>Severe Sepsis, No Shock</h4>
@@ -395,6 +395,10 @@
             case "organ-bili-cause3":
             case "organ-bili-cause4":
               t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's elevated bilirubin is due to " + value + "rather than infection and therefore the patient does not meet criteria for severe sepsis.";
+              break;
+			  
+            case "timezero6":
+              t = t + "The patient met criteria for severe sepsis at " + document.getElementById('timezero6')+". ";
               break;
 
 
