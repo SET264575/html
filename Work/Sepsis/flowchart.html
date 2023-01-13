@@ -143,6 +143,17 @@
 
         <div class="hidden" id="div_sepsis5">
           <h4>Sepsis, Not Severe Because Organ Dysfunction Not Due To Infection</h4>
+          <ul class="radiobutton">
+          <h5>SIRS is due to:</h5>
+              <li><input type="radio" name="organ-cause" id = "organ-cause1" onclick="show(this.id)"><label for="organ-cause1">SBP &lt 90 or MAP &lt 65</label></li>
+              <li><input type="radio" name="organ-cause" id = "organ-cause2" onclick="show(this.id)"><label for="organ-cause2">Creatinine &gt 2.0</label></li>
+              <li><input type="radio" name="organ-cause" id = "organ-cause3" onclick="show(this.id)"><label for="organ-cause3">Lactate &gt 2</label></li>
+              <li><input type="radio" name="organ-cause" id = "organ-cause4" onclick="show(this.id)"><label for="organ-cause4">INR &gt1.5 or aPTT &gt 60</label></li>
+              <li><input type="radio" name="organ-cause" id = "organ-cause5" onclick="show(this.id)"><label for="organ-cause5">Platelet count &lt 100,000</label></li>
+              <li><input type="radio" name="organ-cause" id = "organ-cause6" onclick="show(this.id)"><label for="organ-cause6">Bilirubin &gt 2</label></li>
+              <li><input type="radio" name="organ-cause" id = "organ-cause7" onclick="show(this.id)"><label for="organ-cause7">Drop in SBP &gt 40</label></li>
+              <li><input type="radio" name="organ-cause" id = "organ-cause8" onclick="show(this.id)"><label for="organ-cause8">Respiratory failure</label></li>
+           </ul>
         </div>
 
         <div class="hidden" id="div_sepsis6">
@@ -162,6 +173,7 @@
         var list = [];
         var t = "<table>";
         list.push(['SIRS?','No','Not Sepsis']);
+	      list.push(['Other explanation for abnormal vital signs','Yes','Not Sepsis']);
         list.push(['Infection?','No','Not Sepsis']);
         list.push(['Viral infection?','Yes','No Antibiotics Required']);
         list.push(['Bacterial infection?','No','Not Sepsis']);
@@ -184,7 +196,7 @@
         document.getElementById('table').innerHTML = t;
         
         function go(id) {
-		      for (let i = 0; i< 9; i++) {
+		      for (let i = 0; i< 10; i++) {
             document.getElementById('div_sepsis'+String(i)).style.display = 'none';
           }
           document.getElementById('div_'+id).style.display = "block";
