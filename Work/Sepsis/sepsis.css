@@ -12,7 +12,7 @@
         margin-top: 160px;
       }
 
-#div_left {
+#zdiv_left {
   height: 2000px; /* Full-height: remove this if you want "auto" height */
   width: 360px; /* Set the width of the sidebar */
   zzposition: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -25,7 +25,7 @@
 }
 
 /* Style page content */
-#div_right {
+#zdiv_right {
   position: relative;
   margin-left: 360px; /* Same as the width of the sidebar */
   top: 160px;
