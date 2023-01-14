@@ -603,12 +603,13 @@
           let x = document.getElementById('text');
           if (document.getElementById('exclusion').checked) {
             x.value = x.value + "\n\nThe patient or their surrogate has refused blood draws, antibiotics or IV fluid administration.";
+            navigator.clipboard.writeText(x.value);
+            return('\n\nThe patient or their surrogate has refused blood draws, antibiotics or IV fluid administration.');
           }
-          navigator.clipboard.writeText(x.value);
-          return('\n\nThe patient or their surrogate has refused blood draws, antibiotics or IV fluid administration.');
+          else {
+            return("");
+          }
         }
-	      
-        
       </script>
     </div>
   </body>
