@@ -63,7 +63,7 @@
         <div class="hidden" id="div_sepsis1">
           <div class = "notes" id="sepsis1_note">Select only the SIRS criteria that have an alternate explanation.<br><br>  
 		  If there are still more than two SIRS criteria that do not have an alternate explanation, do not use this.</div>
-          <h4>Not Sepsis Due to Other Causes of SIRS</h4>
+          <h4>Not Sepsis Due to Other Causes of Abnormal Vital Signs or Leukocytosis</h4>
           <div class="block">
             <ul class="radiobutton">
               <li><input type="checkbox" name="othersirs" id = "othersirs-tachycardia" onclick="show(this.id)" value = "tachycardia"><label for="othersirs-tachycardia">Tachycardia</label></li>
@@ -131,10 +131,14 @@
           <h4>Not Sepsis Due to No Infection</h4>
           The patient's SIRS is due to:
           <ul class="radiobutton">
+            <li><input type="radio" name="othercause"  id = "othersirs-cause8" onclick="copytext(this.id)" value = "adrenal insufficiency"><label for="othersirs-cause8">adrenal insufficiency</label></li>
+            <li><input type="radio" name="othercause"  id = "othersirs-cause6" onclick="copytext(this.id)" value = "anaphylaxis"><label for="othersirs-cause6">anaphylaxis</label></li>
+            <li><input type="radio" name="othercause"  id = "othersirs-cause7" onclick="copytext(this.id)" value = "hemorrhage"><label for="othersirs-cause7">hemorrhage</label></li>
             <li><input type="radio" name="othercause"  id = "othersirs-cause4" onclick="copytext(this.id)" value = "ischemia"><label for="othersirs-cause4">ischemia</label></li>
             <li><input type="radio" name="othercause"  id = "othersirs-cause5" onclick="copytext(this.id)" value = "malignancy"><label for="othersirs-cause5">malignancy</label></li>
             <li><input type="radio" name="othercause" id = "othersirs-cause1" onclick="copytext(this.id)" value = "pancreatitis"><label for="othersirs-cause1">pancreatitis</label></li>
             <li><input type="radio" name="othercause"  id = "othersirs-cause2" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-cause2">pulmonary embolism</label></li>
+            <li><input type="radio" name="othercause"  id = "othersirs-cause9" onclick="copytext(this.id)" value = "substance abuse"><label for="othersirs-cause9">substance abuse</label></li>
             <li><input type="radio" name="othercause"  id = "othersirs-cause3" onclick="copytext(this.id)" value = "trauma"><label for="othersirs-cause3">trauma</label></li>
             <li><input type="radio" name="othercause"  id = "othersirs-cause20" onclick="copytext(this.id)" value = "[noninfectious cause of SIRS]"><label for="othersirs-cause20">[other cause of SIRS]</label></li>
           </ul>
@@ -388,6 +392,10 @@
             case "othersirs-cause3":
             case "othersirs-cause4":
             case "othersirs-cause5":
+            case "othersirs-cause6":
+            case "othersirs-cause7":
+            case "othersirs-cause8":
+            case "othersirs-cause9":
             case "othersirs-cause20":
               t = t + "SIRS criteria are met, however, they are due to " + value + " rather than infection, and therefore the patient does not have sepsis. ";
               break;
