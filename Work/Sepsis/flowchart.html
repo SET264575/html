@@ -142,7 +142,7 @@
         <div class="hidden" id="div_sepsis2">
           <div class = "notes" id="sepsis2_note">Select the condition that explains why the patient has SIRS. <br><br>If the patient has an infection, do not use this.</div>
           
-          <h4>Does Not Have Sepsis Due to SIRS is NOT Due to Infection</h4>
+          <h4>Does Not Have Sepsis Because SIRS Is Not Due To Infection</h4>
           The patient's SIRS is due to:
           <ul class="radiobutton">
             <li><input type="radio" name="othercause"  id = "othersirs-cause8" onclick="copytext(this.id)" value = "adrenal insufficiency"><label for="othersirs-cause8">adrenal insufficiency</label></li>
@@ -161,7 +161,7 @@
         <div class="hidden" id="div_sepsis3">
           <div class = "notes" id="sepsis1]3_note">Select the viral infection that explains the patient's symptoms.</div>
           
-          <h4>Does Not Meet Sepsis Criteria Due to Causes of SIRS is Viral Infection</h4>
+          <h4>Does Not Meet Sepsis Criteria Because SIRS Is Due To A Viral Infection</h4>
           SIRS is due to:
           <ul class="radiobutton">
             <li><input type="radio" name="viral-cause" id = "viral-cause2" onclick="copytext(this.id)" value = "Covid-19"><label for="viral-cause2">Covid-19</label></li>
@@ -186,7 +186,7 @@
           <div class = "notes" id="sepsis5_note">Select the criteria that have an alternate explanation. <br><br>
 		  If one or more criteria do not have an alternate explanation other than infection, do not use this.</div>
           
-          <h4>Has Sepsis, But Not Severe Sepsis Because Organ Dysfunction Not Due to Infection</h4>
+          <h4>Has Sepsis, But Not Severe Sepsis Because Organ Dysfunction Not Due To Infection</h4>
           Abnormalities that are due to other factors:
           <ul class="radiobutton">
               <li><input type="checkbox" name="organ-cause" id = "organ-cause1" onclick="show(this.id)"><label for="organ-cause1">SBP &lt 90 or MAP &lt 65</label></li>
@@ -208,6 +208,21 @@
               <li><input type="radio" name="organ-hpotension-cause" id = "organ-hpotension-cause3" onclick="copytext(this.id)" value = "ESRD"><label for="organ-hpotension-cause3">ESRD</label></li>
               <li><input type="radio" name="organ-hpotension-cause" id = "organ-hpotension-cause4" onclick="copytext(this.id)" value = "heart failure"><label for="organ-hpotension-cause4">heart failure</label></li>
               <li><input type="radio" name="organ-hpotension-cause" id = "organ-hpotension-cause20" onclick="copytext(this.id)" value = "[cause of hypotension]"><label for="organ-hpotension-cause20">[other cause]</label></li>
+         
+          </ul>
+        </div>
+		        
+          <div class="hidden" id="div_relhypotension">
+          <h4>Hypotension is due to:</h4>
+          <ul class="radiobutton">
+              <li><input type="radio" name="organ-relhpotension-cause" id = "organ-relhpotension-cause1" onclick="copytext(this.id)" value = "administered medications"><label for="organ-relhpotension-cause1">administered medication</label></li>
+              <li><input type="radio" name="organ-relhpotension-cause" id = "organ-relhpotension-cause5" onclick="copytext(this.id)" value = "decreased anxiety"><label for="organ-relhpotension-cause5">decreased anxiety</label></li>
+              <li><input type="radio" name="organ-relhpotension-cause" id = "organ-relhpotension-cause6" onclick="copytext(this.id)" value = "decreased pain"><label for="organ-relhpotension-cause6">decreased pain</label></li>
+              <li><input type="radio" name="organ-relhpotension-cause" id = "organ-relhpotension-cause1" onclick="copytext(this.id)" value = "medications"><label for="organ-relhpotension-cause1">medication</label></li>
+              <li><input type="radio" name="organ-relhpotension-cause" id = "organ-relhpotension-cause2" onclick="copytext(this.id)" value = "dehydration"><label for="organ-relhpotension-cause2">dehydration</label></li>
+              <li><input type="radio" name="organ-relhpotension-cause" id = "organ-relhpotension-cause3" onclick="copytext(this.id)" value = "ESRD"><label for="organ-relhpotension-cause3">ESRD</label></li>
+              <li><input type="radio" name="organ-relhpotension-cause" id = "organ-relhpotension-cause4" onclick="copytext(this.id)" value = "heart failure"><label for="organ-relhpotension-cause4">heart failure</label></li>
+              <li><input type="radio" name="organ-relhpotension-cause" id = "organ-relhpotension-cause20" onclick="copytext(this.id)" value = "[cause of relative hypotension]"><label for="organ-relhpotension-cause20">[other cause]</label></li>
          
           </ul>
         </div>
@@ -343,6 +358,7 @@
           list.push('div_plt');
           list.push('div_resp');
           list.push('div_coag');
+          list.push('div_relhypotension');
           for (let i = 0; i < list.length; i++) {
             document.getElementById(list[i]).style.display = 'none';
           }
@@ -439,6 +455,13 @@
             case "organ-hpotension-cause3":
             case "organ-hpotension-cause4":
             case "organ-hpotension-cause20":
+            case "organ-relhpotension-cause1":
+            case "organ-relhpotension-cause2":
+            case "organ-relhpotension-cause3":
+            case "organ-relhpotension-cause4":
+            case "organ-relhpotension-cause5":
+            case "organ-relhpotension-cause6":
+            case "organ-relhpotension-cause20":
             case "organ-creatinine-cause1":
             case "organ-creatinine-cause2":
             case "organ-creatinine-cause3":
