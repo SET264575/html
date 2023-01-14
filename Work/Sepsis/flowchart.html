@@ -374,10 +374,10 @@
             case "sepsisregular":
               t = t + "The patient meets SIRS criteria due to a bacterial infection, but there is no evidence of acute organ dysfunction, so severe sepsis is not present. ";
               break;
-            case "organ-hypotension-cause1":
-            case "organ-hypotension-cause2":
-            case "organ-hypotension-cause3":
-            case "organ-hypotension-cause4":
+            case "organ-hpotension-cause1":
+            case "organ-hpotension-cause2":
+            case "organ-hpotension-cause3":
+            case "organ-hpotension-cause4":
             case "organ-creatinine-cause1":
             case "organ-creatinine-cause2":
             case "organ-creatinine-cause3":
@@ -402,7 +402,7 @@
             case "organ-bili-cause2":
             case "organ-bili-cause3":
             case "organ-bili-cause4":
-              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's " + combineDysfunction() + ".";
+              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's " + combineDysfunction() + "rather than infection, and therefore the patient does not have severe sepsis.";
               break;
 			  
             case "timezero6":
@@ -474,8 +474,8 @@
         function combineDysfunction () {
           var list = [];
           
-          if (getRadioButtonValue('organ-hypotension-cause')) {
-            list.push('hypotension is due to ' + getRadioButtonValue('organ-hypotension-cause'));
+          if (getRadioButtonValue('organ-hpotension-cause')) {
+            list.push('hypotension is due to ' + getRadioButtonValue('organ-hpotension-cause'));
           }
                     
           if (getRadioButtonValue('organ-creatinine-cause')) {
