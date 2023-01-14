@@ -485,7 +485,8 @@
               break;
 
           }
-          addExclusion();
+		
+          t = t + addExclusion();
           document.getElementById('text').value = t;
           navigator.clipboard.writeText(t);
         }
@@ -599,10 +600,12 @@
         }
 	      
         function addExclusion() {
+          let x = document.getElementById('text');
           if (document.getElementById('exclusion').checked) {
-            let x = document.getElementById('text');
             x.value = x.value + "\n\nThe patient or their surrogate has refused blood draws, antibiotics or IV fluid administration.";
           }
+          navigator.clipboard.writeText(x.value);
+          return('\n\nThe patient or their surrogate has refused blood draws, antibiotics or IV fluid administration.";
         }
 	      
         
