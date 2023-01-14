@@ -130,9 +130,12 @@
           
           <h4>Not Sepsis Due to No Infection</h4>
           <ul class="radiobutton">
-              <li><input type="radio" name="othercause" id = "othersirs-cause1" onclick="copytext(this.id)" value = "pancreatitis"><label for="othersirs-cause1">pancreatitis</label></li>
-              <li><input type="radio" name="othercause"  id = "othersirs-cause2" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-cause2">pulmonary embolism</label></li>
-              <li><input type="radio" name="othercause"  id = "othersirs-cause3" onclick="copytext(this.id)" value = "[noninfectious cause of SIRS]"><label for="othersirs-cause3">[other cause of SIRS]</label></li>
+            <li><input type="radio" name="othercause"  id = "othersirs-cause4" onclick="copytext(this.id)" value = "ischemia"><label for="othersirs-cause4">ischemia/label></li>
+            <li><input type="radio" name="othercause"  id = "othersirs-cause5" onclick="copytext(this.id)" value = "malignancy"><label for="othersirs-cause5">malignancy</label></li>
+            <li><input type="radio" name="othercause" id = "othersirs-cause1" onclick="copytext(this.id)" value = "pancreatitis"><label for="othersirs-cause1">pancreatitis</label></li>
+            <li><input type="radio" name="othercause"  id = "othersirs-cause2" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-cause2">pulmonary embolism</label></li>
+            <li><input type="radio" name="othercause"  id = "othersirs-cause3" onclick="copytext(this.id)" value = "trauma"><label for="othersirs-cause3">trauma</label></li>
+            <li><input type="radio" name="othercause"  id = "othersirs-cause20" onclick="copytext(this.id)" value = "[noninfectious cause of SIRS]"><label for="othersirs-cause20">[other cause of SIRS]</label></li>
           </ul>
         </div>
 
@@ -147,7 +150,7 @@
               <li><input type="radio" name="viral-cause" id = "viral-cause5" onclick="copytext(this.id)" value = "human metapneumovirus"><label for="viral-cause5">human metapneumovirus</label></li>
               <li><input type="radio" name="viral-cause" id = "viral-cause1" onclick="copytext(this.id)" value = "influenza"><label for="viral-cause1">influenza</label></li>
               <li><input type="radio" name="viral-cause" id = "viral-cause4" onclick="copytext(this.id)" value = "RSV"><label for="viral-cause4">RSV</label></li>
-              <li><input type="radio" name="viral-cause" id = "viral-cause3" onclick="copytext(this.id)" value = "[noninfectious cause of SIRS]"><label for="viral-cause3">[other cause of SIRS]</label></li>
+              <li><input type="radio" name="viral-cause" id = "viral-cause3" onclick="copytext(this.id)" value = "[viral cause of SIRS]"><label for="viral-cause3">[other cause of SIRS]</label></li>
           </ul>
         </div>
 
@@ -355,6 +358,9 @@
             case "othersirs-cause1":
             case "othersirs-cause2":
             case "othersirs-cause3":
+            case "othersirs-cause4":
+            case "othersirs-cause5":
+            case "othersirs-cause20":
               t = t + "SIRS criteria is met, however, they are due to " + value + " rather than infection. ";
               break;
                           
