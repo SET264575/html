@@ -298,7 +298,7 @@
        // list.push(['Bacterial infection?','No','Not Sepsis']);
         list.push(['Organ dysfunction?','No','Sepsis']);
         list.push(['Other causes of organ dysfunction?','Yes','Sepsis']);
-        list.push(['Lactate > 4?','Yes','Septic Shock']);
+        list.push(['Lactate \u2265 4?','Yes','Septic Shock']);
         list.push(['Persistent hypotension?','Yes','Septic Shock']);
         for (let i = 0; i<list.length;i++){
           t = t + '<tr><td class="td1">'+list[i][0]+'</td><td class="td2">'+list[i][1]+'<br>\u2192</td><td class="td3"><button id = "sepsis'+String(i)+'" onclick="go(this.id)">'+list[i][2]+'</button></td></tr>';
@@ -449,7 +449,7 @@
               break;
 			  
             case "timezero6":
-              t = t + "the patient met criteria for septic shock at " + document.getElementById('timezero6').value+" due to lactate > 4. ";
+              t = t + "the patient met criteria for septic shock at " + document.getElementById('timezero6').value+" due to lactate \u2265 4. ";
               break;
 			  
             case "timezero7":
