@@ -56,7 +56,7 @@
               <li><input type="radio" name = "sirs" id = "sirs-tachypnea" onclick="copytext(this.id)" value = "tachypnea"><label for="sirs-tachypnea">Tachypnea (RR > 20)</label></li>
               <li><input type="radio" name = "sirs" id = "sirs-fever" onclick="copytext(this.id)" value = "fever"><label for="sirs-tachycardia">Fever (Temp > 100.9)</label></li>
               <li><input type="radio" name = "sirs" id = "sirs-hypothermia" onclick="copytext(this.id)" value = "hypothermia"><label for="sirs-hypothermia">Hypothermia (Temp < 96.8)</label></li>
-              <li><input type="radio" name = "sirs" id = "sirs-leukocytosis" onclick="copytext(this.id)" value = "leukocytosis"><label for="sirs-leukocytosis">Leukocytosis (WBC > 12K)</label></li>
+              <li><input type="radio" name = "sirs" id = "sirs-leukocytosis" onclick="copytext(this.id)" value = "leukocytosis"><label for="sirs-leukocytosis">Leukocytosis (WBC > 12K or bands > 10%)</label></li>
               <li><input type="radio" name = "sirs" id = "sirs-leukopenia" onclick="copytext(this.id)" value = "leukopenia"><label for="sirs-leukopenia">Leukopenia (WBC < 4K)</label></li>
             </ul>
           </div>
@@ -68,12 +68,12 @@
           <h4>Does Not Have Sepsis Due to Other Causes of Abnormal Vital Signs or WBC</h4>
           <div class="block">
             <ul class="radiobutton">
-              <li><input type="checkbox" name="othersirs" id = "othersirs-tachycardia" onclick="show(this.id)" value = "tachycardia"><label for="othersirs-tachycardia">Tachycardia</label></li>
-              <li><input type="checkbox" name="othersirs" id = "othersirs-tachypnea" onclick="show(this.id)" value = "tachypnea"><label for="othersirs-tachypnea">Tachypnea</label></li>
-              <li><input type="checkbox" name="othersirs" id = "othersirs-fever" onclick="show(this.id)" value = "fever"><label for="othersirs-tachycardia">Fever</label></li>
-              <li><input type="checkbox" name="othersirs" id = "othersirs-hypothermia" onclick="show(this.id)" value = "hypothermia"><label for="othersirs-hypothermia">Hypothermia</label></li>
-              <li><input type="checkbox" name="othersirs" id = "othersirs-leukocytosis" onclick="show(this.id)" value = "leukocytosis"><label for="othersirs-leukocytosis">Leukocytosis</label></li>
-              <li><input type="checkbox" name="othersirs" id = "othersirs-leukopenia" onclick="show(this.id)" value = "leukopenia"><label for="othersirs-leukopenias">Leukopenia</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-tachycardia" onclick="show(this.id)" value = "tachycardia"><label for="othersirs-tachycardia">Tachycardia< (HR > 90)/label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-tachypnea" onclick="show(this.id)" value = "tachypnea"><label for="othersirs-tachypnea">Tachypnea (RR > 20)</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-fever" onclick="show(this.id)" value = "fever"><label for="othersirs-tachycardia">Fever (Temp > 100.9)</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-hypothermia" onclick="show(this.id)" value = "hypothermia"><label for="othersirs-hypothermia">Hypothermia (Temp < 96.8)</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-leukocytosis" onclick="show(this.id)" value = "leukocytosis"><label for="othersirs-leukocytosis">Leukocytosis (WBC > 12K or bands > 10%)</label></li>
+              <li><input type="checkbox" name="othersirs" id = "othersirs-leukopenia" onclick="show(this.id)" value = "leukopenia"><label for="othersirs-leukopenias">Leukopenia (WBC < 4K)</label></li>
             </ul>
           </div>
           <div class="hidden" id = "div_tachycardia1">
