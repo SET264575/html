@@ -400,14 +400,13 @@
               t = t + "The patient met criteria for severe sepsis at " + document.getElementById('timezero8')+". ";
               break;
 
-
           }
           document.getElementById('text').value = t;
+          navigator.clipboard.writeText(t);
         }
          
         function show(id) {
           var list = {};
-		console.log(id);
           list['othersirs-tachycardia'] = 'div_tachycardia1';
           list['othersirs-tachypnea'] = 'div_tachypnea1';
           list['othersirs-fever'] = 'div_fever1';
@@ -422,7 +421,6 @@
           list['organ-cause7'] = 'div_hypotension';
           list['organ-cause8'] = 'div_resp';
 		
-              console.log(list[id]);
           if (document.getElementById(id).checked) {
             document.getElementById(list[id]).style.display = 'block';
           }
@@ -433,7 +431,6 @@
         
         function combineAlternative() {
           var list = [];
-           
                     
           if (getRadioButtonValue('otherSIRS-tachycardia')) {
             list.push('tachycardia is due to ' + getRadioButtonValue('otherSIRS-tachycardia'));
