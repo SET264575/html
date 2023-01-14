@@ -81,7 +81,7 @@
               <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause3" onclick="copytext(this.id)" value = "pain"><label for="othersirs-tachycardia-cause3">pain</label></li>
               <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause4" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-tachycardia-cause4">PE</label></li>
               <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause5" onclick="copytext(this.id)" value = "atrial fibrillation with RVR"><label for="othersirs-tachycardia-cause5">atrial fibrillation with RVR</label></li>
-              <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause20" onclick="copytext(this.id)" value = "[alternative cause of tachycardia]"><label for="othersirs-tachycardia-cause5">[other cause]</label></li>
+              <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause20" onclick="copytext(this.id)" value = "[alternative cause of tachycardia]"><label for="othersirs-tachycardia-cause20">[other cause]</label></li>
             </ul>
           </div>
           <div class="hidden" id = "div_tachypnea1">
@@ -92,6 +92,7 @@
               <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause3" onclick="copytext(this.id)" value = "pain"><label for="othersirs-tachypnea-cause3">pain</label></li>
               <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause4" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-tachypnea-cause4">PE</label></li>
               <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause5" onclick="copytext(this.id)" value = "CHF"><label for="othersirs-tachycardia-cause5">CHF</label></li>
+              <li><input type="radio" name = "fastrr" id = "othersirs-tachypnea-cause20" onclick="copytext(this.id)" value = "[alternative cause of tachypnea]"><label for="othersirs-tachycardia-cause20">[other cause]</label></li>
             </ul>
           </div>
           <div class="hidden" id = "div_fever1">
@@ -100,6 +101,8 @@
               <li><input type="radio" name="fever" id = "othersirs-fever-cause1" onclick="copytext(this.id)" value = "drug reaction"><label for="othersirs-fever-cause1">drug reaction</label></li>
               <li><input type="radio" name="fever" id = "othersirs-fever-cause2" onclick="copytext(this.id)" value = "heat exposure"><label for="othersirs-fever-cause2">heat exposure</label></li>
               <li><input type="radio" name="fever" id = "othersirs-fever-cause3" onclick="copytext(this.id)" value = "overexertion"><label for="othersirs-fever-cause3">overexertion</label></li>
+              <li><input type="radio" name="fever" id = "othersirs-fever-cause20" onclick="copytext(this.id)" value = "[alternative cause of fever]"><label for="othersirs-fever-cause20">[other cause]</label></li>
+
             </ul>
           </div>
           <div class="hidden" id = "div_hypothermia1">
@@ -107,6 +110,7 @@
               <h4>Hypothermia is due to:</h4>
               <li><input type="radio" name="hypothermia" id = "othersirs-hypothermia-cause2" onclick="copytext(this.id)" value = "cold exposure"><label for="othersirs-hypothermia-cause2">cold exposure</label></li>
               <li><input type="radio" name="hypothermia" id = "othersirs-hypothermia-cause3" onclick="copytext(this.id)" value = "decreased metabolism"><label for="othersirs-hypothermia-cause3">decreased metabolism</label></li>
+              <li><input type="radio" name="hypothermia" id = "othersirs-hypothermia-cause20" onclick="copytext(this.id)" value = "[alternative cause for hypothermia]"><label for="othersirs-hypothermia-cause20">[other cause]</label></li>
             </ul>
           </div>
           <div class="hidden" id = "div_leukocytosis1">
@@ -115,6 +119,8 @@
               <li><input type="radio" name="leukocytosis" id = "othersirs-leukocytosis-cause1" onclick="copytext(this.id)" value = "steroid use"><label for="othersirs-leukocytosis-cause1">steroid use</label></li>
               <li><input type="radio" name="leukocytosis" id = "othersirs-leukocytosis-cause2" onclick="copytext(this.id)" value = "leukemia"><label for="othersirs-leukocytosis-cause2">leukemia</label></li>
               <li><input type="radio" name="leukocytosis" id = "othersirs-leukocytosis-cause3" onclick="copytext(this.id)" value = "stress-induced demargination"><label for="othersirs-leukocytosis-cause3">stress-induced demargination</label></li>
+              <li><input type="radio" name="leukocytosis" id = "othersirs-leukocytosis-cause20" onclick="copytext(this.id)" value = "[alternative cause of leukocytosis]"><label for="othersirs-leukocytosis-cause20">[other cause]</label></li>
+            
             </ul>
           </div>
         </div>
@@ -326,19 +332,24 @@
             case "othersirs-tachycardia-cause3":
             case "othersirs-tachycardia-cause4":
             case "othersirs-tachycardia-cause5":
+            case "othersirs-tachycardia-cause20":
             case "othersirs-tachypnea-cause1":
             case "othersirs-tachypnea-cause2":
             case "othersirs-tachypnea-cause3":
             case "othersirs-tachypnea-cause4":
             case "othersirs-tachypnea-cause5":
+            case "othersirs-tachypnea-cause20":
             case "othersirs-fever-cause1":
             case "othersirs-fever-cause2":
             case "othersirs-fever-cause3":
+            case "othersirs-fever-cause20":
             case "othersirs-hypothermia-cause2":
             case "othersirs-hypothermia-cause3":
+            case "othersirs-hypothermia-cause20":
             case "othersirs-leukocytosis-cause1":
             case "othersirs-leukocytosis-cause2":
             case "othersirs-leukocytosis-cause3":
+            case "othersirs-leukocytosis-cause20":
               t = t + "SIRS criteria is technically met, however, " + combineAlternative() + ", and therefore the patient does not meet criteria for sepsis.";
               break;
             case "othersirs-cause1":
