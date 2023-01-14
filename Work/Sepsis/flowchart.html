@@ -325,30 +325,22 @@
             case "othersirs-tachycardia-cause3":
             case "othersirs-tachycardia-cause4":
             case "othersirs-tachycardia-cause5":
-              t = t + "SIRS criteria are technically met, however, tachycardia is due to "+ value + " rather than infection. ";
-              break;
             case "othersirs-tachypnea-cause1":
             case "othersirs-tachypnea-cause2":
             case "othersirs-tachypnea-cause3":
             case "othersirs-tachypnea-cause4":
             case "othersirs-tachypnea-cause5":
-              t = t + "SIRS criteria are technically met, however, tachypnea is due to "+ value + " rather than infection. ";
-              break;
-                          
             case "othersirs-fever-cause1":
             case "othersirs-fever-cause2":
             case "othersirs-fever-cause3":
-              t = t + "SIRS criteria are technically met, however, fever is due to "+ value + " rather than infection. ";
-              break;
             case "othersirs-hypothermia-cause2":
             case "othersirs-hypothermia-cause3":
-              t = t + "SIRS criteria are technically met, however, hypothermia is due to "+ value + " rather than infection. ";
-              break;
 	          case "othersirs-leukocytosis-cause1":
             case "othersirs-leukocytosis-cause2":
             case "othersirs-leukocytosis-cause3":
-              t = t + "SIRS criteria are technically met, however, leukocytosis is due to "+ value + " rather than infection. ";
-              break;
+            
+              t = t + "SIRS criteria is technically met, however, " + combineAlternative() + ", and therefore the patient does not meet criteria for sepsis.";
+              
             case "othersirs-cause1":
             case "othersirs-cause2":
             case "othersirs-cause3":
@@ -431,6 +423,32 @@
           }
         }
         
+        function combineAlternative() {
+          var list = [];
+           
+                    
+          if (getRadioButtonValue('otherSIRS-tachycardia')) {
+            list.push('tachycardia is due to ' + getRadioButtonValue('otherSIRS-tachycardia'));
+          }
+                              
+          if (getRadioButtonValue('otherSIRS-tachypnea')) {
+            list.push('tachypnea is due to ' + getRadioButtonValue('otherSIRS-tachypnea'));
+          }
+                              
+          if (getRadioButtonValue('otherSIRS-fever')) {
+            list.push('tachypnea is due to ' + getRadioButtonValue('otherSIRS-fever'));
+          }
+                              
+          if (getRadioButtonValue('otherSIRS-hypothermia')) {
+            list.push('hypothermia is due to ' + getRadioButtonValue('otherSIRS-hypothermia'));
+          }                    
+          if (getRadioButtonValue('otherSIRS-leukocytosis')) {
+            list.push('leukocytosis is due to ' + getRadioButtonValue('otherSIRS-leukocytosis'));
+          }
+          return(combineItemsFromList(list)+".");
+        }
+          
+	     
         function combineDysfunction () {
           var list = [];
           
