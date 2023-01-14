@@ -350,7 +350,7 @@
             case "othersirs-leukocytosis-cause2":
             case "othersirs-leukocytosis-cause3":
             case "othersirs-leukocytosis-cause20":
-              t = t + "SIRS criteria is technically met, however, " + combineAlternative() + ", and therefore the patient does not meet criteria for sepsis.";
+              t = t + "SIRS criteria is technically met, however, " + combineAlternative() + " rather than infection, and therefore the patient does not meet criteria for sepsis.";
               break;
             case "othersirs-cause1":
             case "othersirs-cause2":
@@ -461,7 +461,7 @@
           if (getRadioButtonValue('leukocytosis')) {
             list.push('leukocytosis is due to ' + getRadioButtonValue('leukocytosis'));
           }
-          return(combineItemsFromList(list)+".");
+          return(combineItemsFromList(list));
         }
           
 	     
