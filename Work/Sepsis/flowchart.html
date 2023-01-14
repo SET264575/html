@@ -312,6 +312,7 @@
         document.getElementById('table').innerHTML = t;
         
         function go(id) {
+          document.getElementById('text').value = "";
           var list = [];
           list.push('div_hypotension');
           list.push('div_creatinine');
@@ -327,6 +328,9 @@
             document.getElementById('div_sepsis'+String(i)).style.display = 'none';
           }
           document.getElementById('div_'+id).style.display = "block";
+          if (id == "sepsis6") {
+            document.getElementById('timezero6').focus;
+          }
         }
         
         function copytext(id) {
