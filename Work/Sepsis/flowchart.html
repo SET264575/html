@@ -278,8 +278,9 @@
           <div class = "notes" id="sepsis6_note">If the lactate &gte 4, enter the time that the lactate result became available.</div>
           
           <h4>Septic Shock Due to Lactate &gte 4</h4>
-          <label for="time zero6">Time Zero for Septic Shock is:</label><br>
-          <input class="timezero_class" id = "timezero6" onchange="copytext(this.id)"/>
+          <label for="time zero6">Time Zero for Septic Shock is:&nbsp&nbsp&nbsp</label>
+          <input class="timezero_class" id = "timezero6" onchange="copytext(this.id)"/><br><br>
+          <button onclick="copytext('timezero6')">Use this time</button>
         </div>
 
         <div class="hidden" id="div_sepsis7">
@@ -295,8 +296,10 @@
         <div class="hidden" id="div_sepsis8">
           <div class = "notes" id="sepsis8_note">Enter the time that evidence of organ dysfunction became available.</div>
           <h4>Severe Sepsis, No Shock</h4>
-          <label for="time zero8">Time Zero for Severe Sepsis is:</label><br>
-          <input class="timezero_class" id="timezero8" onchange="copytext(this.id)"/>
+          <label for="time zero8">Time Zero for Severe Sepsis is:&nbsp&nbsp&nbsp</label>
+          <input class="timezero_class" id="timezero8" onchange="copytext(this.id)"/><br><br>
+          <button onclick="copytext('timezero8')">Use this time</button>
+          
         </div>
         </td>
       </table>
@@ -469,15 +472,15 @@
               break;
 			  
             case "timezero6":
-              t = t + "the patient met criteria for septic shock at " + document.getElementById('timezero6').value+" due to lactate \u2265 4. ";
+              t = "The patient met criteria for septic shock at " + document.getElementById('timezero6').value+" due to lactate \u2265 4. ";
               break;
 			  
             case "timezero7":
-              t = t + "the patient met criteria for septic shock at " + document.getElementById('timezero7').value+" due to persistent hypotension. ";
+              t = "The patient met criteria for septic shock at " + document.getElementById('timezero7').value+" due to persistent hypotension. ";
               break;
 			  
             case "timezero8":
-              t = t + "the patient met criteria for severe sepsis at " + document.getElementById('timezero8').value+". ";
+              t = "The patient met criteria for severe sepsis at " + document.getElementById('timezero8').value+". ";
               break;
 
           }
