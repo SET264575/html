@@ -432,7 +432,7 @@
               t = t + "SIRS criteria are met, however, they are due to " + value + ", a viral infection for which antibiotics are not indicated. ";
               break;
             case "sepsisregular":
-              t = t + "The patient meets SIRS criteria due to a bacterial infection, but there is no evidence of acute organ dysfunction, so severe sepsis is not present. ";
+              t = t + "The patient has met sepsis criteria, but there is no evidence of acute organ dysfunction, so severe sepsis is not present. ";
               break;
             case "organ-hpotension-cause1":
             case "organ-hpotension-cause2":
@@ -469,7 +469,7 @@
             case "organ-bili-cause3":
             case "organ-bili-cause4":
             case "organ-bili-cause20":
-              t = t + "the patient is septic and has evidence of organ dysfunction, however the patient's " + combineDysfunction() + " rather than infection, and therefore the patient does not have severe sepsis.";
+              t = t + "the patient has met sepsis criteria but does not meet criteria for severe sepsis.  Although there is evidence of organ dysfunction, it is not due to infection.  The patient's " + combineDysfunction() + ".";
               break;
 			  
             case "timezero6":
