@@ -283,7 +283,7 @@
       </table>
       </div>
     </div>
-	  
+
       <script>
         var list = [];
         var t = "<table>";
@@ -381,7 +381,7 @@
             case "othersirs-leukocytosis-cause2":
             case "othersirs-leukocytosis-cause3":
             case "othersirs-leukocytosis-cause20":
-              t = t + "SIRS criteria is technically met, however, " + combineAlternative() + " rather than infection, and therefore the patient does not meet criteria for sepsis.";
+              t = t + "SIRS criteria are technically met, however, " + combineAlternative() + " rather than infection, and therefore the patient does not meet criteria for sepsis.";
               break;
             case "othersirs-cause1":
             case "othersirs-cause2":
@@ -389,7 +389,7 @@
             case "othersirs-cause4":
             case "othersirs-cause5":
             case "othersirs-cause20":
-              t = t + "SIRS criteria is met, however, they are due to " + value + " rather than infection. ";
+              t = t + "SIRS criteria are met, however, they are due to " + value + " rather than infection, and therefore the patient does not have sepsis. ";
               break;
                           
             case "viral-cause1":
@@ -397,7 +397,7 @@
             case "viral-cause3":
             case "viral-cause4":
             case "viral-cause5":
-              t = t + "SIRS criteria is met, however, they are due to " + value + ", a viral infection for which antibiotics are not indicated. ";
+              t = t + "SIRS criteria are met, however, they are due to " + value + ", a viral infection for which antibiotics are not indicated. ";
               break;
             case "sepsisregular":
               t = t + "The patient meets SIRS criteria due to a bacterial infection, but there is no evidence of acute organ dysfunction, so severe sepsis is not present. ";
@@ -564,6 +564,7 @@
           }
           return(t);
         }
+        
       </script>
     </div>
   </body>
