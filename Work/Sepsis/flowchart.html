@@ -81,6 +81,7 @@
               <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause3" onclick="copytext(this.id)" value = "pain"><label for="othersirs-tachycardia-cause3">pain</label></li>
               <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause4" onclick="copytext(this.id)" value = "pulmonary embolism"><label for="othersirs-tachycardia-cause4">PE</label></li>
               <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause5" onclick="copytext(this.id)" value = "atrial fibrillation with RVR"><label for="othersirs-tachycardia-cause5">atrial fibrillation with RVR</label></li>
+              <li><input type="radio"  name = "fasthr" id = "othersirs-tachycardia-cause20" onclick="copytext(this.id)" value = "[alternative cause of tachycardia]"><label for="othersirs-tachycardia-cause5">[other cause]</label></li>
             </ul>
           </div>
           <div class="hidden" id = "div_tachypnea1">
@@ -431,23 +432,23 @@
         function combineAlternative() {
           var list = [];
                     
-          if (getRadioButtonValue('otherSIRS-tachycardia')) {
-            list.push('tachycardia is due to ' + getRadioButtonValue('otherSIRS-tachycardia'));
+          if (getRadioButtonValue('fasthr')) {
+            list.push('tachycardia is due to ' + getRadioButtonValue('fasthr'));
           }
                               
-          if (getRadioButtonValue('otherSIRS-tachypnea')) {
-            list.push('tachypnea is due to ' + getRadioButtonValue('otherSIRS-tachypnea'));
+          if (getRadioButtonValue('fastrr')) {
+            list.push('tachypnea is due to ' + getRadioButtonValue('fastrr'));
           }
                               
-          if (getRadioButtonValue('otherSIRS-fever')) {
-            list.push('tachypnea is due to ' + getRadioButtonValue('otherSIRS-fever'));
+          if (getRadioButtonValue('fever')) {
+            list.push('tachypnea is due to ' + getRadioButtonValue('fever'));
           }
                               
-          if (getRadioButtonValue('otherSIRS-hypothermia')) {
-            list.push('hypothermia is due to ' + getRadioButtonValue('otherSIRS-hypothermia'));
+          if (getRadioButtonValue('hypothermia')) {
+            list.push('hypothermia is due to ' + getRadioButtonValue('hypothermia'));
           }                    
-          if (getRadioButtonValue('otherSIRS-leukocytosis')) {
-            list.push('leukocytosis is due to ' + getRadioButtonValue('otherSIRS-leukocytosis'));
+          if (getRadioButtonValue('leukocytosis')) {
+            list.push('leukocytosis is due to ' + getRadioButtonValue('leukocytosis'));
           }
           return(combineItemsFromList(list)+".");
         }
