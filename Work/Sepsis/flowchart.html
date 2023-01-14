@@ -189,6 +189,8 @@
               <li><input type="radio" name="organ-hpotension-cause" id = "organ-hpotension-cause2" onclick="copytext(this.id)" value = "dehydration"><label for="organ-hpotension-cause2">dehydration</label></li>
               <li><input type="radio" name="organ-hpotension-cause" id = "organ-hpotension-cause3" onclick="copytext(this.id)" value = "ESRD"><label for="organ-hpotension-cause3">ESRD</label></li>
               <li><input type="radio" name="organ-hpotension-cause" id = "organ-hpotension-cause4" onclick="copytext(this.id)" value = "heart failure"><label for="organ-hpotension-cause4">heart failure</label></li>
+              <li><input type="radio" name="organ-hpotension-cause" id = "organ-hpotension-cause20" onclick="copytext(this.id)" value = "[cause of hypotension]"><label for="organ-hpotension-cause20">[other cause]</label></li>
+         
           </ul>
         </div>
         
@@ -197,6 +199,8 @@
           <ul class="radiobutton">
               <li><input type="radio" name="organ-creatinine-cause" id = "organ-creatinine-cause1" onclick="copytext(this.id)" value = "CKD"><label for="organ-creatinine-cause1">medication</label></li>
               <li><input type="radio" name="organ-creatinine-cause" id = "organ-creatinine-cause2" onclick="copytext(this.id)" value = "dehydration"><label for="organ-creatinine-cause2">dehydration</label></li>
+              <li><input type="radio" name="organ-creatinine-cause" id = "organ-creatinine-cause20" onclick="copytext(this.id)" value = "[cause of elevated creatinine]"><label for="organ-creatinine-cause20">[other cause]</label></li>
+            
           </ul>
         </div>
         
@@ -205,6 +209,8 @@
           <ul class="radiobutton">
               <li><input type="radio" name="organ-coag-cause" id = "organ-coag-cause1" onclick="copytext(this.id)" value = "an anticoagulant medication"><label for="organ-coag-cause1">an anticoagulant</label></li>
               <li><input type="radio" name="organ-coag-cause" id = "organ-coag-cause2" onclick="copytext(this.id)" value = "chronic liver disease"><label for="organ-coag-cause2">chronic liver disease</label></li>
+              <li><input type="radio" name="organ-coag-cause" id = "organ-coag-cause20" onclick="copytext(this.id)" value = "[cause of coagulopathy]"><label for="organ-coag-cause20">[other cause]</label></li>
+            
           </ul>
         </div>
 	              
@@ -215,6 +221,8 @@
               <li><input type="radio" name="organ-lactate-cause" id = "organ-lactate-cause2" onclick="copytext(this.id)" value = "DKA"><label for="organ-lactate-cause2">DKA</label></li>
               <li><input type="radio" name="organ-lactate-cause" id = "organ-lactate-cause3" onclick="copytext(this.id)" value = "alcohol intoxication"><label for="organ-lactate-cause3">alcohol intoxication</label></li>
               <li><input type="radio" name="organ-lactate-cause" id = "organ-lactate-cause4" onclick="copytext(this.id)" value = "starvation"><label for="organ-lactate-cause4">starvation</label></li>
+              <li><input type="radio" name="organ-lactate-cause" id = "organ-lactate-cause20" onclick="copytext(this.id)" value = "[cause of elevated lactate]"><label for="organ-lactate-cause20">[other cause]</label></li>
+          
           </ul>
         </div>
         
@@ -224,6 +232,7 @@
           <ul class="radiobutton">
               <li><input type="radio" name="organ-plt-cause" id = "organ-plt-cause1" onclick="copytext(this.id)" value = "chronic thrombocytopenia"><label for="organ-plt-cause1">chronic thrombocytopenia</label></li>
               <li><input type="radio" name="organ-plt-cause" id = "organ-plt-cause2" onclick="copytext(this.id)" value = "chronic liver disease"><label for="organ-plt-cause2">chronic liver disease</label></li>
+              <li><input type="radio" name="organ-plt-cause" id = "organ-plt-cause20" onclick="copytext(this.id)" value = "[cause of thrombocytopenia]"><label for="organ-plt-cause20">[other cause]</label></li>
           </ul>
         </div>
         
@@ -232,6 +241,7 @@
           <ul class="radiobutton">
               <li><input type="radio" name="organ-bili-cause" id = "organ-bili-cause1" onclick="copytext(this.id)" value = "chronically elevated bilirubin"><label for="organ-bili-cause1">chronically elevated bilirubin</label></li>
               <li><input type="radio" name="organ-bili-cause" id = "organ-bili-cause2" onclick="copytext(this.id)" value = "chronic liver disease"><label for="organ-bili-cause2">chronic liver disease</label></li>
+              <li><input type="radio" name="organ-bili-cause" id = "organ-bili-cause20" onclick="copytext(this.id)" value = "[cause of elevated bilirubin]"><label for="organ-bili-cause20">[other cause]</label></li>
           </ul>
         </div>
         
@@ -243,6 +253,7 @@
               <li><input type="radio" name="organ-resp-cause" id = "organ-resp-cause2" onclick="copytext(this.id)" value = "PE"><label for="organ-resp-cause2">PE</label></li>
               <li><input type="radio" name="organ-resp-cause" id = "organ-resp-cause3" onclick="copytext(this.id)" value = "COPD exacerbation"><label for="organ-resp-cause3">COPD exacerbation</label></li>
               <li><input type="radio" name="organ-resp-cause" id = "organ-resp-cause4" onclick="copytext(this.id)" value = "substance abuse"><label for="organ-resp-cause4">substance abuse</label></li>
+              <li><input type="radio" name="organ-resp-cause" id = "organ-resp-cause20" onclick="copytext(this.id)" value = "[cause of respiratory failure]"><label for="organ-resp-cause20">[other cause]</label></li>
           </ul>
         </div>
         
@@ -378,30 +389,37 @@
             case "organ-hpotension-cause2":
             case "organ-hpotension-cause3":
             case "organ-hpotension-cause4":
+            case "organ-hpotension-cause20":
             case "organ-creatinine-cause1":
             case "organ-creatinine-cause2":
             case "organ-creatinine-cause3":
             case "organ-creatinine-cause4":
+            case "organ-creatinine-cause20":
             case "organ-lactate-cause1":
             case "organ-lactate-cause2":
             case "organ-lactate-cause3":
             case "organ-lactate-cause4":
+            case "organ-lactate-cause20":
             case "organ-coag-cause1":
             case "organ-coag-cause2":
             case "organ-coag-cause3":
             case "organ-coag-cause4":
+            case "organ-coag-cause20":
             case "organ-plt-cause1":
             case "organ-plt-cause2":
             case "organ-plt-cause3":
             case "organ-plt-cause4":
+            case "organ-plt-cause20":
             case "organ-resp-cause1":
             case "organ-resp-cause2":
             case "organ-resp-cause3":
             case "organ-resp-cause4":
+            case "organ-resp-cause20":
             case "organ-bili-cause1":
             case "organ-bili-cause2":
             case "organ-bili-cause3":
             case "organ-bili-cause4":
+            case "organ-bili-cause20":
               t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's " + combineDysfunction() + "rather than infection, and therefore the patient does not have severe sepsis.";
               break;
 			  
