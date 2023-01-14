@@ -68,10 +68,13 @@
 .tdleft {
 	width: 30%;
 	vertical-align: top;
+	padding: 20px;
+	border-right: 3px solid green;
 }
 .tdright {
 	width: 79%;
 	vertical-align: top;
+	padding: 20px;
 }
 
 .timezero_class {
@@ -216,6 +219,7 @@
         height: 100px;
         border: 1px solid black;
         margin: auto;
+	padding: 20px;
         display: block;
       }
       
