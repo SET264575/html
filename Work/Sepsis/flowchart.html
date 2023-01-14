@@ -442,10 +442,67 @@
             document.getElementById(list[id]).style.display = 'none';
           }
         }
+        
+        function combineDysfunction () {
+          var list = [];
+          
+          if (getRadioButtonValue('organ-hypotension-cause')) {
+            list.push('hypotension is due to ' + getRadioButtonValue('organ-hypotension-cause'));
+          }
+                    
+          if (getRadioButtonValue('organ-creatinine-cause')) {
+            list.push('elevated creatinine is due to ' + getRadioButtonValue('organ-creatinine-cause'));
+          }
+                    
+          if (getRadioButtonValue('organ-lactate-cause')) {
+            list.push('elevated lactate is due to ' + getRadioButtonValue('organ-lactate-cause'));
+          }
+                    
+          if (getRadioButtonValue('organ-bili-cause')) {
+            list.push('elevated bilirubin is due to ' + getRadioButtonValue('organ-bili-cause'));
+          }
+                    
+          if (getRadioButtonValue('organ-plt-cause')) {
+            list.push('thrombocytopenia is due to ' + getRadioButtonValue('organ-plt-cause'));
+          }
+                    
+          if (getRadioButtonValue('organ-resp-cause')) {
+            list.push('respiratory failure is due to ' + getRadioButtonValue('organ-resp-cause'));
+          }
+                    
+          if (getRadioButtonValue('organ-coag-cause')) {
+            list.push('coagulopathy is due to ' + getRadioButtonValue('organ-coag-cause'));
+          }
+          let t = "The patient is septic and has evidence of organ dysfunction, however the patient's ';
+          t = t + combineItemsFromList(list);
+          t = t + '.";
+          return(t);
+        }
               
         function currentTime(){
           var x = Date().toLocaleString();
           return(x.slice(16,21));
+        }
+	              
+        function getRadioButtonValue(name){
+          var ele = document.getElementsByName(name);
+          for (let i = 0; i < ele.length; i++){
+            if (ele[i].checked){
+              return(ele[i].value);
+            }
+          }
+          return(false);
+        }
+	              
+        function combineItemsFromList(list) {
+          var t = list[0];
+          for (let i = 1; i<list.length-1; i++) {
+            t = t + ", "+ list[i];
+          }
+          if (list.length>1) {
+            t = t + " and " + list[list.length-1];
+          }
+          return(t);
         }
       </script>
     </div>
