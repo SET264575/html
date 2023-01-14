@@ -385,7 +385,7 @@
             case "organ-bili-cause2":
             case "organ-bili-cause3":
             case "organ-bili-cause4":
-              t = t + combineDysfunction();
+              t = t + "The patient is septic and has evidence of organ dysfunction, however the patient's " + combineDysfunction() + ".";
               break;
 			  
             case "timezero6":
@@ -487,8 +487,7 @@
           if (getRadioButtonValue('organ-coag-cause')) {
             list.push('coagulopathy is due to ' + getRadioButtonValue('organ-coag-cause'));
           }
-          return("The patient is septic and has evidence of organ dysfunction, however the patient's " + combineItemsFromList(list)+'.';
-          return(t);
+          return( combineItemsFromList(list));
         }
               
         function currentTime(){
