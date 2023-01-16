@@ -178,6 +178,7 @@ function getParameter(p) {
 
 
 function checkConsent(index){
+  console.log('in checkConsent');
       switch(index) {
         case "implied":
           document.getElementById('consent1').checked = true;
