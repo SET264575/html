@@ -163,8 +163,8 @@ function side() {load('side') }
 function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
-function sedation(flag) {load('sedation'; sedationFlag = flag}
-function sutures(index) { load('sutures'); sutureFlag = index;  } 
+function sedation(flag) {load('sedation'); sedationFlag = flag}
+function sutures(index) { load('sutures'); sutureFlag = index} 
 function smallvolumefluid() {load('smallvolumefluid')}
 function largevolumefluid() {load('largevolumefluid')}
 function wounddescription() {load('wounddescription')}
