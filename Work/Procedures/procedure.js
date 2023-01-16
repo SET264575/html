@@ -1,4 +1,7 @@
 const noAnswer = "__________";
+var consentFlag = "";
+var sedationFlag = "";
+var sutureFlag = "";
 
 function getRadioButtonValue(name){
   var ele = document.getElementsByName(name);
@@ -153,15 +156,15 @@ function load2(tag,parameter) {
 }
 
 function anesthetic() {load('anesthetic')}
-function consent(index){load('consent'); var consentFlag = index; }
+function consent(index){load('consent'); consentFlag = index; }
 function contamination() {load('contamination')}
 function digitalblock() {load('digitalblock');}
 function side() {load('side') }
 function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
-function sedation(flag) {load2('sedation',flag);}
-function sutures(index) { load2('sutures',index);  } 
+function sedation(flag) {load('sedation'; sedationFlag = flag}
+function sutures(index) { load2('sutures'); sutureFlag = index);  } 
 function smallvolumefluid() {load('smallvolumefluid')}
 function largevolumefluid() {load('largevolumefluid')}
 function wounddescription() {load('wounddescription')}
