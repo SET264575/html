@@ -171,7 +171,7 @@ function getParameter(p) {
   get: (searchParams, prop) => searchParams.get(prop),
 });
 // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
-return( params[p)];
+return( params[p]);
 }
 
 function contamination() {load('contamination')}
