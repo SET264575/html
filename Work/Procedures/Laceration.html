@@ -58,29 +58,29 @@
     </script>
     <script>
       function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
+        navigator.clipboard.writeText(getValue("text").value); 
       }
     </script>
   
     
     <script>
       function copytext(){
-        var wound_length = document.getElementById("length").value;
-        var description = document.getElementById("description").value;
-        var location = document.getElementById("location").value;
-        var anesthetic = document.getElementById("anesthetic").value;
-        var suture_size = document.getElementById("suture_size").value;
-        var suture_type = document.getElementById("suture_type").value;
-        var volume = document.getElementById("volume").value;
-        var suture_count = document.getElementById("suture_count").value;
-        var suture_style = document.getElementById("suture_style").value;
-        var bpcuff = document.getElementById("bpcuff").checked;
-        var tournicot = document.getElementById("tournicot").checked;
-        var skinhooks = document.getElementById("skinhooks").checked;
-        var contamination = getRadioButtonValue('contamination');
-        var tendon = getRadioButtonValue("tendon");
-        var betadine = getRadioButtonValue("betadine");
-        var clean = getRadioButtonValue('clean');
+        var wound_length = getValue("length");
+        var description = getValue("description");
+        var location = getValue("location");
+        var anesthetic = getValue("anesthetic");
+        var suture_size = getValue("suture_size");
+        var suture_type = getValue("suture_type");
+        var volume = getValue("volume");
+        var suture_count = getValue("suture_count");
+        var suture_style = getValue("suture_style");
+        var bpcuff = getValue("bpcuff");
+        var tournicot = getValue("tournicot");
+        var skinhooks = getValue("skinhooks");
+        var contamination = getValue('contamination');
+        var tendon = getValue("tendon");
+        var betadine = getValue("betadine");
+        var clean = getValue('clean');
         var t = "";
         t = "Procedure Note:  Laceration repair on the "+location+"\n";
         t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was ";
