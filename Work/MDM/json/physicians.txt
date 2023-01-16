@@ -1,7 +1,7 @@
 {"admitting":[
     {"specialty":"CT surgery","physician":["Fernandez","Mellitt"]},
     {"specialty":"ENT","physician":["Hanock","Scheidt"]},
-    {"specialty":"General surgery","physician":["Gerber","Peterson","Rollison","Vaden"]},
+    {"specialty":"General surgery","physician":["Gerber","Petersen","Rollison","Vaden"]},
     {"specialty":"Hem/Onc","physician":["Balakrishnan","Iliff","Makarian","Ramadoss","Tungesvik"]},
     {"specialty":"Hospitalist","physician":["Bhagat","Cheddi","Hassan","James","Makarian","McGreevy","Nau","Petrie","Renick","Schiavo","Sharma","Welchmeyer","Yuen","Zeglis"]},
     {"specialty":"Internal medicine","physician":["Ciolino","Delwood","Scoles","Vogt"]},
@@ -19,7 +19,7 @@
     {"specialty":"Dermatology","physician":["Perry","Schiavo"]},
     {"specialty":"Endocrinology","physician":["Addison"]},
     {"specialty":"ENT","physician":["Hanock","Scheidt"]},
-    {"specialty":"General surgery","physician":["Gerber","Peterson","Rollison","Vaden"]},
+    {"specialty":"General surgery","physician":["Gerber","Petersen","Rollison","Vaden"]},
     {"specialty":"GI","physician":["Anderson","Cleavinger","Diaz-Arias","Halsey","Llorens","Welsh","Williams"]},
     {"specialty":"Hem/Onc","physician":["Balakrishnan","Iliff","Makarian","Ramadoss","Tungesvik"]},
     {"specialty":"Hospitalist","physician":["Bhagat","Cheddi","Hassan","James","Makarian","McGreevy","Nau","Petrie","Renick","Schiavo","Sharma","Welchmeyer","Yuen","Zeglis"]},
