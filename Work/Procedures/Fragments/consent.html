@@ -1,10 +1,14 @@
-    <h4>Consent</h4>
-    <input type = "radio" name = "consent" value = "Due to the patient's critical condition, informed consent could not be obtained. " id = "consent1" onchange = "copytext()">
-    <label for = "consent1">Due to the patient's critical condition, informed consent could not be obtained.</label><br>
-    <input type = "radio" name = "consent" checked value = "The risks, benefits and alternatives were discussed with the patient who provided verbal consent for the procedure. " id = "consent2" onchange = "copytext()">
-    <label for = "consent2">Verbal consent</label><br>
-    <input type = "radio" name = "consent" value = "The risks, benefits and alternatives were discussed with the patient who provided written consent for the procedure. " id = "consent3" onchange = "copytext()">
-    <label for = "consent3">Written consent</label><br>
-    <input type = "radio" name = "consent" value = "[consent]" id = "consent4" onchange = "copytext()">
-    <label for = "consent4">[consent]</label><br>
-    <br>
+<h4>Consent</h4>
+<input type = "radio" name = "consent" value = "Due to the patient's critical condition, informed consent could not be obtained. " id = "consent1" onchange = "copytext()">
+<label for = "consent1">Due to the patient's critical condition, informed consent could not be obtained.</label><br>
+<input type = "radio" name = "consent" checked value = "The risks, benefits and alternatives were discussed with the patient who provided verbal consent for the procedure. " id = "consent2" onchange = "copytext()">
+<label for = "consent2">Verbal consent</label><br>
+<input type = "radio" name = "consent" value = "The risks, benefits and alternatives were discussed with the patient who provided written consent for the procedure. " id = "consent3" onchange = "copytext()">
+<label for = "consent3">Written consent</label><br>
+<input type = "radio" name = "consent" value = "[consent]" id = "consent4" onchange = "copytext()">
+<label for = "consent4">[consent]</label><br>
+<br>
+
+<script>
+    checkConsent(getParam('checked'));
+</script>
