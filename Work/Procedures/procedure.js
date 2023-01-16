@@ -146,33 +146,17 @@ function load(tag) {
   });
 }
 
+function load2(tag,parameter) {
+  $(document).ready(function(){
+    $('#div_'+tag).load("Fragments/"+tag+".html?checked="+parameter);
+  });
+}
+
 function anesthetic() {load('anesthetic')}
 
-function consent(index){
-      load('consent');
-      switch(index) {
-        case "implied":
-          document.getElementById('consent1').checked = true;
-          break;
-        case 'verbal':
-          document.getElementById('consent2').checked = true;
-          break;
-        case "written":
-          document.getElementById('consent3').checked = true;
-          break;
-        case "none":
-          document.getElementById('consent4').checked = true;
-          break;
-      }
-}
+function consent(index){load2('consent',index); }
 
-function getParameter(p) {
-  const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
-// Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
-return( params[p]);
-}
+
 
 function contamination() {load('contamination')}
 function digitalblock() {load('digitalblock');}
@@ -205,8 +189,29 @@ function largevolumefluid() {load('largevolumefluid')}
 function wounddescription() {load('wounddescription')}
 function woundpreparation() {load('woundpreparation')}
 
+function getParameter(p) {
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+  return( params[p]);
+}
 
 
-
-
+function checkConsent(index){
+      switch(index) {
+        case "implied":
+          document.getElementById('consent1').checked = true;
+          break;
+        case 'verbal':
+          document.getElementById('consent2').checked = true;
+          break;
+        case "written":
+          document.getElementById('consent3').checked = true;
+          break;
+        case "none":
+          document.getElementById('consent4').checked = true;
+          break;
+      }
+}
 
