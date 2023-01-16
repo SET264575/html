@@ -153,41 +153,20 @@ function load2(tag,parameter) {
 }
 
 function anesthetic() {load('anesthetic')}
-
 function consent(index){load2('consent',index); }
-
-
-
 function contamination() {load('contamination')}
 function digitalblock() {load('digitalblock');}
 function side() {load('side') }
 function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
-
-function sedation(flag) {
-  load('sedation');
-  toggleSedation(flag);
-}
-
-function sutures(index) {
-  load('sutures');
-  switch (index) {
-    case 4:
-      document.getElementById('suture_size3').checked = true;
-       break;
-    case 5:
-      document.getElementById('suture_size4').checked = true;
-       break;
-    case 6:
-      document.getElementById('suture_size5').checked = true;
-       break;
-  } 
-}
+function sedation(flag) {load2('sedation',flag);}
+function sutures(index) { load2('sutures',index);  } 
 function smallvolumefluid() {load('smallvolumefluid')}
 function largevolumefluid() {load('largevolumefluid')}
 function wounddescription() {load('wounddescription')}
 function woundpreparation() {load('woundpreparation')}
+
 
 function getParameter(p) {
   const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -215,3 +194,16 @@ function checkConsent(index){
       }
 }
 
+function checkSutures(index) {
+  switch (index) {
+    case 4:
+      document.getElementById('suture_size3').checked = true;
+       break;
+    case 5:
+      document.getElementById('suture_size4').checked = true;
+       break;
+    case 6:
+      document.getElementById('suture_size5').checked = true;
+       break;
+  } 
+}
