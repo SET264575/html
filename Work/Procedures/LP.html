@@ -9,14 +9,13 @@
     <div class="div_header" id= "div_header"></div>
     <div class="main">
       <h3>Lumbar Puncture</h3>
-      <a href="https://coreem.net/core/ultrasound-guided-lumbar-puncture/">Finding landmarks with ultrasound guidance</a><br>
-      <a href = "../../ER\Equipment/lp.html">Equipment list</a><br>
+
 
       <h4>Indication</h4>
-      <input type = "radio" name = "indication" value = "0" checked id = "indication" onchange = "copytext()">
-      <label for = "0">meningitis</label><br>
-      <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
-      <label for = "1">subarachnoid hemorrhage</label><br><br>
+      <input type = "radio" name = "indication" value = "0" checked id = "indication0" onchange = "copytext()">
+      <label for = "indication0">meningitis</label><br>
+      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">subarachnoid hemorrhage</label><br><br>
 
 
 
@@ -26,30 +25,34 @@
       <label for="lidocaine">Lidocaine was used</option><br>
 
       <h4>Needle Size</h4>
-      <input type = "radio" name = "needle" value = "0" id = "needle" onchange = "copytext()">
-      <label for = "0">20 gauge</label><br>
-      <input type = "radio" name = "needle" value = "1" id = "needle" onchange = "copytext()">
-      <label for = "1">22 gauge</label><br>
-      <input type = "radio" name = "needle" value = "2" id = "needle" onchange = "copytext()">
-      <label for = "2">24 gauge</label><br><br>
+      <input type = "radio" name = "needle" value = "0" id = "needle0" onchange = "copytext()">
+      <label for = "needle0">20 gauge</label><br>
+      <input type = "radio" name = "needle" value = "1" checked id = "needle1" onchange = "copytext()">
+      <label for = "needle1">22 gauge</label><br>
+      <input type = "radio" name = "needle" value = "2" id = "needle2" onchange = "copytext()">
+      <label for = "dneedle2">24 gauge</label><br><br>
 
       <h4>Interspace</h4>
-      <input type = "radio" name = "interspace" value = "0" checked id = "interspace" onchange = "copytext()">
-      <label for = "0">L3-L4</label><br>
-      <input type = "radio" name = "interspace" value = "1" id = "interspace" onchange = "copytext()">
-      <label for = "1">L4-L5</label><br><br>
+      <input type = "radio" name = "interspace" value = "0" checked id = "interspace0" onchange = "copytext()">
+      <label for = "interspace0">L3-L4</label><br>
+      <input type = "radio" name = "interspace" value = "1" id = "interspace1" onchange = "copytext()">
+      <label for = "interspace1">L4-L5</label><br><br>
 
       <h4>Fluid color</h4>
-      <input type = "radio" name = "color" value = "0" checked id = "color" onchange = "copytext()">
-      <label for = "0">clear</label><br>
-      <input type = "radio" name = "color" value = "1" id = "color" onchange = "copytext()">
-      <label for = "1">cloudy</label><br>
-      <input type = "radio" name = "color" value = "2" id = "color" onchange = "copytext()">
-      <label for = "2">bloody</label><br><br>
+      <input type = "radio" name = "color" value = "0" checked id = "color0" onchange = "copytext()">
+      <label for = "color0">clear</label><br>
+      <input type = "radio" name = "color" value = "1" id = "color1" onchange = "copytext()">
+      <label for = "color1">cloudy</label><br>
+      <input type = "radio" name = "color" value = "2" id = "color2" onchange = "copytext()">
+      <label for = "color2">bloody</label><br><br>
 
       <label for = "pressure">Opening pressure</label>
       <textarea class="smalltextarea" id = "pressure" onchange = "copytext()"></textarea><br><br><br><br><br>
 
+        <div class="note">
+            <a href="https://coreem.net/core/ultrasound-guided-lumbar-puncture/">Finding landmarks with ultrasound guidance</a><br>
+            <a href = "../../ER\Equipment/lp.html">Equipment list</a><br>
+        </div>
     </div>
     <footer>
       <div class="dateChanged">12/6/22</div>
