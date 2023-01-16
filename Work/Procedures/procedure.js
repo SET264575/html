@@ -153,7 +153,7 @@ function load2(tag,parameter) {
 }
 
 function anesthetic() {load('anesthetic')}
-function consent(index){load2('consent',index); }
+function consent(index){load('consent'); var consentFlag = index; }
 function contamination() {load('contamination')}
 function digitalblock() {load('digitalblock');}
 function side() {load('side') }
