@@ -191,6 +191,12 @@ function checkConsent(index){
         case "none":
           document.getElementById('consent4').checked = true;
           break;
+        case "parental verbal":
+          document.getElementById('consent5').checked = true;
+          break;
+        case "parental written":
+          document.getElementById('consent6').checked = true;
+          break;
       }
 }
 
