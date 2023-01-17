@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <button onclick="copy()">Copy</button>
+    <script>
+      function copytext() {
+        const content = 'This is a <b>bold</b> and <u>underlined</u> test.';
+        const blob = new Blob([content], {type: 'text/html'});
+        const clipboardItem = new window.ClipboardItem({ 'text/html': blob });
+        navigator.clipboard.write([clipboardItem]);
+      }
+    </script>
+  </body>
+</html>
