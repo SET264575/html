@@ -31,6 +31,7 @@
     
     <div id = "div_anesthetic"></div>
     
+    <div id = "div_note"></div>
     
     <footer>
       <div class="dateChanged">12/7/22</div>
