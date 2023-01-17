@@ -13,6 +13,7 @@
   <body>
     <button id = "text1" onclick = "copytext(1)">Critical Care </button><br>
     <button id = "text2" onclick = "copytext(2)">Dr. Robertson Letter</button><br>
+    <button id = "text4" onclick = "copytext(4)">Foot & Ankle Letter</button><br>
     <button id = "text3" onclick = "">Drug & Alcohol Detox List</button><br>
     
     <h5>The following has been copied to the clipboard and is ready to be pasted into your document:</h5><br>
@@ -56,6 +57,26 @@ Director of Orthopaedic Trauma/Boone Hospital Center";
           break;
         case 3:
           break;
+        case 4:
+          txt = "If you are receiving this letter, you have been diagnosed with an injury or fracture (broken bone) in your foot or ankle. \
+Please call Columbia Orthopaedic Group to set up an appointment with one of the foot and ankle specialists. Their contacts are listed below. \
+Columbia Orthopaedic Group is open Monday through Friday between 7:30am and 4:30 pm. If there is no answer, please leave a message with your name,\
+date of birth, and a phone number to reach you and you will be contacted as soon as possible. We have one of our specialists in clinic every day\
+and will do our best to fit you in quickly. Most fractures need to be seen within one week from injury, so please contact the clinic as soon as \
+possible to schedule an appointment. Keep your injured extremity elevated as much as possible to minimize any swelling and use ice as necessary for \
+comfort. We look forward to seeing you at Columbia Orthopaedic Group and getting you on the road to recovery!\
+\n\
+Dr. Kurt Krautmann\n\
+Lauren Fuller, PA-C\n\
+Judy Schneider, Clinical Assistant\n\
+Clinic (573) 441-3785\n\
+\n\
+Dr. Brian Kleiber\n\
+Amy Kurtz, PA-C\n\
+Jennifer Shedd, LPN\n\
+Clinic (573) 441-3795";
+          break;
+          
       }
       navigator.clipboard.writeText(txt);
       document.getElementById("result").innerHTML = txt;
