@@ -12,10 +12,25 @@
     
       <div id="div_wounddescription"></div>
     
-      <label for = "location">Location</label>
-      <input type = "text" id = "location" onchange="copytext()">
+      <h4>Side</h4>
+      <input type = "radio" value = "Left" name = "side" id = "side1" onchange = "copytext()">
+      <label id = "side1">Left</label><br>
+      <input type = "radio" value = "Right" name = "side" id = "side2" onchange = "copytext()">
+      <label id = "side2">Right</label><br>
+      <input type = "radio" value = "Midline" name = "side" id = "side3" onchange = "copytext()">
+      <label id = "side3">Midline</label><br>
+      
+      <h4>Location</h4>
+      <input type="radio" id = "location1" name = "location" onchange="copytext()">
+      <label for = "location1">vertex</label><br>
+      <input type="radio" id = "location2" name = "location" onchange="copytext()">
+      <label for = "location2">frontal scalp</label><br>
+      <input type="radio" id = "location3" name = "location" onchange="copytext()">
+      <label for = "location3">parietal scalp</label><br>
+      <input type="radio" id = "location4" name = "location" onchange="copytext()">
+      <label for = "location4">occipital scalp</label><br><br>
 
-        <div id="div_anesthetic"></div>
+      <div id="div_anesthetic"></div>
 
       <h4>Staples</h4>
 
@@ -56,12 +71,13 @@
         var consent = getValue('consent');
         var wound_length = getValue("length");
         var description = getValue("description");
+        var side = getValue('side');
         var location = getValue("location");
         var anesthetic = getValue("anesthetic");
         var volume = getValue("volume");
         var suture_count = getValue("suture_count");
         var t = "";
-        t = "Procedure Note:  Laceration repair on the "+location+"\n";
+        t = "Procedure Note:  Laceration repair of the "+side + " " + location+"\n";
         t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
         t = t + "The wound was irrigated thoroughly with normal saline. ";
