@@ -26,6 +26,7 @@ function getValue(id) {
   var result = false;
   if (x == null) {
     result = getRadioButtonValue(id);
+    if (result == false) {result = noAnswer};
   }
   else {
     var type = x.type;
@@ -35,14 +36,15 @@ function getValue(id) {
     }
     if (type == "text") {
       result = document.getElementById(id).value;
+      if (result == "") {result = noAnswer};
  //     console.log('treating ' + id + " as a textbox with result = " + result);
     }
     if (type == "select-one") {
       result = document.getElementById(id).value;
+      if (result == "") {result = noAnswer};
 //      console.log('treating ' + id + " as a select with result = " + result);
     }
   }
-  if (result == false) {result = noAnswer;}
   
   return(result);
 }
