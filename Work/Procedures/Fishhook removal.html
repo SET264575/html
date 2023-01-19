@@ -67,7 +67,7 @@
           t = t + "The skin was infiltrated with 1 cc of 1% lidocaine. ";
         }
         t = t + "The fishhook was removed by ";
-        select (technique) {
+        switch (technique) {
           case "0":
             t = t + "pushing the barb through the skin, cutting the barb off and then pulling the hook back through the skin. ";
             break;
