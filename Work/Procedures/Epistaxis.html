@@ -16,16 +16,16 @@
       <div id = "div_side"></div>
 
       <h4>Technique</h4>
-      <input type = "radio" name = "technique" value = "0" id = "technique" onchange = "copytext()">
-      <label for = "0">Silver nitrate</label><br>
-      <input type = "radio" name = "technique" value = "1" id = "technique" onchange = "copytext()">
-      <label for = "1">Merocel sponge</label><br>
-      <input type = "radio" name = "technique" value = "2" id = "technique" onchange = "copytext()">
-      <label for = "2">4.5 cm Rhino rocket</label><br>
-      <input type = "radio" name = "technique" value = "3" id = "technique" onchange = "copytext()">
-      <label for = "3">5.5 cm Rhino rocket</label><br>
-      <input type = "radio" name = "technique" value = "4" id = "technique" onchange = "copytext()">
-      <label for = "4">7.5 cm Rhino rocket</label><br><br>
+      <input type = "radio" name = "technique" value = "0" id = "technique0" onchange = "copytext()">
+      <label for = "technique0">Silver nitrate</label><br>
+      <input type = "radio" name = "technique" value = "1" id = "technique1" onchange = "copytext()">
+      <label for = "technique1">Merocel sponge</label><br>
+      <input type = "radio" name = "technique" value = "2" id = "technique2" onchange = "copytext()">
+      <label for = "technique2">4.5 cm Rhino rocket</label><br>
+      <input type = "radio" name = "technique" value = "3" id = "technique3" onchange = "copytext()">
+      <label for = "technique3">5.5 cm Rhino rocket</label><br>
+      <input type = "radio" name = "technique" value = "4" id = "technique4" onchange = "copytext()">
+      <label for = "technique4">7.5 cm Rhino rocket</label><br><br>
     </div>
     <footer>
       <div class="dateChanged">12/6/22</div>
@@ -52,8 +52,7 @@
         t = t + consent;
         t = t + "A cotton ball saturated with 4% cocaine was placed in the patient's "+side.toLowerCase() +" naris.  Once adequate anesthesia was obtained, the cotton ball was removed and ";
         t = t + "the nasal mucosa was inspected with a nasal speculum. ";
-        
-console.log("technique = ",technique);
+
         switch(technique){
           case "0":
             t = t + "A bleeding site on the anterior septum was noted.  This was cauterized with silver nitrate. ";
