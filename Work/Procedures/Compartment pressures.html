@@ -39,7 +39,7 @@
                             
     <script src="procedure.js"></script>
     <script>
-      header('');
+      header();
       consent('verbal');
       side();
       anesthetic();
@@ -57,7 +57,7 @@
         var location3 = getValue("compartment3");
         var location4 = getValue("compartment4");
         
-        var t = formatTitle("Measurement of " + side + " Lower Leg Compartment Pressures");
+        var t = "Procedure Note: Measurement of " + side + " Lower Leg Compartment Pressures\n");
         
         t = t + "The procedure was indicated to rule out compartment syndrome. ";
 
