@@ -138,6 +138,10 @@ function sedationText() {
   return(t);
 }
 
+function formatTitle(title) {
+  return(title);
+}
+
 function displayText(t) {
   navigator.clipboard.writeText(t);
   document.getElementById("text").value = t;
