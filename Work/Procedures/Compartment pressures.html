@@ -11,16 +11,20 @@
     <div class="div_header" id= "div_header"></div>
     <div class="main">
       <h3>Compartment pressures</h3>
-      <div id = "div_consent"></div>
-      <div id="div_side"></div>
-      <div id="div_anesthetic"></div>
-      
-      <h4>Locations</h4>
-      <input type = "checkbox" id = "compartment1" onchange = "copytext()"><label for = "compartment1">Anterior</label><br>
-      <input type = "checkbox" id = "compartment2" onchange = "copytext()"><label for = "compartment2">Lateral</label><br>
-      <input type = "checkbox" id = "compartment3" onchange = "copytext()"><label for = "compartment3">Posterior superficial</label><br>
-      <input type = "checkbox" id = "compartment4" onchange = "copytext()"><label for = "compartment4">Posterior deep</label><br>
+      <table>
+        <td>
+          <div id = "div_consent"></div>
+          <div id="div_side"></div>
+        </td>
+        <td>
+          <div id="div_anesthetic"></div>
 
+          <h4>Locations</h4>
+          <input type = "checkbox" id = "compartment1" onchange = "copytext()"><label for = "compartment1">Anterior</label><br>
+          <input type = "checkbox" id = "compartment2" onchange = "copytext()"><label for = "compartment2">Lateral</label><br>
+          <input type = "checkbox" id = "compartment3" onchange = "copytext()"><label for = "compartment3">Posterior superficial</label><br>
+          <input type = "checkbox" id = "compartment4" onchange = "copytext()"><label for = "compartment4">Posterior deep</label><br>
+        </td>
       <div class="note">
         <img src="leg compartments.png" width="600" />
       </div>
@@ -35,7 +39,7 @@
                             
     <script src="procedure.js"></script>
     <script>
-      header();
+      header('');
       consent('verbal');
       side();
       anesthetic();
@@ -53,7 +57,7 @@
         var location3 = getValue("compartment3");
         var location4 = getValue("compartment4");
         
-        var t = formatTitle("Procedure Note: Measurement of " + side + " Lower Leg Compartment Pressures\n");
+        var t = formatTitle("Measurement of " + side + " Lower Leg Compartment Pressures");
         
         t = t + "The procedure was indicated to rule out compartment syndrome. ";
 
