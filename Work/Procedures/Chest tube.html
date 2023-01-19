@@ -22,11 +22,11 @@ Tolerated
     <div class="main">
       <h3>Chest tube</h3>
       <h4>Indication</h4>
-      <input type = "radio" id = "Indication2" name = "Indication" value = "0" onchange = "copytext()">
+      <input type = "radio" id = "Indication2" name = "Indication" onchange = "copytext()">
       <label for = "Indication2">tension pneumothorax</label><br>
-      <input type = "radio" id = "Indication0" name = "Indication" value = "0" onchange = "copytext()">
+      <input type = "radio" id = "Indication0" name = "Indication" onchange = "copytext()">
       <label for = "Indication0">pneumothorax</label><br>
-      <input type = "radio" id = "Indication1" name = "Indication" value = "1" onchange = "copytext()">
+      <input type = "radio" id = "Indication1" name = "Indication" onchange = "copytext()">
       <label for = "Indication1">hemothorax</label><br>
 
       <div id="div_side"></div>
@@ -60,6 +60,7 @@ Tolerated
     <script>
       header();
       consent('written');
+      anesthetic();
       side();
     </script>
     
@@ -76,25 +77,13 @@ Tolerated
         var drainage = getValue("Tube drainage");
 
         t = t + "Procedure Note: Chest tube placement\n";
-        t = t + "Chest tube was indicated for ";
-        switch(Indication){
-          case "0":
-            t = t + "tension pneumothorax";
-            break;
-          case "1":
-            t = t + "pneumothorax";
-            break;
-          case "2":
-            t = t + "hemothorax";
-            break;
-        }
+        t = t + "Chest tube was indicated for "+Indication;
         t = t + consent;
-        
         t = t + "The insertion site, at the " + side.toLowerCase();
   
         switch(intercostal){
           case "0":
-            t = t + "5th";
+            t = t + " 5th";
             break;
         }
         
@@ -102,7 +91,7 @@ Tolerated
         t = t + ".  An skin incision was then made with a #15 blade and the tissues were bluntly dissected to the pleural space.  A ";
         switch(size){
           case "20":
-            t = t + "20 Fr";
+            t = t + "20 Fr ";
             break;
         }
         
