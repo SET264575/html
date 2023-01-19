@@ -139,7 +139,7 @@ function sedationText() {
 }
 
 function formatTitle(title) {
-  return(title);
+  return("<b><u>"+title+"</u></b>");
 }
 
 function displayText(t) {
