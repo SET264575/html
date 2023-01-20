@@ -1,12 +1,39 @@
 <!--
-Known bugs/quirks:
-2.  When using Risk Stratification scores, the results that the score calculator produces is not added to the MDM text until you click on other options outside of the Risk Stratification section.  I may or may not ever fix this.
-3.  The Ottawa ankle rules calculator can produce incorrect results if you give it unexpected data, like saying there is midfoot pain and lateral malleolus tenderness.  I might try to fix this someday.
-4.  Not everything that contributes to the coding level is noted or is used in the calculation to indicate what the level is.  (Your documentation may be at a higher level than indicated.)
-5.  There is no way to add more than one Risk Stratification score.  For instance, it would be helpful to combine CHADS-VASc and HAS-BLED.
-6.  Pneuomina Severity Index calculator doesn't work.
-7.  Pre-selected conditions in the differential diagnosis do not automatically generate text.  These are included in the text when you select additional diagnoses or any other option on the page.
-8.  Differential diagnosis is not alphabetized
+in mdm7:
+fix risk stratification
+remove commented out parts
+
+in mdm8:
+add collapsible to consults and admitting
+
+add more ddx
+  subsections for abd quadrants
+
+[]
+
+discussion with independent clinician:  relabel button and move
+recommendations of consultant
+	admission, discharge, will arrange follow up, [], outpt test, adding medication, the discharge plan, 
+
+specific diagnoses:
+stroke
+  ddx
+  exclusion criteria
+  inclusion criteria
+  NIH scale
+  CT interpretation
+  tPA given
+  neuro consulted, will admit
+  MIPS
+MI
+  ddx
+  EKG interpretation
+  consulted
+  treatment initiated
+  to cath lab
+EKG
+  rate, rhythm, ST segments, QT, PR, ectopic, BBB
+
 -->
 
 <html>
@@ -46,8 +73,12 @@ Known bugs/quirks:
            <li><input type = "radio" name = "present" id = "presenthigh1" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with an acute severe exacerbation of a chronic illness. "/><label for = "presentnumber1">Severe exacerbation of chronic illness</label></li>
             <li><input type = "radio" name = "present" id = "presenthigh2" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with severe progression of a chronic illness. "/><label for = "presentnumber2">Severe progression of chronic illness</label></li>
             <li><input type = "radio" name = "present" id = "presenthigh3" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with severe side effects of treatment of an illness. "/><label for = "presentnumber3">Severe side effects of treatment</label></li>
-            <li><input type = "radio" name = "present" id = "presenthigh4" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with an acute or chronic illness or injury that poses a threat to life or bodily function. "/><label for = "presenthigh4">Threat to life or bodily function</label></li>
-            </ul></div>
+            <li><input type = "radio" name = "present" id = "presenthigh4" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with an acute illness that poses a threat to life or bodily function. "/><label for = "presenthigh4">Acute illness, Threat to life or bodily function</label></li>
+            <li><input type = "radio" name = "present" id = "presenthigh5" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with a chronic illness that poses a threat to life or bodily function. "/><label for = "presenthigh5">Chronic illness, Threat to life or bodily function</label></li>
+            <li><input type = "radio" name = "present" id = "presenthigh6" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with an acute injury that poses a threat to life or bodily function. "/><label for = "presenthigh6">Acute injury, Threat to life or bodily function</label></li>
+            <li><input type = "radio" name = "present" id = "presenthigh7" class= "choicebutton" onclick="check(this.id)" value = "The patient presented with a chronic injury that poses a threat to life or bodily function. "/><label for = "presenthigh7">Chronic injury, Threat to life or bodily function</label></li>
+            
+    </ul></div>
 				
         <div>
 		<hr>
@@ -132,15 +163,15 @@ Known bugs/quirks:
               <li><input type = "radio"  class="choicebutton" id="sepsis-colitis" name = "sepsisetiology" onclick="check(this.id)" value = "colitis"><label for = "sepsis-colitis">Colitis</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-diarrhea" name = "sepsisetiology" onclick="check(this.id)" value = "a diarrheal illness"><label for = "sepsis-diarrhea">Diarrheal illness</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-flu" name = "sepsisetiology" onclick="check(this.id)" value = "influenza"><label for = "sepsis-flu">Flu</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-meningitis" name = "sepsisetiology" onclick="check(this.id)" value = "meningitis"><label for = "sepsis-meningitis">meningitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-meningitis" name = "sepsisetiology" onclick="check(this.id)" value = "meningitis"><label for = "sepsis-meningitis">Meningitis</label></li>
               
               <li><input type = "radio"  class="choicebutton" id="sepsis-pneumonia" name = "sepsisetiology" onclick="check(this.id)" value = "pneumonia"><label for = "sepsis-pneumonia">Pneumonia</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-peritonitis" name = "sepsisetiology" onclick="check(this.id)" value = "peritonitis"><label for = "sepsis-peritonitis">peritonitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-peritonitis" name = "sepsisetiology" onclick="check(this.id)" value = "peritonitis"><label for = "sepsis-peritonitis">Peritonitis</label></li>
               
-              <li><input type = "radio"  class="choicebutton" id="sepsis-pyelonephritis" name = "sepsisetiology" onclick="check(this.id)" value = "pyelonephritis"><label for = "sepsis-pyelonephritis">pyelonephritis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-pyelonephritis" name = "sepsisetiology" onclick="check(this.id)" value = "pyelonephritis"><label for = "sepsis-pyelonephritis">Pyelonephritis</label></li>
             
 	      <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsisetiology" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
-              <li><input type = "radio"  class="choicebutton" id="sepsis-tick" name = "sepsisetiology" onclick="check(this.id)" value = "a tick-borne illness"><label for = "sepsis-tick">a tick-borne illness</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-tick" name = "sepsisetiology" onclick="check(this.id)" value = "a tick-borne illness"><label for = "sepsis-tick">Tick-borne illness</label></li>
               <li><input type = "radio"  class="choicebutton" id="sepsis-undiscovered" name = "sepsisetiology" onclick="check(this.id)" value = "a, thus far, undiscovered source"><label for = "sepsis-undiscovered">Undiscovered source</label></li>
              
               <li><input type = "radio"  class="choicebutton" id="sepsis-blank" name = "sepsisetiology" onclick="check(this.id)" value = "[sepsis cause]"><label for = "sepsis-blank">[sepsis cause]</label></li>
@@ -164,10 +195,15 @@ Known bugs/quirks:
               </div>
               <h4>&nbsp</h4><h4>&nbsp</h4>
               <ul class = "radiobutton">
-
                 <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx1" name = "sepsis-abx" onclick="check(this.id)" value = "IV Zosyn & Vancomycin"><label for = "sepsis-abx1">Zosyn & Vancomycin</label></li>
                 <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "IV Rocephin & Zithromax"><label for = "sepsis-abx2">Rocephin & Zithromax</label></li>
-                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-abx3">[other abx]</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "IV Rocephin"><label for = "sepsis-abx3">Rocephin</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx6" name = "sepsis-abx" onclick="check(this.id)" value = "IV Zithromax"><label for = "sepsis-abx6">Zithromax</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx7" name = "sepsis-abx" onclick="check(this.id)" value = "IV Levaquin"><label for = "sepsis-abx7">Levaquin</label></li>
+		      
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx4" name = "sepsis-abx" onclick="check(this.id)" value = "IV Cipro & Flagyl"><label for = "sepsis-abx4">Cipro & Flagyl</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx5" name = "sepsis-abx" onclick="check(this.id)" value = "IV Invanz"><label for = "sepsis-abx5">Invanz</label></li>
+                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx30" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-abx30">[other abx]</label></li>
               </ul>
           </div>
         </div>
@@ -186,7 +222,10 @@ Known bugs/quirks:
               <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-3" name = "EKG" onclick="check(this.id)" value = "shows the EKG is nonspecific for ACS."><label for = "ekg-3">Nonspecific for ACS.</label><br></li>
               <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-4" name = "EKG" onclick="check(this.id)" value = "shows the EKG is concerning for ACS."><label for = "ekg-4">Concerning for ACS.</label><br></li>
               <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-5" name = "EKG" onclick="check(this.id)" value = "shows STEMI."><label for = "ekg-5">STEMI</label><br></li>
-              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-6" name = "EKG" onclick="check(this.id)" value = "shows atrial fibrillation with rapid ventricular rate."><label for = "ekg-6">A Fib with RVR</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-6" name = "EKG" onclick="check(this.id)" value = "shows atrial fibrillation."><label for = "ekg-6">atrial fibrillation</label><br></li>
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-7" name = "EKG" onclick="check(this.id)" value = "shows atrial flutter."><label for = "ekg-7">atrial flutter</label><br></li>
+		  
+              <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-8" name = "EKG" onclick="check(this.id)" value = "shows atrial fibrillation with rapid ventricular rate."><label for = "ekg-8">A Fib with RVR</label><br></li>
               <li><input type = "radio"  class = "choicebutton" name = 'ekg' id = "ekg-100" name = "EKG" onclick="check(this.id)" value = "[Other EKG]"><label for = "ekg-100">[Other]</label><br></li>
       
          </ul>
@@ -224,8 +263,28 @@ Known bugs/quirks:
             <li><input type = "radio" class = "choicebutton" name='ct' id="ct-5" onclick="check(this.id)" value = "subarachnoid hemorrhage." id = "ct-5" name = "ct"><label for = "ct-5">Subarachnoid hemorrhage</label></li>
             <li> <input type = "radio" class = "choicebutton" name='ct' id="ct-6" onclick="check(this.id)" value = "subdural hematoma." id = "ct-6" name = "ct"><label for = "ct-6">Subdural hematoma</label></li>
             <li> <input type = "radio" class = "choicebutton" name='ct' id="ct-4" onclick="check(this.id)" value = "[CT result]" id = "ct-4" name = "ct"><label for = "ct-4">[ct result]</label></li>
+          </ul>
+        </div><br><br>
+	    
+	      <button type = "button" class="collapsible subheadingbutton">Independent review of the ABG</button>
+        <div class="content">
+          <div class="block">
+          <ul class="radiobutton">
+            <li><input type = "radio" class = "choicebutton" name='abg' id="abg-1" onclick="check(this.id)" value = "normal oxygenation, normal pH, and normal CO2 level." id = "abg-1" name = "abg"><label for = "abg-1">Normal</label></li>
+            <li><input type = "radio" class = "choicebutton" name='abg' id="abg-2" onclick="check(this.id)" value = "respiratory acidosis" id = "abg-2" name = "abg"><label for = "abg-2">Respiratory acidosis</label></li>
+            <li><input type = "radio" class = "choicebutton" name='abg' id="abg-3" onclick="check(this.id)" value = "metabolic acidosis" id = "abg-3" name = "abg"><label for = "abg-3">Metabolic acidosis</label></li>
+            <li><input type = "radio" class = "choicebutton" name='abg' id="abg-5" onclick="check(this.id)" value = "respiratory alkalosis" id = "abg-5" name = "abg"><label for = "abg-5">Respiratory alkalosis</label></li>
+            <li> <input type = "radio" class = "choicebutton" name='abg' id="abg-6" onclick="check(this.id)" value = "metabolic alkalosis" id = "abg-6" name = "abg"><label for = "abg-6">Metabolic alkalosis</label></li>
+            <li> <input type = "radio" class = "choicebutton" name='abg' id="abg-4" onclick="check(this.id)" value = "[ABG result]" id = "abg-4" name = "ct"><label for = "abg-4">[ABG result]</label></li>
 
           </ul>
+          </div>
+	      <div class = "block">
+          <ul class="radiobutton">
+            <li><input type = "radio" class = "choicebutton" name='o2' id="o2-1" onclick="check(this.id)" value = "normal oxygenation" id = "o2-1" name = "o2"><label for = "o2-1">Normal oxygenation</label></li>
+            <li><input type = "radio" class = "choicebutton" name='o2' id="o2-2" onclick="check(this.id)" value = "hypoxemia" id = "o2-2" name = "o2"><label for = "o2-2">Hypoxemia</label></li>
+          </ul>
+          </div>
         </div><br><br>
       </div><br><br>
 
@@ -266,10 +325,10 @@ Known bugs/quirks:
         <div class="content">
 		<div class="note"><pre>Documenting administration of parenteral controlled substances contributes to RISK</pre></div>
           <ul class="radiobutton">
-            <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "A parenteral controlled substance was administered." id="tx1" onclick="check(this.id)"><label for = "tx1">Parenteral controlled substance</label></li>
-		        <!--li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV fluids" id = "tx2" onclick = "check(this.id)"><label for="tx2">IV fluids</label></li>
+            <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "a parenteral controlled substance" id="tx1" onclick="check(this.id)"><label for = "tx1">Parenteral controlled substance</label></li>
+		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV fluids" id = "tx2" onclick = "check(this.id)"><label for="tx2">IV fluids</label></li>
 		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV antibiotics" id = "tx3" onclick = "check(this.id)"><label for="tx3">IV antibiotics</label></li>
-		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "parenteral antiemetic" id = "tx3" onclick = "check(this.id)"><label for="tx4">IV antibiotics</label></li--> 
+		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "IV Zofran" id = "tx3" onclick = "check(this.id)"><label for="tx4">IV Zofran</label></li> 
 		        <li><input type = "checkbox" class = "choicebutton" name = "tx" value = "[Other treatment]" id = "tx10" onclick = "check(this.id)"><label for="tx10">[Other treatment]</label></li>
           </ul>
         </div><br><br>
@@ -334,12 +393,19 @@ Known bugs/quirks:
 		
         <div class="block">
 	
-		<button type="button" class="collapsible">Consults</button>
-		<div class="content">
-			<div class="note"><pre>Documenting discussion with independent clinicians satisfies category 3 for DATA</pre></div>
-		  <div id="consultingbuttons"></div>
-		</div>
-	</div> <!--block -->
+          <button type="button" class="collapsible">Consults</button>
+          <div class="content">
+            <div class="note"><pre>Documenting discussion with independent clinicians satisfies category 3 for DATA</pre></div>
+            <div id="consultingbuttons"></div>
+            <h4>Recommendations of consultant</h4>
+              <ul class = "radiobutton">
+                <li><input type = "checkbox" id = "recommendation1" class = "choicebutton" name = "recommendations" value = "will contact the patient to arrange follow-up" onclick="check(this.id)"><label for = "recommendation1">Will arrange follow up</label></li>
+                <li><input type = "checkbox" id = "recommendation2" class = "choicebutton" name = "recommendations" value = "recommended the discharge plan" onclick="check(this.id)"><label for = "recommendation2">Recommended the discharge plan</label></li>
+                <li><input type = "checkbox" id = "recommendation10" class = "choicebutton" name = "recommendations" value = "[consulting recommendation]" onclick="check(this.id)"><label for = "recommendation10">[consulting recommendation]</label></li>
+              </ul>
+          </div>
+		
+	    </div> <!--block -->
          
         </div><br><br> <!--content -->
 	      
@@ -368,9 +434,18 @@ Known bugs/quirks:
 		<button type = "button" class= "collapsible">Consults</button>
 		<div class="content">
 		  <div id="consultingbuttons2"></div>
-		</div>
-        </div>
-          
+      <h4>Recommendations of consulting physician</h4>
+        <ul class= "radiobutton">
+         <li><input type = "checkbox" id = "inrecommendation2" class = "choicebutton" name = "inrecommendations" value = "will consult" onclick="check(this.id)"><label for = "inrecommendation2">Will consult</label></li>
+         <li><input type = "checkbox" id = "inrecommendation6" class = "choicebutton" name = "inrecommendations" value = "evaluated the patient in the ER" onclick="check(this.id)"><label for = "inrecommendation6">Evaluated in ER</label></li>
+         <li><input type = "checkbox" id = "inrecommendation3" class = "choicebutton" name = "inrecommendations" value = "will take the patient to the GI lab" onclick="check(this.id)"><label for = "inrecommendation3">GI lab</label></li>
+         <li><input type = "checkbox" id = "inrecommendation4" class = "choicebutton" name = "inrecommendations" value = "will take the patient to the OR" onclick="check(this.id)"><label for = "inrecommendation4">OR</label></li>
+         <li><input type = "checkbox" id = "inrecommendation5" class = "choicebutton" name = "inrecommendations" value = "will take the patient to the cath lab" onclick="check(this.id)"><label for = "inrecommendation5">Cath lab</label></li>
+         <li><input type = "checkbox" id = "inrecommendation20" class = "choicebutton" name = "inrecommendations" value = "[Consulting recommendation]" onclick="check(this.id)"><label for = "inrecommendation20">[Other recommendations]</label></li>
+
+        </ul>
+      </div>
+     </div>   
 		</div><br><br>
 		
    <button type = "button" class="collapsible subheadingbutton">Transfer</button>
@@ -458,22 +533,22 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
           document.getElementById("ddxtable").innerHTML = t;
         }
 
-	function unselect(row,btn) {
-		list = [];
-		var x  ="";
-		for (let i = 1; i<5; i++) {
-			if (i != btn) {
-			x = 'row'+String(i)+'col'+String(row);
-			list.push(x);
-			}
-		}
-		for (let i = 0; i<list.length; i++) {
-			document.getElementById(list[i]).checked = false;
-		}
-	}
+        function unselect(row,btn) {
+          list = [];
+          var x  ="";
+          for (let i = 1; i<5; i++) {
+            if (i != btn) {
+            x = 'row'+String(i)+'col'+String(row);
+            list.push(x);
+            }
+          }
+          for (let i = 0; i<list.length; i++) {
+            document.getElementById(list[i]).checked = false;
+          }
+        }
         
         function showDDX(id,list2) {
-		      var x = document.getElementsByName('ddx');
+				  var x = document.getElementsByName('ddx');
 	        for (let i = 0; i<x.length; i++){
             x[i].checked = false;
           }
@@ -512,22 +587,33 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             t = t + getRadioButtonValue('present');
           }
           if (document.getElementById('presentation1').checked) {
-            t = t + " Data was reviewed from external sources as documented in the HPI. ";
+            t = t + "Data was reviewed from external sources as documented in the HPI. ";
           }
           if (document.getElementById('presentation2').checked) {
             t = t + "An additional historian was required as documented in the HPI. ";
           }
-          if (isAnyChecked('ddx')) {
-            t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
-            t = t + combineItemsFromButtons('ddx') + ". ";
-          }
+		
+         // if (isAnyChecked('ddx')) {
+           // t = t + "Differential diagnosis considered included serious or life-threatening conditions including ";
+          //  t = t + combineItemsFromButtons('ddx') + ". ";
+	       // }
 	
 
           if (isAnyChecked('testsordered')) {
               t = t + "\n\nData Review:\n";
-              t = t + "I ordered and reviewed tests, including ";
-              t = t + combineItemsFromButtons('testsordered');
-              t = t + ", to help rule out these serious or life-threatening conditions. ";
+             // t = t + "I have ordered and reviewed tests, including ";
+             // t = t + combineItemsFromButtons('testsordered');
+		         // if (isAnyChecked('ddx')) {
+             //   t = t + ", to help rule out these serious or life-threatening conditions";
+             // }
+              t = t + "I have ordered and reviewed tests to evaluate for serious conditions including ";
+	          var t12 = combineItemsFromButtons('ddx');
+		  console.log(t12);
+		  if (t12 != undefined) {
+		      t12 = t12.replace(' and ',', ');
+		      t = t + t12 + ", etc. ";
+		  }
+          }
 
             if (isAnyChecked('unremarkable')) {
               t =t + "The tests were unremarkable. ";
@@ -535,61 +621,58 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             if (isAnyChecked("notsupportive")) {
               t = t + getRadioButtonValue('notsupportive')+". ";
             }
-          }
+          //}
 		
            if (isAnyChecked('ruled out')|| isAnyChecked('presumptive') || isAnyChecked('unlikely') || isAnyChecked('definitive')) {
             t = t + "Given the patient's history, physical exam and test results, ";
-           //}
-           var rolist = [];
-           var t1 = "";
-           if (isAnyChecked('ruled out')) {
-
-            t1 = combineItemsFromButtons('ruled out');
-            if (isPlural('ruled out') ) {
-              t1 = t1 + ' were ruled out';
+           
+             var rolist = [];
+             var t1 = "";
+             if (isAnyChecked('ruled out')) {
+              t1 = combineItemsFromButtons('ruled out');
+              if (isPlural('ruled out') ) {
+                t1 = t1 + ' were ruled out';
+              }
+              else {
+                t1 = t1 + ' was ruled out';
+              }
+              rolist.push(t1);
             }
-            else {
-              t1 = t1 + ' was ruled out';
+            if (isAnyChecked('unlikely')) {
+              t1 = combineItemsFromButtons('unlikely');
+              if (isPlural('unlikely') ) {
+                t1 = t1 + ' are considered unlikely';
+              }
+              else {
+                t1 = t1 + ' is considered unlikely';
+              }
+              rolist.push(t1);
             }
-            rolist.push(t1);
+            if (isAnyChecked('presumptive')) {
+              t1 = combineItemsFromButtons('presumptive');
+              if (isPlural('presumptive') ) {
+                t1 = t1 + ' are considered presumptive diagnoses';
+              }
+              else {
+                t1 = t1 + ' is considered a presumptive diagnosis';
+              }
+              rolist.push(t1);
+            }
+            if (isAnyChecked('definitive')) {
+              t1 = combineItemsFromButtons('definitive');
+              if (isPlural('definitive') ) {
+                t1 = t1 + ' are considered definitive diagnoses';
+              }
+              else {
+                t1 = t1 + ' is considered a definitive diagnosis';
+              }
+              rolist.push(t1);
+            }
+            t = t+ combineItemsFromList(rolist) + ".\n\n";
           }
-          if (isAnyChecked('unlikely')) {
-            t1 = combineItemsFromButtons('unlikely');
-            if (isPlural('unlikely') ) {
-              t1 = t1 + ' are considered unlikely';
-            }
-            else {
-              t1 = t1 + ' is considered unlikely';
-            }
-            rolist.push(t1);
-          }
-          if (isAnyChecked('presumptive')) {
-            t1 = combineItemsFromButtons('presumptive');
-            if (isPlural('presumptive') ) {
-              t1 = t1 + ' are considered presumptive diagnoses';
-            }
-            else {
-              t1 = t1 + ' is considered a presumptive diagnosis';
-            }
-            rolist.push(t1);
-          }
-          if (isAnyChecked('definitive')) {
-            t1 = combineItemsFromButtons('definitive');
-            if (isPlural('definitive') ) {
-              t1 = t1 + ' are considered definitive diagnoses';
-            }
-            else {
-              t1 = t1 + ' is considered a definitive diagnosis';
-            }
-            rolist.push(t1);
-          }
-		
-			
-          t = t+ combineItemsFromList(rolist) + ".\n\n";
-	   }
           
           if (isAnyChecked("sirs")) {
-            t = t + "\n\nThe patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
+            t = t + "The patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
           }
           
           if (isAnyChecked("lactate")) {
@@ -610,64 +693,87 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             t = t + "\n\nIndependent review:\n";
           }
           if (isAnyChecked('ekg')) {
-            t = t + " My independent interpretation of the EKG " + getRadioButtonValue('ekg');
+            t = t + "My independent interpretation of the EKG " + getRadioButtonValue('ekg') + ". ";
           }
           if (isAnyChecked('cxr')) {
-            t = t + " My independent interpretation of the chest x-ray is consistent with " + getRadioButtonValue('cxr');
+            t = t + "My independent interpretation of the chest x-ray is consistent with " + getRadioButtonValue('cxr') + ". ";
           }
           if (isAnyChecked('xray')) {
-            t = t + " My independent interpretation of the xrays is consistent with " + getRadioButtonValue('xray');
+            t = t + "My independent interpretation of the xrays is consistent with " + getRadioButtonValue('xray') + ". ";
           } 
           if (isAnyChecked('ct')) {
-            t = t + " My independent interpretation of the CT is consistent with " + getRadioButtonValue('ct');
+            t = t + "My independent interpretation of the CT is consistent with " + getRadioButtonValue('ct')+". ";
+          }
+          if (isAnyChecked('abg')) {
+            t = t + "My independent interpretation of the ABG is consistent with " + getRadioButtonValue('abg');
+            if (isAnyChecked('o2')) {
+              t = t + " with " + getRadioButtonValue('o2');
+            }
+            t = t + ". ";
           }
 
           t = t + "\n\n";
           var iframe = document.getElementById("iframe");
           var test = iframe.contentWindow.document.getElementById('text').innerHTML;
-		console.log("test",test,test.length);
           if (test != "") {
             t = t + "Risk Stratification: \n";
             t = t + test+"\n";
             t = t + "\n\n";
           }
-          t = t + "Disposition:\n";
+
+          var t2 = "";
           if (isAnyChecked('dischargedecisionmaking')) {
-            t = t + getRadioButtonValue('dischargedecisionmaking');
+            t2 = t2 + getRadioButtonValue('dischargedecisionmaking');
           }
           if (isAnyChecked('deescalate-')) {
-            t = t + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided " + combineItemsFromButtons('deescalate-')+". ";
+            t2 = t2 + "Due to the patient's poor prognosis, I discussed de-escalation of care with the patient and/or their surrogates who decided " + combineItemsFromButtons('deescalate-')+". ";
           }
           if (isAnyChecked('social')){
-            t = t + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social') + ". ";
+            t2 = t2 + "My decision regarding treatment was affected by social determinants of health including " + combineItemsFromButtons('social') + ". ";
           }
 		
-	  if (isAnyChecked('tx')) {
-		  t = t + combineItemsFromButtons('tx');
-	  }
+          if (isAnyChecked('tx')) {
+            t2 = t2 + "Treatment administered in the ER included " + combineItemsFromButtons('tx') + ". ";
+          }
           if (isAnyChecked('referral')) {
-            t = t + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
+            t2 = t2 + "I referred the patient to " + combineItemsFromButtons('referral') + '. ';
           }
           if (isAnyChecked('outpt testing')) {
-            t = t + "I have ordered an outpatient " + combineItemsFromButtons('outpt testing') +". ";
+            t2 = t2 + "I have ordered an outpatient " + combineItemsFromButtons('outpt testing') +". ";
+          }
+          if (isAnyChecked('outconsulting')) {
+            t2 = t2 + "I discussed the case with " + combineItemsFromButtons('outconsulting');
+            if (isAnyChecked('recommendations')) {
+              t2 = t2 + " who " + combineItemsFromButtons('recommendations');
+            }
+            t2 = t2 + ". ";
+          }
+		      if (isAnyChecked('admissiondecisionmaking')) {
+              t2 = t2 + "I discussed the options with the patient who agreed to admission. ";
           }
           if (isAnyChecked('clinician')) {
-            t = t + "My discussion with an independent clinician is documented in this note. ";
+            t2 = t2 + "My discussion with an independent clinician is documented in this note. ";
           }
           if (isAnyChecked('admitting')) {
-            t = t + "I discussed the case with " + combineItemsFromButtons('admitting')+" who will admit the patient. ";
+            t2 = t2 + "I discussed the case with " + combineItemsFromButtons('admitting')+" who will admit the patient. ";
           }
           if (isAnyChecked('consulting')) {
-            t = t + "I discussed the case with " + combineItemsFromButtons('consulting') + " who will consult on the patient. ";
+            t2 = t2 + "I discussed the case with " + combineItemsFromButtons('consulting');
+		        if (isAnyChecked('inrecommendations')) {
+              t2 = t2 + " who " + combineItemsFromButtons('inrecommendations');
+            }
+            t2 = t2 + ". ";
           }
           if (isAnyChecked('transfer1')) {
-            t = t + combineItemsFromButtons('transfer1');
+            t2 = t2 + combineItemsFromButtons('transfer1');
           }
           if (isAnyChecked('transfer2')) {
-            t = t + combineItemsFromButtons('transfer2');
+            t2 = t2 + combineItemsFromButtons('transfer2');
           }
-          t = t + "";
-          t = t + "";
+          if (t2 != "") {
+            t = t + "Disposition:\n";
+            t = t + t2;
+          }
           
           navigator.clipboard.writeText(t);
           document.getElementById("text").innerHTML = t;
