@@ -58,13 +58,13 @@
         var location3 = getValue("compartment3");
         var location4 = getValue("compartment4");
         
-        var t = "Procedure Note: Measurement of " + side + " Lower Leg Compartment Pressures\n");
+        var t = "Procedure Note: Measurement of " + side + " Lower Leg Compartment Pressures\n";
         
         t = t + "The procedure was indicated to rule out compartment syndrome. ";
 
         t = t + consent;
         
-        t = t + "The skin of the " + side + " lower leg was prepped with chlorhexidine. ";
+        t = t + "The skin of the " + side.toLowerCase() + " lower leg was prepped with chlorhexidine. ";
         t = t + "The puncture sites were anesthetized with a total of " + volume + " cc of " + anesthetic +". ";
         t = t + "Compartment pressues were measured with the Stryker. \n\n";
         t = t + "Findings: \n";
