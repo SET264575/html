@@ -12,8 +12,8 @@
     <div class="main">
       <h3>Intubation</h3>
 
-      <input type = "checkbox" id = "student" onchange="copytext()">
-      <label for = "student">The procedure was performed by [student name] under my direct supervision.  I was present throughout the entire procedure.</label>
+      <div id="id_student"></div>
+      
       <h4>Indication</h4>
       <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
       <label for = "0">respiratory failure</label><br>
@@ -75,6 +75,7 @@
     <script src="procedure.js"></script>
     <script>
       header();
+      student();
       consent('implied');
     </script>
     
