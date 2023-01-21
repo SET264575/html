@@ -60,10 +60,11 @@
         var removal = getValue("removal"); 
         var side = getValue("side");
         var ring = getValue('ring');
+        var consent = getValue('consent');
         
         var t = "Procedure Note: Corneal Foreign Body Removal \n";
                
-        t = t + "The procedure was indicated for a foreign body in the " + side + " cornea. ";
+        t = t + "The procedure was indicated for a foreign body in the " + side.toLowerCase() + " cornea. ";
         t = t + consent;
         
         t = t + "A drop of tetracaine was used to achieve adequate anesthesia. Using a slit lamp to visualize the foreign body throughout the procedure, the ";
