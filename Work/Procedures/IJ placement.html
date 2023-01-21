@@ -15,9 +15,9 @@
       </h3>
 
       <h4>Indication</h4>
-      <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
+      <input type = "radio" name = "indication" id = "indication0" onchange = "copytext()">
       <label for = "0">vascular access</label><br>
-      <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+      <input type = "radio" name = "indication" id = "indication1" onchange = "copytext()">
       <label for = "1">administration of IV fluids</label><br><br>
 
       <div id="div_consent"></div>
@@ -65,7 +65,7 @@
 
         t = t + consent;
         t = t + "The patient was prepped and draped in the usual sterile fashion. ";
-        t = t + "Ultrasound guidance was used to visualize the " + side + " " + location + " and surrounding structures.  ";
+        t = t + "Ultrasound guidance was used to visualize the " + side.toLowerCase() + " " + location + " and surrounding structures.  ";
         t = t + "The IV catheter was placed using the Seldinger technique and secured to the skin with 2-0 silk suture. ";
         t = t + "Proper location was confirmed with x-ray. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
