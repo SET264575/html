@@ -70,13 +70,13 @@
     
     <script>
       function copytext(){
-        var size = getValue("size").value;
+        var size = getValue("size");
         var anesthetic = getValue("anesthetic");
         var amount = getValue("amount");
         var volume = getValue("volume");
         var location = getValue("location");
         var incision_size = getValue("incision_size");
-        var gauze = getValue("gauze").checked;
+        var gauze = getValue("gauze");
         var t = "Procedure Note: Abscess incision and drainage\n";
         t = t + "The skin over the " + size + " cm abscess on the " + location + " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
         t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  The abscess was probed with curved hemostats to break up loculations.  ";
