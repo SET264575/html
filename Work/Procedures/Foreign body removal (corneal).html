@@ -27,7 +27,7 @@
       <h4>Removal</h4>
       <input type = "radio" name = "removal" value = "a Q tip" id = "removal1" onchange = "copytext()">
       <label for = "removal1">Q tip</label><br>
-      <input type = "radio" name = "removal" value = "a Q tip" id = "removal2" onchange = "copytext()">
+      <input type = "radio" name = "removal" value = "irrigation" id = "removal2" onchange = "copytext()">
       <label for = "removal2">irrigation</label><br><br>
 
       <input type ="checkbox" id = "ring" onchange ="copytext()">There was a residual rust ring.</input>
@@ -46,12 +46,7 @@
     consent('verbal');
     side();
   </script>
-  
-    <script>
-      function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
-      }
-    </script>
+
   
     <script>
       function copytext(){
