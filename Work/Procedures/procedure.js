@@ -32,6 +32,9 @@ function getValue(id) {
     var type = x.type;
     if (type == 'checkbox') {
       result = document.getElementById(id).checked;
+      if (result && document.getElementById(id).value != undefined) {
+        result = document.getElementById(id).value;
+      }
  //     console.log('treating ' + id + " as a checkbox with result = " + result);
     }
     if (type == "text") {
