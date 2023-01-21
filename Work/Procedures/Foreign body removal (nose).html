@@ -13,7 +13,7 @@
       <h3>Nasal foreign body removal</h3>
 
       <h4>Indication</h4>
-      <input type = "radio" name = "indication" checked value = "0" id = "indication0" onchange = "copytext()">
+      <input type = "radio" name = "indication" checked value = "foreign body" id = "indication0" onchange = "copytext()">
       <label for = "indication0">foreign body</label><br>
       <input type = "radio" name = "indication" value = "bead" id = "indication1" onchange = "copytext()">
       <label for = "indication1">bead</label><br>
@@ -51,12 +51,6 @@
       consent('verbal');
       side();
     </script>
-    
-    <script>
-      function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
-      }
-    </script>
   
     <script>
       function copytext(){
@@ -64,7 +58,7 @@
         var technique = getValue("technique");
         var side = getValue("side");
         
-        var t = "Procedure Note: Nasal foreign body removal \n";
+        var t = "Procedure Note: Nasal Foreign Body Removal \n";
         
         t = t + "The procedure was indicated for a " + indication + " in the " + side + " nasal passage. ";
         t = t + consent;
