@@ -65,6 +65,7 @@
         var indication = getValue("indication");
         var consent = getValue('consent');
         var anticoagulated = getValue("anticoagulated");
+        console.log("anticoagulated=",anticoagulated);
         var sedation = getValue("sedation");
         var technique = "cardioversion ";
         if (document.getElementById('indication5').checked) {
@@ -94,7 +95,7 @@
           if (anticoagulated == true){
               t = t + "The patient had been consistently taking anticoagulation for at least 3 weeks. ";
           }
-          t = t + sedation + ". ";
+          t = t + sedation;
           t = t + "A synchronized shock of 200 J was administered with resulting cardioversion to a normal sinus rhythm.  ";
           t = t + "The patient tolerated the procedure well.  There were no complications."
         }
