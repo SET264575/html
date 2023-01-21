@@ -32,7 +32,7 @@ Tolerated
       <div id="div_side"></div>
       
       <h4>Intercostal space</h4>
-      <input type = "radio" id = "intercostal space0" name = "intercostal space" value = "0" onchange = "copytext()">
+      <input type = "radio" id = "intercostal space0" name = "intercostal space" onchange = "copytext()">
       <label for = "intercostal space0">5th</label><br>
       <h4>size of tube</h4>
       <input type = "radio" id = "size of tube0" name = "size of tube" value = "20" onchange = "copytext()">
@@ -42,7 +42,7 @@ Tolerated
 
       <h4>Tube drainage</h4>
       <select id = "Tube drainage"  onchange = "copytext()">
-         <option>none</option>
+         <option>no fluid or air</option>
          <option>small amount of air</option>
          <option>large amount of air</option>
          <option>clear fluid</option>
@@ -76,16 +76,11 @@ Tolerated
         var volume = getValue("volume");
         var drainage = getValue("Tube drainage");
 
-        t = t + "Procedure Note: Chest tube placement\n";
+        t = t + "Procedure Note: Chest Tube Placement\n";
         t = t + "Chest tube was indicated for "+Indication;
         t = t + consent;
         t = t + "The insertion site, at the " + side.toLowerCase();
-  
-        switch(intercostal){
-          case "0":
-            t = t + " 5th";
-            break;
-        }
+        t = t + intercostal;
         
         t = t + " intercostal space in the mid-axillary line, was prepped with Betadine and sterile drapes, and then infiltrated with " + volume + " cc of " + anesthetic;
         t = t + ".  An skin incision was then made with a #15 blade and the tissues were bluntly dissected to the pleural space.  A ";
