@@ -91,6 +91,7 @@ function digitalBlockText() {
   
   console.log("anestheticTechnique= ",anestheticTechnique);
               
+  let t = "";
   if (anestheticTechnique) {
     t = "Procedure Note: Digital Block of " + side + " " + finger + " Finger\n";
     t = t +"The digital block was indicated for "+ indication+". ";
