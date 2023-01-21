@@ -95,7 +95,7 @@ function digitalBlockText() {
     t = t + "A total of " + volume + " cc of ";
     t = t + anesthetic;
     t = t + " was injected at the base of the digit. ";
-    if (aspiration != noAnswer) {
+    if (aspiration) {
       t = t + "To avoid injecting into a blood vessel, aspiration was performed prior to injection. ";
     }
     t = t + "The patient tolerated the procedure well.  Adequate anesthesia was obtained. There were no complications. \n\n";
