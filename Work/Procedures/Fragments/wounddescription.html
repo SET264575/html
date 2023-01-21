@@ -1,27 +1,30 @@
 <h4>Wound Description</h4>
-
-<label for="length">Size</label><br>
-<select id = "length" onchange = "copytext()">
-  <option value = "0.5">0.5 cm</option>
-  <option value = "1">1 cm</option>
-  <option value = "1.5">1.5 cm</option>
-  <option value = "2">2 cm</option>
-  <option value = "2.5">2.5 cm</option>
-  <option value = "3">3 cm</option>
-  <option value = "3.5">3.5 cm</option>
-  <option value = "4">4 cm</option>
-  <option value = "4.5">4.5 cm</option>
-  <option value = "5">5 cm</option>
-  <option value = "5.5">5.5 cm</option>
-  <option value = "6">6 cm</option>
-  <option value = "6.5">6.5 cm</option>
-  <option value = "7">7 cm</option>
-</select><br><br>
-
-<label for="description">Description</label><br>
-  <input type="radio" id="description1" name = "description" onchange="copytext()"  value = "linear"><label for="description1">Linear</label><br>
-  <input type="radio" id="description2" name = "description" onchange="copytext()"  value = "curvilinear"><label for="description2">Curvilinear</label><br>
-  <input type="radio" id="description3" name = "description" onchange="copytext()"  value = "irregular"><label for="description3">Irregular</label><br>
-  <input type="radio" id="description4" name = "description" onchange="copytext()"  value = "stellate"><label for="description4">Stellate</label><br>
-  <input type="radio" id="description5" name = "description" onchange="copytext()"  value = "flap"><label for="description5">Flap</label><br><br>
-
+<table  style="width: 300">
+  <td style="width: 50%">
+    <label for="length">Size</label><br>
+    <select id = "length" onchange = "copytext()">
+      <option value = "0.5">0.5 cm</option>
+      <option value = "1">1 cm</option>
+      <option value = "1.5">1.5 cm</option>
+      <option value = "2">2 cm</option>
+      <option value = "2.5">2.5 cm</option>
+      <option value = "3">3 cm</option>
+      <option value = "3.5">3.5 cm</option>
+      <option value = "4">4 cm</option>
+      <option value = "4.5">4.5 cm</option>
+      <option value = "5">5 cm</option>
+      <option value = "5.5">5.5 cm</option>
+      <option value = "6">6 cm</option>
+      <option value = "6.5">6.5 cm</option>
+      <option value = "7">7 cm</option>
+    </select><br><br>
+  </td>
+  <td style="width: 50%">
+    <label for="description">Description</label><br>
+      <input type="radio" id="description1" name = "description" onchange="copytext()"  value = "linear"><label for="description1">Linear</label><br>
+      <input type="radio" id="description2" name = "description" onchange="copytext()"  value = "curvilinear"><label for="description2">Curvilinear</label><br>
+      <input type="radio" id="description3" name = "description" onchange="copytext()"  value = "irregular"><label for="description3">Irregular</label><br>
+      <input type="radio" id="description4" name = "description" onchange="copytext()"  value = "stellate"><label for="description4">Stellate</label><br>
+      <input type="radio" id="description5" name = "description" onchange="copytext()"  value = "flap"><label for="description5">Flap</label><br><br>
+  </td>
+</table>
