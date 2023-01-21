@@ -9,6 +9,7 @@
     <div class="div_header" id= "div_header"></div>
     <div class="main">
       <h3>Knee Joint Aspiration</h3>
+      <div id="div_student"></div>
       <div id = "div_aspirationIndication"></div>
       <div id = "div_consent"></div>
       <div id="div_side"></div>
@@ -32,6 +33,7 @@
       header();
       side();
       consent('written');
+      student();
       anesthetic();
       largevolumefluid();
     </script>
@@ -46,8 +48,10 @@
         var volume2 = getValue("volume2");
         var description = getValue("description");
         var injected = getValue("injected");
+        var student = getValue("student");
         var t = "";
         t = "Procedure Note: "+side + " Knee Joint Aspiration\n";
+        t = t + student;
         t = t + consent;
         t = t + "A wide area on the " +side.toLowerCase() + " knee was prepped with Betadine and draped with sterile towels.  The puncture site was ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
