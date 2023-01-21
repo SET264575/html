@@ -56,11 +56,6 @@
       side();
     </script>
     
-    <script>
-      function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
-      }
-    </script>
   
     <script>
       function copytext(){
@@ -69,7 +64,7 @@
         var technique = getValue("technique");
         var side = getValue("side");
         
-        var t = "Procedure Note: Removal of foreign body from the " + side + " ear canal \n";
+        var t = "Procedure Note: Removal of Foreign Body from the " + side + " Ear Canal \n";
         t = t + "The procedure was indicated for a " + indication + " in the ear canal. ";
         t = t + consent;
         t = t + "The foreign body was removed with "+technique + ". ";
