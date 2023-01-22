@@ -166,6 +166,8 @@ function load2(tag,parameter) {
 }
 
 function anesthetic() {load('anesthetic')}
+function anestheticdigitalblock() {load('anestheticdigitalblock')}
+function aspirationIndication() {load('aspirationIndication')}
 function consent(index){load('consent'); consentFlag = index; }
 function contamination() {load('contamination')}
 function digitalblock() {load('digitalblock');}
