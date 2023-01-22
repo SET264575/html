@@ -142,14 +142,15 @@ function sedationText() {
   return(t);
 }
 
-function formatTitle(title) {
+function formatText(t) {
+  
   return("<b><u>"+title+"</u></b>");
 }
 
 function displayText(t) {
   navigator.clipboard.writeText(t);
   var iframe = document.getElementById("text_frame")
-  iframe.contentWindow.document.getElementById('text').value = t;
+  iframe.contentWindow.document.getElementById('text').innerHTML = t;
 }
 
 
