@@ -32,14 +32,15 @@
       
       <div id = "div_side"></div>
 
-      <h4>Digit Number</h4>
+      <div id="div_digitcount"></div>
+      <!-h4>Digit Number</h4>
       <select id = "digitcount">
         <option value = "1st">1st</option>
         <option value = "2nd">2nd</option>
         <option value = "3rd">3rd</option>
         <option value = "4th">4th</option>
         <option value = "5th">5th</option>
-      </select><br>
+      </select><br-->
 
       <h4>Type of Digit</h4>
       <input type = "radio" value = "Finger" id = "finger" name = "digit" onchange = "copytext()">
@@ -49,7 +50,7 @@
 
 
 
-      <div id = "div_anesthetic"></div>
+      <div id = "div_anestheticdigitalblock"></div>
 
       <input type = "checkbox" name = "aspiration" id = "aspiration"  onchange="copytext()">
       <label for = "aspiration">To avoid injecting into a blood vessel, aspiration was performed prior to injection.</label><br><br>
@@ -70,7 +71,8 @@
       header();
       consent('verbal');
       side();
-      anesthetic();
+      digitcount();
+      anestheticdigitalblock();
     </script>
   
     <script>
