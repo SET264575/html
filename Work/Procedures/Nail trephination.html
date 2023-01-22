@@ -13,14 +13,15 @@
       <div id="div_consent"></div>
       <div id = "div_side"></div>
 
-      <label for="digit"><b>Digit</b></label><br>
+      <div id="div_digitcount"></div>
+      <!--label for="digit"><b>Digit</b></label><br>
       <select id = "digit" onchange = "copytext()">
         <option>first</option>
         <option>second</option>
         <option>third</option>
         <option>fourth</option>
         <option>fifth</option>
-      </select><br>
+      </select><br-->
       <br>
       <input type = "radio" name = "finger" id="finger0" value = "finger" onchange = "copytext()">
       <label for = "finger0">finger</label><br>
@@ -52,6 +53,7 @@
       header();
       consent('verbal');
       side();
+      digitcount();
     </script>
       
     <script>
