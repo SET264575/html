@@ -5,101 +5,69 @@
         G tube reinsertion
     </title>
     <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   <body>
-    <h3>
-    G tube reinsertion
-    </h3>
-    <!--div class=".reference">
-    Reference:
-    <a hhref = "">Procedure Video</a>
-    </div-->
-    
-    <h4>Indication<star></h4>
-    <input type = "radio" name = "indication" value = "0" id = "indication0" onchange = "copytext()">
-    <label for = "indication0">dislodged G tube</label><br>
-    <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
-    <label for = "indication1">clogged G tube</label><br>
-    <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
-    <label for = "indication2">broken G tube</label><br>
-<br>
+    <div id="div_header" class="div_header"></div>
+    <div id="main"></div>
+      <h3>
+      G tube reinsertion
+      </h3>
 
-    <h4>Consent<star></h4>
-    <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
-    <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
-    <input type = "radio" name = "consent" checked value = "1" id = "consent" onchange = "copytext()">
-    <label for = "1">The patient provided verbal consent for the procedure.</label><br>
-    <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
-    <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
-<br>
+      <h4>Indication<star></h4>
+      <input type = "radio" name = "indication" value = "0" id = "indication0" onchange = "copytext()">
+      <label for = "indication0">dislodged G tube</label><br>
+      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">clogged G tube</label><br>
+      <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
+      <label for = "indication2">broken G tube</label><br>
+  <br>
 
-    <!--h4>Sedation</h4>
-    <input type = "radio" name = "sedation" value = "0" id = "sedation" onchange = "copytext()">
-    <label for = "0">The patient was sedated with 20 mg of Etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
-    <input type = "radio" name = "sedation" value = "1" id = "sedation" onchange = "copytext()">
-    <label for = "1">The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.</label><br>
-    <input type = "radio" name = "sedation" value = "2" id = "sedation" onchange = "copytext()">
-    <label for = "2">The patient did not require sedation or paralysis.</label><br>
-<br-->
+      <h4>Consent<star></h4>
+      <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
+      <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
+      <input type = "radio" name = "consent" checked value = "1" id = "consent" onchange = "copytext()">
+      <label for = "1">The patient provided verbal consent for the procedure.</label><br>
+      <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
+      <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
+  <br>
 
-    <!--h4>Location</h4>
-    
-    <h4>Side</h4>
-    <input type = "radio" value = "left" name = "side" id = "radio1" onchange = "copytext()">
-    <label id = "radio1">Left</label><br>
-    <input type = "radio" value = "right" name = "side" id = "radio2" onchange = "copytext()">
-    <label id = "radio2">Right</label><br>
-    <h4>Anesthetic</h4>
-    
-    <label for = "anesthetic">Anesthetic</label>
-    <select id = "anesthetic" onchange = "copytext()">
-      <option value = "1% lidocaine">1% lidocaine</option>
-      <option value = "1% lidocaine with epinephrine">1% lidocaine with epinephrine</option>
-      <option value = "2% lidocaine">2% lidocaine</option>
-      <option value = "2% lidocaine with epinephrine">2% lidocaine with epinephrine</option>
-    </select><br><br-->
-    
-    
-    <h4>Size<star></h4>
-    <input type = "radio" name = "size" value = "14f" id = "size1" onchange = "copytext()">
-    <label for = "size1">14 Fr</label><br>
-    <input type = "radio" name = "size" value = "16f" id = "size2" onchange = "copytext()">
-    <label for = "size2">16 Fr</label><br>
-    <input type = "radio" name = "size" value = "18f" id = "size3" onchange = "copytext()">
-    <label for = "size3">18 Fr</label><br>
-    <input type = "radio" name = "size" value = "20f" id = "size4" onchange = "copytext()">
-    <label for = "size4">20 Fr</label><br>
-    <input type = "radio" name = "size" value = "22f" id = "size3" onchange = "copytext()">
-    <label for = "size3">22 Fr</label><br>
-    <input type = "radio" name = "size" value = "24f" id = "size4" onchange = "copytext()">
-    <label for = "size4">24 Fr</label><br><br>
-    
-    <h4>Volume<star></h4>
-    <input type = "radio" name = "volume" value = "10 cc" id = "volume3" onchange = "copytext()">
-    <label for = "volumen3">10 cc</label><br>
-    <input type = "radio" name = "volume" value = "[volume]" id = "volume4" onchange = "copytext()">
-    <label for = "volume4">[volume]</label><br><br>
 
-    <h4>Fluid type<star></h4>
-    <input type = "radio" name = "fluid" value = "water" id = "fluid3" onchange = "copytext()">
-    <label for = "fluidn3">water</label><br>
-    <input type = "radio" name = "fluid" value = "normal saline" id = "fluid4" onchange = "copytext()">
-    <label for = "fluid4">normal saline</label><br><br>
-    
-    
-    <h4>Confirmation<star></h4>
-    <input type = "radio" name = "confirm" value = "aspiration of stomach contents" id = "confirm3" onchange = "copytext()">
-    <label for = "confirmn3">aspiration</label><br>
-    <input type = "radio" name = "confirm" value = "KUB with Gastrograffin" id = "confirm4" onchange = "copytext()">
-    <label for = "confirm4">imaging</label><br><br>
-    
-    <div class="textarea">
-    <textarea id = "text"></textarea><br>
-    <br>
-    <div class="hasBeenCopied"></div>
-    
-    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
-    </div>
+
+
+      <h4>Size<star></h4>
+      <input type = "radio" name = "size" value = "14f" id = "size1" onchange = "copytext()">
+      <label for = "size1">14 Fr</label><br>
+      <input type = "radio" name = "size" value = "16f" id = "size2" onchange = "copytext()">
+      <label for = "size2">16 Fr</label><br>
+      <input type = "radio" name = "size" value = "18f" id = "size3" onchange = "copytext()">
+      <label for = "size3">18 Fr</label><br>
+      <input type = "radio" name = "size" value = "20f" id = "size4" onchange = "copytext()">
+      <label for = "size4">20 Fr</label><br>
+      <input type = "radio" name = "size" value = "22f" id = "size3" onchange = "copytext()">
+      <label for = "size3">22 Fr</label><br>
+      <input type = "radio" name = "size" value = "24f" id = "size4" onchange = "copytext()">
+      <label for = "size4">24 Fr</label><br><br>
+
+      <h4>Volume<star></h4>
+      <input type = "radio" name = "volume" value = "10 cc" id = "volume3" onchange = "copytext()">
+      <label for = "volumen3">10 cc</label><br>
+      <input type = "radio" name = "volume" value = "[volume]" id = "volume4" onchange = "copytext()">
+      <label for = "volume4">[volume]</label><br><br>
+
+      <h4>Fluid type<star></h4>
+      <input type = "radio" name = "fluid" value = "water" id = "fluid3" onchange = "copytext()">
+      <label for = "fluidn3">water</label><br>
+      <input type = "radio" name = "fluid" value = "normal saline" id = "fluid4" onchange = "copytext()">
+      <label for = "fluid4">normal saline</label><br><br>
+
+
+      <h4>Confirmation<star></h4>
+      <input type = "radio" name = "confirm" value = "aspiration of stomach contents" id = "confirm3" onchange = "copytext()">
+      <label for = "confirmn3">aspiration</label><br>
+      <input type = "radio" name = "confirm" value = "KUB with Gastrograffin" id = "confirm4" onchange = "copytext()">
+      <label for = "confirm4">imaging</label><br><br>
+      </div>
     
     <footer>
       <div class="dateChanged">1/6/23</div>
