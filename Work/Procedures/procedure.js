@@ -148,6 +148,7 @@ function formatText(t) {
 }
 
 function displayText(t) {
+ 
   navigator.clipboard.writeText(t);
   var iframe = document.getElementById("text_frame")
   iframe.contentWindow.document.getElementById('text').innerHTML = t;
