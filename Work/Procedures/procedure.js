@@ -148,7 +148,8 @@ function formatTitle(title) {
 
 function displayText(t) {
   navigator.clipboard.writeText(t);
-  document.getElementById("text_frame#text").value = t;
+  var iframe = document.getElementById("text_frame")
+  iframe.contentWindow.document.getElementById('text').value = t;
 }
 
 
