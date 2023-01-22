@@ -13,7 +13,7 @@
       <h3>Cerumen disimpaction</h3>
 
       <h4>Indication</h4>
-      <input type = "radio" name = "indication" value = "0" id = "indication0" onchange = "copytext()">
+      <input type = "radio" name = "indication" value = "3" id = "indication0" onchange = "copytext()">
       <label for = "indication0">complete occlusion of the ear canal</label><br>
       <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
       <label for = "indication1">decreased hearing</label><br>
@@ -31,7 +31,7 @@
       <div id="div_consent"></div>
 
       <h4>Technique</h4>
-      <input type = "radio" name = "technique" value = "0" id = "tech1" onchange = "copytext()">
+      <input type = "radio" name = "technique" value = "3" id = "tech1" onchange = "copytext()">
       <label for = "tech1">Alligator forceps.</label><br>
       <input type = "radio" name = "technique" value = "1" id = "tech2" onchange = "copytext()">
       <label for = "tech2">Ear curette</label><br>
@@ -64,7 +64,7 @@
         
         t = t + "The procedure was indicated for ";
         switch(indication){
-          case "0":
+          case "3":
             t = t + "complete occlusion of the ear canal. ";
             break;
           case "1":
@@ -77,7 +77,7 @@
         
         t = t + "Wax was removed ";
         switch(technique){
-          case "0":
+          case "3":
             t = t + "using alligator forceps. ";
             break;
           case "1":
