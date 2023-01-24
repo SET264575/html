@@ -154,8 +154,9 @@ function displayText(t) {
  // t = "<b>"+t+"</b>";
   formatText(t);
   navigator.clipboard.writeText(t);
-  var iframe = document.getElementById("text_frame");
-  iframe.contentWindow.document.getElementById('text').innerHTML = t;
+  var iframe1 = document.getElementById("content");
+  var iframe2 = iframe1.contentWindow.document.getElementById('text_frame');
+  iframe2.contentWindow.document.getElementById('text').innerHTML = t;
   document.getElementById('text').value = t;
 }
 
