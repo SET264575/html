@@ -148,7 +148,7 @@ function formatText(t) {
 }
 
 function displayText(t) {
- 
+  t = "<b>"+t+"</b>";
   navigator.clipboard.writeText(t);
   var iframe = document.getElementById("text_frame");
   iframe.contentWindow.document.getElementById('text').innerHTML = t;
