@@ -147,6 +147,7 @@ function formatText(t) {
   for (let i = 0; i<list.length; i++) {
     t = t.replace(list[i],"<b>"+list[i]+"</b>");
   }
+  t = t.replace("\n","<br>);
   return(t);
 }
 
