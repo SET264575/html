@@ -136,7 +136,7 @@ function sedationText() {
   t = t + "The patient had been NPO for over "+npo_time+" hours. ";
   t = t + "Standard preparations were made according to the ER sedation policy, including capnography, cardiac monitoring, pulse oximetry and provision of supplemental oxygen. ";
   t = t + "Airway management equipment and suctioning were readily available. "
-  t = t + "Adequate sedation for achieved with the administration of " + dose + " mg of etomidate. ";
+  t = t + "Adequate sedation was achieved with the administration of " + dose + " mg of etomidate. ";
   t = t + "The patient was continuously monitored until they were alert. ";
   t = t + "The patient tolerated the procedure well.  There were no complications.\n\n"
   return(t);
