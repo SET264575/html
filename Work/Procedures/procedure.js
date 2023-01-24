@@ -144,11 +144,9 @@ function sedationText() {
 
 function formatText(t) {
   var list = t.match(/(?<=Procedure Note:).*(?=\n)/g);
-  console.log("list = ",list);
   for (let i = 0; i<list.length; i++) {
-    t.replace(list[i],"<b>"+list[i]+"</b>");
+    t = t.replace(list[i],"<b>"+list[i]+"</b>");
   }
-  console.log("t=",t);
   return(t);
 }
 
