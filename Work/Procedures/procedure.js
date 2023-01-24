@@ -143,12 +143,16 @@ function sedationText() {
 }
 
 function formatText(t) {
-  
-  return("<b><u>"+title+"</u></b>");
+  var list = t.match(/(?<=Procedure Note:).*(?=\n)/g);
+  for (let i = 0; i<list.length; i++) {
+    t.replace(list[i],"<b>"+list[i]+"</b>");
+  }
+  return(t);
 }
 
 function displayText(t) {
-  t = "<b>"+t+"</b>";
+ // t = "<b>"+t+"</b>";
+  formatText(t);
   navigator.clipboard.writeText(t);
   var iframe = document.getElementById("text_frame");
   iframe.contentWindow.document.getElementById('text').innerHTML = t;
