@@ -165,7 +165,7 @@ function displayText(t) {
   //navigator.clipboard.writeText(t);
   copyFormatted(t);
   document.getElementById('text').innerHTML = t;
-  document.getElementById('text').value = t;
+ // document.getElementById('text').value = t;
 }
 
 
@@ -202,19 +202,15 @@ function woundpreparation() {load('woundpreparation')}
 
 
 function getParameter(p) {
-  console.log(p);
-  console.log(window.location.search);
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
   // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
-  console.log(params,params[p]);
   return( params[p]);
 }
 
 
 function checkConsent(index){
-  console.log('in checkConsent',index);
       switch(index) {
         case "implied":
           document.getElementById('consent1').checked = true;
