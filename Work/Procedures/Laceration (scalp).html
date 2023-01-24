@@ -22,13 +22,13 @@
       
       <h4>Location</h4>
       <input type="radio" id = "location1" name = "location" onchange="copytext()">
-      <label for = "location1">vertex</label><br>
+      <label for = "location1">Vertex</label><br>
       <input type="radio" id = "location2" name = "location" onchange="copytext()">
-      <label for = "location2">frontal scalp</label><br>
+      <label for = "location2">Frontal Scalp</label><br>
       <input type="radio" id = "location3" name = "location" onchange="copytext()">
-      <label for = "location3">parietal scalp</label><br>
+      <label for = "location3">Parietal Scalp</label><br>
       <input type="radio" id = "location4" name = "location" onchange="copytext()">
-      <label for = "location4">occipital scalp</label><br><br>
+      <label for = "location4">Occipital Scalp</label><br><br>
 
       <div id="div_anesthetic"></div>
 
@@ -73,12 +73,15 @@
         var description = getValue("description");
         var side = getValue('side');
         var location = getValue("location");
+        if (location != "Vertex") {
+          location = side + " " + location;
+        }
         var anesthetic = getValue("anesthetic");
         var volume = getValue("volume");
         var suture_count = getValue("suture_count");
         var t = "";
-        t = "Procedure Note:  Laceration repair of the "+side + " " + location+"\n";
-        t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was ";
+        t = "Procedure Note:  Laceration repair of the "+ location+"\n";
+        t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location.toLowerCase()+" was ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
         t = t + "The wound was irrigated thoroughly with normal saline. ";
         t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
