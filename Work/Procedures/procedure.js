@@ -163,7 +163,9 @@ function displayText(t) {
   //navigator.clipboard.writeText(t);
   copyFormatted(t);
   var iframe1 = document.getElementById("content");
+  console.log("iframe1 = ",iframe1);
   var iframe2 = iframe1.contentWindow.document.getElementById('text_frame');
+  console.log('iframe2 = ',iframe2);
   iframe2.contentWindow.document.getElementById('text').innerHTML = t;
   document.getElementById('text').value = t;
 }
