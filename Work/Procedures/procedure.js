@@ -150,10 +150,18 @@ function formatText(t) {
   return(t);
 }
 
+function copyFormatted(formattedText) {
+ // const formattedText = 'This is a <b>bold</b> and <u>underlined</u> test.';
+  const blob = new Blob([formattedText], {type: 'text/html'});
+  const clipboardItem = new window.ClipboardItem({ 'text/html': blob });
+  navigator.clipboard.write([clipboardItem]);
+}
+
 function displayText(t) {
  // t = "<b>"+t+"</b>";
   formatText(t);
-  navigator.clipboard.writeText(t);
+  //navigator.clipboard.writeText(t);
+  copyFormatted(t);
   var iframe1 = document.getElementById("content");
   var iframe2 = iframe1.contentWindow.document.getElementById('text_frame');
   iframe2.contentWindow.document.getElementById('text').innerHTML = t;
