@@ -162,6 +162,8 @@ function displayText(t) {
   formatText(t);
   //navigator.clipboard.writeText(t);
   copyFormatted(t);
+  console.log("document = ",document);
+  console.log(document.getElementsByTagname('iframe'));
   var iframe1 = document.getElementById("content");
   console.log("iframe1 = ",iframe1);
   var iframe2 = iframe1.contentWindow.document.getElementById('text_frame');
