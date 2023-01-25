@@ -148,6 +148,7 @@ function formatText(t) {
     t = t.replace(list[i],"<b>"+list[i]+"</b>");
   }
   t = t.replaceAll("\n","<br>");
+  t = "<div style="font-size: 10px">"+t+"</div>";
   return(t);
 }
 
