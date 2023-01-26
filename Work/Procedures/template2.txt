@@ -58,7 +58,7 @@
         var consent = getValue("consent");
         var sedation = getValue("sedation");
         var anesthetic = getValue("anesthetic");
-        var dose = getValue('dose');
+        var volume = getValue('volume');
         var side = getValue("side"); */
         var t = "";
         
@@ -79,6 +79,7 @@
 
         t = t + sedation;
  
+        t = t + "infiltrated with " + volume + " mL of " + anesthetic + ". ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
         displayText(t);
