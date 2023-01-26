@@ -158,3 +158,12 @@ footer {
   left: 0;
   margin-left: 20px;
 }
+
+.risk_header {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.risk_body {
+  white-space: pre-wrap;
+}
