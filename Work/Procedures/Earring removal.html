@@ -14,7 +14,7 @@
 
     <div class="main">
       <h4>Indication</h4>
-      <input type = "radio" name = "indication" value = "0" id = "indication0" onchange = "copytext()">
+      <input type = "radio" name = "indication" value = "2" id = "indication0" onchange = "copytext()">
       <label for = "indication0">infection</label><br>
       <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
       <label for = "indication1">inability for the patient to remove earring due to swelling</label><br>
@@ -67,7 +67,7 @@
         
         t = t + "The procedure was indicated for ";
         switch(indication){
-          case "0":
+          case "2":
             t = t + "infection. ";
             break;
           case "1":
@@ -81,7 +81,7 @@
         t = t + "The " + side.toLowerCase() + " earlobe was prepped with Betadine and infiltrated with " + volume + " cc of " + anesthesia + ". ";
         t = t + "An #11 blade was used to make a small stab incision next to the earring to release it.  The earring was then removed manually. ";
         if (pus) {
-          t = t + "A small amount of pus was expressed from the earlobe.";
+          t = t + "A small amount of pus was expressed from the earlobe. ";
         }
         t = t + "The patient tolerated the procedure well.  There were no complications.  Bleeding was minimal.";
 
