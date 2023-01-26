@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>
+        Earring removal
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h3>
+    Earring Removal
+    </h3>
+    <div class = "div_header" id="div_header"></div>
+
+    
+    <h4>Indication</h4>
+    <input type = "radio" name = "indication" value = "0" id = "indication0" onchange = "copytext()">
+    <label for = "indication0">infection</label><br>
+    <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+    <label for = "indication1">inability for the patient to remove earring due to swelling</label><br>
+<br>
+
+    <div id = "div_consent"></div>
+    
+    <div id = "div_risks"></div>
+
+    <div id = "div_sedation"></div>
+
+    
+    <div id = "div_side"></div>
+    
+    <div id = "div_anesthetic"></div>
+    
+    <input type = "checkbox" id="pus" onchange="copytext()">A small amount of pus was expressed<br>
+    
+    <div id = "div_note"></div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      consent();
+   //   risks();
+    //  sedation();
+      side();
+      anesthetic();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue("consent");
+       // var sedation = getValue("sedation");
+        var anesthesia = getValue("anesthestic");
+        var volume = getValue('volume');
+        var side = getValue("side");
+        var pus = getValue("pus");
+        var t = "";
+        
+        var t = t + "Procedure Note: Earring Removal \n";
+        
+        t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "0":
+            t = t + "infection. ";
+            break;
+          case "1":
+            t = t + "inability of the patient to remove the earring due to swelling. ";
+            break;
+        }
+
+        t = t + consent;
+
+       // t = t + sedation;
+        t = t + "The " + side.toLowerCase() + " earlobe was prepped with Betadine and infiltrated with " + volume + " cc of " + anesthesia + ". ";
+        t = t + "An #11 blade was used to make a small stab incision next to the earring to release it.  The earring was then removed manually. ";
+        if (pus) {
+          t = t + "A small amount of pus was expressed from the earlobe.";
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications.  Bleeding was minimal.";
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>
