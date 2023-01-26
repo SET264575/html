@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>
+        ***
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class = "div_header" id="div_header"></div>
+
+    <div class="main">
+      <h3>***</h3>
+      <h4>Indication</h4>
+      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">increased intraocular pressure in the setting of trauma</label><br>
+      <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
+      <label for = "indication2">airway</label><br>
+  <br>
+
+      <div id = "div_consent"></div>
+
+      <div id = "div_risks"></div>
+
+      <div id = "div_sedation"></div>
+
+
+      <div id = "div_side"></div>
+
+      <div id = "div_anesthetic"></div>
+    </div>
+    
+    <div id = "div_note">
+      <a href="https://www.merckmanuals.com/professional/eye-disorders/how-to-do-eye-procedures/how-to-do-lateral-canthotomy" target = "_blank">Explanation of Procedure</a>
+      <a href="..\..\ER\Equipment\lateral canthotomy.html" target = "_blank">Equipment List</a>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+      risks();
+      sedation();
+      side();
+      anesthetic();
+    </script>
+  
+    <script>
+      function copytext(){
+     /*  var indication = getValue("indication");
+        var consent = getValue("consent");
+        var sedation = getValue("sedation");
+        var anesthetic = getValue("anesthetic");
+        var dose = getValue('dose');
+        var side = getValue("side"); */
+        var t = "";
+        
+        // t = t + digitalblock(); 
+        t = t + "Procedure Note: *** \n";
+        
+   /*     t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "1":
+            t = t + "respiratory failure. ";
+            break;
+          case "2":
+            t = t + "airway protection. ";
+            break;
+        }
+
+        t = t + consent;
+
+        t = t + sedation;
+ 
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>
