@@ -7,12 +7,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   <body>
-    <h3>
-    ***
-    </h3>
+
     <div class = "div_header" id="div_header"></div>
 
     <div class="main">
+      <h3>***</h3>
       <!--h4>Indication</h4>
       <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
       <label for = "indication1">respiratory</label><br>
