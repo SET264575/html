@@ -31,7 +31,7 @@
       <div id = "div_anesthetic"></div>
     </div>
     
-    <div id = "div_note">
+    <div class = "note">
     
     </div>
     
