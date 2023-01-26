@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>
-        ***
+        Lateral canthotomy
     </title>
     <link rel="stylesheet" href="procedure2.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -11,12 +11,12 @@
     <div class = "div_header" id="div_header"></div>
 
     <div class="main">
-      <h3>***</h3>
+      <h3>Lateral canthotomy</h3>
       <h4>Indication</h4>
       <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
       <label for = "indication1">increased intraocular pressure in the setting of trauma</label><br>
       <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
-      <label for = "indication2">airway</label><br>
+      <label for = "indication2">decreased vision in the setting of trauma</label><br>
   <br>
 
       <div id = "div_consent"></div>
@@ -32,7 +32,8 @@
     </div>
     
     <div id = "div_note">
-      <a href="https://www.merckmanuals.com/professional/eye-disorders/how-to-do-eye-procedures/how-to-do-lateral-canthotomy" target = "_blank">Explanation of Procedure</a>
+      <a href="https://www.merckmanuals.com/professional/eye-disorders/how-to-do-eye-procedures/how-to-do-lateral-canthotomy" target = "_blank">Explanation of Procedure from Merck Manual</a>
+      <a href="https://www.wikem.org/wiki/Canthotomy" target = "_blank">Explanation of Procedure from WikEM</a>
       <a href="..\..\ER\Equipment\lateral canthotomy.html" target = "_blank">Equipment List</a>
     </div>
     
@@ -46,7 +47,7 @@
     <script src = "procedure.js"></script>
     <script>
       header();
-      consent('verbal');
+      consent('written');
       risks();
       sedation();
       side();
@@ -55,31 +56,34 @@
   
     <script>
       function copytext(){
-     /*  var indication = getValue("indication");
+       var indication = getValue("indication");
         var consent = getValue("consent");
         var sedation = getValue("sedation");
         var anesthetic = getValue("anesthetic");
-        var dose = getValue('dose');
+        var volume = getValue('volume');
         var side = getValue("side"); */
         var t = "";
-        
-        // t = t + digitalblock(); 
-        t = t + "Procedure Note: *** \n";
-        
-   /*     t = t + "The procedure was indicated for ";
-        switch(indication){
-          case "1":
-            t = t + "respiratory failure. ";
-            break;
-          case "2":
-            t = t + "airway protection. ";
-            break;
-        }
-
+        t = t + "Procedure Note: " + side + " Lateral Canthotomy\n";
+        t = t + "The procedure was indicated for ";
+          switch(indication){
+            case "1":
+              t = t + "increased intraocular pressure in the setting of trauma. ";
+              break;
+            case "2":
+              t = t + "decreased vision in the setting of trauma. ";
+              break;
+          }
         t = t + consent;
-
         t = t + sedation;
- 
+        t = t + "A drop of tetracaine was applied to the eye. ";
+        t = t + "The skin around the lateral canthus was prepped with Betadine, taking care that Betadine did not get into the eye, and drapped sterilely. ";
+        t = t + "The lateral canthus was infiltrated with " + volume " cc of " + anesthetic + ", taking care to direct the needle tip toward the lateral orbital rim, and away from the globe. ";
+        t = t + "Hemostats were used to crush the skin from the angle of the eyelid to the orbital rim for 1 minute. ";
+        t = t + "The lateral canthus was incised with iris scissors from the angle of the eyelid to the orbital rim. ";
+        t = t + "The inferior eyelid was retracted and tissue was bluntly dissected to exposed the canthal tendon. ";
+        t = t + "The inferior crus of the lateral canthus tendon was cut, taking care to point the scissors inferiorly and posteriorly toward the lateral orbital rim, avoiding the globe. ";
+        t = t + "Intraocular pressure was rechecked and found to be still elevated and therefore, the superior crus of the canthal tendon was similarly cut. ";
+        t = t + "Erythromycin eye ointment was applied to the eye and the eye was patched with a sterile dressing and eyeshield. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
         displayText(t);
