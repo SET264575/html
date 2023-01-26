@@ -420,7 +420,10 @@ anoscopy
       <a hhef="">toenail removal</a><br>
     </div>
 
-  <!--h3>These are additional ideas for procedures that I haven't created yet</h3>
+  <br><br>
+  <button onclick="document.getElementById('notDone').style.display = 'block'">Show procedures that have been considered but not yet created</button>
+  <div id = "notDone" style="display: hidden">
+  <h3>These are additional ideas for procedures that I haven't created yet</h3>
   <pre>
 ABG draw
 anoscopy
@@ -450,7 +453,8 @@ trochanteric bursa injection
 vaginal foreign body
 varicose vein bleeding
 wrist fracture reduction
-  </pre-->
+  </pre>
+  </div>
     <script>
       document.getElementById('theImg').addEventListener('click',pos,false);
       
