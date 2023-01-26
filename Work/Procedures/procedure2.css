@@ -159,6 +159,10 @@ footer {
   margin-left: 20px;
 }
 
+.risk {
+  margin: 20px;
+}
+
 .risk_header {
   font-weight: bold;
   font-size: 14px;
