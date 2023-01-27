@@ -13,9 +13,9 @@
     <div class="main">
       <h3>Lateral canthotomy</h3>
       <h4>Indication</h4>
-      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+      <input type = "radio" name = "indication" value = "increased intraocular pressure in the setting of trauma" id = "indication1" onchange = "copytext()">
       <label for = "indication1">increased intraocular pressure in the setting of trauma</label><br>
-      <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
+      <input type = "radio" name = "indication" value = "decreased vision in the setting of trauma" id = "indication2" onchange = "copytext()">
       <label for = "indication2">decreased vision in the setting of trauma</label><br>
   <br>
 
@@ -77,18 +77,11 @@
         var volume = getValue('volume');
         var side = getValue("side"); 
         var t = "";
-        t = t + "Procedure Note: " + side + " Lateral Canthotomy\n";
-        t = t + "The procedure was indicated for suspected orbital compartment syndrome due to ";
-          switch(indication){
-            case "1":
-              t = t + "increased intraocular pressure in the setting of trauma. ";
-              break;
-            case "2":
-              t = t + "decreased vision in the setting of trauma. ";
-              break;
-          }
-        t = t + consent;
         t = t + sedationText();
+        
+        t = t + "Procedure Note: " + side + " Lateral Canthotomy\n";
+        t = t + "The procedure was indicated for suspected orbital compartment syndrome due to " + indication + ". ";
+        t = t + consent;
         t = t + "A drop of tetracaine was applied to the eye. ";
         t = t + "The skin around the lateral canthus was prepped with Betadine, taking care that Betadine did not get into the eye, and drapped sterilely. ";
         t = t + "The lateral canthus was infiltrated with " + volume + " mL of " + anesthetic + ", taking care to direct the needle tip toward the lateral orbital rim, and away from the globe. ";
