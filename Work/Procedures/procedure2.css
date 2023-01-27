@@ -161,14 +161,14 @@ footer {
 
 .risk {
   margin: 20px;
+  border: 1px black solid;
+  padding: 10px;
 }
 
 .risk_header {
   font-weight: bold;
   font-size: 16px;
-  border: 1px black solid;
-  padding: 10px;
-  margin: 10px;
+
 }
 
 .risks_from_procedure {
@@ -185,7 +185,7 @@ footer {
   white-space: pre-wrap;
 }
 
-.risks_from_patient_factors::before {
+.risks_due_to_patient_factors::before {
   content: 'Increased risks due to patient factors:\A';
   font-weight: bold;
   font-size: 12px;
@@ -202,7 +202,7 @@ footer {
   font-size: 12px;
 }
 
-.benefits_from_procedure {
+.benefits_to_procedure {
   white-space: pre-wrap;
 }
 
