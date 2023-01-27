@@ -179,7 +179,7 @@ footer {
 .risks_from_procedure::before {
   content: 'Risks inherent to procedure:\A';
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .risks_due_to__patient_factors {
@@ -194,7 +194,7 @@ footer {
 
 .risks_from_sedation {
   white-space: pre-wrap;
-  content: "aspiration/Ahypoxic injury to organs including brain\Aneed for rescue measures, including intubation\A";
+  content: "aspiration\Ahypoxic injury to organs including brain\Aneed for rescue measures, including intubation\A";
 }
 
 .risks_from_sedation::before {
