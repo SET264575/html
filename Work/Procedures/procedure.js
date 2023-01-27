@@ -197,6 +197,7 @@ function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
 function risks() {load('risks')}
+function riskstosedation {load('riskstosedation')}
 function sedation(flag) {load('sedation'); sedationFlag = flag}
 function student() {load('student');}
 function sutures(index) { load('sutures'); sutureFlag = index} 
