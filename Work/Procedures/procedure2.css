@@ -198,7 +198,7 @@ footer {
 }
 
 .risks_from_sedation::before {
-  content: 'Risks due to sedation\A';
+  content: 'Risks due to sedation:\A';
   font-weight: bold;
   font-size: 14px;
 }
