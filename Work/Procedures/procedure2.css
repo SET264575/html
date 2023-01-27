@@ -165,9 +165,59 @@ footer {
 
 .risk_header {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
+  border: 1px black solid;
+  padding: 10px;
+  margin: 10px;
 }
 
-.risk_body {
+.risks_from_procedure {
   white-space: pre-wrap;
+}
+
+.risks_from_procedure::before {
+  content: 'Risks inherent to procedure:\A';
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.risks_from_patient_factors {
+  white-space: pre-wrap;
+}
+
+.risks_from_patient_factors::before {
+  content: 'Increased risks due to patient factors:\A';
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.risks_from_sedation {
+  white-space: pre-wrap;
+  content: 'aspiration\Ahypoxic injury to organs including brain\Aneed for rescue measures, including intubation\A';
+}
+
+.risks_from_sedation::before {
+  content: 'Risks due to sedation\A';
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.benefits_from_procedure {
+  white-space: pre-wrap;
+}
+
+.benefits_from_procedure::before {
+  content: 'Benefits of doing procedure\A';
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.alternatives {
+  white-space: pre-wrap;
+}
+
+.alternatives::before {
+  content: 'Alternatives to procedure\A';
+  font-weight: bold;
+  font-size: 12px;
 }
