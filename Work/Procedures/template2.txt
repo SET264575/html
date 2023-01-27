@@ -54,30 +54,30 @@
   
     <script>
       function copytext(){
-     /*  var indication = getValue("indication");
+        var indication = getValue("indication");
         var consent = getValue("consent");
         var sedation = getValue("sedation");
         var anesthetic = getValue("anesthetic");
         var volume = getValue('volume');
-        var side = getValue("side"); */
+        var side = getValue("side");
         var t = "";
         
         // t = t + digitalblock(); 
         t = t + "Procedure Note: *** \n";
         
-   /*     t = t + "The procedure was indicated for ";
+        t = t + "The procedure was indicated for ";
         switch(indication){
           case "1":
-            t = t + "respiratory failure. ";
+            t = t + "respiratory. ";
             break;
           case "2":
-            t = t + "airway protection. ";
+            t = t + "airway. ";
             break;
         }
 
         t = t + consent;
 
-        t = t + sedation;
+        t = t + sedationText();
  
         t = t + "infiltrated with " + volume + " mL of " + anesthetic + ". ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
