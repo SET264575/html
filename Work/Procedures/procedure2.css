@@ -182,7 +182,7 @@ footer {
   font-size: 14px;
 }
 
-.risks_due_to__patient_factors {
+.risks_due_to_patient_factors {
   white-space: pre-wrap;
 }
 
@@ -204,6 +204,7 @@ footer {
 
 .risks_from_sedation::after {
   content: "aspiration\Ahypoxic injury to organs including brain\Aneed for rescue measures, including intubation\A";
+  padding: 20px;
 }
 
 .benefits_to_procedure {
