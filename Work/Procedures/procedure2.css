@@ -204,7 +204,7 @@ footer {
 
 .risks_from_sedation::after {
   content: "aspiration\Ahypoxic injury to organs including brain\Aneed for rescue measures, including intubation\A";
-  padding: 20px;
+  margin: 20px;
 }
 
 .benefits_to_procedure {
