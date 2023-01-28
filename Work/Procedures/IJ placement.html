@@ -34,7 +34,45 @@
       </select>
     </div>
     <div class="note">
-      
+      <div class="risks">
+      <div class="risk_header">
+        Risks, Benefits and Alternatives
+      </div>
+      <div class="risks_from_procedure">
+Arterial puncture
+Hematoma
+Pneumothorax
+Damage to the vein
+Hemothorax
+Air embolism
+Catheter misplacement
+Arrhythmias or atrial perforation, typically caused by guidewire or catheter
+Nerve damage
+Infection
+Thrombosis
+      </div>
+      <div class = "risks_from_sedation" id="div_riskstosedation"></div>
+      <div class = "risks_due_to_patient_factors">
+        distortion of landmarks due to trauma
+        anticoagulation
+        altered mental status/inability to remain still
+        obesity
+        elderly/comorbidities
+        extremis
+        LBBB, increases the risk of developing complete heart block
+      </div>
+      <div class = "benefits_to_procedure">
+        <pre>
+
+        </pre>
+      </div>
+      <div class = "alternatives">
+        <pre>
+        
+        </pre>
+      </div>
+        
+        <a href = "https://www.merckmanuals.com/professional/critical-care-medicine/how-to-do-central-vascular-procedures/how-to-do-internal-jugular-vein-cannulation,-ultrasound-guided" target = "_blank">Description of Procedure from Merck Manual</a><br>
     </div>
     
     <footer>
@@ -75,6 +113,7 @@
         }
 
         t = t + consent;
+        t = t + "The patient was placed in Trendelenburg. Cardiac monitoring was performed throughout the procedure. ";
         t = t + "The patient was prepped and draped in the usual sterile fashion. ";
         t = t + "Ultrasound guidance was used to visualize the " + side.toLowerCase() + " " + location + " and surrounding structures.  ";
         t = t + "The IV catheter was placed using the Seldinger technique and secured to the skin with 2-0 silk suture at " + depth + ". ";
