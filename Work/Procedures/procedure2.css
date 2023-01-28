@@ -194,13 +194,16 @@ footer {
 
 .risks_from_sedation {
   white-space: pre-wrap;
-  content: "aspiration\Ahypoxic injury to organs including brain\Aneed for rescue measures, including intubation\A";
 }
 
 .risks_from_sedation::before {
   content: 'Risks due to sedation:\A';
   font-weight: bold;
   font-size: 14px;
+}
+
+.risks_from_sedation::after {
+  content: "aspiration\Ahypoxic injury to organs including brain\Aneed for rescue measures, including intubation\A";
 }
 
 .benefits_to_procedure {
