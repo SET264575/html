@@ -11,7 +11,7 @@
     <div class="div_header" id= "div_header"></div>
     <div class="main">
       <h3>
-      Internal Jugular Central line placement
+      Internal Jugular Central Line Placement
       </h3>
 
       <h4>Indication</h4>
@@ -23,8 +23,18 @@
       <div id="div_consent"></div>
 
       <div id="div_side"></div>
-
-    <button class="copyBtn" id="copyBtn" onclick="copyEdited()"></button><br>
+      
+      <label for = "depth">Length</label>
+      <select id = "depth">
+        <option value = "12">12 cm</option>
+        <option value = "13">13 cm</option>
+        <option value = "14">14 cm</option>
+        <option value = "15">15 cm</option>
+        
+      </select>
+    </div>
+    <div class="note">
+      
     </div>
     
     <footer>
@@ -49,6 +59,7 @@
         var consent = getValue("consent");
         //var sedation = getRadioButtonValue("sedation");
         var side = getValue("side");
+        var depth = getValue('depth');
         var location = "internal jugular vein";
 
         var t = "Procedure Note: Central line placement in the "+ side + " "+location +"\n";
@@ -66,7 +77,7 @@
         t = t + consent;
         t = t + "The patient was prepped and draped in the usual sterile fashion. ";
         t = t + "Ultrasound guidance was used to visualize the " + side.toLowerCase() + " " + location + " and surrounding structures.  ";
-        t = t + "The IV catheter was placed using the Seldinger technique and secured to the skin with 2-0 silk suture. ";
+        t = t + "The IV catheter was placed using the Seldinger technique and secured to the skin with 2-0 silk suture at " + depth + ". ";
         t = t + "Proper location was confirmed with x-ray. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
