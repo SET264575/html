@@ -58,12 +58,12 @@
         var dose = [60,60,60,50,50,50,40,40,40,30,30,30,20,20,20,10,10,10];
         var pills = [6,6,6,5,5,5,4,4,4,3,3,3,2,2,2,1,1,1];
         t = "<table><tr><th>Date</th><th>Dose</th><th>Number to take</th></tr>";
-        for (let i = 0; i < 12; i++) {
+        for (let i = 0; i < 15; i++) {
           t = t + "<tr><td>"+daysFromToday(i)+"</td><td>"+dose[i]+" mg</td><td>"+pills[i]+" tablets</td></tr>";
         }
-          t = t + "<tr><td>"+daysFromToday(12)+"</td><td>"+dose[12]+" mg</td><td>1 tablet</td></tr>";
-          t = t + "<tr><td>"+daysFromToday(13)+"</td><td>"+dose[13]+" mg</td><td>1 tablet</td></tr>";
-          t = t + "<tr><td>"+daysFromToday(14)+"</td><td>"+dose[14]+" mg</td><td>1 tablet</td></tr>";
+          t = t + "<tr><td>"+daysFromToday(15)+"</td><td>"+dose[12]+" mg</td><td>1 tablet</td></tr>";
+          t = t + "<tr><td>"+daysFromToday(16)+"</td><td>"+dose[13]+" mg</td><td>1 tablet</td></tr>";
+          t = t + "<tr><td>"+daysFromToday(17)+"</td><td>"+dose[14]+" mg</td><td>1 tablet</td></tr>";
 
         t= t + "</table>";
         document.getElementById("table2").innerHTML = t;
