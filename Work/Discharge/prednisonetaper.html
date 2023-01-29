@@ -12,16 +12,18 @@
   </head>
   <body>
     <p id = "table"></p>
-    <script src="discharge.js">
+    <script src="discharge.js"></script>
     <script>
-      var t = "<table>";
+      var t;
       var dose = [60,60,50,50,40,40,30,30,20,20,10,10];
       var pills = [6,6,5,5,4,4,3,3,2,2,1,1];
-      
-      for (let i = 0; i<12; i++) {
+      t = "<table>"
+      for (let i = 0; i < 12; i++) {
         t = t + "<tr><td>"+daysFromToday(i)+"</td><td>"+dose[i]+" mg</td><td>"+pills[i]+" tablets</td></tr>";
       }
+      t= t + "</table>";
       document.getElementById("table").innerHTML = t;
+      console.log(t);
       copyFormatted(t);
     </script>
   </body>
