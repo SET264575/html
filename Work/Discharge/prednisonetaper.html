@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+      table, td, th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td, th {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id = "table"></p>
+    <script>
+      var t = "<table>";
+      var dose = [60,60,50,50,40,40,30,30,20,20,10,10];
+      var pills = [6,6,5,5,4,4,3,3,2,2,1,1];
+      
+      for (let i = 0; i<12; i++) {
+        t = t + "<tr><td>"+day(i)+"</td><td>"+dose[i]+" mg</td><td>"+pills[i]+" tablets</td></tr>";
+      }
+      document.getElementById("table").innerHTML = t;
+      
+      function day(i) {
+        return(i+1);
+      }
+  </body>
+</html>
