@@ -18,9 +18,12 @@
       var dose = [60,60,50,50,40,40,30,30,20,20,10,10];
       var pills = [6,6,5,5,4,4,3,3,2,2,1,1];
       t = "<table>"
-      for (let i = 0; i < 12; i++) {
+      for (let i = 0; i < 10; i++) {
         t = t + "<tr><td>"+daysFromToday(i)+"</td><td>"+dose[i]+" mg</td><td>"+pills[i]+" tablets</td></tr>";
       }
+        t = t + "<tr><td>"+daysFromToday(10)+"</td><td>"+dose[10]+" mg</td><td>1 tablet</td></tr>";
+        t = t + "<tr><td>"+daysFromToday(11)+"</td><td>"+dose[11]+" mg</td><td>1 tablet</td></tr>";
+      
       t= t + "</table>";
       document.getElementById("table").innerHTML = t;
       console.log(t);
