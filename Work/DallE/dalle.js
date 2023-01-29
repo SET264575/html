@@ -19,7 +19,7 @@ function getImage() {
 "DALL·E 2023-01-29 15.17.25 - steampunk physician doctor scientist robot, holding a stethoscope, brown pallet, digital art hd.png"];
 
   var n = parseInt(Math.random()*list.length);
-  if (Math.random()>0.3) {
+  if (Math.random()>0.8) {
     return(list[n]);
   }
   else {
