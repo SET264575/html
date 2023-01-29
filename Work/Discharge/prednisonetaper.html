@@ -55,7 +55,6 @@
 
         t= t + "</table>";
         document.getElementById("table1").innerHTML = t;
-        console.log(t);
         copyFormatted(t);
       }
       
@@ -66,7 +65,7 @@
         var pills = [6,6,6,5,5,5,4,4,4,3,3,3,2,2,2,1,1,1];
         var offset = document.getElementById('tomorrow').checked ? 1:0;
         console.log(offset);
-        console.log(document.getElementById('tomorrow').checked;
+        console.log(document.getElementById('tomorrow').checked);
         
         t = "<table><tr><th style = 'width: 60px'>Date</th><th style = 'width: 60px'>Dose</th><th style = 'width: 140px'>Number to take</th></tr>";
         for (let i = 0+offset; i < 15+offset; i++) {
@@ -78,7 +77,6 @@
 
         t= t + "</table>";
         document.getElementById("table2").innerHTML = t;
-        console.log(t);
         copyFormatted(t);
       }
     </script>
