@@ -39,11 +39,11 @@
       <h4>Technique</h4>
     <label for = "incision_size">Length of incision</label>
     <select id = "incision_size" onchange = "copytext()">
-      <option value = "1">1</option>
-      <option value = "2">2</option>
-      <option value = "3">3</option>
-      <option value = "4">4</option>
-      <option value = "5">5</option>
+      <option value = "1">1 cm</option>
+      <option value = "2">2 cm</option>
+      <option value = "3">3 cm</option>
+      <option value = "4">4 cm</option>
+      <option value = "5">5 cm</option>
     </select><br><br>
 
       <label for = "amount">Amount of pus</label>
@@ -52,7 +52,10 @@
           <option value = "A small amount of">A small amount</option>
           <option value = "A large amount of">A large amount</option>
       </select><br><br>
-
+      <input type = "checkbox" id = "culture" onchange = "copytext()">A wound culture was sent to the lab.</input><br><br>
+      <input type = "checkbox" id = "loculations" onchange = "copytext()">Hemostats were used to break up loculations.</input><br><br>
+      <input type = "checkbox" id = "irrigation" onchange = "copytext()">The cavity was irrigated thoroughly with normal saline.</input><br><br>
+      <input type = "checkbox" id = "drain" onchange = "copytext()">A drain was placed.</input><br><br>
       <input type = "checkbox" id = "gauze" onchange = "copytext()">The cavity was packed with 1/4" iodoform gauze.</input><br><br>
 
     </div>
@@ -76,11 +79,27 @@
         var volume = getValue("volume");
         var location = getValue("location");
         var incision_size = getValue("incision_size");
+        var culture = getValue("culture");
+        var loculations = getValue("loculations");
+        var irrigation = getValue("irrigation");
+        var drain = getValue("drain");
         var gauze = getValue("gauze");
         var t = "Procedure Note: Abscess Incision and Drainage\n";
         t = t + "The skin over the " + size + " cm abscess on the " + location + " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
-        t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  The abscess was probed with curved hemostats to break up loculations.  ";
+        t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  ";
+        if (culture) {
+          t = t + "A wound culture was sent to the lab. ";
+        }
+        if (loculations) {
+          t = t + "The abscess was probed with curved hemostats to break up loculations.  ";
+        }
         t = t + amount + " pus was expressed from the abscess. ";
+        if (irrigation) {
+          t = t + "The cavity was thoroughly irrigated with normal saline. ";
+        }
+        if (drain) {
+          t = t = "A drain was placed. ";
+        }
         if (gauze){
             t = t + 'The cavity was packed with 1/4" iodoform gauze. ';
         }
