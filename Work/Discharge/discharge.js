@@ -49,7 +49,9 @@ function daysFromToday(days) {
 }
 
 function formatDate(date) {
- var dd = String(date.getDate()).padStart(2, '0');
- var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
- return(mm + '/' + dd);
+  var dayOfWeek = ['Sun','Mon','Tues','Wed','Thurs','Fri','Sat'];
+  var weekday = dayOfWeek[date.getDay()];
+  var dd = String(date.getDate()).padStart(2, '0');
+  var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+  return(dayOfWeek + ", " + mm + '/' + dd);
 }
