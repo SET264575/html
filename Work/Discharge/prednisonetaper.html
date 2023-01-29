@@ -7,6 +7,7 @@
       }
       td, th {
         padding: 20px;
+        text-align: center;
       }
       th {
         font-weight: bold;
@@ -41,7 +42,7 @@
         var t;
         var dose = [60,60,50,50,40,40,30,30,20,20,10,10];
         var pills = [6,6,5,5,4,4,3,3,2,2,1,1];
-        t = "<table><tr><th style = 'width: 100px'>Date</th><th style = 'width: 100px'>Dose</th><th style = 'width: 100px'>Number to take</th></tr>";
+        t = "<table><tr><th style = 'width: 100px'>Date</th><th style = 'width: 100px'>Dose</th><th style = 'width: 200px'>Number to take</th></tr>";
         for (let i = 0; i < 10; i++) {
           t = t + "<tr><td>"+daysFromToday(i)+"</td><td>"+dose[i]+" mg</td><td>"+pills[i]+" tablets</td></tr>";
         }
