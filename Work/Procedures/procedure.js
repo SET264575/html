@@ -167,7 +167,7 @@ function displayText(t) {
   t = formatText(t);
   //navigator.clipboard.writeText(t);
   document.getElementById('text').innerHTML = t;
-  t = "<div style='font-size: 1em'>"+t+"</div>";
+  t = "<div style='font-size: .8em'>"+t+"</div>";
   copyFormatted(t); 
  // document.getElementById('text').value = t;
 }
