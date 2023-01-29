@@ -22,6 +22,7 @@
         t = t + "<tr><td>"+daysFromToday(i)+"</td><td>"+dose[i]+" mg</td><td>"+pills[i]+" tablets</td></tr>";
       }
       document.getElementById("table").innerHTML = t;
+      copyFormatted(t);
     </script>
   </body>
 </html>
