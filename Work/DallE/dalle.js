@@ -26,3 +26,11 @@ function getImage() {
     return('');
   }
 }
+
+function displayImage() {
+  var x = getImage(); 
+  if (x != '') {
+      var y = "../../Work/DallE/"+x;
+      document.getElementById('img').src = y;
+  }
+}
