@@ -693,26 +693,26 @@ t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'def
             t = t + "\n\nIndependent review:\n";
           }
           if (isAnyChecked('ekg')) {
-            t = t + "My independent interpretation of the EKG " + getRadioButtonValue('ekg') + ". ";
+            t = t + "My independent interpretation of the EKG " + getRadioButtonValue('ekg');
           }
           if (isAnyChecked('cxr')) {
-            t = t + "My independent interpretation of the chest x-ray is consistent with " + getRadioButtonValue('cxr') + ". ";
+            t = t + "My independent interpretation of the chest x-ray is consistent with " + getRadioButtonValue('cxr');
           }
           if (isAnyChecked('xray')) {
-            t = t + "My independent interpretation of the xrays is consistent with " + getRadioButtonValue('xray') + ". ";
+            t = t + "My independent interpretation of the xrays is consistent with " + getRadioButtonValue('xray');
           } 
           if (isAnyChecked('ct')) {
-            t = t + "My independent interpretation of the CT is consistent with " + getRadioButtonValue('ct')+". ";
+            t = t + "My independent interpretation of the CT is consistent with " + getRadioButtonValue('ct');
           }
           if (isAnyChecked('abg')) {
             t = t + "My independent interpretation of the ABG is consistent with " + getRadioButtonValue('abg');
             if (isAnyChecked('o2')) {
               t = t + " with " + getRadioButtonValue('o2');
             }
-            t = t + ". ";
+            //t = t + ". ";
           }
 
-          t = t + "*!*\n\n";
+          t = t + "\n\n";
           var iframe = document.getElementById("iframe");
           var test = iframe.contentWindow.document.getElementById('text').innerHTML;
           if (test != "") {
