@@ -197,8 +197,7 @@ function side() {load('side') }
 function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
-function location() {console.log('location')}
-//function location() {load('location')}
+function location2() {load('location')}
 function risks() {load('risks')}
 function sedation(flag) {load('sedation'); sedationFlag = flag}
 function student() {load('student');}
