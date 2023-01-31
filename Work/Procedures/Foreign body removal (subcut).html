@@ -1,0 +1,185 @@
+<html>
+  <head>
+    <title>
+        Subcutaneous foreign body
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class = "div_header" id="div_header"></div>
+
+    <div class="main">
+      <h3>Subcutaneous Foreign Body Removal</h3>
+      <label for="location">Location</label>
+      <input type="text" id = "location" onchange="copytext()">
+      
+      <div id = "div_consent"></div>
+
+      <div id = "div_risks"></div>
+
+      <!--div id = "div_sedation"></div-->
+      
+      <h4>Localization technique</h4>
+      <input type = "radio" id="localization1" name = "localization" onchange = "copytext()">
+      <label for = "localization1">visualization</label><br>
+            
+      <input type = "radio" id="localization2" name = "localization" onchange = "copytext()">
+      <label for = "localization2">palpation</label><br>
+            <input type = "radio" id="localization3" name = "localization" onchange = "copytext()">
+      <label for = "localization3">x-ray</label><br>
+      
+            <input type = "radio" id="localization4" name = "localization" onchange = "copytext()">
+      <label for = "localization4">ultrasound</label><br><br>
+      
+            <div id = "div_anesthetic"></div>
+      
+      <h4>Technique to reach the foreign body</h4>
+      <input type = "radio" id="access1" name = "access" value = "1" onchange = "copytext()">
+      <label for = "access1">through the wound</label><br>
+      <input type = "radio" id="access2" name = "access" value = "2" onchange = "copytext()">
+      <label for = "access2">by extending the wound</label>  <br>    
+      <input type = "radio" id="access3" name = "access" value = "3" onchange = "copytext()">
+      <label for = "access3">incising the skin</label><br><br>
+      
+      <h4>Results</h4>
+      <input type = "radio" id="result1" name = "result" value = "1"  onchange = "copytext()">
+      <label for = "result1">removed intact</label><br>
+      <input type = "radio" id="result2" name = "result" value = "2" onchange = "copytext()">
+      <label for = "result2">removed in pieces</label><br>      
+      <input type = "radio" id="result3" name = "result" value = "3" onchange = "copytext()">
+      <label for = "result3">could not be found</label><br>
+      <br>
+      <input type = "checkbox" id = "residual" onchange = "copytext()">
+      <label for = "residual">Some residual material remained</label><br>
+      <input type ="checkbox" id = "irrigation" onchange = "copytext()">
+      <label for = "irrigation">The wound was irrigated</label><br>
+      
+      <h4>Closure</h4>
+      <input type = "radio" id="closure1" name = "closure" value = "1"  onchange = "copytext()">
+      <label for = "closure1">sutured</label><br>
+      <input type = "radio" id="closure2" name = "closure" value = "2" onchange = "copytext()">
+      <label for = "closure2">left open</label>   <br><br>
+
+    </div>
+    
+    <div class = "note">
+    <!--div class="risks">
+      <div class="risk_header">
+        Risks, Benefits and Alternatives
+      </div>
+      <div class="risks_from_procedure">
+        injury to internal organs
+        cosmetic damage
+        bleeding
+        infection
+      </div>
+      <div class = "risks_from_sedation" id="div_riskstosedation"></div>
+      <div class = "risks_due_to_patient_factors">
+        distortion of landmarks due to trauma
+        anticoagulation
+        altered mental status/inability to remain still
+        elderly/comorbidities
+        extremis
+      </div>
+      <div class = "benefits_to_procedure">
+        <pre>
+
+        </pre>
+      </div>
+      <div class = "alternatives">
+        <pre>
+        transfer to the University - expected to take too long
+        </pre>
+      </div-->
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+   //   risks();
+   //   sedation();
+      
+      anesthetic();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue("consent");
+        //var sedation = getValue("sedation");
+        var anesthetic = getValue("anesthetic");
+        var volume = getValue('volume');
+        var location = getValue("location");
+        var localization = getValue("localization");
+        var irrigation = getValue("irrigation");
+        var result = getValue("result");
+        var residual = getValue("residual");
+        var t = "";
+        
+        // t = t + digitalblock(); 
+        t = t + "Procedure Note: Subcutaneous Foreign Body Removal \n";
+        
+        t = t + "The procedure was indicated for a foreign body in the " + location;
+
+
+        t = t + consent;
+
+        //t = t + sedationText();
+        t = t + "The foreign body was localized using " + localization; 
+        t = t + "The area over the foreign body was prepped with Betadine and infiltrated with " + volume + " mL of " + anesthetic + ". ";
+
+        switch(access) {
+          case "3":
+              t = t + "An incision was made over the foreign body.";
+            break;
+          case "2":
+            t = t + "The entrance wound was extended to access the foreign body. ";
+            break;
+          case "1":
+            t = t + "The foreign body was removed through the entrance wound. ";
+            break;
+        
+        }
+        switch(result) {
+          case "1":
+            "The foreign body was removed intact. Careful inspection of the wound revealed no additional foreign bodies. ";
+            break;
+          case "2":
+            "The foreign body was removed in pieces.  ";
+            break;
+          case "3":
+            "Despite thorough inspection of the wound and careful probing, the foreign body could not be found. To avoid further injury to the tissues, the search for the foreign body was terminated. ";
+            break;
+        }
+        if (residual) {
+          t = t + "Some residual material remained in the wound. ";
+        }
+        if (irrigation) {
+          t = t + "The wound was irrigated with normal saline. ";
+        }
+        
+        switch(closure) {
+          case "1":
+            t=t+"The wound was then closed with sutures. ";
+            break;
+          case "2":
+            t=t+"To decrease the risk of infection, the wound was left unclosed to heal by secondary intent. ";
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>
