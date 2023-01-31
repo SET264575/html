@@ -13,29 +13,29 @@
       <h3>
       Pericardiocentesis
       </h3>
-      <div class=".reference">
-      Reference:
-      <a href = "https://www.msdmanuals.com/professional/cardiovascular-disorders/myocarditis-and-pericarditis/pericarditis#v939996">Procedure Video</a>
-      </div>
+
 
       <h4>Indication</h4>
-      <input type = "radio" name = "indication" value = "0" id = "indication" checked onchange = "copytext()">
-      <label for = "0">cardiac tamponade</label><br><br>
+      <input type = "radio" name = "indication" value = "1" id = "indication1" checked onchange = "copytext()">
+      <label for = "indication1">cardiac tamponade</label><br><br>
 
       <div id="id_consent"></div>
 
 
       <h4>Prep</h4>
-      <input type = "radio" name = "prep" value = "0" id = "prep1" onchange = "copytext()">
+      <input type = "radio" name = "prep" value = "1" id = "prep1" onchange = "copytext()">
       <label for = "0">The patient's chest wall was prepped and draped in the usual sterile fashion.</label><br>
-      <input type = "radio" name = "prep" value = "1" id = "prep2" onchange = "copytext()">
+      <input type = "radio" name = "prep" value = "2" id = "prep2" onchange = "copytext()">
       <label for = "1">Because the patient was in extremis, complete sterile conditions could not be observed.</label><br>
       
       <div id="div_anesthetic"></div>
       <h4>Results</h4>
       <div id="div_smallvolumefluid"></div>
     </div>
-    
+          
+    <div class="note">
+      <a href = "https://www.msdmanuals.com/professional/cardiovascular-disorders/myocarditis-and-pericarditis/pericarditis#v939996">Procedure Video from Merck Manual</a>
+      </div>
     <footer>
       <div class="dateChanged">12/7/22</div>
       <div class="tested">Not tested</div>
@@ -65,10 +65,10 @@
         
         t = t + "Pericardiocentesis was indicated for ";
         switch(indication){
-          case "0":
+          case "1":
             t = t + "cardiac tamponade. ";
             break;
-          case "1":
+          case "2":
             t = t + " ";
             break;
         }
@@ -77,10 +77,10 @@
         t = t + consent;
         
         switch(prep) {
-          case '0':
+          case '1':
             t = t + "The patient's chest wall was prepped and draped in the usual sterile fashion. ";
             break;
-          case '1':
+          case '2':
             t = t + "Because the patient was in extremis, completely sterile conditions could not be observed. ";
             break;
         }
