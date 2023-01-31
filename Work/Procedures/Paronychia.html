@@ -23,6 +23,8 @@
 
       <div id = "div_side"></div>
       <div id = "div_finger"></div>
+      <input type="checkbox" id="excised" onchange="copytext()">
+      <label for="excise">The skin over the paronychia was excised</label><br>
 
       <!--div id = "div_anesthetic"></div-->
     </div>
@@ -45,7 +47,7 @@
         altered mental status/inability to remain still
         elderly/comorbidities
         extremis
-      </div-->
+      </div>
       <div class = "benefits_to_procedure">
         <pre>
 
@@ -55,7 +57,7 @@
         <pre>
         transfer to the University - expected to take too long
         </pre>
-      </div>
+      </div-->
     </div>
     
     <footer>
@@ -85,6 +87,7 @@
      //   var volume = getValue('volume');
         var side = getValue("side");
         var finger = getValue("finger");
+        var excised = getValue('excised');
         var t = "";
         
         // t = t + digitalblock(); 
@@ -94,7 +97,10 @@
         t = t + consent;
         t = t + "The finger was prepped with Betadine. ";
         t = t + "An #11 blade was used to open the paronychia.  A small amount of pus was expressed.  ";
-        t = t + "The skin over the paronychia was excised.  The wound was cleaned with saline and covered with a Band-Aid. ";
+        if (excised) {
+          t = t + "The skin over the paronychia was excised. ";
+        }
+        t =t + "The wound was cleaned with saline and covered with a Band-Aid. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
         displayText(t);
