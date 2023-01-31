@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>
+        Tick removal
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class = "div_header" id="div_header"></div>
+
+    <div class="main">
+      <h3>Tick removal</h3>
+      <!--h4>Indication</h4>
+      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">respiratory</label><br>
+      <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
+      <label for = "indication2">airway</label><br>
+  <br-->
+
+      <div id = "div_consent"></div>
+
+      <div id = "div_risks"></div>
+
+
+      <div id = "div_location"></div>
+
+    </div>
+    
+    <!--div class = "note">
+    <div class="risks">
+      <div class="risk_header">
+        Risks, Benefits and Alternatives
+      </div>
+      <div class="risks_from_procedure">
+        injury to internal organs
+        cosmetic damage
+        bleeding
+        infection
+      </div>
+      <div class = "risks_from_sedation" id="div_riskstosedation"></div>
+      <div class = "risks_due_to_patient_factors">
+        distortion of landmarks due to trauma
+        anticoagulation
+        altered mental status/inability to remain still
+        elderly/comorbidities
+        extremis
+      </div>
+      <div class = "benefits_to_procedure">
+        <pre>
+
+        </pre>
+      </div>
+      <div class = "alternatives">
+        <pre>
+        transfer to the University - expected to take too long
+        </pre>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer-->
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+
+      location();
+    </script>
+  
+    <script>
+      function copytext(){
+      //  var indication = getValue("indication");
+        var consent = getValue("consent");
+      
+   //     var sedation = getValue("sedation");
+    //    var anesthetic = getValue("anesthetic");
+   //     var volume = getValue('volume');
+
+        var location = getValue("location");
+        var t = "";
+        
+        // t = t + digitalblock(); 
+        t = t + "Procedure Note: Tick removal \n";
+        
+        t = t + "The procedure was indicated for a tick embedded in the skin on the " + location;
+        t = t + consent;
+       
+        t = t + "The tick was grasped by the head using forceps, taking care to avoid squeezing the body, and removed intact. ";
+
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>
