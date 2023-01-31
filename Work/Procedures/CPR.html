@@ -34,9 +34,9 @@
       
       <h4>Compression technique</h4>
       <input type = "radio" name = "compressions" value = "1" id = "compressions1" onchange = "copytext()">
-      <label for = "compressions1">asystole</label><br>
+      <label for = "compressions1">manually</label><br>
       <input type = "radio" name = "compressions" value = "2" id = "compressions2" onchange = "copytext()">
-      <label for = "compressions2">PEA</label><br>
+      <label for = "compressions2">AutoPulse</label><br>
       
             
       <h4>Airway technique</h4>
@@ -45,9 +45,9 @@
       <input type = "radio" name = "airway" value = "2" id = "airway2" onchange = "copytext()">
       <label for = "airway2">LMA</label><br>
       <input type = "radio" name = "airway" value = "3" id = "airway3" onchange = "copytext()">
-      <label for = "airway3">BWM</label><br>
+      <label for = "airway3">King airway</label><br>
       <input type = "radio" name = "airway" value = "4" id = "airway4" onchange = "copytext()">
-      <label for = "airway4">LMA</label><br>
+      <label for = "airway4">endotracheal intubation</label><br>
       
       <h4>Shocks</h4>
       <input type = "radio" name = "shocks" value = "1" id = "shocks1" onchange = "copytext()">
@@ -58,11 +58,7 @@
       <label for = "shocks3">2 shocks</label><br>
       <input type = "radio" name = "rhythm" value = "4" id = "rhythm4" onchange = "copytext()">
       <label for = "rhythm4">multiple shocks</label><br>
-      
-    
-      
-      <h4}Drugs given</h4>
-      <input type="checkbox" name = "drugs">
+   
       
       <h4>Results</h4>
       <input type = "radio" name = "outcome" value = "1" id = "outcome1" onchange = "copytext()">
@@ -212,7 +208,7 @@
             t = t + "CPR was terminated when the patient achieved return of spontaneous circulation. ";
             break;
           case "2":
-            t = t + "After multiple cycles of CPR, the patient had no meaningful response to resuscitation efforts and further attempts were considered futile. Therefore stopped. Time of death was "+TOD+". ";
+            t = t + "After multiple cycles of CPR, the patient had no meaningful response to resuscitation efforts and further attempts were considered futile and therefore not continued. Time of death was "+TOD+". ";
             break;
           case "3":
             t =t + "AFter discussion with the patient's family, the decision was made to terminate resuscitation efforts.  Time of death was " + TOD + ". ";
