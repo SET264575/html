@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <title>
+        Paronychia drainage
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class = "div_header" id="div_header"></div>
+
+    <div class="main">
+      <h3>Paronychia drainage</h3>
+      
+
+      <div id = "div_consent"></div>
+
+      <div id = "div_risks"></div>
+
+      <!--div id = "div_sedation"></div-->
+
+
+      <div id = "div_side"></div>
+      <div id = "div_finger"></div>
+
+      <!--div id = "div_anesthetic"></div-->
+    </div>
+    
+    <div class = "note">
+    <!--div class="risks">
+      <div class="risk_header">
+        Risks, Benefits and Alternatives
+      </div>
+      <div class="risks_from_procedure">
+        injury to internal organs
+        cosmetic damage
+        bleeding
+        infection
+      </div>
+      <div class = "risks_from_sedation" id="div_riskstosedation"></div>
+      <div class = "risks_due_to_patient_factors">
+        distortion of landmarks due to trauma
+        anticoagulation
+        altered mental status/inability to remain still
+        elderly/comorbidities
+        extremis
+      </div-->
+      <div class = "benefits_to_procedure">
+        <pre>
+
+        </pre>
+      </div>
+      <div class = "alternatives">
+        <pre>
+        transfer to the University - expected to take too long
+        </pre>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+     // risks();
+     // sedation();
+      side();
+      finger();
+   //   anesthetic();
+    </script>
+  
+    <script>
+      function copytext(){
+     //   var indication = getValue("indication");
+        var consent = getValue("consent");
+     //   var sedation = getValue("sedation");
+     //   var anesthetic = getValue("anesthetic");
+     //   var volume = getValue('volume');
+        var side = getValue("side");
+        var finger = getValue("finger");
+        var t = "";
+        
+        // t = t + digitalblock(); 
+        t = t + "Procedure Note: Paronychia Drainage \n";
+        
+        t = t + "The procedure was indicated for a paronychia on the " + side + " " + finger + " finger. ";
+        t = t + consent;
+        t = t + "The finger was prepped with Betadine. ";
+        t = t + "An #11 blade was used to open the paronychia.  A small amount of pus was expressed.  ";
+        t = t + "The skin over the paronychia was excised.  The wound was cleaned with saline and covered with a Band-Aid. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>
