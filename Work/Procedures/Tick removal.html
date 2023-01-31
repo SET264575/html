@@ -12,13 +12,6 @@
 
     <div class="main">
       <h3>Tick removal</h3>
-      <!--h4>Indication</h4>
-      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
-      <label for = "indication1">respiratory</label><br>
-      <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
-      <label for = "indication2">airway</label><br>
-  <br-->
-
       <div id = "div_consent"></div>
 
       <div id = "div_risks"></div>
@@ -70,26 +63,17 @@
     <script>
       header();
       consent('verbal');
-
       location();
     </script>
   
     <script>
       function copytext(){
-      //  var indication = getValue("indication");
         var consent = getValue("consent");
-      
-   //     var sedation = getValue("sedation");
-    //    var anesthetic = getValue("anesthetic");
-   //     var volume = getValue('volume');
-
         var location = getValue("location");
         var t = "";
-        
-        // t = t + digitalblock(); 
         t = t + "Procedure Note: Tick removal \n";
         
-        t = t + "The procedure was indicated for a tick embedded in the skin on the " + location;
+        t = t + "The procedure was indicated for a tick embedded in the skin on the " + location + ". ";
         t = t + consent;
        
         t = t + "The tick was grasped by the head using forceps, taking care to avoid squeezing the body, and removed intact. ";
