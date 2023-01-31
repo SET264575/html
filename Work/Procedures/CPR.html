@@ -47,7 +47,9 @@
       <input type = "radio" name = "airway" value = "3" id = "airway3" onchange = "copytext()">
       <label for = "airway3">LMA</label><br>
       <input type = "radio" name = "airway" value = "4" id = "airway4" onchange = "copytext()">
-      <label for = "airway4">endotracheal intubation</label><br>
+      <label for = "airway4">ETT placed by EMS</label><br>
+      <input type = "radio" name = "airway" value = "5" id = "airway5" onchange = "copytext()">
+      <label for = "airway5">endotracheal intubation</label><br>
       
       <h4>Shocks</h4>
       <input type = "radio" name = "shocks" value = "1" id = "shocks1" onchange = "copytext()">
@@ -176,15 +178,17 @@
           case "1":
             t = t + "BVM";
             break;
-                      
           case "2":
-            t = t + "King airway that had been placed by EMS";
+            t = t + "a King airway that had been placed by EMS";
             break;
           case "3":
-            t =t + "LMA that had been placed by EMS";
+            t =t + "an LMA that had been placed by EMS";
             break;
           case "4":
-            t =t + "endotracheal tube";
+            t =t + "an endotracheal tube placed by EMS";
+            break;
+          case "5":
+            t = t + "endotracheal intubation. ";
             break;
         }
         t = t + ". ";
