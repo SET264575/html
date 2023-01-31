@@ -78,7 +78,12 @@
         var irrigation = getValue("irrigation");
         var drain = getValue("drain");
         var gauze = getValue("gauze");
-        var t = "Procedure Note: Abscess Incision and Drainage\n";
+        if (gauze || loculations) {
+          var t = "Procedure Note: Complex Abscess Incision and Drainage\n";
+        }
+        else {
+          var t = "Procedure Note: Abscess Incision and Drainage\n";
+        }
         t = t + "The skin over the " + size + " cm abscess on the " + location + " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
         t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  ";
         if (culture) {
