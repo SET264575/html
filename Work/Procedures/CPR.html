@@ -41,11 +41,11 @@
             
       <h4>Airway technique</h4>
       <input type = "radio" name = "airway" value = "1" id = "airway1" onchange = "copytext()">
-      <label for = "airway1">BWM</label><br>
+      <label for = "airway1">BVM</label><br>
       <input type = "radio" name = "airway" value = "2" id = "airway2" onchange = "copytext()">
-      <label for = "airway2">LMA</label><br>
+      <label for = "airway2">King airway</label><br>
       <input type = "radio" name = "airway" value = "3" id = "airway3" onchange = "copytext()">
-      <label for = "airway3">King airway</label><br>
+      <label for = "airway3">LMA</label><br>
       <input type = "radio" name = "airway" value = "4" id = "airway4" onchange = "copytext()">
       <label for = "airway4">endotracheal intubation</label><br>
       
@@ -208,10 +208,11 @@
             t = t + "CPR was terminated when the patient achieved return of spontaneous circulation. ";
             break;
           case "2":
-            t = t + "After multiple cycles of CPR, the patient had no meaningful response to resuscitation efforts and further attempts were considered futile and therefore not continued. Time of death was "+TOD+". ";
+            t = t + "After multiple cycles of CPR, the patient had no meaningful response to resuscitation efforts. Further attempts were considered futile and therefore not continued. Time of death was "+TOD+". ";
             break;
           case "3":
             t =t + "AFter discussion with the patient's family, the decision was made to terminate resuscitation efforts.  Time of death was " + TOD + ". ";
+            break;
         }
 
         displayText(t);
