@@ -1,0 +1,226 @@
+<html>
+  <head>
+    <title>
+        CPR
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class = "div_header" id="div_header"></div>
+
+    <div class="main">
+      <h3>CPR</h3>
+      <h4>Indication</h4>
+      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">arrived with CPR in progress</label><br>
+      <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
+      <label for = "indication2">cardiac arrest developed after arrival</label><br>
+
+      <h4>Initial Rhythm</h4>
+      <input type = "radio" name = "rhythm" value = "1" id = "rhythm1" onchange = "copytext()">
+      <label for = "rhythm1">asystole</label><br>
+      <input type = "radio" name = "rhythm" value = "2" id = "rhythm2" onchange = "copytext()">
+      <label for = "rhythm2">PEA</label><br>
+      <input type = "radio" name = "rhythm" value = "3" id = "rhythm3" onchange = "copytext()">
+      <label for = "rhythm3">ventricular fibrillation</label><br>
+      <input type = "radio" name = "rhythm" value = "4" id = "rhythm4" onchange = "copytext()">
+      <label for = "rhythm4">pulseless ventricular tachycardia</label><br>
+      <input type = "radio" name = "rhythm" value = "5" id = "rhythm5" onchange = "copytext()">
+      <label for = "rhythm5">ventricular fibrillation</label><br>
+      <input type = "radio" name = "rhythm" value = "6" id = "rhythm6" onchange = "copytext()">
+      <label for = "rhythm6">pulseless ventricular tachycardia</label><br>
+      
+      <h4>Compression technique</h4>
+      <input type = "radio" name = "compressions" value = "1" id = "compressions1" onchange = "copytext()">
+      <label for = "compressions1">asystole</label><br>
+      <input type = "radio" name = "compressions" value = "2" id = "compressions2" onchange = "copytext()">
+      <label for = "compressions2">PEA</label><br>
+      
+            
+      <h4>Airway technique</h4>
+      <input type = "radio" name = "airway" value = "1" id = "airway1" onchange = "copytext()">
+      <label for = "airway1">BWM</label><br>
+      <input type = "radio" name = "airway" value = "2" id = "airway2" onchange = "copytext()">
+      <label for = "airway2">LMA</label><br>
+      <input type = "radio" name = "airway" value = "3" id = "airway3" onchange = "copytext()">
+      <label for = "airway3">BWM</label><br>
+      <input type = "radio" name = "airway" value = "4" id = "airway4" onchange = "copytext()">
+      <label for = "airway4">LMA</label><br>
+      
+      <h4>Shocks</h4>
+      <input type = "radio" name = "shocks" value = "1" id = "shocks1" onchange = "copytext()">
+      <label for = "shocks1">no shockable rhythm</label><br>
+      <input type = "radio" name = "shocks" value = "2" id = "shocks2" onchange = "copytext()">
+      <label for = "shocks2">1 shock</label><br>
+      <input type = "radio" name = "shocks" value = "3" id = "shocks3" onchange = "copytext()">
+      <label for = "shocks3">2 shocks</label><br>
+      <input type = "radio" name = "rhythm" value = "4" id = "rhythm4" onchange = "copytext()">
+      <label for = "rhythm4">multiple shocks</label><br>
+      
+    
+      
+      <h4}Drugs given</h4>
+      <input type="checkbox" name = "drugs">
+      
+      <h4>Results</h4>
+      <input type = "radio" name = "outcome" value = "1" id = "outcome1" onchange = "copytext()">
+      <label for = "outcome1">ROSC</label><br>
+      <input type = "radio" name = "outcome" value = "2" id = "outcome2" onchange = "copytext()">
+      <label for = "outcome2">deceased</label><br>
+      <input type = "radio" name = "outcome" value = "3" id = "outcome3" onchange = "copytext()">
+      <label for = "outcome3">family decided to stop</label><br>
+    
+      <h4>Time of Death</h4>
+      <input type="text" id = "TOD" onchange = "copytext()"><br>
+
+    </div>
+    
+    <div class = "note">
+    <!--div class="risks">
+      <div class="risk_header">
+        Risks, Benefits and Alternatives
+      </div>
+      <div class="risks_from_procedure">
+        injury to internal organs
+        cosmetic damage
+        bleeding
+        infection
+      </div>
+      <div class = "risks_from_sedation" id="div_riskstosedation"></div>
+      <div class = "risks_due_to_patient_factors">
+        distortion of landmarks due to trauma
+        anticoagulation
+        altered mental status/inability to remain still
+        elderly/comorbidities
+        extremis
+      </div>
+      <div class = "benefits_to_procedure">
+        <pre>
+
+        </pre>
+      </div>
+      <div class = "alternatives">
+        <pre>
+        transfer to the University - expected to take too long
+        </pre>
+      </div-->
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var rhythm = getValue('rhythm');
+        var compressions = getValue('compressions');
+        var airway = getValue('airway');
+        var shocks = getValue('shocks');
+        var outcome = getValue('outcome');
+        var TOD = getValue('TOD');
+
+        var t = "";
+        
+        // t = t + digitalblock(); 
+        t = t + "Procedure Note: CPR \n";
+        
+        switch(indication){
+          case "1":
+            t = t + "The patient arrived in cardiac arrest with CPR in progress. Resuscitation efforts were continued. ";
+            break;
+          case "2":
+            t = t + "The patient developed cardiac arrest after arrival to the ER. CPR was initiated. ";
+            break;
+        }
+
+        t = t + "The patient's initial rhythm was ";
+        switch(rhythm) {
+          case "1":
+            t = t + "asystole";
+            break;
+          case "2":
+            t = t + "PEA";
+            break;
+          case "3":
+            t =t + "ventricular fibrillation";
+            break;
+          case "4":
+            t = t + "pulseless ventricular tachycardia";
+            break;
+          case "5":
+            t = t + "severe bradycardia";
+            break;
+          case "6":
+            t = t + "agonal rhythm";
+            break;
+        }
+        t = t + ". Chest compressions were given ";
+        switch(compressions) {
+          case "1":
+            t = t + "manually";
+            break;
+          case "2":
+            t =t + "using an AutoPulse";
+            break;
+        }
+        t = t + ". Airway was managed with ";
+        switch(airway) {
+          case "1":
+            t = t + "BVM";
+            break;
+                      
+          case "2":
+            t = t + "King airway that had been placed by EMS";
+            break;
+          case "3":
+            t =t + "LMA that had been placed by EMS";
+            break;
+          case "4":
+            t =t + "endotracheal tube";
+            break;
+        }
+        t = t + ". ";
+        switch(shocks) {
+          case "1":
+            t = t + "The patient never developed a shockable rhythm. ";
+            break;
+          case "2":
+            t = t + "The patient received a total of 1 shock. ";
+            break;
+          case "3":
+            t = t + "The patient received a total of 2 shocks. ";
+            break;
+          case "4":
+            t = t + "The patient received multiple shocks. ";
+            break;
+        }
+        t = t + ". See the code sheet for a full records of drugs administered. ";
+        switch(outcome) {
+          case "1":
+            t = t + "CPR was terminated when the patient achieved return of spontaneous circulation. ";
+            break;
+          case "2":
+            t = t + "After multiple cycles of CPR, the patient had no meaningful response to resuscitation efforts and further attempts were considered futile. Therefore stopped. Time of death was "+TOD+". ";
+            break;
+          case "3":
+            t =t + "AFter discussion with the patient's family, the decision was made to terminate resuscitation efforts.  Time of death was " + TOD + ". ";
+        }
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>
