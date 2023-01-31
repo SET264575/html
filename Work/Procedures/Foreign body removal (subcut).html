@@ -131,18 +131,18 @@
         // t = t + digitalblock(); 
         t = t + "Procedure Note: Subcutaneous Foreign Body Removal \n";
         
-        t = t + "The procedure was indicated for a foreign body in the " + location;
+        t = t + "The procedure was indicated for a foreign body in the " + location + ". ";
 
 
         t = t + consent;
 
         //t = t + sedationText();
-        t = t + "The foreign body was localized using " + localization; 
+        t = t + "The foreign body was localized using " + localization+". ";
         t = t + "The area over the foreign body was prepped with Betadine and infiltrated with " + volume + " mL of " + anesthetic + ". ";
 
         switch(access) {
           case "3":
-              t = t + "An incision was made over the foreign body.";
+              t = t + "An incision was made over the foreign body. ";
             break;
           case "2":
             t = t + "The entrance wound was extended to access the foreign body. ";
@@ -154,13 +154,13 @@
         }
         switch(result) {
           case "1":
-            "The foreign body was removed intact. Careful inspection of the wound revealed no additional foreign bodies. ";
+            t = t  + "The foreign body was removed intact. Careful inspection of the wound revealed no additional foreign bodies. ";
             break;
           case "2":
-            "The foreign body was removed in pieces.  ";
+            t = t + "The foreign body was removed in pieces.  ";
             break;
           case "3":
-            "Despite thorough inspection of the wound and careful probing, the foreign body could not be found. To avoid further injury to the tissues, the search for the foreign body was terminated. ";
+            t = t + "Despite thorough inspection of the wound and careful probing, the foreign body could not be found. To avoid further injury to the tissues, the search for the foreign body was terminated. ";
             break;
         }
         if (residual) {
