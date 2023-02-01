@@ -103,15 +103,17 @@
         var t = "";
         t = t + "Procedure Note: Management of " + degree + " Burn on " + location+" \n";
         t = t + "The burn that was dressed covered " + percent + "% of the patient's body surface area. ";
+                
+        if (deroofed) {
+          t = t + "A blister was deroofed. ";
+        }
         if (irrigated) {
           t = t + "The burn was irrigated. ";
         }
         if (contamination) {
           t = t + "Particulate contamination was removed. ";
         }
-        if (deroofed) {
-          t = t + "A blister was deroofed. ";
-        }
+
         t = t + "The wound was covered with " + dressing + ". ";
 
         displayText(t);
