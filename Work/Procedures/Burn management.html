@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>
+        Burn management
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class = "div_header" id="div_header"></div>
+
+    <div class="main">
+      <h3>Burn Management</h3>
+
+      <h4>Degree</h4>
+      <input type="radio" id="degree2" value = "Superficial Partial-thickness" name = "degree" onchange = "copytext()">
+      <label for="degree2">Superficial Partial-thickness</label><br>
+      <input type="radio" id="degree3" value = "Deep Partial-thickness" name = "degree" onchange = "copytext()">
+      <label for="degree3">Deep Partial-thickness</label><br>
+      <input type="radio" id="degree3" value = "Full Thickness" name = "degree" onchange = "copytext()">
+      <label for="degree3">Full Thickness</label><br>
+      
+      <div id = "div_location"></div>
+      
+      <label for = "percent">Percent BSA</label>
+      <input type="text" id="percent" onchange = "copytext()">
+                  
+      <input type="checkbox" id = "deroofed" onchange = "copytext()">
+      <label for = "deroofed">Blister was deroofed.</label>
+      
+      <input type="checkbox" id = "irrigated" onchange = "copytext()">
+      <label for = "irrigated">The wound was irrigated.</label>
+
+      <input type="checkbox" id = "contamination" onchange = "copytext()">
+      <label for = "contamination">Particulate contamination was removed.</label>
+      
+      <h4>Dressing</h4>
+      <input type="radio" id="dressing1" name = "dressing" onchange = "copytext()">
+      <label for="dressing1">silver sulfazidine</label><br>
+      <input type="radio" id="dressing2" name = "dressing" onchange = "copytext()">
+      <label for="dressing2">bacitracin</label><br>
+      <input type="radio" id="dressing3" name = "dressing" onchange = "copytext()">
+      <label for="dressing3">mupirocin</label><br>
+
+    </div>
+    
+    <div class = "note">
+    <!--div class="risks">
+      <div class="risk_header">
+        Risks, Benefits and Alternatives
+      </div>
+      <div class="risks_from_procedure">
+        injury to internal organs
+        cosmetic damage
+        bleeding
+        infection
+      </div>
+      <div class = "risks_from_sedation" id="div_riskstosedation"></div>
+      <div class = "risks_due_to_patient_factors">
+        distortion of landmarks due to trauma
+        anticoagulation
+        altered mental status/inability to remain still
+        elderly/comorbidities
+        extremis
+      </div>
+      <div class = "benefits_to_procedure">
+        <pre>
+
+        </pre>
+      </div>
+      <div class = "alternatives">
+        <pre>
+        transfer to the University - expected to take too long
+        </pre>
+      </div-->
+      <a href = "https://www.aafp.org/pubs/afp/issues/2020/0415/p463.html">Burn Care (AFP)</a><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      location2();
+    </script>
+  
+    <script>
+      function copytext(){
+        var location = getValue("location");
+        var percent = getValue("percent");
+        var degree = getValue("degree");
+        var irrigated = getValue("irrigated");
+        var contamination = getValue("contamination");
+        var deroofed = getValue("deroofed");
+        var dressing = getValue("dressing");
+        var t = "";
+        t = t + "Procedure Note: Management of " + degree + " Burn on " + location+" \n";
+        t = t + "The burn that was dressed covered " + percent + " of the patient's body surface area. ";
+        if (irrigated) {
+          t = t + "The burn was irrigated. ";
+        }
+        if (contamination) {
+          t = t + "Particulate contamination was removed. ";
+        }
+        if (deroofed) {
+          t = t + "A blister was deroofed. ";
+        }
+        t = t + "The wound was covered with " + dressing + ". ";
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>
