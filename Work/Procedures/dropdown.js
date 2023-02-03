@@ -184,7 +184,7 @@ for (let i = 0; i<symptomlist.length; i++) {
   t = t + '<option>'+symptomlist[i]+'</option>';
 }
 document.getElementById('location_list').innerHTML = t;
-
+console.log(t);
 const input = document.getElementById('location');
 input.addEventListener('keyup',(event) => {
 	console.log(event.keyCode);
