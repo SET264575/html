@@ -12,6 +12,8 @@ Rachel:
 
 Changes:
 location as options
+procedure list float near cursor
+procdedure list as buttons
 
 Check:
 Thoracentesis
