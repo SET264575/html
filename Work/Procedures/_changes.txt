@@ -11,5 +11,10 @@ Rachel:
 
 
 Changes:
-location at options
-underline changes to text
+location as options
+
+Check:
+Thoracentesis
+Sedation
+Splinting
+
