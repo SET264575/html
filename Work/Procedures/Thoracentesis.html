@@ -15,9 +15,9 @@
     </h3>
     
     <h4>Indication</h4>
-    <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
-    <label for = "0">diagnostic testing of pleural effusion</label><br>
     <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
+    <label for = "0">diagnostic testing of pleural effusion</label><br>
+    <input type = "radio" name = "indication" value = "2" id = "indication" onchange = "copytext()">
     <label for = "1">therapeutic drainage of pleural effusion</label><br>
 <br>
 
@@ -64,10 +64,10 @@
         
         t = t + "The procedure was indicated for ";
         switch(indication){
-          case "0":
+          case "1":
             t = t + "diagnostic testing of the pleural effusion.  ";
             break;
-          case "1":
+          case "2":
             t = t + "therapeutic drainage of the pleural effusion. ";
             break;
         }
