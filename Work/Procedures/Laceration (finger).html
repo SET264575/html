@@ -93,8 +93,13 @@
         
         t = "Procedure Note:  " + side + " " + finger + " Finger Laceration Repair\n";
         t = t + "The area around the " + wound_length + " cm " + description + " laceration was ";
-        if (betadine == "Yes") {  
-          t = t + "prepped with Betadine and ";
+        switch(betadine) {
+          case "betadine":
+            t = t + "prepped with Betadine and ";
+            break;
+          case "chlorhexidine":
+            t = t + "prepped with chlorhexidine and ";
+            break;
         }
         t = t + "draped sterilely" ;
         
