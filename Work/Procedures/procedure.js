@@ -220,6 +220,7 @@ function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
 function location2() {load('location')}
+function location3() {load('location3')}
 function risks() {load('risks')}
 function sedation(flag) {load('sedation'); sedationFlag = flag}
 function student() {load('student');}
