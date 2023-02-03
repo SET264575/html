@@ -192,7 +192,7 @@ function underlineDiff(oldStr,newStr) {
     break;
     }
   }
-  return(newStr.slice(0,m)+"<u>"+newStr.slice(m,n)+"</u>"+newStr.slice(n));
+  return(newStr.slice(0,m)+"<u>"+newStr.slice(m,n)+ "</u>"+newStr.slice(n));
 }
 
 //load fragments
