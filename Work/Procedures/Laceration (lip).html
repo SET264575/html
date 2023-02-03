@@ -89,8 +89,13 @@
           t = t + "A mental block was used to achieve adequate anesthesia. ";
         }
         t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" lip  was ";
-        if (betadine == "Yes") {  
-          t = t + "prepped with Betadine and ";
+        switch(betadine) {
+          case "betadine":
+            t = t + "prepped with Betadine and ";
+            break;
+          case "chlorhexidine":
+            t = t + "prepped with chlorhexidine and ";
+            break;
         }
         t = t + "draped sterilely ";
         if (mental == noAnswer) {
