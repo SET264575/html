@@ -79,7 +79,7 @@
           location = side + " " + location;
         }
         var betadine = getValue('betadine');
-        var irrigated = getValue('irrigated');
+        var clean = getValue('clean');
         var anesthetic = getValue("anesthetic");
         var volume = getValue("volume");
         var suture_count = getValue("suture_count");
@@ -95,7 +95,7 @@
             break;
         }
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
-        t = t + "The wound was "+ irrigated +" thoroughly with normal saline. ";
+        t = t + "The wound was "+ clean +" thoroughly with normal saline. ";
         t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
         t = t + "The wound was closed with " + suture_count + " " + " staples.  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
