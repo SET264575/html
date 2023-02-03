@@ -187,6 +187,7 @@ document.getElementById('location_list').innerHTML = t;
 
 const input = document.getElementById('location');
 input.addEventListener('keyup',(event) => {
+	console.log(event.keyCode);
 	if (event.keyCode === 13) {
 		let prefix = document.getElementById('location').value;
 		let elm = document.getElementById('location_list').firstElementChild;
