@@ -88,7 +88,8 @@
     <script>
       function copytext(){
         var side = getValue("side");
-        var supervised = getValue('supervised');
+        var i = parseInt(getValue('splint'));
+        let supervised = getValue('supervised');
         let splint = ['coaptation splint','hinged knee brace','hinged knee brace locked in extension','knee immobilizer','long leg 3 way (sugar tong and posterior splint)','posterior long arm','short leg 3 way','short leg posterior splint','sling','sugar tong splint','thumb spica splint','ulnar gutter splint','velcro thumb spica splint', 'velcro wrist splint','volar splint','volar/dorsal','walking boot'];
 
         let typeOfSplint = ['Splint','Brace','Brace','Knee Immobilizer','Splint','Splint','Splint','Splint','Sling','Splint','Splint','Splint','Splint','Splint','Splint','Splint','Boot'];
@@ -101,17 +102,17 @@
         t = t + "Procedure Note: "+typeOfSplint+" Placement \n";
         switch (supervised) {
           case "1":
-            t = t + "I personally applied a "+ splint + " on the " + side + " " + extremity + ". ";
+            t = t + "I personally applied a "+ splint[i] + " on the " + side + " " + extremity[i] + ". ";
             break;
           case "2":
-            t = t + "I was physically present throughout the procedure and directly supervised the application of a "+ splint + " on the " + side + " " + extremity + ". ";
+            t = t + "I was physically present throughout the procedure and directly supervised the application of a "+ splint[i] + " on the " + side + " " + extremity[i] + ". ";
             break;
           case "3":
-            t = t + "A " + splint + " was applied on the " + side + " " + extremity + ". ";
+            t = t + "A " + splint[i] + " was applied on the " + side + " " + extremity[i] + ". ";
             break;
         }
         
-        t = t + "My re-examination after the " + typeOfSplint.toLowerCase() + " was placed showed good alignment and the neurovascular exam was unchanged. ";
+        t = t + "My re-examination after the " + typeOfSplint[i].toLowerCase() + " was placed showed good alignment and the neurovascular exam was unchanged. ";
 
         displayText(t);
         
