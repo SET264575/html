@@ -80,8 +80,13 @@
         var t = "";
         t = "Procedure Note:  Laceration repair on the "+location+"\n";
         t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was ";
-        if (betadine) {  
-          t = t + "prepped with Betadine and ";
+        switch(betadine) {
+          case "betadine":
+            t = t + "prepped with Betadine and ";
+            break;
+          case "chlorhexidine":
+            t = t + "prepped with chlorhexidine and ";
+            break;
         }
         t = t + "draped sterilely and then ";
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
