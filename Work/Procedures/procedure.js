@@ -190,11 +190,12 @@ function underlineDiff(oldStr,newStr) {
   }
   for (let i = 0;i<oldStrArray.length; i++) {
     if (oldStrArray[oldStrArray.length-i] != newStr.charAt(newStr.length-i)) {
-      n = oldStrArray.length - i;
+      n = newStr.length - i;
     break;
     }
   }
   console.log(m,n);
+  console.log(newStr.length);
   let t22 = newStr.slice(0,m)+"<u>"+newStr.slice(m,n)+ "</u>"+newStr.slice(n);
   console.log('t22 = ',t22);
   return(t22);
