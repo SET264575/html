@@ -14,6 +14,7 @@ Changes:
 location as options
 procedure list float near cursor
 procdedure list as buttons
+capitalize first words
 
 Check:
 Thoracentesis
