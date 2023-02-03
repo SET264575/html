@@ -175,8 +175,10 @@ function displayText(t) {
 }
 
 function underlineDiff(oldStr,newStr) {
-  oldStr = oldStr.replaceAll('<u>');
-  oldStr = oldStr.replaceAll('</u>');
+  console.log(oldStr);
+  console.log("newStr = ",newStr);
+  oldStr = oldStr.replaceAll('<u>','');
+  oldStr = oldStr.replaceAll('</u>','');
   let m=0;
   let n=0;
   let oldStrArray = oldStr.split('');
@@ -192,7 +194,10 @@ function underlineDiff(oldStr,newStr) {
     break;
     }
   }
-  return(newStr.slice(0,m)+"<u>"+newStr.slice(m,n)+ "</u>"+newStr.slice(n));
+  console.log(m,n);
+  let t22 = newStr.slice(0,m)+"<u>"+newStr.slice(m,n)+ "</u>"+newStr.slice(n);
+  console.log('t22 = ',t22);
+  return(t22);
 }
 
 //load fragments
