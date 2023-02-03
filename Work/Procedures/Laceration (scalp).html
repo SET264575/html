@@ -30,6 +30,7 @@
       <input type="radio" id = "location4" name = "location" onchange="copytext()">
       <label for = "location4">Occipital Scalp</label><br><br>
 
+      <div id="div_woundpreparation"></div>
       <div id="div_anesthetic"></div>
 
       <h4>Staples</h4>
@@ -63,6 +64,7 @@
       header();
       consent();
       wounddescription();
+      woundpreparation();
       anesthetic();
     </script>
     
@@ -76,14 +78,24 @@
         if (location != "Vertex") {
           location = side + " " + location;
         }
+        var betadine = getValue('betadine');
+        var irrigated = getValue('irrigated');
         var anesthetic = getValue("anesthetic");
         var volume = getValue("volume");
         var suture_count = getValue("suture_count");
         var t = "";
         t = "Procedure Note:  Laceration repair of the "+ location+"\n";
         t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location.toLowerCase()+" was ";
+        switch(betadine) {
+          case "betadine":
+            t = t + "prepped with Betadine and ";
+            break;
+          case "chlorhexidine":
+            t = t + "prepped with chlorhexidine and ";
+            break;
+        }
         t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
-        t = t + "The wound was irrigated thoroughly with normal saline. ";
+        t = t + "The wound was "+ irrigated +" thoroughly with normal saline. ";
         t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
         t = t + "The wound was closed with " + suture_count + " " + " staples.  ";
         t = t + "The patient tolerated the procedure well.  There were no complications."
