@@ -190,7 +190,7 @@ function underlineDiff(oldStr,newStr) {
   }
   for (let i = 0;i<oldStrArray.length; i++) {
     if (oldStrArray[oldStrArray.length-i] != newStr.charAt(newStr.length-i)) {
-      n = i;
+      n = oldStrArray.length - i;
     break;
     }
   }
