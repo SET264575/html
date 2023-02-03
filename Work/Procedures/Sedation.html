@@ -92,8 +92,11 @@ The patient [did/did not] tolerate p.o.
         <option value = "19">19 mg</option>
         <option value = "20">20 mg</option>
       </select><br><br>
+      
+      Intraservice time:<br>
+      <input type="text" onchange="copytext()" id = "intraservice">
     </div>
-    
+   
     <footer>
       <div class="dateChanged">12/6/22</div>
       <div class="tested">Works</div>
@@ -115,6 +118,7 @@ The patient [did/did not] tolerate p.o.
         var consent = getValue('consent');
         var npo_time = getValue("npo_time");
         var dose = getValue("dose");
+        var intraservice = get("intraservice");
         var t = "";
         t = "Procedure Note:  Conscious sedation\n";
         t = t + "Conscious sedation was indicated for "+indication+". ";
@@ -124,7 +128,7 @@ The patient [did/did not] tolerate p.o.
         t = t + "Airway management equipment and suctioning were readily available. "
         t = t + "Adequate sedation was achieved with the administration of " + dose + " mg of etomidate. ";
         t = t + "The patient was continuously monitored until they were alert. ";
-        t = t + "The patient tolerated the procedure well.  There were no complications."
+        t = t + "The patient tolerated the procedure well.  There were no complications. Intraservice time was "+intraservice + " minutes.";
 
         displayText(t);
       }
