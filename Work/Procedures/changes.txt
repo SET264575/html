@@ -1,0 +1,10 @@
+Procedures added:
+earring removal - Angela M
+subcutaenous foreign body removal - Gerrard
+
+Procedures changed:
+Rachel:
+  lacerateion
+  scalp laceration
+  lip laceration
+  finger laceration
