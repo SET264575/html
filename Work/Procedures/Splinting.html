@@ -15,7 +15,7 @@
       
       <div id = "div_side"></div>
 
-      <input type="radio" id= 'splint1' value = '1' name = 'splint' onchange = 'copytext()'><label for = 'splint1'>coaptation splint</label><br>
+      <input type="radio" id= 'splint1' value = '1' name = 'splint' checked onchange = 'copytext()'><label for = 'splint1'>coaptation splint</label><br>
       <input type="radio"  id= 'splint2' value = '2' name = 'splint' onchange = 'copytext()'><label for = 'splint2'>hinged knee brace</label><br>
       <input  type="radio" id= 'splint3' value = '3' name = 'splint' onchange = 'copytext()'><label for = 'splint3'>hinged knee brace locked in extension</label><br>
       <input  type="radio" id= 'splint4' value = '4' name = 'splint' onchange = 'copytext()'><label for = 'splint4'>knee immobilizer</label><br>
@@ -99,7 +99,7 @@
         var t = "";
         
         // t = t + digitalblock(); 
-        t = t + "Procedure Note: "+typeOfSplint+" Placement \n";
+        t = t + "Procedure Note: "+typeOfSplint[i]+" Placement \n";
         switch (supervised) {
           case "1":
             t = t + "I personally applied a "+ splint[i] + " on the " + side + " " + extremity[i] + ". ";
