@@ -188,7 +188,7 @@ function underlineDiff(oldStr,newStr) {
   }
   for (let i = 1;i<oldStrArray.length; i++) {
     if (oldStrArray[oldStrArray.length-i] != newStr.charAt(newStr.length-i)) {
-      n = newStr.length - i;
+      n = newStr.length - i+1;
     break;
     }
   }
