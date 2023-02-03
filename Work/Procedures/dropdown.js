@@ -185,26 +185,29 @@ for (let i = 0; i<symptomlist.length; i++) {
 }
 document.getElementById('location_list').innerHTML = t;
 console.log(t);
+
 const input = document.getElementById('location');
 input.addEventListener('keyup',(event) => {
 	console.log(event.keyCode);
-	if (event.keyCode === 13) {
-		let prefix = document.getElementById('location').value;
-		let elm = document.getElementById('location_list').firstElementChild;
-		let count = 0;
-		let q = "";
-		while (elm) {
-			if (elm.value.startsWith(prefix)) {
-				count++;
-				q = elm.value;
+	if (document.getElementById('useExact').checked == false) {
+		if (event.keyCode === 13) {
+			let prefix = document.getElementById('location').value;
+			let elm = document.getElementById('location_list').firstElementChild;
+			let count = 0;
+			let q = "";
+			while (elm) {
+				if (elm.value.startsWith(prefix)) {
+					count++;
+					q = elm.value;
+				}
+
+				elm = elm.nextElementSibling;
 			}
-		
-			elm = elm.nextElementSibling;
-		}
-		if (count == 1) {
-			document.getElementById('location').value = dict[q];
-			//selected.push(dict[q]);
-			//document.getElementById('selected').innerHTML = document.getElementById('selected').innerHTML + '\n'+dict[q];
+			if (count == 1) {
+				document.getElementById('location').value = dict[q];
+				//selected.push(dict[q]);
+				//document.getElementById('selected').innerHTML = document.getElementById('selected').innerHTML + '\n'+dict[q];
+			}
 		}
 	}
 });
