@@ -12,33 +12,32 @@
 
     <div class="main">
       <h3>Splint</h3>
-
-      <h4>Location</h4>
       
       <div id = "div_side"></div>
-      <input type="radio" id = "location1" name = "location" onchange="copytext()">
-      <label for = "location1">Ankle</label><br>
 
-      <input type="radio" id = "location1" name = "location" onchange="copytext()">
-      <label for = "location1">Forearm</label>
-            
-      <input type="radio" id = "location1" name = "location" onchange="copytext()">
-      <label for = "location1">Lower Leg</label>
-            
-      <input type="radio" id = "location1" name = "location" onchange="copytext()">
-      <label for = "location1">Upper Arm</label>
-            
-      <input type="radio" id = "location1" name = "location" onchange="copytext()">
-      <label for = "location1">Wrist</label>
+      <input id= 'splint1' value = '1' name = 'splint' onchange = 'copytext()'><label for = 'splint1'>coaptation splint</label>
+      <input id= 'splint2' value = '2' name = 'splint' onchange = 'copytext()'><label for = 'splint2'>hinged knee brace</label>
+      <input id= 'splint3' value = '3' name = 'splint' onchange = 'copytext()'><label for = 'splint3'>hinged knee brace locked in extension</label>
+      <input id= 'splint4' value = '4' name = 'splint' onchange = 'copytext()'><label for = 'splint4'>knee immobilizer</label>
+      <input id= 'splint5' value = '5' name = 'splint' onchange = 'copytext()'><label for = 'splint5'>long leg 3 way (sugar tong and posterior splint)</label>
+      <input id= 'splint6' value = '6' name = 'splint' onchange = 'copytext()'><label for = 'splint6'>posterior long arm</label>
+      <input id= 'splint7' value = '7' name = 'splint' onchange = 'copytext()'><label for = 'splint7'>short leg 3 way</label>
+      <input id= 'splint8' value = '8' name = 'splint' onchange = 'copytext()'><label for = 'splint8'>short leg posterior splint</label>
+      <input id= 'splint9' value = '9' name = 'splint' onchange = 'copytext()'><label for = 'splint9'>sling</label>
+      <input id= 'splint10' value = '10' name = 'splint' onchange = 'copytext()'><label for = 'splint10'>sugar tong splint</label>
+      <input id= 'splint11' value = '11' name = 'splint' onchange = 'copytext()'><label for = 'splint11'>thumb spica splint</label>
+      <input id= 'splint12' value = '12' name = 'splint' onchange = 'copytext()'><label for = 'splint12'>ulnar gutter splint</label>
+      <input id= 'splint13' value = '13' name = 'splint' onchange = 'copytext()'><label for = 'splint13'>volar splint</label>
+      <input id= 'splint14' value = '14' name = 'splint' onchange = 'copytext()'><label for = 'splint14'>volar/dorsal</label>
+      <input id= 'splint15' value = '15' name = 'splint' onchange = 'copytext()'><label for = 'splint15'>velcro thumb spica splint</label>
+      <input id= 'splint16' value = '16' name = 'splint' onchange = 'copytext()'><label for = 'splint16'>velcro wrist splint</label>
+      <input id= 'splint17' value = '17' name = 'splint' onchange = 'copytext()'><label for = 'splint17'>walking boot</label>
 
-      <h4>Type of Splint</h4>
-      <input type = "radio" id = "splint1" name = "splint" onchange = "copytext()">
-      <labe for = "splint1">Ulnar gutter</label><br>
       
     </div>
     
     <div class = "note">
-    <div class="risks">
+    <!--div class="risks">
       <div class="risk_header">
         Risks, Benefits and Alternatives
       </div>
@@ -65,7 +64,7 @@
         <pre>
         transfer to the University - expected to take too long
         </pre>
-      </div>
+      </div-->
     </div>
     
     <footer>
@@ -78,42 +77,24 @@
     <script src = "procedure.js"></script>
     <script>
       header();
-      consent('verbal');
-      risks();
-      sedation();
       side();
-      anesthetic();
     </script>
   
     <script>
       function copytext(){
-        var indication = getValue("indication");
-        var consent = getValue("consent");
-        var sedation = getValue("sedation");
-        var anesthetic = getValue("anesthetic");
-        var volume = getValue('volume');
         var side = getValue("side");
+        let splint = ['coaptation splint','hinged knee brace','hinged knee brace locked in extension','knee immobilizer','long leg 3 way (sugar tong and posterior splint)','posterior long arm','short leg 3 way','short leg posterior splint','sling','sugar tong splint','thumb spica splint','ulnar gutter splint','velcro thumb spica splint', 'velcro wrist splint','volar splint','volar/dorsal','walking boot'];
+
+        let type = ['Splint','Brace','Brace','Knee Immobilizer','Splint','Splint','Splint','Splint','Sling','Splint','Splint','Splint','Splint','Splint','Splint','Splint','Boot'];
+
+        let extremity = ['arm','leg','leg','leg','leg','arm','leg','leg','arm','arm','arm','arm','wrist','wrist','arm','arm','leg'];
+
         var t = "";
         
         // t = t + digitalblock(); 
-        t = t + "Procedure Note: *** \n";
-        
-        t = t + "The procedure was indicated for ";
-        switch(indication){
-          case "1":
-            t = t + "respiratory. ";
-            break;
-          case "2":
-            t = t + "airway. ";
-            break;
-        }
-
-        t = t + consent;
-
-        t = t + sedationText();
- 
-        t = t + "infiltrated with " + volume + " mL of " + anesthetic + ". ";
-        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+        t = t + "Procedure Note: "+type+" Placement \n";
+        t = t + "A " + splint + " was placed on the " + side + " " + extremity + ". ";
+        t = t + "My re-examination after it was placed showed good alignment and the neurovascular exam was unchanged. ";
 
         displayText(t);
         
