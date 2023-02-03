@@ -166,12 +166,34 @@ function displayText(t) {
  // t = "<b>"+t+"</b>";
   t = formatText(t);
   //navigator.clipboard.writeText(t);
-  document.getElementById('text').innerHTML = t;
+  let oldStr = document.getElementById('text').innerHTML;
+  let t1 = underlineDiff(oldStr,t);
+  document.getElementById('text').innerHTML = t1;
   t = "<div style='font-size: .8em'>"+t+"</div>";
   copyFormatted(t); 
  // document.getElementById('text').value = t;
 }
 
+function underlineDiff(oldStr,newStr) {
+  oldStr = oldStr.replaceAll('<u>');
+  oldStr = oldStr.replaceAll('</u>');
+  let m=0;
+  let n=0;
+  let oldStrArray = oldStr.split('');
+  for (let i = 0;i<oldStrArray.length; i++) {
+    if (oldStrArray[i] != newStr.charAt(i)) {
+      m = i;
+    break;
+    }
+  }
+  for (let i = 0;i<oldStrArray.length; i++) {
+    if (oldStrArray[oldStrArray.length-i] != newStr.charAt(newStr.length-i)) {
+      n = i;
+    break;
+    }
+  }
+  return(newStr.slice(0,m)+"<u>"+newStr(m,n)+"</u>"+newStr(n));
+}
 
 //load fragments
 function load(tag) {
