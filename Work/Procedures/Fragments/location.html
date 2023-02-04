@@ -1,6 +1,10 @@
-
+<input type="checkbox" id = "useExact">Use location exactly as entered<br>
 <label for = "location">Location</label><br>
-<input type="text" id = "location" onchange="copytext()"><br><br>
+<input type="text" id = "location" list="location_list" onchange="copytext()"><br><br>
+
+<datalist id="location_list">
+</datalist>
+<script src="dropdown.js"></script>
 
 <!--
 <label for = "location">Location</label><br>
@@ -9,6 +13,8 @@
 
 <datalist id="location_list">
 </datalist>
+<input type="checkbox" id = "useExact" onchange="copytext()">Use location exactly as entered
 
 <script src="..\dropdown.js"></script>
+
 -->
