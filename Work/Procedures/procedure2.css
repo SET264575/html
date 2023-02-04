@@ -252,4 +252,9 @@ content: 'Anesthetic';
 .wounddescription::before {
 content: 'Wound Description';
 }
-
+.consent::before {
+content: 'Consent';
+}
+.woundpreparation::before {
+content: 'Wound Preparation';
+}
