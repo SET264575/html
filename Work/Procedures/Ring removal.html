@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Ring removal</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id="div_header"></div>
+    
+    <div class="main">
+      <h3>Ring removal</h3>
+      
+      <div class="boxed" value = "Indication">
+      </div>
+
+      <div id="consent"></div>
+      <div class="boxed" value= "Ring description">
+      </div>
+
+      <div class="boxed" value = "Location">
+      <div id = "div_side"></div>
+      <div id = "div_finger"></div>
+      </div>
+      
+      <!--label for = "location">Location</label>
+      <input type = "text" id = "location" onchange="copytext()"-->
+
+      <div class="boxed" value = "Technique">
+      </div>
+
+
+    </div>
+    
+    <footer>
+      <div class="dateChanged">1/1/23</div>
+      <div class="tested">Not tested</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('verbal');
+      finger();
+      side();
+      wounddescription();
+      woundpreparation();
+      contamination();
+      digitalblockorlocal();
+      sutures(5);
+    </script>  
+    
+    <script>
+      function copytext(){
+        var wound_length = getValue("length");
+        var description = getValue("description");
+        var side = getValue('side');
+        var finger = getValue('finger');
+        var location = getValue("location");
+        var anestheticTechnique = getValue('anesthetic technique');
+        var anesthetic = getValue("anesthetic");
+        var suture_size = getValue("suture_size");
+        var suture_type = getValue("suture_type");
+        var volume = getValue("volume");
+        var suture_count = getValue("suture_count");
+        var suture_style = getValue("suture_style");
+        var bpcuff = getValue("bpcuff");
+        var tournicot = getValue("tournicot");
+        var skinhooks = getValue("skinhooks");
+        var contamination = getValue('contamination');
+        var tendon = getValue("tendon");
+        var betadine = getValue("betadine");
+        var clean = getValue('clean');
+        var splint = getValue('splint');
+        var t = "";
+        
+        if (anestheticTechnique) {
+          t = t + digitalBlockText();
+        }
+        
+        t = "Procedure Note:  " + side + " " + finger + " Finger Laceration Repair\n";
+        t = t + "The area around the " + wound_length + " cm " + description + " laceration was ";
+        switch(betadine) {
+          case "betadine":
+            t = t + "prepped with Betadine and ";
+            break;
+          case "chlorhexidine":
+            t = t + "prepped with chlorhexidine and ";
+            break;
+        }
+        t = t + "draped sterilely" ;
+        
+        if (anestheticTechnique) {
+          t = t + ". A digital block was performed to achieve adequate anesthesia. ";
+        }
+        else {
+          t = t + " and then infiltrated with "+volume +" cc of "+ anesthetic + ". ";
+        }
+        t = t + "The wound was " + clean + " thoroughly with normal saline. ";
+        if (bpcuff) {
+          t = t + "A blood pressure cuff was used to help control bleeding. ";
+        }
+        if (tournicot) {
+          t = t + "A tournicot was used to control bleeding. ";
+        }
+        t = t + "The wound was explored ";
+        if (skinhooks) {
+          t = t + "using skinhooks ";
+        }
+        t = t + "in a bloodless field. ";
+        t  = t + contamination;
+        switch(tendon) {
+          case 0:
+            t = t + " Careful exploration to the bottom of the wound in a bloodless field found no exposed tendon. ";
+            break;
+          case 1:
+            t = t + " Exposed tendons were visualized through a full range of motion in a bloodless field and no injury was found.  ";
+            break;
+          case 2:
+            t = t + " Exposed tendons were visualized through a full range of motion in a bloodless field and an injury was found.  ";
+            break;
+        }
+        
+        t = t + "The wound was closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
+        if (splint) {
+          t = t + "An alumifoam splint was applied for protection of the wound. ";
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        displayText(t);
+      }
+
+    </script>
+  </body>
+</html>
