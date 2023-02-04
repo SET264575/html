@@ -11,13 +11,15 @@ Rachel:
 
 
 Changes:
-location as options
+*location as options
 procedure list float near cursor
 procdedure list as buttons
-capitalize first words
+*capitalize first words
 
 Check:
 Thoracentesis
 Sedation
 Splinting
-
+Burn
+Compartment
+Lip lac - mental block
