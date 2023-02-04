@@ -258,3 +258,6 @@ content: 'Consent';
 .woundpreparation::before {
 content: 'Wound Preparation';
 }
+.sutures::before {
+content: 'Sutures';
+}
