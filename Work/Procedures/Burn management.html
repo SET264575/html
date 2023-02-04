@@ -13,7 +13,7 @@
     <div class="main">
       <h3>Burn Management</h3>
 
-      <h4>Burn Description</h4>
+      <div class="boxed" value ="Burn Description">
       Thickness<br>
       <input type="radio" id="degree2" value = "Superficial Partial-thickness" name = "degree" onchange = "copytext()">
       <label for="degree2">Superficial Partial-thickness</label><br>
@@ -27,24 +27,27 @@
       <label for = "percent">Percent BSA</label>
       <input type="text" id="percent" onchange = "copytext()">%<br><br>
                   
-      <h4>Technique</h4>
-      <input type="checkbox" id = "deroofed" onchange = "copytext()">
-      <label for = "deroofed">Blister was deroofed.</label><br>
+      </div>
       
-      <input type="checkbox" id = "irrigated" onchange = "copytext()">
-      <label for = "irrigated">The wound was irrigated.</label><br>
+      <div class="boxed" value="Technique">
+        <input type="checkbox" id = "deroofed" onchange = "copytext()">
+        <label for = "deroofed">Blister was deroofed.</label><br>
 
-      <input type="checkbox" id = "contamination" onchange = "copytext()">
-      <label for = "contamination">Particulate contamination was removed.</label><br>
-      
-      <h4>Dressing</h4>
-      <input type="radio" id="dressing1" name = "dressing" onchange = "copytext()">
-      <label for="dressing1">silver sulfazidine and dry gauze</label><br>
-      <input type="radio" id="dressing2" name = "dressing" onchange = "copytext()">
-      <label for="dressing2">bacitracin and dry gauze</label><br>
-      <input type="radio" id="dressing3" name = "dressing" onchange = "copytext()">
-      <label for="dressing3">mupirocin and dry gauze</label><br><br>
+        <input type="checkbox" id = "irrigated" onchange = "copytext()">
+        <label for = "irrigated">The wound was irrigated.</label><br>
 
+        <input type="checkbox" id = "contamination" onchange = "copytext()">
+        <label for = "contamination">Particulate contamination was removed.</label><br>
+
+        <h4>Dressing</h4>
+        <input type="radio" id="dressing1" name = "dressing" onchange = "copytext()">
+        <label for="dressing1">silver sulfazidine and dry gauze</label><br>
+        <input type="radio" id="dressing2" name = "dressing" onchange = "copytext()">
+        <label for="dressing2">bacitracin and dry gauze</label><br>
+        <input type="radio" id="dressing3" name = "dressing" onchange = "copytext()">
+        <label for="dressing3">mupirocin and dry gauze</label><br><br>
+
+      </div>
     </div>
     
     <div class = "note">
