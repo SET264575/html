@@ -228,35 +228,21 @@ footer {
 }
 
 .boxed {
-border: 1px solid black;
-z-index: 0;
-margin: 20px;
-padding: 20px;
+  border: 1px solid black;
+  z-index: 0;
+  margin: 20px;
+  padding: 20px;
 }
 
 .boxed::before {
-position: relative;
-font-weight: bold;
-top: -30px;
-left: 30px;
-z-index: 1;
-opacity: 100%;
-min-width: 500px;
-background-color: white;
+  content: attr(value);
+  position: relative;
+  font-weight: bold;
+  top: -30px;
+  left: 30px;
+  z-index: 1;
+  opacity: 100%;
+  min-width: 500px;
+  background-color: white;
 }
 
-.anesthetic::before {
-content: 'Anesthetic';
-}
-.wounddescription::before {
-content: 'Wound Description';
-}
-.consent::before {
-content: 'Consent';
-}
-.woundpreparation::before {
-content: 'Wound Preparation';
-}
-.sutures::before {
-content: 'Sutures';
-}
