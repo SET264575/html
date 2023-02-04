@@ -9,21 +9,36 @@
   
   <body>
     <div class="div_header" id= "div_header"></div>
+    
     <div class="main">
       <h3>Compartment pressures</h3>
       <!--table style = "width: 1000px">
         <td style="width: 500px"-->
-          <div id = "div_consent"></div>
+          
+      <div id = "div_consent"></div>
+      <div class="boxed" value = "Location">
           <div id="div_side"></div>
+        <b>Extremity</b>
+        <input type="radio" value="Lower Leg" id = "extremity1" checked name="extremity" onchange="copytext()">
+        <label for="extremity1">Lower Leg</label><br>
+                
+        <input type="radio" value="Forearm" id = "extremity2" name="extremity" onchange="copytext()">
+        <label for="extremity2">Forearm</label><br>
+      
+      </div>
         <!--/td>
         <td style="width:500px"-->
-          <div id="div_anesthetic"></div>
+          
+      <div id="div_anesthetic"></div>
 
-          <h4>Locations</h4>
+          
+      <div class="boxed" value = "Compartments measured">
           <input type = "checkbox" id = "compartment1" onchange = "copytext()"><label for = "compartment1">Anterior</label><br>
           <input type = "checkbox" id = "compartment2" onchange = "copytext()"><label for = "compartment2">Lateral</label><br>
           <input type = "checkbox" id = "compartment3" onchange = "copytext()"><label for = "compartment3">Posterior superficial</label><br>
           <input type = "checkbox" id = "compartment4" onchange = "copytext()"><label for = "compartment4">Posterior deep</label><br>
+      
+      </div>
         <!--/td>
       </table-->
       <div class="note">
@@ -51,6 +66,7 @@
         var indication = getValue("indication");
         var consent = getValue("consent");
         var side = getValue('side');
+        var extremity = getValue('extremity');
         var anesthetic = getValue('anesthetic');
         var volume = getValue('volume');
         var location1 = getValue("compartment1");
@@ -58,15 +74,15 @@
         var location3 = getValue("compartment3");
         var location4 = getValue("compartment4");
         
-        var t = "Procedure Note: Measurement of " + side + " Lower Leg Compartment Pressures\n";
+        var t = "Procedure Note: Measurement of " + side + " "+extremty+ " Pressures\n";
         
         t = t + "The procedure was indicated to rule out compartment syndrome. ";
 
         t = t + consent;
         
-        t = t + "The skin of the " + side.toLowerCase() + " lower leg was prepped with chlorhexidine. ";
+        t = t + "The skin of the " + side.toLowerCase() + " " + extremity.toLowerCase() + " was prepped with chlorhexidine. ";
         t = t + "The puncture sites were anesthetized with a total of " + volume + " cc of " + anesthetic +". ";
-        t = t + "Compartment pressues were measured with the Stryker. \n\n";
+        t = t + "Compartment pressues were measured with the Stryker pressure transducer. \n\n";
         t = t + "Findings: \n";
         if (location1) {
           t = t + "Anterior compartment: [pressure] cm H2O\n";
