@@ -195,6 +195,23 @@ function underlineDiff(oldStr,newStr) {
   return(newStr.slice(0,m)+"<u>"+newStr.slice(m,n)+ "</u>"+newStr.slice(n));
 }
 
+function capitalizeFirstWords(t) {
+  let x = t.split(' ');
+  if (x[0] != '') {
+    t=x[0][0].toUpperCase()+x[0].slice(1);
+  }
+  else {
+    t = "";
+  }
+  for (let i = 1; i <x.length; i++) {
+    if (x[i] != '') {
+      x[i] = x[i][0].toUpperCase()+x[i].slice(1);
+      t = t + " "+x[i];
+    }
+  }
+  return(t);
+}
+
 //load fragments
 function load(tag) {
   $(document).ready(function(){
