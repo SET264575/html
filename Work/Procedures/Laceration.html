@@ -81,7 +81,7 @@
         var clean = getValue('clean');
         var t = "";
         t = "Procedure Note:  Laceration Repair on the "+location+"\n";
-        t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" was ";
+        t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location.toLowerCase()+" was ";
         switch(betadine) {
           case "betadine":
             t = t + "prepped with Betadine and ";
