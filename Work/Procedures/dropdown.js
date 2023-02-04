@@ -192,7 +192,7 @@ input.addEventListener('keyup',(event) => {
 				elm = elm.nextElementSibling;
 			}
 			if (count == 1) {
-				document.getElementById('location').value = dict[q];
+				document.getElementById('location').value = capitalizeFirstWords(dict[q]);
 				//selected.push(dict[q]);
 				//document.getElementById('selected').innerHTML = document.getElementById('selected').innerHTML + '\n'+dict[q];
 			}
