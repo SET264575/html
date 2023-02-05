@@ -14,27 +14,22 @@
       G tube reinsertion
       </h3>
 
-      <h4>Indication<star></h4>
+      <div class="boxed" value = "Indication">
       <input type = "radio" name = "indication" value = "0" id = "indication0" onchange = "copytext()">
       <label for = "indication0">dislodged G tube</label><br>
       <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
       <label for = "indication1">clogged G tube</label><br>
       <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
-      <label for = "indication2">broken G tube</label><br>
-  <br>
+      <label for = "indication2">broken G tube</label>
+    </div>
+    
 
-      <h4>Consent<star></h4>
-      <input type = "radio" name = "consent" value = "0" id = "consent" onchange = "copytext()">
-      <label for = "0">Due to the patient's critical condition, consent could not be obtained.</label><br>
-      <input type = "radio" name = "consent" checked value = "1" id = "consent" onchange = "copytext()">
-      <label for = "1">The patient provided verbal consent for the procedure.</label><br>
-      <input type = "radio" name = "consent" value = "2" id = "consent" onchange = "copytext()">
-      <label for = "2">The risks, benefits and alternatives were discussed with the patient who provided written consent.</label><br>
-  <br>
+    <div id="div_consent"></div>
 
 
 
 
+    <div class="boxed" value = "Tube Description">
       <h4>Size<star></h4>
       <input type = "radio" name = "size" value = "14f" id = "size1" onchange = "copytext()">
       <label for = "size1">14 Fr</label><br>
@@ -49,24 +44,26 @@
       <input type = "radio" name = "size" value = "24f" id = "size4" onchange = "copytext()">
       <label for = "size4">24 Fr</label><br><br>
 
-      <h4>Volume<star></h4>
+      <h4>Volume</h4>
       <input type = "radio" name = "volume" value = "10 cc" id = "volume3" onchange = "copytext()">
       <label for = "volumen3">10 cc</label><br>
       <input type = "radio" name = "volume" value = "[volume]" id = "volume4" onchange = "copytext()">
       <label for = "volume4">[volume]</label><br><br>
 
-      <h4>Fluid type<star></h4>
+      <h4>Fluid type</h4>
       <input type = "radio" name = "fluid" value = "water" id = "fluid3" onchange = "copytext()">
       <label for = "fluidn3">water</label><br>
       <input type = "radio" name = "fluid" value = "normal saline" id = "fluid4" onchange = "copytext()">
       <label for = "fluid4">normal saline</label><br><br>
+        
+        </div>
 
 
-      <h4>Confirmation<star></h4>
+      <div class="boxed" value="Confirmation">
       <input type = "radio" name = "confirm" value = "aspiration of stomach contents" id = "confirm3" onchange = "copytext()">
       <label for = "confirmn3">aspiration</label><br>
       <input type = "radio" name = "confirm" value = "KUB with Gastrograffin" id = "confirm4" onchange = "copytext()">
-      <label for = "confirm4">imaging</label><br><br>
+      <label for = "confirm4">imaging</label>
       </div>
     
     <footer>
@@ -76,12 +73,12 @@
      </footer>
                                                
                             
-    
-    <script>
-      function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
-      }
-    </script>
+
+        <script src="procedure.js"></script>
+        <script>
+          header();
+          consent();
+        </script>
   
     <script>
       function copytext(){
@@ -122,34 +119,12 @@
             t = t + "The risks, benefits and alternatives were discussed with the patient who provided written consent for the procedure. ";
             break;
         }
-
-       /* switch(sedation){
-          case "0":
-            t = t + "The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.";
-            break;
-          case "1":
-            t = t + "The patient did not require sedation due to their mental status and paralyzed with 150 mg of succinylcholine.";
-            break;
-          case "2":
-            t = t + "The patient did not require sedation or paralysis.";
-            break;
-        } */
         t = t + "A " + size + " G tube was lubricated and gently inserted into the stoma.  The balloon was inflated with " + volume + " cc of "+fluid + ". ";
         t = t + "Placement was confirmed by "+confirm + ". ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
-        if (indication && consent && size && volume && confirm) {
-          navigator.clipboard.writeText(t);
-          document.getElementById("text").value = t;
-        }
-      }
-      function getRadioButtonValue(name){
-        var ele = document.getElementsByName(name);
-        for (let i = 0; i < ele.length; i++){
-          if (ele[i].checked){
-            return(ele[i].value);
-          }
-        }
-        return(false);
+
+        displayText(t);
+        
       }
     </script>
   </body>
