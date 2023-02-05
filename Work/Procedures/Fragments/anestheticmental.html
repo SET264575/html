@@ -1,4 +1,33 @@
-      
-      <div id="div_anesthetic"></div>
+<div class="boxed" value="Anesthetic">
+
+<table style="width: 800">
+  <td style="width: 50%;  vertical-align: top;">
+    <b>Type of anesthetic</b>
+    <input type = "radio" id = "anesthetic1" value = "1% lidocaine" name = "anesthetic" onchange = "copytext()">
+    <label for = "anesthetic1">1% lidocaine</label><br>
+    <input type = "radio" id = "anesthetic2" value = "1% lidocaine with epinephrine"  name = "anesthetic" onchange = "copytext()">
+    <label for = "anesthetic2">1% lidocaine with epinephrine</label><br>
+    <input type = "radio" id = "anesthetic3"  value = "2% lidocaine"  name = "anesthetic" onchange = "copytext()">
+    <label for = "anesthetic3">2% lidocaine</label><br>
+    <input type = "radio" id = "anesthetic4"  value = "2% lidocaine with epinephrine"  name = "anesthetic" onchange = "copytext()">
+    <label for = "anesthetic4">2% lidocaine with epinephrine</label>
+  </td>
+  <td style="width: 50%; vertical-align: top;">
+    <label for="volume"><b>Volume</b></label><br><br>
+    <select id = "volume" onchange="copytext()">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+  </td>
+</table>
 
       <input type = "checkbox" id = "mental" onchange ="copytext()">A mental block was used.</input>
+</div>
