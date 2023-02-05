@@ -22,10 +22,11 @@
 
       <input type = "checkbox" id = "anesthetic" onchange="copytext()">Lidocaine was used<br>
 
+     
         <div id="div_location"></div>
 
       <div class="boxed" value="Technique">
-      <input type = "radio" name = "technique" value = "0" id = "technique1" onchange = "copytext()">
+      <input type = "radio" name = "technique" value = "4" id = "technique1" onchange = "copytext()">
       <label for = "technique1">pushing the hook through and cutting off the barb</label><br>
       <input type = "radio" name = "technique" value = "1" id = "technique2" onchange = "copytext()">
       <label for = "technique2">jerking the hook out with a string</label><br>
@@ -68,7 +69,7 @@
         }
         t = t + "The fishhook was removed by ";
         switch (technique) {
-          case "0":
+          case "4":
             t = t + "pushing the barb through the skin, cutting the barb off and then pulling the hook back through the skin. ";
             break;
           case "1":
