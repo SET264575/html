@@ -43,16 +43,21 @@ The patient [did/did not] tolerate p.o.
     <div class="main">
       <h3>Conscious Sedation</h3>
 
-      <label for="indication"><b>Indication</b></label><br>
+     <div class="boxed" value="Indication">
+       
       <select id = "indication" onchange = "copytext()">
-        <option value = "joint reduction">joint reduction</option>
-        <option value = "fracture reduction">fracture reduction</option>
-        <option value = "electrical cardioversion">electrical cardioversion</option>
-      </select><br><br>
+        <input type="radio" id='indication1' name='indication' value='1' onchange='copytext()'>
+        <label for ='indication1'>Joint Reduction</label><br>
+        <input type="radio" id='indication2' name='indication' value='2' onchange='copytext()'>
+        <label for ='indication2'>Fracture Reduction</label><br>
+        <input type="radio" id='indication3' name='indication' value='3' onchange='copytext()'>
+        <label for ='indication3'>Electrical Cardioversion</label><br>
+      </div>
 
 
       <div id="div_consent"></div>
 
+       <div class="block" value = "Patient Assessment">
       <label for = "npo_time"><b>Hours that patient had been NPO</b></label><br>
       <select id = "npo_time" onchange = "copytext()">
         <option value = "1">1</option>
@@ -67,9 +72,28 @@ The patient [did/did not] tolerate p.o.
         <option value = "10">10</option>
         <option value = "11">11</option>
         <option value = "12">12</option>
-      </select><br><br>
+      </select>
+       </div>
 
-      <label for = "dose"><b>Dose of Etomidate</b></label><br>
+       <div class="boxed" value = "Technique">
+         <b>Drug Used</b><br>
+         <input type="radio" id="drug1" name = "drug" value = "1" onchange = "copytext()">
+         <label for = "drug1">Etomidate</label><br>
+                  
+         <input type="radio" id="drug2" name = "drug" value = "2" onchange = "copytext()">
+         <label for = "drug2">Ketamine</label><br>
+                  
+         <input type="radio" id="drug3" name = "drug" value = "3" onchange = "copytext()">
+         <label for = "drug3">Propofol</label><br>
+                  
+         <input type="radio" id="drug4" name = "drug" value = "4" onchange = "copytext()">
+         <label for = "drug4">Versed</label><br>
+                  
+         <input type="radio" id="drug5" name = "drug" value = "5" onchange = "copytext()">
+         <label for = "drug5">[Other drug]</label><br>
+       </div>
+       
+      <label for = "dose"><b>Dose</b></label><br>
       <select id = "dose" onchange = "copytext()">
         <option value = "1">1 mg</option>
         <option value = "2">2 mg</option>
@@ -94,8 +118,9 @@ The patient [did/did not] tolerate p.o.
       </select><br><br>
       
       Intraservice time:<br>
-      <input type="text" onchange="copytext()" id = "intraservice">
-      (Billing for sedation requests more than 16 minutes of intraservice time.)
+      <input type="text" onchange="copytext()" id = "intraservice"><br>
+      (Billing for sedation requires more than 16 minutes of intraservice time.)
+       </div>
     </div>
    <br><br>
     <div class="note">
@@ -118,19 +143,34 @@ The patient [did/did not] tolerate p.o.
     
     <script>
       function copytext(){
+        let drugName = ['','etomidate','ketamine','Propofol','Versed','[Other drug]'];
         var indication = getValue("indication");
         var consent = getValue('consent');
         var npo_time = getValue("npo_time");
+        var drug = getValue('drug');
         var dose = getValue("dose");
         var intraservice = getValue("intraservice");
         var t = "";
         t = "Procedure Note:  Conscious sedation\n";
-        t = t + "Conscious sedation was indicated for "+indication+". ";
+        t = t + "Conscious sedation was indicated for ";
+        
+        switch(indication) {
+          case "1":
+            t =t + "joint reduction";
+            break;
+          case "2":
+            t = t + "fracture reduction";
+            break;
+          case "3":
+            t =t + "electrical cardioversion";
+            break;
+        }
+        t = t +". ";
         t = t + consent;
         t = t + "The patient had been NPO for over "+npo_time+" hours. ";
         t = t + "Standard preparations were made according to the ER sedation policy, including capnography, cardiac monitoring, pulse oximetry and provision of supplemental oxygen. ";
         t = t + "Airway management equipment and suctioning were readily available. "
-        t = t + "Adequate sedation was achieved with the administration of " + dose + " mg of etomidate. ";
+        t = t + "Adequate sedation was achieved with the administration of " + dose + " mg of "+drugName[drug]+". ";
         t = t + "The patient was continuously monitored until they were alert. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. Intraservice time was "+intraservice + " minutes.";
 
