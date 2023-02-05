@@ -104,9 +104,9 @@ Thrombosis
         //var sedation = getRadioButtonValue("sedation");
         var side = getValue("side");
         var depth = getValue('depth');
-        var location = "internal jugular vein";
+        var location = "Internal Jugular Vein";
 
-        var t = "Procedure Note: Central line placement in the "+ side + " "+location +"\n";
+        var t = "Procedure Note: Central Line Placement in the "+ side + " "+location +"\n";
         
         t = t + "The procedure was indicated for ";
         switch(indication){
@@ -121,8 +121,8 @@ Thrombosis
         t = t + consent;
         t = t + "The patient was placed in Trendelenburg. Cardiac monitoring was performed throughout the procedure. ";
         t = t + "The patient was prepped and draped in the usual sterile fashion. ";
-        t = t + "Ultrasound guidance was used to visualize the " + side.toLowerCase() + " " + location + " and surrounding structures.  ";
-        t = t + "The IV catheter was placed using the Seldinger technique and secured to the skin with 2-0 silk suture at " + depth + ". ";
+        t = t + "Ultrasound guidance was used to visualize the " + side.toLowerCase() + " " + location.toLowerCase() + " and surrounding structures.  ";
+        t = t + "The IV catheter was placed using the Seldinger technique and secured to the skin with 2-0 silk suture at a depth of " + depth + "cm. ";
         t = t + "Proper location was confirmed with x-ray. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
