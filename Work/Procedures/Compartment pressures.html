@@ -18,7 +18,7 @@
       <div id = "div_consent"></div>
       <div class="boxed" value = "Location">
           <div id="div_side"></div>
-        <b>Extremity</b>
+        <b>Extremity</b><br>
         <input type="radio" value="Lower Leg" id = "extremity1" checked name="extremity" onchange="copytext()">
         <label for="extremity1">Lower Leg</label><br>
                 
@@ -39,10 +39,19 @@
           <input type = "checkbox" id = "compartment4" onchange = "copytext()"><label for = "compartment4">Posterior deep</label><br>
       
       </div>
+            
+      <div class="boxed" value = "Compartments measured">
+          <input type = "checkbox" id = "compartment5" onchange = "copytext()"><label for = "compartment5">Superficial Volar</label><br>
+          <input type = "checkbox" id = "compartment8" onchange = "copytext()"><label for = "compartment8">Deep Volar</label><br>
+          <input type = "checkbox" id = "compartment6" onchange = "copytext()"><label for = "compartment6">Dorsal</label><br>
+          <input type = "checkbox" id = "compartment7" onchange = "copytext()"><label for = "compartment7">Mobile Wad</label><br>
+      
+      </div>
         <!--/td>
       </table-->
       <div class="note">
-        <img src="Images/leg compartments.png" width="600" />
+        <img src="Images/leg compartments.png" width="600" /><br>
+        <img src="Images/forearm-compartments.webp" width="600" />
       </div>
     </div>
     
@@ -73,6 +82,11 @@
         var location2 = getValue("compartment2");
         var location3 = getValue("compartment3");
         var location4 = getValue("compartment4");
+                
+        var location5 = getValue("compartment5");
+        var location6 = getValue("compartment6");
+        var location7 = getValue("compartment7");
+        var location8 = getValue("compartment8");
         
         var t = "Procedure Note: Measurement of " + side + " "+extremty+ " Pressures\n";
         
@@ -95,6 +109,19 @@
         }
         if (location4) {
           t = t + "Posterior deep compartment: [pressure] cm H2O\n";
+        }
+                
+        if (location5) {
+          t = t + "Superficial volar compartment: [pressure] cm H2O\n";
+        }
+        if (location8) {
+          t = t + "Deep volar compartment: [pressure] cm H2O\n";
+        }
+        if (location6) {
+          t = t + "Mobile wad compartment: [pressure] cm H2O\n";
+        }
+        if (location7) {
+          t = t + "Dorsal compartment: [pressure] cm H2O\n";
         }
         t = t + "\nThe puncture sites were covered with Band-Aids. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
