@@ -12,7 +12,8 @@
     
       <div class="boxed" value="Wound Description">
       <div id="div_wounddescription"></div>
-    
+    <table  style="width: 800; vertical-align: top">
+  <td style="width: 50%; vertical-align: top">
       <h4>Side</h4>
       <input type = "radio" value = "Left" name = "side" id = "side1" onchange = "copytext()">
       <label id = "side1">Left</label><br>
@@ -20,7 +21,8 @@
       <label id = "side2">Right</label><br>
       <input type = "radio" value = "Midline" name = "side" id = "side3" onchange = "copytext()">
       <label id = "side3">Midline</label><br>
-      
+      </td>
+  <td style="width: 50%; vertical-align: top">
       <h4>Location</h4>
       <input type="radio" id = "location1" name = "location" onchange="copytext()">
       <label for = "location1">Vertex</label><br>
@@ -29,7 +31,9 @@
       <input type="radio" id = "location3" name = "location" onchange="copytext()">
       <label for = "location3">Parietal Scalp</label><br>
       <input type="radio" id = "location4" name = "location" onchange="copytext()">
-      <label for = "location4">Occipital Scalp</label><br><br>
+      <label for = "location4">Occipital Scalp</label>
+      </td>
+        </table>
         
       </div>
       <div id="div_anesthetic"></div>
