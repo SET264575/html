@@ -20,13 +20,11 @@
       
       <div id = "div_consent"></div>
 
-      <div class = "questions">
       <input type = "checkbox" id = "anesthetic" onchange="copytext()">Lidocaine was used<br>
 
-      <h4>Location</h4>
-      <input type = "text" id = "location" onchange="copytext()"><br>
+        <div id="div_location"></div>
 
-      <h4>Technique</h4>
+      <div class="boxed" value="Technique">
       <input type = "radio" name = "technique" value = "0" id = "technique1" onchange = "copytext()">
       <label for = "technique1">pushing the hook through and cutting off the barb</label><br>
       <input type = "radio" name = "technique" value = "1" id = "technique2" onchange = "copytext()">
@@ -35,6 +33,7 @@
       <label for = "technique3">covering the barb with a needle</label><br>
       <input type = "radio" name = "technique" value = "3" id = "technique4" onchange = "copytext()">
       <label for = "technique4">incision</label><br><br>
+        </div>
       </div>
     </div>
     
@@ -49,6 +48,7 @@
     <script>
       header();
       consent('verbal');
+      location2();
     </script>
   
     <script>
