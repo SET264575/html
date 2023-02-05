@@ -14,15 +14,16 @@
 
       <div id="div_student"></div>
       
-      <h4>Indication</h4>
-      <input type = "radio" name = "indication" value = "0" id = "indication0" onchange = "copytext()">
+      <div class="boxed" value = "Indication">
+      <input type = "radio" name = "indication" value = "1" id = "indication0" onchange = "copytext()">
       <label for = "indication0">respiratory failure</label><br>
-      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
-      <label for = "indication1">airway protection</label><br><br>
-
+      <input type = "radio" name = "indication" value = "2" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">airway protection</label>
+      </div>
+      
       <div id="div_consent"></div>
 
-      <h4>Sedation</h4>
+      <div class='boxed' value="Sedation">
       <input type = "radio" name = "sedation" value = "3" id = "sedation3" onchange = "copytext()">
       <label for = "sedation3">The patient was sedated with 20 mg of etomidate and paralyzed with 100 mg of succinylcholine.</label><br>
       <input type = "radio" name = "sedation" value = "0" id = "sedation0" onchange = "copytext()">
@@ -30,8 +31,9 @@
       <input type = "radio" name = "sedation" value = "1" id = "sedation1" onchange = "copytext()">
       <label for = "sedation1">The patient did not require sedation due to their mental status and was paralyzed with 150 mg of succinylcholine.</label><br>
       <input type = "radio" name = "sedation" value = "2" id = "sedation2" onchange = "copytext()">
-      <label for = "sedation2">The patient did not require sedation or paralysis.</label><br><br>
-
+      <label for = "sedation2">The patient did not require sedation or paralysis.</label>
+      </div>
+      <div class="boxed" value="Technique">
       <label for="tube_size"><b>Tube size</b></label><br>
       <select id = "tube_size" onchange = "copytext()">
         <option>8.0</option>
@@ -55,14 +57,16 @@
       <input type = "radio" name = "secured_location" value = "1" id = "secured_location1" onchange = "copytext()">
       <label for = "secured_location1">lip</label><br>
       <input type = "radio" name = "secured_location" value = "2" id = "secured_location2" onchange = "copytext()">
-      <label for = "secured_location2">gum</label><br><br>
+      <label for = "secured_location2">gum</label>
+      </div>
 
+      <div class="boxed" value = "Result">
       <h4>Oxygen saturation</h4>
       <input type = "radio" name = "oxygen_saturation" value = "0" id = "oxygen_saturation0" onchange = "copytext()">
       <label for = "oxygen_saturation0">improved</label><br>
       <input type = "radio" name = "oxygen_saturation" value = "1" id = "oxygen_saturation1" onchange = "copytext()">
-      <label for = "oxygen_saturation1">remained stable</label><br>  <br>
-
+      <label for = "oxygen_saturation1">remained stable</label>
+      </div>
     </div>
     
     <footer>
@@ -97,10 +101,10 @@
         
         t = t + "Intubation was indicated for ";
         switch(indication){
-          case "0":
+          case "1":
             t = t + "respiratory failure. ";
             break;
-          case "1":
+          case "2":
             t = t + "airway protection. ";
             break;
         }
