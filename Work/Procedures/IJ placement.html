@@ -14,24 +14,30 @@
       Internal Jugular Central Line Placement
       </h3>
 
-      <h4>Indication</h4>
-      <input type = "radio" name = "indication" id = "indication0" onchange = "copytext()">
-      <label for = "0">vascular access</label><br>
-      <input type = "radio" name = "indication" id = "indication1" onchange = "copytext()">
-      <label for = "1">administration of IV fluids</label><br><br>
-
+     
+      <div class="boxed" value="Indication">
+      <input type = "radio" name = "indication" id = "indication0" value = "1" onchange = "copytext()">
+      <label for = "indication0">vascular access</label><br>
+      <input type = "radio" name = "indication" id = "indication1" value = "2" onchange = "copytext()">
+      <label for = "indication1">administration of IV fluids</label><br><br>
+      </div>
+      
       <div id="div_consent"></div>
 
+      <div class="boxed" value = "Location">
       <div id="div_side"></div>
+      </div>
       
-      <label for = "depth">Length</label>
+      <div class="boxed" value = "Inserted Length">
       <select id = "depth">
         <option value = "12">12 cm</option>
         <option value = "13">13 cm</option>
         <option value = "14">14 cm</option>
         <option value = "15">15 cm</option>
-        
       </select>
+               
+      </div>
+      
     </div>
     <div class="note">
       <div class="risks">
@@ -104,10 +110,10 @@ Thrombosis
         
         t = t + "The procedure was indicated for ";
         switch(indication){
-          case "0":
+          case "1":
             t = t + "vascular access. ";
             break;
-          case "1":
+          case "2":
             t = t + "IV fluid administration. ";
             break;
         }
