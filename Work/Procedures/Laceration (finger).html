@@ -12,6 +12,7 @@
       <h3>Finger Laceration Repair</h3>
 
       <div id="consent"></div>
+      <div class="boxed" value="Wound Description">
       <div id="div_wounddescription"></div>
 
       <div id = "div_side"></div>
@@ -19,11 +20,12 @@
       
       <!--label for = "location">Location</label>
       <input type = "text" id = "location" onchange="copytext()"-->
-
+      </div>
+      
       <div id="div_woundpreparation"></div>
 
 
-      <h4>Exploration</h4>
+      <div class="boxed" value = "Exploration">
       <input type = "checkbox" id = "bpcuff" onchange = "copytext()">
       <label for = "bpcuff">A blood pressure cuff was used to help control bleeding.</label><br>
       <input type = "checkbox" id = "tournicot" checked onchange = "copytext()">
@@ -33,6 +35,7 @@
 
       <div id="div_contamination"></div>
       <br>
+        <b>Tendon Findings</b>
       <input type = "radio" name = "tendon" value = "0" id = "tendon1" onchange = "copytext()" >
       <label for = "tendon1">No tendon was visualized through a full range of motion.</label><br>
       <input type = "radio" name = "tendon"  value = "1" id = "tendon2" onchange = "copytext()">
@@ -40,10 +43,12 @@
       <input type = "radio" name = "tendon" value = "2"  id = "tendon3" onchange = "copytext()">
       <label for = "tendon3">A tendon was inspected through full range of motion and a injury to the tendon was noted.</label><br><br>
 
+      </div>
       <div id = "div_anesthetic"></div>
       <div id="div_sutures"></div>
-      
+      <div class="boxed" value="Splinting">
       <input type=="checkbox" id="splint" onchange="copytext()">An alumifoam splint was applied
+      </div>
     </div>
     
     <footer>
