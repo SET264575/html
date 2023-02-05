@@ -234,10 +234,12 @@ function contamination() {load('contamination')}
 function digitalblock() {load('digitalblock');}
 function digitalblockorlocal() {load('digitalblockorlocal');}
 function side() {load('side') }
+function sideUnboxed() {load('sideUnboxed')}
 function header() {load('header'); }
 function finger() {load('finger') }
 function digit() {load('digit') }
 function location2() {load('location')}
+function locationUnboxed() {load('locationUnboxed')}
 function location3() {load('location3')}
 function risks() {load('risks')}
 function sedation(flag) {load('sedation'); sedationFlag = flag}
