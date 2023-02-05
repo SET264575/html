@@ -10,6 +10,8 @@
     <div class="main">
     <h3>Bartholin Cyst Abscess I&D</h3>
    
+      <div id="div_consent"></div>
+
       <div class="boxed" value="Abscess Description"</h4>
     
     <label for="size">Abscess Size</label>
@@ -60,6 +62,7 @@
   <script src="procedure.js"></script>
     <script>
       header();
+      consent();
       side();
       anesthetic();
       location2();
@@ -67,6 +70,7 @@
     
     <script>
       function copytext(){
+        var consent = getValue('consent');
         var size = getValue("size");
         var anesthetic = getValue("anesthetic");
         var amount = getValue("amount");
@@ -79,6 +83,8 @@
         
           var t = "Procedure Note: Bartholin Cyst Abscess Incision and Drainage\n";
        
+        t = t + consent;
+        t = t + "[The patient's nurse] was present throughout the procedure. ";
         t = t + "The skin over the " + size + " cm abscess on the " + location + " labia was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
         t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  ";
         if (culture) {
