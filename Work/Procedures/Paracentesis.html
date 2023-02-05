@@ -12,19 +12,20 @@
     <div class="main">
       <h3>Paracentesis</h3>
 
-      <h4>Indication</h4>
+      <div class="boxed" value="Indication">
       <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
       <label for = "0">diagnostic testing</label><br>
       <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
-      <label for = "1">therapeutic drainage</label><br><br>
+      <label for = "1">therapeutic drainage</label>
+      </div>
 
       <div id="div_consent"></div>
 
+      <div class="boxed" value="Location">
       <div id = "div_side"></div>
+      </div>
 
       <div id = "div_anesthetic"></div>
-
-      <h4>Results</h4>
 
       <div id="div_smallvolumefluid"></div>
     </div>
