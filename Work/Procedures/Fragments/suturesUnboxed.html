@@ -1,0 +1,43 @@
+<table style="width: 800">
+  <td style="width: 25%; vertical-align: top;">
+    <h4>Material</h4>
+    <input type="radio" id="suture_type1" name="suture_type" checked onchange = "copytext()"><label for = "suture_type1">Nylon</label><br>
+    <input type="radio" id="suture_type2" name="suture_type" onchange = "copytext()"><label for = "suture_type2">Prolene</label><br>
+    <input type="radio" id="suture_type3" name="suture_type" onchange = "copytext()"><label for = "suture_type3">Vicryl</label><br>
+  </td>
+  <td style="width: 25%; vertical-align: top;">
+    <h4>Size</h4>
+    <input type = "radio" id = "suture_size1" name="suture_size" onchange = "copytext()"><label for = "suture_size1">2-0</label><br>
+    <input type = "radio" id = "suture_size2" name="suture_size" onchange = "copytext()"><label for = "suture_size2">3-0</label><br>
+    <input type = "radio" id = "suture_size3" name="suture_size" onchange = "copytext()"><label for = "suture_size3">4-0</label><br>
+    <input type = "radio" id = "suture_size4" name="suture_size" onchange = "copytext()"><label for = "suture_size4">5-0</label><br>
+    <input type = "radio" id = "suture_size5" name="suture_size" onchange = "copytext()"><label for = "suture_size5">6-0</label><br>
+  </td>
+  <td style="width: 25%; vertical-align: top;">
+    <label for = "suture_count"><b>Number</b></label><br>
+    <select id = "suture_count" onchange = "copytext()">
+      <option value = "1">1</option>
+      <option value = "2">2</option>
+      <option value = "3">3</option>
+      <option value = "4">4</option>
+      <option value = "5">5</option>
+      <option value = "6">6</option>
+      <option value = "7">7</option>
+      <option value = "8">8</option>
+      <option value = "9">9</option>
+      <option value = "10">10</option>
+      <option value = "11">11</option>
+      <option value = "12">12</option>
+      <option value = "[__Number of sutures__]">[   ]</option>
+    </select><br><br>
+  </td>
+  <td style="width: 25%; vertical-align: top;">
+    <h4>Technique</h4>
+    <input type="radio" id="suture_style1" name="suture_style" checked onchange="copytext()"><label for = "suture_style1">interrupted</label><br>
+    <input type="radio" id="suture_style2" name="suture_style" onchange="copytext()"><label for = "suture_style2">running</label><br>
+    <input type="radio" id="suture_style3" name="suture_style" onchange="copytext()"><label for = "suture_style3">interrupted and running</label><br>
+  </td>
+</table>
+<script>
+    checkSutures(getParameter('checked'));
+</script>
