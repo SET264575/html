@@ -24,14 +24,18 @@
       
       <div id = "div_woundpreparation"></div>
 
+      <div class="boxed" value="Assessment">
       <div id = "div_contamination"></div>
+      </div>
 
       <div id = "div_anestheticmental"></div>
 
-      <div id= "div_sutures"></div>
+      <div class="boxed" value="Technique">
+      <div id= "div_suturesUnboxed"></div>
 
       <input type = "checkbox" id = "verm" onchange = "copytext()">
       <label for = "verm">Vermillion border aligned</label>
+      </div>
     </div>
 
   <div class="note"></div>
@@ -50,7 +54,7 @@
     woundpreparation();
     contamination();
     anestheticmental();
-    sutures(6);
+    suturesUnboxed(6);
   </script>
     
  
@@ -81,7 +85,7 @@
         t = "Procedure Note:  Laceration repair on the "+location+" Lip\n";
         t = t + consent;
         console.log('mental = ',mental);
-        if (mental != noAnswer) {
+        if (mental) {
           t = t + "A mental block was used to achieve adequate anesthesia. ";
         }
         t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location+" lip  was ";
@@ -94,7 +98,7 @@
             break;
         }
         t = t + "draped sterilely ";
-        if (mental == noAnswer) {
+        if (!mental) {
           t = t + "and then ";
           t = t + "infiltrated with "+volume +" cc of "+ anesthetic;
         }
