@@ -10,33 +10,36 @@
     <div class="main">
       <h3>Cardioversion</h3>
       
-      <h4>Indication</h4>
-      <input type = "radio" id = "indication1" name = "indication" onchange="copytext()">
-      <label for = "indication1">atrial fibrillation with rapid ventricular response, uncontrolled with medication</label><br>
-      <input type = "radio" id = "indication2" name = "indication" onchange="copytext()">
-      <label for = "indication2">patient preference for management of atrial fibrillation</label><br>
-      <input type = "radio" id = "indication3" name = "indication" onchange="copytext()">
-      <label for = "indication3">unstable atrial fibrillation with rapid ventricular response</label><br>
-      <input type = "radio" id = "indication4" name = "indication" onchange="copytext()">
-      <label for = "indication4">unstable ventricular tachycardia</label><br>
-      <input type = "radio" id = "indication5" name = "indication" onchange="copytext()">
-      <label for = "indication5">ventricular fibrillation</label><br>
+      <div class="boxed" value="Indication">
+        <input type = "radio" id = "indication1" name = "indication" onchange="copytext()">
+        <label for = "indication1">atrial fibrillation with rapid ventricular response, uncontrolled with medication</label><br>
+        <input type = "radio" id = "indication2" name = "indication" onchange="copytext()">
+        <label for = "indication2">patient preference for management of atrial fibrillation</label><br>
+        <input type = "radio" id = "indication3" name = "indication" onchange="copytext()">
+        <label for = "indication3">unstable atrial fibrillation with rapid ventricular response</label><br>
+        <input type = "radio" id = "indication4" name = "indication" onchange="copytext()">
+        <label for = "indication4">unstable ventricular tachycardia</label><br>
+        <!--input type = "radio" id = "indication5" name = "indication" onchange="copytext()">
+        <label for = "indication5">ventricular fibrillation</label><br-->
+      </div>
 
       <div id="div_consent"></div>
       
-      <h4>Anticoagulation</h4>
+      <div class="boxed" value="Anticoagulation">
       <input type="checkbox" id = "anticoagulated" onchange = "copytext()">
       <label for = "anticoagulated">The patient had been consistently taking an oral anticoagulant for at least 3 weeks.</label><br><br>
+      </div>
+      
+      <div class="boxed" value = "Sedation">
+        <input type = "radio" name = "sedation" checked id = "sedation1" onchange = "toggleSedation(true); copytext()">
+        <label for="sedation1">Conscious sedation was used for the procedure.</label><br>
+        <input type = "radio" name = "sedation" id = "sedation2" onchange = "toggleSedation(false); copytext()">
+        <label for = "sedation2">Conscious sedation was not used for the procedure due to the instability of the patient.</label><br>
+        <input type = "radio" name = "sedation" id = "sedation3" onchange = "toggleSedation(false); copytext()">
+        <label for = "sedation3">Conscious sedation was not used for the procedure due to patient preference.</label><br><br>
 
-      <h4>Sedation</h4>
-      <input type = "radio" name = "sedation" checked id = "sedation1" onchange = "toggleSedation(true); copytext()">
-      <label for="sedation1">Conscious sedation was used for the procedure.</label><br>
-      <input type = "radio" name = "sedation" id = "sedation2" onchange = "toggleSedation(false); copytext()">
-      <label for = "sedation2">Conscious sedation was not used for the procedure due to the instability of the patient.</label><br>
-      <input type = "radio" name = "sedation" id = "sedation3" onchange = "toggleSedation(false); copytext()">
-      <label for = "sedation3">Conscious sedation was not used for the procedure due to patient preference.</label><br><br>
-
-      <div id="div_sedation"></div>
+        <div id="div_sedation"></div>
+      </div>
     </div>  
    
     
@@ -68,27 +71,13 @@
         console.log("anticoagulated=",anticoagulated);
         var sedation = getValue("sedation");
         var technique = "cardioversion ";
-        if (document.getElementById('indication5').checked) {
-          technique = "defibrillation ";
-        }
         
         var t = "";
         
         if (document.getElementById("sedation1").checked) {
           t = t + sedationText();
         }
-        if (technique == 'defibrillation') {
-          t = t + "Procedure Note:  Defibrillation\n";
-          t = t + "The procedure was indicated due to "+indication+". ";
-          t = t + consent;
-          if (anticoagulated == true){
-              t = t + "The patient had been consistently taking an oral anticoagulant for at least 3 weeks. ";
-          }
-          t = t + sedation+" ";
-          t = t + "An unsynchronized shock of 200 J was administered with conversion to a normal sinus rhythm.  ";
-          t = t + "The patient tolerated the procedure well.  There were no complications."
-        }
-        else {
+
           t = t + "Procedure Note:  Electrical Cardioversion\n";
           t = t + "Electrical cardioversion was indicated due to "+indication+". ";
           t = t + consent;
@@ -98,8 +87,6 @@
           t = t + sedation+" ";
           t = t + "A synchronized shock of 200 J was administered with resulting cardioversion to a normal sinus rhythm.  ";
           t = t + "The patient tolerated the procedure well.  There were no complications."
-        }
-       
         
         displayText(t);
       }
