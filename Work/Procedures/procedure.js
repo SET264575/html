@@ -245,6 +245,8 @@ function risks() {load('risks')}
 function sedation(flag) {load('sedation'); sedationFlag = flag}
 function student() {load('student');}
 function sutures(index) { load('sutures'); sutureFlag = index} 
+function suturesUnboxed(index) { load('suturesUnboxed'); sutureFlag = index} 
+
 function smallvolumefluid() {load('smallvolumefluid')}
 function largevolumefluid() {load('largevolumefluid')}
 function wounddescription() {load('wounddescription')}
