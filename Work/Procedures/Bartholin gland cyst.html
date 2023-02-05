@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <title>Bartholin Cyst I&D</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+    <h3>Bartholin Cyst Abscess I&D</h3>
+   
+      <div class="boxed" value="Abscess Description"</h4>
+    
+    <label for="size">Abscess Size</label>
+    <select id = "size" onchange = "copytext()">
+      <option value = "0.5">0.5 cm</option>
+      <option value = "1">1 cm</option>
+      <option value = "2">2 cm</option>
+      <option value = "3">3 cm</option>
+      <option value = "4">4 cm</option>
+      <option value = "5">5 cm</option>
+      <option value = "6">6 cm</option>
+      <option value = "7">7 cm</option>
+    </select><br><br>
+
+          
+
+      <div id="div_side"></div>
+    </div>
+      <div id="div_anesthetic"></div>
+   
+      <div class="boxed" value="Technique">
+    <label for = "incision_size">Length of incision</label>
+    <select id = "incision_size" onchange = "copytext()">
+      <option value = "1">1 cm</option>
+      <option value = "2">2 cm</option>
+      <option value = "3">3 cm</option>
+      <option value = "4">4 cm</option>
+      <option value = "5">5 cm</option>
+    </select><br><br>
+
+      <label for = "amount">Amount of pus</label>
+      <select id = "amount" onchange = 'copytext()'>
+          <option value = "No">No pus</option>
+          <option value = "A small amount of">A small amount</option>
+          <option value = "A large amount of">A large amount</option>
+      </select><br><br>
+      <input type = "checkbox" id = "culture" onchange = "copytext()">A wound culture was sent to the lab.</input><br><br>
+      <input type = "checkbox" checked id = "drain" onchange = "copytext()">A Word catheter was placed.</input><br><br>
+
+    </div>
+</div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+  <script src="procedure.js"></script>
+    <script>
+      header();
+      side();
+      anesthetic();
+      location2();
+    </script>
+    
+    <script>
+      function copytext(){
+        var size = getValue("size");
+        var anesthetic = getValue("anesthetic");
+        var amount = getValue("amount");
+        var volume = getValue("volume");
+        var side = getValue("side");
+        var incision_size = getValue("incision_size");
+        var culture = getValue("culture");
+        var loculations = getValue("loculations");
+        var drain = getValue("drain");
+        
+          var t = "Procedure Note: Bartholin Cyst Abscess Incision and Drainage\n";
+       
+        t = t + "The skin over the " + size + " cm abscess on the " + location + " labia was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
+        t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  ";
+        if (culture) {
+          t = t + "A wound culture was sent to the lab. ";
+        }
+        if (drain) {
+          t = t + "A Word catheter was placed into the incision and the balloon inflated with saline. ";
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
