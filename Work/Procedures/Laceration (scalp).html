@@ -10,6 +10,7 @@
     <div class="main">
       <h3>Scalp Laceration Repair</h3>
     
+      <div class="boxed" value="Wound Description">
       <div id="div_wounddescription"></div>
     
       <h4>Side</h4>
@@ -29,11 +30,13 @@
       <label for = "location3">Parietal Scalp</label><br>
       <input type="radio" id = "location4" name = "location" onchange="copytext()">
       <label for = "location4">Occipital Scalp</label><br><br>
+        
+      </div>
 
       <div id="div_woundpreparation"></div>
       <div id="div_anesthetic"></div>
 
-      <h4>Staples</h4>
+     <div class="boxed" value="Staples">
 
       <label for = "suture_count">Number of Staples</label>
       <select id = "suture_count" onchange = "copytext()">
@@ -50,7 +53,7 @@
         <option value = "11">11</option>
         <option value = "12">12</option>
       </select><br><br>
-   
+      </div>
     </div>
     
     <footer>
