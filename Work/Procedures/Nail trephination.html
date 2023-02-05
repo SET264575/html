@@ -11,9 +11,10 @@
       <h3>Nail trephination</h3>
 
       <div id="div_consent"></div>
+      <div class="boxed" value="Location">
       <div id = "div_side"></div>
 
-      <div id="div_digitcount"></div>
+      <div id="div_digit"></div>
       <!--label for="digit"><b>Digit</b></label><br>
       <select id = "digit" onchange = "copytext()">
         <option>first</option>
@@ -22,14 +23,16 @@
         <option>fourth</option>
         <option>fifth</option>
       </select><br-->
+     
       <br>
+        <b>Digit Type</b><br>
       <input type = "radio" name = "finger" id="finger0" value = "finger" onchange = "copytext()">
       <label for = "finger0">finger</label><br>
       <input type = "radio" name = "finger" id = "finger1" value = "toe" onchange = "copytext()">
-      <label for = "finger1">toe</label><br>
-      <br>
+      <label for = "finger1">toe</label>
+      </div>
 
-
+      <div class="boxed" value="Technique">
       <input type = "checkbox" name = "block" id = "block" onchange = "copytext()">
       <label for = "block">A digital block was performed.</label><br><br>
 
@@ -38,7 +41,8 @@
         <option>1</option>
         <option>2</option>
         <option>3</option>
-      </select><br>
+      </select>
+      </div>
 
     </div>
     <footer>
@@ -53,7 +57,7 @@
       header();
       consent('verbal');
       side();
-      digitcount();
+      digit();
     </script>
       
     <script>
@@ -71,7 +75,7 @@
         var t = "Procedure Note: Trephination of the "+location+"\n";
         t = t + "The procedure was indicated for a painful subungal hematoma. ";
         t = t + consent;
-        if (block == true){
+        if (block){
           t = t + "A digital block was performed. ";
         }
         t = t + "The nail and surrounding skin was prepped with Betadine.  A high-temperature cauterizer was used to burn ";
