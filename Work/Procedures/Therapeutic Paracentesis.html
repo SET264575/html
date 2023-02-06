@@ -10,14 +10,7 @@
   <body>
     <div class="div_header" id= "div_header"></div>
     <div class="main">
-      <h3>Paracentesis</h3>
-
-      <div class="boxed" value="Indication">
-      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
-      <label for = "indication1">diagnostic testing</label><br>
-      <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
-      <label for = "indication2">therapeutic drainage</label>
-      </div>
+      <h3>Therapeutic Paracentesis</h3>
 
       <div id="div_consent"></div>
 
@@ -60,18 +53,7 @@
         var description = getValue("description");
         
         var t = "Procedure Note: Therapeutic Paracentesis \n";
-        
-        t = t + "The procedure was indicated for ";
-        switch(indication){
-          case "1":
-            t = t + "diagnostic testing of the ascitic fluid.  ";
-            break;
-          case "2":
-            t = t + "therapeutic drainage of the ascitic fluid. ";
-            break;
-        }
-
-
+        t = t + "The procedure was indicated for therapeutic drainage of the ascitic fluid. ";
         t =t  + consent;
         t = t + "Bedside ultrasound was used to mark the location. ";
         t = t + "A wide area around the puncture site was prepped with Betadine. ";
