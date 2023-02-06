@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>
+        Diagnostic Paracentesis
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Diagnostic Paracentesis</h3>
+
+      <div id="div_consent"></div>
+
+      <div class="boxed" value="Location">
+      <div id = "div_side"></div>
+      </div>
+
+      <div id = "div_anesthetic"></div>
+
+      <div id="div_largevolumefluid"></div>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                
+    <script src="procedure.js"></script>
+    
+    <script>
+
+      header();
+      consent('written');
+      side();
+      anesthetic();
+      largevolumefluid();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue("consent");
+        var anesthesia = getValue("anesthetic");
+        var side = getValue("side");
+        var color = getValue("clr");
+        var volume = getValue("volume");
+        var volume2 = getValue("volume2");
+        var description = getValue("description");
+        
+        var t = "Procedure Note: Diagnostic Paracentesis \n";
+        
+        t = t + "The procedure was indicated for diagnostic testing of the ascitic fluid.  ";
+        t = t  + consent;
+        t = t + "Bedside ultrasound was used to mark the location. ";
+        t = t + "A wide area around the puncture site was prepped with Betadine. ";
+        t = t + "The puncture site was infiltrated with "+ volume + " cc of " + anesthesia + ". ";
+        t = t + "The catheter-over-needle was inserted on the " + side + " side. ";
+        t = t + "The catheter was advanced and the needle was removed.  The catheter was connected to vacuutainer bottles and approximately " + volume + " liters ";
+        t = t + "of " + description + " fluid was obtained.  Ascitic fluid was sent to lab for studies. ";
+        t = t + "The catheter was then removed. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>
