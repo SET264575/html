@@ -13,10 +13,10 @@
       <h3>Paracentesis</h3>
 
       <div class="boxed" value="Indication">
-      <input type = "radio" name = "indication" value = "0" id = "indication" onchange = "copytext()">
-      <label for = "0">diagnostic testing</label><br>
-      <input type = "radio" name = "indication" value = "1" id = "indication" onchange = "copytext()">
-      <label for = "1">therapeutic drainage</label>
+      <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+      <label for = "indication1">diagnostic testing</label><br>
+      <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
+      <label for = "indication2">therapeutic drainage</label>
       </div>
 
       <div id="div_consent"></div>
@@ -57,16 +57,16 @@
         var color = getValue("clr");
         var volume = getValue("volume");
         var volume2 = getValue("volume2");
-        var color = getValue("color");
+        var description = getValue("description");
         
-        var t = "Procedure Note: Paracentesis \n";
+        var t = "Procedure Note: Therapeutic Paracentesis \n";
         
         t = t + "The procedure was indicated for ";
         switch(indication){
-          case "0":
+          case "1":
             t = t + "diagnostic testing of the ascitic fluid.  ";
             break;
-          case "1":
+          case "2":
             t = t + "therapeutic drainage of the ascitic fluid. ";
             break;
         }
@@ -77,8 +77,8 @@
         t = t + "A wide area around the puncture site was prepped with Betadine. ";
         t = t + "The puncture site was infiltrated with "+ volume + " cc of " + anesthesia + ". ";
         t = t + "The catheter-over-needle was inserted on the " + side + " side. ";
-        t = t + "The catheter was advanced and the needle was removed.  The catheter was connected to vacuutainer bottles and approximately " + volume + "liters ";
-        t = t + "of " + color + " fluid was obtained.  Ascitic fluid was sent to lab for studies. ";
+        t = t + "The catheter was advanced and the needle was removed.  The catheter was connected to vacuutainer bottles and approximately " + volume + " liters ";
+        t = t + "of " + description + " fluid was obtained.  Ascitic fluid was sent to lab for studies. ";
         t = t + "The catheter was then removed. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
 
