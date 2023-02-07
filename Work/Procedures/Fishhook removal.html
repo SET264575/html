@@ -11,7 +11,7 @@
     <div class="div_header" id= "div_header"></div>
     <div class="main">
       <h3>
-      Fishhook removal
+      Fishhook Removal
       </h3>
 
       <div class = "link">
@@ -20,20 +20,20 @@
       
       <div id = "div_consent"></div>
 
-      <input type = "checkbox" id = "anesthetic" onchange="copytext()">Lidocaine was used<br>
-
+ 
      
         <div id="div_location"></div>
 
-      <div class="boxed" value="Technique">
-      <input type = "radio" name = "technique" value = "4" id = "technique1" onchange = "copytext()">
-      <label for = "technique1">pushing the hook through and cutting off the barb</label><br>
-      <input type = "radio" name = "technique" value = "1" id = "technique2" onchange = "copytext()">
-      <label for = "technique2">jerking the hook out with a string</label><br>
-      <input type = "radio" name = "technique" value = "2" id = "technique3" onchange = "copytext()">
-      <label for = "technique3">covering the barb with a needle</label><br>
-      <input type = "radio" name = "technique" value = "3" id = "technique4" onchange = "copytext()">
-      <label for = "technique4">incision</label><br><br>
+              <div class="boxed" value="Technique">
+              <input type = "radio" name = "technique" value = "4" id = "technique1" onchange = "copytext()">
+              <label for = "technique1">pushing the hook through and cutting off the barb</label><br>
+              <input type = "radio" name = "technique" value = "1" id = "technique2" onchange = "copytext()">
+              <label for = "technique2">jerking the hook out with a string</label><br>
+              <input type = "radio" name = "technique" value = "2" id = "technique3" onchange = "copytext()">
+              <label for = "technique3">covering the barb with a needle</label><br>
+              <input type = "radio" name = "technique" value = "3" id = "technique4" onchange = "copytext()">
+              <label for = "technique4">incision</label><br><br>
+              <input type = "checkbox" id = "anesthetic" onchange="copytext()">Lidocaine was used<br>
         </div>
       </div>
     </div>
@@ -60,8 +60,8 @@
         var technique = getValue("technique");
         var location = getValue("location");
         
-        var t = "Procedure Note: Fishhook removal\n";
-        t = t + "The procedure was indicated for a fishhook embedded in the " + location + ". ";
+        var t = "Procedure Note: Fishhook Removal\n";
+        t = t + "The procedure was indicated for a fishhook embedded in the " + location.toLowerCase() + ". ";
         t = t +  consent;
         t = t + "The hook and the skin surrounding it was prepped with Betadine. ";
         if (anesthetic) {
