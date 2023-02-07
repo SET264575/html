@@ -52,68 +52,68 @@ The patient [did/did not] tolerate p.o.
         <label for ='indication3'>Electrical Cardioversion</label><br>
       </div>
 
-
       <div id="div_consent"></div>
 
-       <div class="block" value = "Patient Assessment">
-      <label for = "npo_time"><b>Hours that patient had been NPO</b></label><br>
-      <select id = "npo_time" onchange = "copytext()">
-        <option value = "1">1</option>
-        <option value = "2">2</option>
-        <option value = "3">3</option>
-        <option value = "4">4</option>
-        <option value = "5">5</option>
-        <option value = "6">6</option>
-        <option value = "7">7</option>
-        <option value = "8">8</option>
-        <option value = "9">9</option>
-        <option value = "10">10</option>
-        <option value = "11">11</option>
-        <option value = "12">12</option>
-      </select>
+       <div class="boxed" value = "Patient Assessment">
+        <label for = "npo_time"><b>Hours that patient had been NPO</b></label><br>
+        <select id = "npo_time" onchange = "copytext()">
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+        </select>
        </div>
 
        <div class="boxed" value = "Technique">
-         <b>Drug Used</b><br>
-         <input type="radio" id="drug1" name = "drug" value = "1" onchange = "copytext()">
-         <label for = "drug1">Etomidate</label><br>
-                  
-         <input type="radio" id="drug2" name = "drug" value = "2" onchange = "copytext()">
-         <label for = "drug2">Ketamine</label><br>
-                  
-         <input type="radio" id="drug3" name = "drug" value = "3" onchange = "copytext()">
-         <label for = "drug3">Propofol</label><br>
-                  
-         <input type="radio" id="drug4" name = "drug" value = "4" onchange = "copytext()">
-         <label for = "drug4">Versed</label><br>
-                  
-         <input type="radio" id="drug5" name = "drug" value = "5" onchange = "copytext()">
-         <label for = "drug5">[Other drug]</label><br>
-      
-       
-      <label for = "dose"><b>Dose</b></label><br>
-      <select id = "dose" onchange = "copytext()">
-        <option value = "1">1 mg</option>
-        <option value = "2">2 mg</option>
-        <option value = "3">3 mg</option>
-        <option value = "4">4 mg</option>
-        <option value = "5">5 mg</option>
-        <option value = "6">6 mg</option>
-        <option value = "7">7 mg</option>
-        <option value = "8">8 mg</option>
-        <option value = "9">9 mg</option>
-        <option value = "10">10 mg</option>
-        <option value = "11">11 mg</option>
-        <option value = "12">12 mg</option>
-        <option value = "13">13 mg</option>
-        <option value = "14">14 mg</option>
-        <option value = "15">15 mg</option>
-        <option value = "16">16 mg</option>
-        <option value = "17">17 mg</option>
-        <option value = "18">18 mg</option>
-        <option value = "19">19 mg</option>
-        <option value = "20">20 mg</option>
-      </select><br><br>
+         <table width="800px">
+           <td width="50%">
+             <b>Drug Used</b><br>
+             <input type="radio" id="drug1" name = "drug" value = "1" onchange = "copytext()">
+             <label for = "drug1">Etomidate</label><br>
+             <input type="radio" id="drug2" name = "drug" value = "2" onchange = "copytext()">
+             <label for = "drug2">Ketamine</label><br>
+             <input type="radio" id="drug3" name = "drug" value = "3" onchange = "copytext()">
+             <label for = "drug3">Propofol</label><br>
+             <input type="radio" id="drug4" name = "drug" value = "4" onchange = "copytext()">
+             <label for = "drug4">Versed</label><br>
+             <input type="radio" id="drug5" name = "drug" value = "5" onchange = "copytext()">
+             <label for = "drug5">[Other drug]</label><br>
+           </td>
+           <td width="50%">
+            
+
+            <label for = "dose"><b>Dose</b></label><br>
+            <select id = "dose" onchange = "copytext()">
+              <option value = "1">1 mg</option>
+              <option value = "2">2 mg</option>
+              <option value = "3">3 mg</option>
+              <option value = "4">4 mg</option>
+              <option value = "5">5 mg</option>
+              <option value = "6">6 mg</option>
+              <option value = "7">7 mg</option>
+              <option value = "8">8 mg</option>
+              <option value = "9">9 mg</option>
+              <option value = "10">10 mg</option>
+              <option value = "11">11 mg</option>
+              <option value = "12">12 mg</option>
+              <option value = "13">13 mg</option>
+              <option value = "14">14 mg</option>
+              <option value = "15">15 mg</option>
+              <option value = "16">16 mg</option>
+              <option value = "17">17 mg</option>
+              <option value = "18">18 mg</option>
+              <option value = "19">19 mg</option>
+              <option value = "20">20 mg</option>
+            </select>
+           </td>
+         </table>
       
       Intraservice time:<br>
       <input type="text" onchange="copytext()" id = "intraservice"><br>
