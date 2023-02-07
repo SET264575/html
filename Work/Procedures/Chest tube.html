@@ -21,25 +21,31 @@ Tolerated
     <div class="div_header" id= "div_header"></div>
     <div class="main">
       <h3>Chest tube</h3>
-      <h4>Indication</h4>
-      <input type = "radio" id = "Indication2" value= "tension pneumothorax" name = "Indication" onchange = "copytext()">
-      <label for = "Indication2">tension pneumothorax</label><br>
-      <input type = "radio" id = "Indication0" value = "pneumothorax" name = "Indication" onchange = "copytext()">
-      <label for = "Indication0">pneumothorax</label><br>
-      <input type = "radio" id = "Indication1" value = "hemothorax" name = "Indication" onchange = "copytext()">
-      <label for = "Indication1">hemothorax</label><br>
+      <div class="boxed" value = "Indication">
+        <input type = "radio" id = "Indication2" value= "tension pneumothorax" name = "Indication" onchange = "copytext()">
+        <label for = "Indication2">tension pneumothorax</label><br>
+        <input type = "radio" id = "Indication0" value = "pneumothorax" name = "Indication" onchange = "copytext()">
+        <label for = "Indication0">pneumothorax</label><br>
+        <input type = "radio" id = "Indication1" value = "hemothorax" name = "Indication" onchange = "copytext()">
+        <label for = "Indication1">hemothorax</label>
+      </div>
 
-      <div id="div_side"></div>
+      <div class="boxed" value = "Location">
+      <div id="div_sideUnboxed"></div>
       
       <h4>Intercostal space</h4>
-      <input type = "radio" id = "intercostal space0" value="5th" name = "intercostal space" onchange = "copytext()">
-      <label for = "intercostal space0">5th</label><br>
-      <h4>size of tube</h4>
-      <input type = "radio" id = "size of tube0" name = "size of tube" value = "20" onchange = "copytext()">
-      <label for = "size of tube0">20 Fr</label><br>
+        <input type = "radio" id = "intercostal space0" checked value="5th" name = "intercostal space" onchange = "copytext()">
+        <label for = "intercostal space0">5th</label><br>
+      </div>
 
       <div id="div_anesthetic"></div>
 
+            
+      <div class="boxed" value = "size of tube">
+      <input type = "radio" id = "size of tube0" name = "size of tube" value = "20" onchange = "copytext()">
+      <label for = "size of tube0">20 Fr</label><br>
+      </div>
+      <div class="boxed" value="Results">
       <h4>Tube drainage</h4>
       <select id = "Tube drainage"  onchange = "copytext()">
          <option>no fluid or air</option>
@@ -48,6 +54,7 @@ Tolerated
          <option>clear fluid</option>
          <option>bloody fluid</option>
       </select><br><br>
+      </div>
     </div>
     <footer>
       <div class="dateChanged">12/6/22</div>
