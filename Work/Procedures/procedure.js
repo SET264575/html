@@ -243,6 +243,7 @@ function locationUnboxed() {load('locationUnboxed')}
 function location3() {load('location3')}
 function risks() {load('risks')}
 function sedation(flag) {load('sedation'); sedationFlag = flag}
+function sedationUnboxed(flag) {load('sedationUnboxed'); sedationFlag = flag}
 function student() {load('student');}
 function sutures(index) { load('sutures'); sutureFlag = index} 
 function suturesUnboxed(index) { load('suturesUnboxed'); sutureFlag = index} 
