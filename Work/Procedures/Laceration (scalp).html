@@ -15,7 +15,7 @@
       </div>
     
       <div class="boxed" value="Wound Description">
-      <div id="div_wounddescription"></div>
+      <div id="div_wounddescriptionUnboxed"></div>
     <table  style="width: 800; vertical-align: top">
   <td style="width: 50%; vertical-align: top">
       <h4>Side</h4>
@@ -74,7 +74,7 @@
     <script>
       header();
       consent();
-      wounddescription();
+      wounddescriptionUnboxed();
       woundpreparation();
       anesthetic();
     </script>
@@ -105,7 +105,7 @@
             t = t + "prepped with chlorhexidine and ";
             break;
         }
-        t = t + "infiltrated with "+volume +" cc of "+ anesthetic + ". ";
+        t = t + "infiltrated with "+volume +" mL of "+ anesthetic + ". ";
         t = t + "The wound was "+ clean +" thoroughly with normal saline. ";
         t = t + "The wound was explored in a bloodless field and no foreign body was found.  ";
         t = t + "The wound was closed with " + suture_count + " " + " staples.  ";
