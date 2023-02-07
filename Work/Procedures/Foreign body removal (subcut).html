@@ -12,55 +12,60 @@
 
     <div class="main">
       <h3>Subcutaneous Foreign Body Removal</h3>
-      <label for="location">Location</label>
-      <input type="text" id = "location" onchange="copytext()">
       
+      <div id="div_location"></div>
       <div id = "div_consent"></div>
 
       <div id = "div_risks"></div>
 
       <!--div id = "div_sedation"></div-->
       
-      <h4>Localization technique</h4>
-      <input type = "radio" id="localization1" name = "localization" onchange = "copytext()">
-      <label for = "localization1">visualization</label><br>
-            
-      <input type = "radio" id="localization2" name = "localization" onchange = "copytext()">
-      <label for = "localization2">palpation</label><br>
-            <input type = "radio" id="localization3" name = "localization" onchange = "copytext()">
-      <label for = "localization3">x-ray</label><br>
+      <div class='Boxed' value ='Localization technique'>
+        <input type = "radio" id="localization1" name = "localization" onchange = "copytext()">
+        <label for = "localization1">visualization</label><br>
+        <input type = "radio" id="localization2" name = "localization" onchange = "copytext()">
+        <label for = "localization2">palpation</label><br>
+        <input type = "radio" id="localization3" name = "localization" onchange = "copytext()">
+        <label for = "localization3">x-ray</label><br>
+        <input type = "radio" id="localization4" name = "localization" onchange = "copytext()">
+        <label for = "localization4">ultrasound</label><br><br>
+      </div>
+      <div id = "div_anesthetic"></div>
+      <div class="Boxed" value = "Technique to reach the foreign body">
+        <input type = "radio" id="access1" name = "access" value = "1" onchange = "copytext()">
+        <label for = "access1">through the wound</label><br>
+        <input type = "radio" id="access2" name = "access" value = "2" onchange = "copytext()">
+        <label for = "access2">by extending the wound</label>  <br>    
+        <input type = "radio" id="access3" name = "access" value = "3" onchange = "copytext()">
+        <label for = "access3">incising the skin</label>
+      </div>
       
-            <input type = "radio" id="localization4" name = "localization" onchange = "copytext()">
-      <label for = "localization4">ultrasound</label><br><br>
       
-            <div id = "div_anesthetic"></div>
-      
-      <h4>Technique to reach the foreign body</h4>
-      <input type = "radio" id="access1" name = "access" value = "1" onchange = "copytext()">
-      <label for = "access1">through the wound</label><br>
-      <input type = "radio" id="access2" name = "access" value = "2" onchange = "copytext()">
-      <label for = "access2">by extending the wound</label>  <br>    
-      <input type = "radio" id="access3" name = "access" value = "3" onchange = "copytext()">
-      <label for = "access3">incising the skin</label><br><br>
-      
-      <h4>Results</h4>
+      <div class="Boxed" value = "Results">
       <input type = "radio" id="result1" name = "result" value = "1"  onchange = "copytext()">
       <label for = "result1">removed intact</label><br>
       <input type = "radio" id="result2" name = "result" value = "2" onchange = "copytext()">
       <label for = "result2">removed in pieces</label><br>      
       <input type = "radio" id="result3" name = "result" value = "3" onchange = "copytext()">
-      <label for = "result3">could not be found</label><br>
-      <br>
-      <input type = "checkbox" id = "residual" onchange = "copytext()">
-      <label for = "residual">Some residual material remained</label><br>
-      <input type ="checkbox" id = "irrigation" onchange = "copytext()">
-      <label for = "irrigation">The wound was irrigated</label><br>
+      <label for = "result3">could not be found</label>
+      </div>
       
-      <h4>Closure</h4>
-      <input type = "radio" id="closure1" name = "closure" value = "1"  onchange = "copytext()">
-      <label for = "closure1">sutured</label><br>
-      <input type = "radio" id="closure2" name = "closure" value = "2" onchange = "copytext()">
-      <label for = "closure2">left open</label>   <br><br>
+      <div class="Boxed" value="Wound management">
+        <input type = "checkbox" id = "residual" onchange = "copytext()">
+        <label for = "residual">Some residual material remained</label><br>
+        <input type ="checkbox" id = "irrigation" onchange = "copytext()">
+        <label for = "irrigation">The wound was irrigated</label><br>
+
+        <h4>Closure</h4>
+        <input type = "radio" id="closure1" name = "closure" value = "1"  onchange = "copytext()">
+        <label for = "closure1">sutured</label><br>
+        <input type = "radio" id="closure2" name = "closure" value = "2" onchange = "copytext()">
+        <label for = "closure2">left open</label>   <br><br>
+        
+        <div id="div_suturesUnboxed"></div>
+      </div>
+      
+      
 
     </div>
     
@@ -105,11 +110,13 @@
     <script src = "procedure.js"></script>
     <script>
       header();
+      location2();
       consent('verbal');
    //   risks();
    //   sedation();
       
       anesthetic();
+      suturesUnboxed(4);
     </script>
   
     <script>
@@ -126,12 +133,17 @@
         var result = getValue("result");
         var residual = getValue("residual");
         var closure = getValue("closure");
+        var suture_size = getValue("suture_size");
+        var suture_type = getValue("suture_type");
+        var suture_count = getValue("suture_count");
+        var suture_style = getValue("suture_style");
+        var 
         var t = "";
         
         // t = t + digitalblock(); 
         t = t + "Procedure Note: Subcutaneous Foreign Body Removal \n";
         
-        t = t + "The procedure was indicated for a foreign body in the " + location + ". ";
+        t = t + "The procedure was indicated for a foreign body in the " + location.toLowerCase() + ". ";
 
 
         t = t + consent;
@@ -160,7 +172,7 @@
             t = t + "The foreign body was removed in pieces.  ";
             break;
           case "3":
-            t = t + "Despite thorough inspection of the wound and careful probing, the foreign body could not be found. To avoid further injury to the tissues, the search for the foreign body was terminated. ";
+            t = t + "Despite thorough inspection of the wound and careful probing, the foreign body could not be found. The search for the foreign body was terminated to avoid further injury to the tissues. ";
             break;
         }
         if (residual) {
@@ -172,7 +184,7 @@
         
         switch(closure) {
           case "1":
-            t=t+"The wound was then closed with sutures. ";
+            t=t+"The wound was then closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
             break;
           case "2":
             t=t+"To decrease the risk of infection, the wound was left unclosed to heal by secondary intent. ";
