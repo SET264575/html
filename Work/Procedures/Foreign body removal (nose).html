@@ -12,30 +12,32 @@
     <div class="main">
       <h3>Nasal foreign body removal</h3>
 
-      <h4>Indication</h4>
-      <input type = "radio" name = "indication" checked value = "foreign body" id = "indication0" onchange = "copytext()">
-      <label for = "indication0">foreign body</label><br>
-      <input type = "radio" name = "indication" value = "bead" id = "indication1" onchange = "copytext()">
-      <label for = "indication1">bead</label><br>
-      <input type = "radio" name = "indication" value = "crayon" id = "indication2" onchange = "copytext()">
-      <label for = "indication2">crayon</label><br>
-      <input type = "radio" name = "indication" value = "battery" id = "indication3" onchange = "copytext()">
-      <label for = "indication3">battery</label><br>
-      <input type = "radio" name = "indication" value = "popcorn kernel" id = "indication4" onchange = "copytext()">
-      <label for = "indication4">popcorn kernel</label><br>
-      <input type = "radio" name = "indication" value = "raisin" id = "indication5" onchange = "copytext()">
-      <label for = "indication5">raisin</label><br><br>
+      <div class="boxed" value="Indication">
+        <input type = "radio" name = "indication" checked value = "foreign body" id = "indication0" onchange = "copytext()">
+        <label for = "indication0">foreign body</label><br>
+        <input type = "radio" name = "indication" value = "bead" id = "indication1" onchange = "copytext()">
+        <label for = "indication1">bead</label><br>
+        <input type = "radio" name = "indication" value = "crayon" id = "indication2" onchange = "copytext()">
+        <label for = "indication2">crayon</label><br>
+        <input type = "radio" name = "indication" value = "battery" id = "indication3" onchange = "copytext()">
+        <label for = "indication3">battery</label><br>
+        <input type = "radio" name = "indication" value = "popcorn kernel" id = "indication4" onchange = "copytext()">
+        <label for = "indication4">popcorn kernel</label><br>
+        <input type = "radio" name = "indication" value = "raisin" id = "indication5" onchange = "copytext()">
+        <label for = "indication5">raisin</label>
+      </div>
 
       <div id="div_consent"></div>
       <div id="div_side"></div>
 
-      <h4>Technique</h4>
-      <input type = "radio" name = "technique" value = "using a ear curette" id = "technique1" onchange = "copytext()">
-      <label for = "technique1">ear curette</label><br>
-      <input type = "radio" name = "technique" value = "using alligator forceps" id = "technique2" onchange = "copytext()">
-      <label for = "technique2">alligator forceps</label><br>
-      <input type = "radio" name = "technique" value = "by having a parent blow through the child's mouth while obstructing the other nostril" id = "technique3" onchange = "copytext()">
-      <label for = "technique3">parent blowing through mouth</label><br><br>
+      <div class="boxed" value = "Technique">
+        <input type = "radio" name = "technique" value = "using a ear curette" id = "technique1" onchange = "copytext()">
+        <label for = "technique1">ear curette</label><br>
+        <input type = "radio" name = "technique" value = "using alligator forceps" id = "technique2" onchange = "copytext()">
+        <label for = "technique2">alligator forceps</label><br>
+        <input type = "radio" name = "technique" value = "by having a parent blow through the child's mouth while obstructing the other nostril" id = "technique3" onchange = "copytext()">
+        <label for = "technique3">parent blowing through mouth</label>
+      </div>
     </div>
     
     <footer>
@@ -55,6 +57,7 @@
     <script>
       function copytext(){
         var indication = getValue("indication");
+        var consent = getValue('consent');
         var technique = getValue("technique");
         var side = getValue("side");
         
