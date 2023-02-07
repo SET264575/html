@@ -14,21 +14,20 @@
     Thoracentesis
     </h3>
     
-    <h4>Indication</h4>
-    <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
-    <label for = "indication1">diagnostic testing of pleural effusion</label><br>
-    <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
-    <label for = "indication2">therapeutic drainage of pleural effusion</label><br>
-<br>
+    
+      <div class="boxed" value="Indication">
+        <input type = "radio" name = "indication" value = "1" id = "indication1" onchange = "copytext()">
+        <label for = "indication1">diagnostic testing of pleural effusion</label><br>
+        <input type = "radio" name = "indication" value = "2" id = "indication2" onchange = "copytext()">
+        <label for = "indication2">therapeutic drainage of pleural effusion</label><br>
+      </div>
 
 
       
       <div id="div_consent"></div>   
       <div id="div_side"></div>  
       <div id = "div_anesthetic"></div>
-                                         
-    
-    <h4>Results</h4>
+                                       
 
       <div id="div_smallvolumefluid"></div>
     </div>
@@ -76,7 +75,7 @@
         
         t = t + "Bedside ultrasound was used to mark the location of maximum pleural effusion thickness. ";
         t = t + "A wide area around the puncture site was prepped with Betadine. ";
-        t = t + "The puncture site was infiltrated with " + volume + " cc of " + anesthetic + ". ";
+        t = t + "The puncture site was infiltrated with " + volume + " mL of " + anesthetic + ". ";
         t = t + "The catheter-over-needle was inserted through the intercostal space on the " + side.toLowerCase() + " side, ";
         t = t + "passing just over the rib to avoid the neurovascular bundle, and into the pleural space. ";
         t = t + "The catheter was advanced and the needle was removed.  The catheter was connected to vacuutainer bottles and approximately " + volume2 + " liters ";
