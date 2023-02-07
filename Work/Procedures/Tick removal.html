@@ -63,17 +63,18 @@
     <script>
       header();
       consent('verbal');
-      location();
+      location2();
     </script>
   
     <script>
       function copytext(){
         var consent = getValue("consent");
+        var location = getValue('location');
       //  var location = getValue("location");
         var t = "";
         t = t + "Procedure Note: Tick removal \n";
         
-        t = t + "The procedure was indicated for a tick embedded in the skin on the " + 'location' + ". ";
+        t = t + "The procedure was indicated for a tick embedded in the skin on the " + location + ". ";
         t = t + consent;
        
         t = t + "The tick was grasped by the head using forceps, taking care to avoid squeezing the body, and removed intact. ";
