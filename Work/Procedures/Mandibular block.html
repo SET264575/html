@@ -10,12 +10,12 @@
     <div class="main">
       <h3>Inferior Alveolar Nerve Block</h3>
 
-      <label for = "indication"><b>Indication</b></label><br>
+      <!--label for = "indication"><b>Indication</b></label><br>
       <select id = "indication" onchange="copytext()">
         <option>dental pain</option>
         <option>***</option>
         <option>***</option>
-      </select><br>
+      </select><br-->
 
       <div id = "div_consent"></div>
 
@@ -48,7 +48,7 @@
         var side = getValue("side");
         var t = "Procedure Note: Inferior Alveolar Nerve Block\n";
         t = t +"The block was indicated for "+ indication+". ";
-        t = t + "Using the Halsted approach, "+dose + " cc of ";
+        t = t + "Using the Halsted approach, "+dose + " mL of ";
         t = t + anesthetic;
         t = t + " was injected on the ";
         t = t + side.toLowerCase() + " side. ";
