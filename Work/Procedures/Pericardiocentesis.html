@@ -15,21 +15,20 @@
       </h3>
 
 
-      <h4>Indication</h4>
+      <div class="boxed" value = "Indication">
       <input type = "radio" name = "indication" value = "1" id = "indication1" checked onchange = "copytext()">
-      <label for = "indication1">cardiac tamponade</label><br><br>
-
+      <label for = "indication1">cardiac tamponade</label>
+      </div>
       <div id="id_consent"></div>
 
 
-      <h4>Prep</h4>
+      <div class="boxed" value = "Preparation">
       <input type = "radio" name = "prep" value = "1" id = "prep1" onchange = "copytext()">
       <label for = "0">The patient's chest wall was prepped and draped in the usual sterile fashion.</label><br>
       <input type = "radio" name = "prep" value = "2" id = "prep2" onchange = "copytext()">
       <label for = "1">Because the patient was in extremis, complete sterile conditions could not be observed.</label><br>
-      
+      </div>
       <div id="div_anesthetic"></div>
-      <h4>Results</h4>
       <div id="div_smallvolumefluid"></div>
     </div>
           
@@ -85,9 +84,9 @@
             break;
         }
         
-        t = t + "The puncture site was infiltrated with " + volume + " cc of " + anesthetic + ". ";
+        t = t + "The puncture site was infiltrated with " + volume + " mL of " + anesthetic + ". ";
         t = t + "The procedure was performed under ultrasound guidance.";
-        t = t + "A pericardiocentesis catheter was placed using Seldinger technique with return of " + volume2 + " cc of " + clr + " fluid.";
+        t = t + "A pericardiocentesis catheter was placed using Seldinger technique with return of " + volume2 + " mL of " + clr + " fluid.";
         t = t + "The catheter was secured to the skin with 2-0 Silk suture. ";
         t = t + "After drainage to the pericardial fluid, ultrasound showed decrease in the pericardial effusion.  The patient's vital signs improved. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
