@@ -10,12 +10,12 @@
     <div class="main">
       <h3>Mental Nerve Block</h3>
 
-      <label for = "indication">Indication</label>
+      <!--label for = "indication">Indication</label>
       <select id = "indication" onchange="copytext()">
         <option>laceration repair</option>
         <option>***</option>
         <option>***</option>
-      </select><br>
+      </select><br-->
 
     
       <div id="div_consent"></div>
@@ -49,7 +49,7 @@
         var side = getValue("side");
         var t = "Procedure Note: Mental Block\n";
         t = t +"The block was indicated for "+ indication+". ";
-        t = t + dose + " cc of ";
+        t = t + dose + " mL of ";
         t = t + anesthetic;
         t = t + " was injected on the ";
         t = t + side.toLowerCase() +" side. ";
