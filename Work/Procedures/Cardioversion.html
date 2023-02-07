@@ -38,7 +38,7 @@
         <input type = "radio" name = "sedation" id = "sedation3" onchange = "toggleSedation(false); copytext()">
         <label for = "sedation3">Conscious sedation was not used for the procedure due to patient preference.</label><br><br>
 
-        <div id="div_sedation"></div>
+        <div id="div_sedationUnboxed"></div>
       </div>
     </div>  
    
@@ -54,14 +54,9 @@
     <script>
       header();
       consent('written');
-      sedation(true);
+      sedationUnboxed(true);
     </script>
     
-    <script>
-      function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
-      }
-    </script>
     
     <script>
       function copytext(){
