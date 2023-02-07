@@ -15,7 +15,7 @@
       <div id="div_consent"></div>
 
       <div class="boxed" value="Location">
-      <div id = "div_side"></div>
+      <div id = "div_sideUnboxed"></div>
       </div>
 
       <div id = "div_anesthetic"></div>
@@ -36,7 +36,7 @@
 
       header();
       consent('written');
-      side();
+      sideUnboxed();
       anesthetic();
       smallvolumefluid();
     </script>
@@ -58,8 +58,8 @@
         t = t + "Bedside ultrasound was used to mark the location. ";
         t = t + "A wide area around the puncture site was prepped with Betadine. ";
         t = t + "The puncture site was infiltrated with "+ volume + " cc of " + anesthesia + ". ";
-        t = t + "The catheter-over-needle was inserted on the " + side + " side. ";
-        t = t + "The catheter was advanced and the needle was removed.  The catheter was connected to vacuutainer bottles and approximately " + volume + " liters ";
+        t = t + "The catheter-over-needle was inserted on the " + side.toLowerCase() + " side. ";
+        t = t + "The catheter was advanced and the needle was removed.  The catheter was connected to vacuutainer bottles and approximately " + volume2 + " liters ";
         t = t + "of " + description + " fluid was obtained.  Ascitic fluid was sent to lab for studies. ";
         t = t + "The catheter was then removed. ";
         t = t + "The patient tolerated the procedure well.  There were no complications. ";
