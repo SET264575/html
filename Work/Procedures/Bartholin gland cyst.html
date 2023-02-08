@@ -28,7 +28,7 @@
 
           
 
-      <div id="div_side"></div>
+      <div id="div_sideUnboxed"></div>
     </div>
       <div id="div_anesthetic"></div>
    
@@ -63,7 +63,7 @@
     <script>
       header();
       consent();
-      side();
+      sideUnboxed();
       anesthetic();
       location2();
     </script>
@@ -85,8 +85,8 @@
        
         t = t + consent;
         t = t + "[The patient's nurse] was present throughout the procedure. ";
-        t = t + "The skin over the " + size + " cm abscess on the " + side + " labia was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
-        t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  ";
+        t = t + "The skin over the " + size + " cm abscess on the " + side.toLowerCase() + " labia was prepped with Betadine and infiltrated with "+volume+" mL of "+anesthetic+". ";
+        t = t + "An #11 blade was used to make a "+incision_size+" cm stab incision into the abscess.  ";
         if (culture) {
           t = t + "A wound culture was sent to the lab. ";
         }
