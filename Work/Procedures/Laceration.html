@@ -23,23 +23,23 @@
       
       <div class="Boxed" value = "Wound Exploration">
         <h4>Technique</h4>
-      <input type = "checkbox" id = "bpcuff" onchange = "copytext()">
-      <label for = "bpcuff">A blood pressure cuff was used to help control bleeding.</label><br>
-      <input type = "checkbox" id = "tournicot" onchange = "copytext()">
-      <label for = "tournicot">A tournicot was used to control bleeding.</label><br>
-      <input type = "checkbox" id = "skinhooks" onchange = "copytext()">
-      <label for = "skinhooks">Skin hooks were used.</label><br>
+        <input type = "checkbox" id = "bpcuff" onchange = "copytext()">
+        <label for = "bpcuff">A blood pressure cuff was used to help control bleeding.</label><br>
+        <input type = "checkbox" id = "tournicot" onchange = "copytext()">
+        <label for = "tournicot">A tournicot was used to control bleeding.</label><br>
+        <input type = "checkbox" id = "skinhooks" onchange = "copytext()">
+        <label for = "skinhooks">Skin hooks were used.</label><br>
 
-      <div id="div_contamination"></div>
-      <br>
+        <div id="div_contamination"></div>
+        <br>
         <h4>Inspection of Tendon</h4>
-      <input type = "radio" name = "tendon" value = "0" id = "tendon1" onchange = "copytext()" >
-      <label for = "tendon1">No tendon was visualized through a full range of motion.</label><br>
-      <input type = "radio" name = "tendon"  value = "1" id = "tendon2" onchange = "copytext()">
-      <label for = "tendon2">A tendon was inspected through full range of motion and no injury was found.</label><br>
-      <input type = "radio" name = "tendon" value = "2"  id = "tendon3" onchange = "copytext()">
-      <label for = "tendon3">A tendon was inspected through full range of motion and a injury to the tendon was noted.</label><br><br>
-
+        <input type = "radio" name = "tendon" value = "0" id = "tendon1" onchange = "copytext()" >
+        <label for = "tendon1">No tendon was visualized through a full range of motion.</label><br>
+        <input type = "radio" name = "tendon"  value = "1" id = "tendon2" onchange = "copytext()">
+        <label for = "tendon2">A tendon was inspected through full range of motion and no injury was found.</label><br>
+        <input type = "radio" name = "tendon" value = "2"  id = "tendon3" onchange = "copytext()">
+        <label for = "tendon3">A tendon was inspected through full range of motion and a injury to the tendon was noted.</label><br><br>
+      </div>
       <div id="div_sutures"></div>
     </div>
     
@@ -56,7 +56,7 @@
       consent('verbal');
       wounddescription();
       location2();
-            anesthetic();
+      anesthetic();
       woundpreparation();
       contamination();
 
