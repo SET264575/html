@@ -9,46 +9,47 @@
     <div class="div_header" id= "div_header"></div>
     <div class="main">
       <h3>Lumbar Puncture</h3>
-
-
-      <h4>Indication</h4>
-      <input type = "radio" name = "indication" checked id = "indication0" onchange = "copytext()">
-      <label for = "indication0">meningitis</label><br>
-      <input type = "radio" name = "indication" id = "indication1" onchange = "copytext()">
-      <label for = "indication1">subarachnoid hemorrhage</label><br><br>
-
-
+      <div class="boxed" value="Indication">
+        <input type = "radio" name = "indication" checked id = "indication0" onchange = "copytext()">
+        <label for = "indication0">meningitis</label><br>
+        <input type = "radio" name = "indication" id = "indication1" onchange = "copytext()">
+        <label for = "indication1">subarachnoid hemorrhage</label>
+      </div>
 
       <div id="div_consent"></div>
 
-      <input type = "checkbox" id = "lidocaine" checked onchange= "copytext()">
-      <label for="lidocaine">Lidocaine was used</option><br>
+      <div class="boxed" value="Technique">
+        <input type = "checkbox" id = "lidocaine" checked onchange= "copytext()">
+        <label for="lidocaine">Lidocaine was used</option><br>
 
-      <h4>Needle Size</h4>
-      <input type = "radio" name = "needle"  id = "needle0" onchange = "copytext()">
-      <label for = "needle0">20 gauge</label><br>
-      <input type = "radio" name = "needle"  checked id = "needle1" onchange = "copytext()">
-      <label for = "needle1">22 gauge</label><br>
-      <input type = "radio" name = "needle" id = "needle2" onchange = "copytext()">
-      <label for = "dneedle2">24 gauge</label><br><br>
+        <h4>Needle Size</h4>
+        <input type = "radio" name = "needle"  id = "needle0" onchange = "copytext()">
+        <label for = "needle0">20 gauge</label><br>
+        <input type = "radio" name = "needle"  checked id = "needle1" onchange = "copytext()">
+        <label for = "needle1">22 gauge</label><br>
+        <input type = "radio" name = "needle" id = "needle2" onchange = "copytext()">
+        <label for = "dneedle2">24 gauge</label><br><br>
 
-      <h4>Interspace</h4>
-      <input type = "radio" name = "interspace"  checked id = "interspace0" onchange = "copytext()">
-      <label for = "interspace0">L3-L4</label><br>
-      <input type = "radio" name = "interspace" id = "interspace1" onchange = "copytext()">
-      <label for = "interspace1">L4-L5</label><br><br>
+        <h4>Interspace</h4>
+        <input type = "radio" name = "interspace"  checked id = "interspace0" onchange = "copytext()">
+        <label for = "interspace0">L3-L4</label><br>
+        <input type = "radio" name = "interspace" id = "interspace1" onchange = "copytext()">
+        <label for = "interspace1">L4-L5</label><br><br>
+      </div>
 
-      <h4>Fluid color</h4>
-      <input type = "radio" name = "color" checked id = "color0" onchange = "copytext()">
-      <label for = "color0">clear</label><br>
-      <input type = "radio" name = "color" id = "color1" onchange = "copytext()">
-      <label for = "color1">cloudy</label><br>
-      <input type = "radio" name = "color" id = "color2" onchange = "copytext()">
-      <label for = "color2">bloody</label><br><br>
+      <div class="boxed" value = "Results">
+        <h4>Fluid color</h4>
+        <input type = "radio" name = "color" checked id = "color0" onchange = "copytext()">
+        <label for = "color0">clear</label><br>
+        <input type = "radio" name = "color" id = "color1" onchange = "copytext()">
+        <label for = "color1">cloudy</label><br>
+        <input type = "radio" name = "color" id = "color2" onchange = "copytext()">
+        <label for = "color2">bloody</label><br><br>
 
-      <label for = "pressure">Opening pressure</label>
-      <input type="text" class="zsmalltextarea" id = "pressure" onchange = "copytext()"/><br><br><br><br><br>
+        <label for = "pressure"><b>Opening pressure</b></label><br>
+        <input type="text" class="zsmalltextarea" id = "pressure" onchange = "copytext()"/>
 
+      </div>
         <div class="note">
             <a href="https://coreem.net/core/ultrasound-guided-lumbar-puncture/">Finding landmarks with ultrasound guidance</a><br>
             <a href = "../../ER\Equipment/lp.html" target="_blank">Equipment list</a><br>
