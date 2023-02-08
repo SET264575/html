@@ -8,52 +8,51 @@
   <body>
     <div class="div_header" id= "div_header"></div>
     <div class="main">
-    <h3>Abscess I&D</h3>
-   
-      <div class="boxed" value="Abscess Description"</h4>
-    
-    <label for="size">Abscess Size</label>
-    <select id = "size" onchange = "copytext()">
-      <option value = "0.5">0.5 cm</option>
-      <option value = "1">1 cm</option>
-      <option value = "2">2 cm</option>
-      <option value = "3">3 cm</option>
-      <option value = "4">4 cm</option>
-      <option value = "5">5 cm</option>
-      <option value = "6">6 cm</option>
-      <option value = "7">7 cm</option>
-    </select><br><br>
-
-          
-
-      <div id="div_locationUnboxed"></div>
-    </div>
+      <h3>Abscess I&D</h3>
+      <div class="boxed" value="Abscess Description">
+        <label for="size"><b>Abscess Size</b></label><br>
+        <select id = "size" onchange = "copytext()">
+          <option value = "0.5">0.5 cm</option>
+          <option value = "1">1 cm</option>
+          <option value = "2">2 cm</option>
+          <option value = "3">3 cm</option>
+          <option value = "4">4 cm</option>
+          <option value = "5">5 cm</option>
+          <option value = "6">6 cm</option>
+          <option value = "7">7 cm</option>
+        </select><br><br>
+      </div>
+      
       <div id="div_anesthetic"></div>
    
       <div class="boxed" value="Technique">
-    <label for = "incision_size">Length of incision</label>
-    <select id = "incision_size" onchange = "copytext()">
-      <option value = "1">1 cm</option>
-      <option value = "2">2 cm</option>
-      <option value = "3">3 cm</option>
-      <option value = "4">4 cm</option>
-      <option value = "5">5 cm</option>
-    </select><br><br>
+        <label for = "incision_size"><b>Length of incision</b></label><br>
+        <select id = "incision_size" onchange = "copytext()">
+          <option value = "1">1 cm</option>
+          <option value = "2">2 cm</option>
+          <option value = "3">3 cm</option>
+          <option value = "4">4 cm</option>
+          <option value = "5">5 cm</option>
+        </select><br><br>
 
-      <label for = "amount">Amount of pus</label>
-      <select id = "amount" onchange = 'copytext()'>
+        <label for = "amount"><b>Amount of pus</b></label><br>
+        <select id = "amount" onchange = 'copytext()'>
           <option value = "No">No pus</option>
           <option value = "A small amount of">A small amount</option>
           <option value = "A large amount of">A large amount</option>
-      </select><br><br>
-      <input type = "checkbox" id = "culture" onchange = "copytext()">A wound culture was sent to the lab.</input><br><br>
-      <input type = "checkbox" id = "loculations" onchange = "copytext()">Hemostats were used to break up loculations.</input><br><br>
-      <input type = "checkbox" id = "irrigation" onchange = "copytext()">The cavity was irrigated thoroughly with normal saline.</input><br><br>
-      <input type = "checkbox" id = "drain" onchange = "copytext()">A drain was placed.</input><br><br>
-      <input type = "checkbox" id = "gauze" onchange = "copytext()">The cavity was packed with 1/4" iodoform gauze.</input><br><br>
+        
+        </select><br><br>
+        
+        <input type = "checkbox" id = "culture" onchange = "copytext()">A wound culture was sent to the lab.<br><br>
+        <input type = "checkbox" id = "loculations" onchange = "copytext()">Hemostats were used to break up loculations.<br><br>
+        <input type = "checkbox" id = "irrigation" onchange = "copytext()">The cavity was irrigated thoroughly with normal saline.<br><br>
+        <input type = "checkbox" id = "drain" onchange = "copytext()">A drain was placed.<br><br>
+        <input type = "checkbox" id = "gauze" onchange = "copytext()">The cavity was packed with 1/4" iodoform gauze.<br><br>
+
+
+      </div>
 
     </div>
-</div>
     <footer>
       <div class="dateChanged">12/6/22</div>
       <div class="tested">Works</div>
@@ -86,7 +85,7 @@
         else {
           var t = "Procedure Note: Abscess Incision and Drainage\n";
         }
-        t = t + "The skin over the " + size + " cm abscess on the " + location + " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
+        t = t + "The skin over the " + size + " cm abscess on the " + location.toLowerCase() + " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
         t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  ";
         if (culture) {
           t = t + "A wound culture was sent to the lab. ";
