@@ -17,7 +17,7 @@
       <div id="div_consent"></div>
       
       <div id="div_anesthetic"></div>
-      
+      <div class="boxed" value="Technique">
       <h4>Position</h4>
       <input type = "radio" name = "position" value = "left" id = "left" onchange = "copytext()">
       <label for = "left">2 o'clock (left)</label><br>
@@ -26,14 +26,7 @@
       <!--input type = "radio" name = "position" value = "right and left" onchange = "copytext()">
       <label for = "right and left">2 o'clock & 10 o'clock</label><br--><br>
 
-          <h4>Result</h4>
-      <input type = "radio" name = "result" value = "arterial" id = "result1" onchange = "copytext()">
-      <label for = "result1">arterial blood returned </label><br>
-      <input type = "radio" name = "result" value = "detumescence" id = "result2" onchange = "copytext()">
-      <label for = "result2">detumescence was achieved</label><br>
-  <br>
-
-      <h4>Phenylephrine</h4>
+      <h4>Dose of Phenylephrine Used</h4>
       <label for="dose">Amount used</label><br>
       <select id = "dose" onchange='copytext()'>
         <option value = "0">None</option>
@@ -46,7 +39,16 @@
 
       <input type = "checkbox" id = "multiple" onchange="copytext()">
       <label for = "multiple">Multiple injections were required</label><br><br><br>
+      </div>
       
+      <div class="boxed" value="Results">
+      <input type = "radio" name = "result" value = "arterial" id = "result1" onchange = "copytext()">
+      <label for = "result1">arterial blood returned </label><br>
+      <input type = "radio" name = "result" value = "detumescence" id = "result2" onchange = "copytext()">
+      <label for = "result2">detumescence was achieved</label><br>
+      </div>
+  <br>
+
       <div class="note">
         <a href = "https://coreem.net/core/priapism/">Link to description of procedure technique</a><br>
         <a href = "..\Equipment\priapism.html">Equipment list</a><br>
