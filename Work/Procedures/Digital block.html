@@ -33,7 +33,7 @@
       <div class="boxed" value="Location">
       <div id = "div_side"></div>
 
-      <div id="div_digitcount"></div>
+      <div id="div_finger"></div>
 
       <h4>Type of Digit</h4>
       <input type = "radio" value = "Finger" id = "finger" name = "digit" onchange = "copytext()">
@@ -66,7 +66,7 @@
       header();
       consent('verbal');
       side();
-      digitcount();
+      finger();
       anestheticdigitalblock();
     </script>
   
@@ -77,7 +77,7 @@
         var anesthetic = getValue("anesthetic");
         var volume = getValue("volume");
         var side = getValue("side");
-        var digitcount = getValue("digitcount");
+        var finger = getValue("finger");
         var digit = getValue("digit");
         var location = side + " " + digitcount + " " + digit;
         var aspiration = getValue("aspiration");
