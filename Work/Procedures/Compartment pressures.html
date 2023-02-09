@@ -17,7 +17,7 @@
           
       <div id = "div_consent"></div>
       <div class="boxed" value = "Location">
-          <div id="div_side"></div>
+          <div id="div_sideUnboxed"></div>
         <b>Extremity</b><br>
         <input type="radio" value="Lower Leg" id = "extremity1" checked name="extremity" onchange="copytext()">
         <label for="extremity1">Lower Leg</label><br>
@@ -32,7 +32,7 @@
       <div id="div_anesthetic"></div>
 
           
-      <div class="boxed" value = "Compartments measured">
+      <div class="boxed" value = "Lower Leg Compartments Measured">
           <input type = "checkbox" id = "compartment1" onchange = "copytext()"><label for = "compartment1">Anterior</label><br>
           <input type = "checkbox" id = "compartment2" onchange = "copytext()"><label for = "compartment2">Lateral</label><br>
           <input type = "checkbox" id = "compartment3" onchange = "copytext()"><label for = "compartment3">Posterior superficial</label><br>
@@ -40,7 +40,7 @@
       
       </div>
             
-      <div class="boxed" value = "Compartments measured">
+      <div class="boxed" value = "Forearm Compartments Measured">
           <input type = "checkbox" id = "compartment5" onchange = "copytext()"><label for = "compartment5">Superficial Volar</label><br>
           <input type = "checkbox" id = "compartment8" onchange = "copytext()"><label for = "compartment8">Deep Volar</label><br>
           <input type = "checkbox" id = "compartment6" onchange = "copytext()"><label for = "compartment6">Dorsal</label><br>
@@ -66,7 +66,7 @@
     <script>
       header();
       consent('verbal');
-      side();
+      sideUnboxed();
       anesthetic();
     </script>
   
