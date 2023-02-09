@@ -16,7 +16,7 @@
     </div>
 
                                                
-    <div class="notes">
+    <div class="note">
       <a href = "https://www.merckmanuals.com/professional/injuries-poisoning/how-to-reduce-dislocations-and-subluxations/how-to-reduce-a-lateral-patellar-dislocation">Description of procedure</a><br>
     </div>
     
@@ -33,21 +33,12 @@
         sedation(false);
         side();
       </script>
-      
-    <script>
-      function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
-      }
-    </script>
   
  
     <script>
       function copytext(){
-     //   var location = document.getElementById("location").value;
         var consent = getValue('consent');
         var sedation = getValue("sedation");
-    //    var technique = document.getElementById("technique").value;
-    //    var splint = document.getElementById("splint").value;
         var t = "Procedure Note: Reduction of Patellar Dislocation\n ";
         t = t + consent;
         if (sedation) {
