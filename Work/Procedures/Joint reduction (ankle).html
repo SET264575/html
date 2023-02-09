@@ -13,13 +13,14 @@
       <div id="div_consent"></div>
       <input type = "text" id="indication" value = "ankle reduction" hidden>
       
-      <h4>Sedation</h4>
+      <div class="boxed" value="Sedation">
       <input type = "radio" name = "sedation" id = "sedation1" onchange="toggleSedation(true); copytext()">
       <label for = "sedation1">Conscious sedation was used for this procedure.</label><br>
       <input type = "radio" name = "sedation" id = "sedation2" onchange = "toggleSedation(false); copytext()">
       <label for = "sedation2">Parenteral analgesia provided adequate pain relief and relaxation for the procedure.</label><br><br>
 
-      <div id="div_sedation"></div>
+      <div id="div_sedationUnboxed"></div>
+      </div>
       
     </div>
     <footer>
@@ -34,15 +35,8 @@
       header();
       side();
       consent('written');
-      sedation(true);
+      sedationUnboxed(true);
     </script>
-    
-    <script>
-      function copyEdited() {
-        navigator.clipboard.writeText(document.getElementById("text").value); 
-      }
-    </script>
-  
  
     <script>
       function copytext(){
