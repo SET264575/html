@@ -12,9 +12,9 @@
 
       <div id="div_consent"></div>
       <div class="boxed" value="Location">
-      <div id = "div_side"></div>
+      <div id = "div_sideUnboxed"></div>
 
-      <div id="div_digit"></div>
+      <div id="div_finger"></div>
       <!--label for="digit"><b>Digit</b></label><br>
       <select id = "digit" onchange = "copytext()">
         <option>first</option>
@@ -26,7 +26,7 @@
      
       <br>
         <b>Digit Type</b><br>
-      <input type = "radio" name = "finger" id="finger0" value = "Finger" onchange = "copytext()">
+      <input type = "radio" name = "finger" id="finger0" checked value = "Finger" onchange = "copytext()">
       <label for = "finger0">finger</label><br>
       <input type = "radio" name = "finger" id = "finger1" value = "Toe" onchange = "copytext()">
       <label for = "finger1">toe</label>
@@ -56,8 +56,8 @@
     <script>
       header();
       consent('verbal');
-      side();
-      digit();
+      sideUnboxed();
+      finger();
     </script>
       
     <script>
