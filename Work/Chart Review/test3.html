@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <style>
+      .rad,
+      .set {
+        display: none;
+        opacity: 0;
+      }
+
+      .rad:checked+.set {
+        display: block;
+        opacity: 1;
+      }
+
+      .btn {
+        display: inline-block;
+        border: 2px inset grey;
+        border-radius: 6px;
+        padding: 2px 3px;
+        cursor: pointer
+      }
+
+      .btn:hover {
+        border-color: tomato;
+        color: tomato;
+        transition: .75s ease;
+      }
+
+      legend {
+        font-size: 1.5em
+      }
+    </style>
+  </head>
+  </body>
+    <form id='main'>
+      <fieldset>
+        <legend>SWITCH</legend>
+        <label for='rad0' class='btn'>Analysis & Summary</label>
+        <label for='rad1' class='btn'>Burden of Work</label>
+        <label for='rad2' class='btn'>Reviewers' Effort</label>
+        <label for='rad3' class='btn'>Results of Review</label>
+        <label for='rad4' class='btn'>Survey Results</label>
+        <label for='rad5' class='btn'>Misbehavior</label>
+      </fieldset>
+
+      <input id='rad0' class='rad' name='rad' type='radio'>
+
+      <fieldset class='set'>
+        <legend>Analysis & Summary</legend>
+      </fieldset>
+
+      <input id='rad1' class='rad' name='rad' type='radio'>
+
+      <fieldset class='set'>
+        <legend>Burden of Work</legend>
+      </fieldset>
+      
+            
+      <input id='rad2' class='rad' name='rad' type='radio'>
+
+      <fieldset class='set'>
+        <legend>Reviewers' Effort</legend>
+      </fieldset>
+      
+            
+      <input id='rad3' class='rad' name='rad' type='radio'>
+
+      <fieldset class='set'>
+        <legend>Results of Review</legend>
+      </fieldset>
+      
+            
+      <input id='rad4' class='rad' name='rad' type='radio'>
+
+      <fieldset class='set'>
+        <legend>Survey Results</legend>
+      </fieldset>
+      
+            
+      <input id='rad5' class='rad' name='rad' type='radio'>
+
+      <fieldset class='set'>
+        <legend>Misbehavior</legend>
+      </fieldset>
+      
+    </form>
+  </body>
+</html>
