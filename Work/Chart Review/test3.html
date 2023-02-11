@@ -17,7 +17,8 @@
         border: 2px inset grey;
         border-radius: 6px;
         padding: 2px 3px;
-        cursor: pointer
+        cursor: pointer;
+          width: 100px;
       }
 
       .btn:hover {
@@ -33,19 +34,24 @@
         border: 1px solid black;
         border-collapse: collapse;
       }
+      .td1 {
+        width: 20%;
+      }
     </style>
   </head>
   </body>
     <form id='main'>
-      <fieldset>
-        <legend></legend>
-        <label for='rad0' class='btn'>Analysis & Recommendations</label>
-        <label for='rad1' class='btn'>Burden of Work</label>
-        <label for='rad2' class='btn'>Reviewers' Effort</label>
-        <label for='rad3' class='btn'>Results of Review</label>
-        <label for='rad4' class='btn'>Survey Results</label>
-        <label for='rad5' class='btn'>Misbehavior</label>
-      </fieldset>
+      <!--fieldset>
+        <legend></legend-->
+      <table>
+        <td class = "td1"><label for='rad0' class='btn'>Analysis & Recommendations</label></td>
+        <td class = "td1"><label for='rad1' class='btn'>Burden of Work</label></td>
+        <td class = "td1"><label for='rad2' class='btn'>Reviewers' Effort</label></td>
+        <td class = "td1"><label for='rad3' class='btn'>Results of Review</label></td>
+        <td class = "td1"><label for='rad4' class='btn'>Survey Result</label></td>
+        <td class = "td1"><label for='rad5' class='btn'>Misbehavior</label></td>
+      </table>
+      <!--/fieldset-->
 <br><br>
       <input id='rad0' class='rad' name='rad' type='radio'>
 
@@ -149,7 +155,7 @@
           <tr><td></td><td></td></tr>
         </table>
         <br><br>
-        <h3>Interesting Cases</h3>\
+        <h3>Interesting Cases</h3>
         <table>
           <tr><th>Provider</th><th>Number</th><th>Date</th><th>Comment</th></tr>
           <tr><td></td><td></td><td></td><td></td></tr>
