@@ -20,9 +20,9 @@
 			]
 		},
 		{"text":"Age","contributionText":"age","answers":[
-			{"text":"<65","points":"0","checked":" checked"},
-			{"text":"65-70","points":"1","checked":""},
-     			{"text":">70","points":"2","checked":""}
+			{"text":"<45","points":"0","checked":" checked"},
+			{"text":"45-64","points":"1","checked":""},
+     			{"text":">=65","points":"2","checked":""}
 			]
 		},
 		{"text":"Risk factors","contributionText":"risk factors","answers":[
