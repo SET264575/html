@@ -26,7 +26,7 @@
       <div class='boxed' value="Sedation">
         <input type = "radio" name = "sedation" value = "3" id = "sedation3" onchange = "copytext()">
         <label for = "sedation3">The patient was sedated with 20 mg of etomidate and paralyzed with 100 mg of succinylcholine.</label><br>
-        <input type = "radio" name = "sedation" value = "0" id = "sedation0" onchange = "copytext()">
+        <input type = "radio" name = "sedation" value = "4" id = "sedation0" onchange = "copytext()">
         <label for = "sedation0">The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
         <input type = "radio" name = "sedation" value = "1" id = "sedation1" onchange = "copytext()">
         <label for = "sedation1">The patient did not require sedation due to their mental status and was paralyzed with 150 mg of succinylcholine.</label><br>
@@ -52,7 +52,7 @@
         </select><br>
 
         <h4>Secured location</h4>
-        <input type = "radio" name = "secured_location" value = "0" id = "secured_location0" onchange = "copytext()">
+        <input type = "radio" name = "secured_location" value = "3" id = "secured_location0" onchange = "copytext()">
         <label for = "secured_location0">teeth</label><br>
         <input type = "radio" name = "secured_location" value = "1" id = "secured_location1" onchange = "copytext()">
         <label for = "secured_location1">lip</label><br>
@@ -62,7 +62,7 @@
 
       <div class="boxed" value = "Result">
         <h4>Oxygen saturation</h4>
-        <input type = "radio" name = "oxygen_saturation" value = "0" id = "oxygen_saturation0" onchange = "copytext()">
+        <input type = "radio" name = "oxygen_saturation" value = "2" id = "oxygen_saturation0" onchange = "copytext()">
         <label for = "oxygen_saturation0">improved</label><br>
         <input type = "radio" name = "oxygen_saturation" value = "1" id = "oxygen_saturation1" onchange = "copytext()">
         <label for = "oxygen_saturation1">remained stable</label>
@@ -113,7 +113,9 @@
         t =t + consent;
 
         switch(sedation){
-          case "0":
+          case "3":
+            t = t + "The patient was sedated with 20 mg of etomidate and paralyzed with 100 mg of succinylcholine.";
+          case "4":
             t = t + "The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.";
             break;
           case "1":
@@ -127,7 +129,7 @@
         t = t + depth + " cm at the ";
 
         switch(secured_location){
-          case "0":
+          case "3":
             t = t + "teeth";
             break;
           case "1":
@@ -141,7 +143,7 @@
         t = t + "and epigastrium, fog in the tube, and capnography.  The patient's oxygen saturation ";
         
         switch(oxygen_saturation){
-          case "0":
+          case "2":
             t = t + "improved";
             break;
           case "1":
