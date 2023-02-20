@@ -61,7 +61,7 @@
       </div>
 
       <div class="boxed" value = "Result">
-        <h4>Oxygen saturation</h4>
+        <b>Oxygen saturation</b><br>
         <input type = "radio" name = "oxygen_saturation" value = "2" id = "oxygen_saturation0" onchange = "copytext()">
         <label for = "oxygen_saturation0">improved</label><br>
         <input type = "radio" name = "oxygen_saturation" value = "1" id = "oxygen_saturation1" onchange = "copytext()">
@@ -93,7 +93,7 @@
         var depth = getValue("depth");
         var secured_location = getValue("secured_location");
         var oxygen_saturation = getValue("oxygen_saturation");
-        console.log(sedation);
+
         var t = "Procedure Note: Intubation\n";
         
         if (student){
