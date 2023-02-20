@@ -24,48 +24,48 @@
       <div id="div_consent"></div>
 
       <div class='boxed' value="Sedation">
-      <input type = "radio" name = "sedation" value = "3" id = "sedation3" onchange = "copytext()">
-      <label for = "sedation3">The patient was sedated with 20 mg of etomidate and paralyzed with 100 mg of succinylcholine.</label><br>
-      <input type = "radio" name = "sedation" value = "0" id = "sedation0" onchange = "copytext()">
-      <label for = "sedation0">The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
-      <input type = "radio" name = "sedation" value = "1" id = "sedation1" onchange = "copytext()">
-      <label for = "sedation1">The patient did not require sedation due to their mental status and was paralyzed with 150 mg of succinylcholine.</label><br>
-      <input type = "radio" name = "sedation" value = "2" id = "sedation2" onchange = "copytext()">
-      <label for = "sedation2">The patient did not require sedation or paralysis.</label>
+        <input type = "radio" name = "sedation" value = "3" id = "sedation3" onchange = "copytext()">
+        <label for = "sedation3">The patient was sedated with 20 mg of etomidate and paralyzed with 100 mg of succinylcholine.</label><br>
+        <input type = "radio" name = "sedation" value = "0" id = "sedation0" onchange = "copytext()">
+        <label for = "sedation0">The patient was sedated with 20 mg of etomidate and paralyzed with 150 mg of succinylcholine.</label><br>
+        <input type = "radio" name = "sedation" value = "1" id = "sedation1" onchange = "copytext()">
+        <label for = "sedation1">The patient did not require sedation due to their mental status and was paralyzed with 150 mg of succinylcholine.</label><br>
+        <input type = "radio" name = "sedation" value = "2" id = "sedation2" onchange = "copytext()">
+        <label for = "sedation2">The patient did not require sedation or paralysis.</label>
       </div>
       <div class="boxed" value="Technique">
-      <label for="tube_size"><b>Tube size</b></label><br>
-      <select id = "tube_size" onchange = "copytext()">
-        <option>8.0</option>
-        <option>7.5</option>
-        <option>7.0</option>
-        <option>6.5</option>
-      </select><br>
+        <label for="tube_size"><b>Tube size</b></label><br>
+        <select id = "tube_size" onchange = "copytext()">
+          <option>8.0</option>
+          <option>7.5</option>
+          <option>7.0</option>
+          <option>6.5</option>
+        </select><br>
 
-      <label for="depth"><b>Depth</b></label><br>
-      <select id = "depth" onchange = "copytext()">
-        <option>22</option>
-        <option>23</option>
-        <option>24</option>
-        <option>25</option>
-        <option>26</option>
-      </select><br>
+        <label for="depth"><b>Depth</b></label><br>
+        <select id = "depth" onchange = "copytext()">
+          <option>22</option>
+          <option>23</option>
+          <option>24</option>
+          <option>25</option>
+          <option>26</option>
+        </select><br>
 
-      <h4>Secured location</h4>
-      <input type = "radio" name = "secured_location" value = "0" id = "secured_location0" onchange = "copytext()">
-      <label for = "secured_location0">teeth</label><br>
-      <input type = "radio" name = "secured_location" value = "1" id = "secured_location1" onchange = "copytext()">
-      <label for = "secured_location1">lip</label><br>
-      <input type = "radio" name = "secured_location" value = "2" id = "secured_location2" onchange = "copytext()">
-      <label for = "secured_location2">gum</label>
+        <h4>Secured location</h4>
+        <input type = "radio" name = "secured_location" value = "0" id = "secured_location0" onchange = "copytext()">
+        <label for = "secured_location0">teeth</label><br>
+        <input type = "radio" name = "secured_location" value = "1" id = "secured_location1" onchange = "copytext()">
+        <label for = "secured_location1">lip</label><br>
+        <input type = "radio" name = "secured_location" value = "2" id = "secured_location2" onchange = "copytext()">
+        <label for = "secured_location2">gum</label>
       </div>
 
       <div class="boxed" value = "Result">
-      <h4>Oxygen saturation</h4>
-      <input type = "radio" name = "oxygen_saturation" value = "0" id = "oxygen_saturation0" onchange = "copytext()">
-      <label for = "oxygen_saturation0">improved</label><br>
-      <input type = "radio" name = "oxygen_saturation" value = "1" id = "oxygen_saturation1" onchange = "copytext()">
-      <label for = "oxygen_saturation1">remained stable</label>
+        <h4>Oxygen saturation</h4>
+        <input type = "radio" name = "oxygen_saturation" value = "0" id = "oxygen_saturation0" onchange = "copytext()">
+        <label for = "oxygen_saturation0">improved</label><br>
+        <input type = "radio" name = "oxygen_saturation" value = "1" id = "oxygen_saturation1" onchange = "copytext()">
+        <label for = "oxygen_saturation1">remained stable</label>
       </div>
     </div>
     
@@ -93,6 +93,7 @@
         var depth = getValue("depth");
         var secured_location = getValue("secured_location");
         var oxygen_saturation = getValue("oxygen_saturation");
+        console.log(sedation);
         var t = "Procedure Note: Intubation\n";
         
         if (student){
