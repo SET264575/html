@@ -3,10 +3,16 @@
     <textarea id = "text" onchange="sortPt(this.value)"></textarea>
     <p id = "results"></p>
     <script>
+      
+      class Pt() {
+        
+      }
+      
       function sortPt(t) {
         a = t.split('\n')
         
-        example = "550
+/*        example = "
+        550
  
 Sam G Sparks, MD
 Wilson Hospital Center
@@ -48,11 +54,16 @@ Hypotension
 In Room 
 Washington,K
         
-Jen H        "
-        console.log(example)
-        for (i = 0; i< len(a);i++) {
-          console.log(i,a[i])
-        }
+Jen H        " 
+*/
+        count = len(a)/11;
+        console.log(count);
+        b = []
+  for (i =0; i < count; i++) {
+    b[i] = a.slice(i*11,(i+1)*11);
+    console.log(i,b[i]);
+  }
+        
       }
     </script>
   </body>
