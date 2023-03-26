@@ -65,12 +65,12 @@ Washington,K
 Jen H        " 
 */
         console.log('a.length',a.length);
-        count = a.length/11;
+        count = a.length/11-1;
         console.log(count);
         pts = [];
         b = [];
   for (i =0; i < count; i++) {
-    b[i] = a.slice(i*11-1,(i+1)*11-1);
+    b[i] = a.slice((i+1)*11-1,10+(i+2)*11-1);
     pts.push(b[i]);
     console.log(i,b[i]);
     console.log(pts[i].name);
