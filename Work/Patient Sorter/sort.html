@@ -4,6 +4,8 @@
       table, td, th {
         paddingx: 20px;
       }
+    </style>
+  </head>
   <body>
     <textarea id = "text" onchange="sortPt(this.value)" style="rows: 40; cols: 40"></textarea>
     <p id = "results"></p>
@@ -85,15 +87,19 @@ Jen H        "
     pts.push(new Pt(b[i]));
   }
 
-        document.getElementById("results").innerHTML = sorttable(pts);
+        document.getElementById("results").innerHTML = sorttable(pts,"All");
+        document.getElementById("unassigned").innerHTML = sorttable(pts,"Unassigned");
+        document.getElementById("mine").innerHTML = sorttable(pts,"Steven Scott, MD")
       }
       
-      function sorttable(p) {
-        p.sort(function(a,b) {return a.name - b.name});
+      function sorttable(p,provider) {
+        p.sort(function(a,b) {return a.time - b.time});
         t = "<table>";
         t = t + "<tr><th>Name</th><th>Time</th><th>Room</th><th>Status</th><th>Rating</th></tr>"
         for (i = 0; i<pts.length;i++) {
-          t = t + "<tr><td>"+p[i].name +"</td><td>"+ p[i].time + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td><td>"+ p[i].rating+"</td></tr>";
+          if ((p[i].provider == provider) || (provider == "All")) {
+            t = t + "<tr><td>"+p[i].name +"</td><td>"+ p[i].time + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td><td>"+ p[i].rating+"</td></tr>";
+          }
         }
         t=t+"</table>";
         return(t);
