@@ -65,18 +65,19 @@ Washington,K
         
 Jen H        " 
 */
-        console.log('a.length',a.length);
+
         count = a.length/11-1;
-        console.log(count);
         pts = [];
         b = [];
   for (i =0; i < count; i++) {
     b[i] = a.slice((i+1)*11-1,10+(i+2)*11-1);
     pts.push(new Pt(b[i]));
-    console.log(i,b[i]);
-    console.log(pts[i].name);
   }
-        
+        t = "";
+        for (i = 0; i<pts.length;i++) {
+          t = t + pts[i].name + " " + pts[i].time + " " + pts[i].room + " " + pts[i].status + " " + pts[i].rating+"<br>";
+        }
+        document.getElementById("results").innerHTML = t;
       }
     </script>
   </body>
