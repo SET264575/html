@@ -6,6 +6,7 @@
       class Pt {
         constructor (c) {
           this.name = c[0];
+          console.log(c[0]);
           this.age = c[1];
           this.room = c[3];
           this.complaint = c[4];
@@ -71,7 +72,7 @@ Jen H        "
         b = [];
   for (i =0; i < count; i++) {
     b[i] = a.slice((i+1)*11-1,10+(i+2)*11-1);
-    pts.push(b[i]);
+    pts.push(Pt(b[i]));
     console.log(i,b[i]);
     console.log(pts[i].name);
   }
