@@ -79,12 +79,18 @@ Jen H        "
     b[i] = a.slice((i+1)*11-1,10+(i+2)*11-1);
     pts.push(new Pt(b[i]));
   }
+
+        document.getElementById("results").innerHTML = sorttable(pts);
+      }
+      
+      function sorttable(p) {
+        p.sort(function(a,b) {return a.name - b.name});
         t = "<table>";
         for (i = 0; i<pts.length;i++) {
-          t = t + "<tr><td>"+pts[i].name +"</td><td>"+ pts[i].time + "</td><td>"+ pts[i].room + "</td><td>"+ pts[i].status + "</td><td>"+ pts[i].rating+"</td></tr>";
+          t = t + "<tr><td>"+p[i].name +"</td><td>"+ p[i].time + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td><td>"+ p[i].rating+"</td></tr>";
         }
         t=t+"</table>";
-        document.getElementById("results").innerHTML = t;
+        return(t);
       }
     </script>
   </body>
