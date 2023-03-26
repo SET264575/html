@@ -70,7 +70,7 @@ Jen H        "
         pts = [];
         b = [];
   for (i =0; i < count; i++) {
-    b[i] = a.slice(i*11,(i+1)*11);
+    b[i] = a.slice(i*11-1,(i+1)*11-1);
     pts.push(b[i]);
     console.log(i,b[i]);
     console.log(pts[i].name);
