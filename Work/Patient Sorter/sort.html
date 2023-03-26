@@ -1,4 +1,8 @@
 <html>
+  <head>
+    <style>
+      table, td, th {
+      }
   <body>
     <textarea id = "text" onchange="sortPt(this.value)" style="rows: 40; cols: 40"></textarea>
     <p id = "results"></p>
@@ -86,6 +90,7 @@ Jen H        "
       function sorttable(p) {
         p.sort(function(a,b) {return a.name - b.name});
         t = "<table>";
+        t = t + "<tr><th>Name</th><th>Time</th><th>Room</th><th>Status</th><th>Rating</th></tr>"
         for (i = 0; i<pts.length;i++) {
           t = t + "<tr><td>"+p[i].name +"</td><td>"+ p[i].time + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td><td>"+ p[i].rating+"</td></tr>";
         }
