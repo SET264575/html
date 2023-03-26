@@ -79,10 +79,11 @@ Jen H        "
     b[i] = a.slice((i+1)*11-1,10+(i+2)*11-1);
     pts.push(new Pt(b[i]));
   }
-        t = "";
+        t = "<table>";
         for (i = 0; i<pts.length;i++) {
-          t = t + pts[i].name + " " + pts[i].time + " " + pts[i].room + " " + pts[i].status + " " + pts[i].rating+"<br>";
+          t = t + "<tr><td>"+pts[i].name +"</td><td>"+ pts[i].time + "</td><td>"+ pts[i].room + "</td><td>"+ pts[i].status + "</td><td>"+ pts[i].rating+"</td></tr>";
         }
+        t=t+"</table>";
         document.getElementById("results").innerHTML = t;
       }
     </script>
