@@ -2,17 +2,27 @@
   <head>
     <style>
       table, td, th {
-        paddingx: 20px;
+        xpad: 20px;
+	  text-align: center;
       }
+
+.centered {
+display: flex;
+justify-content: center;
+
+}
     </style>
   </head>
   <body>
-    <textarea id = "text" onchange="sortPt(this.value)" style="rows: 40; cols: 40"></textarea>
+<div class="centered">
+    <textarea id = "text" onchange="sortPt(this.value)" onfocusin="this.value=''" rows="10" cols="80"></textarea>
+</div>
     <p id = "results"></p>
     <h4>Unassigned</h4>
     <p id = "unassigned"></p>
     <h4>Mine</h4>
     <p id = "mine"></p>
+
     
     
     <script>
@@ -52,7 +62,7 @@ Motor Vehicle Crash
 (4) Less Urgent 
 1h 57m 
 Ready for Discharge 
-Sparks,S
+Unassigned
  
 Jen H
 PINK,MARK 
@@ -63,7 +73,40 @@ Abdominal Pain
 (3) Urgent 
 1h 53m 
 With Doctor 
+Unassigned
+ 
+Jen H
+BLANK,YUKI 
+750 M 
+ED Main 
+ED05 
+Hypotension 
+(1) Resuscitation 
+1h 49m 
+In Room 
 Washington,K
+        
+Jen H        " 
+RED,BILL 
+25 M 
+ED Main 
+ED02 
+Motor Vehicle Crash 
+(4) Less Urgent 
+1h 7m 
+Ready for Discharge 
+Unassigned
+ 
+Jen H
+PINK,MARK 
+300 F 
+ED Main 
+ED03 
+Abdominal Pain 
+(3) Urgent 
+2h 53m 
+With Doctor 
+Unassigned
  
 Jen H
 BLANK,YUKI 
@@ -87,18 +130,18 @@ Jen H        "
     pts.push(new Pt(b[i]));
   }
 
-        document.getElementById("results").innerHTML = sorttable(pts,"All");
+       // document.getElementById("results").innerHTML = sorttable(pts,"All");
         document.getElementById("unassigned").innerHTML = sorttable(pts,"Unassigned");
-        document.getElementById("mine").innerHTML = sorttable(pts,"Steven Scott, MD")
+        document.getElementById("mine").innerHTML = sorttable(pts,"Sco")
       }
       
       function sorttable(p,provider) {
-        p.sort(function(a,b) {return a.time - b.time});
+        p.sort(function(a,b) {return (b.time < a.time?-1:1)});
         t = "<table>";
-        t = t + "<tr><th>Name</th><th>Time</th><th>Room</th><th>Status</th><th>Rating</th></tr>"
+        t = t + '<tr><th style="width: 80px">Time</th><th style="width: 200px">Rating</th><th style="width: 200px">Complaint</th><th style="width: 200px">Name</th><th style="width: 80px">Room</th><th style="width: 200px">Status</th></tr>'
         for (i = 0; i<pts.length;i++) {
-          if ((p[i].provider == provider) || (provider == "All")) {
-            t = t + "<tr><td>"+p[i].name +"</td><td>"+ p[i].time + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td><td>"+ p[i].rating+"</td></tr>";
+          if ((p[i].provider.startsWith(provider)) || (provider == "All")) {
+            t = t + "<tr><td>"+p[i].time +"</td><td>"+ p[i].rating + "</td><td>"+ p[i].complaint + "</td><td>"+ p[i].name + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td></tr>";
           }
         }
         t=t+"</table>";
@@ -107,4 +150,3 @@ Jen H        "
     </script>
   </body>
 </html>
-      
