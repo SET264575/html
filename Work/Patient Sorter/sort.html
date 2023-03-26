@@ -3,7 +3,18 @@
     <textarea id = "text" onchange="sortPt(this.value)"></textarea>
     <p id = "results"></p>
     <script>
-      
+      class Pt {
+        constructor (c) {
+          this.name = c[0];
+          this.age = c[1];
+          this.room = c[3];
+          this.complaint = c[4];
+          this.rating = c[5];
+          this.time = c[6];
+          this.status = c[7];
+          this.provider = c[8];
+        }
+      }
       
       function sortPt(t) {
         a = t.split('\n')
@@ -53,7 +64,8 @@ Washington,K
         
 Jen H        " 
 */
-        count = len(a)/11;
+        console.log('a.length',a.length);
+        count = a.length/11;
         console.log(count);
         b = []
   for (i =0; i < count; i++) {
