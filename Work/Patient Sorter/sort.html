@@ -1,6 +1,6 @@
 <html>
   <body>
-    <textarea id = "text" onchange="sortPt(this.value)"></textarea>
+    <textarea id = "text" onchange="sortPt(this.value)" style="rows: 40; columns: 40"></textarea>
     <p id = "results"></p>
     <script>
       class Pt {
@@ -72,7 +72,7 @@ Jen H        "
         b = [];
   for (i =0; i < count; i++) {
     b[i] = a.slice((i+1)*11-1,10+(i+2)*11-1);
-    pts.push(Pt(b[i]));
+    pts.push(new Pt(b[i]));
     console.log(i,b[i]);
     console.log(pts[i].name);
   }
