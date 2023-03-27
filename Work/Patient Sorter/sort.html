@@ -38,6 +38,7 @@ p {
     <script>
       class Pt {
         constructor (c) {
+console.log(c);
           this.name = c[0];
           console.log(c[0]);
           this.age = c[1];
@@ -63,13 +64,18 @@ p {
 		}
 		this.sortableTime = this.sortableTime + tmp[i];
 	    }
+console.log(c[7]);
           this.status = c[7];
+console.log(c[8]);
           this.provider = c[8].toUpperCase();
         }
       }
       
       function sortPt(t) {
-	  t = t.replace('\nCCD (Ack)','');
+	  t = t.replaceAll('\nCCD (Ack)\n','');
+	  t = t.replaceAll('Waiting Room','Waiting Room\n');
+        t = t.replaceAll('UP,E','up,e');
+console.log(t);
         a = t.split('\n')
         
 /*        example = "
@@ -151,25 +157,43 @@ Washington,K
 Jen H        " 
 */
 
-/* Get Provider's Name */
-		temp = a[2].split(',');
-console.log(temp);
-		temp2 = temp[0].split(' ');
-console.log(temp2);
-		lastName = temp2[temp2.length-1].toUpperCase();
+	lastName = getProviderName(a[2]);
 
-/*Get patients */
+
         count = a.length/11-1;
         pts = [];
         b = [];
-  for (let i =0; i < count; i++) {
+  /*  for (let i =0; i < count; i++) {
     b[i] = a.slice((i+1)*11-1,10+(i+2)*11-1);
     pts.push(new Pt(b[i]));
   }
+*/
+
+	ptIndex = [];
+	for (let i = 10; i< a.length; i++) {
+		if (a[i] == a[i].toUpperCase() && a[i].includes(',') && a[i].trim() != '') {
+			console.log('*'+a[i]+'*');
+			ptIndex.push(i);
+		}
+	}
+	ptIndex.push(a.length);
+	for (let i = 0; i<ptIndex.length-1; i++) {
+		b[i]  = a.slice((ptIndex[i]),ptIndex[i+1]-1);
+		pts.push(new Pt(b[i]));
+	}
+		
 
         document.getElementById("unassigned").innerHTML = sorttable(pts,"SIGN");
         document.getElementById("mine").innerHTML = sortMine(pts,lastName.substr(0,3));
       }
+
+      function getProviderName(name) {
+		temp = name.split(',');
+		temp2 = temp[0].split(' ');
+		return (temp2[temp2.length-1].toUpperCase());
+	}
+
+
       
       function sorttable(p,provider) {
         p.sort(function(a,b) {return (b.sortableTime < a.sortableTime?-1:1)});
