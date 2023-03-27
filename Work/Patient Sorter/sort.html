@@ -3,6 +3,7 @@
     <style>
       table, td, th {
         xpad: 20px;
+	  margin: 20px;
 	  text-align: center;
       }
 
@@ -11,16 +12,25 @@ display: flex;
 justify-content: center;
 
 }
+
+p {
+	border: 1px solid black;
+}
+
     </style>
   </head>
   <body>
 <div class="centered">
     <textarea id = "text" onchange="sortPt(this.value)" onfocusin="this.value=''" rows="10" cols="80"></textarea>
 </div>
-    <p id = "results"></p>
+<div class="centered">
     <h4>Unassigned</h4>
+</div>
     <p id = "unassigned"></p>
+<br><br>
+<div class="centered">
     <h4>Mine</h4>
+</div>
     <p id = "mine"></p>
 
     
@@ -31,12 +41,30 @@ justify-content: center;
           this.name = c[0];
           console.log(c[0]);
           this.age = c[1];
-          this.room = c[3];
+	    if (c[3].length == "") {
+		this.room = "Waiting Room"
+	    }
+	    else {
+          	this.room = c[3].substr(2,3);
+          }
           this.complaint = c[4];
           this.rating = c[5];
-          this.time = c[6];
+	    this.time = c[6];
+	    let tmp = "0h "+c[6];
+	    tmp = tmp.split(' ');
+          tmp = tmp.splice(tmp.length-3,2);
+          this.sortableTime = '';
+	    for (let i = 0; i<tmp.length;i++) {
+		if (tmp[i].length==2) {
+		  this.sortableTime = this.sortableTime + " 0";
+		}
+		else {
+		  this.sortableTime = this.sortableTime + " ";
+		}
+		this.sortableTime = this.sortableTime + tmp[i];
+	    }
           this.status = c[7];
-          this.provider = c[8];
+          this.provider = c[8].toUpperCase();
         }
       }
       
@@ -46,7 +74,7 @@ justify-content: center;
 /*        example = "
         550
  
-Sam G Sparks, MD
+Sam G Washington, MD
 Wilson Hospital Center
 Find Patient
 My List
@@ -73,7 +101,7 @@ Abdominal Pain
 (3) Urgent 
 1h 53m 
 With Doctor 
-Unassigned
+Sign Up
  
 Jen H
 BLANK,YUKI 
@@ -95,7 +123,7 @@ Motor Vehicle Crash
 (4) Less Urgent 
 1h 7m 
 Ready for Discharge 
-Unassigned
+SIGN_UP,E
  
 Jen H
 PINK,MARK 
@@ -106,7 +134,7 @@ Abdominal Pain
 (3) Urgent 
 2h 53m 
 With Doctor 
-Unassigned
+SIGN_UP,E
  
 Jen H
 BLANK,YUKI 
@@ -121,27 +149,44 @@ Washington,K
         
 Jen H        " 
 */
-
+		temp = a[2].split(',');
+console.log(temp);
+		temp2 = temp[0].split(' ');
+console.log(temp2);
+		lastName = temp2[temp2.length-1].toUpperCase();
+	  console.log(lastName);
         count = a.length/11-1;
         pts = [];
         b = [];
-  for (i =0; i < count; i++) {
+  for (let i =0; i < count; i++) {
     b[i] = a.slice((i+1)*11-1,10+(i+2)*11-1);
     pts.push(new Pt(b[i]));
   }
 
-       // document.getElementById("results").innerHTML = sorttable(pts,"All");
-        document.getElementById("unassigned").innerHTML = sorttable(pts,"Unassigned");
-        document.getElementById("mine").innerHTML = sorttable(pts,"Sco")
+        document.getElementById("unassigned").innerHTML = sorttable(pts,"SIGN");
+        document.getElementById("mine").innerHTML = sortMine(pts,lastName.substr(0,3));
       }
       
       function sorttable(p,provider) {
-        p.sort(function(a,b) {return (b.time < a.time?-1:1)});
+        p.sort(function(a,b) {return (b.sortableTime < a.sortableTime?-1:1)});
         t = "<table>";
-        t = t + '<tr><th style="width: 80px">Time</th><th style="width: 200px">Rating</th><th style="width: 200px">Complaint</th><th style="width: 200px">Name</th><th style="width: 80px">Room</th><th style="width: 200px">Status</th></tr>'
+        t = t + '<tr><th style="width: 80px">Time</th><th style="width: 200px">ESI</th><th style="width: 200px">Complaint</th><th style="width: 200px">Name</th><th style="width: 80px">Room</th><th style="width: 200px">Status</th></tr>'
         for (i = 0; i<pts.length;i++) {
           if ((p[i].provider.startsWith(provider)) || (provider == "All")) {
-            t = t + "<tr><td>"+p[i].time +"</td><td>"+ p[i].rating + "</td><td>"+ p[i].complaint + "</td><td>"+ p[i].name + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td></tr>";
+            t = t + "<tr><td>"+p[i].time +"</td><td>"+ p[i].sortableTime + "</td><td>"+ p[i].complaint + "</td><td>"+ p[i].name + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td></tr>";
+          }
+        }
+        t=t+"</table>";
+        return(t);
+      }
+
+      function sortMine(p,provider) {
+        p.sort(function(a,b) {return (a.room < b.room?-1:1)});
+        t = "<table>";
+        t = t + '<tr><th style="width: 80px">Room</th><th style="width: 80px">Time</th><th style="width: 200px">ESI</th><th style="width: 200px">Complaint</th><th style="width: 200px">Name</th><th style="width: 200px">Status</th></tr>'
+        for (i = 0; i<pts.length;i++) {
+          if ((p[i].provider.startsWith(provider)) || (provider == "All")) {
+            t = t + "<tr><td>"+ p[i].room + "</td><td>"+p[i].time +"</td><td>"+ p[i].rating + "</td><td>"+ p[i].complaint + "</td><td>"+ p[i].name + "</td><td>"+ p[i].status + "</td></tr>";
           }
         }
         t=t+"</table>";
