@@ -69,6 +69,7 @@ p {
       }
       
       function sortPt(t) {
+	  t = t.replace('\nCCD (Ack)','');
         a = t.split('\n')
         
 /*        example = "
@@ -149,12 +150,15 @@ Washington,K
         
 Jen H        " 
 */
+
+/* Get Provider's Name */
 		temp = a[2].split(',');
 console.log(temp);
 		temp2 = temp[0].split(' ');
 console.log(temp2);
 		lastName = temp2[temp2.length-1].toUpperCase();
-	  console.log(lastName);
+
+/*Get patients */
         count = a.length/11-1;
         pts = [];
         b = [];
