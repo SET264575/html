@@ -45,6 +45,11 @@ p {
 </div>
     <p id = "unassigned"></p>
 <br><br>
+	  <div class="centered">
+    <h4>Waiting Room</h4>
+</div>
+    <p id = "waiting"></p>
+<br><br>
 <div class="centered">
     <h4>My Patients</h4>
 </div>
@@ -206,6 +211,7 @@ Jen H        "
 		
 
         document.getElementById("unassigned").innerHTML = sorttable(pts,"SIGN");
+	document.getElementById("waiting").innerHTML = sortWaiting(pts);
         document.getElementById("mine").innerHTML = sortMine(pts,lastName.substr(0,3));
       }
 
@@ -223,6 +229,19 @@ Jen H        "
         t = t + '<tr><th>Sepsis</th><th style="width: 80px">Time</th><th style="width: 200px">ESI</th><th style="width: 200px">Complaint</th><th style="width: 200px">Name</th><th style="width: 80px">Room</th><th style="width: 200px">Status</th></tr>'
         for (i = 0; i<pts.length;i++) {
           if (((p[i].provider.startsWith(provider)) || (provider == "All")) && (p[i].provider.location != "Waiting Room")) {
+            t = t + "<tr><td>"+p[i].sepsis+"</td><td>"+p[i].time +"</td><td>"+ p[i].rating + "</td><td>"+ p[i].complaint + "</td><td>"+ p[i].name + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td></tr>";
+          }
+        }
+        t=t+"</table>";
+        return(t);
+      }
+	    
+	function sortWaiting(p) {
+        p.sort(function(a,b) {return (b.sortableTime < a.sortableTime?-1:1)});
+        t = "<table>";
+        t = t + '<tr><th>Sepsis</th><th style="width: 80px">Time</th><th style="width: 200px">ESI</th><th style="width: 200px">Complaint</th><th style="width: 200px">Name</th><th style="width: 80px">Room</th><th style="width: 200px">Status</th></tr>'
+        for (i = 0; i<pts.length;i++) {
+          if (p[i].provider.location == "Waiting Room") {
             t = t + "<tr><td>"+p[i].sepsis+"</td><td>"+p[i].time +"</td><td>"+ p[i].rating + "</td><td>"+ p[i].complaint + "</td><td>"+ p[i].name + "</td><td>"+ p[i].room + "</td><td>"+ p[i].status + "</td></tr>";
           }
         }
