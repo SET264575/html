@@ -58,37 +58,37 @@ console.log(c);
           this.name = c[0];
           console.log(c[0]);
           this.age = c[1];
-	    if (c[3].length == "") {
-		this.room = "Waiting Room"
-	    }
-	    else {
+					if (c[3].length == "") {
+						this.room = "Waiting Room"
+					}
+	   		  else {
           	this.room = c[3].substr(2,3);
           }
           this.complaint = c[4];
           this.rating = c[5];
-	    this.time = c[6];
-	    let tmp = "0h "+c[6];
-	    tmp = tmp.split(' ');
+					this.time = c[6];
+					let tmp = "0h "+c[6];
+					tmp = tmp.split(' ');
           tmp = tmp.splice(tmp.length-3,2);
           this.sortableTime = '';
-	    for (let i = 0; i<tmp.length;i++) {
-		if (tmp[i].length==2) {
-		  this.sortableTime = this.sortableTime + " 0";
-		}
-		else {
-		  this.sortableTime = this.sortableTime + " ";
-		}
-		this.sortableTime = this.sortableTime + tmp[i];
-	    }
+					for (let i = 0; i<tmp.length;i++) {
+						if (tmp[i].length==2) {
+							this.sortableTime = this.sortableTime + " 0";
+						}
+						else {
+							this.sortableTime = this.sortableTime + " ";
+						}
+						this.sortableTime = this.sortableTime + tmp[i];
+	    		}
 console.log(c[7]);
           this.status = c[7];
 console.log(c[8]);
           this.provider = c[8].toUpperCase();
-		if c.join().include("Sepsis") {
-			this.sepsis = "Possible Sepsis";
-		} else {
-			this.sepsis = "";
-		}
+					if (c.join().include("Sepsis")) {
+						this.sepsis = "Possible Sepsis";
+					} else {
+						this.sepsis = "";
+					}
         }
       }
       
