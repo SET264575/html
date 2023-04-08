@@ -216,7 +216,7 @@ p {
       
       function submitData() {
 				let data = getData();
-        window.location.assign('https://docs.google.com/forms/d/e/1FAIpQLSdAzRa0ZVkE76RYWRxprtZxOjwAmPf07rvT-JWOMQvGA3_otw/viewform?usp=pp_url&entry.1549251037='+data);
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLSdAzRa0ZVkE76RYWRxprtZxOjwAmPf07rvT-JWOMQvGA3_otw/viewform?usp=pp_url&entry.1549251037='+data,'_blank');
 			}
 			
 			function getData() {
@@ -250,7 +250,7 @@ p {
 				d.push(hasDispo);
 				let data = '';
 				for (let i = 0; i<d.length; i++) {
-					data = data + d[i].toString+"|";
+					data = data + d[i].toString()+"|";
 				}
 				
 				return(data);
