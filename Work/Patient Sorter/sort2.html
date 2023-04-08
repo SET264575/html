@@ -65,7 +65,8 @@ p {
 	  </div>
     <script>
       
-      var pts = []
+      var pts = [];
+			var providers = [];
       
       class Pt {
         constructor (c) {
@@ -102,6 +103,43 @@ p {
 					}
         }
       }
+			
+			class Provider{
+				constructor(n,c) {
+					this.n = n;
+					this.c = c;
+					this.r = 0;
+				}
+			}
+			
+			var providers = [];
+			providers.append(new Providers('Bard',5425));
+			providers.append(new Providers('Baumstark',3073));
+			providers.append(new Providers('Beasley',6110));
+			providers.append(new Providers('Bulloch',1774));
+			providers.append(new Providers('Fleming',3555));
+			providers.append(new Providers('Gunther',2451));
+			providers.append(new Providers('Hauan',6824));
+			providers.append(new Providers('Heredia',8272));
+			providers.append(new Providers('Maples',1266));
+			providers.append(new Providers('Martinez',2963));
+			providers.append(new Providers('McGovern',2628));
+			providers.append(new Providers('Meyers',6837));
+			providers.append(new Providers('Monaghan',6539));
+			providers.append(new Providers('Murphey',1543));
+			providers.append(new Providers('Oliver',4120));
+			providers.append(new Providers('Pagel',7360));
+			providers.append(new Providers('Parks',6181));
+			providers.append(new Providers('Pelikan',5629));
+			providers.append(new Providers('Peterson',3028));
+			providers.append(new Providers('Pinkerton',3142));
+			providers.append(new Providers('Rackers',4391));
+			providers.append(new Providers('Ray',7335));
+			providers.append(new Providers('Scofield',2009));
+			providers.append(new Providers('Scott',2715));
+			providers.append(new Providers('Wasinger',3638));
+
+											 
       
       function sortPt(t) {
 	      t = t.replaceAll('\nCCD (Ack)\n','');
@@ -182,7 +220,18 @@ p {
 			}
 			
 			function getData() {
-				let data = 'this|is|a|test';
+				deptTotal = str(pts.length);
+				inBed = 0;
+				inWaitingRm = 0;
+				inITC = 0;
+
+				for (let i = 0; i<pts.length; i++){
+					if (pts[i].location == 'Waiting Room') { inWaitingRm++};
+					if (pts[i].location == 'ER') {inBed++};
+					if (pts[i].location == '19') {inITC++};
+				}
+				
+				let data = str(deptTotal)+'|'+str(inWaiting)+'|'+str(inBed)+'|'+str(inITC);
 				return(data);
 			}
 			
