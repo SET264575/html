@@ -230,8 +230,16 @@ p {
 					if (pts[i].location == 'ER') {inBed++};
 					if (pts[i].location == '19') {inITC++};
 				}
+				let d = [];
+				d.push(deptTotal);
+				d.push(inWaiting);
+				d.push(inBed);
+				d.push(inITC);
+				let data = '';
+				for (let i = 0; i<d.length; i++) {
+					data = data + d[i].toString+"|";
+				}
 				
-				let data = str(deptTotal)+'|'+str(inWaiting)+'|'+str(inBed)+'|'+str(inITC);
 				return(data);
 			}
 			
