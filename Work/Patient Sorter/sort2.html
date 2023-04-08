@@ -224,11 +224,13 @@ p {
 				let inBed = 0;
 				let inWaitingRm = 0;
 				let inITC = 0;
+				let rm2 = 0;
 				let unassigned = 0;
 				for (let i = 0; i<pts.length; i++){
 					if (pts[i].location == 'Waiting Room') { inWaitingRm++};
 					if (pts[i].location == 'ER') {inBed++};
 					if (pts[i].location == '19') {inITC++};
+					if (pts[i].location =="02") {rm2++};
 					if (pts[i].provider.startswith('SIGN')) {unassigned++};
 				}
 				
