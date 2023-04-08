@@ -227,6 +227,7 @@ p {
 				let rm2 = 0;
 				let unassigned = 0;
 				let in1718 = 0;
+				let hasDispo = 0;
 				for (let i = 0; i<pts.length; i++){
 					if (pts[i].location == 'Waiting Room') { inWaitingRm++};
 					if (pts[i].location == 'ER') {inBed++};
@@ -234,6 +235,7 @@ p {
 					if (pts[i].location in ['17','18']) {in1718++};
 					if (pts[i].location =="02") {rm2++};
 					if (pts[i].provider.startsWith('SIGN')) {unassigned++};
+					if (pts[i].status in ['Pending Admission','Ready to Assign','Bed Reserved','Admitted Patient','Ready for Discharge','Transfer']) {hasDispo++};
 				}
 				
 				
@@ -245,6 +247,7 @@ p {
 				d.push(inITC);
 				d.push(in1718);
 				d.push(unassigned);
+				d.push(hasDispo);
 				let data = '';
 				for (let i = 0; i<d.length; i++) {
 					data = data + d[i].toString+"|";
