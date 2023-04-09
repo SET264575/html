@@ -257,22 +257,23 @@ p {
 				}
 				roomStatus = [];
 				roomProvider = [];
+				roomTime = [];
 				for (let i = 0; i < 23; i++) {
 					roomStatus.push("Empty");
 					roomProvider.push("");
+					roomTime.push("");
 				}
-				for (let i = 0; i < pts.length) {
+				for (let i = 0; i < pts.length; i++) {
 					if (parseInt(pts[i].room) != NaN) {
 						roomStatus[parseInt(pts[i].room)]=pts[i].status;
-						roomProvider[parseInt(pts[i].provider)] = pts[i].provider;
+						roomProvider[parseInt(pts[i].room)] = pts[i].provider;
+						roomTime[parseInt(pts[i].room)] = pts[i].time;
 					}
 				}
 				for (let i = 0; i<roomStatus.length;i++) {
-					data = data + roomStatus[i]+"|";
+					data = data + i.toString()+"|"+roomStatus[i]+"|"+roomProvider[i]+"|"+roomTime[i]+"|";
 				}
-				for (let i = 0; i<roomProvider.length; i++) {
-					data = data + roomProvider[i]+"|";
-				}
+				
 				
 				return(data);
 			}
