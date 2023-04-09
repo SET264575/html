@@ -255,17 +255,23 @@ p {
 				for (let i = 0; i<d.length; i++) {
 					data = data + d[i].toString()+"|";
 				}
-				roomStatus = []
+				roomStatus = [];
+				roomProvider = [];
 				for (let i = 0; i < 23; i++) {
 					roomStatus.push("Empty");
+					roomProvider.push("");
 				}
 				for (let i = 0; i < pts.length) {
 					if (parseInt(pts[i].room) != NaN) {
 						roomStatus[parseInt(pts[i].room)]=pts[i].status;
+						roomProvider[parseInt(pts[i].provider)] = pts[i].provider;
 					}
 				}
 				for (let i = 0; i<roomStatus.length;i++) {
 					data = data + roomStatus[i]+"|";
+				}
+				for (let i = 0; i<roomProvider.length; i++) {
+					data = data + roomProvider[i]+"|";
 				}
 				
 				return(data);
