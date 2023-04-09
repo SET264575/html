@@ -260,8 +260,8 @@ p {
 				roomTime = [];
 				for (let i = 0; i < 23; i++) {
 					roomStatus.push("Empty");
-					roomProvider.push("");
-					roomTime.push("");
+					roomProvider.push("No Provider");
+					roomTime.push("0h");
 				}
 				for (let i = 0; i < pts.length; i++) {
 					if (parseInt(pts[i].room) != NaN) {
