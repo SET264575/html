@@ -95,7 +95,7 @@ p {
 						this.sortableTime = this.sortableTime + tmp[i];
 	    		}
           this.status = c[7].trim();
-          this.provider = c[8].toUpperCase();
+          this.provider = c[8].toUpperCase().split(',')[0];
 					if (c.join().includes("Sepsis")) {
 						this.sepsis = "Possible Sepsis";
 					} else {
@@ -253,7 +253,7 @@ p {
 				d.push(hasDispo);
 				let data = '';
 				for (let i = 0; i<d.length; i++) {
-					data = data + d[i].toString()+"|";
+					data = data + d[i].toString()+",";
 				}
 				roomStatus = [];
 				roomProvider = [];
@@ -271,7 +271,7 @@ p {
 					}
 				}
 				for (let i = 0; i<roomStatus.length;i++) {
-					data = data + i.toString()+"|"+roomStatus[i]+"|"+roomProvider[i]+"|"+roomTime[i]+"|";
+					data = data + i.toString()+","+roomStatus[i]+","+roomProvider[i]+","+roomTime[i]+",";
 				}
 				
 				
