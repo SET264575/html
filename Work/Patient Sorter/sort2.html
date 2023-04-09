@@ -232,9 +232,6 @@ p {
 				let in1718 = 0;
 				let hasDispo = 0;
 				for (let i = 0; i<pts.length; i++){
-					console.log('provider',pts[i].provider);
-					console.log('status',pts[i].status);
-					console.log('room','*'+pts[i].room+'*');
 					if (pts[i].room == 'Waiting Room') { inWaitingRm++};
 					if (['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22'].includes(pts[i].room)) {inBed++};
 					if (['19','20','21','22'].includes(pts[i].room)) {inITC++};
@@ -257,6 +254,18 @@ p {
 				let data = '';
 				for (let i = 0; i<d.length; i++) {
 					data = data + d[i].toString()+"|";
+				}
+				roomStatus = []
+				for (let i = 0; i < 23; i++) {
+					roomStatus.push("Empty");
+				}
+				for (let i = 0; i < pts.length) {
+					if (parseInt(pts[i].room) != NaN) {
+						roomStatus[parseInt(pts[i].room)]=pts[i].status;
+					}
+				}
+				for (let i = 0; i<roomStatus.length;i++) {
+					data = data + roomStatus[i]+"|";
 				}
 				
 				return(data);
