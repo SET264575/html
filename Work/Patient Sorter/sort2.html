@@ -231,6 +231,9 @@ p {
 				let in1718 = 0;
 				let hasDispo = 0;
 				for (let i = 0; i<pts.length; i++){
+					console.log('location',pts[i].location);
+					console.log('provider',pts[i].provider);
+					console.log('status',pts[i].status);
 					if (pts[i].location == 'Waiting Room') { inWaitingRm++};
 					if (pts[i].location == 'ER') {inBed++};
 					if (pts[i].location in ['19','20','21','22']) {inITC++};
