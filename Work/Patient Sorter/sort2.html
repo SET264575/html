@@ -27,6 +27,8 @@ p {
   <div>
     <textarea id = "text" oninput="sortPt(this.value)" onfocusin="this.value=''" rows="10" cols="80"></textarea>
     <button onclick="submitData()">Submit Department Status Data</button>
+		<h3>Comments</h3>
+		<textarea id="comment"></textarea>
   </div>
 </div>
 <div class="centered">
@@ -219,6 +221,7 @@ p {
       
       function submitData() {
 				let data = getData();
+				let comments = document.getElementById('comment').value;
         window.open('https://docs.google.com/forms/d/e/1FAIpQLSdAzRa0ZVkE76RYWRxprtZxOjwAmPf07rvT-JWOMQvGA3_otw/viewform?usp=pp_url&entry.1549251037='+data,'_blank');
 			}
 			
