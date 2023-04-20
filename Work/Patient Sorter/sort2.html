@@ -22,7 +22,7 @@ p {
   <body>
 
 
-	  Minutes since last update: <p id="time"></p>		  
+	  Minutes since last update: <p style= "border: none" id="time"></p>		  
 <div class="centered">
   <div>
     <textarea id = "text" oninput="sortPt(this.value)" onfocusin="this.value=''" rows="10" cols="80"></textarea>
@@ -66,7 +66,7 @@ p {
 	    <img src="banner.png" width="400">
 	  </div>
     <script>
-      	      setInterval(updateTimer,6000);
+      	      setInterval(updateTimer,60000);
       var pts = [];
 			var providers = [];
 	    var timePassed = 0;
