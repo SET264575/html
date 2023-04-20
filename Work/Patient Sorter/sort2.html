@@ -159,7 +159,7 @@ p {
 
 	      ptIndex = [];
         for (let i = 10; i< a.length; i++) {
-          if (a[i] == a[i].toUpperCase() && a[i].includes(',') && a[i].trim() != '') {
+          if( (a[i] == a[i].toUpperCase() && a[i].includes(',') && a[i].trim() != '') || (a[i].includes(',') && !isNaN(parseInt(a[i+1])))){
             console.log('*'+a[i]+'*');
             ptIndex.push(i);
           }
