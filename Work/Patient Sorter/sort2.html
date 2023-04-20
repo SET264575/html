@@ -66,7 +66,7 @@ p {
 	    <img src="banner.png" width="400">
 	  </div>
     <script>
-      
+      	      setInterval(updateTimer,6000);
       var pts = [];
 			var providers = [];
 	    var timePassed = 0;
@@ -235,7 +235,7 @@ p {
 	      timePassed = -1;
 	      console.log('getting ready to run updateTimer');
 	      updateTimer();
-	      setInterval(updateTimer,6000);
+
       	}
 			
 			function getData() {
