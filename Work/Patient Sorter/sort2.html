@@ -22,7 +22,7 @@ p {
   <body>
 
 
-		  
+	  Minutes since last update: <p id="time"></p>		  
 <div class="centered">
   <div>
     <textarea id = "text" oninput="sortPt(this.value)" onfocusin="this.value=''" rows="10" cols="80"></textarea>
@@ -69,6 +69,7 @@ p {
       
       var pts = [];
 			var providers = [];
+	    var timePassed = 0;
       
       class Pt {
         constructor (c) {
@@ -218,6 +219,10 @@ p {
         t=t+"</table>";
         return(t);
       }
+	    
+	    function updateTimer(){
+		    timePassed++;
+		    document.getElementById("time").value = timePassed;
       
       function submitData() {
 				let data = getData();
@@ -225,6 +230,9 @@ p {
         window.open('https://docs.google.com/forms/d/e/1FAIpQLSdAzRa0ZVkE76RYWRxprtZxOjwAmPf07rvT-JWOMQvGA3_otw/viewform?usp=pp_url&entry.1549251037='+data+'&entry.464386849='+comments,'_blank');
 	document.getElementById('comment').value = "";
 	document.getElementById('text').value = "";
+	      timePassed = -1;
+	      updateTimer();
+	      setTimeInterval(60000,updateTimer);
       	}
 			
 			function getData() {
