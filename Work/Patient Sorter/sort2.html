@@ -267,7 +267,7 @@ p {
 				d.push(in1718);
 				d.push(unassigned);  //works
 				d.push(hasDispo);
-				let data = '';
+				let data = ',';
 				for (let i = 0; i<d.length; i++) {
 					data = data + d[i].toString()+",";
 				}
@@ -287,7 +287,7 @@ p {
 					}
 				}
 				for (let i = 1; i<roomStatus.length;i++) {
-					data = data + "Rm "+i.toString()+","+roomStatus[i]+","+roomProvider[i]+","+roomTime[i]+",";
+					data = data + "Rm "+i.toString()+","+roomStatus[i]+","+roomProvider[i]+","+roomTime[i]+',"';
 				}
 				
 				
