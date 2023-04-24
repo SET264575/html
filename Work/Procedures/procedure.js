@@ -237,6 +237,7 @@ function side() {load('side') }
 function sideUnboxed() {load('sideUnboxed')}
 function header() {load('header'); }
 function finger() {load('finger') }
+function fingerUnboxed() {load('fingerUnboxed')}
 function digit() {load('digit') }
 function location2() {load('location')}
 function locationUnboxed() {load('locationUnboxed')}
