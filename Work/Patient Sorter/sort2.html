@@ -287,9 +287,9 @@ p {
 					}
 				}
 				for (let i = 1; i<roomStatus.length;i++) {
-					data = data + "Rm "+i.toString()+","+roomStatus[i]+","+roomProvider[i]+","+roomTime[i]+',"';
+					data = data + "Rm "+i.toString()+","+roomStatus[i]+","+roomProvider[i]+","+roomTime[i]+',';
 				}
-				
+				data = data + '"';
 				
 				return(data);
 			}
