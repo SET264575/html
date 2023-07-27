@@ -26,7 +26,7 @@ pre {
 <div class="centered">
   <div>
     <textarea id = "text" oninput="parse(this.value)" onfocusin="this.value=''" rows="10" cols="80"></textarea>
-    <textarea id='list'></textarea>
+    <textarea id='list' rows="10" cols="80"></textarea>
   </div>
 </div>
 
@@ -42,7 +42,7 @@ function parse(t) {
   var f = [];
   for (h of g) {
 	  console.log(h);
-    f.push(t.lastIndexOf(h)-h.length);
+    f.push(t.lastIndexOf(h)+h.length);
 	  console.log(f);
   }
   var start = Math.max(...f);
