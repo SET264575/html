@@ -41,7 +41,7 @@ function parse(t) {
   g.push('Fall Precaution');
   var f = [];
   for (h in g) {
-    f.push(t.indexOf(h)-h.length);
+    f.push(t.lastIndexOf(h)-h.length);
 	  console.log(f);
   }
   var start = Math.max(...f);
