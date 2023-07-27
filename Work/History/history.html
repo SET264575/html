@@ -40,7 +40,7 @@ function parse(t) {
   g.push('Line Draw');
   g.push('Fall Precaution');
   var f = [];
-  for (h in g) {
+  for (h of g) {
 	  console.log(h);
     f.push(t.lastIndexOf(h)-h.length);
 	  console.log(f);
