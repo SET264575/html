@@ -95,7 +95,7 @@ function digitalBlockText() {
   if (anestheticTechnique) {
     t = "Procedure Note: Digital Block of " + side + " " + finger + " Finger\n";
     t = t +"The digital block was indicated for "+ indication+". ";
-    t = t + consent;
+   // t = t + consent;
     t = t + "A total of " + volume + " cc of ";
     t = t + anesthetic;
     t = t + " was injected at the base of the digit. ";
