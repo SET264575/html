@@ -56,6 +56,9 @@
       <div class="dateChanged">1/1/23</div>
       <div class="tested">Not tested</div>
       <div class="meetsStandard1"></div>
+
+      <label for = "indication">finger laceration</label>
+      <input type="checkbox" value="finger laceration" id = "indication" checked>
      </footer>
                                                
                             
@@ -97,9 +100,7 @@
         var splint = getValue('splint');
         var t = "";
         
-        console.log(anestheticTechnique);
         if (anestheticTechnique == '1') {
-          console.log('in digitalBlock');
           t = t + digitalBlockText();
         }
         
