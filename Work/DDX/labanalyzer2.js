@@ -1235,6 +1235,7 @@ Ur Bact trace
 					console.log(b[1].trim(),labs[i].symbol);
 					if (b[1].trim() == labs[i].symbol) {
 						console.log("*****MATCH******");
+						console.log(labs[i].name);
 						document.getElementById(labs[i].name).value = b[2];
 					}
 				}
