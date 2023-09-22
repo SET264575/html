@@ -654,7 +654,7 @@ printAbnormalities();
 		results.lactate = parseFloat(document.getElementById('lactate').value);
 		results.phosphorus = parseFloat(document.getElementById('phosphorus').value);
 		results.probnp = parseFloat(document.getElementById('pro bnp').value);
-		results.tsh = parseFloat(document.getElementById('tsh').value);
+		results.tsh = parseFloat(document.getElementById('TSH').value);
 		results['total thyroxine'] = parseFloat(document.getElementById('total thyroxine').value);
 		results.pt = parseFloat(document.getElementById('pt').value);
 		results.inr = parseFloat(document.getElementById('inr').value);
