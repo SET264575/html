@@ -28,8 +28,8 @@ pre {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #dddddd;
-  position: fixed;
+  background-color: lightblue;
+  position: relative;
   top: 0;
   width: 100%;
 }
@@ -47,11 +47,11 @@ pre {
 }
 
 .navli a:hover:not(.active) {
-  background-color: #111;
+  background-color: darkblue;
 }
 
 .navli .active {
-  background-color: #04AA6D;
+  background-color: blue;
 }
 
 /*For collapsible*/
