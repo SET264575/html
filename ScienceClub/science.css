@@ -54,6 +54,7 @@ pre {
 
 .navli a:hover:not(.active) {
   background-color: darkblue;
+  color: white;
 }
 
 .navli .active {
