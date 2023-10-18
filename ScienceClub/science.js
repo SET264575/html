@@ -1,6 +1,6 @@
 
 if (document.getElementById('divHeader') != null) {
-  document.getElementById('divHeader').innerHTML = "<div width='100%' style='position: fixed; top: 0; z-index: 100; opacity: 100%; background: gray;'>\
+  document.getElementById('divHeader').innerHTML = "<div width='1000px' style='position: fixed; top: 0; z-index: 100; opacity: 100%; background: white;'>\
   <a href='home.html'><img src='Granny-Logo.svg' width='60%' >\
   </a></div>"
 }
