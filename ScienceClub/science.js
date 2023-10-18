@@ -4,5 +4,5 @@ if (document.getElementById('divHeader') != null) {
   <a href='home.html'><img src='Granny-Logo.svg' width='60%' >\
   </a></div>"
 }
-document.getElementById('divHeader2').innerHTML = "<div width='100%' style='position: fixed; top: 0'>\
+document.getElementById('divHeader2').innerHTML = "<div width='1000px' style='position: fixed; top: 0; z-index: 100; opacity: 100%; background: white;'>\
   <a href='../home.html'><img src='../Granny-Logo.svg' width='60%'></a>"
