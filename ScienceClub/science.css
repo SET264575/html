@@ -23,6 +23,12 @@ pre {
     font-family: Arial;
 }
 
+#divHeader, #divHeader2 {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+}
+
 #divMain {
   position: fixed;
   top: 200px;
