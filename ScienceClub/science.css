@@ -23,6 +23,12 @@ pre {
     font-family: Arial;
 }
 
+.divMain {
+  position: fixed;
+  top: 200px;
+}
+
+/* Navigation bar */
 .nav  {
   list-style-type: none;
   margin: 0;
