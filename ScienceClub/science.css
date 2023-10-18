@@ -27,6 +27,8 @@ pre {
   z-index: 100;
   position: fixed;
   top: 0px;
+  opacity: 100%;
+  background: white;
 }
 
 #divMain {
