@@ -67,6 +67,8 @@
       }
       var scoreRight = 0;
       var answered = 0;
+      var name;
+      var symbol;
       var elements = []
       elements.push(new Element('','',0));
       elements.push(new Element('hydrogen','H',1));
@@ -193,13 +195,13 @@
       document.getElementById('total').innerHTML = elements.length;
       
       function check(event,s) {
-        j = document.querySelector('input[name="quiz"]:checked').value;
+        j = document.querySelector('input[name="type"]:checked').value;
 
         if (event.keyCode == 13) {
-          if (s == elements[i].symbol && j == 0) {
+          if (s == symbol && j == 0) {
             scoreRight++;
           }
-          if (s == elements[i].name && j == 1) {
+          if (s == name && j == 1) {
             scoreRight++;
           }
             answered++;
@@ -212,12 +214,14 @@
         }
       }
       function displayNext() {
-        j = document.querySelector('input[name="quiz"]:checked').value;
+        j = document.querySelector('input[name="type"]:checked').value;
         if (j == 0) {
-          document.getElementById('element').innerHTML = elements[i].name;
+          name = elements[quiz[j][i]].name;
+          document.getElementById('element').innerHTML = name;
         }
         if (j == 1) {
-          document.getElementById('element').innerHTML = elements[i].symbol;
+          symbol = elements[quiz[j][i].symbol;
+          document.getElementById('element').innerHTML = symbol;
         }
 
       }
