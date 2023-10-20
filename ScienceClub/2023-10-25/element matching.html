@@ -217,6 +217,12 @@
       function displayNext() {
         j = document.querySelector('input[name="type"]:checked').value;
         if (j == 0) {
+          console.log(i);
+          console.log(j);
+          console.log(quiz[j]);
+          console.log(quiz[j][i]);
+          console.log(elements[quiz[j][i]]);
+          console.log(elements[quiz[j][i]].name);
           name = elements[quiz[j][i]].name;
           document.getElementById('element').innerHTML = name;
         }
