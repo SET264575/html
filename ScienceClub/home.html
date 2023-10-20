@@ -25,18 +25,16 @@
         font-weight: bold;
       }
 
-      .column {
-  float: left;
-  padding: 10px;
-}
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+      }
 
-.left {
-  width: 33%;
-}
 
-.right {
-  width: 67%;
-}
+      @media (max-width: 700px) {
+  .flex-container {   
+    flex-direction: column;
+  }
 
       pre {
         white-space: normal;
@@ -50,55 +48,57 @@
     <div id="divHeader"></div>
     <div id="divMain">
       <h1>Granny's Science Club</h1>
-      <div class="column left">
-      <div style="text-align: center">
-        <a href="supplementary.html"><button>Science Club Supplementary Material</button></a><br>
-        <!--img class="btnImg" src = "around.png"><br-->
-        <a href="around.html"><button>Science Around Granny's House</button></a><br>
-        <a href="events.html"><button>Upcoming Science-related Events</button></a><br>
-        <a href="questions.html"><button>Discussion of Questions That Have Come Up</button></a><br>
-        <!--a href="instruments.html">Instruments we have access to</a><br-->
-        <!--a href="myLearning.html">Things I've Learned</a><br-->
-        <a href="Member\member.html"><button>Member Contributions</button></a><br>
-        <a href="topical.html"><button>Topical Index</button></a><br>
-      </div>
-      </div>
-      <div class="column right" >
-        <pre>
-          Welcome to Granny's Science Club website!  I have just started working on this website, so please be patient as more stuff gets added.
-
-          <h2 style="text-align: center">What You'll Find Here</h2>
-          This website is dedicated to kids who love science and want to know more.
-          Here's what each section is intended for:
-          <h3>Science Club Supplementary Material</h3>
-          This section contains pages related to each of the topics that we have discussed in science club, arranged by date.  A new page will be added each
-          week.  These contain a summary of the core concepts we discussed, as well as additional information on related concepts, links to helpful websites, 
-          and pictures or videos that help illustrate the concepts.  Occasionally, there will also be links to handouts that were provided at science club.
-          
-          <h3>Science Around Granny's House</h3>
-          This section contains a list of science-related activities that you can do, in ever-widening circles centered around Granny's House.  This is still in
-          development, but will contain a list of displays to see at the University, local parks to vist, and things to do or observe around Granny's House.
-          <h3>Upcoming Science-related Events</h3>
-          If you want to know when the Mizzou Physics Open House or the Great Backyard Bird Count is, this is the place to look.  This section contains a 
-          list of science-related activities arranged by month.  There are lots of events at the University, as well as other organizations around Columbia. 
-          There is also a list of websites for science-related local organizations.
-          <h3>Discussion of Questions That Have Come Up</h3>
-          This section contains a list of brief discussions on questions we have spontaneously discussed at science club.  Even though I have a plan each 
-          week, the thing I want to talk about most is whatever you are interested in.  Please ask questions!
-          <h3>Member Contributions</h3>
-          This section is for you.  If you have see something scientifically-interesting and take a picture, if you write up a report, do a science experiment,
-          go on a science-related field trip, we can put it here.
-          <h3>Topical Index</h3>
-          This section contains links to webpages on this site, arranged by subject.
-          <h2 style="text-align: center">How You Can Help</h2>
-            <li>Find mistakes on this website for me to fix.</li>
-            <li>Ask me to add additional information.</li>
-            <li>Suggest new webpages to add.</li>
-            <li>Let me know about upcoming events or interesting things to see or do.</li>
-            <li>Send me pictures or writing you want me to add.</li>
-            <li>Ask me how to create a webpage and I can help you make a page to add to the site.</li>
-      
-        </pre>
+      <div class="flex-container">
+        <div class=" left">
+        <div style="text-align: center">
+          <a href="supplementary.html"><button>Science Club Supplementary Material</button></a><br>
+          <!--img class="btnImg" src = "around.png"><br-->
+          <a href="around.html"><button>Science Around Granny's House</button></a><br>
+          <a href="events.html"><button>Upcoming Science-related Events</button></a><br>
+          <a href="questions.html"><button>Discussion of Questions That Have Come Up</button></a><br>
+          <!--a href="instruments.html">Instruments we have access to</a><br-->
+          <!--a href="myLearning.html">Things I've Learned</a><br-->
+          <a href="Member\member.html"><button>Member Contributions</button></a><br>
+          <a href="topical.html"><button>Topical Index</button></a><br>
+        </div>
+        </div>
+        <div class="right" >
+          <pre>
+            Welcome to Granny's Science Club website!  I have just started working on this website, so please be patient as more stuff gets added.
+  
+            <h2 style="text-align: center">What You'll Find Here</h2>
+            This website is dedicated to kids who love science and want to know more.
+            Here's what each section is intended for:
+            <h3>Science Club Supplementary Material</h3>
+            This section contains pages related to each of the topics that we have discussed in science club, arranged by date.  A new page will be added each
+            week.  These contain a summary of the core concepts we discussed, as well as additional information on related concepts, links to helpful websites, 
+            and pictures or videos that help illustrate the concepts.  Occasionally, there will also be links to handouts that were provided at science club.
+            
+            <h3>Science Around Granny's House</h3>
+            This section contains a list of science-related activities that you can do, in ever-widening circles centered around Granny's House.  This is still in
+            development, but will contain a list of displays to see at the University, local parks to vist, and things to do or observe around Granny's House.
+            <h3>Upcoming Science-related Events</h3>
+            If you want to know when the Mizzou Physics Open House or the Great Backyard Bird Count is, this is the place to look.  This section contains a 
+            list of science-related activities arranged by month.  There are lots of events at the University, as well as other organizations around Columbia. 
+            There is also a list of websites for science-related local organizations.
+            <h3>Discussion of Questions That Have Come Up</h3>
+            This section contains a list of brief discussions on questions we have spontaneously discussed at science club.  Even though I have a plan each 
+            week, the thing I want to talk about most is whatever you are interested in.  Please ask questions!
+            <h3>Member Contributions</h3>
+            This section is for you.  If you have see something scientifically-interesting and take a picture, if you write up a report, do a science experiment,
+            go on a science-related field trip, we can put it here.
+            <h3>Topical Index</h3>
+            This section contains links to webpages on this site, arranged by subject.
+            <h2 style="text-align: center">How You Can Help</h2>
+              <li>Find mistakes on this website for me to fix.</li>
+              <li>Ask me to add additional information.</li>
+              <li>Suggest new webpages to add.</li>
+              <li>Let me know about upcoming events or interesting things to see or do.</li>
+              <li>Send me pictures or writing you want me to add.</li>
+              <li>Ask me how to create a webpage and I can help you make a page to add to the site.</li>
+        
+          </pre>
+        </div>
       </div>
     </div>
     <script src="science.js"></script>
