@@ -223,7 +223,7 @@
       }
       function displayNext() {
         j = document.querySelector('input[name="type"]:checked').value;
-        if (j == 0) {
+        if (j == 1) {
           console.log(i);
           console.log(j);
           console.log(quiz[j]);
@@ -233,7 +233,7 @@
           name = elements[quiz[j][i]].name;
           document.getElementById('element').innerHTML = name;
         }
-        if (j == 1) {
+        if (j == 0) {
           symbol = elements[quiz[j][i]].symbol;
           document.getElementById('element').innerHTML = symbol;
         }
