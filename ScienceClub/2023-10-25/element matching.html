@@ -49,17 +49,17 @@
       var i = Math.random(elements.length);
       console.log(i);
       console.log(elements[i]);
-      document.getElementById('element').innerHTML = elements[i][0];
+      document.getElementById('element').innerHTML = elements[i].name;
       document.getElementById('total').innerHTML = elements.length;
       function check(event,s) {
         if (event.keyCode == 13) {
-          if (s == elements[i][1]) {
+          if (s == elements[i].symbol) {
             scoreRight++;
             answered++;
             document.getElementById('answered').innerHTML = answered;
             document.getElementById('right').innerHTML = scoreRight;
             i = Math.random(elements.length);
-            document.getElementById('element').innerHTML = elements[i][0];
+            document.getElementById('element').innerHTML = elements[i].name;
           }
         }
 
