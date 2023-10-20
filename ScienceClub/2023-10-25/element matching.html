@@ -192,7 +192,8 @@
       elements.push(new Element('','',117));
 
 
-      var i = Math.floor(Math.random()*elements.length);
+      var i;
+      i = getNext();
       displayNext();
       document.getElementById('total').innerHTML = elements.length;
       
@@ -213,6 +214,11 @@
             displayNext();
             document.getElementById('symbol').value = '';
         }
+      }
+
+      function getNext() {
+        k = document.querySelector('input[name="quiz"]:checked').value;
+        return( Math.floor(Math.random()*quiz[k].length));
       }
       function displayNext() {
         j = document.querySelector('input[name="type"]:checked').value;
