@@ -3,6 +3,9 @@
     <pre id="element">
     </pre>
     <pre id="score"></pre>
+    Total Questions: <span id="total"></span><br>
+    Questions Answered: <span id="answered"></span><br>
+    Questions Correct: <span id="right"></span><br>
     <input id = "symbol" onKeyPress="check(event,this.value)">
     <script>
       class Element {
@@ -27,12 +30,14 @@
 
       var i = Math.random(elements.length);
       document.getElementById('element').innerHTML = elements[i][0];
-      
+      document.getElementById('total').innerHTML = elements.length;
       function check(event,s) {
         if (event.keyCode == 13) {
           if (s == elements[i][1]) {
             scoreRight++;
-            document.getElementById('score').innerHTML = scoreRight;
+            answered++;
+            document.getElementById('answered').innerHTML = answered;
+            document.getElementById('right').innerHTML = scoreRight;
             i = Math.random(elements.length);
           }
         }
