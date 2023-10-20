@@ -19,6 +19,12 @@
     <div id="divHeader2"></div>
     <div id="divMain" style="text-align: center">
       <h1>Element Matching Quiz</h1>
+
+      <pre>Select the quiz you want to play.</pre>
+      <input type="radio" name="quiz" value="0">Common Elements in Chemical Equations</input>
+      <input type="radio" name='quiz' value = '1'>First 20 Elements</input>
+      <input type="radio" name="quiz" value='2'>Elements with Symbols Derived From Latin Names</input>
+      
       <pre>Type in the chemical symbol that matches the element.  Be sure to capitalize the first letter.</pre>
       <p id="element"> </p>
       <input id = "symbol" onKeyPress="check(event,this.value)"><br><br><br>
@@ -28,6 +34,10 @@
 
     </div>
     <script>
+
+      var quiz = []
+      quiz.append([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]);
+      quiz.append([11,19,26,29,Ag,Sn,Sb,W,Au,Hg,pb)
       class Element {
         constructor(name,symbol,number) {
             this.name = name;
