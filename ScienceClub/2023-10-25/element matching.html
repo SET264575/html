@@ -193,9 +193,13 @@
       document.getElementById('total').innerHTML = elements.length;
       
       function check(event,s) {
-        
+        j = document.querySelector('input[name="quiz"]:checked').value;
+
         if (event.keyCode == 13) {
-          if (s == elements[i].symbol) {
+          if (s == elements[i].symbol && j == 0) {
+            scoreRight++;
+          }
+          if (s == elements[i].name && j == 1) {
             scoreRight++;
           }
             answered++;
