@@ -46,7 +46,7 @@
       elements.push(new Element('silicon','Si',14));
       elements.push(new Element('phosphorus','P',0));
 
-      var i = Math.random(elements.length);
+      var i = Math.floor(Math.random()*elements.length);
       console.log(i);
       console.log(elements[i]);
       document.getElementById('element').innerHTML = elements[i].name;
