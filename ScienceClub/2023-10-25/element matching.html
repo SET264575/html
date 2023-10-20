@@ -5,6 +5,16 @@
     <pre id="score"></pre>
     <input id = "symbol" onkey="check(this.value)">
     <script>
+      class Element {
+        constructor(name,symbol,number) {
+            this.name = name;
+            this.symbol = symbol;
+            this.number = number;
+        }
+      }
+      var elements = []
+      elements.push(new Element('hydrogen','H',1));
+      elements.push(new Element('helium','He',2));
       
       function check(s) {
         document.getElementById('element').innerHTML = s;
