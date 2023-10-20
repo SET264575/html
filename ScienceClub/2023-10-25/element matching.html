@@ -24,7 +24,9 @@
       elements.push(new Element('aluminum','Al',13));
       elements.push(new Element('silicon','Si',14));
       elements.push(new Element('phosphorus','P',0));
-      
+
+      var i = Math.random(elements.length);
+      document.getElementById('element').innerHTML = elements[i];
       
       function check(s) {
         document.getElementById('element').innerHTML = s;
