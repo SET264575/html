@@ -72,8 +72,9 @@
             answered++;
             document.getElementById('answered').innerHTML = answered;
             document.getElementById('right').innerHTML = scoreRight;
-            i = Math.random(elements.length);
+            i = Math.floor(Math.random()*elements.length);
             document.getElementById('element').innerHTML = elements[i].name;
+            document.getElementById('symbol').value = '';
           }
         }
 
