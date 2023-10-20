@@ -20,13 +20,13 @@
     <div id="divMain" style="text-align: center">
       <h1>Element Matching Quiz</h1>
 
-      <pre>Select the list of elements you want to use.</pre>
+      <pre>Select the list of Element you want to use.</pre>
       <div>
-      <input type="radio" name="quiz" value="0">Common Elements in Chemical Equations</input><br>
-      <input type="radio" name='quiz' value = '1'>First 20 Elements</input><br>
-      <input type="radio" name="quiz" value='2'>Elements with Symbols Derived From Latin Names</input><br>
+      <input type="radio" name="quiz" value="0">Common Element in Chemical Equations</input><br>
+      <input type="radio" name='quiz' value = '1'>First 20 Element</input><br>
+      <input type="radio" name="quiz" value='2'>Element with Symbols Derived From Latin Names</input><br>
       </div>
-      <!--input type="radio" name="quiz" value='3'>Common Elements in Nuclear Physics</input><br-->
+      <!--input type="radio" name="quiz" value='3'>Common Element in Nuclear Physics</input><br-->
 
       <pre>Select the type of game you want to play. </pre>
       <div>
@@ -61,141 +61,141 @@
       }
       var scoreRight = 0;
       var answered = 0;
-      var elements = []
-      elements.push(new Element('','',0));
-      elements.push(new Element('hydrogen','H',1));
-      elements.push(new Element('helium','He',2));
-      elements.push(new Element('lithium','Li',3));
-      elements.push(new Element('beryllium','Be',4));
-      elements.push(new Element('boron','B',5));
-      elements.push(new Element('carbon','C',6));
-      elements.push(new Element('nitrogen','N',7));
-      elements.push(new Element('oxygen','O',8));
-      elements.push(new Element('fluorine','F',9));
-      elements.push(new Element('neon','Ne',10));
-      elements.push(new Element('sodium','Na',11));
-      elements.push(new Element('magnesium','Mg',12));
-      elements.push(new Element('aluminum','Al',13));
-      elements.push(new Element('silicon','Si',14));
-      elements.push(new Element('phosphorus','P',15));
-      elements.push(new Element('sulfur','S',16));
-      elements.push(new Element('chlorine','Cl',17));
-      elements.push(new Element('argon','Ar',18));
-      elements.push(new Element('potassium','K',19));
-      elements.push(new Element('calcium','Ca',20));
-      elements.push(new Element('','',21));
-      elements.push(new Element('','',22));
-      elements.push(new Element('','',23));
-      elements.push(new Element('Chromium','Cr',24));
-      elements.push(new Element('Manganese','Mn',25));
-      elements.push(new Element('Iron','Fe',26));
-      elements.push(new Element('Cobalt','Co',27));
-      elements.push(new Element('Nickel','Ni',28));
-      elements.push(new Element('Copper','Cu',29));
-      elements.push(new Element('Zinc','Zn',30));
-      elements.push(new Element('','',31));
-      elements.push(new Element('','',32));
-      elements.push(new Element('','',33));
-      elements.push(new Element('','',34));
-      elements.push(new Element('bromine','Br',35));
-      elements.push(new Element('','',36));
-      elements.push(new Element('','',37));
-      elements.push(new Element('','',38));
-      elements.push(new Element('','',39));
-      elements.push(new Element('','',40));
-      elements.push(new Element('','',41));
-      elements.push(new Elements('','',42));
-      elements.push(new Elements('','',43));
-      elements.push(new Elements('','',44));
-      elements.push(new Elements('','',45));
-      elements.push(new Elements('','',46));
-      elements.push(new Elements('Silver','Ag',47));
-      elements.push(new Elements('','',48));
-      elements.push(new Elements('','',49));
-      elements.push(new Elements('Tin','Sn',50));
-      elements.push(new Elements('Antimony','Sb',51));
-      elements.push(new Elements('','',52));
-      elements.push(new Elements('Iodine','I',53));
-      elements.push(new Elements('','',54));
-      elements.push(new Elements('','',55));
-      elements.push(new Elements('','',56));
-      elements.push(new Elements('','',57));
-      elements.push(new Elements('','',58));
-      elements.push(new Elements('','',59));
-      elements.push(new Elements('','',60));
-      elements.push(new Elements('','',61));
-      elements.push(new Elements('','',62));
-      elements.push(new Elements('','',63));
-      elements.push(new Elements('','',64));
-      elements.push(new Elements('','',65));
-      elements.push(new Elements('','',66));
-      elements.push(new Elements('','',67));
-      elements.push(new Elements('','',68));
-      elements.push(new Elements('','',69));
-      elements.push(new Elements('','',70));
-      elements.push(new Elements('','',71));
-      elements.push(new Elements('','',72));
-      elements.push(new Elements('','',73));
-      elements.push(new Elements('Tungsten','W',74));
-      elements.push(new Elements('','',75));
-      elements.push(new Elements('','',76));
-      elements.push(new Elements('','',77));
-      elements.push(new Elements('','',78));
-      elements.push(new Elements('Gold','Au',79));
-      elements.push(new Elements('Mercury','Hg',80));
-      elements.push(new Elements('','',81));
-      elements.push(new Elements('Lead','Pb',82));
-      elements.push(new Elements('','',83));
-      elements.push(new Elements('','',84));
-      elements.push(new Elements('','',85));
-      elements.push(new Elements('','',86));
-      elements.push(new Elements('','',87));
-      elements.push(new Elements('','',88));
-      elements.push(new Elements('','',89));
-      elements.push(new Elements('','',90));
-      elements.push(new Elements('','',91));
-      elements.push(new Elements('','',92));
-      elements.push(new Elements('','',93));
-      elements.push(new Elements('','',94));
-      elements.push(new Elements('','',95));
-      elements.push(new Elements('','',96));
-      elements.push(new Elements('','',97));
-      elements.push(new Elements('','',98));
-      elements.push(new Elements('','',99));
-      elements.push(new Elements('','',100));
-      elements.push(new Elements('','',101));
-      elements.push(new Elements('','',102));
-      elements.push(new Elements('','',103));
-      elements.push(new Elements('','',104));
-      elements.push(new Elements('','',105));
-      elements.push(new Elements('','',106));
-      elements.push(new Elements('','',107));
-      elements.push(new Elements('','',108));
-      elements.push(new Elements('','',109));
-      elements.push(new Elements('','',110));
-      elements.push(new Elements('','',111));
-      elements.push(new Elements('','',112));
-      elements.push(new Elements('','',113));
-      elements.push(new Elements('','',114));
-      elements.push(new Elements('','',115));
-      elements.push(new Elements('','',116));
-      elements.push(new Elements('','',117));
+      var Element = []
+      Element.push(new Element('','',0));
+      Element.push(new Element('hydrogen','H',1));
+      Element.push(new Element('helium','He',2));
+      Element.push(new Element('lithium','Li',3));
+      Element.push(new Element('beryllium','Be',4));
+      Element.push(new Element('boron','B',5));
+      Element.push(new Element('carbon','C',6));
+      Element.push(new Element('nitrogen','N',7));
+      Element.push(new Element('oxygen','O',8));
+      Element.push(new Element('fluorine','F',9));
+      Element.push(new Element('neon','Ne',10));
+      Element.push(new Element('sodium','Na',11));
+      Element.push(new Element('magnesium','Mg',12));
+      Element.push(new Element('aluminum','Al',13));
+      Element.push(new Element('silicon','Si',14));
+      Element.push(new Element('phosphorus','P',15));
+      Element.push(new Element('sulfur','S',16));
+      Element.push(new Element('chlorine','Cl',17));
+      Element.push(new Element('argon','Ar',18));
+      Element.push(new Element('potassium','K',19));
+      Element.push(new Element('calcium','Ca',20));
+      Element.push(new Element('','',21));
+      Element.push(new Element('','',22));
+      Element.push(new Element('','',23));
+      Element.push(new Element('Chromium','Cr',24));
+      Element.push(new Element('Manganese','Mn',25));
+      Element.push(new Element('Iron','Fe',26));
+      Element.push(new Element('Cobalt','Co',27));
+      Element.push(new Element('Nickel','Ni',28));
+      Element.push(new Element('Copper','Cu',29));
+      Element.push(new Element('Zinc','Zn',30));
+      Element.push(new Element('','',31));
+      Element.push(new Element('','',32));
+      Element.push(new Element('','',33));
+      Element.push(new Element('','',34));
+      Element.push(new Element('bromine','Br',35));
+      Element.push(new Element('','',36));
+      Element.push(new Element('','',37));
+      Element.push(new Element('','',38));
+      Element.push(new Element('','',39));
+      Element.push(new Element('','',40));
+      Element.push(new Element('','',41));
+      Element.push(new Element('','',42));
+      Element.push(new Element('','',43));
+      Element.push(new Element('','',44));
+      Element.push(new Element('','',45));
+      Element.push(new Element('','',46));
+      Element.push(new Element('Silver','Ag',47));
+      Element.push(new Element('','',48));
+      Element.push(new Element('','',49));
+      Element.push(new Element('Tin','Sn',50));
+      Element.push(new Element('Antimony','Sb',51));
+      Element.push(new Element('','',52));
+      Element.push(new Element('Iodine','I',53));
+      Element.push(new Element('','',54));
+      Element.push(new Element('','',55));
+      Element.push(new Element('','',56));
+      Element.push(new Element('','',57));
+      Element.push(new Element('','',58));
+      Element.push(new Element('','',59));
+      Element.push(new Element('','',60));
+      Element.push(new Element('','',61));
+      Element.push(new Element('','',62));
+      Element.push(new Element('','',63));
+      Element.push(new Element('','',64));
+      Element.push(new Element('','',65));
+      Element.push(new Element('','',66));
+      Element.push(new Element('','',67));
+      Element.push(new Element('','',68));
+      Element.push(new Element('','',69));
+      Element.push(new Element('','',70));
+      Element.push(new Element('','',71));
+      Element.push(new Element('','',72));
+      Element.push(new Element('','',73));
+      Element.push(new Element('Tungsten','W',74));
+      Element.push(new Element('','',75));
+      Element.push(new Element('','',76));
+      Element.push(new Element('','',77));
+      Element.push(new Element('','',78));
+      Element.push(new Element('Gold','Au',79));
+      Element.push(new Element('Mercury','Hg',80));
+      Element.push(new Element('','',81));
+      Element.push(new Element('Lead','Pb',82));
+      Element.push(new Element('','',83));
+      Element.push(new Element('','',84));
+      Element.push(new Element('','',85));
+      Element.push(new Element('','',86));
+      Element.push(new Element('','',87));
+      Element.push(new Element('','',88));
+      Element.push(new Element('','',89));
+      Element.push(new Element('','',90));
+      Element.push(new Element('','',91));
+      Element.push(new Element('','',92));
+      Element.push(new Element('','',93));
+      Element.push(new Element('','',94));
+      Element.push(new Element('','',95));
+      Element.push(new Element('','',96));
+      Element.push(new Element('','',97));
+      Element.push(new Element('','',98));
+      Element.push(new Element('','',99));
+      Element.push(new Element('','',100));
+      Element.push(new Element('','',101));
+      Element.push(new Element('','',102));
+      Element.push(new Element('','',103));
+      Element.push(new Element('','',104));
+      Element.push(new Element('','',105));
+      Element.push(new Element('','',106));
+      Element.push(new Element('','',107));
+      Element.push(new Element('','',108));
+      Element.push(new Element('','',109));
+      Element.push(new Element('','',110));
+      Element.push(new Element('','',111));
+      Element.push(new Element('','',112));
+      Element.push(new Element('','',113));
+      Element.push(new Element('','',114));
+      Element.push(new Element('','',115));
+      Element.push(new Element('','',116));
+      Element.push(new Element('','',117));
 
 
-      var i = Math.floor(Math.random()*elements.length);
+      var i = Math.floor(Math.random()*Element.length);
       console.log(i);
-      console.log(elements[i]);
-      document.getElementById('element').innerHTML = elements[i].name;
-      document.getElementById('total').innerHTML = elements.length;
+      console.log(Element[i]);
+      document.getElementById('element').innerHTML = Element[i].name;
+      document.getElementById('total').innerHTML = Element.length;
       function check(event,s) {
         if (event.keyCode == 13) {
-          if (s == elements[i].symbol) {
+          if (s == Element[i].symbol) {
             scoreRight++;
             answered++;
             document.getElementById('answered').innerHTML = answered;
             document.getElementById('right').innerHTML = scoreRight;
-            i = Math.floor(Math.random()*elements.length);
-            document.getElementById('element').innerHTML = elements[i].name;
+            i = Math.floor(Math.random()*Element.length);
+            document.getElementById('element').innerHTML = Element[i].name;
             document.getElementById('symbol').value = '';
           }
         }
