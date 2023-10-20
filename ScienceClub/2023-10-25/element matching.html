@@ -1,12 +1,22 @@
 <html>
+  <head>
+    <title>
+      Element Quiz
+    </title>
+    <link rel="stylesheet" href="..\science.css">
+    <style></style>
+  </head>
   <body>
-    <pre id="element">
-    </pre>
-    <pre id="score"></pre>
-    Total Questions: <span id="total"></span><br>
-    Questions Answered: <span id="answered"></span><br>
-    Questions Correct: <span id="right"></span><br>
-    <input id = "symbol" onKeyPress="check(event,this.value)">
+    <div id="divHeader2"></div>
+    <div id="divMain" style="text-align: center">
+      <pre id="element">
+      </pre>
+      <pre id="score"></pre>
+      Total Questions: <span id="total"></span><br>
+      Questions Answered: <span id="answered"></span><br>
+      Questions Correct: <span id="right"></span><br>
+      <input id = "symbol" onKeyPress="check(event,this.value)">
+    </div>
     <script>
       class Element {
         constructor(name,symbol,number) {
