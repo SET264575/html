@@ -26,11 +26,15 @@
       elements.push(new Element('phosphorus','P',0));
 
       var i = Math.random(elements.length);
-      document.getElementById('element').innerHTML = elements[i];
+      document.getElementById('element').innerHTML = elements[i][0];
       
       function check(event,s) {
         if (event.keyCode == 13) {
-          document.getElementById('element').innerHTML = s;
+          if (s == elements[i][1]) {
+            scoreRight++;
+            document.getElementById('score').innerHTML = scoreRight;
+            i = Math.random(elements.length);
+          }
         }
 
       }
