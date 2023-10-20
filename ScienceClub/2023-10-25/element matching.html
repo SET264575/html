@@ -5,6 +5,10 @@
     </title>
     <link rel="stylesheet" href="..\science.css">
     <style>
+      .flex-container {
+        display: flex;
+      }
+      
       #element {
         font-family: Arial;
         font-size: 40px;
@@ -21,7 +25,7 @@
       <h1>Element Matching Quiz</h1>
 
       <pre>Select the list of Element you want to use.</pre>
-      <div style="text-align: left">
+      <div class="flex-container">
       <input type="radio" name="quiz" value="0">Common Element in Chemical Equations</input><br>
       <input type="radio" name='quiz' value = '1'>First 20 Element</input><br>
       <input type="radio" name="quiz" value='2'>Element with Symbols Derived From Latin Names</input><br>
@@ -29,7 +33,7 @@
       <!--input type="radio" name="quiz" value='3'>Common Element in Nuclear Physics</input><br-->
 
       <pre>Select the type of game you want to play. </pre>
-      <div>
+      <div class="flex-container">
       <input type="radio" name="type" value="0">Symbol to Name</input><br>
       <input type="radio" name='type' value = '1'>Name to Symbol</input><br>
       <input type="radio" name="type" value='2'>Name to Atomic Number</input><br>
