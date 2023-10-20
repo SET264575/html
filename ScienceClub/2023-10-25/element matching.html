@@ -47,6 +47,8 @@
       elements.push(new Element('phosphorus','P',0));
 
       var i = Math.random(elements.length);
+      console.log(i);
+      console.log(elements[i]);
       document.getElementById('element').innerHTML = elements[i][0];
       document.getElementById('total').innerHTML = elements.length;
       function check(event,s) {
