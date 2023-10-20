@@ -193,9 +193,11 @@
       document.getElementById('total').innerHTML = elements.length;
       
       function check(event,s) {
+        
         if (event.keyCode == 13) {
           if (s == elements[i].symbol) {
             scoreRight++;
+          }
             answered++;
             document.getElementById('answered').innerHTML = answered;
             document.getElementById('right').innerHTML = scoreRight;
@@ -206,10 +208,11 @@
         }
       }
       function displayNext() {
-        if (document.getElementByName('quiz').value == 0) {
+        j = document.querySelector('input[name="quiz"]:checked').value;
+        if (j == 0) {
           document.getElementById('element').innerHTML = elements[i].name;
         }
-        if (document.getElementByName('quiz').value == 1) {
+        if (j == 1) {
           document.getElementById('element').innerHTML = elements[i].symbol;
         }
 
