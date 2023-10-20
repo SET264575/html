@@ -3,7 +3,7 @@
     <pre id="element">
     </pre>
     <pre id="score"></pre>
-    <input id = "symbol" onKeyPress="check(this.value)">
+    <input id = "symbol" onKeyPress="check(event,this.value)">
     <script>
       class Element {
         constructor(name,symbol,number) {
@@ -28,8 +28,10 @@
       var i = Math.random(elements.length);
       document.getElementById('element').innerHTML = elements[i];
       
-      function check(s) {
-        document.getElementById('element').innerHTML = s;
+      function check(event,s) {
+        if (event.keyCode == 13) {
+          document.getElementById('element').innerHTML = s;
+        }
 
       }
     </script>
