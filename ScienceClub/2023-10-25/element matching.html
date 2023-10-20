@@ -185,6 +185,7 @@
       var i = Math.floor(Math.random()*elements.length);
       displayNext();
       document.getElementById('total').innerHTML = elements.length;
+      
       function check(event,s) {
         if (event.keyCode == 13) {
           if (s == elements[i].symbol) {
@@ -197,6 +198,7 @@
             document.getElementById('symbol').value = '';
           }
         }
+      }
       function displayNext() {
         if (document.getElementByName('quiz').value == 0) {
           document.getElementById('element').innerHTML = elements[i].name;
