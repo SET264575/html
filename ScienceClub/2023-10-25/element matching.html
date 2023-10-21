@@ -201,7 +201,9 @@
         answered = 0;
         i = getNext();
         displayNext();
-        document.getElementById('total').innerHTML = quiz[j].length;
+        k = document.querySelector('input[name="quiz"]:checked').value;
+
+        document.getElementById('total').innerHTML = quiz[k].length;
       }
       
       function check(event,s) {
