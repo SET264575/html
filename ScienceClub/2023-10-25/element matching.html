@@ -43,7 +43,8 @@
       <input type="radio" name="type" value='2'>Name to Atomic Number</input><br>
       <input type="radio" name="type" value='3'>Atomic Number to Name</input><br>
       </div>
-    
+
+      <button class="start" onClick="begin()">Start</button>
       
       <pre>Type in the chemical symbol that matches the elements.  Be sure to capitalize the first letter.</pre>
       <p id="element"> </p>
@@ -194,9 +195,14 @@
       //k = quiz list, i = element in list, j = type of quiz
 
       var i;
-      i = getNext();
-      displayNext();
-      document.getElementById('total').innerHTML = elements.length;
+
+      function start() {
+        scoreRight = 0;
+        answered = 0;
+        i = getNext();
+        displayNext();
+        document.getElementById('total').innerHTML = quiz[j].length;
+      }
       
       function check(event,s) {
         j = document.querySelector('input[name="type"]:checked').value;
