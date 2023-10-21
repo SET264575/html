@@ -208,12 +208,15 @@
       //k = quiz list, i = element in list, j = type of quiz
 
       var i=-1;
-      var results = '<table><tr><th>Element Name</th><th>Element Symbol</th><th>Your Answer</th></tr>';
+      var results = '';
       var currentQuiz= [];
 
       function begin() {
         scoreRight = 0;
         answered = 0;
+        i = -1;
+        results ='<table><tr><th>Element Name</th><th>Element Symbol</th><th>Your Answer</th></tr>';
+
         document.getElementById('hiddenDiv').hidden = false;
         document.getElementById('start').innerHTML = 'Reset';
         document.getElementById('answered').innerHTML = answered;
