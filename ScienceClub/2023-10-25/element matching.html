@@ -70,7 +70,7 @@
       var scoreRight = 0;
       var answered = 0;
       var name;
-      var symbol;
+      var symbol ='';
       var elements = []
       elements.push(new Element('','',0));
       elements.push(new Element('hydrogen','H',1));
@@ -202,9 +202,8 @@
         j = document.querySelector('input[name="type"]:checked').value;
 
         if (event.keyCode == 13) {
-
-          if (s == symbol && j == 0) {
             console.log(s,symbol);
+          if (s == symbol && j == 0) {
             scoreRight++;
           }
           if (s == name && j == 1) {
