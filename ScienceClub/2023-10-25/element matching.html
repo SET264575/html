@@ -214,13 +214,14 @@
         document.getElementById('start').innerHTML = 'Reset';
         document.getElementById('answered').innerHTML = answered;
         document.getElementById('right').innerHTML = scoreRight;
-        i = getNext();
-        displayNext();
         k = document.querySelector('input[name="quiz"]:checked').value;
         currentQuiz = quiz[k].slice();
         shuffle(currentQuiz);
         console.log(currentQuiz);
         document.getElementById('total').innerHTML = currentQuiz.length;
+        i = getNext();
+        displayNext();
+
       }
       
       function check(event,s) {
