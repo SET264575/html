@@ -55,7 +55,7 @@
       <br>
 
       <button id="start" onClick="begin()">Start</button>
-      <div id = 'hiddenDiv' style="hidden: true">
+      <div id = 'hiddenDiv' style="visibility: hidden">
       <pre>Type in the chemical symbol that matches the elements.  Be sure to capitalize the first letter.</pre>
       <p id="element"> </p>
       <input id = "symbol" onKeyPress="check(event,this.value)"><br><br><br>
@@ -217,10 +217,11 @@
         i = -1;
         results ='<table><tr><th>Element Name</th><th>Element Symbol</th><th>Your Answer</th></tr>';
 
-        document.getElementById('hiddenDiv').hidden = false;
+        document.getElementById('hiddenDiv').visibility = visible;
         document.getElementById('start').innerHTML = 'Reset';
         document.getElementById('answered').innerHTML = answered;
         document.getElementById('right').innerHTML = scoreRight;
+        document.getElementById('results').innerHTML = "";
         k = document.querySelector('input[name="quiz"]:checked').value;
         currentQuiz = quiz[k].slice();
         shuffle(currentQuiz);
@@ -244,7 +245,7 @@
             scoreRight++;
             clr = 'green';
           }
-          results = results + '<tr><td>'+name+'</td><td>'+symbol+'</td><td style="color: '+clr+'">'+s+'</td></tr>';
+          results = results + '<tr><td>'+name+'</td><td>'+symbol+'</td><td style="font-weight: bold; color: '+clr+'">'+s+'</td></tr>';
 
             answered++;
             document.getElementById('answered').innerHTML = answered;
