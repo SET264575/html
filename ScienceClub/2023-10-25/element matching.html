@@ -230,9 +230,9 @@
       
       function check(event,s) {
         j = document.querySelector('input[name="type"]:checked').value;
-        clr = 'red';
+
         if (event.keyCode == 13) {
-            console.log(s,symbol);
+          clr = 'red';
           if (s == symbol && j == 0) {
             scoreRight++;
             clr = 'green';
@@ -241,7 +241,7 @@
             scoreRight++;
             clr = 'green';
           }
-          results = results + '<tr><td>'+name+'</td><td>'+symbol+'</td><td style="color: '+"'"+clr+"'>"+s+'</td></tr>';
+          results = results + '<tr><td>'+name+'</td><td>'+symbol+'</td><td style="color: '+clr+">"+s+'</td></tr>';
 
             answered++;
             document.getElementById('answered').innerHTML = answered;
