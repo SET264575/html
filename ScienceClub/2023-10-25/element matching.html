@@ -204,7 +204,7 @@
 
       //k = quiz list, i = element in list, j = type of quiz
 
-      var i;
+      var i=0;
       var currentQuiz= [];
 
       function begin() {
@@ -245,7 +245,12 @@
       }
 
       function getNext() {
-        return( Math.floor(Math.random()*currentQuiz.length));
+        i++;
+        if (i == currentQuiz.length) {
+          document.getElementById('element').innerHTML = 'Quiz Finished!';
+        }
+        return (i);
+        //return( Math.floor(Math.random()*currentQuiz.length));
       }
       function displayNext() {
         j = document.querySelector('input[name="type"]:checked').value;
