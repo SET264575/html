@@ -234,11 +234,13 @@
           console.log(elements[quiz[j][i]]);
           console.log(elements[quiz[j][i]].name);
           name = elements[quiz[j][i]].name;
+          symbol = elements[quiz[j][i]].symbol;
           document.getElementById('element').innerHTML = name;
           document.getElementById('symbol').focus();
         }
         if (j == 1) {
           symbol = elements[quiz[j][i]].symbol;
+          name = elements[quiz[j][i]].name;
           document.getElementById('element').innerHTML = symbol;
         }
 
