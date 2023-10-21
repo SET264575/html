@@ -247,7 +247,9 @@
             document.getElementById('answered').innerHTML = answered;
             document.getElementById('right').innerHTML = scoreRight;
             i = getNext();
+          if (i < currentQuiz.length) {
             displayNext();
+          }
             document.getElementById('symbol').value = '';
         }
       }
