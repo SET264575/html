@@ -213,7 +213,7 @@
             answered++;
             document.getElementById('answered').innerHTML = answered;
             document.getElementById('right').innerHTML = scoreRight;
-            i = Math.floor(Math.random()*elements.length);
+            i = getNext();
             displayNext();
             document.getElementById('symbol').value = '';
         }
