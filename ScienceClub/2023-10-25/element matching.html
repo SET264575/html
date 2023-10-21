@@ -204,6 +204,7 @@
       //k = quiz list, i = element in list, j = type of quiz
 
       var i;
+      var currentQuiz= [];
 
       function begin() {
         scoreRight = 0;
@@ -215,7 +216,9 @@
         i = getNext();
         displayNext();
         k = document.querySelector('input[name="quiz"]:checked').value;
-
+        currentQuiz = quiz[k].copy();
+        shuffle(currentQuiz);
+        console.log(currentQuiz);
         document.getElementById('total').innerHTML = quiz[k].length;
       }
       
@@ -266,6 +269,18 @@
         }
 
       }
+
+    function shuffle(a) {
+      var j, x, i;
+      for (i = a.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          x = a[i];
+          a[i] = a[j];
+          a[j] = x;
+      }
+      return a;
+    }
+}
     </script>
     <script src="..\science.js"></script>
   </body>
