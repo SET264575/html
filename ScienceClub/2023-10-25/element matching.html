@@ -52,15 +52,16 @@
       <input type="radio" name="type" value='2'>Name to Atomic Number</input><br>
       <input type="radio" name="type" value='3'>Atomic Number to Name</input><br>
       </div>
+      <br>
 
       <button id="start" onClick="begin()">Start</button>
       <div id = 'hiddenDiv' style="hidden: true">
       <pre>Type in the chemical symbol that matches the elements.  Be sure to capitalize the first letter.</pre>
       <p id="element"> </p>
       <input id = "symbol" onKeyPress="check(event,this.value)"><br><br><br>
-     <p> Total Questions: <span id="total"></span></p>
-      <p>Questions Answered: <span id="answered"></span><br></p>
-      <p>Questions Correct: <span id="right"></span></p>
+     <p> Total Questions: <span id="total"></span><br>
+      Questions Answered: <span id="answered"></span><br>
+      Questions Correct: <span id="right"></span></p>
       </div>
     </div>
     <script>
