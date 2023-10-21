@@ -59,9 +59,12 @@
       <pre>Type in the chemical symbol that matches the elements.  Be sure to capitalize the first letter.</pre>
       <p id="element"> </p>
       <input id = "symbol" onKeyPress="check(event,this.value)"><br><br><br>
-     <p> Total Questions: <span id="total"></span><br>
-      Questions Answered: <span id="answered"></span><br>
+     <p> Total Questions: <span id="total"></span>&nbsp;&nbsp;
+      Questions Answered: <span id="answered"></span>  &nbsp;&nbsp;
       Questions Correct: <span id="right"></span></p>
+        <br>
+        <br>
+        <p id= 'results'></p>
       </div>
     </div>
     <script>
@@ -205,6 +208,7 @@
       //k = quiz list, i = element in list, j = type of quiz
 
       var i=0;
+      var results = '<table><tr><th>Element Name</th><th>Element Symbol</th><th>Your Answer</th></tr>';
       var currentQuiz= [];
 
       function begin() {
@@ -226,15 +230,19 @@
       
       function check(event,s) {
         j = document.querySelector('input[name="type"]:checked').value;
-
+        clr = 'red';
         if (event.keyCode == 13) {
             console.log(s,symbol);
           if (s == symbol && j == 0) {
             scoreRight++;
+            clr = 'green';
           }
           if (s == name && j == 1) {
             scoreRight++;
+            clr = 'green';
           }
+          results = results + '<tr><td>'+name+'</td><td>'+symbol+'</td><td style="color: "'+clr+'">'+s+'</td></tr>';
+
             answered++;
             document.getElementById('answered').innerHTML = answered;
             document.getElementById('right').innerHTML = scoreRight;
@@ -247,7 +255,9 @@
       function getNext() {
         i++;
         if (i == currentQuiz.length) {
-          document.getElementById('element').innerHTML = 'Quiz Finished!';
+          document.getElementById('element').innerHTML = 'Quiz Finished!  See Results Below.';
+          results = results + '</table>';
+          document.getElementById('results').innerHTML = results;
         }
         return (i);
         //return( Math.floor(Math.random()*currentQuiz.length));
