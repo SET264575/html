@@ -216,10 +216,10 @@
         i = getNext();
         displayNext();
         k = document.querySelector('input[name="quiz"]:checked').value;
-        currentQuiz = quiz[k].copy();
+        currentQuiz = quiz[k].slice();
         shuffle(currentQuiz);
         console.log(currentQuiz);
-        document.getElementById('total').innerHTML = quiz[k].length;
+        document.getElementById('total').innerHTML = currentQuiz.length;
       }
       
       function check(event,s) {
@@ -243,28 +243,19 @@
       }
 
       function getNext() {
-        k = document.querySelector('input[name="quiz"]:checked').value;
-        console.log('k=',k);
-        return( Math.floor(Math.random()*quiz[k].length));
+        return( Math.floor(Math.random()*currentQuiz.length));
       }
       function displayNext() {
         j = document.querySelector('input[name="type"]:checked').value;
         if (j == 0) {
-          console.log('start');
-          console.log(i);
-          console.log(j);
-          console.log(quiz[j]);
-          console.log('element picked from quiz = ',quiz[j][i]);
-          console.log(elements[quiz[j][i]]);
-          console.log(elements[quiz[j][i]].name);
-          name = elements[quiz[j][i]].name;
-          symbol = elements[quiz[j][i]].symbol;
+          name = elements[currentQuiz[i]].name;
+          symbol = elements[currentQuiz[i]].symbol;
           document.getElementById('element').innerHTML = name;
           document.getElementById('symbol').focus();
         }
         if (j == 1) {
-          symbol = elements[quiz[j][i]].symbol;
-          name = elements[quiz[j][i]].name;
+          symbol = elements[currentQuiz[i]].symbol;
+          name = elements[currentQuiz[i]].name;
           document.getElementById('element').innerHTML = symbol;
         }
 
