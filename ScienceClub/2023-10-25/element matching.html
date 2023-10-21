@@ -26,6 +26,7 @@
         height: 40px;
         padding: 10px;
         border-radius: 5px;
+        width: 100px;
       }
     </style>
     <link rel="icon" type="image/jpg" href="../atom.jpg"/>
@@ -45,7 +46,7 @@
       <!--input type="radio" name="quiz" value='3'>Common Element in Nuclear Physics</input><br-->
 
       <pre>Select the type of game you want to play. </pre>
-      <div >
+      <div style="border: 1px solid blue; width: 400px;" >
       <input type="radio" name="type" value="0" checked>Symbol to Name</input><br>
       <input type="radio" name='type' value = '1'>Name to Symbol</input><br>
       <input type="radio" name="type" value='2'>Name to Atomic Number</input><br>
@@ -209,6 +210,8 @@
         answered = 0;
         document.getElementById('hiddenDiv').hidden = false;
         document.getElementById('start').innerHTML = 'Reset';
+        document.getElementById('answered').innerHTML = answered;
+        document.getElementById('right').innerHTML = scoreRight;
         i = getNext();
         displayNext();
         k = document.querySelector('input[name="quiz"]:checked').value;
