@@ -191,6 +191,7 @@
       elements.push(new Element('','',116));
       elements.push(new Element('','',117));
 
+      //k = quiz list, i = element in list, j = type of quiz
 
       var i;
       i = getNext();
@@ -203,6 +204,7 @@
         if (event.keyCode == 13) {
 
           if (s == symbol && j == 0) {
+            console.log(s,symbol);
             scoreRight++;
           }
           if (s == name && j == 1) {
@@ -219,6 +221,7 @@
 
       function getNext() {
         k = document.querySelector('input[name="quiz"]:checked').value;
+        console.log('k=',k);
         return( Math.floor(Math.random()*quiz[k].length));
       }
       function displayNext() {
