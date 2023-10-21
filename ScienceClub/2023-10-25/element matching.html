@@ -85,6 +85,7 @@
       var answered = 0;
       var name;
       var symbol ='';
+      var number = 0;
       var elements = []
       elements.push(new Element('','',0));
       elements.push(new Element('hydrogen','H',1));
@@ -241,7 +242,11 @@
             scoreRight++;
             clr = 'green';
           }
-          if (s == name && j == 1) {
+          if (s == name && (j == 1 || j == 3)) {
+            scoreRight++;
+            clr = 'green';
+          }
+          if (s == number && j == 2) {
             scoreRight++;
             clr = 'green';
           }
@@ -263,7 +268,6 @@
         if (i == currentQuiz.length) {
           document.getElementById('element').innerHTML = 'Quiz Finished!  See Results Below.';
           results = results + '</table>';
-          console.log(results);
           document.getElementById('results').innerHTML = results;
         }
         return (i);
@@ -271,16 +275,19 @@
       }
       function displayNext() {
         j = document.querySelector('input[name="type"]:checked').value;
+        symbol = elements[currentQuiz[i]].symbol;
+        name = elements[currentQuiz[i]].name;
+        number = elements[currentQuiz[i]].number;
+        document.getElementById('symbol').focus();
+
         if (j == 0) {
-          name = elements[currentQuiz[i]].name;
-          symbol = elements[currentQuiz[i]].symbol;
           document.getElementById('element').innerHTML = name;
-          document.getElementById('symbol').focus();
         }
-        if (j == 1) {
-          symbol = elements[currentQuiz[i]].symbol;
-          name = elements[currentQuiz[i]].name;
+        if (j == 1 || j == 3) {
           document.getElementById('element').innerHTML = symbol;
+        }
+        if (j == 2) {
+          document.getElementById('element').innerHTML = number;
         }
 
       }
