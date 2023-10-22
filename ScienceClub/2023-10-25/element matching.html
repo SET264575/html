@@ -47,10 +47,10 @@
 
       <pre>Select the type of game you want to play. </pre>
       <div style="border: 1px solid blue; width: 400px;" >
-      <input type="radio" name="type" value="0" checked>Symbol to Name</input><br>
-      <input type="radio" name='type' value = '1'>Name to Symbol</input><br>
-      <input type="radio" name="type" value='2'>Name to Atomic Number</input><br>
-      <input type="radio" name="type" value='3'>Atomic Number to Name</input><br>
+      <input type="radio" name="type" value="0" checked>Match Symbol to Given Name</input><br>
+      <input type="radio" name='type' value = '1'>Match Name to Given Symbol</input><br>
+      <input type="radio" name="type" value='2'>Match Name to Given Atomic Number</input><br>
+      <input type="radio" name="type" value='3'>Match Atomic Number to Given Name</input><br>
       </div>
       <br>
 
@@ -216,7 +216,7 @@
         scoreRight = 0;
         answered = 0;
         i = -1;
-        results ='<table><tr><th>Element Name</th><th>Element Symbol</th><th>Your Answer</th></tr>';
+        results ='<table><tr><th>Element Name</th><th>Element Symbol</th><th>Atomic Number</th><th>Your Answer</th></tr>';
 
         document.getElementById('hiddenDiv').style.visibility = 'visible';
         document.getElementById('start').innerHTML = 'Reset';
@@ -250,7 +250,7 @@
             scoreRight++;
             clr = 'green';
           }
-          results = results + '<tr><td>'+name+'</td><td>'+symbol+'</td><td style="font-weight: bold; color: '+clr+'">'+s+'</td></tr>';
+          results = results + '<tr><td>'+name+'</td><td>'+symbol+'</td><td>'+number+'</td><td style="font-weight: bold; color: '+clr+'">'+s+'</td></tr>';
 
             answered++;
             document.getElementById('answered').innerHTML = answered;
@@ -280,10 +280,10 @@
         number = elements[currentQuiz[i]].number;
         document.getElementById('symbol').focus();
 
-        if (j == 0) {
+        if (j == 0 or j==3) {
           document.getElementById('element').innerHTML = name;
         }
-        if (j == 1 || j == 3) {
+        if (j == 1 ) {
           document.getElementById('element').innerHTML = symbol;
         }
         if (j == 2) {
