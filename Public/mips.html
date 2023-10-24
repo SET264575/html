@@ -394,8 +394,13 @@
 		var hospice = getRadioButtonLabel("hospice");
           
           var t = "";
+	  if (hospice != '__________') {
+		  t = t + "MIPS: Hospice Patient\n";
+		  t = t + hospice+'\n\n';
+	  }
+		
           if (uri != '__________') {
-            t = t + "MIPS# 65 - Appropriate Treatment for Patients with URI\n"
+            t = t + "MIPS# 65 - Appropriate Treatment for Patients with URI\n";
             t = t + uri;
             if (isChecked('uri2')) {
               t = t + " "+getRadioButtonLabel('uri2');
