@@ -115,7 +115,7 @@
       <input type = "radio" id = "uri5" name="uri" onclick = "greenborder('div-uri1'); uncheck(0); uncheck(1); copytext()"><label for ="uri5" class='red'>The patient was diagnosed with an Upper Respiratory Infection and prescribed or dispensed an antibiotic</label><br>
     </div><br><br>
     
-	  <button type="button" class="collapsible">#93 - Acute <b>Otitis Externa</b> (AOE): Systemic Antimicrobial Therapy</button>
+	  <!--button type="button" class="collapsible">#93 - Acute <b>Otitis Externa</b> (AOE): Systemic Antimicrobial Therapy</button>
     <div class="content">
     <input type = "radio" id = "om1" name="om" onclick = " uncheck(2); copytext()"><label for ="om1">The patient has Acute Otitis Externa and was not prescribed oral/systemic antibiotics today.</label><br>
     <input type = "radio" id = "om2" name="om" onclick = "copytext()"><label for ="om2">The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics because </label><br>
@@ -125,7 +125,7 @@
       <input type="radio" id = "om23" name = "om2" onclick = "check('om2'); copytext()"><label for = "om23"><input type="text" id = "blank03" onfocus = "check('om23')" onkeyup="copytext()"/></label><br>
       </div>
       <input type = "radio" id = "om3" name="om" onclick = " uncheck(2); copytext()"><label for ="om3" class='red'>The patient has Acute Otitis Externa and was prescribed oral/systemic antibiotics today</label><br>
-</div><br><br>
+</div><br><br-->
     
     <button type="button" class="collapsible">#116 - Avoidance of Antibiotic Treatment of Acute <b>Bronchitis</b>/Bronchiolitis</button>
     <div class="content">
@@ -180,7 +180,7 @@
     <input type = "radio" id = "abdpain1" name="abd pain" onclick = "uncheck(17);copytext()"><label for ="abdpain1">The patient is pregnant and presents with abdominal pain or vaginal bleeding.  A trans-abdominal or trans-vaginal ultrasound was performed and the pregnancy location is documented</label>. [This is the appropriate selection even if the ultrasound was performed but the pregnancy location could not be determined.]<br>
     <input type = "radio" id = "abdpain2" name="abd pain" onclick = "copytext()"><label for ="abdpain2">The patient is pregnant and presents with abdominal pain or vaginal bleeding.  A trans-abdominal or trans-vaginal ultrasound was not performed because</label><br>
       <div class="sub">
-        <input type = "radio" id = "abdpain21" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain21">the patient has visited the ED multiple times in the last 72 hours</label><br>
+        <!--input type = "radio" id = "abdpain21" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain21">the patient has visited the ED multiple times in the last 72 hours</label><br-->
         <input type = "radio" id = "abdpain22" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain22">the patient has documented intrauterine pregnancy</label><br>
         <input type = "radio" id = "abdpain23" name = "abdpain2" onclick = "check('abdpain2'); copytext()"><label for = "abdpain23"><input type = "text" id = "blank05"  onfocus = "check('abdpain23')" onkeyup="copytext()"/></label><br>
       </div>
@@ -312,7 +312,13 @@
         <input type = "radio" id = "ped23" name="ct ped2" onclick = " check('ped2'); copytext()"><label for ="ped23" class='red'>the patient was not assessed using the PECARN prediction rule</label><br>
       </div>
       </div><br><br>
-     
+
+	  <button type="button" class="collapsible">Current or Recent Hospice Patient</button>
+	  <div class="content">
+		  <input type= "radio" id = "hospice1" name="hospice" onclick="copytext()"><label for="hospice1">The patient is currently on hospice.</label><br>
+		  <input type ="radio" id="hospice2" name="hospice" onclick="copytext()"><label for="hospice2">The patient has been on hospice within the past 12 months.</label><br>
+	  </div><br><br>
+  
       
       <script>
         var coll = document.getElementsByClassName("collapsible");
@@ -385,6 +391,7 @@
           var ctadult = getRadioButtonLabel("ct adult");
           var ctped = getRadioButtonLabel("ct ped");
           var cva = getRadioButtonLabel("cva");
+		var hospice = getRadioButtonLabel("hospice");
           
           var t = "";
           if (uri != '__________') {
