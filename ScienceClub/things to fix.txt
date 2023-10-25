@@ -4,4 +4,12 @@ more things to do/events
 more local websites
 
 make responsive to different screens
+home - works
+supplementary - working on it
+questions
+resources
+events
+topical
+around
+member
 
