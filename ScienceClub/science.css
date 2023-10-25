@@ -3,10 +3,19 @@
   border-radius: 20px;
 }
 
+.btnFig {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 800px) {
   .btnImg {
     width: 400px;
     margin: auto;
+  }
+
+  .btnFig {
+    font-size: 2em;
   }
 }
 
@@ -20,10 +29,7 @@ table,th,td {
   padding: 10px;
 }
 
-.btnFig {
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 pre {
     font-size: 1em;
