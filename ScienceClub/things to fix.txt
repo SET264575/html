@@ -18,6 +18,12 @@ Change order of date on directories:
 in supplementary
 in topical
 
+Each week:
+Add to topical
+
+Each time adding question:
+Add to topical
+Add to questions
 
 11/1
 Delete October dates
