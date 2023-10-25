@@ -4,8 +4,12 @@
 }
 
 @media (max-width: 800px) {
-  width: 400px;
+  .btnImg {
+    width: 400px;
+    margin: auto;
+  }
 }
+
 h1 {
   text-align: center;
 }
