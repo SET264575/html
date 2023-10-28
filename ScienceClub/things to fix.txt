@@ -19,11 +19,12 @@ in supplementary
 in topical
 
 Each week:
-Add to topical
+Add supplemental
+Add to supplemental list
+Add question
+Add question to question list
+Add both to topical
 
-Each time adding question:
-Add to topical
-Add to questions
 
 11/1
 Delete October dates
