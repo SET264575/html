@@ -25,6 +25,16 @@ Add question
 Add question to question list
 Add both to topical
 
+change favicon
+home
+questions
+resources
+topical
+supplementary
+events
+instruments
+each question
+each supplementary
 
 11/1
 Delete October dates
