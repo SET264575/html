@@ -24,7 +24,6 @@ Add question
 Add question to question list
 Add both to topical
 
+Periodic table
+Displays
 
-11/1
-Delete October dates
-Search for new dates
