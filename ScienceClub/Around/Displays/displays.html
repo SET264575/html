@@ -1,0 +1,218 @@
+ <html>
+<head>
+<style>
+
+.hoverinfo {
+  width: 18px;
+  height: 25px;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+p {
+display: none;
+position: fixed;
+top: 20px;
+left: 600px;
+width: 400px;
+height: 300px;
+border: 1px solid black;
+border-radius: 5px;
+}
+
+.hoverinfo:hover p {
+  background-color: rgba(255, 255, 255, 0.7);
+  display: block;
+  color: black;
+}
+.spot1 {
+	position: absolute;
+	top: 60px;
+	left: 142px;
+	}
+
+.spot2 {
+	position: absolute;
+	top: 138px;
+	left: 90px;
+	}
+
+.spot3 {
+	position: absolute;
+	top: 182px;
+	left: 165px;
+	}
+
+.spot4 {
+	position: absolute;
+	top: 224px;
+	left: 291px;
+
+	}
+
+.spot5 {
+	position: absolute;
+	top: 344px;
+	left: 323px;
+	}
+
+.spot6 {
+	position: absolute;
+	top: 345px;
+	left: 368px;
+	}
+
+.spot7 {
+	position: absolute;
+	top: 283px;
+	left: 432px;
+
+	}
+
+.spot8 {
+	position: absolute;
+	top: 277px;
+	left: 444px;
+	}
+
+.spot9 {
+	position: absolute;
+	top: 450px;
+	left: 450px;
+	}
+
+.title {
+}
+.address {
+}
+.description {
+}
+.img2 {
+}
+
+</style>
+</head>
+<body>
+<div>
+  <img src="map2.png" id = "map" width = "500px" onmousemove="show(event)" />
+ 
+  <div class="hoverinfo spot1"> 
+    <p>Mizzou Department of Geology Display
+      <br>Address:
+      <br>Dozens of geologic specimens on display in the hallway on the first floor and basement.
+	<br><img src="" width="100px"></p>
+  </div>
+  <div class="hoverinfo spot2"> 
+    <p>Lafferre Hall
+      <br>Address:
+      <br>Engines on the first floor, chemistry instruments display on second floor.</p>
+  </div>
+  <div class="hoverinfo spot3"> 
+    <p>Mizzou Botanic Garden
+      <br>Throughout campus
+      <br>Great Tree Trails</p>
+  </div>
+  <div class="hoverinfo spot4"> 
+    <p>Museum of Art & Archaeology and Museum of Anthropology
+      <br>Unfortunately, these museums are closed for renovation currently.
+      <br></p>
+  </div>
+  <div class="hoverinfo spot5"> 
+    <p>Enns Entomology Museum
+      <br>Address:
+      <br>There is a display of mounted insects as well as a few live insects to see.</p>
+  </div>
+  <div class="hoverinfo spot6"> 
+    <p>Natural Resources Building</p>
+  </div>
+  <div class="hoverinfo spot7"> 
+    <p>Laws Observatory</p>
+  </div>
+  <div class="hoverinfo spot8"> 
+    <p>Physics Building</p>
+  </div>
+<div>
+<div class="title">Mizzou Department of Geology Display</div>
+<div class="description">There is a large collection of geological specimens including rocks, minerals and fossils in the hallway on the first floor and the basement.</div>
+<img src="case.jpg"><br>
+<img src="fish.jpg"><br>
+<img src="pitchblend.png"><br>
+<hr>
+</div>
+<div>
+	<div class="title">Engines</div>
+	<div class="location">Lafferre Hall</div>
+	<div class="description"> </div>
+	<img src="engine.jpg"><br>
+	<hr>
+</div>
+<div>
+	<div class="title">Chemistry Equipment </div>
+	<div class="location">Lafferre Hall</div>
+	<div class="description"> </div>
+	<hr>
+</div>
+<div>
+	<div class="title">Mizzou Botanic Garden </div>
+	<div class="location">Mizzou Campus</div>
+	<div class="description"> </div>
+	<hr>
+</div>
+<div>
+	<div class="title">Game Animal Display </div>
+	<div class="location">Anheuser-Bush Natural Resources Building</div>
+	<div class="description">A large collection of game animals from around the world. </div>
+	<img src="animals.jpg"><br>
+	<img src="ducks.jpg"><br>
+	<hr>
+</div>
+<div>
+	<div class="title">Optics Display</div>
+	<div class="location">Physics Building</div>
+	<div class="description">There is a small display, mostly focused on optical phenomena.</div>
+	<img src="lens.jpg"><br>
+	<img src="polarized.jpg"><br>
+	<img src="reflection.jpg"><br>
+	<hr>
+</div>
+<div>
+	<div class="title">Laws Observatory</div>
+	<div class="location">Physics Building</div>
+	<div class="description">The observatory is open to the public on most Wednesday nights.</div>
+	<hr>
+</div>
+<div>
+	<div class="title">Museum of Art and Archaeoogy</div>
+	<div class="description">Unfortunately, this is closed for renovation currently.</div>
+	<hr>
+</div>
+<div>
+	<div class="title">Museum of Anthropology</div>
+	<div class="description">Unfortunately, this is closed for renovation currently.</div>
+	<hr>
+</div>
+<div>
+	<div class="title"> </div>
+	<div class="description"> </div>
+	<hr>
+</div>
+<div>
+	<div class="title">Rocks and Minerals Display</div>
+ <div class="location">Daniel Boone Regional Library</div>
+	<div class="description">There is a display of rocks and minerals on display, provided by the Central Missouri Rock and Lapidary Club.  The contents of this 
+display are rotated frequently.</div>
+	<img src="rocks.jpg">
+
+
+</div>
+<pre id='x'>x</pre>
+<pre id='y'>y</pre>
+<script>
+/*	function show(e){
+		document.getElementById('x').innerHTML = e.clientX;
+		document.getElementById('y').innerHTML = e.clientY;
+	}*/
+</script>
+</body>
+</html>
