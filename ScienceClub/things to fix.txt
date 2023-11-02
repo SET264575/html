@@ -25,5 +25,9 @@ Add question to question list
 Add both to topical
 
 Periodic table
+  ensure works on phone
+  
 Displays
+  ensure works on phone
+  header - Mizzou, elsewhere
 
