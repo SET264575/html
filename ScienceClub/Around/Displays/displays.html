@@ -1,234 +1,253 @@
- <html>
-<head>
-<style>
-
-.hoverinfo {
-  width: 18px;
-  height: 25px;
-  font-size: 14px;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-p {
-display: none;
-position: fixed;
-top: 20px;
-left: 600px;
-width: 400px;
-height: 300px;
-border: 1px solid black;
-border-radius: 5px;
-}
-
-.hoverinfo:hover p {
-  background-color: rgba(255, 255, 255, 0.7);
-  display: block;
-  color: black;
-}
-.spot1 {
-	position: absolute;
-	top: 60px;
-	left: 142px;
-	}
-
-.spot2 {
-	position: absolute;
-	top: 138px;
-	left: 90px;
-	}
-
-.spot3 {
-	position: absolute;
-	top: 182px;
-	left: 165px;
-	}
-
-.spot4 {
-	position: absolute;
-	top: 224px;
-	left: 291px;
-
-	}
-
-.spot5 {
-	position: absolute;
-	top: 344px;
-	left: 323px;
-	}
-
-.spot6 {
-	position: absolute;
-	top: 345px;
-	left: 368px;
-	}
-
-.spot7 {
-	position: absolute;
-	top: 283px;
-	left: 432px;
-
-	}
-
-.spot8 {
-	position: absolute;
-	top: 277px;
-	left: 444px;
-	}
-
-.spot9 {
-	position: absolute;
-	top: 450px;
-	left: 450px;
-	}
-
-.title {
-}
-.address {
-}
-.description {
-}
-.img2 {
-}
-
-</style>
-</head>
+<html>
+	<head>
+		
+		<style>
+		
+		.hoverinfo {
+		  width: 18px;
+		  height: 25px;
+		  font-size: 14px;
+		  color: #ffffff;
+		  cursor: pointer;
+		}
+		
+		p {
+		display: none;
+		position: fixed;
+		top: 20px;
+		left: 600px;
+		width: 400px;
+		height: 300px;
+		border: 1px solid black;
+		border-radius: 5px;
+		}
+		
+		.hoverinfo:hover p {
+		  background-color: rgba(255, 255, 255, 0.7);
+		  display: block;
+		  color: black;
+		}
+		.spot1 {
+			position: absolute;
+			top: 60px;
+			left: 142px;
+			}
+		
+		.spot2 {
+			position: absolute;
+			top: 138px;
+			left: 90px;
+			}
+		
+		.spot3 {
+			position: absolute;
+			top: 182px;
+			left: 165px;
+			}
+		
+		.spot4 {
+			position: absolute;
+			top: 224px;
+			left: 291px;
+		
+			}
+		
+		.spot5 {
+			position: absolute;
+			top: 344px;
+			left: 323px;
+			}
+		
+		.spot6 {
+			position: absolute;
+			top: 345px;
+			left: 368px;
+			}
+		
+		.spot7 {
+			position: absolute;
+			top: 283px;
+			left: 432px;
+		
+			}
+		
+		.spot8 {
+			position: absolute;
+			top: 277px;
+			left: 444px;
+			}
+		
+		.spot9 {
+			position: absolute;
+			top: 450px;
+			left: 450px;
+			}
+		
+		.title {
+		}
+		.address {
+		}
+		.description {
+		}
+		.img2 {
+		}
+		
+		</style>
+	</head>
 <body>
-<div>
-  <img src="map2.png" id = "map" width = "500px" onmousemove="show(event)" />
- 
-  <div class="hoverinfo spot1"> 
-    <p>Mizzou Department of Geology Display
-      <br>Address:
-      <br>Dozens of geologic specimens on display in the hallway on the first floor and basement.
-	<br><img src="" width="100px"></p>
-  </div>
-  <div class="hoverinfo spot2"> 
-    <p>Lafferre Hall
-      <br>Address:
-      <br>Engines on the first floor, chemistry instruments display on second floor.</p>
-  </div>
-  <div class="hoverinfo spot3"> 
-    <p>Mizzou Botanic Garden
-      <br>Throughout campus
-      <br>Great Tree Trails</p>
-  </div>
-  <div class="hoverinfo spot4"> 
-    <p>Museum of Art & Archaeology and Museum of Anthropology
-      <br>Unfortunately, these museums are closed for renovation currently.
-      <br></p>
-  </div>
-  <div class="hoverinfo spot5"> 
-    <p>Enns Entomology Museum
-      <br>Address:
-      <br>There is a display of mounted insects as well as a few live insects to see.</p>
-  </div>
-  <div class="hoverinfo spot6"> 
-    <p>Natural Resources Building</p>
-  </div>
-  <div class="hoverinfo spot7"> 
-    <p>Laws Observatory</p>
-  </div>
-  <div class="hoverinfo spot8"> 
-    <p>Physics Building</p>
-  </div>
-<div>
-	<div class="title">Mizzou Department of Geology Display</div>
-	<div class="location">Department of Geology Building</div>
-	<div class="description">There is a large collection of geological specimens including rocks, minerals and fossils in the hallway on the first 
-		floor and the basement. The basement contains some large fossils that don't fit in a case.</div>
-	<div class="recommendation"></div>
-	<img src="case.jpg"><br>
-	<img src="fish.jpg"><br>
-	<img src="pitchblend.png"><br>
-<hr>
-</div>
-<div>
-	<div class="title">Engines</div>
-	<div class="location">Lafferre Hall</div>
-	<div class="description">Two engines are on display in the basement.  One is a reverse thruster from a NASA Space Shuttle Trainer and the other
-	is a turbojet engine with afterburner from a T-38N aircraft using in NASA astronaut training.</div>
-	<div class="recommendation"></div>
+	<div id="divHeader2"></div>
+	<div id="divMain">
+		<div>
+		  <img src="map2.png" id = "map" width = "500px" onmousemove="show(event)" />
+		 
+		  <div class="hoverinfo spot1"> 
+		    <p>Mizzou Department of Geology Display
+		      <br>Address:
+		      <br>Dozens of geologic specimens on display in the hallway on the first floor and basement.
+			<br><img src="" width="100px"></p>
+		  </div>
+		  <div class="hoverinfo spot2"> 
+		    <p>Lafferre Hall
+		      <br>Address:
+		      <br>Engines on the first floor, chemistry instruments display on second floor.</p>
+		  </div>
+		  <div class="hoverinfo spot3"> 
+		    <p>Mizzou Botanic Garden
+		      <br>Throughout campus
+		      <br>Great Tree Trails</p>
+		  </div>
+		  <div class="hoverinfo spot4"> 
+		    <p>Museum of Art & Archaeology and Museum of Anthropology
+		      <br>Unfortunately, these museums are closed for renovation currently.
+		      <br></p>
+		  </div>
+		  <div class="hoverinfo spot5"> 
+		    <p>Enns Entomology Museum
+		      <br>Address:
+		      <br>There is a display of mounted insects as well as a few live insects to see.</p>
+		  </div>
+		  <div class="hoverinfo spot6"> 
+		    <p>Natural Resources Building</p>
+		  </div>
+		  <div class="hoverinfo spot7"> 
+		    <p>Laws Observatory</p>
+		  </div>
+		  <div class="hoverinfo spot8"> 
+		    <p>Physics Building</p>
+		  </div>
+		<div>
+			<div class="title">Mizzou Department of Geology Display</div>
+			<div class="location">Department of Geology Building</div>
+			<div class="description">There is a large collection of geological specimens including rocks, minerals and fossils in the hallway on the first 
+				floor and the basement. The basement contains some large fossils that don't fit in a case.</div>
+			<div class="recommendation">On one hand, it's just rocks.  But this is a pretty nice display.  It's in the hallway where it's easy to get to without 
+			feeling like you don't belong.  Each specimen is labeled and the cases are well-lit.  Each individual rock is a little underwhelming by itself.  Although there are some nice fossils that really are interesting to
+			see.  There are also some mineral specimens that are really nice by themselves.  But the size of the display makes this well-worth seeing.  At the end
+			of the hallway in the basement (by the stairs) is a display of fluoresent minerals which was cool when it worked, but last time I checked, it didn't.</div>
+			<img src="case.jpg"><br>
+			<img src="fish.jpg"><br>
+			<img src="pitchblend.png"><br>
+		<hr>
+		</div>
+		<div>
+			<div class="title">Engines</div>
+			<div class="location">Lafferre Hall</div>
+			<div class="description">Two engines are on display in the basement.  One is a reverse thruster from a NASA Space Shuttle Trainer and the other
+			is a turbojet engine with afterburner from a T-38N aircraft using in NASA astronaut training.</div>
+			<div class="recommendation">These are tucked away in a corner.  They are easily accessed and they have some labels identifying them.  They have the
+			cool feel of being a part of NASA history, being big, and being powerful.  But, they also kind of sit there quietly out of the way.</div>
+		
+			<img src="engine.jpg"><br>
+			<hr>
+		</div>
+		<div>
+			<div class="title">Chemistry Equipment </div>
+			<div class="location">Lafferre Hall</div>
+			<div class="description"> </div>
+			<div class="recommendation">Perhaps the least loved displays on campus.  Not lit.  Not labeled.  OK to look at if you happen to be in the building, or
+			you just want to check it off your list of everything.</div>
+		
+			<hr>
+		</div>
+		<div>
+			<div class="title">Mizzou Botanic Garden </div>
+			<div class="location">Mizzou Campus</div>
+			<div class="description"> </div>
+			<div class="website"><a href="">Website</a></div>
+			<div class="recommendation">This is spread across campus.  The self-guided tours (available on the link above) are very helpful.  This is great for
+			a walk across campus, whether you are interested in the trees or not.</div>
+		
+			<hr>
+		</div>
+		<div>
+			<div class="title">Enns Entomology Museum</div>
+			<div class="location"></div>
+			<div class="description">There is a loarge collection of mounted insects as well as a few live insects.  See the link below for a full
+			description and pictures.</div>
+			<div><a href="https://museum.insecta.missouri.edu/overview.htm">Website</a></div>
+			<div class="recommendation">Apparently this collection is fairly important, but I was underwhelmed on my visit.  It has been years ago.
+			My impression is that this is a collection for research purposes and not primarily for public viewing.  This does not feel like it is 
+			set up for the public, although the public are welcome.  It is a display in a room where other things are going on.  The staff there
+			were happy to let us take a look, but it did not have a "museum" feel to it.  It does have a wide variety of interesting insects 
+			from around the world to look at.  The live hissing cockroaches were also interesting.</div>
+		</div>
+		<div>
+			<div class="title">Game Animal Display </div>
+			<div class="location">Anheuser-Bush Natural Resources Building</div>
+			<div class="description">A large collection of game animals from around the world. </div>
+			<div class="recommendation">This is an impressive display.  There are detailed descriptions for most of the specimens.  It is well-worth taking a detour to see this if you are anywhere close.</div>
+			<img src="animals.jpg"><br>
+			<img src="ducks.jpg"><br>
+			<hr>
+		</div>
+		<div>
+			<div class="title">Optics Display</div>
+			<div class="location">Physics Building</div>
+			<div class="description">There is a small display, mostly focused on optical phenomena.</div>
+			<div class="recommendation">If you go to the observatory on a Wednesday, or the Physics Open House in the spring, this display is worth taking
+			a look at.  It is not well-labeled so it helps to have someone who knows what they are looking at with you to help interpret it.</div>
+			<img src="lens.jpg"><br>
+			<img src="polarized.jpg"><br>
+			<img src="reflection.jpg"><br>
+			<hr>
+		</div>
+		<div>
+			<div class="title">Laws Observatory</div>
+			<div class="location">Physics Building</div>
+			<div class="description">The observatory is open to the public on most Wednesday nights.</div>
+			<div class="recommendation">The professional running the telescope is happy to talk to you about the telescope and about what you are looking at.</div>
+			<hr>
+		</div>
+		<div>
+			<div class="title">Museum of Art and Archaeoogy</div>
+			<div class="description">Unfortunately, this is closed for renovation currently.</div>
+			<div class="recommendation">It's hard to say currently because it is closed, but in the past, this was a full-fledged museum with lots to look at.  I
+			have hopes that it will be great when it reopens.</div>
+			<hr>
+		</div>
+		<div>
+			<div class="title">Museum of Anthropology</div>
+			<div class="description">Unfortunately, this is closed for renovation currently.</div>
+			<div class="recommendation">It's hard to say currently because it is closed, but in the past, this was a full-fledged museum with lots to look at.  I
+			have hopes that it will be great when it reopens.</div>
+			<hr>
+		</div>
+		
+		<div>
+			<div class="title">Rocks and Minerals Display</div>
+		 	<div class="location">Daniel Boone Regional Library</div>
+			<div class="description">There is a display of rocks and minerals on display, provided by the Central Missouri Rock and Lapidary Club.  The contents of this 
+		display are rotated frequently.</div>
+			<div class="recommendation">This is an interesting display that changes fairly frequently.  Many of the specimens are beautiful.  This is well-worth
+			taking a look at when you are at the library.</div>
+			<img src="rocks.jpg">
+		
+		
+		</div>
+		</div>
 
-	<img src="engine.jpg"><br>
-	<hr>
-</div>
-<div>
-	<div class="title">Chemistry Equipment </div>
-	<div class="location">Lafferre Hall</div>
-	<div class="description"> </div>
-	<div class="recommendation"></div>
+<script src="../science.js">
 
-	<hr>
-</div>
-<div>
-	<div class="title">Mizzou Botanic Garden </div>
-	<div class="location">Mizzou Campus</div>
-	<div class="description"> </div>	
-	<div class="recommendation"></div>
-
-	<hr>
-</div>
-<div>
-	<div class="title">Game Animal Display </div>
-	<div class="location">Anheuser-Bush Natural Resources Building</div>
-	<div class="description">A large collection of game animals from around the world. </div>
-	<div class="recommendation"></div>
-	<img src="animals.jpg"><br>
-	<img src="ducks.jpg"><br>
-	<hr>
-</div>
-<div>
-	<div class="title">Optics Display</div>
-	<div class="location">Physics Building</div>
-	<div class="description">There is a small display, mostly focused on optical phenomena.</div>
-	<div class="recommendation"></div>
-	<img src="lens.jpg"><br>
-	<img src="polarized.jpg"><br>
-	<img src="reflection.jpg"><br>
-	<hr>
-</div>
-<div>
-	<div class="title">Laws Observatory</div>
-	<div class="location">Physics Building</div>
-	<div class="description">The observatory is open to the public on most Wednesday nights.</div>
-	<div class="recommendation"></div>
-	<hr>
-</div>
-<div>
-	<div class="title">Museum of Art and Archaeoogy</div>
-	<div class="description">Unfortunately, this is closed for renovation currently.</div>
-	<div class="recommendation"></div>
-	<hr>
-</div>
-<div>
-	<div class="title">Museum of Anthropology</div>
-	<div class="description">Unfortunately, this is closed for renovation currently.</div>
-	<div class="recommendation"></div>
-	<hr>
-</div>
-<div>
-	<div class="title"> </div>
-	<div class="description"> </div>
-	<hr>
-</div>
-<div>
-	<div class="title">Rocks and Minerals Display</div>
- 	<div class="location">Daniel Boone Regional Library</div>
-	<div class="description">There is a display of rocks and minerals on display, provided by the Central Missouri Rock and Lapidary Club.  The contents of this 
-display are rotated frequently.</div>
-	<div class="recommendation"></div>
-	<img src="rocks.jpg">
-
-
-</div>
-<pre id='x'>x</pre>
-<pre id='y'>y</pre>
-<script>
-/*	function show(e){
-		document.getElementById('x').innerHTML = e.clientX;
-		document.getElementById('y').innerHTML = e.clientY;
-	}*/
 </script>
 </body>
 </html>
