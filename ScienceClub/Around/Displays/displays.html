@@ -5,8 +5,13 @@
     </title>
     <link rel="stylesheet" href="../../science.css">
     <link rel="icon" type="image/jpg" href="../../favicon.jpg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 		<style>
-		
+		      * {
+        box-sizing: border-box;
+      }
 		.hoverinfo {
 		  width: 18px;
 		  height: 25px;
@@ -117,6 +122,7 @@
 		}
 		img {
 			width: 400px;
+			margin: 20px;
 		}
 		h2 {
 			text-align: center;
@@ -127,6 +133,22 @@
 		h2:after {
 			content: '\A';
 		}
+
+		 .flex-container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .right {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+
+      @media (max-width: 700px) {
+        .flex-container {   
+          flex-direction: column;
+        }
 		</style>
 	</head>
 <body>
@@ -181,9 +203,10 @@
 			feeling like you don't belong.  Each specimen is labeled and the cases are well-lit.  Each individual rock is a little underwhelming by itself.  Although there are some nice fossils that really are interesting to
 			see.  There are also some mineral specimens that are really nice by themselves.  But the size of the display makes this well-worth seeing.  At the end
 			of the hallway in the basement (by the stairs) is a display of fluoresent minerals which was cool when it worked, but last time I checked, it didn't.</div>
-			<img src="case.jpg"><br>
+			<div class="flex-container"><img src="case.jpg"><br>
 			<img src="fish.jpg"><br>
 			<img src="pitchblend.png"><br>
+			</div>
 			<hr>
 		</div>
 		<div>
@@ -234,8 +257,10 @@
 			<div class="location">Anheuser-Bush Natural Resources Building</div>
 			<div class="description">A large collection of game animals from around the world. </div>
 			<div class="recommendation">This is an impressive display.  There are detailed descriptions for most of the specimens.  It is well-worth taking a detour to see this if you are anywhere close.</div>
-			<img src="animals.jpg"><br>
-			<img src="ducks.jpg"><br>
+			<div class="flex-container">
+				<img src="animals.jpg"><br>
+				<img src="ducks.jpg"><br>
+			</div>
 			<hr>
 		</div>
 		<div>
@@ -244,9 +269,11 @@
 			<div class="description">There is a small display, mostly focused on optical phenomena.</div>
 			<div class="recommendation">If you go to the observatory on a Wednesday, or the Physics Open House in the spring, this display is worth taking
 			a look at.  It is not well-labeled so it helps to have someone who knows what they are looking at with you to help interpret it.</div>
-			<img src="lens.jpg"><br>
+			<div class="flex-container">
+				<img src="lens.jpg"><br>
 			<img src="polarized.jpg"><br>
 			<img src="reflection.jpg"><br>
+			</div>
 			<hr>
 		</div>
 		<div>
