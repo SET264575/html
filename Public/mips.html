@@ -295,7 +295,7 @@
     <input type = "radio" id = "adult10" name="ct adult" onclick = "uncheck(9); uncheck(10);uncheck(22); uncheck(12); uncheck(13);copytext()"><label for ="adult10" class='red'>If patient is 18 or older, presenting with minor blunt head trauma. Head CT (including cosigned orders) was ordered by an emergency care clinician for trauma, no indication specified.</label><br>
     </div><br><br>
     
-      <button type="button" class="collapsible">#146 - Emergency Medicine: Utilization of <b>CT</b> for Minor Blunt Head Trauma (Pediatrics)</button>
+      <button type="button" class="collapsible">#416 - Emergency Medicine: Utilization of <b>CT</b> for Minor Blunt Head Trauma (Pediatrics)</button>
     <div class="content">
     <input type = "radio" id = "ped1" name="ct ped" onclick = " uncheck(15); copytext()"><label for ="ped1">The patient is between 2-17 years, presenting with minor blunt head trauma. Head CT (including cosigned orders) was ordered by an emergency care clinican AND the one or more patient exclusions apply:</label><br>
      <div class = "sub">
@@ -504,7 +504,7 @@
           }
           
           if (ctped != '__________') {
-            t = t + "MIPS #146 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Pediatrics)\n";
+            t = t + "MIPS #416 - Emergency Medicine: Utilization of CT for Minor Blunt Head Trauma (Pediatrics)\n";
             t = t + ctped;
             if (isChecked('ped1')) {
               t = t + getReasons(['ped11','ped12','ped13','ped14','ped15']);
