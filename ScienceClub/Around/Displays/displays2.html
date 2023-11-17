@@ -67,12 +67,27 @@
 		.recommendation: {
 			margin-top: 5px;
 		}
+      		.time {
+			font-size: 1em;
+			font-weight: normal;
+			color: black;
+			margin-top: 5px;
+
+		}
+		.time:before {
+			content: 'Location: ';
+			font-weight: bold;
+			
+		}
 		.description {
 			font-size: 1em;
 			font-weight: normal;
 			color: black;
 			margin-top: 5px;
 		}
+		.time {
+
+    }
 		img {
 			width: 30%;
 			margin-left: auto;
@@ -163,46 +178,13 @@
 			</div>
 		</div>
 		 
-		  <div class="hoverinfo spot1"> 
-		    <p>Department of Geology Display
-		      <br>Address:
-		      <br>Dozens of geologic specimens on display in the hallway on the first floor and basement.
-			<br><img src="" width="100px"></p>
-		  </div>
-		  <div class="hoverinfo spot2"> 
-		    <p>Lafferre Hall
-		      <br>Address:
-		      <br>Engines on the first floor, chemistry instruments display on second floor.</p>
-		  </div>
-		  <div class="hoverinfo spot3"> 
-		    <p>Mizzou Botanic Garden
-		      <br>Throughout campus
-		      <br>Great Tree Trails</p>
-		  </div>
-		  <div class="hoverinfo spot4"> 
-		    <p>Museum of Art & Archaeology and Museum of Anthropology
-		      <br>Unfortunately, these museums are closed for renovation currently.
-		      <br></p>
-		  </div>
-		  <div class="hoverinfo spot5"> 
-		    <p>Enns Entomology Museum
-		      <br>Address:
-		      <br>There is a display of mounted insects as well as a few live insects to see.</p>
-		  </div>
-		  <div class="hoverinfo spot6"> 
-		    <p>Natural Resources Building</p>
-		  </div>
-		  <div class="hoverinfo spot7"> 
-		    <p>Laws Observatory</p>
-		  </div>
-		  <div class="hoverinfo spot8"> 
-		    <p>Physics Building</p>
-		  </div>
+
 		
 		<h2>On the University of Missouri Campus</h2>
 		<div class="exhibit">
 			<div class="title" id="botanic">Mizzou Botanic Garden Tree Trails</div>
 			<div class="location">Mizzou Campus</div>
+      <div class="time">Spring, Summer, Fall</div>
 			<div class="description">The trails consist of three loops — the Jesse Hall Loop, through the Francis Quadrangle; the Lowry Mall Loop, 
 				centered on Ellis Library; and the Memorial Union Loop, which meanders among early 20th century limestone buildings. Trees on each 
 				loop are identified by plaques at the base of the tree. The link below will lead you to the trail maps and tree descriptions. </div>
@@ -220,6 +202,7 @@
 		<div class="exhibit">
 			<div class="title" id="geology">Geologic Specimens Display</div>
 			<div class="location">Department of Geology Building</div>
+      <div class="time">Anytime, although this is great for a field trip when the weather is bad</div>
 			<div class="description">There is a large collection of geological specimens including rocks, minerals and fossils in the hallway on the first 
 				floor and the basement. The basement contains some large fossils that don't fit in a case.</div>
 			<div class="recommendation">On one hand, it's just rocks.  But this is a pretty nice display.  It's in the hallway where it's easy to get to without 
@@ -237,6 +220,7 @@
     <div class="exhibit">
       <div class="title">Edison Dynamo</div>
       <div class="location">Naka Building</div>
+      <div class="time">Engineering Week in the Spring, then other activities are going on</div>
       <div class="description">Given to the University by Thomas Edison in 1883 and used to power the first incandescent lights west of the Mississippi. </div>
       <div class="recommendation">This is an impressive piece of equipment with an impressive history that you can look at from all 4 sides.  Still, not a major
       attraction by itself.</div>
@@ -249,6 +233,7 @@
 		<div class="exhibit">
 			<div class="title" id="lafferre">Engines</div>
 			<div class="location">Lafferre Hall</div>
+      <div class="time">Engineering Week in the Spring, then other activities are going on</div>
 			<div class="description">Two engines are on display in the basement.  One is a reverse thruster from a NASA Space Shuttle Trainer and the other
 			is a turbojet engine with afterburner from a T-38N aircraft used in NASA astronaut training.</div>
 			<div class="recommendation">These are tucked away in a corner.  They are easily accessed and they have some labels identifying them.  They have the
@@ -262,6 +247,7 @@
 		<div class="exhibit">
 			<div class="title">Chemistry Equipment </div>
 			<div class="location">Lafferre Hall</div>
+      <div class="time">Engineering Week in the Spring, then other activities are going on</div>      
 			<div class="description">There are actually two displays, one in a cabinet on the north wall and the other mounted on the south wall.</div>
 			<div class="recommendation">Perhaps the least loved displays on campus.  Not lit.  Not labeled.  OK to look at if you happen to be in the building, or
 			you just want to check it off your list of everything.</div>
@@ -271,9 +257,23 @@
 			<hr>
 		</div>
 
+        
+		<div class="exhibit">
+			<div class="title">Concrete Canoe</div>
+			<div class="location">Lafferre Hall</div>
+      <div class="time">Engineering Week in the Spring, then other activities are going on</div>      
+			<div class="description">This is on the second floor at the east side of the building.</div>
+			<div class="recommendation">This is an interesting conversation piece, but not something to see in isolation.</div>
+			<div class="flex-container">
+			  <img src="canoe.jpg">
+			</div>
+			<hr>
+		</div>
+    
 		<div class="exhibit">
 			<div class="title" id="art">Museum of Art and Archaeoogy</div>
       <div class="location">Ellis Library</div>
+      <div class="time">Anytime once it opens, although this is a great bad weather field trip.</div>      
 			<div class="description">Unfortunately, this is closed for renovation currently.  However, the Ancient Case Collection is still able to be viewed on the second floor of
       Ellis Library.</div>
 			<a href="https://maa.missouri.edu/">Website</a>
@@ -290,6 +290,7 @@
 		<div class="exhibit">
 			<div class="title" id="anthro">Museum of Anthropology</div>
 			<div class="description">Unfortunately, this is also closed for renovation currently.</div>
+      <div class="time">Another great bad weather field trip.</div> 
 			<a href="https://anthromuseum.missouri.edu/">Website</a>
 			<div class="recommendation">It's hard to say currently because it is closed, but in the past, this was a full-fledged museum with lots to look at.  I
 			have hopes that it will be great when it reopens.</div>
@@ -299,7 +300,8 @@
 		<div class="exhibit">
 			<div class="title" id="ag">Enns Entomology Museum</div>
 			<div class="location">Agriculture Building, corner of Hitt & Rollins, Room 3-38</div>
-			<div class="description">There is a loarge collection of mounted insects as well as a few live insects.  See the link below for a full
+      <div class="time">Anytime, but good for bad weather.  Combine this with the game animals in the connected building.</div> 
+			<div class="description">There is a large collection of mounted insects as well as a few live insects.  See the link below for a full
 			description and pictures.</div>
 			<div><a href="https://museum.insecta.missouri.edu/overview.htm">Website</a></div>
 			<div class="recommendation">Apparently this collection is fairly important, but I was underwhelmed on my visit.  It has been years ago.
@@ -318,6 +320,7 @@
 			<div class="title" id="snr">Game Animal Display </div>
 			<div class="location">Anheuser-Bush Natural Resources Building</div>
 			<div class="description">A large collection of game animals from around the world. </div>
+      <div class="time">Anytime, great for bad weather.</div> 
 			<div><a href="https://snr.missouri.edu/about/exhibits/">Website</a></div>
 			<div class="recommendation">This is an impressive display.  There are detailed descriptions for most of the specimens.  It is well-worth taking a detour to see this if you are anywhere close.</div>
 			<div class="flex-container">
@@ -331,6 +334,7 @@
 			<div class="title" id="physics">Optics Display</div>
 			<div class="location">Physics Building</div>
 			<div class="description">There is a small display, mostly focused on optical phenomena.</div>
+      <div class="time">See this when you come to the Physics Open House, or visit the Laws Observatory.</div> 
 			<div class="recommendation">If you go to the observatory on a Wednesday, or the Physics Open House in the spring, this display is worth taking
 			a look at.  It is not well-labeled so it helps to have someone who knows what they are looking at with you to help interpret it.</div>
 			<div class="flex-container">
@@ -344,7 +348,8 @@
 		<div class="exhibit">
 			<div class="title">Laws Observatory</div>
 			<div class="location">Physics Building</div>
-			<div class="description">The observatory is open to the public on most Wednesday nights.</div>
+      <div class="time">The observatory is open to the public on most Wednesday nights.</div> 
+			<div class="description">This is a medium-sized telescope.</div>
 			<div class="recommendation">The professional running the telescope is happy to talk to you about the telescope and about what you are looking at.</div>
 			<hr>
 		</div>
@@ -354,6 +359,7 @@
 			<div class="title">Chemistry Equipment Display</div>
 			<div class="location">Chemistry Building</div>
 			<div class="description">There is a small display of old chemistry glassware.  There are no labels.</div>
+      <div class="time">See this when you come to the Physics Open House.</div> 
 			<div class="recommendation">The glassware certainly makes you curious about how it was used.  Unfortunately, there are no labels to help you out.  Not worth a 
       visit alone, but can be combined with the physics building which is right next door.</div>
       <div class="flex-container">
@@ -367,6 +373,7 @@
     <div class="exhibit">
 			<div class="title">Hawaiian Snail Shells</div>
 			<div class="location">Biology Building (LeFevre Hall), mounted to the wall on the stair landing</div>
+      <div class="time">Combine this with other trips, such as the chemistry and physics buidings.</div> 
 			<div class="description">A display of snail shells collected over multiple trips from the first half of the 20th century.  There are maps and labels
       that describe what you are looking at.</div>
 			<div class="recommendation">Although the subject matter is obscure, the display is beautiful and takes you back to the days of naturalists wandering 
@@ -381,6 +388,7 @@
     <div class="exhibit">
 			<div class="title">Tractors</div>
 			<div class="location">Agricultural Engineering Building</div>
+      <div class="time">Stop by here when you visit the Veterinary School Open House on your way to get Buck's Ice Cream.</div> 
 			<div class="description">These are tractors that are built by students each year.</div>
 			<div class="recommendation">These are cool.  You can get up close to them.</div>
       <div class="flex-container">
