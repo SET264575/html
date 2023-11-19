@@ -27,7 +27,7 @@
         white-space: normal;
       }
 
-      .coreconcepts,.roots,.websites,.nav, pre {
+      .coreconcepts,.roots,.websites,.nav, pre,.roots th,.roots td {
             font-family: Helvetica;
             font-size: 20px;
       }
