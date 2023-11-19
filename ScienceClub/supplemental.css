@@ -1,6 +1,7 @@
       body {
         font-size: 100%
         width: 80%;
+        margin: auto;
       }
       
       h2 {
@@ -27,7 +28,7 @@
         white-space: normal;
       }
 
-      .coreconcepts,.roots,.websites, pre {
+      .coreconcepts,.roots,.websites,.nav pre {
             font-family: Helvetica;
             font-size: 20px;
       }
