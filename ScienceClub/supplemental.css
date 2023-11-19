@@ -41,6 +41,10 @@
        .roots {
              margin: auto;
        }
+
+      .roots table{
+            margin: auto;
+      }
           
 
         @media (max-width: 800px) {
