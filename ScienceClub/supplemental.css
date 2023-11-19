@@ -44,6 +44,15 @@
       .roots table{
             margin: auto;
       }
+
+      .construction {
+            display: flex;
+            flex-direction: row;
+            border: 2px solid red;
+            padding: 20px;
+            
+      }
+
           
 
         @media (max-width: 800px) {
@@ -51,6 +60,10 @@
             font-size: 2em;
             max-width: 100%;
           }
+
+         .construction {
+               flex-direction: column;
+         }
 
           .pix {
             max-width: 100%;
