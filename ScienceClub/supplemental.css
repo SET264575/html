@@ -1,6 +1,10 @@
       body {
         font-size: 100%
-        padding: 30px;
+      }
+
+      .main {
+            margin: auto;
+            width: 80%;
       }
       
       h2 {
