@@ -71,3 +71,23 @@ economics
 law of supply and demand
 regression to the mean
 bayes theorem
+relative size of sun, earth, moon
+
+Image: from Wikipedia
+Core Concept: cartesian coordinates
+Concept Map:
+Applicable to:
+chess
+battleship
+graphing functions
+computer graphics
+plotting data
+latitude and longitude
+solving systems of equations
+Advanced connections:
+Polar, spherical, other coordinate systems
+Higher dimensions
+Periphery:
+Decartes
+
+
