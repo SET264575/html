@@ -1,0 +1,73 @@
+monotonous increasing
+one-to-one
+polar coordinates
+parametric equations
+functions
+multiple dimensions
+distance formula
+probability
+combinations
+permutations
+log
+exponent
+pi
+order of magnitude
+reading graphs
+vectors
+
+electricity
+magnetism
+inertia
+elastic vs inelastic
+springs
+pendulums
+friction
+circular motion
+heat, entropy
+e=hf
+particle-wave duality
+Bohr model
+hydrostatic pressure
+types of radiation
+isotopes
+right hand rule
+simple machines, 
+speed of sound vs light
+doppler effect
+lenses
+reflection
+refraction
+inverse square law
+fission and fusion
+temperature scales
+
+genetics
+cell receptors
+endothermic vs exothermic
+organelles
+transcription, translation
+virus, bacteria, pathogen
+causes of illness
+food web
+energy pyramid
+homeostatis
+photosynthesis
+
+chemistry
+states of matter
+mixtures
+atomic structure
+solutions
+density
+balancing equations
+pressure
+diffusion
+equilibrium
+acid/base
+batteries
+chirality
+
+economics
+law of supply and demand
+regression to the mean
+bayes theorem
