@@ -84,10 +84,17 @@ computer graphics
 plotting data
 latitude and longitude
 solving systems of equations
+grid of lights
+Excel spreadsheet
+table
+Variations:
+A5 of Battleship, location of origin, label on line or square, 
 Advanced connections:
 Polar, spherical, other coordinate systems
 Higher dimensions
+Log plots
 Periphery:
 Decartes
+
 
 
