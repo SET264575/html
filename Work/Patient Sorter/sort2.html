@@ -79,6 +79,7 @@ p {
           this.name = c[0];
           this.age = c[1];
 		console.log(c);
+		if (c.length > 7) {
 					if (c[3].length == "" || c[2] == "Waiting Room") {
 						this.room = "Waiting Room"
 					}
@@ -108,6 +109,7 @@ p {
 					} else {
 						this.sepsis = "";
 					}
+		}
         }
       }
 			
