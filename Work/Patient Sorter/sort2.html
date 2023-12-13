@@ -150,33 +150,33 @@
 											 
       
       function sortPt(t) {
-	      pts = [];
-	      t = t.replaceAll('\nCCD (Ack)\n','');
-	      t = t.replaceAll('Waiting Room','Waiting Room\n');
-        t = t.replaceAll('UP,E','up,e');
-        a = t.split('\n')
-        lastName = getProviderName(a[2]);
+		pts = [];
+		t = t.replaceAll('\nCCD (Ack)\n','');
+		t = t.replaceAll('Waiting Room','Waiting Room\n');
+		t = t.replaceAll('UP,E','up,e');
+		a = t.split('\n')
+		lastName = getProviderName(a[2]);
 
-        count = a.length/11-1;
-        b = [];
-
-	      ptIndex = [];
-	      var bhcindex = a.search("Boone Hospital Center");
-        for (let i = bhcindex; i< a.length; i++) {
-          if( (a[i] == a[i].toUpperCase() && a[i].includes(',') && a[i].trim() != '') || (a[i].includes(',') && !isNaN(parseInt(a[i+1])))){
-            console.log('*'+a[i]+'*');
-            ptIndex.push(i);
-          }
-        }
-        ptIndex.push(a.length);
-        for (let i = 0; i<ptIndex.length-1; i++) {
-          b[i]  = a.slice((ptIndex[i]),ptIndex[i+1]-1);
-          pts.push(new Pt(b[i]));
-        }
+		count = a.length/11-1;
+		b = [];
 		
-        document.getElementById("unassigned").innerHTML = sorttable(pts,"SIGN");
-	      document.getElementById("waiting").innerHTML = sortWaiting(pts);
-        document.getElementById("mine").innerHTML = sortMine(pts,lastName.substr(0,3));
+		ptIndex = [];
+		var bhcindex = a.search("Boone Hospital Center");
+		for (let i = bhcindex; i< a.length; i++) {
+		  if( (a[i] == a[i].toUpperCase() && a[i].includes(',') && a[i].trim() != '') || (a[i].includes(',') && !isNaN(parseInt(a[i+1])))){
+		    console.log('*'+a[i]+'*');
+		    ptIndex.push(i);
+		  }
+		}
+		ptIndex.push(a.length);
+		for (let i = 0; i<ptIndex.length-1; i++) {
+		  b[i]  = a.slice((ptIndex[i]),ptIndex[i+1]-1);
+		  pts.push(new Pt(b[i]));
+		}
+		
+		document.getElementById("unassigned").innerHTML = sorttable(pts,"SIGN");
+		document.getElementById("waiting").innerHTML = sortWaiting(pts);
+		document.getElementById("mine").innerHTML = sortMine(pts,lastName.substr(0,3));
       }
 
       function getProviderName(name) {
@@ -224,79 +224,79 @@
         return(t);
       }
 	    
-	    function updateTimer(){
-		    timePassed++;
-		    console.log('in updateTimer');
-		    document.getElementById("time").innerHTML = timePassed;
-	    }
+	function updateTimer(){
+	    timePassed++;
+	    console.log('in updateTimer');
+	    document.getElementById("time").innerHTML = timePassed;
+	}
       
       function submitData() {
-				let data = getData();
-				let comments = document.getElementById('comment').value;
-        window.open('https://docs.google.com/forms/d/e/1FAIpQLSdAzRa0ZVkE76RYWRxprtZxOjwAmPf07rvT-JWOMQvGA3_otw/viewform?usp=pp_url&entry.1549251037='+data+'&entry.464386849='+comments,'_blank');
+	let data = getData();
+	let comments = document.getElementById('comment').value;
+	window.open('https://docs.google.com/forms/d/e/1FAIpQLSdAzRa0ZVkE76RYWRxprtZxOjwAmPf07rvT-JWOMQvGA3_otw/viewform?usp=pp_url&entry.1549251037='+data+'&entry.464386849='+comments,'_blank');
 	document.getElementById('comment').value = "";
 	document.getElementById('text').value = "";
-	      timePassed = -1;
-	      console.log('getting ready to run updateTimer');
-	      updateTimer();
+	timePassed = -1;
+	console.log('getting ready to run updateTimer');
+	updateTimer();
 
       	}
 			
-			function getData() {
-				let deptTotal = pts.length;
-				let inBed = 0;
-				let inWaitingRm = 0;
-				let inITC = 0;
-				let rm2 = 0;
-				let unassigned = 0;
-				let in1718 = 0;
-				let hasDispo = 0;
-				for (let i = 0; i<pts.length; i++){
-					if (pts[i].room == 'Waiting Room') { inWaitingRm++};
-					if (['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22'].includes(pts[i].room)) {inBed++};
-					if (['19','20','21','22'].includes(pts[i].room)) {inITC++};
-					if (['17','18'].includes(pts[i].room)) {in1718++};
-					if (pts[i].location =="02") {rm2++};
-					if (pts[i].provider.startsWith('SIGN')) {unassigned++};
-					if (['Pending Admission','Ready to Assign','Bed Reserved','Admitted Patient','Ready for Discharge','Transfer'].includes(pts[i].status)) {hasDispo++};
-				}
-				
-				
-				
-				let d = [];
-				d.push(deptTotal); //works
-				d.push(inWaitingRm); //works
-				d.push(inBed);
-				d.push(inITC);
-				d.push(in1718);
-				d.push(unassigned);  //works
-				d.push(hasDispo);
-				let data = ',';
-				for (let i = 0; i<d.length; i++) {
-					data = data + d[i].toString()+",";
-				}
-				roomStatus = [];
-				roomProvider = [];
-				roomTime = [];
-				for (let i = 0; i < 23; i++) {
-					roomStatus.push("Empty");
-					roomProvider.push("No Provider");
-					roomTime.push("0h");
-				}
-				for (let i = 0; i < pts.length; i++) {
-					if (parseInt(pts[i].room) != NaN) {
-						roomStatus[parseInt(pts[i].room)]=pts[i].status;
-						roomProvider[parseInt(pts[i].room)] = pts[i].provider;
-						roomTime[parseInt(pts[i].room)] = pts[i].time;
-					}
-				}
-				for (let i = 1; i<roomStatus.length;i++) {
-					data = data + "Rm "+i.toString()+","+roomStatus[i]+","+roomProvider[i]+","+roomTime[i]+',';
-				}
-				data = data + '"';
-				console.log(data);
-				return(data);
+	function getData() {
+		let deptTotal = pts.length;
+		let inBed = 0;
+		let inWaitingRm = 0;
+		let inITC = 0;
+		let rm2 = 0;
+		let unassigned = 0;
+		let in1718 = 0;
+		let hasDispo = 0;
+		for (let i = 0; i<pts.length; i++){
+			if (pts[i].room == 'Waiting Room') { inWaitingRm++};
+			if (['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22'].includes(pts[i].room)) {inBed++};
+			if (['19','20','21','22'].includes(pts[i].room)) {inITC++};
+			if (['17','18'].includes(pts[i].room)) {in1718++};
+			if (pts[i].location =="02") {rm2++};
+			if (pts[i].provider.startsWith('SIGN')) {unassigned++};
+			if (['Pending Admission','Ready to Assign','Bed Reserved','Admitted Patient','Ready for Discharge','Transfer'].includes(pts[i].status)) {hasDispo++};
+		}
+		
+		
+		
+		let d = [];
+		d.push(deptTotal); //works
+		d.push(inWaitingRm); //works
+		d.push(inBed);
+		d.push(inITC);
+		d.push(in1718);
+		d.push(unassigned);  //works
+		d.push(hasDispo);
+		let data = ',';
+		for (let i = 0; i<d.length; i++) {
+			data = data + d[i].toString()+",";
+		}
+		roomStatus = [];
+		roomProvider = [];
+		roomTime = [];
+		for (let i = 0; i < 23; i++) {
+			roomStatus.push("Empty");
+			roomProvider.push("No Provider");
+			roomTime.push("0h");
+		}
+		for (let i = 0; i < pts.length; i++) {
+			if (parseInt(pts[i].room) != NaN) {
+				roomStatus[parseInt(pts[i].room)]=pts[i].status;
+				roomProvider[parseInt(pts[i].room)] = pts[i].provider;
+				roomTime[parseInt(pts[i].room)] = pts[i].time;
 			}
+		}
+		for (let i = 1; i<roomStatus.length;i++) {
+			data = data + "Rm "+i.toString()+","+roomStatus[i]+","+roomProvider[i]+","+roomTime[i]+',';
+		}
+		data = data + '"';
+		console.log(data);
+		return(data);
+	}
 			
     </script>
   </body>
