@@ -82,12 +82,12 @@
 				this.room = "Waiting Room"
 			}
 		   	else {
-	          		this.room = c[3].substr(2,2);
+	          		this.room = c[4].substr(2,2);
 	          	}
-			this.complaint = c[4];
-			this.rating = c[5];
-			this.time = c[6];
-			let tmp = "0h "+c[6];
+			this.complaint = c[5];
+			this.rating = c[6];
+			this.time = c[7];
+			let tmp = "0h "+c[7];
 			tmp = tmp.split(' ');
 			tmp = tmp.splice(tmp.length-3,2);
 			this.sortableTime = '';
@@ -100,8 +100,8 @@
 				}
 				this.sortableTime = this.sortableTime + tmp[i];
 			}
-			this.status = c[7].trim();
-			this.provider = c[8].toUpperCase().split(',')[0];
+			this.status = c[8].trim();
+			this.provider = c[9].toUpperCase().split(',')[0];
 			if (c.join().includes("Sepsis")) {
 				this.sepsis = "Possible Sepsis";
 			} else {
