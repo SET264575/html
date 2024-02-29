@@ -298,7 +298,7 @@ function createCheckboxes(){
   
   var y = document.getElementById("demo"+String(j)+"col1")
   y.appendChild(tree);
-  var tree = document.createDocumentFragment();
+ /* var tree = document.createDocumentFragment();
   t = createCheckbox(i,room[i].note_hpi,"HPI");
   tree.appendChild(t);
   t = createCheckbox(i,room[i].note_course,"Course");
@@ -317,7 +317,7 @@ function createCheckboxes(){
   tree.appendChild(t);
   t = createCheckbox(i,room[i].note_sign,"Sign");
   tree.appendChild(t);
-  document.getElementById("demo"+String(j)+"col2").appendChild(tree);
+  document.getElementById("demo"+String(j)+"col2").appendChild(tree);*/
 }
 
 function createCheckbox(i,flag,label) {
