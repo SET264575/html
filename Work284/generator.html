@@ -1,0 +1,251 @@
+<!--
+Things to fix:
+Variables for select
+Variables for radio buttons
+score
+
+-->
+
+<html>
+  <head>
+    <title>
+      Generator
+    </title>
+    <style>
+
+	 
+    </style>
+  </head>
+  <body>
+    <table style = "border: 1px solid black; border-collapse: collapse; vertical-align: top;">
+      <tr>
+	      <td style = "border: 1px solid black; border-collapse: collapse; vertical-align: top;">
+          <h3>Title</h3>
+          <table><tr><td>
+          <label for = "title1">Title</label>
+		  </td><td>
+          <input type = "text" id = "title1"><br>
+            </td>
+            </tr>
+          <tr>
+            <td>
+          <button onclick = "makeTitle()">Add</button><br>
+            </td>
+          </tr>
+            
+		  </td>
+		      </table>
+        </td>
+      </tr>
+      <tr>
+        <td style = "border: 1px solid black; border-collapse: collapse; vertical-align: top;">
+          <h3>Radio</h3>
+	<table><tr><td>
+          <label for = "title">Title</label>
+		</td><td>
+          <input type = "text" id = "title"><br>
+		</td></tr><tr><td>
+          <label for = "values">Values</label>
+		</td><td>
+          <textarea id = "values"></textarea><br>
+		</td>
+		</tr>
+		</table>
+          <button onclick = "makeRadioButtons()">Add</button><br>
+        </td>
+        <td style = "border: 1px solid black; border-collapse: collapse; vertical-align: top;">
+          <h3>Checkbox</h3>
+          <table>
+            <tr>
+              <td>
+                <label for = "values1">Variables</label>
+              </td>
+              <td>
+              <textarea id = "values1"></textarea>
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <label for = "labels2">Labels</label>
+              </td>
+              <td>
+                <textarea id = "labels2"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>
+          <button onclick = "makeCheckbox()">Add</button><br>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td style = "border: 1px solid black; border-collapse: collapse; vertical-align: top;">
+		
+          <h3>Select</h3>
+		<table>
+			<tr>
+				<td>
+	  <label for = "select_text">Label</label>
+				</td><td>
+	  <input type = "text" id = "select_text"><br>
+				</td></tr>
+			<tr><td>
+	  <label for = "select">Options</label><br>
+				</td><td>
+	  <textarea id = "select"></textarea><br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+	  <button onclick="makeSelect()">Add</button><br>
+        </td>
+			</tr>
+					</table>
+        <td style = "border: 1px solid black; border-collapse: collapse; vertical-align: top;">
+          <h3>Text</h3>
+		<table><tr><td>
+	  <label for = "text_text">Label</label>
+			</td><td>
+	  <input type = "text" id = "text_text"><br>
+			</td></tr><tr><td>
+			<button onclick = "makeText()">Add</button><br></td></table>
+        </td>
+      </tr>
+    </table>
+	  <br>
+<!--    <button id = "finalize" onclick = "finalize()">Finalize</button><br>
+  <textarea id = "t" style = "width: 600px; height: 400px;" ></textarea><br><br>
+    <textarea id = "x" style = "width: 600px; height: 400px;"></textarea><br><br>
+    <textarea id = "z" style = "width: 600px; height: 400px;"></textarea><br><br>  -->
+    
+    <textarea id = "a" style = "width: 600px; height: 400px;"></textarea><br>
+    
+    
+    <script>
+      var t = "";  //inputs
+      var x = "";  //variables
+      var z = "";  //create text
+      var title1 = '';
+      
+      function makeTitle(){
+        title1 = document.getElementById("title1").value;
+        t = t + '    <h3>'+title1+'</h3>\n';
+        document.getElementById('title1').value = '';
+    //    document.getElementById("t").value = t;
+    //    document.getElementById("x").value = x;
+    //    document.getElementById("z").value = z;	    
+	finalize();
+      }
+      
+      function makeRadioButtons(){
+        var title = document.getElementById("title").value;
+        var values = document.getElementById("values").value.split('\n');
+        document.getElementById('title').value = '';
+        document.getElementById('values').value = '';
+	      var number = values.length;
+        t = t + "    <h3>"+title+"</h3>\n";
+        for (let i = 0; i < number; i ++){
+          t = t + '    <input type = "radio" id = "'+title+String(i)+'" name = "' + title + '" value = "'+String(i)+'" onchange = "copytext()">\n';
+          t = t + '    <label for = "'+title+String(i)+'">'+values[i]+'</label><br>\n';
+        }
+        
+        x = x + "    var "+title+' = getRadioButtonValue("'+title+'");\n';
+        z = z + "        switch("+title+"){\n";
+        for (let i = 0; i< number; i ++){
+          z = z + '          case "' +values[i]+'":\n';
+          z = z + '            t = t + "'+values[i]+'";\n';
+	  z = z + '            score = score + 0;\n';
+          z = z + "            break;\n";
+        }
+        z = z + "        }\n\n";
+ //       document.getElementById("t").value = t;
+ //       document.getElementById("x").value = x;
+ //       document.getElementById("z").value = z;
+	finalize();
+      }
+	    
+      function makeCheckbox(){
+        var values = document.getElementById("values1").value.split('\n');
+        var labels = document.getElementById("labels2").value.split('\n');
+        
+        for (let i = 0; i<values.length; i++){
+
+        t = t + '    <input type = "checkbox" id = "checkbox'+values[i]+'" onchange = "copytext()">\n';
+        t = t + '    <label for = "checkbox'+values[i]+'">'+labels[i]+'</label><br><br>\n';
+        x = x + "        var "+values[i] + ' = document.getElementById(checkbox"'+values[i]+'").checked;\n';
+	z = z + '        if ('+values[i]+'){\n';
+	z = z + '          t = t + "";\n';
+        z = z + '          score = score + 1;\n';
+	z = z + '        }\n';
+
+        }
+//	      document.getElementById("t").value = t;
+//        document.getElementById("x").value = x;
+ //       document.getElementById("z").value = z;
+	      document.getElementById('label').value = '';
+	finalize();
+	      
+      }
+			
+      function makeSelect(){
+        var select_text = document.getElementById("select_text").value;
+        var values = document.getElementById('select').value.split('\n');
+        document.getElementById('select_text').value = '';
+        document.getElementById("select").value = '';
+        t = t + '    <select id = "'+select_text+'"  onchange = "copytext()">\n';
+        for (i = 0; i < values.length; i++){
+          t = t + '       <option>'+values[i]+'</option>\n';
+        }
+        t = t + "    </select>\n";
+        x = x + "        var "+select_text + ' = document.getElementById("'+select_text+'").value;\n';
+	z = z + "        score = score + 0;\n";
+        z = z + "        t = t + ;\n";
+//	document.getElementById("t").value = t;
+  //      document.getElementById("x").value = x;
+    //    document.getElementById("z").value = z;
+	finalize();
+      }
+			
+      function makeText(){
+        var text_text = document.getElementById("text_text").value;
+        document.getElementById('text_text').value = '';
+        t = t + '      <label for = "' + text_text + '">\n';
+        t = t + '      <input type = "text" id = "' + text_text + '" onchange = "copytext()">\n';
+        x = x + "        var " + text_text + ' = document.getElementById("'+text_text + '").value;\n';
+        z = z + '        t = t + "";\n';
+ //       document.getElementById("t").value = t;
+   //     document.getElementById("x").value = x;
+   //     document.getElementById("z").value = z;
+	finalize();
+      }
+      
+      function finalize(){
+        var a = "<html>\n  <head>\n    <title>"+title1+"</title>\n  </head>\n  <body>\n"+t +'\n';
+	      a = a + '    <textarea id = "textarea" style = "rows: 10; cols: 100;"></textarea>\n';
+        a = a + "    <script>\n      function copytext(){\n      var score = 0;\n        var t = '';\n" + x + '\n' + z+'\n      navigator.clipboard.writeText(t);\n        document.getElementById("textarea").value = t;\n      }\n\n';
+        a = a + '    function getRadioButtonValue(id) {\n     var ele = document.getElementsByName(id);\n      var value = "";\n\
+        for(i = 0; i < ele.length; i++) {\n          if(ele[i].checked){\n            value = ele[i].value;\n          }\n       }\n       return(value);\n      }\n';
+	      a = a + "    </"+"script>\n  </body>\n</html>";
+        document.getElementById("a").value = a;
+      }
+      
+      function getRadioValue(id) {
+      	var ele = document.getElementsByName(id);
+        var value = "";
+        for(i = 0; i < ele.length; i++) {
+        	if(ele[i].checked){
+                	value = ele[i].value;
+		      }
+        }
+	      return(value);
+      }
+    </script>
+  </body>
+</html>
+        
+        
+        
+    
+    
