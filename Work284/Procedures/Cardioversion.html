@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Cardioversion</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Cardioversion</h3>
+      
+      <div class="boxed" value="Indication">
+        <input type = "radio" id = "indication1" name = "indication" onchange="copytext()">
+        <label for = "indication1">atrial fibrillation with rapid ventricular response, uncontrolled with medication</label><br>
+        <input type = "radio" id = "indication2" name = "indication" onchange="copytext()">
+        <label for = "indication2">patient preference for management of atrial fibrillation</label><br>
+        <input type = "radio" id = "indication3" name = "indication" onchange="copytext()">
+        <label for = "indication3">unstable atrial fibrillation with rapid ventricular response</label><br>
+        <input type = "radio" id = "indication4" name = "indication" onchange="copytext()">
+        <label for = "indication4">unstable ventricular tachycardia</label><br>
+        <!--input type = "radio" id = "indication5" name = "indication" onchange="copytext()">
+        <label for = "indication5">ventricular fibrillation</label><br-->
+      </div>
+
+      <div id="div_consent"></div>
+      
+      <div class="boxed" value="Anticoagulation">
+      <input type="checkbox" id = "anticoagulated" onchange = "copytext()">
+      <label for = "anticoagulated">The patient had been consistently taking an oral anticoagulant for at least 3 weeks.</label><br><br>
+      </div>
+      
+      <div class="boxed" value = "Sedation">
+        <input type = "radio" name = "sedation" checked id = "sedation1" onchange = "toggleSedation(true); copytext()">
+        <label for="sedation1">Conscious sedation was used for the procedure.</label><br>
+        <input type = "radio" name = "sedation" id = "sedation2" onchange = "toggleSedation(false); copytext()">
+        <label for = "sedation2">Conscious sedation was not used for the procedure due to the instability of the patient.</label><br>
+        <input type = "radio" name = "sedation" id = "sedation3" onchange = "toggleSedation(false); copytext()">
+        <label for = "sedation3">Conscious sedation was not used for the procedure due to patient preference.</label><br><br>
+
+        <div id="div_sedationUnboxed"></div>
+      </div>
+    </div>  
+   
+    
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class = "meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+      header();
+      consent('written');
+      sedationUnboxed(true);
+    </script>
+    
+    
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var consent = getValue('consent');
+        var anticoagulated = getValue("anticoagulated");
+        console.log("anticoagulated=",anticoagulated);
+        var sedation = getValue("sedation");
+        var technique = "cardioversion ";
+        
+        var t = "";
+        
+        if (document.getElementById("sedation1").checked) {
+          t = t + sedationText();
+        }
+
+          t = t + "Procedure Note:  Electrical Cardioversion\n";
+          t = t + "Electrical cardioversion was indicated due to "+indication+". ";
+          t = t + consent;
+          if (anticoagulated){
+              t = t + "The patient had been consistently taking anticoagulation for at least 3 weeks. ";
+          }
+          t = t + sedation+" ";
+          t = t + "A synchronized shock of 200 J was administered with resulting cardioversion to a normal sinus rhythm.  ";
+          t = t + "The patient tolerated the procedure well.  There were no complications."
+        
+        displayText(t);
+      }
+      
+    </script>
+  </body>
+</html>

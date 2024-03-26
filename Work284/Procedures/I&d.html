@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <title>I&D</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Abscess I&D</h3>
+      <div class="boxed" value="Abscess Description">
+        <div id="div_locationUnboxed"></div>
+        <label for="size"><b>Abscess Size</b></label><br>
+        <select id = "size" onchange = "copytext()">
+          <option value = "0.5">0.5 cm</option>
+          <option value = "1">1 cm</option>
+          <option value = "2">2 cm</option>
+          <option value = "3">3 cm</option>
+          <option value = "4">4 cm</option>
+          <option value = "5">5 cm</option>
+          <option value = "6">6 cm</option>
+          <option value = "7">7 cm</option>
+        </select><br><br>
+      </div>
+      
+      <div id="div_anesthetic"></div>
+   
+      <div class="boxed" value="Technique">
+        <label for = "incision_size"><b>Length of incision</b></label><br>
+        <select id = "incision_size" onchange = "copytext()">
+          <option value = "1">1 cm</option>
+          <option value = "2">2 cm</option>
+          <option value = "3">3 cm</option>
+          <option value = "4">4 cm</option>
+          <option value = "5">5 cm</option>
+        </select><br><br>
+
+        <label for = "amount"><b>Amount of pus</b></label><br>
+        <select id = "amount" onchange = 'copytext()'>
+          <option value = "No">No pus</option>
+          <option value = "A small amount of">A small amount</option>
+          <option value = "A large amount of">A large amount</option>
+        
+        </select><br><br>
+        
+        <input type = "checkbox" id = "culture" onchange = "copytext()">A wound culture was sent to the lab.<br><br>
+        <input type = "checkbox" id = "loculations" onchange = "copytext()">Hemostats were used to break up loculations.<br><br>
+        <input type = "checkbox" id = "irrigation" onchange = "copytext()">The cavity was irrigated thoroughly with normal saline.<br><br>
+        <input type = "checkbox" id = "drain" onchange = "copytext()">A drain was placed.<br><br>
+        <input type = "checkbox" id = "gauze" onchange = "copytext()">The cavity was packed with 1/4" iodoform gauze.<br><br>
+
+
+      </div>
+
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+  <script src="procedure.js"></script>
+    <script>
+      header();
+      anesthetic();
+      locationUnboxed();
+    </script>
+    
+    <script>
+      function copytext(){
+        var size = getValue("size");
+        var anesthetic = getValue("anesthetic");
+        var amount = getValue("amount");
+        var volume = getValue("volume");
+        var location = getValue("location");
+        var incision_size = getValue("incision_size");
+        var culture = getValue("culture");
+        var loculations = getValue("loculations");
+        var irrigation = getValue("irrigation");
+        var drain = getValue("drain");
+        var gauze = getValue("gauze");
+        if (gauze || loculations) {
+          var t = "Procedure Note: Complex Abscess Incision and Drainage\n";
+        }
+        else {
+          var t = "Procedure Note: Abscess Incision and Drainage\n";
+        }
+        t = t + "The skin over the " + size + " cm abscess on the " + location.toLowerCase() + " was prepped with Betadine and infiltrated with "+volume+" cc of "+anesthetic+". ";
+        t = t + "An #11 blade was used to make a "+incision_size+" cm incision into the abscess.  ";
+        if (culture) {
+          t = t + "A wound culture was sent to the lab. ";
+        }
+        if (loculations) {
+          t = t + "The abscess was probed with curved hemostats to break up loculations.  ";
+        }
+        t = t + amount + " pus was expressed from the abscess. ";
+        if (irrigation) {
+          t = t + "The cavity was thoroughly irrigated with normal saline. ";
+        }
+        if (drain) {
+          t = t + "A drain was placed. ";
+        }
+        if (gauze){
+            t = t + 'The cavity was packed with 1/4" iodoform gauze. ';
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>

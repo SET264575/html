@@ -1,0 +1,62 @@
+{
+	"title":"",
+	"criteria":
+	[
+		{"text":"","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"","answers":[
+			{"text":"No","points":"0","checked":" checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"2","checked":""}
+			]
+		},
+		{"text":"","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+		{"text":"","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+    {"text":"","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+    {"text":"","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"1","checked":""}
+			]
+		},
+    {"text":"","answers":[
+			{"text":"No","points":"0","checked":"checked"},
+			{"text":"Yes","points":"-2","checked":""}
+			]
+		},
+	],
+	"range":
+	[
+		{"low":"-1","high":"1","pretext":"Wells' score for DVT = ","posttext":". The risk of DVT is low."},
+		{"low":"0","high":"3","pretext":"Wells' score for DVT = ","posttext":". The risk of DVT is moderate."},
+		{"low":"2","high":"100","pretext":"Wells' score for DVT = ","posttext":". The risk of DVT is high."},
+	]
+}
