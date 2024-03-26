@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <style>
+      table, td, th {
+        xpad: 20px;
+	  margin: 20px;
+	  text-align: center;
+      }
+
+.centered {
+display: flex;
+justify-content: center;
+
+}
+
+pre {
+	border: 1px solid black;
+}
+
+    </style>
+	  <title>History</title>
+  </head>
+  <body>
+
+
+<div class="centered">
+  <div>
+    <textarea id = "text" oninput="parse(this.value)" onfocusin="this.value=''" rows="10" cols="80"></textarea>
+    <textarea id='list' rows="10" cols="80"></textarea>
+  </div>
+</div>
+
+
+    <script>
+function parse(t) {
+  var end = t.indexOf('There are no associated data widgets defined for this patient');
+  t = t.slice(1,end);
+  var g = [];
+  g.push('No Data To Display');
+  g.push('Line Draw');
+  g.push('Fall Precaution');
+  var f = [];
+  for (h of g) {
+	  console.log(h);
+    f.push(t.lastIndexOf(h)+h.length);
+	  console.log(f);
+  }
+  var start = Math.max(...f);
+	console.log('start = ',start);
+  var t2 = t.slice(start);
+	console.log(t2);
+  document.getElementById('list').value = document.getElementById('list').value + t2;
+  document.getElementById('text').value = '';
+  
+  
+  
+
+}
+
+    </script>
+  </body>
+</html>

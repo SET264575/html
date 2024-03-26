@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <input type = "checkbox" id = "checkboxfemale">
+    <label for = "checkboxfemale">Is the patient female?</label>
+    <input type = "checkbox" id = "checkboxchf">
+    <label for = "checkboxchf">History of CHF</label>
+    <input type = "checkbox" id = "checkboxhtn">
+    <label for = "checkboxhtn">History of hypertension</label>
+    <input type = "checkbox" id = "checkboxstroke">
+    <label for = "checkboxstroke">History of Stroke, TIA or thromboembolism</label>
+    <input type = "checkbox" id = "checkboxvascular">
+    <label for = "checkboxvascular">History of Vascular disease, such as MI, PVD</label>
+    <input type = "checkbox" id = "checkboxdm">
+    <label for = "checkboxdm">History of diabetes</label>
+    <select id = "test">
+       <option>1</option>
+       <option>2</option>
+       <option>3</option>
+    </select>
+        <label for = "freetext">
+        <input type = "text" id = "freetext">
+
+<textarea id = "textarea"></textarea>
+    <script>
+function (){
+        var female = document.getElementById("female").value;
+        var chf = document.getElementById("chf").value;
+        var htn = document.getElementById("htn").value;
+        var stroke = document.getElementById("stroke").value;
+        var vascular = document.getElementById("vascular").value;
+        var dm = document.getElementById("dm").value;
+      var test = document.getElementById("test").value;
+         var freetext = document.getElementById("freetext").value;
+
+        if (female){
+        t = t + ;
+        }
+        if (chf){
+        t = t + ;
+        }
+        if (htn){
+        t = t + ;
+        }
+        if (stroke){
+        t = t + ;
+        }
+        if (vascular){
+        t = t + ;
+        }
+        if (dm){
+        t = t + ;
+        }
+      t = t + ;
+         t = t + ;
+
+      navigator.clipboard.writeText(t);
+document.getElementById("textarea").value = t;
+}
+      function getRadioValue(id) {
+      	var ele = document.getElementsByName(id);
+        var value = "";
+      for(i = 0; i < ele.length; i++) {
+        	if(ele[i].checked){
+                	value = ele[i].value;
+		      }
+       }
+	      return(value);
+      }
+</body>
+</html>

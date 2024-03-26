@@ -1,0 +1,49 @@
+<!--
+in mdm7:
+fix risk stratification
+remove commented out parts
+
+add more ddx
+  subsections for abd quadrants
+
+[]
+
+discussion with independent clinician:  relabel button and move
+recommendations of consultant
+	admission, discharge, will arrange follow up, [], outpt test, adding medication, the discharge plan, 
+dispo to GI lab, OR, cath lab
+
+What do you want displayed/hidden?
+What do you want pre-checked?
+What additional selections do you want?
+Is there a different order of sections or choices?
+Is there a different layout?
+How is navigation, finding choices?
+Does wording agree with button?
+  clicking the "appendicitis" button adds the text "cholecystitis"
+Typos, grammar, punctuation
+  no space between sentences, no period at end of sentences
+-->
+
+<html>
+
+  <body>
+	  <button onclick="showTest()">test1</button>
+	  <button onclick="setTimeout('showTest',500)">test2</button>
+	  
+      <script>
+	      console.log('before setListener');
+	      setTimeout(showTest,500);
+        	console.log('after setListener');
+	      
+	      function showTest() {
+		      console.log('in showTest');
+	      }
+	      
+
+        
+
+
+      </script>
+  </body>
+</html>

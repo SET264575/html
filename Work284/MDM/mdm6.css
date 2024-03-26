@@ -1,0 +1,271 @@
+      .header {
+        background-color: #f2f2f2;
+        width: 100%;
+        height: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 200;
+      }
+      
+      .main {
+        margin-top: 310px;
+      }
+      
+      .collapsible {
+        background-color: lightskyblue;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 1em;
+        font-family: Arial;
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .active, .collapsible:hover {
+        background-color: deepskyblue;
+      }
+
+      /* Style the collapsible content. Note: hidden by default */
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        margin: 20px;
+        background-color: white;
+      }
+      
+      .choicebutton {
+        height: 40px;
+        background-color: lightgray;
+        border-radius: 5px;
+        checked: false;
+      }
+      
+      .choicebutton checked {
+        background-color: lightgreen;
+      }
+      
+      .choicebutton:hover {
+        background-color: lightgreen;
+      }
+      
+      .headingbutton {
+        background-color:  deepskyblue;
+        font-family: Arial;
+        font-size: 1em;
+      }
+      
+      .subheadingbutton {
+        background-color:  lightskyblue;
+        font-family: Arial;
+        font-size: 1em;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+            
+      .subsubheadingbutton {
+        background-color:  lightskyblue;
+        font-family: Arial;
+        font-size: 1em;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+
+      .subsubsubheadingbutton {
+        background-color:  lightskyblue;
+        font-family: Arial;
+        font-size: 1em;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+
+      .show {
+        display: block;
+      }
+      
+      h3 { 
+        text-align: center;
+      }
+      
+      h4 {
+        /*margin-left: 20px;*/
+        color: blue;
+        text-align: left;
+      }
+      h5 {
+        text-align: left;
+       /* margin-left: 30px;*/
+        color: purple;
+      }
+      input {
+        margin-left: 40px;
+      }
+      
+      iframe {
+        width: 100%;
+        height: 700px;
+        border: none;
+      }
+      
+      textarea {
+        width: 95%;
+        height: 180px;
+        border: 1px solid black;
+        margin: auto;
+        display: block;
+      }
+      
+      .block {
+        display: block;
+        padding: 0 18px;
+        overflow: hidden;
+        margin: 20px;
+        background-color: white;
+      }
+      
+      .radiobutton {
+        list-style-type: none;
+        margin: 25px 0 0 0;
+        text-align: center;
+        padding: 0;
+      }
+
+      .radiobutton li {
+        float: left;
+        margin: 0 5px 5px 0;
+        width: 300px;
+        height: 50px;
+        position: relative;
+      }
+
+      .radiobutton label,
+      .radiobutton input {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: lightgray;
+      }
+
+      .radiobutton input[type="radio"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+
+      .radiobutton input[type="radio"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
+      
+     .radiobutton input[type="checkbox"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+
+      .radiobutton input[type="checkbox"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
+
+      .radiobutton label {
+        padding: 5px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 90;
+      }
+
+      .radiobutton label:hover {
+        background-color:  gray;
+      }
+      
+      .sxbutton {
+        width: 200px;
+      }
+      
+
+
+
+.radiobutton_small {
+        list-style-type: none;
+        margin: 25px 0 0 0;
+        text-align: center;
+        padding: 0;
+      }
+
+      .radiobutton_small li {
+        float: left;
+        margin: 0 5px 5px 0;
+        width: 100px;
+        height: 50px;
+        position: relative;
+      }
+
+      .radiobutton_small label,
+      .radiobutton input {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: lightgray;
+      }
+
+      .radiobutton_small input[type="radio"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+
+      .radiobutton_small input[type="radio"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
+      
+     .radiobutton_small input[type="checkbox"] {
+        opacity: 0.01;
+        z-index: 100;
+      }
+
+      .radiobutton_small input[type="checkbox"]:checked+label,
+      .Checked+label {
+        background: lightgreen;
+      }
+
+      .radiobutton_small label {
+        padding: 5px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 90;
+      }
+
+      .radiobutton_small label:hover {
+        background-color:  gray;
+      }
+      
+      .sxbutton {
+        width: 200px;
+      }
+
+
+      .note {
+        background-color: lightyellow;
+        border: 1px solid red;
+        color: red;
+	      margin-left: 20px;
+	    }
+      
+      table {
+        border: none;
+        margin-left: auto;
+        margin-right: auto;
+      }

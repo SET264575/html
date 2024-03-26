@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Prednisone Taper</title>
+    <style>
+      table, td, th {
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+      td, th {
+        padding: 20px;
+        text-align: center;
+      }
+      th {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <input type = "checkbox" id = "tomorrow" onchange = "create2DayTaper(); create3DayTaper()"><label for = "tomorrow">Start tomorrow</label>
+    <table id = "table" style="border-style: none; vertical-align: top">
+      <td style="border-style: none;  vertical-align: top">
+            
+        <h4>Taper 10 mg every 2 days</h4>
+        <h4>42 tablets total</h4>
+        <h4>12 days</h4>
+        <button onclick="copyFormatted(document.getElementById('table1').innerHTML)">Copy This Table</button>
+        <p id = "table1"></p>
+
+      </td>
+      <td style = "border-style: none;  vertical-align: top">
+          
+        <h4>Taper 10 mg every 3 days</h4>
+        <h4>63 tablets total</h4>
+        <h4>18 days</h4>
+        <button onclick="copyFormatted(document.getElementById('table2').innerHTML)">Copy This Table</button>
+        <p id = "table2"></p>
+                
+
+      </td>
+    </table>
+    <script src="discharge.js"></script>
+    <script>
+      create2DayTaper();
+      create3DayTaper();
+      function create2DayTaper() {
+        var t;
+        var dose = [60,60,50,50,40,40,30,30,20,20,10,10];
+        var pills = [6,6,5,5,4,4,3,3,2,2,1,1];
+        var offset = document.getElementById('tomorrow').checked ? 1:0;
+        t = "<table><tr><th style = 'width: 70px'>Date</th><th style = 'width: 70px'>Dose</th><th style = 'width: 150px'>Number to take</th></tr>";
+        for (let i = 0; i < 10; i++) {
+          t = t + "<tr><td>"+daysFromToday(i+offset)+"</td><td>"+dose[i]+" mg</td><td>"+pills[i]+" tablets</td></tr>";
+        }
+          t = t + "<tr><td>"+daysFromToday(10+offset)+"</td><td>"+dose[10]+" mg</td><td>1 tablet</td></tr>";
+          t = t + "<tr><td>"+daysFromToday(11+offset)+"</td><td>"+dose[11]+" mg</td><td>1 tablet</td></tr>";
+
+        t= t + "</table>";
+        document.getElementById("table1").innerHTML = t;
+        copyFormatted(t);
+      }
+      
+            
+      function create3DayTaper() {
+        var t;
+        var dose = [60,60,60,50,50,50,40,40,40,30,30,30,20,20,20,10,10,10];
+        var pills = [6,6,6,5,5,5,4,4,4,3,3,3,2,2,2,1,1,1];
+        var offset = document.getElementById('tomorrow').checked ? 1:0;
+        t = "<table><tr><th style = 'width: 70px'>Date</th><th style = 'width: 70px'>Dose</th><th style = 'width: 150px'>Number to take</th></tr>";
+        for (let i = 0; i < 15; i++) {
+          t = t + "<tr><td>"+daysFromToday(i+offset)+"</td><td>"+dose[i]+" mg</td><td>"+pills[i]+" tablets</td></tr>";
+        }
+          t = t + "<tr><td>"+daysFromToday(15+offset)+"</td><td>"+dose[15]+" mg</td><td>1 tablet</td></tr>";
+          t = t + "<tr><td>"+daysFromToday(16+offset)+"</td><td>"+dose[16]+" mg</td><td>1 tablet</td></tr>";
+          t = t + "<tr><td>"+daysFromToday(17+offset)+"</td><td>"+dose[17]+" mg</td><td>1 tablet</td></tr>";
+
+        t= t + "</table>";
+        document.getElementById("table2").innerHTML = t;
+        copyFormatted(t);
+      }
+    </script>
+  </body>
+</html>
