@@ -1,0 +1,13 @@
+table {
+  vertical-align:  top;
+}
+
+td {
+  vertical-align:  top;
+  width:  300px;
+}
+
+body, pre {
+  font-family: Arial;
+  font-size: 1em;
+}
