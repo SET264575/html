@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <title>
+        Lateral canthotomy
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class = "div_header" id="div_header"></div>
+
+    <div class="main">
+      <h3>Lateral canthotomy</h3>
+      
+      <div class="boxed" value="Indication">
+        <input type = "radio" name = "indication" value = "increased intraocular pressure in the setting of trauma" id = "indication1" onchange = "copytext()">
+        <label for = "indication1">increased intraocular pressure in the setting of trauma</label><br>
+        <input type = "radio" name = "indication" value = "decreased vision in the setting of trauma" id = "indication2" onchange = "copytext()">
+        <label for = "indication2">decreased vision in the setting of trauma</label>
+      </div>
+
+      <div id = "div_consent"></div>
+
+      <div id = "div_risks"></div>
+
+      <div id = "div_sedation"></div>
+
+
+      <div id = "div_side"></div>
+
+      <div id = "div_anesthetic"></div>
+    </div>
+    
+    <div class = "note">
+      <div class="risks">
+        <div class="risk_header">
+          Risks, Benefits and Alternatives
+        </div>
+        <div class="risks_from_procedure">
+          incomplete canthotomy
+          injury to eye, or surrounding muscles, arteries and glands
+          lack of restoration of vision
+          cosmetic damage
+          weakness of eyelid
+          bleeding
+          infection
+        </div>
+        <div class = "risks_from_sedation"></div>
+        <div class = "risks_due_to_patient_factors">
+          distortion of landmarks due to facial swelling
+          anticoagulation
+          altered mental status/inability to remain still
+        </div>
+        <div class = "benefits_to_procedure">
+          preservation and possible improvement in vision
+        </div>
+        <div class = "alternatives">
+          transfer to ophthalmologist/trauma team at the University - expected to take too long to save vision
+        </div>
+      </div>
+      <a href="https://www.merckmanuals.com/professional/eye-disorders/how-to-do-eye-procedures/how-to-do-lateral-canthotomy" target = "_blank">Explanation of Procedure from Merck Manual</a><br>
+      <a href="https://www.wikem.org/wiki/Canthotomy" target = "_blank">Explanation of Procedure from WikEM</a><br>
+      <a href="..\..\ER\Equipment\lateral canthotomy.html" target = "_blank">Equipment List</a><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      consent('written');
+      risks();
+      side();
+      sedation();
+      anesthetic();
+    </script>
+  
+    <script>
+      function copytext(){
+       var indication = getValue("indication");
+        var consent = getValue("consent");
+        var sedation = getValue("sedation");
+        var anesthetic = getValue("anesthetic");
+        var volume = getValue('volume');
+        var side = getValue("side"); 
+        var t = "";
+        t = t + sedationText();
+        
+        t = t + "Procedure Note: " + side + " Lateral Canthotomy\n";
+        t = t + "The procedure was indicated for suspected orbital compartment syndrome due to " + indication + ". ";
+        t = t + consent;
+        t = t + "A drop of tetracaine was applied to the eye. ";
+        t = t + "The skin around the lateral canthus was prepped with Betadine, taking care that Betadine did not get into the eye, and drapped sterilely. ";
+        t = t + "The lateral canthus was infiltrated with " + volume + " mL of " + anesthetic + ", taking care to direct the needle tip toward the lateral orbital rim, and away from the globe. ";
+        t = t + "Hemostats were used to crush the skin from the angle of the eyelid to the orbital rim for 1 minute. ";
+        t = t + "The lateral canthus was incised with iris scissors from the angle of the eyelid to the orbital rim. ";
+        t = t + "The inferior eyelid was retracted and tissue was bluntly dissected to exposed the canthal tendon. ";
+        t = t + "The inferior crus of the lateral canthus tendon was cut, taking care to point the scissors inferiorly and posteriorly toward the lateral orbital rim to avoid injuring the levator muscle, lacrimal gland, and lacrimal artery. ";
+        t = t + "Intraocular pressure was rechecked and found to be still elevated and therefore, the superior crus of the canthal tendon was similarly cut. ";
+        t = t + "Intraocular pressure was rechecked and found to be adequately reduced. ";
+        t = t + "Erythromycin eye ointment was applied to the eye and the eye was patched with a sterile dressing and eyeshield. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>

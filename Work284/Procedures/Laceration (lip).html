@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>Lip Laceration Repair</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header"  id="div_header"></div>
+    <div class="main">
+      <h3>Lip Laceration Repair</h3>
+
+      <div id="div_consent"></div>
+      
+      <div class="boxed" value ="Wound Description">
+      <div id = "div_wounddescriptionUnboxed"></div>
+
+      <h4>Location</h4>
+      <input type = "radio" id = "location1" name = "location" value = "Upper" onchange="copytext()">
+      <label for = "location1">Upper lip</label><br>
+      <input type = "radio" id = "location2" name = "location" value = "Lower" onchange="copytext()">
+      <label for = "location2">Lower lip</label><br>
+      </div>
+      
+      <div id = "div_woundpreparation"></div>
+
+      <div class="boxed" value="Assessment">
+      <div id = "div_contamination"></div>
+      </div>
+
+      <div id = "div_anestheticmental"></div>
+
+      <div class="boxed" value="Technique">
+      <div id= "div_suturesUnboxed"></div>
+
+      <input type = "checkbox" id = "verm" onchange = "copytext()">
+      <label for = "verm">Vermillion border aligned</label>
+      </div>
+    </div>
+
+  <div class="note"></div>
+    
+    <footer>
+      <div class="dateChanged">1/1/23</div>
+      <div class="tested">Not tested</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+  <script src = "procedure.js"></script>
+  <script>
+    header();
+    consent('verbal');
+    wounddescriptionUnboxed();
+    woundpreparation();
+    contamination();
+    anestheticmental();
+    suturesUnboxed(6);
+  </script>
+    
+ 
+    
+    <script>
+      function copytext(){
+        var consent = getValue('consent');
+        var wound_length = getValue("length");
+        var description = getValue("description");
+        var location = getValue('location');
+        var anesthetic = getValue("anesthetic");
+        var suture_size = getValue("suture_size");
+        var suture_type = getValue("suture_type");
+        var volume = getValue("volume");
+        var suture_count = getValue("suture_count");
+        var suture_style = getValue("suture_style");
+        var contamination = getValue('contamination');
+        var betadine = getValue("betadine");
+        var clean = getValue('clean');
+        var mental =  getValue("mental");
+        var verm = getValue("verm");
+        var t = "";
+        
+        if (mental != noAnswer) {
+          t = t + mentalBlockText();
+        }
+        
+        t = "Procedure Note:  Laceration repair on the "+location+" Lip\n";
+        t = t + consent;
+        console.log('mental = ',mental);
+        if (mental) {
+          t = t + "A mental block was used to achieve adequate anesthesia. ";
+        }
+        t = t + "The area around the " + wound_length + " cm " + description + " laceration on the "+location.toLowerCase() +" lip  was ";
+        switch(betadine) {
+          case "betadine":
+            t = t + "prepped with Betadine and ";
+            break;
+          case "chlorhexidine":
+            t = t + "prepped with chlorhexidine and ";
+            break;
+        }
+        t = t + "draped sterilely ";
+        if (!mental) {
+          t = t + "and then ";
+          t = t + "infiltrated with "+volume +" mL of "+ anesthetic;
+        }
+        t = t + ". ";
+        t = t + "The wound was " + clean + " thoroughly with normal saline. ";
+      
+        t = t + "The wound was explored ";
+        t = t + "in a bloodless field. ";
+        t  = t + contamination;
+        
+        
+        t = t + "The wound was closed with " + suture_count + " " + suture_style + " sutures using " + suture_size + " " + suture_type + ".  ";
+        if (verm){
+          t = t + "Careful attention was given to aligning the vermillion border. ";
+        }
+        t = t + "The patient tolerated the procedure well.  There were no complications."
+        displayText(t);
+        
+      }
+
+    </script>
+  </body>
+</html>

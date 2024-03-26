@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>
+        Vascular access
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>
+      Internal Jugular Central Line Placement
+      </h3>
+
+     
+      <div class="boxed" value="Indication">
+      <input type = "radio" name = "indication" id = "indication0" value = "1" onchange = "copytext()">
+      <label for = "indication0">vascular access</label><br>
+      <input type = "radio" name = "indication" id = "indication1" value = "2" onchange = "copytext()">
+      <label for = "indication1">administration of IV fluids</label><br><br>
+      </div>
+      
+      <div id="div_consent"></div>
+
+      <div id="div_side"></div>
+      
+      <div class="boxed" value = "Inserted Length">
+      <select id = "depth" onchanged="copytext()">
+        <option value = "12">12 cm</option>
+        <option value = "13">13 cm</option>
+        <option value = "14">14 cm</option>
+        <option value = "15">15 cm</option>
+      </select>
+               
+      </div>
+      
+    </div>
+    <div class="note">
+      <div class="risks">
+      <div class="risk_header">
+        Risks, Benefits and Alternatives
+      </div>
+      <div class="risks_from_procedure">
+Arterial puncture
+Hematoma
+Pneumothorax
+Damage to the vein
+Hemothorax
+Air embolism
+Catheter misplacement
+Arrhythmias or atrial perforation, typically caused by guidewire or catheter
+Nerve damage
+Infection
+Thrombosis
+      </div>
+      <div class = "risks_from_sedation" id="div_riskstosedation"></div>
+      <div class = "risks_due_to_patient_factors">
+        distortion of landmarks due to trauma
+        anticoagulation
+        altered mental status/inability to remain still
+        obesity
+        elderly/comorbidities
+        extremis
+        LBBB, increases the risk of developing complete heart block
+      </div>
+      <div class = "benefits_to_procedure">
+        <pre>
+
+        </pre>
+      </div>
+      <div class = "alternatives">
+        <pre>
+        
+        </pre>
+      </div>
+        
+        <a href = "https://www.merckmanuals.com/professional/critical-care-medicine/how-to-do-central-vascular-procedures/how-to-do-internal-jugular-vein-cannulation,-ultrasound-guided" target = "_blank">Description of Procedure from Merck Manual</a><br>
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src="procedure.js"></script>
+    <script>
+
+      header();
+      consent('written');
+      side();
+    </script>
+  
+    <script>
+      function copytext(){
+        var indication = getValue("indication");
+        var procedure = "Internal Jugular Vein";
+        var consent = getValue("consent");
+        //var sedation = getRadioButtonValue("sedation");
+        var side = getValue("side");
+        var depth = getValue('depth');
+        var location = "Internal Jugular Vein";
+
+        var t = "Procedure Note: Central Line Placement in the "+ side + " "+location +"\n";
+        
+        t = t + "The procedure was indicated for ";
+        switch(indication){
+          case "1":
+            t = t + "vascular access. ";
+            break;
+          case "2":
+            t = t + "IV fluid administration. ";
+            break;
+        }
+
+        t = t + consent;
+        t = t + "The patient was placed in Trendelenburg. Cardiac monitoring was performed throughout the procedure. ";
+        t = t + "The patient was prepped and draped in the usual sterile fashion. ";
+        t = t + "Ultrasound guidance was used to visualize the " + side.toLowerCase() + " " + location.toLowerCase() + " and surrounding structures.  ";
+        t = t + "The IV catheter was placed using the Seldinger technique and secured to the skin with 2-0 silk suture at a depth of " + depth + "cm. ";
+        t = t + "Proper location was confirmed with x-ray. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. ";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>

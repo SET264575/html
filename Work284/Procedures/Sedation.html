@@ -1,0 +1,179 @@
+<!--
+
+Performed by: [Provider Name]
+
+Indications: [     ]
+
+Universal Protocol: a time out was performed and the correct patient and site were verified
+
+Consent: The risks and benefits of monitored anesthesia care, including the risk of aspiration, deep sedation requiring airway management including possible intubation, nausea/vomiting and the risks of not performing the procedure, including severe pain and inability to complete the procedure, were all discussed with the [patient]. The alternatives of performing the procedure, including local anesthesia and IV analgesia, also discussed. The patient has a ride home available.
+
+ASA Class: [I-healthy / II-mild systemic disease / III-severe systemic disease / IV-incapacitating systemic disease]
+
+Pre-anesthesia evaluation, including history, exam, and informed consent is documented in the ED note above.
+
+Monitoring: Continuous monitoring of heart rate, respiratory rate, pulse oximetry and ETCO2. Supplemental oxygen prior to and during procedure via nasal cannula. Resuscitation equipment available at the bedside during sedation.
+
+Intra-service start time: [00:00]
+
+Intra-service stop time: [00:00]
+
+The patient received [     ] and dosages were recorded on the sedation form. The patient was recovered from the sedation without complication or incident. Patient returned to pre-sedation level of awareness. The monitoring was discontinued at this time.
+
+Post-anesthesia evaluation:
+
+Respiratory function, cardiovascular function, temperature, and mental status [did/did not] return to pre-anesthetic state.
+
+Pain [was/was not] controlled.
+
+The patient [did/did not] tolerate p.o.
+
+-->
+
+
+<html>
+  <head>
+    <title>Conscious Sedation</title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="div_header" id= "div_header"></div>
+    <div class="main">
+      <h3>Conscious Sedation</h3>
+
+     <div class="boxed" value="Indication">
+        <input type="radio" id='indication1' name='indication' value='1' onchange='copytext()'>
+        <label for ='indication1'>Joint Reduction</label><br>
+        <input type="radio" id='indication2' name='indication' value='2' onchange='copytext()'>
+        <label for ='indication2'>Fracture Reduction</label><br>
+        <input type="radio" id='indication3' name='indication' value='3' onchange='copytext()'>
+        <label for ='indication3'>Electrical Cardioversion</label><br>
+      </div>
+
+      <div id="div_consent"></div>
+
+       <div class="boxed" value = "Patient Assessment">
+        <label for = "npo_time"><b>Hours that patient had been NPO</b></label><br><br>
+        <select id = "npo_time" onchange = "copytext()">
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+        </select>
+       </div>
+
+       <div class="boxed" value = "Technique">
+         <table width="800px">
+           <td width="50%">
+             <b>Drug Used</b><br><br>
+             <input type="radio" id="drug1" name = "drug" value = "1" onchange = "copytext()">
+             <label for = "drug1">Etomidate</label><br>
+             <input type="radio" id="drug2" name = "drug" value = "2" onchange = "copytext()">
+             <label for = "drug2">Ketamine</label><br>
+             <input type="radio" id="drug3" name = "drug" value = "3" onchange = "copytext()">
+             <label for = "drug3">Propofol</label><br>
+             <input type="radio" id="drug4" name = "drug" value = "4" onchange = "copytext()">
+             <label for = "drug4">Versed</label><br>
+             <input type="radio" id="drug5" name = "drug" value = "5" onchange = "copytext()">
+             <label for = "drug5">[Other drug]</label><br>
+           </td>
+           <td width="50%">
+            
+
+            <label for = "dose"><b>Dose</b></label><br><br>
+            <select id = "dose" onchange = "copytext()">
+              <option value = "1">1 mg</option>
+              <option value = "2">2 mg</option>
+              <option value = "3">3 mg</option>
+              <option value = "4">4 mg</option>
+              <option value = "5">5 mg</option>
+              <option value = "6">6 mg</option>
+              <option value = "7">7 mg</option>
+              <option value = "8">8 mg</option>
+              <option value = "9">9 mg</option>
+              <option value = "10">10 mg</option>
+              <option value = "11">11 mg</option>
+              <option value = "12">12 mg</option>
+              <option value = "13">13 mg</option>
+              <option value = "14">14 mg</option>
+              <option value = "15">15 mg</option>
+              <option value = "16">16 mg</option>
+              <option value = "17">17 mg</option>
+              <option value = "18">18 mg</option>
+              <option value = "19">19 mg</option>
+              <option value = "20">20 mg</option>
+            </select>
+           </td>
+         </table>
+      
+      Intraservice time:<br>
+      <input type="text" onchange="copytext()" id = "intraservice"><br>
+      (Billing for sedation requires more than 16 minutes of intraservice time.)
+       </div>
+    </div>
+   <br><br>
+    <div class="note">
+      <a href = "..\..\ER\Disease Management\splints.html">Splint chart</a>
+    </div>
+    <footer>
+      <div class="dateChanged">12/6/22</div>
+      <div class="tested">Works</div>
+      <div class="meetsStandard1"></div>
+     </footer>
+                                               
+        
+    <script src= "procedure.js"></script>
+    
+    <script>
+      header();
+      consent('written');
+    </script>
+  
+    
+    <script>
+      function copytext(){
+        let drugName = ['','etomidate','ketamine','Propofol','Versed','[Other drug]'];
+        var indication = getValue("indication");
+        var consent = getValue('consent');
+        var npo_time = getValue("npo_time");
+        var drug = getValue('drug');
+        var dose = getValue("dose");
+        var intraservice = getValue("intraservice");
+        var t = "";
+        t = "Procedure Note:  Conscious sedation\n";
+        t = t + "Conscious sedation was indicated for ";
+        
+        switch(indication) {
+          case "1":
+            t =t + "joint reduction";
+            break;
+          case "2":
+            t = t + "fracture reduction";
+            break;
+          case "3":
+            t =t + "electrical cardioversion";
+            break;
+        }
+        t = t +". ";
+        t = t + consent;
+        t = t + "The patient had been NPO for over "+npo_time+" hours. ";
+        t = t + "Standard preparations were made according to the ER sedation policy, including capnography, cardiac monitoring, pulse oximetry and provision of supplemental oxygen. ";
+        t = t + "Airway management equipment and suctioning were readily available. "
+        t = t + "Adequate sedation was achieved with the administration of " + dose + " mg of "+drugName[drug]+". ";
+        t = t + "The patient was continuously monitored until they were alert. ";
+        t = t + "The patient tolerated the procedure well.  There were no complications. Intraservice time was "+intraservice + " minutes.";
+
+        displayText(t);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>
+        Splinting
+    </title>
+    <link rel="stylesheet" href="procedure2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class = "div_header" id="div_header"></div>
+
+    <div class="main">
+      <h3>Splint</h3>
+      
+      <div id = "div_side"></div>
+
+      <div class="boxed" value = "Type of Splint">
+        <input type="radio" id= 'splint1' value = '1' name = 'splint' checked onchange = 'copytext()'><label for = 'splint1'>coaptation splint</label><br>
+        <input type="radio"  id= 'splint2' value = '2' name = 'splint' onchange = 'copytext()'><label for = 'splint2'>hinged knee brace</label><br>
+        <input  type="radio" id= 'splint3' value = '3' name = 'splint' onchange = 'copytext()'><label for = 'splint3'>hinged knee brace locked in extension</label><br>
+        <input  type="radio" id= 'splint4' value = '4' name = 'splint' onchange = 'copytext()'><label for = 'splint4'>knee immobilizer</label><br>
+        <input type="radio"  id= 'splint5' value = '5' name = 'splint' onchange = 'copytext()'><label for = 'splint5'>long leg 3 way (sugar tong and posterior splint)</label><br>
+        <input type="radio"  id= 'splint6' value = '6' name = 'splint' onchange = 'copytext()'><label for = 'splint6'>posterior long arm</label><br>
+        <input type="radio"  id= 'splint7' value = '7' name = 'splint' onchange = 'copytext()'><label for = 'splint7'>short leg 3 way</label><br>
+        <input type="radio"  id= 'splint8' value = '8' name = 'splint' onchange = 'copytext()'><label for = 'splint8'>short leg posterior splint</label><br>
+        <input type="radio"  id= 'splint9' value = '9' name = 'splint' onchange = 'copytext()'><label for = 'splint9'>sling</label><br>
+        <input type="radio"  id= 'splint10' value = '10' name = 'splint' onchange = 'copytext()'><label for = 'splint10'>sugar tong splint</label><br>
+        <input type="radio"  id= 'splint11' value = '11' name = 'splint' onchange = 'copytext()'><label for = 'splint11'>thumb spica splint</label><br>
+        <input type="radio"  id= 'splint12' value = '12' name = 'splint' onchange = 'copytext()'><label for = 'splint12'>ulnar gutter splint</label><br>
+        <input type="radio"  id= 'splint13' value = '13' name = 'splint' onchange = 'copytext()'><label for = 'splint13'>volar splint</label><br>
+        <input type="radio"  id= 'splint14' value = '14' name = 'splint' onchange = 'copytext()'><label for = 'splint14'>volar/dorsal</label><br>
+        <input type="radio"  id= 'splint15' value = '15' name = 'splint' onchange = 'copytext()'><label for = 'splint15'>velcro thumb spica splint</label><br>
+        <input type="radio"  id= 'splint16' value = '16' name = 'splint' onchange = 'copytext()'><label for = 'splint16'>velcro wrist splint</label><br>
+        <input type="radio"  id= 'splint17' value = '17' name = 'splint' onchange = 'copytext()'><label for = 'splint17'>walking boot</label><br><br>
+      </div>
+      <div class="boxed" value="Supervision">
+        <input type="radio"  id="supervised1" value="1" name = "supervised" onchange="copytext()">I personally applied the splint<br>
+        <input type="radio"  id="supervised2" value ="2" name = "supervised" onchange="copytext()">I supervised splint application<br>
+        <input type="radio"  id="supervised3" value ="3" name = "supervised" onchange="copytext()">Not present during the application<br>
+      </div>
+      
+    </div>
+    
+    <div class = "note">
+    <!--div class="risks">
+      <div class="risk_header">
+        Risks, Benefits and Alternatives
+      </div>
+      <div class="risks_from_procedure">
+        injury to internal organs
+        cosmetic damage
+        bleeding
+        infection
+      </div>
+      <div class = "risks_from_sedation" id="div_riskstosedation"></div>
+      <div class = "risks_due_to_patient_factors">
+        distortion of landmarks due to trauma
+        anticoagulation
+        altered mental status/inability to remain still
+        elderly/comorbidities
+        extremis
+      </div>
+      <div class = "benefits_to_procedure">
+        <pre>
+
+        </pre>
+      </div>
+      <div class = "alternatives">
+        <pre>
+        transfer to the University - expected to take too long
+        </pre>
+      </div-->
+    </div>
+    
+    <footer>
+      <div class="dateChanged">12/7/22</div>
+      <div class="nottested"></div>
+      <div class="zmeetsStandard1"></div>
+     </footer>
+                                               
+                            
+    <script src = "procedure.js"></script>
+    <script>
+      header();
+      side();
+    </script>
+  
+    <script>
+      function copytext(){
+        var side = getValue("side").toLowerCase();
+        var i = parseInt(getValue('splint'))-1;
+        let supervised = getValue('supervised');
+        let splint = ['coaptation splint','hinged knee brace','hinged knee brace locked in extension','knee immobilizer','long leg 3 way (sugar tong and posterior splint)','posterior long arm','short leg 3 way','short leg posterior splint','sling','sugar tong splint','thumb spica splint','ulnar gutter splint','velcro thumb spica splint', 'velcro wrist splint','volar splint','volar/dorsal','walking boot'];
+
+        let typeOfSplint = ['Splint','Brace','Brace','Knee Immobilizer','Splint','Splint','Splint','Splint','Sling','Splint','Splint','Splint','Splint','Splint','Splint','Splint','Boot'];
+
+        let extremity = ['arm','leg','leg','leg','leg','arm','leg','leg','arm','arm','arm','arm','wrist','wrist','arm','arm','leg'];
+
+        var t = "";
+        
+        // t = t + digitalblock(); 
+        t = t + "Procedure Note: "+typeOfSplint[i]+" Placement \n";
+        switch (supervised) {
+          case "1":
+            t = t + "I personally applied a "+ splint[i] + " on the " + side + " " + extremity[i] + ". ";
+            break;
+          case "2":
+            t = t + "I was physically present throughout the procedure and directly supervised the application of a "+ splint[i] + " on the " + side + " " + extremity[i] + ". ";
+            break;
+          case "3":
+            t = t + "A " + splint[i] + " was applied on the " + side + " " + extremity[i] + ". ";
+            break;
+        }
+        
+        t = t + "My re-examination after the " + typeOfSplint[i].toLowerCase() + " was placed showed good alignment and the neurovascular exam was unchanged. ";
+
+        displayText(t);
+        
+      }
+    </script>
+  </body>
+</html>
