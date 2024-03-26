@@ -1,0 +1,295 @@
+<html>
+  <head>
+    <title>MDM Documentation</title>
+	  <link rel="stylesheet" href="sepsis.css">
+  </head>
+  <body>
+    <div class="header">
+      <!--h3>The following text has been copied to the clipboard and is ready to be pasted into your document.</h3-->
+	    <table style="width: 100%"><td style = "padding: 10px">
+        <p id = "level"></p>
+		    </td><td style = "width: 85%; padding: 10px">
+      <textarea id="text"></textarea>
+		    </td>
+	    </table>
+    </div>
+
+    <div class="main">
+          <div class="block">
+            <h4>SIRS criteria</h4>
+            <ul class="radiobutton">
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-fever" name = "sirs" onclick="check(this.id)" value = "fever"><label for = "sirs-fever">Fever</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-tachycardia" name = "sirs" onclick="check(this.id)" value = "tachycardia"><label for = "sirs-tachycardia">Tachycardia</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-tachypnea" name = "sirs" onclick="check(this.id)" value = "tachypnea"><label for = "sirs-tachypnea">Tachypnea</label></li>
+              <li><input type = "checkbox"  class="choicebutton" id="sirs-leukocytosis" name = "sirs" onclick="check(this.id)" value = "leukocytosis"><label for = "sirs-fever">Leukocytosis</label></li>
+            </ul>
+          </div>
+	     
+	        <div class="block">
+            <h4>Lactate</h4>
+            <ul class = "radiobutton">
+              <li><input type = "radio"  class="choicebutton" id="lactate1" name = "lactate" onclick="check(this.id)" value = "elevated"><label for = "lactate1">Elevated</label></li>
+              <li><input type = "radio"  class="choicebutton" id="lactate2" name = "lactate" onclick="check(this.id)" value = "not elevated"><label for = "lactate2">Not elevated</label></li>
+            </ul>
+          </div>
+	      
+          <div class="block">
+            <h4>Etiology</h4>
+            <ul class = "radiobutton">
+              <li><input type = "radio"  class="choicebutton" id="sepsis-abd" name = "sepsisetiology" onclick="check(this.id)" value = "an abdominal source"><label for = "sepsis-abd">Abdominal source</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-cellulitis" name = "sepsisetiology" onclick="check(this.id)" value = "cellulitis"><label for = "sepsis-cellulitis">Cellulitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-cdif" name = "sepsisetiology" onclick="check(this.id)" value = "C. dif colitis"><label for = "sepsis-cdif">C. dif</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-cholangitis" name = "sepsisetiology" onclick="check(this.id)" value = "cholangitis"><label for = "sepsis-cholangitis">Cholangitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-cholecystitis" name = "sepsisetiology" onclick="check(this.id)" value = "cholecystitis"><label for = "sepsis-cholecystitis">Cholecystitis</label></li>
+              
+              <li><input type = "radio"  class="choicebutton" id="sepsis-colitis" name = "sepsisetiology" onclick="check(this.id)" value = "colitis"><label for = "sepsis-colitis">Colitis</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-diarrhea" name = "sepsisetiology" onclick="check(this.id)" value = "a diarrheal illness"><label for = "sepsis-diarrhea">Diarrheal illness</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-flu" name = "sepsisetiology" onclick="check(this.id)" value = "influenza"><label for = "sepsis-flu">Flu</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-meningitis" name = "sepsisetiology" onclick="check(this.id)" value = "meningitis"><label for = "sepsis-meningitis">Meningitis</label></li>
+              
+              <li><input type = "radio"  class="choicebutton" id="sepsis-pneumonia" name = "sepsisetiology" onclick="check(this.id)" value = "pneumonia"><label for = "sepsis-pneumonia">Pneumonia</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-peritonitis" name = "sepsisetiology" onclick="check(this.id)" value = "peritonitis"><label for = "sepsis-peritonitis">Peritonitis</label></li>
+              
+              <li><input type = "radio"  class="choicebutton" id="sepsis-pyelonephritis" name = "sepsisetiology" onclick="check(this.id)" value = "pyelonephritis"><label for = "sepsis-pyelonephritis">Pyelonephritis</label></li>
+            
+	      <li><input type = "radio"  class="choicebutton" id="sepsis-UTI" name = "sepsisetiology" onclick="check(this.id)" value = "a UTI"><label for = "sepsis-UTI">UTI</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-tick" name = "sepsisetiology" onclick="check(this.id)" value = "a tick-borne illness"><label for = "sepsis-tick">Tick-borne illness</label></li>
+              <li><input type = "radio"  class="choicebutton" id="sepsis-undiscovered" name = "sepsisetiology" onclick="check(this.id)" value = "a, thus far, undiscovered source"><label for = "sepsis-undiscovered">Undiscovered source</label></li>
+             
+              <li><input type = "radio"  class="choicebutton" id="sepsis-blank" name = "sepsisetiology" onclick="check(this.id)" value = "[sepsis cause]"><label for = "sepsis-blank">[sepsis cause]</label></li>
+            </ul>
+          </div>
+		
+
+            <div class="block">
+              <h4>Treatment</h4>
+              <div class="block">
+                <ul class = "radiobutton">
+                  <li><input type = "checkbox"  class="choicebutton" id="sepsis-culture" name = "sepsis1" onclick="check(this.id)" value = "blood cultures"><label for = "sepsis-culture">blood cultures</label></li><br>
+                </ul>
+              </div>
+              <div class="block">
+                <ul class = "radiobutton">
+                  <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf" name = "sepsis-abx" onclick="check(this.id)" value = "1 L normal saline IV"><label for = "sepsis-ivf">1 L NS</label></li>
+
+                  <li><input type = "checkbox"  class="choicebutton" id="sepsis-ivf30" name = "sepsis-abx" onclick="check(this.id)" value = "30 cc/kg of normal saline IV"><label for = "sepsis-ivf30">30 cc/kg NS</label></li>
+                </ul>
+              </div>
+              <h4>&nbsp</h4><h4>&nbsp</h4>
+              <ul class = "radiobutton">
+                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx1" name = "sepsis-abx" onclick="check(this.id)" value = "IV Zosyn & Vancomycin"><label for = "sepsis-abx1">Zosyn & Vancomycin</label></li>
+                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx2" name = "sepsis-abx" onclick="check(this.id)" value = "IV Rocephin & Zithromax"><label for = "sepsis-abx2">Rocephin & Zithromax</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx3" name = "sepsis-abx" onclick="check(this.id)" value = "IV Rocephin"><label for = "sepsis-abx3">Rocephin</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx6" name = "sepsis-abx" onclick="check(this.id)" value = "IV Zithromax"><label for = "sepsis-abx6">Zithromax</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx7" name = "sepsis-abx" onclick="check(this.id)" value = "IV Levaquin"><label for = "sepsis-abx7">Levaquin</label></li>
+		      
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx4" name = "sepsis-abx" onclick="check(this.id)" value = "IV Cipro & Flagyl"><label for = "sepsis-abx4">Cipro & Flagyl</label></li>
+		<li><input type = "checkbox"  class="choicebutton" id="sepsis-abx5" name = "sepsis-abx" onclick="check(this.id)" value = "IV Invanz"><label for = "sepsis-abx5">Invanz</label></li>
+                <li><input type = "checkbox"  class="choicebutton" id="sepsis-abx30" name = "sepsis-abx" onclick="check(this.id)" value = "[other abx]"><label for = "sepsis-abx30">[other abx]</label></li>
+              </ul>
+          </div>
+        </div>
+
+
+      <script>
+        
+        var myObj = {};
+getObject('json/ddx.txt');
+function getObject(website){
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function() { myObj = JSON.parse(this.responseText); console.log(myObj);displayHTML();};
+      xmlhttp.open("GET",website);
+      xmlhttp.send();
+    }
+
+
+function displayHTML () {
+	
+	var t = "<ul class='radiobutton'>\n";
+	var s = "<div>\n";
+	for (let i =0; i<myObj.list.length; i++) {
+		t = t + "<div class='content' name = 'sx' id = 'ddx-"+myObj.list[i].dx+"'>\n";
+		s = s + "<button class = 'sxbutton' id = 'sx"+String(i)+"' type = 'button' onclick = \"showDDX('ddx-"+myObj.list[i].dx+"',[";
+		if (myObj.list[i].checked != undefined) {
+			for (let j = 0; j < myObj.list[i].checked.length-1; j++) {
+				s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[j]+"',";
+			}
+			s = s + "'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].checked[myObj.list[i].checked.length-1]+"'";
+		}
+		s = s + "])\">"+myObj.list[i].dx+"</button>\n\n";
+		for (let j = 0; j < myObj.list[i].ddx.length; j++) {
+			t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"' onclick='check(this.id)' value = '" + myObj.list[i].ddx[j]+"'><label for = 'ddx-"+myObj.list[i].dx+"-"+myObj.list[i].ddx[j]+"'>"+myObj.list[i].ddx[j]+"</label></li>\n";
+		}
+    t = t + "<li><input type = 'checkbox' class = 'ddxbutton' name = 'ddx' id = 'ddx-"+myObj.list[i].dx+"-[other diagnosis]' onclick = 'check(this.id)' value = '[other diagnosis]'><label for = 'ddx-"+myObj.list[i].dx+"-[other diagnosis]'>[other diagnosis]</label></li>\n";
+		t = t + "</div>\n";
+	}
+	s = s + "</div>\n";
+	t = t + "</ul>";
+	document.getElementById('ddxbuttons').innerHTML = s + t;
+}
+	      
+        function makeDDXTable() {
+          var list = document.getElementsByName('ddx');
+          var list2 = [];
+          for (let i = 0; i<list.length; i++) {
+            if (list[i].checked) {
+              list2.push(list[i].value);
+            }
+          }
+          var t = "<div class='block'><ul class = 'radiobutton_small'><table>";
+          for (let i = 0; i<list2.length; i++) {
+            t = t + "<tr><td>"+list2[i]+"</td>";
+	t = t + "<td><li><input type='checkbox' id = 'row1col"+String(i) +"' name = 'ruled out' checked onclick='unselect("+i+",1);check(this.id)' value = '"+list2[i]+"'><label for = 'row1col"+String(i)+"'>Ruled out</label></li></td>";
+t = t + "<td><li><input type='checkbox' id = 'row2col"+String(i) +"' name = 'unlikely' onclick='unselect("+i+",2);check(this.id)' value = '"+list2[i]+"'><label for = 'row2col"+String(i)+"'>Unlikely</label></li></td>";
+t = t + "<td><li><input type='checkbox' id = 'row3col"+String(i) +"'name = 'presumptive' onclick='unselect("+i+",3);check(this.id)' value = '"+list2[i]+"'><label for = 'row3col"+String(i)+"'>Presumptive</label></li></td>";
+t = t + "<td><li><input type='checkbox' id = 'row4col"+String(i) +"' name = 'definitive' onclick='unselect("+i+",4);check(this.id)'  unselect("+i+",4)' value = '"+list2[i]+"'><label for = 'row4col"+String(i)+"'>Definitive</label></li></td></tr>";
+          }
+          t = t + "</table></ul></div>";
+          document.getElementById("ddxtable").innerHTML = t;
+        }
+
+        function unselect(row,btn) {
+          list = [];
+          var x  ="";
+          for (let i = 1; i<5; i++) {
+            if (i != btn) {
+            x = 'row'+String(i)+'col'+String(row);
+            list.push(x);
+            }
+          }
+          for (let i = 0; i<list.length; i++) {
+            document.getElementById(list[i]).checked = false;
+          }
+        }
+        
+        function showDDX(id,list2) {
+				  var x = document.getElementsByName('ddx');
+	        for (let i = 0; i<x.length; i++){
+            x[i].checked = false;
+          }
+          var list = document.getElementsByName('sx');
+          for (let i = 0; i<list.length; i++) {
+            list[i].style.display = 'none';
+          }
+          document.getElementById(id).style.display = "block";
+          document.getElementById(id).checked = true;
+          for (let i = 0; i<list2.length; i++) {
+            document.getElementById(list2[i]).checked = true;
+            console.log(list2[i]);
+          }
+		      makeDDXTable();
+        }
+        
+        function check(id) {
+        
+          document.getElementById(id).checked == !document.getElementById(id).checked;
+          if (document.getElementById(id).style['background-color'] == 'lightgray') {
+            document.getElementById(id).style['background-color'] = 'lightblue';
+          }
+          else {
+            document.getElementById(id).style['background-color'] = 'lightgray';
+          }
+          var list = document.getElementsByTagName('checked');
+
+          
+          var t = "";
+          
+          if (isAnyChecked("sirs")) {
+            t = t + "The patient met SIRS criteria with " + combineItemsFromButtons('sirs')+". ";
+          }
+          
+          if (isAnyChecked("lactate")) {
+            t = t + "Lactate was " + getRadioButtonValue('lactate')+". ";
+          }
+          if (isAnyChecked('sepsisetiology')) {
+            t = t + "The patient appears to be septic due to " + getRadioButtonValue('sepsisetiology') + ". ";
+          }
+          if (isAnyChecked('sepsis1')) {
+            t = t + "Blood cultures were obtained. ";
+          }
+          if (isAnyChecked('sepsis-abx')) {
+            t = t + "The patient was given "+ combineItemsFromButtons('sepsis-abx')+". ";
+          }
+            
+            
+         
+          
+          navigator.clipboard.writeText(t);
+          document.getElementById("text").innerHTML = t;
+          
+        }
+        
+        function isAnyChecked(name) {
+          var ele = document.getElementsByName(name);
+          for (let i = 0; i < ele.length; i++) {
+            if (ele[i].checked) {
+              return(true);
+            }
+          }
+          return(false);
+        }
+
+	function isPlural(name) {
+	  var ele = document.getElementsByName(name);
+	var count = 0;
+          for (let i = 0; i < ele.length; i++) {
+            if (ele[i].checked) {
+              count++;
+            }
+          }
+	  if (count > 1) {
+		return(true);
+}
+else {
+          return(false);	
+}
+	}
+        
+        function combineItemsFromButtons(name) {
+          var ele = document.getElementsByName(name);
+          var list = [];
+          for (let i = 0; i < ele.length; i++) {
+            if (ele[i].checked) {
+              list.push(ele[i].value);
+            }
+          }
+          var t = list[0];
+          for (let i = 1; i<list.length-1; i++) {
+            t = t + ", "+ list[i];
+          }
+          if (list.length>1) {
+            t = t + " and " + list[list.length-1];
+          }
+          return(t);
+        }
+
+        function combineItemsFromList(list) {
+          var t = list[0];
+          for (let i = 1; i<list.length-1; i++) {
+            t = t + ", "+ list[i];
+          }
+          if (list.length>1) {
+            t = t + " and " + list[list.length-1];
+          }
+          return(t);
+        }
+        
+        function getRadioButtonValue(name){
+          var ele = document.getElementsByName(name);
+          for (let i = 0; i < ele.length; i++){
+            if (ele[i].checked){
+              return(ele[i].value);
+            }
+          }
+          return('____________________');
+        }
+      </script>
+    
+	  <script>
+        
+      function isChecked(id) {
+        return(document.getElementById(id).checked);
+      }
+	  </script>
+  </body>
+</html>
