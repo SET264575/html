@@ -334,10 +334,6 @@ function pickRoom(i){
   newest = i;
   activeElement = 'none';
   pt_count++;
-  toDoList[i] = [];
-  toDoButtonClicked(i,"SEE PATIENT");
-  toDoButtonClicked(i,"ORDER LABS");
-  toDoButtonClicked(i,"ORDER MEDS");
   refreshTable();
   displayRecords();
   document.getElementById("pt_count").innerHTML = pt_count;
@@ -347,7 +343,6 @@ function deleteRoom(i){
   all_dx = all_dx + "\n"+document.getElementById("rm"+String(i)+"_dx").value;
   all_plans = all_plans + "\n" + document.getElementById("rm"+String(i)+"_plan").value;
   room[i].mine = false;
-  toDoList[i] = [];
   document.getElementById('dx').innerHTML = all_dx;
   document.getElementById('plans').innerHTML = all_plans; //all_plans;
 	
