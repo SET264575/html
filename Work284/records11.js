@@ -93,27 +93,7 @@ function Room() {
   this.awaiting = [];
 }
 
-class Awaiting {
-	constructor(activity,t){
-		this.label = activity;
-		this.minutes = t;
-	}
-}
 
-class AwaitingList {
-	constructor(activity,t,room,c){
-       		this.activity = activity;
-		this.minutes = t;
-		this.room = room;
-		this.clr = c;
-	}
-	label() {
-		return("<b>"+String(this.minutes) +"</b> min - Rm <b>"+String(this.room)+"</b>: "+this.activity);
-	}
-	color() {
-		return(['black','blue','red'][this.clr]);
-	}
-}
 
 
 
@@ -325,6 +305,7 @@ function createTextbox(i) {
   x.value = room[i].wu_plan;
   t.appendChild(x);
 
+  return(t);
 }
 
 
