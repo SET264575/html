@@ -62,6 +62,10 @@
   animation: fadeIn 1s;
 }
 
+.sidenav {
+  visibility: hidden;
+}
+
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;} 
@@ -76,7 +80,7 @@
   </head>
   <body>
 
-        <div class="sidenav" id="sidebar" style="visibility:'hidden'">
+        <div class="sidenav" id="sidebar">
           <!--button style="margin: 20px" onclick="printFrame()">Print Frame</button><br-->
           <a href="..\Public\mips.html" target="content" onclick="deactivate()">MIPS</a>
           <a href="..\Public\MDM\master.html" target = "content" onclick="deactivate()">Decision Tools</a>
