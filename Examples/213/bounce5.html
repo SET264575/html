@@ -1,0 +1,45 @@
+<html>
+  <body>
+    <canvas id = "myCanvas" width = "500" height = "300" style="border:1px solid blue; background: white"></canvas>
+    <script>
+      x = 100;
+      y = 100;
+      vx = 1;
+      vy = 1;
+      r = 5;
+      canvas = document.getElementById('myCanvas');
+      ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'red';
+      setInterval(update,10);
+
+      function update() {
+        checkWall();
+        moveBall();
+      }
+
+      function moveBall() {
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        x = x + vx;
+        y = y + vy;
+        ctx.beginPath();
+        ctx.arc(x,y,10,0,2*3.14159);
+        ctx.fill();
+      }
+
+      function checkWall() {
+        if (x + vx + r> 500) {
+          vx = -1;
+        }
+        if (x + vx - r< 0) {
+          vx = 1;
+        }
+        if (y + vy + r > 300) {
+          vy = -1;
+        }
+        if (y + vy - r < 0) {
+           vy = 1;
+        }
+       }
+    </script>
+  </body>
+</html>
