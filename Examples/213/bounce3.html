@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <canvas id = "myCanvas" width = "500" height = "300" style="border:1px solid blue; background: white"></canvas>
+    <script>
+      x = 100;
+      y = 100;
+      vx = 1;
+      vy = 1;
+      canvas = document.getElementById('myCanvas');
+      ctx = canvas('myCanvas').getContext('2d');
+      ctx.fillStyle = 'red';
+      setInterval(moveBall,500);
+
+      function moveBall() {
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        x = x + vx;
+        y = y + vy;
+        ctx.beginPath();
+        ctx.arc(x,y,10,0,2*3.14159);
+        ctx.fill();
+      }
+    </script>
+  </body>
+</html>
