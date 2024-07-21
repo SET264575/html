@@ -22,14 +22,28 @@
           this.examples = examples;
         }
       }
+      score = 0;
+      total = 0;
       roots = [];
       roots.append(Root("bi","two",["bicycle","bilateral"]));
       roots.append(Root("tri","three",["triangle","trilateral"]));
       roots.append(Root("quad","four",["quadriped","quadrilateral"]));
       root.append(Root("circ","round",["circumference","circus"]));
-      i = 2;
-      document.getElementByID('question').innerHTML = roots[i].root;
-      document.getElementByID('choice1').label = roots[i].meaning;
+
+      function next() {
+        i = 2;
+        document.getElementByID('score').innerHTML = score;
+        document.getElementbyID('total').innerHTML = total;
+        document.getElementByID('question').innerHTML = roots[i].root;
+        document.getElementByID('choice1').label = roots[i].meaning;
+      }
+
+      function picked(answer) {
+        if (answer == correct) {
+          score++;
+        }
+        
+      }
 
       
       
