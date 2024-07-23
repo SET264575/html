@@ -1,51 +1,222 @@
 <html>
   <head>
-    
+    <style>
+
+	.choices input {
+		margin: 10px;
+
+	}
+
+	.choices label {
+		background-color: #00ffff;
+		border: 0px;
+		border-radius: 15px;
+		padding: 10px 20px 10px 20px;
+		margin: 10px;
+		
+	}
+
+	.choices label:hover {
+		background-color: #00f0f0;
+	}
+
+	.choices input {
+		display: block;
+	}
+
+	.choices input[type="radio"] {
+		opacity: 0.01;
+		z-order: 100;
+	}
+
+
+	.choices {
+		list-style-type: none;
+	}
+
+	table,td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding: 10px 20px 10px 20px;
+	}
+
+
+				
+    </style>
   </head>
   <body>
+    <div style="margin: 20px; font-size: 2em">
     <p id="time">
     </p>
-    <p>Score:</p>
-    <p id = "score"></p> of <p id = "total"></p>
-    <p id = "question">Question</p>
+    Number of roots:  <span id = "count"></span>
+    &nbsp;&nbsp;&nbsp;Score: <span id = "score"></span> correct out of <span id = "total"></span>
+   
+
+    <p id = "question" style="font-weight: bold">Question</p>
     <p id = "choices">
-      <input type="radio" index = "1" name="choice" id = "choice1" onchange="picked(1)"><label for="choice1">1</label><br>
-      <input type="radio" index = "1" name="choice" id = "choice2" onchange="picked(2)"><label for="choice2">2</label><br>
-      <input type="radio" index = "1" name="choice" id = "choice3" onchange="picked(3)"><label for="choice3">3</label><br>
-      <input type="radio" index = "1" name="choice" id = "choice4" onchange="picked(4)"><label for="choice4">4</label><br>
+	<ul class="choices">
+		<li><input type="radio" index = "1" name="choice" id = "choice1" onchange="picked(0)"><label id = "label1" for="choice1">1</label></li>
+      		<li><input type="radio" index = "1" name="choice" id = "choice2" onchange="picked(1)"><label id = "label2" for="choice2">2</label></li>
+      		<li><input type="radio" index = "1" name="choice" id = "choice3" onchange="picked(2)"><label id = "label3" for="choice3">3</label></li>
+      		<li><input type="radio" index = "1" name="choice" id = "choice4" onchange="picked(3)"><label id = "label4" for="choice4">4</label></li>
+	</ul>
+      <input type="radio" index = "5" name = "choice" id = "empty" hidden = true>
     </p>
+	<p id = "instructions"></p>
+	<p>These are the correct answers for the ones you missed:</p>
+	<table id = "incorrect" style="font-size: 0.7em"></table>
+</div>
     <script>
+/*
+things to fix:
+fix buttons
+*/
+
       class Root {
         constructor(root,meaning,examples) {
           this.root = root;
-          this.meaning = meaing;
+          this.meaning = meaning;
           this.examples = examples;
         }
       }
       score = 0;
       total = 0;
+      correct = -1;
+      choices = ['label1','label2','label3','label4'];
+      corrections = document.getElementById('incorrect');
       roots = [];
-      roots.append(Root("bi","two",["bicycle","bilateral"]));
-      roots.append(Root("tri","three",["triangle","trilateral"]));
-      roots.append(Root("quad","four",["quadriped","quadrilateral"]));
-      root.append(Root("circ","round",["circumference","circus"]));
+
+roots.push(new Root('bi-','two',[]));
+roots.push(new Root('cap-','hold',[]));
+roots.push(new Root('circ-','circular, round',[]));
+roots.push(new Root('-cyt-','cell',[]));
+roots.push(new Root('di-','two',[]));
+roots.push(new Root('electr-','amber, electricity',[]));
+roots.push(new Root('erytho-','red',[]));
+roots.push(new Root('hex-','six',[]));
+roots.push(new Root('hyper-','above, beyond',[]));
+roots.push(new Root('hypo-','under, less than',[]));
+roots.push(new Root('leuko-','white',[]));
+roots.push(new Root('macro-','large',[]));
+roots.push(new Root('micro-','small',[]));
+roots.push(new Root('mono-','one',[]));
+roots.push(new Root('nano-','very small',[]));
+roots.push(new Root('oct-','eight',[]));
+roots.push(new Root('-ology','the study of',[]));
+roots.push(new Root('opt-','eye',[]));
+roots.push(new Root('penta-','five',[]));
+roots.push(new Root('photo-','light',[]));
+roots.push(new Root('pne-','breath, spirit',[]));
+roots.push(new Root('pulmon-','lung',[]));
+roots.push(new Root('quad-','four',[]));
+roots.push(new Root('-scope','see',[]));
+roots.push(new Root('spir-','breath, spirit',[]));
+roots.push(new Root('tele-','far',[]));
+roots.push(new Root('tetra-','four',[]));
+roots.push(new Root('thrombo-','clot',[]));
+roots.push(new Root('tri-','three',[]));
+roots.push(new Root('uni-','one',[]));
+roots.push(new Root('chron-','time',[]));
+roots.push(new Root('contra-','opposite',[]));
+roots.push(new Root('ec-','out',[]));
+roots.push(new Root('endo-','inside',[]));
+roots.push(new Root('exo-','outside',[]));
+roots.push(new Root('graph-','write, draw',[]));
+roots.push(new Root('later-','side',[]));
+roots.push(new Root('os-','mouth',[]));
+roots.push(new Root('tom-','cut',[]));
+roots.push(new Root('trans-','across',[]));
+
+meanings = [];
+for (i = 0; i<roots.length; i++) {
+	meanings.push(roots[i].meaning);
+}
+meanings = new Set(meanings);
+meanings = Array.from(meanings);
+
+rootIndex = [];
+for (i = 0; i<roots.length;i++) {
+	rootIndex.push(i);
+}
+shuffle(rootIndex);
+
+
+      document.getElementById('count').innerHTML = roots.length;
+      next();
 
       function next() {
-        i = 2;
-        document.getElementByID('score').innerHTML = score;
-        document.getElementbyID('total').innerHTML = total;
-        document.getElementByID('question').innerHTML = roots[i].root;
-        document.getElementByID('choice1').label = roots[i].meaning;
+        document.getElementById('score').innerHTML = score;
+        document.getElementById('total').innerHTML = total;
+	current = rootIndex[total];
+	meaningIndices = [];
+	for (i = 0; i < 10; i++) {
+		meaningIndices.push(Number.parseInt(Math.random()*meanings.length));
+	}
+	meaningIndices = new Set(meaningIndices);
+	meaningIndices = Array.from(meaningIndices).sort();
+	meaningList = [];
+	for (i = 0; i < 4; i++) {
+		meaningList.push(meanings[meaningIndices[i]]);
+	}
+	meaningList = Array.from(meaningList).sort();
+	for (i = 0; i < 4; i++) {
+        	document.getElementById(choices[i]).innerHTML = meaningList[i];
+	}
+        document.getElementById('question').innerHTML = roots[current].root;
+
+	for (i = 0; i < 4; i++) {
+		if (meaningList[i] == roots[current].meaning) {
+			correct = i;
+			break;
+		}
+		if (meaningList[i] > roots[current].meaning || i == 3) {
+			document.getElementById(choices[i]).innerHTML = roots[current].meaning;
+			correct = i;
+			break;
+		}
+	}
+	for (i = 0; i < 4; i++) {
+		document.getElementById(choices[i]).width = "400px";
+	}
+
       }
 
       function picked(answer) {
         if (answer == correct) {
           score++;
         }
+	else {
+	  corrections.innerHTML = corrections.innerHTML + '<tr><td>'+roots[current].root+'</td><td>'+roots[current].meaning+'</td></tr>';
+	}
+	total++;
+	document.getElementById('empty').checked = true;
+	if (total <= roots.length) {
+		next();
+	}
+	else {
+		document.getElementById('instructions').innerHTML = "Done!  You can try again by refreshing this page.";
+	}
         
       }
 
+      function getRandomRoot() {
+	return(Number.parseInt(Math.random()*roots.length));
+      }
+
+      function uncheck() {
+	for (i = 0; i < 4; i++) {
+		document.getElementById('empty').checked = true;
+	}
+      }
       
+	function shuffle(array) {
+		let currentIndex = array.length;
+		while (currentIndex != 0) {
+			let randomIndex = Math.floor(Math.random()*currentIndex);
+			currentIndex--;
+			[array[currentIndex],array[randomIndex]] = [array[randomIndex],array[currentIndex]];
+		}
+	}
       
                               
       
