@@ -48,6 +48,8 @@
     <div style="margin: 20px; font-size: 2em">
     <p id="time">
     </p>
+	    <button onclick="loadAllRoots()">All</button>
+	    <button onclick="loadClub()">Science Club</button><br>
     Number of roots:  <span id = "count"></span>
     &nbsp;&nbsp;&nbsp;Score: <span id = "score"></span> correct out of <span id = "total"></span>
    
@@ -85,7 +87,9 @@ fix buttons
       choices = ['label1','label2','label3','label4'];
       corrections = document.getElementById('incorrect');
       roots = [];
+	    loadClub();
 
+	    function loadClub() {
 roots.push(new Root('bi-','two',[]));
 roots.push(new Root('cap-','hold',[]));
 roots.push(new Root('circ-','circular, round',[]));
@@ -136,7 +140,6 @@ roots.push(new Root('ortho-','straight',[]));
 roots.push(new Root('osteo-','bone',[]));
 roots.push(new Root('ped-','foot',[]));
 roots.push(new Root('ren-','kidney',[]));
-	    loadAllRoots();
 	    /*
 roots.push(new Root('cent-','hundred',[]));
 roots.push(new Root('dec-','ten',[]));
@@ -150,24 +153,25 @@ roots.push(new Root('omni-','all',[]));
 roots.push(new Root('poly-','many',[]));
 
 */
+		    Initialize();
+	    }
 	    
-
-meanings = [];
-for (i = 0; i<roots.length; i++) {
-	meanings.push(roots[i].meaning);
-}
-meanings = new Set(meanings);
-meanings = Array.from(meanings);
-
-rootIndex = [];
-for (i = 0; i<roots.length;i++) {
-	rootIndex.push(i);
-}
-shuffle(rootIndex);
-
-
+    function Initialize() {
+	meanings = [];
+	for (i = 0; i<roots.length; i++) {
+		meanings.push(roots[i].meaning);
+	}
+	meanings = new Set(meanings);
+	meanings = Array.from(meanings);
+	
+	rootIndex = [];
+	for (i = 0; i<roots.length;i++) {
+		rootIndex.push(i);
+	}
+	shuffle(rootIndex);
       document.getElementById('count').innerHTML = roots.length;
       next();
+	    }
 
       function next() {
         document.getElementById('score').innerHTML = score;
@@ -1858,7 +1862,7 @@ roots.push(new Root("zo- ","animal, living being","[]"));
 roots.push(new Root("zon- ","belt, girdle","[]"));
 roots.push(new Root("zyg-  ","yoke","[]"));
 roots.push(new Root("zym- ","ferment","[]"));
-
+Initialize();
 
 	
 	}
