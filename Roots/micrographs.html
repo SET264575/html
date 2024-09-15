@@ -151,8 +151,8 @@ fix buttons
 
       function next() {
 	document.getElementById('instructions').innerHTML = '';
-	      	      document.getElementById('next').style.display = "none";
-
+	document.getElementById('next').style.display = "none";
+	total++;
         document.getElementById('score').innerHTML = score;
         document.getElementById('total').innerHTML = total;
 	document.getElementById('empty').checked = true;
@@ -163,8 +163,7 @@ fix buttons
       function picked(answer) {
         if (answer == pictures[picIndex[total]].type) {
           score++;
-	  total++;
-          if (total <= pictures.length) {
+          if (total < pictures.length) {
 		  next();
 	  }
 	  else {
