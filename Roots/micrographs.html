@@ -52,7 +52,7 @@
     &nbsp;&nbsp;&nbsp;Score: <span id = "score"></span> correct out of <span id = "total"></span>
    
 
-    <img id = "image" src = '' />
+    <img id = "image" src = '' width = '300'/>
     <p id = "choices">
 	<ul class="choices">
     <li><input type="radio" index = "0" name="choice" id = "choice1" onchange="picked(0)"><label id = "label1" for="choice1">Bright field light microscopy</label></li>
@@ -60,7 +60,7 @@
     <li><input type="radio" index = "2" name="choice" id = "choice3" onchange="picked(2)"><label id = "label3" for="choice3">Dark field light microscopy</label></li>
     <li><input type="radio" index = "3" name="choice" id = "choice4" onchange="picked(3)"><label id = "label4" for="choice4">Polarized light microscopy</label></li>
     <li><input type="radio" index = "4" name="choice" id = "choice5" onchange="picked(4)"><label id = "label5" for="choice5">Phase contrast light microscopy</label></li>
-    <li><input type="radio" index = "5" name="choice" id = "choice6" onchange="picked(5)"><label id = "label6" for="choice6">Light microscopy with fluprescent staining</label></li>
+    <li><input type="radio" index = "5" name="choice" id = "choice6" onchange="picked(5)"><label id = "label6" for="choice6">Light microscopy with fluorescent staining</label></li>
     <li><input type="radio" index = "6" name="choice" id = "choice7" onchange="picked(6)"><label id = "label7" for="choice7">Transmission electron microscopy</label></li>
     <li><input type="radio" index = "7" name="choice" id = "choice8" onchange="picked(7)"><label id = "label8" for="choice8">Scanning electron microscopy</label></li>
 
@@ -148,6 +148,7 @@ fix buttons
         document.getElementById('total').innerHTML = total;
 	document.getElementById('empty').checked = true;
         document.getElementById('image').src = picture[picIndex[total]].source;
+	      console.log(picIndex[total]);
       }
 
       function picked(answer) {
