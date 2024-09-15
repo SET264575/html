@@ -162,10 +162,9 @@ fix buttons
         if (answer == pictures[picIndex[total]].type) {
           score++;
 	}
-	      else {
-		      document.getElementsById('instructions').innerHTML = 'The correct answer is ' + pictype[pictures[picIndex[total]].type];
-	      }
-        }
+      else {
+	      document.getElementsById('instructions').innerHTML = 'The correct answer is ' + pictype[pictures[picIndex[total]].type];
+       }
       	total++;
       	document.getElementById('empty').checked = true;
       	if (total <= pictures.length) {
