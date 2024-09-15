@@ -49,7 +49,7 @@
     <p id="time">
     </p>
     Number of pictures:  <span id = "count"></span>
-    &nbsp;&nbsp;&nbsp;Score: <span id = "score"></span> correct out of <span id = "total"></span>
+    &nbsp;&nbsp;&nbsp;Score: <span id = "score"></span> correct out of <span id = "total"></span><br>
    
 
     <img id = "image" src = '' width = '300'/>
@@ -149,7 +149,7 @@ fix buttons
         document.getElementById('score').innerHTML = score;
         document.getElementById('total').innerHTML = total;
 	document.getElementById('empty').checked = true;
-        document.getElementById('image').src = picture[picIndex[total]].source;
+        document.getElementById('image').src = pictures[picIndex[total]].source;
 	      console.log(picIndex[total]);
       }
 
