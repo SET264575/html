@@ -163,19 +163,19 @@ fix buttons
       function picked(answer) {
         if (answer == pictures[picIndex[total]].type) {
           score++;
+	  total++;
+          if (total <= pictures.length) {
+		  next();
+	  }
+	  else {
+      	    document.getElementById('instructions').innerHTML = "Done!  You can try again by refreshing this page.";
+      	  }
 	}
       else {
 	      document.getElementById('instructions').innerHTML = 'The correct answer is ' + pictype[pictures[picIndex[total]].type];
 	      document.getElementById('next').style.display = "block";
        }
-      	total++;
-      	document.getElementById('empty').checked = true;
-      	if (total <= pictures.length) {
-      		next();
-      	}
-      	else {
-      		document.getElementById('instructions').innerHTML = "Done!  You can try again by refreshing this page.";
-      	}
+
       }       
 
 	    	function shuffle(array) {
