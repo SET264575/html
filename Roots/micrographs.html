@@ -52,7 +52,7 @@
     &nbsp;&nbsp;&nbsp;Score: <span id = "score"></span> correct out of <span id = "total"></span>
    
 
-    <p id = "question" style="font-weight: bold">Question</p>
+    <img id = "image" src = '' />
     <p id = "choices">
 	<ul class="choices">
 		<li><input type="radio" index = "0" name="choice" id = "choice1" onchange="picked(0)"><label id = "label1" for="choice1">Bright field light microscopy</label></li>
@@ -67,7 +67,7 @@
   </ul>
       <input type="radio" index = "8" name = "choice" id = "empty" hidden = true>
     </p>
-	
+	<p id="instructions"></p>
 </div>
     <script>
 /*
@@ -92,13 +92,13 @@ fix buttons
 	    function loadClub() {
         pictures.push(new Picture('bright1.jpg',0));
         pictures.push(new Picture('bright2.jpg',0));
-        pictures.push(new Picture('bright3.jpg',0));
+     //   pictures.push(new Picture('bright3.jpg',0));
         pictures.push(new Picture('bright4.jpg',0));
         pictures.push(new Picture('bright5.jpg',0));
         pictures.push(new Picture('light with staining1.jpg',1));
         pictures.push(new Picture('light with staining2.jpg',1));
         pictures.push(new Picture('light with staining3.jpg',1));
-        pictures.push(new Picture('light with staining4.jpg',1));
+     //   pictures.push(new Picture('light with staining4.jpg',1));
         pictures.push(new Picture('light with staining5.jpg',1));
         pictures.push(new Picture('dark field1.jpg',2));
         pictures.push(new Picture('dark field2.jpg',2));
@@ -113,7 +113,7 @@ fix buttons
         pictures.push(new Picture('phase 1.jpg',4));
         pictures.push(new Picture('phase 2.jpg',4));		    
         pictures.push(new Picture('phase 3.jpg',4));       
-        pictures.push(new Picture('phase 4.jpg',4));
+      //  pictures.push(new Picture('phase 4.jpg',4));
 	pictures.push(new Picture('phase 5.jpg',4));
         pictures.push(new Picture('fluor1.jpg',5));
         pictures.push(new Picture('fluor2.jpg',5));
@@ -136,51 +136,15 @@ fix buttons
 	    }
 	    
     function Initialize() {
-
-	/*
-	rootIndex = [];
-	for (i = 0; i<roots.length;i++) {
-		rootIndex.push(i);
-	}*/
-      document.getElementById('count').innerHTML = roots.length;
+      document.getElementById('count').innerHTML = pictures.length;
       next();
 	    }
 
       function next() {
         document.getElementById('score').innerHTML = score;
         document.getElementById('total').innerHTML = total;
-        /*
-	current = rootIndex[total];
-	meaningIndices = [];
-	for (i = 0; i < 10; i++) {
-		meaningIndices.push(Number.parseInt(Math.random()*meanings.length));
-	}
-	meaningIndices = new Set(meaningIndices);
-	meaningIndices = Array.from(meaningIndices).sort();
-	meaningList = [];
-	for (i = 0; i < 4; i++) {
-		meaningList.push(meanings[meaningIndices[i]]);
-	}
-	meaningList = Array.from(meaningList).sort();
-	for (i = 0; i < 4; i++) {
-        	document.getElementById(choices[i]).innerHTML = meaningList[i];
-	}
-        document.getElementById('question').innerHTML = roots[current].root;
 
-	for (i = 0; i < 4; i++) {
-		if (meaningList[i] == roots[current].meaning) {
-			correct = i;
-			break;
-		}
-		if (meaningList[i] > roots[current].meaning || i == 3) {
-			document.getElementById(choices[i]).innerHTML = roots[current].meaning;
-			correct = i;
-			break;
-		}
-	} */
-	for (i = 0; i < 8; i++) {
-		document.getElementById(choices[i]).width = "400px";
-	}
+        document.getElementById('image').src = picture[i].source;
 
       }
 
@@ -188,12 +152,9 @@ fix buttons
         if (answer == correct) {
           score++;
         }
-	      else {
-	        corrections.innerHTML = corrections.innerHTML + '<tr><td>'+roots[current].root+'</td><td>'+roots[current].meaning+'</td></tr>';
-      	}
       	total++;
       	document.getElementById('empty').checked = true;
-      	if (total <= roots.length) {
+      	if (total <= pictures.length) {
       		next();
       	}
       	else {
