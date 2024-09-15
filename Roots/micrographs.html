@@ -142,6 +142,7 @@ fix buttons
       for (i = 0; i<pictures.length; i++) {
 	      picIndex.push(i);
       }
+      shuffle(picIndex);
       next();
     }
 
@@ -150,11 +151,10 @@ fix buttons
         document.getElementById('total').innerHTML = total;
 	document.getElementById('empty').checked = true;
         document.getElementById('image').src = pictures[picIndex[total]].source;
-	      console.log(picIndex[total]);
       }
 
       function picked(answer) {
-        if (answer == correct) {
+        if (answer == pictures[picIndex[total]].type) {
           score++;
         }
       	total++;
@@ -165,7 +165,16 @@ fix buttons
       	else {
       		document.getElementById('instructions').innerHTML = "Done!  You can try again by refreshing this page.";
       	}
-      }                 
+      }       
+
+	    	function shuffle(array) {
+		let currentIndex = array.length;
+		while (currentIndex != 0) {
+			let randomIndex = Math.floor(Math.random()*currentIndex);
+			currentIndex--;
+			[array[currentIndex],array[randomIndex]] = [array[randomIndex],array[currentIndex]];
+		}
+	}
       
     </script>
   </body>
