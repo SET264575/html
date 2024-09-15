@@ -71,6 +71,7 @@
       <input type="radio" index = "8" name = "choice" id = "empty" hidden = true>
 
 	<p id="instructions"></p>
+	    <button onclick="next()">Next</button>
 </div>
     <script>
 /*
@@ -88,6 +89,7 @@ fix buttons
       total = 0;
       correct = -1;
       pictures = [];
+      pictype = ['bright field microscopy','light microscopy with staining','dark field microscopy','polarized light microscopy','phase contrast light microscopy','light microscopy with fluorescent staining','transmission electron microscopy','scanning electron microscopy'];
 	    loadClub();
 
 	    function loadClub() {
@@ -148,6 +150,7 @@ fix buttons
     }
 
       function next() {
+	document.getElementById('instructions').innerHTML = '';
         document.getElementById('score').innerHTML = score;
         document.getElementById('total').innerHTML = total;
 	document.getElementById('empty').checked = true;
@@ -158,6 +161,10 @@ fix buttons
       function picked(answer) {
         if (answer == pictures[picIndex[total]].type) {
           score++;
+	}
+	      else {
+		      document.getElementsById('instructions').innerHTML = 'The correct answer is ' + pictype[pictures[picIndex[total]].type];
+	      }
         }
       	total++;
       	document.getElementById('empty').checked = true;
