@@ -53,7 +53,7 @@
    
 
 	<table><tr>
-    <img id = "image" src = '' height = '300'/>
+    <img id = "image" src = '' width = '400'/>
     <p id = "choices">
 	<ul class="choices">
 		<td>
@@ -151,6 +151,7 @@ fix buttons
         document.getElementById('score').innerHTML = score;
         document.getElementById('total').innerHTML = total;
 	document.getElementById('empty').checked = true;
+	      console.log(pictures[picIndex[total]].source);
         document.getElementById('image').src = pictures[picIndex[total]].source;
       }
 
