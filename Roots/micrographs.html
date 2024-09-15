@@ -71,7 +71,7 @@
       <input type="radio" index = "8" name = "choice" id = "empty" hidden = true>
 
 	<p id="instructions"></p>
-	    <button onclick="next()">Next</button>
+	    <button id='next' onclick="next()">Next</button>
 </div>
     <script>
 /*
@@ -151,6 +151,8 @@ fix buttons
 
       function next() {
 	document.getElementById('instructions').innerHTML = '';
+	      	      document.getElementById('next').style.display = "none";
+
         document.getElementById('score').innerHTML = score;
         document.getElementById('total').innerHTML = total;
 	document.getElementById('empty').checked = true;
@@ -164,6 +166,7 @@ fix buttons
 	}
       else {
 	      document.getElementsById('instructions').innerHTML = 'The correct answer is ' + pictype[pictures[picIndex[total]].type];
+	      document.getElementById('next').style.display = "block";
        }
       	total++;
       	document.getElementById('empty').checked = true;
