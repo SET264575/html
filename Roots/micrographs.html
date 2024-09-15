@@ -55,7 +55,7 @@
     <img id = "image" src = '' />
     <p id = "choices">
 	<ul class="choices">
-		<li><input type="radio" index = "0" name="choice" id = "choice1" onchange="picked(0)"><label id = "label1" for="choice1">Bright field light microscopy</label></li>
+    <li><input type="radio" index = "0" name="choice" id = "choice1" onchange="picked(0)"><label id = "label1" for="choice1">Bright field light microscopy</label></li>
     <li><input type="radio" index = "1" name="choice" id = "choice2" onchange="picked(1)"><label id = "label2" for="choice2">Light microscopy with staining</label></li>
     <li><input type="radio" index = "2" name="choice" id = "choice3" onchange="picked(2)"><label id = "label3" for="choice3">Dark field light microscopy</label></li>
     <li><input type="radio" index = "3" name="choice" id = "choice4" onchange="picked(3)"><label id = "label4" for="choice4">Polarized light microscopy</label></li>
@@ -84,8 +84,6 @@ fix buttons
       score = 0;
       total = 0;
       correct = -1;
-      choices = ['label1','label2','label3','label4','label5','label6','label7','label8'];
-      corrections = document.getElementById('incorrect');
       pictures = [];
 	    loadClub();
 
@@ -130,22 +128,26 @@ fix buttons
         pictures.push(new Picture('em3.jpg',7));		    
         pictures.push(new Picture('em4.jpg',7));	
         pictures.push(new Picture('em5.jpg',7));		    
-		    
+
+        total = 0;
+	picIndex = [];
 		    
 		    Initialize();
 	    }
 	    
     function Initialize() {
       document.getElementById('count').innerHTML = pictures.length;
+      for (i = 0; i<pictures.length; i++) {
+	      picIndex.push(i);
+      }
       next();
-	    }
+    }
 
       function next() {
         document.getElementById('score').innerHTML = score;
         document.getElementById('total').innerHTML = total;
-
-        document.getElementById('image').src = picture[i].source;
-
+	document.getElementById('empty').checked = true;
+        document.getElementById('image').src = picture[picIndex[total]].source;
       }
 
       function picked(answer) {
@@ -160,11 +162,7 @@ fix buttons
       	else {
       		document.getElementById('instructions').innerHTML = "Done!  You can try again by refreshing this page.";
       	}
-      }
-
-      function uncheck() {
-		    document.getElementById('empty').checked = true;
-      }                   
+      }                 
       
     </script>
   </body>
