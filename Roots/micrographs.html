@@ -1,0 +1,186 @@
+<html>
+  <head>
+    <style>
+
+	.choices input {
+		margin: 10px;
+
+	}
+
+	.choices label {
+		background-color: #00ffff;
+		border: 0px;
+		border-radius: 15px;
+		padding: 10px 20px 10px 20px;
+		margin: 10px;
+		
+	}
+
+	.choices label:hover {
+		background-color: #00f0f0;
+	}
+
+	.choices input {
+		display: block;
+	}
+
+	.choices input[type="radio"] {
+		opacity: 0.01;
+		z-order: 100;
+	}
+
+
+	.choices {
+		list-style-type: none;
+	}
+
+	table,td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding: 10px 20px 10px 20px;
+	}
+
+
+				
+    </style>
+  </head>
+  <body>
+    <div style="margin: 20px; font-size: 2em">
+    <p id="time">
+    </p>
+    Number of pictures:  <span id = "count"></span>
+    &nbsp;&nbsp;&nbsp;Score: <span id = "score"></span> correct out of <span id = "total"></span>
+   
+
+    <p id = "question" style="font-weight: bold">Question</p>
+    <p id = "choices">
+	<ul class="choices">
+		<li><input type="radio" index = "0" name="choice" id = "choice1" onchange="picked(0)"><label id = "label1" for="choice1">Simple light microscopy</label></li>
+    <li><input type="radio" index = "1" name="choice" id = "choice2" onchange="picked(1)"><label id = "label2" for="choice2">Light microscopy with staining</label></li>
+    <li><input type="radio" index = "2" name="choice" id = "choice3" onchange="picked(2)"><label id = "label3" for="choice3">Dark field light microscopy</label></li>
+    <li><input type="radio" index = "3" name="choice" id = "choice4" onchange="picked(3)"><label id = "label4" for="choice4">Polarized light microscopy</label></li>
+    <li><input type="radio" index = "4" name="choice" id = "choice5" onchange="picked(4)"><label id = "label5" for="choice5">Light microscopy with fluprescent staining</label></li>
+    <li><input type="radio" index = "5" name="choice" id = "choice6" onchange="picked(5)"><label id = "label6" for="choice6">Transmission electron microscopy</label></li>
+    <li><input type="radio" index = "6" name="choice" id = "choice7" onchange="picked(6)"><label id = "label7" for="choice7">Scanning electron microscopy</label></li>
+
+  </ul>
+      <input type="radio" index = "7" name = "choice" id = "empty" hidden = true>
+    </p>
+	
+</div>
+    <script>
+/*
+things to fix:
+fix buttons
+*/
+
+      class Picture {
+        constructor(src,type) {
+          this.source = src;
+          this.type = type;
+        }
+      }
+      score = 0;
+      total = 0;
+      correct = -1;
+      choices = ['label1','label2','label3','label4','label5','label6','label7'];
+      corrections = document.getElementById('incorrect');
+      pictures = [];
+	    loadClub();
+
+	    function loadClub() {
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+        pictures.push(new Picture('',1));
+
+        
+		    
+		    Initialize();
+	    }
+	    
+    function Initialize() {
+
+	/*
+	rootIndex = [];
+	for (i = 0; i<roots.length;i++) {
+		rootIndex.push(i);
+	}*/
+      document.getElementById('count').innerHTML = roots.length;
+      next();
+	    }
+
+      function next() {
+        document.getElementById('score').innerHTML = score;
+        document.getElementById('total').innerHTML = total;
+        /*
+	current = rootIndex[total];
+	meaningIndices = [];
+	for (i = 0; i < 10; i++) {
+		meaningIndices.push(Number.parseInt(Math.random()*meanings.length));
+	}
+	meaningIndices = new Set(meaningIndices);
+	meaningIndices = Array.from(meaningIndices).sort();
+	meaningList = [];
+	for (i = 0; i < 4; i++) {
+		meaningList.push(meanings[meaningIndices[i]]);
+	}
+	meaningList = Array.from(meaningList).sort();
+	for (i = 0; i < 4; i++) {
+        	document.getElementById(choices[i]).innerHTML = meaningList[i];
+	}
+        document.getElementById('question').innerHTML = roots[current].root;
+
+	for (i = 0; i < 4; i++) {
+		if (meaningList[i] == roots[current].meaning) {
+			correct = i;
+			break;
+		}
+		if (meaningList[i] > roots[current].meaning || i == 3) {
+			document.getElementById(choices[i]).innerHTML = roots[current].meaning;
+			correct = i;
+			break;
+		}
+	} */
+	for (i = 0; i < 8; i++) {
+		document.getElementById(choices[i]).width = "400px";
+	}
+
+      }
+
+      function picked(answer) {
+        if (answer == correct) {
+          score++;
+        }
+	      else {
+	        corrections.innerHTML = corrections.innerHTML + '<tr><td>'+roots[current].root+'</td><td>'+roots[current].meaning+'</td></tr>';
+      	}
+      	total++;
+      	document.getElementById('empty').checked = true;
+      	if (total <= roots.length) {
+      		next();
+      	}
+      	else {
+      		document.getElementById('instructions').innerHTML = "Done!  You can try again by refreshing this page.";
+      	}
+      }
+
+      function uncheck() {
+		    document.getElementById('empty').checked = true;
+      }                   
+      
+    </script>
+  </body>
+</html>
